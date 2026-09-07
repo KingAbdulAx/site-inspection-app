@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
   
   <!-- Custom App Styles -->
-  <link rel="stylesheet" href="styles.css?v=20260907_4">
+  <link rel="stylesheet" href="styles.css?v=20260907_5">
 </head>
 <body>
 
@@ -97,6 +97,7 @@
         <option value="all">Filter: All Features</option>
         <option value="ditches">Ditches & Channels</option>
         <option value="structures">Cross Drainage & Bridges</option>
+        <option value="slope_protection">Riprap & Water Descents</option>
         <option disabled>──────────────</option>
         <option value="status_ongoing">Status: Ongoing / In Progress</option>
         <option value="status_completed">Status: Completed & Approved</option>
@@ -126,12 +127,12 @@
   <div class="progress-kpi-bar" id="progressKpiBar">
     <div class="kpi-chip kpi-total active" data-filter="all" title="View all features">
       <span class="kpi-label">TOTAL</span>
-      <span class="kpi-num" id="kpiTotal">177</span>
+      <span class="kpi-num" id="kpiTotal">842</span>
     </div>
     <div class="kpi-chip kpi-not-started" data-filter="status_not_started" title="Filter Not Started">
       <span class="kpi-dot dot-not-started"></span>
       <span class="kpi-label">NOT STARTED</span>
-      <span class="kpi-num" id="kpiNotStarted">177</span>
+      <span class="kpi-num" id="kpiNotStarted">842</span>
     </div>
     <div class="kpi-chip kpi-ongoing" data-filter="status_ongoing" title="Filter In Progress">
       <span class="kpi-dot dot-ongoing"></span>
@@ -256,16 +257,16 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   
   <!-- 1.5. Leaflet Map Rotation Engine (Offline Bundled) -->
-  <script src="lib/leaflet-rotate.js?v=20260907_4"></script>
+  <script src="lib/leaflet-rotate.js?v=20260907_5"></script>
 
   <!-- 2. SheetJS (Excel Export) -->
   <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
 
   <!-- 3. Pre-compiled Alignment & Drainage Assets Data (Works offline / file://) -->
-  <script src="data/bundle.js?v=20260907_4"></script>
+  <script src="data/bundle.js?v=20260907_5"></script>
 
   <!-- 4. Core Application Logic -->
-  <script src="app.js?v=20260907_4"></script>
+  <script src="app.js?v=20260907_5"></script>
 
 </body>
 </html>

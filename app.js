@@ -345,10 +345,13 @@
     const status = insp.status || 'Not Started';
 
     if (filter === 'ditches') {
-      return p.category !== 'Cross Drainage' && p.category !== 'Overhead Crossing' && p.category !== 'Underpass';
+      return p.category !== 'Cross Drainage' && p.category !== 'Overhead Crossing' && p.category !== 'Underpass' && p.category !== 'Riprap Protection' && p.category !== 'Water Descent' && p.category !== 'Energy Dissipator';
     }
     if (filter === 'structures') {
       return p.category === 'Cross Drainage' || p.category === 'Overhead Crossing' || p.category === 'Underpass';
+    }
+    if (filter === 'slope_protection') {
+      return p.category === 'Riprap Protection' || p.category === 'Water Descent' || p.category === 'Energy Dissipator';
     }
     if (filter === 'status_not_started') {
       return status === 'Not Started';
@@ -536,8 +539,12 @@
           iconSvg = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18h18M4 14a8 8 0 0 1 16 0M3 18v-4M21 18v-4"/></svg>';
         } else if (p.category === 'Underpass') {
           iconSvg = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V9a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10"/><path d="M9 19v-6a3 3 0 0 1 6 0v6"/></svg>';
-        } else if (p.category === 'Shoulder / Cascade') {
+        } else if (p.category === 'Shoulder / Cascade' || p.category === 'Water Descent') {
           iconSvg = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/><polyline points="6 4 12 10 18 4"/></svg>';
+        } else if (p.category === 'Riprap Protection') {
+          iconSvg = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z"/></svg>';
+        } else if (p.category === 'Energy Dissipator') {
+          iconSvg = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>';
         }
 
         const customIcon = L.divIcon({

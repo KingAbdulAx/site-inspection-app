@@ -173,3 +173,11 @@ Prior to modifying any dataset records, three test items were selected at random
 | sset_014 | PK 84+444 – PK 84+569 | EDIT EXTENT | Crest Ditch (Row 13) | DW-03002-07 | Tightened extent from 84+406–84+620 to 84+444–84+569 (-89m). Geometry regenerated on Left (-22m). Quoted verbatim levels and 2.25% descent in specs. Initial field data intact. |
 | asset_071 | PK 89+700 – PK 89+980 | FLAG | Crest Ditch (Row 14) | DW-03006-05 | [FLAG] Unsubstantiated by sheet DW-03006-05; no crest ditch drawn or annotated. Retained pending site verification. Existing record retained. |
 | asset_092 | PK 93+500 – PK 94+300 | FLAG | Crest Ditch (Row 15) | DW-03008-06 | [FLAG] Unsubstantiated by sheet DW-03008-06; alignment intersects railway bridge BRG-2602 at CH 93+678–93+731 and no crest ditch exists on centerline. Retained pending site verification. Existing record retained. |
+
+### Phase 6 — Missing Feature Classes & Crest Descent Point Feature
+
+| Record ID | Chainage Extent | Action | Register Reference | Drawing / Document Reference | Notes & Field Data Continuity |
+|:---|:---|:---|:---|:---|:---|
+| `asset_265` | `PK 84+544` | `ADD (Point)` | Crest Ditch Descent | DW-03002-07 / DW-10003-04-A | Concrete crest ditch descent (i=2.25%, fall=0.24m) into Type 1 side ditch |
+| `asset_266`..`asset_532` (267 features) | `PK 82+939` to `PK 124+485` | `ADD (Point)` | Slope Protection (SP-001 to SP-267) | DW-03001 to DW-03030 / DW-10004-02-A | Embankment riprap armor callouts marking stretches where longitudinal ditch is omitted |
+| `asset_533`..`asset_842` (310 features) | `PK 82+911` to `PK 124+459` | `ADD (Point)` | Water Descents (WD-001 to WD-310) | DW-03001 to DW-03030 / DW-10003-04-A | Precast half-round chutes preventing shoulder ditches exceeding permissible hydraulic run lengths |
