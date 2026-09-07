@@ -72,7 +72,7 @@
         defects++;
       }
 
-      if (status === 'Completed & Approved') {
+      if (status === 'Completed & Approved' || status === 'Completed') {
         completed++;
       } else if (status === 'Not Started') {
         notStarted++;
@@ -357,10 +357,10 @@
       return status === 'Not Started';
     }
     if (filter === 'status_ongoing') {
-      return status !== 'Not Started' && status !== 'Completed & Approved';
+      return status !== 'Not Started' && status !== 'Completed & Approved' && status !== 'Completed';
     }
     if (filter === 'status_completed') {
-      return status === 'Completed & Approved';
+      return status === 'Completed & Approved' || status === 'Completed';
     }
     if (filter === 'status_defect') {
       return !!insp.hasDefect;
@@ -472,7 +472,7 @@
           strokeDash = undefined;
           pinClass = 'custom-pin status-defect';
           pinColor = '#EF4444';
-        } else if (status === 'Completed & Approved') {
+        } else if (status === 'Completed & Approved' || status === 'Completed') {
           strokeColor = '#10B981';
           strokeWeight = 5;
           strokeOpacity = 1.0;
@@ -499,7 +499,7 @@
 
       const statusBadge = hasDefect
         ? `<span style="display:inline-block;padding:2px 6px;border-radius:4px;background:#EF4444;color:#fff;font-size:10px;font-weight:bold;letter-spacing:0.02em;">DEFECT / SNAG</span>`
-        : status === 'Completed & Approved'
+        : (status === 'Completed & Approved' || status === 'Completed')
         ? `<span style="display:inline-block;padding:2px 6px;border-radius:4px;background:#10B981;color:#fff;font-size:10px;font-weight:bold;letter-spacing:0.02em;">APPROVED</span>`
         : status !== 'Not Started'
         ? `<span style="display:inline-block;padding:2px 6px;border-radius:4px;background:#F59E0B;color:#000;font-size:10px;font-weight:bold;letter-spacing:0.02em;">${status.toUpperCase()}</span>`
@@ -622,7 +622,7 @@
     buttons.forEach(btn => {
       const s = btn.getAttribute('data-status');
       btn.classList.remove('selected', 'approved');
-      if (s === activeStatus) {
+      if (s === activeStatus || (activeStatus === 'Completed' && s === 'Completed & Approved')) {
         if (s === 'Completed & Approved') {
           btn.classList.add('approved');
         } else {
