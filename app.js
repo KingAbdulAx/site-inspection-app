@@ -681,6 +681,7 @@
     const notes = document.getElementById('defectNotes').value.trim();
     const hasDefect = document.getElementById('chkDefect').checked;
 
+    const nowIso = new Date().toISOString();
     state.inspections[p.id] = {
       assetId: p.id,
       chainage_str: p.chainage_str,
@@ -689,10 +690,15 @@
       status: status,
       notes: notes,
       hasDefect: hasDefect,
-      date: new Date().toISOString().replace('T', ' ').substring(0, 16)
+      date: nowIso.replace('T', ' ').substring(0, 16),
+      updated_at: nowIso,
+      inspected_by: (window.APP_CONFIG && window.APP_CONFIG.inspectorName) || 'Engr. Abdulaziz A. A.'
     };
 
     saveInspectionsToStorage();
+    if (window.syncEngine && window.syncEngine.queueAssetForSync) {
+      window.syncEngine.queueAssetForSync(p.id);
+    }
     updateProgressHUD();
     renderAssets(); // Re-render to show updated progress colors
     if (showExplicitToast) {
@@ -1255,17 +1261,133 @@
         saveCurrentInspection(false);
       });
     });
+
+    // Cloud Sync & Cloud Settings Modal Listeners
+    const btnSyncStatus = document.getElementById('btnSyncStatus');
+    if (btnSyncStatus) {
+      btnSyncStatus.addEventListener('click', function () {
+        if (window.syncEngine) window.syncEngine.syncNow();
+      });
+    }
+
+    const modalCloud = document.getElementById('modalCloudSettings');
+    const btnCloudSettings = document.getElementById('btnCloudSettings');
+    const btnCloseCloud = document.getElementById('btnCloseCloudSettings');
+    const btnSaveCloud = document.getElementById('btnSaveCloudSettings');
+    const btnModalSyncNow = document.getElementById('btnModalSyncNow');
+    const btnTestCloudConn = document.getElementById('btnTestCloudConn');
+
+    function openCloudModal() {
+      if (!modalCloud) return;
+      const cfg = window.APP_CONFIG || {};
+      const devId = (window.syncEngine && window.syncEngine.getDeviceId) ? window.syncEngine.getDeviceId() : '—';
+      const qCount = (window.syncEngine && window.syncEngine.getPendingCount) ? window.syncEngine.getPendingCount() : 0;
+      const lastSync = window.syncState && window.syncState.lastSyncTime ? new Date(window.syncState.lastSyncTime).toLocaleTimeString() : 'Never';
+
+      document.getElementById('cfgSupabaseUrl').value = cfg.supabaseUrl || '';
+      document.getElementById('cfgSupabaseKey').value = cfg.supabaseAnonKey || '';
+      document.getElementById('cfgInspectorName').value = cfg.inspectorName || '';
+      document.getElementById('cfgDeviceId').textContent = devId;
+      document.getElementById('cfgQueueCount').textContent = `${qCount} pending`;
+      document.getElementById('cfgLastSync').textContent = lastSync;
+
+      modalCloud.style.display = 'flex';
+    }
+
+    function closeCloudModal() {
+      if (modalCloud) modalCloud.style.display = 'none';
+    }
+
+    if (btnCloudSettings) btnCloudSettings.addEventListener('click', openCloudModal);
+    if (btnCloseCloud) btnCloseCloud.addEventListener('click', closeCloudModal);
+    if (modalCloud) {
+      modalCloud.addEventListener('click', function (e) {
+        if (e.target === modalCloud) closeCloudModal();
+      });
+    }
+
+    if (btnSaveCloud) {
+      btnSaveCloud.addEventListener('click', function () {
+        const url = document.getElementById('cfgSupabaseUrl').value.trim();
+        const key = document.getElementById('cfgSupabaseKey').value.trim();
+        const name = document.getElementById('cfgInspectorName').value.trim();
+
+        if (window.APP_CONFIG_SAVE) {
+          window.APP_CONFIG_SAVE({
+            supabaseUrl: url,
+            supabaseAnonKey: key,
+            inspectorName: name
+          });
+        }
+        showToast('Cloud settings saved.');
+        closeCloudModal();
+        if (window.syncEngine) window.syncEngine.syncNow();
+      });
+    }
+
+    if (btnModalSyncNow) {
+      btnModalSyncNow.addEventListener('click', function () {
+        if (window.syncEngine) {
+          window.syncEngine.syncNow();
+          setTimeout(() => {
+            const qCount = window.syncEngine.getPendingCount();
+            document.getElementById('cfgQueueCount').textContent = `${qCount} pending`;
+            document.getElementById('cfgLastSync').textContent = window.syncState.lastSyncTime ? new Date(window.syncState.lastSyncTime).toLocaleTimeString() : 'Just now';
+          }, 1500);
+        }
+      });
+    }
+
+    if (btnTestCloudConn) {
+      btnTestCloudConn.addEventListener('click', async function () {
+        const url = document.getElementById('cfgSupabaseUrl').value.trim();
+        const key = document.getElementById('cfgSupabaseKey').value.trim();
+        if (!url || !key) {
+          showToast('Please enter both Supabase URL and API Key.');
+          return;
+        }
+        showToast('Testing connection...');
+        try {
+          const resp = await fetch(`${url.replace(/\/$/, '')}/rest/v1/inspections?select=count`, {
+            headers: {
+              'apikey': key,
+              'Authorization': `Bearer ${key}`
+            }
+          });
+          if (resp.ok) {
+            showToast('Connection Successful! (HTTP 200 OK)');
+          } else {
+            const err = await resp.text();
+            showToast(`Connection Failed [HTTP ${resp.status}]: ${err.substring(0, 50)}`);
+          }
+        } catch (e) {
+          showToast(`Network Error: ${e.message}`);
+        }
+      });
+    }
   }
+
+  // Hook for Cloud Sync to notify PWA of newly pulled inspections
+  window.onExternalInspectionsUpdated = function () {
+    updateProgressHUD();
+    renderAssets();
+    if (state.selectedAsset) {
+      selectAsset(state.selectedAsset);
+    }
+    showToast('Updated with cloud changes.');
+  };
 
   // Toast Notification
   function showToast(msg) {
     const toast = document.getElementById('toast');
+    if (!toast) return;
     toast.textContent = msg;
     toast.style.display = 'block';
     setTimeout(() => {
       toast.style.display = 'none';
     }, 2800);
   }
+  window.showToast = showToast;
 
   // Start app on DOMContentLoaded
   document.addEventListener('DOMContentLoaded', initMap);
