@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "metadata": {
     "title": "Section 03 Verified Drainage Assets",
-    "count": 226,
+    "count": 264,
     "generated_at": "September 2026"
   },
   "features": [
@@ -960,7 +960,7 @@
         "specs": "Concrete trapezoidal cut ditch (b=0.75m, h=0.75m, 1:1)",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "",
+        "notes": "[FLAG] No drawing symbology found on DW-03001-05 supporting this run. Retained pending site verification.",
         "inspection_date": ""
       },
       "geometry": {
@@ -1567,7 +1567,7 @@
         "specs": "Concrete trapezoidal toe ditch (B=1.50m, H=0.50m, 1:1.5)",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "",
+        "notes": "[FLAG] No drawing symbology found on DW-03002-07 supporting this run. Retained pending site verification.",
         "inspection_date": ""
       },
       "geometry": {
@@ -4625,7 +4625,7 @@
         "specs": "Concrete trapezoidal cut ditch (b=0.75m, h=0.75m, 1:1)",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "",
+        "notes": "[FLAG] No drawing symbology found on DW-03005-06 / DW-03006-05 supporting this run. Retained pending site verification.",
         "inspection_date": ""
       },
       "geometry": {
@@ -4746,7 +4746,7 @@
         "specs": "Concrete trapezoidal cut ditch (b=0.75m, h=0.75m, 1:1)",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "",
+        "notes": "[FLAG] No drawing symbology found on DW-03006-05 supporting this run. Retained pending site verification.",
         "inspection_date": ""
       },
       "geometry": {
@@ -5594,7 +5594,7 @@
         "specs": "Concrete trapezoidal toe ditch (B=1.50m, H=0.50m, 1:1.5)",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "",
+        "notes": "[FLAG] No drawing symbology found on DW-03007-06 supporting this run. Retained pending site verification.",
         "inspection_date": ""
       },
       "geometry": {
@@ -5712,7 +5712,7 @@
         "specs": "Concrete lined triangular toe ditch (H=0.80m, 1:1.5)",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "",
+        "notes": "[FLAG] No drawing symbology found on DW-03007-06 supporting this run. Retained pending site verification.",
         "inspection_date": ""
       },
       "geometry": {
@@ -5915,7 +5915,7 @@
         "specs": "Concrete trapezoidal cut ditch (b=0.75m, h=0.75m, 1:1)",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "",
+        "notes": "[FLAG] No drawing symbology found on DW-03008-06; alignment intersects railway bridge BRG-2602 at CH 93+678–93+731 where continuous platform side ditch is structurally precluded. Marked for Senior Engineer review.",
         "inspection_date": ""
       },
       "geometry": {
@@ -6064,7 +6064,7 @@
         "specs": "Concrete trapezoidal cut ditch (b=0.75m, h=0.75m, 1:1)",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "",
+        "notes": "[FLAG] No drawing symbology found on DW-03008-06; alignment intersects railway bridge BRG-2602 at CH 93+678–93+731 where continuous platform side ditch is structurally precluded. Marked for Senior Engineer review.",
         "inspection_date": ""
       },
       "geometry": {
@@ -6528,7 +6528,7 @@
         "specs": "Concrete lined triangular toe ditch (H=0.80m, 1:1.5)",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "",
+        "notes": "[FLAG] No drawing symbology found on DW-03009-06 / DW-03010-07 supporting this run. Retained pending site verification.",
         "inspection_date": ""
       },
       "geometry": {
@@ -6673,7 +6673,7 @@
         "specs": "Concrete trapezoidal toe ditch (B=1.50m, H=0.50m, 1:1.5)",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "",
+        "notes": "[FLAG] No drawing symbology found on DW-03010-07 supporting this run. Retained pending site verification.",
         "inspection_date": ""
       },
       "geometry": {
@@ -7244,7 +7244,7 @@
         "specs": "Concrete lined triangular toe ditch (H=0.80m, 1:1.5)",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "",
+        "notes": "[FLAG] No drawing symbology found on DW-03011-06 / DW-03012-07 supporting this run. Retained pending site verification. [FLAG] No drawing symbology found on DW-03012-07 supporting this run. Retained pending site verification.",
         "inspection_date": ""
       },
       "geometry": {
@@ -7534,7 +7534,7 @@
         "specs": "Concrete trapezoidal toe ditch (B=1.50m, H=0.50m, 1:1.5)",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "",
+        "notes": "[FLAG] No drawing symbology found on DW-03013-06 supporting this run. Retained pending site verification.",
         "inspection_date": ""
       },
       "geometry": {
@@ -7822,7 +7822,7 @@
         "specs": "Concrete lined triangular toe ditch (H=0.80m, 1:1.5)",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "",
+        "notes": "[FLAG] No drawing symbology found on DW-03014-06 supporting this run. Retained pending site verification.",
         "inspection_date": ""
       },
       "geometry": {
@@ -10530,7 +10530,7 @@
         "specs": "Concrete lined triangular toe ditch (H=0.80m, 1:1.5)",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "",
+        "notes": "[FLAG] No drawing symbology found on DW-03020-06 / DW-03021-06 supporting this run. Retained pending site verification.",
         "inspection_date": ""
       },
       "geometry": {
@@ -12372,7 +12372,7 @@
         "specs": "Concrete lined triangular toe ditch (H=0.80m, 1:1.5)",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "",
+        "notes": "[FLAG] No drawing symbology found on DW-03027-06 supporting this run. Retained pending site verification.",
         "inspection_date": ""
       },
       "geometry": {
@@ -16342,6 +16342,4180 @@
           [
             8.3632147,
             12.908187
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_227",
+      "properties": {
+        "id": "asset_227",
+        "chainage_str": "PK 84+900 – PK 85+140",
+        "start_pk": 84900.0,
+        "end_pk": 85140.0,
+        "length_m": 240.0,
+        "is_point": false,
+        "side": "Left",
+        "position": "Left Side (Embankment Toe)",
+        "typology": "Concrete Lined Toe Ditch (Type 12, Type 7)",
+        "short_code": "Toe Ditch",
+        "category": "Toe Ditch",
+        "color": "#F59E0B",
+        "drawing_ref": "DW-03002-07 / MDDTDW220010001",
+        "specs": "Concrete lined toe ditch (Type 12, Type 7) per DW-03002-07 [Ref: FS-001, FS-036]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3922893,
+            12.6386729
+          ],
+          [
+            8.3922044,
+            12.6388774
+          ],
+          [
+            8.3921221,
+            12.6390829
+          ],
+          [
+            8.3920421,
+            12.6392892
+          ],
+          [
+            8.3919648,
+            12.6394967
+          ],
+          [
+            8.3918901,
+            12.6397048
+          ],
+          [
+            8.3918178,
+            12.639914
+          ],
+          [
+            8.3917481,
+            12.6401239
+          ],
+          [
+            8.391681,
+            12.6403347
+          ],
+          [
+            8.3916165,
+            12.6405461
+          ],
+          [
+            8.3915545,
+            12.6407583
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_228",
+      "properties": {
+        "id": "asset_228",
+        "chainage_str": "PK 85+810 – PK 86+100",
+        "start_pk": 85810.0,
+        "end_pk": 86100.0,
+        "length_m": 290.0,
+        "is_point": false,
+        "side": "Right",
+        "position": "Right Side (Track Cut / Platform)",
+        "typology": "Concrete Lined Side Ditch (Type 1 Standard)",
+        "short_code": "Type 1 Std",
+        "category": "Side Ditch",
+        "color": "#3B82F6",
+        "drawing_ref": "DW-03003-06 / MDDTDW220010001",
+        "specs": "Concrete trapezoidal cut side ditch (b=0.75m, h=0.75m, 1:1) per DW-03003-06 [Ref: SD-008]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3911071,
+            12.6468444
+          ],
+          [
+            8.3911227,
+            12.6470634
+          ],
+          [
+            8.3911409,
+            12.6472824
+          ],
+          [
+            8.391161,
+            12.6475013
+          ],
+          [
+            8.3911825,
+            12.6477196
+          ],
+          [
+            8.3912054,
+            12.6479369
+          ],
+          [
+            8.3912301,
+            12.648154
+          ],
+          [
+            8.3912554,
+            12.6483713
+          ],
+          [
+            8.3912805,
+            12.6485887
+          ],
+          [
+            8.391305,
+            12.6488059
+          ],
+          [
+            8.3913298,
+            12.649023
+          ],
+          [
+            8.3913545,
+            12.6492402
+          ],
+          [
+            8.3913793,
+            12.6494573
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_229",
+      "properties": {
+        "id": "asset_229",
+        "chainage_str": "PK 86+530 – PK 86+700",
+        "start_pk": 86530.0,
+        "end_pk": 86700.0,
+        "length_m": 170.0,
+        "is_point": false,
+        "side": "Left",
+        "position": "Left Side (Embankment Toe)",
+        "typology": "Concrete Lined Toe Ditch (Type 12, Type 7)",
+        "short_code": "Toe Ditch",
+        "category": "Toe Ditch",
+        "color": "#F59E0B",
+        "drawing_ref": "DW-03003-06 / MDDTDW220010001",
+        "specs": "Concrete lined toe ditch (Type 12, Type 7) per DW-03003-06 [Ref: FS-004, FS-005, FS-006, FS-038]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3916081,
+            12.6533444
+          ],
+          [
+            8.391633,
+            12.6535626
+          ],
+          [
+            8.3916577,
+            12.6537809
+          ],
+          [
+            8.3916826,
+            12.6539992
+          ],
+          [
+            8.3917075,
+            12.6542174
+          ],
+          [
+            8.3917322,
+            12.6544356
+          ],
+          [
+            8.3917571,
+            12.6546538
+          ],
+          [
+            8.3917819,
+            12.6548721
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_230",
+      "properties": {
+        "id": "asset_230",
+        "chainage_str": "PK 87+330 – PK 87+510",
+        "start_pk": 87330.0,
+        "end_pk": 87510.0,
+        "length_m": 180.0,
+        "is_point": false,
+        "side": "Left",
+        "position": "Left Side (Embankment Toe)",
+        "typology": "Concrete Lined Toe Ditch (Type 7)",
+        "short_code": "Type 7",
+        "category": "Toe Ditch",
+        "color": "#EA580C",
+        "drawing_ref": "DW-03004-06 / MDDTDW220010001",
+        "specs": "Concrete lined triangular toe ditch (H=0.80m, 1:1.5) per DW-03004-06 [Ref: FS-040]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3924306,
+            12.6605331
+          ],
+          [
+            8.3924535,
+            12.6607354
+          ],
+          [
+            8.3924766,
+            12.6609376
+          ],
+          [
+            8.3924995,
+            12.6611398
+          ],
+          [
+            8.3925225,
+            12.661342
+          ],
+          [
+            8.3925456,
+            12.6615442
+          ],
+          [
+            8.3925686,
+            12.6617463
+          ],
+          [
+            8.3925916,
+            12.6619486
+          ],
+          [
+            8.3926146,
+            12.6621507
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_231",
+      "properties": {
+        "id": "asset_231",
+        "chainage_str": "PK 87+700 – PK 87+850",
+        "start_pk": 87700.0,
+        "end_pk": 87850.0,
+        "length_m": 150.0,
+        "is_point": false,
+        "side": "Left",
+        "position": "Left Side (Embankment Toe)",
+        "typology": "Trapezoidal Lined Toe Ditch (Type 12)",
+        "short_code": "Type 12",
+        "category": "Toe Ditch",
+        "color": "#F59E0B",
+        "drawing_ref": "DW-03004-06 / MDDTDW220010001",
+        "specs": "Concrete trapezoidal toe ditch (B=1.50m, H=0.50m, 1:1.5) per DW-03004-06 [Ref: FS-007]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3927996,
+            12.6638591
+          ],
+          [
+            8.3928252,
+            12.6640839
+          ],
+          [
+            8.3928507,
+            12.6643085
+          ],
+          [
+            8.3928763,
+            12.6645332
+          ],
+          [
+            8.3929019,
+            12.6647579
+          ],
+          [
+            8.3929314,
+            12.6649848
+          ],
+          [
+            8.3929632,
+            12.6652108
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_232",
+      "properties": {
+        "id": "asset_232",
+        "chainage_str": "PK 88+570 – PK 88+800",
+        "start_pk": 88570.0,
+        "end_pk": 88800.0,
+        "length_m": 230.0,
+        "is_point": false,
+        "side": "Right",
+        "position": "Right Side (Embankment Toe)",
+        "typology": "Trapezoidal Lined Toe Ditch (Type 12)",
+        "short_code": "Type 12",
+        "category": "Toe Ditch",
+        "color": "#F59E0B",
+        "drawing_ref": "DW-03005-06 / MDDTDW220010001",
+        "specs": "Concrete trapezoidal toe ditch (B=1.50m, H=0.50m, 1:1.5) per DW-03005-06 [Ref: FS-086, FS-087]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.394411,
+            12.6715947
+          ],
+          [
+            8.3944684,
+            12.6717769
+          ],
+          [
+            8.3945301,
+            12.6719676
+          ],
+          [
+            8.3945953,
+            12.6721631
+          ],
+          [
+            8.3946623,
+            12.6723608
+          ],
+          [
+            8.3947298,
+            12.6725594
+          ],
+          [
+            8.3947967,
+            12.6727577
+          ],
+          [
+            8.3948631,
+            12.6729552
+          ],
+          [
+            8.3949295,
+            12.6731527
+          ],
+          [
+            8.3949958,
+            12.6733501
+          ],
+          [
+            8.3950623,
+            12.6735476
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_233",
+      "properties": {
+        "id": "asset_233",
+        "chainage_str": "PK 89+030 – PK 89+400",
+        "start_pk": 89030.0,
+        "end_pk": 89400.0,
+        "length_m": 370.0,
+        "is_point": false,
+        "side": "Right",
+        "position": "Right Side (Embankment Toe)",
+        "typology": "Concrete Lined Toe Ditch (Type 12, Type 7)",
+        "short_code": "Toe Ditch",
+        "category": "Toe Ditch",
+        "color": "#F59E0B",
+        "drawing_ref": "DW-03005-06 / MDDTDW220010001",
+        "specs": "Concrete lined toe ditch (Type 12, Type 7) per DW-03005-06 [Ref: FS-061, FS-062, FS-088, FS-089]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3957216,
+            12.6755241
+          ],
+          [
+            8.3957928,
+            12.675736
+          ],
+          [
+            8.3958639,
+            12.6759477
+          ],
+          [
+            8.3959351,
+            12.6761596
+          ],
+          [
+            8.3960063,
+            12.6763713
+          ],
+          [
+            8.3960775,
+            12.6765832
+          ],
+          [
+            8.3961486,
+            12.676795
+          ],
+          [
+            8.3962199,
+            12.6770066
+          ],
+          [
+            8.3962913,
+            12.6772183
+          ],
+          [
+            8.3963628,
+            12.6774301
+          ],
+          [
+            8.3964343,
+            12.6776425
+          ],
+          [
+            8.3965047,
+            12.6778544
+          ],
+          [
+            8.3965746,
+            12.6780657
+          ],
+          [
+            8.3966445,
+            12.6782777
+          ],
+          [
+            8.396713,
+            12.678491
+          ],
+          [
+            8.3967781,
+            12.6787032
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_234",
+      "properties": {
+        "id": "asset_234",
+        "chainage_str": "PK 90+560 – PK 90+950",
+        "start_pk": 90560.0,
+        "end_pk": 90950.0,
+        "length_m": 390.0,
+        "is_point": false,
+        "side": "Left",
+        "position": "Left Side (Embankment Toe)",
+        "typology": "Concrete Lined Toe Ditch (Type 12, Type 4)",
+        "short_code": "Toe Ditch",
+        "category": "Toe Ditch",
+        "color": "#F59E0B",
+        "drawing_ref": "DW-03006-05 / MDDTDW220010001",
+        "specs": "Concrete lined toe ditch (Type 12, Type 4) per DW-03006-05 [Ref: FS-009, FS-010, FS-121]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3965884,
+            12.6890335
+          ],
+          [
+            8.3965529,
+            12.6892511
+          ],
+          [
+            8.3965174,
+            12.6894686
+          ],
+          [
+            8.3964819,
+            12.6896863
+          ],
+          [
+            8.3964463,
+            12.6899039
+          ],
+          [
+            8.3964108,
+            12.6901216
+          ],
+          [
+            8.3963753,
+            12.6903391
+          ],
+          [
+            8.3963397,
+            12.6905568
+          ],
+          [
+            8.3963042,
+            12.6907745
+          ],
+          [
+            8.3962686,
+            12.6909921
+          ],
+          [
+            8.3962331,
+            12.6912097
+          ],
+          [
+            8.3961975,
+            12.6914274
+          ],
+          [
+            8.396162,
+            12.691645
+          ],
+          [
+            8.3961266,
+            12.6918626
+          ],
+          [
+            8.396091,
+            12.6920802
+          ],
+          [
+            8.3960555,
+            12.6922978
+          ],
+          [
+            8.3960199,
+            12.6925154
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_235",
+      "properties": {
+        "id": "asset_235",
+        "chainage_str": "PK 90+730 – PK 90+950",
+        "start_pk": 90730.0,
+        "end_pk": 90950.0,
+        "length_m": 220.0,
+        "is_point": false,
+        "side": "Right",
+        "position": "Right Side (Embankment Toe)",
+        "typology": "Concrete Lined Toe Ditch (Type 12, Type 4)",
+        "short_code": "Toe Ditch",
+        "category": "Toe Ditch",
+        "color": "#F59E0B",
+        "drawing_ref": "DW-03006-05 / MDDTDW220010001",
+        "specs": "Concrete lined toe ditch (Type 12, Type 4) per DW-03006-05 [Ref: FS-081, FS-091]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3966592,
+            12.6906007
+          ],
+          [
+            8.3966236,
+            12.6908191
+          ],
+          [
+            8.396588,
+            12.6910372
+          ],
+          [
+            8.3965523,
+            12.6912555
+          ],
+          [
+            8.3965167,
+            12.6914737
+          ],
+          [
+            8.3964811,
+            12.691692
+          ],
+          [
+            8.3964455,
+            12.6919103
+          ],
+          [
+            8.3964098,
+            12.6921284
+          ],
+          [
+            8.3963742,
+            12.6923467
+          ],
+          [
+            8.3963385,
+            12.692565
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_236",
+      "properties": {
+        "id": "asset_236",
+        "chainage_str": "PK 91+110 – PK 91+340",
+        "start_pk": 91110.0,
+        "end_pk": 91340.0,
+        "length_m": 230.0,
+        "is_point": false,
+        "side": "Left",
+        "position": "Left Side (Embankment Toe)",
+        "typology": "Concrete Lined Toe Ditch (Type 4, Type 7)",
+        "short_code": "Toe Ditch",
+        "category": "Toe Ditch",
+        "color": "#F59E0B",
+        "drawing_ref": "DW-03006-05 / DW-03007-06 / MDDTDW220010001",
+        "specs": "Concrete lined toe ditch (Type 4, Type 7) per DW-03006-05 / DW-03007-06 [Ref: FS-041, FS-121]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3957866,
+            12.6939441
+          ],
+          [
+            8.3957531,
+            12.6941493
+          ],
+          [
+            8.3957195,
+            12.6943547
+          ],
+          [
+            8.395686,
+            12.69456
+          ],
+          [
+            8.3956525,
+            12.6947655
+          ],
+          [
+            8.395619,
+            12.6949709
+          ],
+          [
+            8.3955854,
+            12.6951762
+          ],
+          [
+            8.3955519,
+            12.6953816
+          ],
+          [
+            8.3955184,
+            12.6955869
+          ],
+          [
+            8.3954849,
+            12.6957922
+          ],
+          [
+            8.3954513,
+            12.6959976
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_237",
+      "properties": {
+        "id": "asset_237",
+        "chainage_str": "PK 96+010 – PK 96+590",
+        "start_pk": 96010.0,
+        "end_pk": 96590.0,
+        "length_m": 580.0,
+        "is_point": false,
+        "side": "Left",
+        "position": "Left Side (Embankment Toe)",
+        "typology": "Trapezoidal Lined Toe Ditch (Type 12)",
+        "short_code": "Type 12",
+        "category": "Toe Ditch",
+        "color": "#F59E0B",
+        "drawing_ref": "DW-03010-07 / MDDTDW220010001",
+        "specs": "Concrete trapezoidal toe ditch (B=1.50m, H=0.50m, 1:1.5) per DW-03010-07 [Ref: FS-011, FS-012]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.388637,
+            12.7376924
+          ],
+          [
+            8.3886018,
+            12.7379082
+          ],
+          [
+            8.3885665,
+            12.738124
+          ],
+          [
+            8.3885313,
+            12.7383398
+          ],
+          [
+            8.3884961,
+            12.7385555
+          ],
+          [
+            8.3884608,
+            12.7387713
+          ],
+          [
+            8.3884256,
+            12.738987
+          ],
+          [
+            8.3883903,
+            12.7392028
+          ],
+          [
+            8.388355,
+            12.7394186
+          ],
+          [
+            8.3883199,
+            12.7396343
+          ],
+          [
+            8.3882846,
+            12.7398501
+          ],
+          [
+            8.3882493,
+            12.7400659
+          ],
+          [
+            8.3882141,
+            12.7402817
+          ],
+          [
+            8.3881788,
+            12.7404974
+          ],
+          [
+            8.3881435,
+            12.740713
+          ],
+          [
+            8.3881082,
+            12.7409288
+          ],
+          [
+            8.388073,
+            12.7411449
+          ],
+          [
+            8.3880377,
+            12.7413609
+          ],
+          [
+            8.3880022,
+            12.741577
+          ],
+          [
+            8.3879672,
+            12.7417941
+          ],
+          [
+            8.3879337,
+            12.7420122
+          ],
+          [
+            8.387902,
+            12.7422312
+          ],
+          [
+            8.3878719,
+            12.7424502
+          ],
+          [
+            8.3878434,
+            12.7426698
+          ],
+          [
+            8.387817,
+            12.74289
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_238",
+      "properties": {
+        "id": "asset_238",
+        "chainage_str": "PK 97+190 – PK 97+340",
+        "start_pk": 97190.0,
+        "end_pk": 97340.0,
+        "length_m": 150.0,
+        "is_point": false,
+        "side": "Right",
+        "position": "Right Side (Embankment Toe)",
+        "typology": "Concrete Lined Toe Ditch (Type 12, Type 7)",
+        "short_code": "Toe Ditch",
+        "category": "Toe Ditch",
+        "color": "#F59E0B",
+        "drawing_ref": "DW-03011-06 / MDDTDW220010001",
+        "specs": "Concrete lined toe ditch (Type 12, Type 7) per DW-03011-06 [Ref: FS-064, FS-093]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3880837,
+            12.7483433
+          ],
+          [
+            8.3880912,
+            12.7485693
+          ],
+          [
+            8.3880987,
+            12.7487952
+          ],
+          [
+            8.3881062,
+            12.7490212
+          ],
+          [
+            8.3881137,
+            12.749247
+          ],
+          [
+            8.3881213,
+            12.749473
+          ],
+          [
+            8.3881288,
+            12.749699
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_239",
+      "properties": {
+        "id": "asset_239",
+        "chainage_str": "PK 97+540 – PK 97+760",
+        "start_pk": 97540.0,
+        "end_pk": 97760.0,
+        "length_m": 220.0,
+        "is_point": false,
+        "side": "Left",
+        "position": "Left Side (Embankment Toe)",
+        "typology": "Concrete Lined Toe Ditch (Type 12, Type 7)",
+        "short_code": "Toe Ditch",
+        "category": "Toe Ditch",
+        "color": "#F59E0B",
+        "drawing_ref": "DW-03011-06 / MDDTDW220010001",
+        "specs": "Concrete lined toe ditch (Type 12, Type 7) per DW-03011-06 [Ref: FS-014, FS-042]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3878663,
+            12.7515166
+          ],
+          [
+            8.3878737,
+            12.7517376
+          ],
+          [
+            8.3878811,
+            12.7519585
+          ],
+          [
+            8.3878884,
+            12.7521794
+          ],
+          [
+            8.3878958,
+            12.7524003
+          ],
+          [
+            8.3879031,
+            12.7526212
+          ],
+          [
+            8.3879105,
+            12.7528422
+          ],
+          [
+            8.3879179,
+            12.7530631
+          ],
+          [
+            8.3879252,
+            12.753284
+          ],
+          [
+            8.3879325,
+            12.7535049
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_240",
+      "properties": {
+        "id": "asset_240",
+        "chainage_str": "PK 98+150 – PK 98+390",
+        "start_pk": 98150.0,
+        "end_pk": 98390.0,
+        "length_m": 240.0,
+        "is_point": false,
+        "side": "Left",
+        "position": "Left Side (Embankment Toe)",
+        "typology": "Trapezoidal Lined Toe Ditch (Type 12)",
+        "short_code": "Type 12",
+        "category": "Toe Ditch",
+        "color": "#F59E0B",
+        "drawing_ref": "DW-03011-06 / DW-03012-07 / MDDTDW220010001",
+        "specs": "Concrete trapezoidal toe ditch (B=1.50m, H=0.50m, 1:1.5) per DW-03011-06 / DW-03012-07 [Ref: FS-015]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3880452,
+            12.7570297
+          ],
+          [
+            8.3880524,
+            12.7572466
+          ],
+          [
+            8.3880596,
+            12.7574635
+          ],
+          [
+            8.3880669,
+            12.7576805
+          ],
+          [
+            8.3880741,
+            12.7578973
+          ],
+          [
+            8.3880813,
+            12.7581142
+          ],
+          [
+            8.3880885,
+            12.7583311
+          ],
+          [
+            8.3880957,
+            12.758548
+          ],
+          [
+            8.388103,
+            12.758765
+          ],
+          [
+            8.3881102,
+            12.7589818
+          ],
+          [
+            8.3881174,
+            12.7591987
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_241",
+      "properties": {
+        "id": "asset_241",
+        "chainage_str": "PK 100+850 – PK 101+880",
+        "start_pk": 100850.0,
+        "end_pk": 101880.0,
+        "length_m": 1030.0,
+        "is_point": false,
+        "side": "Right",
+        "position": "Right Side (Embankment Toe)",
+        "typology": "Concrete Lined Toe Ditch (Type 12, Type 7)",
+        "short_code": "Toe Ditch",
+        "category": "Toe Ditch",
+        "color": "#F59E0B",
+        "drawing_ref": "DW-03013-06 / DW-03014-06 / MDDTDW220010001",
+        "specs": "Concrete lined toe ditch (Type 12, Type 7) per DW-03013-06 / DW-03014-06 [Ref: FS-065, FS-095, FS-096]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.389184,
+            12.781405
+          ],
+          [
+            8.3891914,
+            12.7816266
+          ],
+          [
+            8.3891987,
+            12.7818483
+          ],
+          [
+            8.3892061,
+            12.7820699
+          ],
+          [
+            8.3892135,
+            12.7822915
+          ],
+          [
+            8.3892209,
+            12.7825132
+          ],
+          [
+            8.3892282,
+            12.7827348
+          ],
+          [
+            8.3892356,
+            12.7829565
+          ],
+          [
+            8.389243,
+            12.7831781
+          ],
+          [
+            8.3892504,
+            12.7833996
+          ],
+          [
+            8.3892578,
+            12.7836214
+          ],
+          [
+            8.3892651,
+            12.783843
+          ],
+          [
+            8.3892725,
+            12.7840647
+          ],
+          [
+            8.3892798,
+            12.7842863
+          ],
+          [
+            8.3892873,
+            12.7845078
+          ],
+          [
+            8.3892947,
+            12.7847295
+          ],
+          [
+            8.389302,
+            12.7849512
+          ],
+          [
+            8.3893094,
+            12.7851728
+          ],
+          [
+            8.3893167,
+            12.7853945
+          ],
+          [
+            8.3893241,
+            12.785616
+          ],
+          [
+            8.3893315,
+            12.7858377
+          ],
+          [
+            8.3893389,
+            12.7860594
+          ],
+          [
+            8.3893463,
+            12.786281
+          ],
+          [
+            8.3893536,
+            12.7865027
+          ],
+          [
+            8.389361,
+            12.7867242
+          ],
+          [
+            8.3893684,
+            12.7869459
+          ],
+          [
+            8.3893758,
+            12.7871675
+          ],
+          [
+            8.3893831,
+            12.7873891
+          ],
+          [
+            8.3893905,
+            12.7876108
+          ],
+          [
+            8.3893979,
+            12.7878324
+          ],
+          [
+            8.3894053,
+            12.788054
+          ],
+          [
+            8.3894127,
+            12.7882757
+          ],
+          [
+            8.38942,
+            12.7884973
+          ],
+          [
+            8.3894274,
+            12.788719
+          ],
+          [
+            8.3894347,
+            12.7889406
+          ],
+          [
+            8.3894421,
+            12.7891622
+          ],
+          [
+            8.3894496,
+            12.7893839
+          ],
+          [
+            8.3894569,
+            12.7896055
+          ],
+          [
+            8.3894643,
+            12.7898271
+          ],
+          [
+            8.3894716,
+            12.7900488
+          ],
+          [
+            8.389479,
+            12.7902703
+          ],
+          [
+            8.3894864,
+            12.7904921
+          ],
+          [
+            8.3894938,
+            12.7907137
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_242",
+      "properties": {
+        "id": "asset_242",
+        "chainage_str": "PK 102+060 – PK 102+860",
+        "start_pk": 102060.0,
+        "end_pk": 102860.0,
+        "length_m": 800.0,
+        "is_point": false,
+        "side": "Right",
+        "position": "Right Side (Embankment Toe)",
+        "typology": "Concrete Lined Toe Ditch (Type 12, Type 4, Type 7)",
+        "short_code": "Toe Ditch",
+        "category": "Toe Ditch",
+        "color": "#F59E0B",
+        "drawing_ref": "DW-03014-06 / DW-03015-06 / MDDTDW220010001",
+        "specs": "Concrete lined toe ditch (Type 12, Type 4, Type 7) per DW-03014-06 / DW-03015-06 [Ref: FS-066, FS-082, FS-098, FS-099]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3895479,
+            12.7923405
+          ],
+          [
+            8.3895554,
+            12.7925663
+          ],
+          [
+            8.389563,
+            12.7927923
+          ],
+          [
+            8.3895705,
+            12.7930183
+          ],
+          [
+            8.389578,
+            12.7932442
+          ],
+          [
+            8.3895855,
+            12.7934702
+          ],
+          [
+            8.389593,
+            12.793696
+          ],
+          [
+            8.3896006,
+            12.793922
+          ],
+          [
+            8.3896081,
+            12.794148
+          ],
+          [
+            8.3896156,
+            12.7943739
+          ],
+          [
+            8.3896231,
+            12.7945998
+          ],
+          [
+            8.3896306,
+            12.7948257
+          ],
+          [
+            8.3896382,
+            12.7950517
+          ],
+          [
+            8.3896457,
+            12.7952777
+          ],
+          [
+            8.3896532,
+            12.7955036
+          ],
+          [
+            8.3896607,
+            12.7957295
+          ],
+          [
+            8.3896682,
+            12.7959554
+          ],
+          [
+            8.3896758,
+            12.7961814
+          ],
+          [
+            8.3896833,
+            12.7964074
+          ],
+          [
+            8.3896908,
+            12.7966333
+          ],
+          [
+            8.3896983,
+            12.7968592
+          ],
+          [
+            8.3897058,
+            12.7970851
+          ],
+          [
+            8.3897134,
+            12.7973111
+          ],
+          [
+            8.3897209,
+            12.797537
+          ],
+          [
+            8.3897284,
+            12.797763
+          ],
+          [
+            8.3897359,
+            12.7979889
+          ],
+          [
+            8.3897434,
+            12.7982148
+          ],
+          [
+            8.389751,
+            12.7984408
+          ],
+          [
+            8.3897585,
+            12.7986667
+          ],
+          [
+            8.389766,
+            12.7988927
+          ],
+          [
+            8.3897735,
+            12.7991186
+          ],
+          [
+            8.389781,
+            12.7993445
+          ],
+          [
+            8.3897886,
+            12.7995705
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_243",
+      "properties": {
+        "id": "asset_243",
+        "chainage_str": "PK 102+700 – PK 102+890",
+        "start_pk": 102700.0,
+        "end_pk": 102890.0,
+        "length_m": 190.0,
+        "is_point": false,
+        "side": "Left",
+        "position": "Left Side (Embankment Toe)",
+        "typology": "Concrete Lined Toe Ditch (Type 12, Type 7)",
+        "short_code": "Toe Ditch",
+        "category": "Toe Ditch",
+        "color": "#F59E0B",
+        "drawing_ref": "DW-03015-06 / MDDTDW220010001",
+        "specs": "Concrete lined toe ditch (Type 12, Type 7) per DW-03015-06 [Ref: FS-017, FS-044]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3894178,
+            12.7981347
+          ],
+          [
+            8.389425,
+            12.7983494
+          ],
+          [
+            8.3894321,
+            12.7985639
+          ],
+          [
+            8.3894393,
+            12.7987786
+          ],
+          [
+            8.3894464,
+            12.7989932
+          ],
+          [
+            8.3894535,
+            12.7992079
+          ],
+          [
+            8.3894607,
+            12.7994226
+          ],
+          [
+            8.3894679,
+            12.7996371
+          ],
+          [
+            8.389475,
+            12.7998518
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_244",
+      "properties": {
+        "id": "asset_244",
+        "chainage_str": "PK 102+930 – PK 103+860",
+        "start_pk": 102930.0,
+        "end_pk": 103860.0,
+        "length_m": 930.0,
+        "is_point": false,
+        "side": "Left",
+        "position": "Left Side (Embankment Toe)",
+        "typology": "Concrete Lined Toe Ditch (Type 12, Type 7)",
+        "short_code": "Toe Ditch",
+        "category": "Toe Ditch",
+        "color": "#F59E0B",
+        "drawing_ref": "DW-03015-06 / DW-03016-06 / MDDTDW220010001",
+        "specs": "Concrete lined toe ditch (Type 12, Type 7) per DW-03015-06 / DW-03016-06 [Ref: FS-018, FS-019, FS-045, FS-046]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.389487,
+            12.8002133
+          ],
+          [
+            8.3894944,
+            12.8004346
+          ],
+          [
+            8.3895018,
+            12.8006556
+          ],
+          [
+            8.3895091,
+            12.8008768
+          ],
+          [
+            8.3895165,
+            12.8010981
+          ],
+          [
+            8.3895239,
+            12.8013193
+          ],
+          [
+            8.3895313,
+            12.8015404
+          ],
+          [
+            8.3895386,
+            12.8017615
+          ],
+          [
+            8.3895458,
+            12.8019823
+          ],
+          [
+            8.3895531,
+            12.8022029
+          ],
+          [
+            8.3895599,
+            12.8024238
+          ],
+          [
+            8.389566,
+            12.8026441
+          ],
+          [
+            8.3895712,
+            12.8028642
+          ],
+          [
+            8.3895757,
+            12.8030845
+          ],
+          [
+            8.3895796,
+            12.8033048
+          ],
+          [
+            8.3895827,
+            12.803525
+          ],
+          [
+            8.3895851,
+            12.8037453
+          ],
+          [
+            8.3895867,
+            12.8039655
+          ],
+          [
+            8.3895876,
+            12.8041859
+          ],
+          [
+            8.3895877,
+            12.8044061
+          ],
+          [
+            8.389587,
+            12.8046263
+          ],
+          [
+            8.3895854,
+            12.8048465
+          ],
+          [
+            8.3895833,
+            12.8050671
+          ],
+          [
+            8.3895809,
+            12.8052879
+          ],
+          [
+            8.3895781,
+            12.8055088
+          ],
+          [
+            8.3895751,
+            12.8057299
+          ],
+          [
+            8.3895717,
+            12.805951
+          ],
+          [
+            8.3895684,
+            12.8061723
+          ],
+          [
+            8.3895652,
+            12.8063938
+          ],
+          [
+            8.389562,
+            12.806615
+          ],
+          [
+            8.3895588,
+            12.8068363
+          ],
+          [
+            8.3895557,
+            12.8070576
+          ],
+          [
+            8.3895525,
+            12.8072788
+          ],
+          [
+            8.3895493,
+            12.8075001
+          ],
+          [
+            8.3895461,
+            12.8077213
+          ],
+          [
+            8.3895429,
+            12.8079427
+          ],
+          [
+            8.3895398,
+            12.8081639
+          ],
+          [
+            8.3895366,
+            12.8083853
+          ],
+          [
+            8.3895334,
+            12.8086064
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_245",
+      "properties": {
+        "id": "asset_245",
+        "chainage_str": "PK 104+530 – PK 105+340",
+        "start_pk": 104530.0,
+        "end_pk": 105340.0,
+        "length_m": 810.0,
+        "is_point": false,
+        "side": "Right",
+        "position": "Right Side (Embankment Toe)",
+        "typology": "Concrete Lined Toe Ditch (Type 12, Type 7)",
+        "short_code": "Toe Ditch",
+        "category": "Toe Ditch",
+        "color": "#F59E0B",
+        "drawing_ref": "DW-03016-06 / DW-03017-06 / MDDTDW220010001",
+        "specs": "Concrete lined toe ditch (Type 12, Type 7) per DW-03016-06 / DW-03017-06 [Ref: FS-067, FS-100]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3896706,
+            12.8146658
+          ],
+          [
+            8.3896573,
+            12.8148875
+          ],
+          [
+            8.3896439,
+            12.815109
+          ],
+          [
+            8.3896307,
+            12.8153305
+          ],
+          [
+            8.3896174,
+            12.8155521
+          ],
+          [
+            8.3896041,
+            12.8157737
+          ],
+          [
+            8.3895908,
+            12.8159952
+          ],
+          [
+            8.3895775,
+            12.8162168
+          ],
+          [
+            8.3895642,
+            12.8164384
+          ],
+          [
+            8.3895509,
+            12.81666
+          ],
+          [
+            8.3895377,
+            12.8168815
+          ],
+          [
+            8.3895244,
+            12.8171031
+          ],
+          [
+            8.3895111,
+            12.8173247
+          ],
+          [
+            8.3894978,
+            12.8175462
+          ],
+          [
+            8.3894846,
+            12.8177678
+          ],
+          [
+            8.3894713,
+            12.8179894
+          ],
+          [
+            8.389458,
+            12.8182109
+          ],
+          [
+            8.3894447,
+            12.8184324
+          ],
+          [
+            8.3894314,
+            12.818654
+          ],
+          [
+            8.3894182,
+            12.8188756
+          ],
+          [
+            8.3894049,
+            12.8190972
+          ],
+          [
+            8.3893916,
+            12.8193187
+          ],
+          [
+            8.3893783,
+            12.8195402
+          ],
+          [
+            8.3893651,
+            12.8197618
+          ],
+          [
+            8.3893517,
+            12.8199835
+          ],
+          [
+            8.3893385,
+            12.820205
+          ],
+          [
+            8.3893252,
+            12.8204265
+          ],
+          [
+            8.389312,
+            12.8206481
+          ],
+          [
+            8.3892986,
+            12.8208698
+          ],
+          [
+            8.3892853,
+            12.8210912
+          ],
+          [
+            8.3892721,
+            12.8213128
+          ],
+          [
+            8.3892588,
+            12.8215345
+          ],
+          [
+            8.3892455,
+            12.8217559
+          ],
+          [
+            8.3892322,
+            12.8219775
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_246",
+      "properties": {
+        "id": "asset_246",
+        "chainage_str": "PK 105+350 – PK 105+560",
+        "start_pk": 105350.0,
+        "end_pk": 105560.0,
+        "length_m": 210.0,
+        "is_point": false,
+        "side": "Left",
+        "position": "Left Side (Embankment Toe)",
+        "typology": "Concrete Lined Toe Ditch (Type 12, Type 7)",
+        "short_code": "Toe Ditch",
+        "category": "Toe Ditch",
+        "color": "#F59E0B",
+        "drawing_ref": "DW-03017-06 / MDDTDW220010001",
+        "specs": "Concrete lined toe ditch (Type 12, Type 7) per DW-03017-06 [Ref: FS-020, FS-021, FS-048]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3889046,
+            12.8220494
+          ],
+          [
+            8.388892,
+            12.8222601
+          ],
+          [
+            8.3888793,
+            12.8224706
+          ],
+          [
+            8.3888667,
+            12.8226813
+          ],
+          [
+            8.3888541,
+            12.8228919
+          ],
+          [
+            8.3888415,
+            12.8231025
+          ],
+          [
+            8.3888288,
+            12.8233131
+          ],
+          [
+            8.3888162,
+            12.8235238
+          ],
+          [
+            8.3888036,
+            12.8237345
+          ],
+          [
+            8.388791,
+            12.8239451
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_247",
+      "properties": {
+        "id": "asset_247",
+        "chainage_str": "PK 107+750 – PK 108+250",
+        "start_pk": 107750.0,
+        "end_pk": 108250.0,
+        "length_m": 500.0,
+        "is_point": false,
+        "side": "Left",
+        "position": "Left Side (Embankment Toe)",
+        "typology": "Concrete Lined Toe Ditch (Type 12, Type 7)",
+        "short_code": "Toe Ditch",
+        "category": "Toe Ditch",
+        "color": "#F59E0B",
+        "drawing_ref": "DW-03018-06 / DW-03019-06 / MDDTDW220010001",
+        "specs": "Concrete lined toe ditch (Type 12, Type 7) per DW-03018-06 / DW-03019-06 [Ref: FS-022, FS-050]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3873413,
+            12.8436676
+          ],
+          [
+            8.3873112,
+            12.8438916
+          ],
+          [
+            8.387281,
+            12.8441157
+          ],
+          [
+            8.3872508,
+            12.8443398
+          ],
+          [
+            8.3872206,
+            12.8445641
+          ],
+          [
+            8.3871905,
+            12.8447881
+          ],
+          [
+            8.3871603,
+            12.8450122
+          ],
+          [
+            8.3871301,
+            12.8452363
+          ],
+          [
+            8.3870999,
+            12.8454605
+          ],
+          [
+            8.3870698,
+            12.8456845
+          ],
+          [
+            8.3870396,
+            12.8459086
+          ],
+          [
+            8.3870094,
+            12.8461327
+          ],
+          [
+            8.3869792,
+            12.8463568
+          ],
+          [
+            8.386949,
+            12.846581
+          ],
+          [
+            8.3869189,
+            12.8468051
+          ],
+          [
+            8.3868887,
+            12.8470292
+          ],
+          [
+            8.3868585,
+            12.8472533
+          ],
+          [
+            8.3868283,
+            12.8474775
+          ],
+          [
+            8.3867982,
+            12.8477015
+          ],
+          [
+            8.386768,
+            12.8479256
+          ],
+          [
+            8.3867378,
+            12.8481497
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_248",
+      "properties": {
+        "id": "asset_248",
+        "chainage_str": "PK 108+420 – PK 109+210",
+        "start_pk": 108420.0,
+        "end_pk": 109210.0,
+        "length_m": 790.0,
+        "is_point": false,
+        "side": "Right",
+        "position": "Right Side (Embankment Toe)",
+        "typology": "Trapezoidal Lined Toe Ditch (Type 12)",
+        "short_code": "Type 12",
+        "category": "Toe Ditch",
+        "color": "#F59E0B",
+        "drawing_ref": "DW-03019-06 / MDDTDW220010001",
+        "specs": "Concrete trapezoidal toe ditch (B=1.50m, H=0.50m, 1:1.5) per DW-03019-06 [Ref: FS-101, FS-102, FS-103]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3868573,
+            12.8497152
+          ],
+          [
+            8.3868274,
+            12.8499366
+          ],
+          [
+            8.3867976,
+            12.8501579
+          ],
+          [
+            8.3867678,
+            12.8503791
+          ],
+          [
+            8.3867381,
+            12.8506004
+          ],
+          [
+            8.3867083,
+            12.8508217
+          ],
+          [
+            8.3866784,
+            12.8510431
+          ],
+          [
+            8.3866486,
+            12.8512644
+          ],
+          [
+            8.3866188,
+            12.8514857
+          ],
+          [
+            8.386589,
+            12.851707
+          ],
+          [
+            8.3865592,
+            12.8519283
+          ],
+          [
+            8.3865294,
+            12.8521496
+          ],
+          [
+            8.3864996,
+            12.8523709
+          ],
+          [
+            8.3864698,
+            12.8525922
+          ],
+          [
+            8.38644,
+            12.8528135
+          ],
+          [
+            8.3864102,
+            12.8530348
+          ],
+          [
+            8.3863804,
+            12.8532562
+          ],
+          [
+            8.3863506,
+            12.8534775
+          ],
+          [
+            8.3863208,
+            12.8536988
+          ],
+          [
+            8.386291,
+            12.8539201
+          ],
+          [
+            8.3862612,
+            12.8541414
+          ],
+          [
+            8.3862314,
+            12.8543627
+          ],
+          [
+            8.3862016,
+            12.854584
+          ],
+          [
+            8.3861717,
+            12.8548053
+          ],
+          [
+            8.386142,
+            12.8550266
+          ],
+          [
+            8.3861122,
+            12.8552479
+          ],
+          [
+            8.3860824,
+            12.8554693
+          ],
+          [
+            8.3860526,
+            12.8556906
+          ],
+          [
+            8.3860227,
+            12.8559119
+          ],
+          [
+            8.385993,
+            12.8561332
+          ],
+          [
+            8.3859632,
+            12.8563545
+          ],
+          [
+            8.3859334,
+            12.8565758
+          ],
+          [
+            8.3859035,
+            12.8567971
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_249",
+      "properties": {
+        "id": "asset_249",
+        "chainage_str": "PK 110+500 – PK 111+740",
+        "start_pk": 110500.0,
+        "end_pk": 111740.0,
+        "length_m": 1240.0,
+        "is_point": false,
+        "side": "Left",
+        "position": "Left Side (Embankment Toe)",
+        "typology": "Concrete Lined Toe Ditch (Type 12, Type 7)",
+        "short_code": "Toe Ditch",
+        "category": "Toe Ditch",
+        "color": "#F59E0B",
+        "drawing_ref": "DW-03020-06 / DW-03021-06 / MDDTDW220010001",
+        "specs": "Concrete lined toe ditch (Type 12, Type 7) per DW-03020-06 / DW-03021-06 [Ref: FS-023, FS-024, FS-025, FS-026, FS-051, FS-052, FS-053]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3840214,
+            12.8683196
+          ],
+          [
+            8.3839916,
+            12.868542
+          ],
+          [
+            8.3839616,
+            12.8687643
+          ],
+          [
+            8.3839317,
+            12.8689866
+          ],
+          [
+            8.3839017,
+            12.8692089
+          ],
+          [
+            8.3838721,
+            12.8694312
+          ],
+          [
+            8.3838429,
+            12.8696536
+          ],
+          [
+            8.383813,
+            12.8698749
+          ],
+          [
+            8.3837815,
+            12.8700951
+          ],
+          [
+            8.3837485,
+            12.8703143
+          ],
+          [
+            8.3837143,
+            12.8705334
+          ],
+          [
+            8.3836782,
+            12.8707514
+          ],
+          [
+            8.3836392,
+            12.8709683
+          ],
+          [
+            8.3835971,
+            12.8711844
+          ],
+          [
+            8.3835522,
+            12.8714006
+          ],
+          [
+            8.3835047,
+            12.871616
+          ],
+          [
+            8.3834544,
+            12.8718307
+          ],
+          [
+            8.3834014,
+            12.8720449
+          ],
+          [
+            8.3833457,
+            12.8722585
+          ],
+          [
+            8.3832873,
+            12.8724713
+          ],
+          [
+            8.3832262,
+            12.8726834
+          ],
+          [
+            8.3831624,
+            12.8728948
+          ],
+          [
+            8.383096,
+            12.8731052
+          ],
+          [
+            8.3830269,
+            12.8733151
+          ],
+          [
+            8.3829552,
+            12.8735238
+          ],
+          [
+            8.3828808,
+            12.8737318
+          ],
+          [
+            8.3828038,
+            12.8739389
+          ],
+          [
+            8.3827242,
+            12.874145
+          ],
+          [
+            8.382642,
+            12.8743501
+          ],
+          [
+            8.3825573,
+            12.8745542
+          ],
+          [
+            8.3824699,
+            12.8747573
+          ],
+          [
+            8.3823799,
+            12.8749592
+          ],
+          [
+            8.3822875,
+            12.8751601
+          ],
+          [
+            8.3821925,
+            12.8753598
+          ],
+          [
+            8.3820949,
+            12.8755582
+          ],
+          [
+            8.3819949,
+            12.8757556
+          ],
+          [
+            8.3818924,
+            12.8759519
+          ],
+          [
+            8.3817873,
+            12.8761467
+          ],
+          [
+            8.3816793,
+            12.8763402
+          ],
+          [
+            8.3815688,
+            12.8765336
+          ],
+          [
+            8.381457,
+            12.8767273
+          ],
+          [
+            8.3813442,
+            12.8769211
+          ],
+          [
+            8.3812305,
+            12.8771144
+          ],
+          [
+            8.3811156,
+            12.877308
+          ],
+          [
+            8.3810005,
+            12.877502
+          ],
+          [
+            8.3808856,
+            12.877696
+          ],
+          [
+            8.380771,
+            12.8778901
+          ],
+          [
+            8.3806564,
+            12.8780841
+          ],
+          [
+            8.3805417,
+            12.8782782
+          ],
+          [
+            8.3804271,
+            12.8784722
+          ],
+          [
+            8.3803125,
+            12.8786662
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_250",
+      "properties": {
+        "id": "asset_250",
+        "chainage_str": "PK 111+980 – PK 112+420",
+        "start_pk": 111980.0,
+        "end_pk": 112420.0,
+        "length_m": 440.0,
+        "is_point": false,
+        "side": "Left",
+        "position": "Left Side (Embankment Toe)",
+        "typology": "Concrete Lined Toe Ditch (Type 12, Type 7)",
+        "short_code": "Toe Ditch",
+        "category": "Toe Ditch",
+        "color": "#F59E0B",
+        "drawing_ref": "DW-03021-06 / DW-03022-06 / MDDTDW220010001",
+        "specs": "Concrete lined toe ditch (Type 12, Type 7) per DW-03021-06 / DW-03022-06 [Ref: FS-028, FS-054]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3792032,
+            12.8805437
+          ],
+          [
+            8.3790903,
+            12.8807349
+          ],
+          [
+            8.3789772,
+            12.8809262
+          ],
+          [
+            8.3788643,
+            12.8811174
+          ],
+          [
+            8.3787513,
+            12.8813086
+          ],
+          [
+            8.3786382,
+            12.8814999
+          ],
+          [
+            8.3785253,
+            12.8816911
+          ],
+          [
+            8.3784123,
+            12.8818823
+          ],
+          [
+            8.3782993,
+            12.8820735
+          ],
+          [
+            8.3781863,
+            12.8822647
+          ],
+          [
+            8.3780734,
+            12.882456
+          ],
+          [
+            8.3779604,
+            12.8826472
+          ],
+          [
+            8.3778474,
+            12.8828384
+          ],
+          [
+            8.3777344,
+            12.8830296
+          ],
+          [
+            8.3776214,
+            12.8832209
+          ],
+          [
+            8.3775084,
+            12.8834121
+          ],
+          [
+            8.3773955,
+            12.8836033
+          ],
+          [
+            8.3772825,
+            12.8837946
+          ],
+          [
+            8.3771694,
+            12.8839858
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_251",
+      "properties": {
+        "id": "asset_251",
+        "chainage_str": "PK 112+980 – PK 113+210",
+        "start_pk": 112980.0,
+        "end_pk": 113210.0,
+        "length_m": 230.0,
+        "is_point": false,
+        "side": "Right",
+        "position": "Right Side (Embankment Toe)",
+        "typology": "Trapezoidal Lined Toe Ditch (Type 12)",
+        "short_code": "Type 12",
+        "category": "Toe Ditch",
+        "color": "#F59E0B",
+        "drawing_ref": "DW-03022-06 / MDDTDW220010001",
+        "specs": "Concrete trapezoidal toe ditch (B=1.50m, H=0.50m, 1:1.5) per DW-03022-06 [Ref: FS-104, FS-105]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3748648,
+            12.888526
+          ],
+          [
+            8.3747585,
+            12.8887059
+          ],
+          [
+            8.3746522,
+            12.8888859
+          ],
+          [
+            8.3745458,
+            12.8890659
+          ],
+          [
+            8.3744394,
+            12.8892458
+          ],
+          [
+            8.3743332,
+            12.8894256
+          ],
+          [
+            8.3742269,
+            12.8896056
+          ],
+          [
+            8.3741206,
+            12.8897855
+          ],
+          [
+            8.3740143,
+            12.8899655
+          ],
+          [
+            8.3739079,
+            12.8901454
+          ],
+          [
+            8.3738016,
+            12.8903253
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_252",
+      "properties": {
+        "id": "asset_252",
+        "chainage_str": "PK 113+450 – PK 114+020",
+        "start_pk": 113450.0,
+        "end_pk": 114020.0,
+        "length_m": 570.0,
+        "is_point": false,
+        "side": "Right",
+        "position": "Right Side (Embankment Toe)",
+        "typology": "Concrete Lined Toe Ditch (Type 12, Type 7)",
+        "short_code": "Toe Ditch",
+        "category": "Toe Ditch",
+        "color": "#F59E0B",
+        "drawing_ref": "DW-03022-06 / DW-03023-06 / MDDTDW220010001",
+        "specs": "Concrete lined toe ditch (Type 12, Type 7) per DW-03022-06 / DW-03023-06 [Ref: FS-068, FS-106, FS-107, FS-108]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3726882,
+            12.8922006
+          ],
+          [
+            8.3725737,
+            12.8923944
+          ],
+          [
+            8.3724591,
+            12.8925884
+          ],
+          [
+            8.3723445,
+            12.8927822
+          ],
+          [
+            8.3722301,
+            12.892976
+          ],
+          [
+            8.3721154,
+            12.89317
+          ],
+          [
+            8.3720008,
+            12.8933639
+          ],
+          [
+            8.3718863,
+            12.8935576
+          ],
+          [
+            8.3717717,
+            12.8937516
+          ],
+          [
+            8.3716573,
+            12.8939454
+          ],
+          [
+            8.3715426,
+            12.8941393
+          ],
+          [
+            8.371428,
+            12.8943332
+          ],
+          [
+            8.3713136,
+            12.894527
+          ],
+          [
+            8.371199,
+            12.894721
+          ],
+          [
+            8.3710844,
+            12.8949148
+          ],
+          [
+            8.3709699,
+            12.8951086
+          ],
+          [
+            8.3708553,
+            12.8953026
+          ],
+          [
+            8.3707407,
+            12.8954964
+          ],
+          [
+            8.3706262,
+            12.8956902
+          ],
+          [
+            8.3705116,
+            12.8958842
+          ],
+          [
+            8.370397,
+            12.8960781
+          ],
+          [
+            8.3702825,
+            12.8962718
+          ],
+          [
+            8.3701679,
+            12.8964658
+          ],
+          [
+            8.3700533,
+            12.8966597
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_253",
+      "properties": {
+        "id": "asset_253",
+        "chainage_str": "PK 114+090 – PK 114+440",
+        "start_pk": 114090.0,
+        "end_pk": 114440.0,
+        "length_m": 350.0,
+        "is_point": false,
+        "side": "Right",
+        "position": "Right Side (Embankment Toe)",
+        "typology": "Concrete Lined Toe Ditch (Type 12, Type 7)",
+        "short_code": "Toe Ditch",
+        "category": "Toe Ditch",
+        "color": "#F59E0B",
+        "drawing_ref": "DW-03023-06 / MDDTDW220010001",
+        "specs": "Concrete lined toe ditch (Type 12, Type 7) per DW-03023-06 [Ref: FS-069, FS-109, FS-110]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3697297,
+            12.8972072
+          ],
+          [
+            8.3696142,
+            12.8974028
+          ],
+          [
+            8.3694986,
+            12.8975984
+          ],
+          [
+            8.369383,
+            12.8977939
+          ],
+          [
+            8.3692675,
+            12.8979895
+          ],
+          [
+            8.3691519,
+            12.8981851
+          ],
+          [
+            8.3690363,
+            12.8983806
+          ],
+          [
+            8.3689208,
+            12.8985762
+          ],
+          [
+            8.3688052,
+            12.8987718
+          ],
+          [
+            8.3686896,
+            12.8989674
+          ],
+          [
+            8.368574,
+            12.8991629
+          ],
+          [
+            8.3684585,
+            12.8993585
+          ],
+          [
+            8.3683429,
+            12.8995541
+          ],
+          [
+            8.3682273,
+            12.8997496
+          ],
+          [
+            8.3681118,
+            12.8999452
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_254",
+      "properties": {
+        "id": "asset_254",
+        "chainage_str": "PK 114+360 – PK 114+590",
+        "start_pk": 114360.0,
+        "end_pk": 114590.0,
+        "length_m": 230.0,
+        "is_point": false,
+        "side": "Left",
+        "position": "Left Side (Embankment Toe)",
+        "typology": "Trapezoidal Lined Toe Ditch (Type 12)",
+        "short_code": "Type 12",
+        "category": "Toe Ditch",
+        "color": "#F59E0B",
+        "drawing_ref": "DW-03023-06 / MDDTDW220010001",
+        "specs": "Concrete trapezoidal toe ditch (B=1.50m, H=0.50m, 1:1.5) per DW-03023-06 [Ref: FS-029, FS-030]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3681978,
+            12.8991601
+          ],
+          [
+            8.3680915,
+            12.8993399
+          ],
+          [
+            8.3679852,
+            12.8995198
+          ],
+          [
+            8.3678788,
+            12.8996999
+          ],
+          [
+            8.3677726,
+            12.8998797
+          ],
+          [
+            8.3676662,
+            12.9000597
+          ],
+          [
+            8.3675599,
+            12.9002395
+          ],
+          [
+            8.3674535,
+            12.9004196
+          ],
+          [
+            8.3673473,
+            12.9005994
+          ],
+          [
+            8.3672409,
+            12.9007793
+          ],
+          [
+            8.3671345,
+            12.9009592
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_255",
+      "properties": {
+        "id": "asset_255",
+        "chainage_str": "PK 114+510 – PK 114+810",
+        "start_pk": 114510.0,
+        "end_pk": 114810.0,
+        "length_m": 300.0,
+        "is_point": false,
+        "side": "Right",
+        "position": "Right Side (Embankment Toe)",
+        "typology": "Concrete Lined Toe Ditch (Type 7)",
+        "short_code": "Type 7",
+        "category": "Toe Ditch",
+        "color": "#EA580C",
+        "drawing_ref": "DW-03023-06 / MDDTDW220010001",
+        "specs": "Concrete lined triangular toe ditch (H=0.80m, 1:1.5) per DW-03023-06 [Ref: FS-070]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3677842,
+            12.9004905
+          ],
+          [
+            8.3676687,
+            12.9006862
+          ],
+          [
+            8.367553,
+            12.9008817
+          ],
+          [
+            8.3674375,
+            12.9010773
+          ],
+          [
+            8.3673219,
+            12.9012728
+          ],
+          [
+            8.3672063,
+            12.9014684
+          ],
+          [
+            8.3670908,
+            12.901664
+          ],
+          [
+            8.3669752,
+            12.9018595
+          ],
+          [
+            8.3668597,
+            12.9020552
+          ],
+          [
+            8.366744,
+            12.9022507
+          ],
+          [
+            8.3666285,
+            12.9024463
+          ],
+          [
+            8.3665129,
+            12.9026418
+          ],
+          [
+            8.3663973,
+            12.9028374
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_256",
+      "properties": {
+        "id": "asset_256",
+        "chainage_str": "PK 115+150 – PK 116+260",
+        "start_pk": 115150.0,
+        "end_pk": 116260.0,
+        "length_m": 1110.0,
+        "is_point": false,
+        "side": "Right",
+        "position": "Right Side (Embankment Toe)",
+        "typology": "Concrete Lined Toe Ditch (Type 12, Type 7)",
+        "short_code": "Toe Ditch",
+        "category": "Toe Ditch",
+        "color": "#F59E0B",
+        "drawing_ref": "DW-03024-07 / MDDTDW220010001",
+        "specs": "Concrete lined toe ditch (Type 12, Type 7) per DW-03024-07 [Ref: FS-071, FS-072, FS-112, FS-113, FS-114, FS-115]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3648295,
+            12.9054994
+          ],
+          [
+            8.3647156,
+            12.9056923
+          ],
+          [
+            8.3646015,
+            12.9058854
+          ],
+          [
+            8.3644874,
+            12.9060783
+          ],
+          [
+            8.3643734,
+            12.9062712
+          ],
+          [
+            8.3642594,
+            12.9064642
+          ],
+          [
+            8.3641453,
+            12.9066572
+          ],
+          [
+            8.3640313,
+            12.9068501
+          ],
+          [
+            8.3639172,
+            12.9070431
+          ],
+          [
+            8.3638032,
+            12.907236
+          ],
+          [
+            8.3636892,
+            12.9074289
+          ],
+          [
+            8.3635752,
+            12.907622
+          ],
+          [
+            8.3634611,
+            12.9078149
+          ],
+          [
+            8.3633471,
+            12.9080078
+          ],
+          [
+            8.3632331,
+            12.9082008
+          ],
+          [
+            8.363119,
+            12.9083938
+          ],
+          [
+            8.363005,
+            12.9085867
+          ],
+          [
+            8.3628909,
+            12.9087797
+          ],
+          [
+            8.3627768,
+            12.9089727
+          ],
+          [
+            8.3626629,
+            12.9091655
+          ],
+          [
+            8.3625488,
+            12.9093586
+          ],
+          [
+            8.3624348,
+            12.9095516
+          ],
+          [
+            8.3623207,
+            12.9097445
+          ],
+          [
+            8.3622066,
+            12.9099375
+          ],
+          [
+            8.3620922,
+            12.9101306
+          ],
+          [
+            8.3619781,
+            12.9103235
+          ],
+          [
+            8.3618646,
+            12.9105165
+          ],
+          [
+            8.3617515,
+            12.9107099
+          ],
+          [
+            8.3616388,
+            12.9109038
+          ],
+          [
+            8.3615266,
+            12.9110979
+          ],
+          [
+            8.3614151,
+            12.9112923
+          ],
+          [
+            8.3613043,
+            12.911487
+          ],
+          [
+            8.3611943,
+            12.9116821
+          ],
+          [
+            8.3610848,
+            12.9118776
+          ],
+          [
+            8.3609761,
+            12.9120734
+          ],
+          [
+            8.360868,
+            12.9122695
+          ],
+          [
+            8.3607605,
+            12.9124661
+          ],
+          [
+            8.3606536,
+            12.912663
+          ],
+          [
+            8.3605475,
+            12.9128602
+          ],
+          [
+            8.360442,
+            12.9130577
+          ],
+          [
+            8.3603372,
+            12.9132556
+          ],
+          [
+            8.3602331,
+            12.9134538
+          ],
+          [
+            8.3601296,
+            12.9136525
+          ],
+          [
+            8.3600267,
+            12.9138514
+          ],
+          [
+            8.3599245,
+            12.9140506
+          ],
+          [
+            8.359823,
+            12.9142502
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_257",
+      "properties": {
+        "id": "asset_257",
+        "chainage_str": "PK 116+440 – PK 116+810",
+        "start_pk": 116440.0,
+        "end_pk": 116810.0,
+        "length_m": 370.0,
+        "is_point": false,
+        "side": "Left",
+        "position": "Left Side (Embankment Toe)",
+        "typology": "Concrete Lined Toe Ditch (Type 12, Type 7)",
+        "short_code": "Toe Ditch",
+        "category": "Toe Ditch",
+        "color": "#F59E0B",
+        "drawing_ref": "DW-03025-06 / MDDTDW220010001",
+        "specs": "Concrete lined toe ditch (Type 12, Type 7) per DW-03025-06 [Ref: FS-031, FS-055]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3588099,
+            12.9155837
+          ],
+          [
+            8.3587135,
+            12.9157869
+          ],
+          [
+            8.3586178,
+            12.9159903
+          ],
+          [
+            8.3585229,
+            12.9161941
+          ],
+          [
+            8.3584285,
+            12.9163982
+          ],
+          [
+            8.3583349,
+            12.9166025
+          ],
+          [
+            8.358242,
+            12.9168073
+          ],
+          [
+            8.3581498,
+            12.9170122
+          ],
+          [
+            8.3580582,
+            12.9172174
+          ],
+          [
+            8.3579673,
+            12.9174231
+          ],
+          [
+            8.3578771,
+            12.917629
+          ],
+          [
+            8.3577876,
+            12.9178351
+          ],
+          [
+            8.3576988,
+            12.9180415
+          ],
+          [
+            8.3576107,
+            12.9182483
+          ],
+          [
+            8.3575233,
+            12.9184553
+          ],
+          [
+            8.3574366,
+            12.9186626
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_258",
+      "properties": {
+        "id": "asset_258",
+        "chainage_str": "PK 118+610 – PK 119+290",
+        "start_pk": 118610.0,
+        "end_pk": 119290.0,
+        "length_m": 680.0,
+        "is_point": false,
+        "side": "Left",
+        "position": "Left Side (Embankment Toe)",
+        "typology": "Trapezoidal Lined Toe Ditch (Type 12)",
+        "short_code": "Type 12",
+        "category": "Toe Ditch",
+        "color": "#F59E0B",
+        "drawing_ref": "DW-03026-07 / DW-03027-06 / MDDTDW220010001",
+        "specs": "Concrete trapezoidal toe ditch (B=1.50m, H=0.50m, 1:1.5) per DW-03026-07 / DW-03027-06 [Ref: FS-032]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3513095,
+            12.9337913
+          ],
+          [
+            8.3512269,
+            12.9339955
+          ],
+          [
+            8.3511444,
+            12.9341996
+          ],
+          [
+            8.3510619,
+            12.9344037
+          ],
+          [
+            8.3509793,
+            12.9346078
+          ],
+          [
+            8.3508967,
+            12.9348119
+          ],
+          [
+            8.3508142,
+            12.935016
+          ],
+          [
+            8.3507316,
+            12.9352202
+          ],
+          [
+            8.3506491,
+            12.9354243
+          ],
+          [
+            8.3505665,
+            12.9356284
+          ],
+          [
+            8.350484,
+            12.9358325
+          ],
+          [
+            8.3504014,
+            12.9360366
+          ],
+          [
+            8.3503188,
+            12.9362408
+          ],
+          [
+            8.3502362,
+            12.936445
+          ],
+          [
+            8.3501538,
+            12.9366491
+          ],
+          [
+            8.3500712,
+            12.9368531
+          ],
+          [
+            8.3499886,
+            12.9370572
+          ],
+          [
+            8.3499061,
+            12.9372614
+          ],
+          [
+            8.3498235,
+            12.9374655
+          ],
+          [
+            8.3497409,
+            12.9376696
+          ],
+          [
+            8.3496584,
+            12.9378737
+          ],
+          [
+            8.3495758,
+            12.938078
+          ],
+          [
+            8.3494933,
+            12.938282
+          ],
+          [
+            8.3494107,
+            12.9384861
+          ],
+          [
+            8.3493282,
+            12.9386902
+          ],
+          [
+            8.3492456,
+            12.9388944
+          ],
+          [
+            8.349163,
+            12.9390985
+          ],
+          [
+            8.3490805,
+            12.9393026
+          ],
+          [
+            8.3489979,
+            12.9395067
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_259",
+      "properties": {
+        "id": "asset_259",
+        "chainage_str": "PK 119+350 – PK 119+620",
+        "start_pk": 119350.0,
+        "end_pk": 119620.0,
+        "length_m": 270.0,
+        "is_point": false,
+        "side": "Left",
+        "position": "Left Side (Embankment Toe)",
+        "typology": "Trapezoidal Lined Toe Ditch (Type 12)",
+        "short_code": "Type 12",
+        "category": "Toe Ditch",
+        "color": "#F59E0B",
+        "drawing_ref": "DW-03027-06 / MDDTDW220010001",
+        "specs": "Concrete trapezoidal toe ditch (B=1.50m, H=0.50m, 1:1.5) per DW-03027-06 [Ref: FS-033]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.348794,
+            12.940011
+          ],
+          [
+            8.3487105,
+            12.9402173
+          ],
+          [
+            8.3486271,
+            12.9404236
+          ],
+          [
+            8.3485436,
+            12.9406299
+          ],
+          [
+            8.3484602,
+            12.9408363
+          ],
+          [
+            8.3483768,
+            12.9410426
+          ],
+          [
+            8.3482934,
+            12.9412488
+          ],
+          [
+            8.3482099,
+            12.9414551
+          ],
+          [
+            8.3481264,
+            12.9416615
+          ],
+          [
+            8.348043,
+            12.9418677
+          ],
+          [
+            8.3479595,
+            12.942074
+          ],
+          [
+            8.3478761,
+            12.9422803
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_260",
+      "properties": {
+        "id": "asset_260",
+        "chainage_str": "PK 119+900 – PK 120+240",
+        "start_pk": 119900.0,
+        "end_pk": 120240.0,
+        "length_m": 340.0,
+        "is_point": false,
+        "side": "Left",
+        "position": "Left Side (Embankment Toe)",
+        "typology": "Trapezoidal Lined Toe Ditch (Type 12)",
+        "short_code": "Type 12",
+        "category": "Toe Ditch",
+        "color": "#F59E0B",
+        "drawing_ref": "DW-03027-06 / MDDTDW220010001",
+        "specs": "Concrete trapezoidal toe ditch (B=1.50m, H=0.50m, 1:1.5) per DW-03027-06 [Ref: FS-034]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3469243,
+            12.9446338
+          ],
+          [
+            8.3468417,
+            12.9448378
+          ],
+          [
+            8.3467591,
+            12.945042
+          ],
+          [
+            8.3466766,
+            12.9452461
+          ],
+          [
+            8.346594,
+            12.9454502
+          ],
+          [
+            8.3465114,
+            12.9456543
+          ],
+          [
+            8.3464289,
+            12.9458584
+          ],
+          [
+            8.3463463,
+            12.9460626
+          ],
+          [
+            8.3462637,
+            12.9462667
+          ],
+          [
+            8.3461811,
+            12.9464708
+          ],
+          [
+            8.3460986,
+            12.9466749
+          ],
+          [
+            8.346016,
+            12.9468791
+          ],
+          [
+            8.3459335,
+            12.9470832
+          ],
+          [
+            8.3458509,
+            12.9472873
+          ],
+          [
+            8.3457684,
+            12.9474914
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_261",
+      "properties": {
+        "id": "asset_261",
+        "chainage_str": "PK 120+530 – PK 121+290",
+        "start_pk": 120530.0,
+        "end_pk": 121290.0,
+        "length_m": 760.0,
+        "is_point": false,
+        "side": "Right",
+        "position": "Right Side (Embankment Toe)",
+        "typology": "Concrete Lined Toe Ditch (Type 12, Type 7)",
+        "short_code": "Toe Ditch",
+        "category": "Toe Ditch",
+        "color": "#F59E0B",
+        "drawing_ref": "DW-03027-06 / DW-03028-05 / MDDTDW220010001",
+        "specs": "Concrete lined toe ditch (Type 12, Type 7) per DW-03027-06 / DW-03028-05 [Ref: FS-075, FS-117]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3450872,
+            12.950046
+          ],
+          [
+            8.3450039,
+            12.950252
+          ],
+          [
+            8.3449205,
+            12.950458
+          ],
+          [
+            8.3448372,
+            12.950664
+          ],
+          [
+            8.3447538,
+            12.9508702
+          ],
+          [
+            8.3446705,
+            12.9510762
+          ],
+          [
+            8.3445871,
+            12.9512823
+          ],
+          [
+            8.3445038,
+            12.9514883
+          ],
+          [
+            8.3444204,
+            12.9516944
+          ],
+          [
+            8.344337,
+            12.9519005
+          ],
+          [
+            8.3442537,
+            12.9521065
+          ],
+          [
+            8.3441703,
+            12.9523125
+          ],
+          [
+            8.344087,
+            12.9525186
+          ],
+          [
+            8.3440036,
+            12.9527247
+          ],
+          [
+            8.3439203,
+            12.9529307
+          ],
+          [
+            8.3438369,
+            12.9531368
+          ],
+          [
+            8.3437536,
+            12.9533428
+          ],
+          [
+            8.3436703,
+            12.9535488
+          ],
+          [
+            8.3435869,
+            12.953755
+          ],
+          [
+            8.3435036,
+            12.953961
+          ],
+          [
+            8.3434202,
+            12.954167
+          ],
+          [
+            8.3433369,
+            12.9543731
+          ],
+          [
+            8.3432535,
+            12.9545791
+          ],
+          [
+            8.3431702,
+            12.9547852
+          ],
+          [
+            8.3430868,
+            12.9549913
+          ],
+          [
+            8.3430035,
+            12.9551973
+          ],
+          [
+            8.3429201,
+            12.9554034
+          ],
+          [
+            8.3428368,
+            12.9556095
+          ],
+          [
+            8.3427534,
+            12.9558155
+          ],
+          [
+            8.34267,
+            12.9560215
+          ],
+          [
+            8.3425867,
+            12.9562276
+          ],
+          [
+            8.3425033,
+            12.9564336
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_262",
+      "properties": {
+        "id": "asset_262",
+        "chainage_str": "PK 121+570 – PK 122+190",
+        "start_pk": 121570.0,
+        "end_pk": 122190.0,
+        "length_m": 620.0,
+        "is_point": false,
+        "side": "Right",
+        "position": "Right Side (Embankment Toe)",
+        "typology": "Concrete Lined Toe Ditch (Type 12, Type 7)",
+        "short_code": "Toe Ditch",
+        "category": "Toe Ditch",
+        "color": "#F59E0B",
+        "drawing_ref": "DW-03028-05 / DW-03029-05 / MDDTDW220010001",
+        "specs": "Concrete lined toe ditch (Type 12, Type 7) per DW-03028-05 / DW-03029-05 [Ref: FS-076, FS-118]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3415513,
+            12.958787
+          ],
+          [
+            8.341467,
+            12.9589954
+          ],
+          [
+            8.3413827,
+            12.9592038
+          ],
+          [
+            8.3412984,
+            12.9594123
+          ],
+          [
+            8.3412141,
+            12.9596208
+          ],
+          [
+            8.3411297,
+            12.9598292
+          ],
+          [
+            8.3410454,
+            12.9600376
+          ],
+          [
+            8.3409611,
+            12.960246
+          ],
+          [
+            8.3408768,
+            12.9604545
+          ],
+          [
+            8.3407925,
+            12.960663
+          ],
+          [
+            8.3407081,
+            12.9608714
+          ],
+          [
+            8.3406238,
+            12.9610798
+          ],
+          [
+            8.3405395,
+            12.9612882
+          ],
+          [
+            8.3404552,
+            12.9614967
+          ],
+          [
+            8.3403709,
+            12.9617052
+          ],
+          [
+            8.3402865,
+            12.9619136
+          ],
+          [
+            8.3402022,
+            12.962122
+          ],
+          [
+            8.3401179,
+            12.9623304
+          ],
+          [
+            8.3400336,
+            12.9625389
+          ],
+          [
+            8.3399493,
+            12.9627474
+          ],
+          [
+            8.3398649,
+            12.9629558
+          ],
+          [
+            8.3397806,
+            12.9631642
+          ],
+          [
+            8.3396963,
+            12.9633726
+          ],
+          [
+            8.339612,
+            12.9635811
+          ],
+          [
+            8.3395277,
+            12.9637896
+          ],
+          [
+            8.3394433,
+            12.963998
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_263",
+      "properties": {
+        "id": "asset_263",
+        "chainage_str": "PK 122+830 – PK 123+910",
+        "start_pk": 122830.0,
+        "end_pk": 123910.0,
+        "length_m": 1080.0,
+        "is_point": false,
+        "side": "Left",
+        "position": "Left Side (Embankment Toe)",
+        "typology": "Trapezoidal Lined Toe Ditch (Type 12)",
+        "short_code": "Type 12",
+        "category": "Toe Ditch",
+        "color": "#F59E0B",
+        "drawing_ref": "DW-03029-05 / DW-03030-05 / MDDTDW220010001",
+        "specs": "Concrete trapezoidal toe ditch (B=1.50m, H=0.50m, 1:1.5) per DW-03029-05 / DW-03030-05 [Ref: FS-035]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3369624,
+            12.9692599
+          ],
+          [
+            8.3368789,
+            12.9694662
+          ],
+          [
+            8.3367954,
+            12.9696725
+          ],
+          [
+            8.336712,
+            12.9698789
+          ],
+          [
+            8.3366285,
+            12.9700852
+          ],
+          [
+            8.3365451,
+            12.9702914
+          ],
+          [
+            8.3364616,
+            12.9704977
+          ],
+          [
+            8.3363782,
+            12.970704
+          ],
+          [
+            8.3362947,
+            12.9709103
+          ],
+          [
+            8.3362113,
+            12.9711167
+          ],
+          [
+            8.3361278,
+            12.9713229
+          ],
+          [
+            8.3360443,
+            12.9715292
+          ],
+          [
+            8.3359608,
+            12.9717355
+          ],
+          [
+            8.3358774,
+            12.9719418
+          ],
+          [
+            8.3357939,
+            12.9721482
+          ],
+          [
+            8.3357104,
+            12.9723544
+          ],
+          [
+            8.335627,
+            12.9725607
+          ],
+          [
+            8.3355435,
+            12.972767
+          ],
+          [
+            8.3354601,
+            12.9729733
+          ],
+          [
+            8.3353766,
+            12.9731797
+          ],
+          [
+            8.3352932,
+            12.9733859
+          ],
+          [
+            8.3352097,
+            12.9735922
+          ],
+          [
+            8.3351262,
+            12.9737985
+          ],
+          [
+            8.3350427,
+            12.9740048
+          ],
+          [
+            8.3349593,
+            12.9742111
+          ],
+          [
+            8.3348758,
+            12.9744174
+          ],
+          [
+            8.3347923,
+            12.9746237
+          ],
+          [
+            8.3347089,
+            12.97483
+          ],
+          [
+            8.3346254,
+            12.9750363
+          ],
+          [
+            8.334542,
+            12.9752426
+          ],
+          [
+            8.3344585,
+            12.9754489
+          ],
+          [
+            8.334375,
+            12.9756552
+          ],
+          [
+            8.3342915,
+            12.9758615
+          ],
+          [
+            8.3342081,
+            12.9760678
+          ],
+          [
+            8.3341246,
+            12.9762741
+          ],
+          [
+            8.3340412,
+            12.9764803
+          ],
+          [
+            8.3339577,
+            12.9766867
+          ],
+          [
+            8.3338742,
+            12.976893
+          ],
+          [
+            8.3337908,
+            12.9770992
+          ],
+          [
+            8.3337072,
+            12.9773056
+          ],
+          [
+            8.3336238,
+            12.9775118
+          ],
+          [
+            8.3335403,
+            12.9777181
+          ],
+          [
+            8.3334569,
+            12.9779245
+          ],
+          [
+            8.3333734,
+            12.9781308
+          ],
+          [
+            8.33329,
+            12.9783371
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_264",
+      "properties": {
+        "id": "asset_264",
+        "chainage_str": "PK 123+260 – PK 123+610",
+        "start_pk": 123260.0,
+        "end_pk": 123610.0,
+        "length_m": 350.0,
+        "is_point": false,
+        "side": "Right",
+        "position": "Right Side (Embankment Toe)",
+        "typology": "Trapezoidal Lined Toe Ditch (Type 12)",
+        "short_code": "Type 12",
+        "category": "Toe Ditch",
+        "color": "#F59E0B",
+        "drawing_ref": "DW-03029-05 / DW-03030-05 / MDDTDW220010001",
+        "specs": "Concrete trapezoidal toe ditch (B=1.50m, H=0.50m, 1:1.5) per DW-03029-05 / DW-03030-05 [Ref: FS-120]",
+        "icon": "ditch",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3358093,
+            12.9729927
+          ],
+          [
+            8.3357243,
+            12.9732028
+          ],
+          [
+            8.3356393,
+            12.973413
+          ],
+          [
+            8.3355543,
+            12.9736232
+          ],
+          [
+            8.3354692,
+            12.9738332
+          ],
+          [
+            8.3353842,
+            12.9740433
+          ],
+          [
+            8.3352992,
+            12.9742534
+          ],
+          [
+            8.3352142,
+            12.9744635
+          ],
+          [
+            8.3351292,
+            12.9746737
+          ],
+          [
+            8.3350442,
+            12.9748838
+          ],
+          [
+            8.3349592,
+            12.9750939
+          ],
+          [
+            8.3348742,
+            12.975304
+          ],
+          [
+            8.3347892,
+            12.9755142
+          ],
+          [
+            8.3347041,
+            12.9757243
+          ],
+          [
+            8.3346191,
+            12.9759344
           ]
         ]
       }
