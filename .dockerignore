@@ -1,0 +1,6 @@
+scripts/
+screenshots/
+*.bat
+.git
+.gitignore
+*.md

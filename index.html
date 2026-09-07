@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>KMD Railway — Drainage Field Inspector & Alignment Map</title>
+  <meta name="description" content="On-site drainage inspection and live GPS alignment tracking for Kano-Maradi-Dutse Railway Project (Section 03: Kazaure to Daura)">
+  <meta name="theme-color" content="#0F172A">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- PWA Manifest & App Icon -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚆</text></svg>">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚆</text></svg>">
+
+  <!-- Leaflet GIS Stylesheet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  
+  <!-- Custom App Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- 1. Top App Navigation Header -->
+  <header class="app-header">
+    <div class="header-row-main">
+      <div class="brand-block">
+        <div class="brand-icon">🚆</div>
+        <div class="brand-titles">
+          <h1>KMD DRAINAGE INSPECTOR</h1>
+          <p>Section 03: KZDR (PK 82+902 — 124+521)</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button id="btnLocate" class="btn-icon-text btn-locate" title="Toggle Live GPS Tracking">
+          <span>📍</span>
+          <span>Locate Me</span>
+        </button>
+        <button id="btnExport" class="btn-icon-text btn-export" title="Export Progress to Excel">
+          <span>📊</span>
+          <span>Excel</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="header-row-tools">
+      <div class="jump-box">
+        <input type="text" id="txtJumpPk" placeholder="Jump to PK (e.g. 84+400)" autocomplete="off">
+        <button id="btnJump" class="btn-jump">Go</button>
+      </div>
+      <div class="view-mode-toggle" id="viewModeToggle">
+        <button id="btnModeTypology" class="btn-mode active" title="Color by Drainage Typology">
+          <span>🎨</span> Typology
+        </button>
+        <button id="btnModeProgress" class="btn-mode" title="Color by Construction Progress">
+          <span>📊</span> Progress
+        </button>
+      </div>
+      <select id="selectFilter" class="filter-select">
+        <option value="all">Filter: All Features</option>
+        <option value="ditches">Ditches & Channels</option>
+        <option value="structures">Cross Drainage & Bridges</option>
+        <option disabled>──────────────</option>
+        <option value="status_ongoing">Status: Ongoing / In Progress</option>
+        <option value="status_completed">Status: Completed & Approved</option>
+        <option value="status_not_started">Status: Not Started</option>
+        <option value="status_defect">Status: Defects & Snags</option>
+      </select>
+    </div>
+  </header>
+
+  <!-- 2. Real-Time HUD Status Banner -->
+  <div class="hud-banner" id="hudBanner">
+    <div class="hud-left">
+      <span class="status-dot" id="gpsStatusDot"></span>
+      <span id="hudGpsState">GPS OFF</span>
+      <span>|</span>
+      <span>Chainage:</span>
+      <span class="hud-val" id="hudCurrentPk">—</span>
+    </div>
+    <div class="hud-right">
+      <span id="hudCurrentOffset">—</span>
+      <span>|</span>
+      <span id="hudAccuracy">±0m</span>
+    </div>
+  </div>
+
+  <!-- 2.5. Live Construction Progress Birds-Eye KPI Bar -->
+  <div class="progress-kpi-bar" id="progressKpiBar">
+    <div class="kpi-chip kpi-total active" data-filter="all" title="View all features">
+      <span class="kpi-label">TOTAL</span>
+      <span class="kpi-num" id="kpiTotal">177</span>
+    </div>
+    <div class="kpi-chip kpi-not-started" data-filter="status_not_started" title="Filter Not Started">
+      <span class="kpi-dot dot-not-started"></span>
+      <span class="kpi-label">NOT STARTED</span>
+      <span class="kpi-num" id="kpiNotStarted">177</span>
+    </div>
+    <div class="kpi-chip kpi-ongoing" data-filter="status_ongoing" title="Filter In Progress">
+      <span class="kpi-dot dot-ongoing"></span>
+      <span class="kpi-label">IN PROGRESS</span>
+      <span class="kpi-num" id="kpiOngoing">0</span>
+    </div>
+    <div class="kpi-chip kpi-completed" data-filter="status_completed" title="Filter Completed & Approved">
+      <span class="kpi-dot dot-completed"></span>
+      <span class="kpi-label">COMPLETED</span>
+      <span class="kpi-num" id="kpiCompleted">0</span>
+    </div>
+    <div class="kpi-chip kpi-defects" data-filter="status_defect" title="Filter Defects & Snags">
+      <span class="kpi-dot dot-defects"></span>
+      <span class="kpi-label">DEFECTS</span>
+      <span class="kpi-num" id="kpiDefects">0</span>
+    </div>
+  </div>
+
+  <!-- 3. Fullscreen Interactive Map -->
+  <div id="map"></div>
+
+  <!-- 4. Bottom Slide-Up Inspection & Progress Drawer -->
+  <div class="drawer-container collapsed" id="inspectionDrawer">
+    <div class="drawer-handle-bar" id="drawerHandleBar">
+      <div class="drawer-handle"></div>
+    </div>
+    
+    <div class="drawer-mini-bar">
+      <div class="mini-title">
+        <span class="badge-tag" id="drawerAssetCode" style="background:#3B82F6;">Type 1</span>
+        <span class="badge-tag" id="drawerSideBadge" style="background:#1D4ED8;">Left</span>
+        <span class="mini-chainage" id="drawerChainage">Select an Asset on Map</span>
+      </div>
+      <span class="mini-status" id="drawerPosition" style="color:var(--text-muted); font-size:0.75rem;">Tap map or enter PK</span>
+    </div>
+
+    <div class="drawer-content" id="drawerContent">
+      <!-- Technical Design Specs -->
+      <div class="spec-grid">
+        <div class="spec-item">
+          <span class="spec-label">Typology Scope</span>
+          <span class="spec-value" id="specTypology">—</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-label">Linear Scope</span>
+          <span class="spec-value" id="specLength">—</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-label">Detail Drawing</span>
+          <span class="spec-value" id="specDrawing">—</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-label">Dimensions / Geometry</span>
+          <span class="spec-value" id="specDimensions">—</span>
+        </div>
+      </div>
+
+      <!-- Construction Progress Milestones -->
+      <div class="progress-section">
+        <span class="section-label">Construction Progress Milestone</span>
+        <div class="milestone-grid">
+          <button class="btn-milestone selected" data-status="Not Started">Not Started</button>
+          <button class="btn-milestone" data-status="Excavation">Excavation</button>
+          <button class="btn-milestone" data-status="Blinding">Blinding</button>
+          <button class="btn-milestone" data-status="Rebar / Shuttering">Rebar / Shuttering</button>
+          <button class="btn-milestone" data-status="Concreted">Concreted</button>
+          <button class="btn-milestone" data-status="Completed & Approved">Completed & Approved</button>
+        </div>
+      </div>
+
+      <!-- Punchlist & Quality Notes -->
+      <div class="notes-section">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span class="section-label">Inspection & Punchlist Notes</span>
+          <label style="font-size:0.72rem; color:#EF4444; font-weight:700; display:flex; align-items:center; gap:4px; cursor:pointer;">
+            <input type="checkbox" id="chkDefect"> Log as Defect / Snag
+          </label>
+        </div>
+        <textarea id="defectNotes" placeholder="Enter engineering observation, joint alignment, scouring, or punch items..."></textarea>
+      </div>
+
+      <!-- Photo Attachment -->
+      <div class="photo-section">
+        <label class="btn-photo">
+          <span>📷</span>
+          <span>Attach Photo</span>
+          <input type="file" id="cameraInput" accept="image/*" capture="environment" style="display:none;">
+        </label>
+        <div class="photo-preview-list" id="photoPreviewList"></div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="drawer-actions">
+        <button class="btn-primary" id="btnSaveInspection">💾 Save Inspection Record</button>
+        <button class="btn-secondary" id="btnCloseDrawer">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Popup -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Scripts -->
+  <!-- 1. Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  
+  <!-- 2. SheetJS (Excel Export) -->
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
+
+  <!-- 3. Pre-compiled Alignment & Drainage Assets Data (Works offline / file://) -->
+  <script src="data/bundle.js"></script>
+
+  <!-- 4. Core Application Logic -->
+  <script src="app.js"></script>
+
+</body>
+</html>
