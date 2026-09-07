@@ -1150,19 +1150,19 @@
       "id": "asset_014",
       "properties": {
         "id": "asset_014",
-        "chainage_str": "PK 84+406 – PK 84+620",
-        "start_pk": 84406.0,
-        "end_pk": 84620.0,
-        "length_m": 214.0,
+        "chainage_str": "PK 84+444 – PK 84+569",
+        "start_pk": 84444.0,
+        "end_pk": 84569.0,
+        "length_m": 125.0,
         "is_point": false,
         "side": "Left",
         "position": "Left Cut Crest (Top of Slope)",
-        "typology": "Concrete Lined Crest Ditch (Type 11)",
-        "short_code": "Type 11",
+        "typology": "Concrete Lined Crest Ditch (Type 11 / Type 5)",
+        "short_code": "Type 11/5",
         "category": "Crest Ditch",
         "color": "#D97706",
-        "drawing_ref": "DW-03002 / MDDTDW220010001",
-        "specs": "Concrete lined ditch at cutting crest (H=0.50m, 1:1.5)",
+        "drawing_ref": "DW-03002-07 / MDDTDW220010001",
+        "specs": "Concrete lined crest ditch (Type 11 / Type 5 per DW-03000-05) at cutting crest (H=0.50m, 1:1.5). Exact levels per DW-03002-07: falls at 0.30% from 462.88m (CH 84+444) to low point 462.66m (CH 84+519), then descends at 2.25% from 462.73m (CH 84+544) to outfall at 463.30m (CH 84+569).",
         "icon": "ditch",
         "status": "Not Started",
         "notes": "",
@@ -1172,44 +1172,28 @@
         "type": "LineString",
         "coordinates": [
           [
-            8.3945352,
-            12.6347102
+            8.3943257,
+            12.6349921
           ],
           [
-            8.3944029,
-            12.6348868
+            8.3941903,
+            12.6351802
           ],
           [
-            8.3942727,
-            12.6350649
+            8.3940573,
+            12.6353701
           ],
           [
-            8.3941446,
-            12.6352446
+            8.3939268,
+            12.6355616
           ],
           [
-            8.3940187,
-            12.6354258
+            8.3937987,
+            12.6357546
           ],
           [
-            8.3938965,
-            12.6356063
-          ],
-          [
-            8.3937751,
-            12.6357903
-          ],
-          [
-            8.393656,
-            12.6359758
-          ],
-          [
-            8.3935391,
-            12.6361627
-          ],
-          [
-            8.3934245,
-            12.6363509
+            8.393673,
+            12.6359492
           ]
         ]
       }
@@ -4544,7 +4528,7 @@
         "specs": "Concrete lined ditch at cutting crest (H=0.50m, 1:1.5)",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "",
+        "notes": "[FLAG] Unsubstantiated by sheet DW-03006-05; no crest ditch drawn or annotated. Retained pending site verification.",
         "inspection_date": ""
       },
       "geometry": {
@@ -6213,7 +6197,7 @@
         "specs": "Concrete lined ditch at cutting crest (H=0.50m, 1:1.5)",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "",
+        "notes": "[FLAG] Unsubstantiated by sheet DW-03008-06; alignment intersects railway bridge BRG-2602 at CH 93+678–93+731 and no crest ditch exists on centerline. Retained pending site verification.",
         "inspection_date": ""
       },
       "geometry": {

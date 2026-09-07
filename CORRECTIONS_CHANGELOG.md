@@ -165,3 +165,11 @@ Prior to modifying any dataset records, three test items were selected at random
 | asset_073 | PK 89+700 – PK 90+246 | RETYPE | Side and Type (Row 14) | DW-03005-06 | Updated typology / technical specifications per primary drawing evidence and master dataset. Initial field data intact. |
 | asset_065 | PK 88+800 – PK 88+975 | RETYPE | Side and Type (Row 19) | DW-03005-06 | Updated typology / technical specifications per primary drawing evidence and master dataset. Initial field data intact. |
 | asset_153 | PK 119+472 – PK 120+450 | RETYPE | Side and Type (Row 20) | DW-03027-06 | Updated typology / technical specifications per primary drawing evidence and master dataset. Initial field data intact. |
+
+### Phase 5 — Crest Ditch Corrections (Crest Ditch Tab)
+
+| Record ID | Chainage Extent | Action | Register Reference | Drawing / Document Reference | Notes & Field Data Continuity |
+|:---|:---|:---|:---|:---|:---|
+| sset_014 | PK 84+444 – PK 84+569 | EDIT EXTENT | Crest Ditch (Row 13) | DW-03002-07 | Tightened extent from 84+406–84+620 to 84+444–84+569 (-89m). Geometry regenerated on Left (-22m). Quoted verbatim levels and 2.25% descent in specs. Initial field data intact. |
+| asset_071 | PK 89+700 – PK 89+980 | FLAG | Crest Ditch (Row 14) | DW-03006-05 | [FLAG] Unsubstantiated by sheet DW-03006-05; no crest ditch drawn or annotated. Retained pending site verification. Existing record retained. |
+| asset_092 | PK 93+500 – PK 94+300 | FLAG | Crest Ditch (Row 15) | DW-03008-06 | [FLAG] Unsubstantiated by sheet DW-03008-06; alignment intersects railway bridge BRG-2602 at CH 93+678–93+731 and no crest ditch exists on centerline. Retained pending site verification. Existing record retained. |
