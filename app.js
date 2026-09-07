@@ -156,9 +156,11 @@
         finalPk = p1.pk + t * (p2.pk - p1.pk);
         finalBearing = p1.bearing;
 
-        // Cross-product for Left/Right sign: (vx * uy - vy * ux)
+        // 2D Cross-product for Left/Right transverse offset:
+        // When facing along the track vector v (in direction of increasing chainage, e.g. PK 84 -> 89):
+        // A point u to the RIGHT (clockwise) has (vy * ux - vx * uy) > 0.
         // Positive = Right of alignment, Negative = Left of alignment
-        const cross = vx * uy - vy * ux;
+        const cross = vy * ux - vx * uy;
         finalOffset = (cross >= 0 ? 1 : -1) * perpDist;
       }
     }
@@ -170,6 +172,7 @@
       bearing: finalBearing
     };
   }
+  window.projectGpsToAlignment = projectGpsToAlignment;
 
   // --- 4. Leaflet Map Initialization ---
   function initMap() {
