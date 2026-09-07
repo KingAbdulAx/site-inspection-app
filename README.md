@@ -115,15 +115,24 @@ $$\theta_{\text{offset}} = (\theta_{\text{track}} - 90^\circ) \pmod{360^\circ} \
 ### 3.5 Excel Progress Export
 * Exports current milestone status, defect flags, notes, and inspection timestamps to formatted Excel spreadsheet (`.xlsx`) via SheetJS.
 
+### 3.6 Offline-First Cloud Synchronization & Multi-Device Access (Supabase)
+* **100% Offline Priority:** Field records save instantly to browser `localStorage` (`KMD_DRAINAGE_INSPECTIONS_SEC03_V1`) with 0ms network latency.
+* **Automatic Cloud Backup:** Queued changes (`KMD_SYNC_PENDING_QUEUE_V1`) auto-sync to Supabase PostgreSQL when internet connectivity is detected.
+* **Multi-Device Synchronization:** Changes logged on a field smartphone seamlessly pull down to desktop browsers in the site office.
+* **Bi-Directional LWW Conflict Resolution:** Merges edits using Last-Write-Wins timestamps (`updated_at`), protecting local field edits from being overwritten by stale cloud records.
+* **Header Status Pill & Modal:** Interactive status indicator in header shows `Offline`, `Syncing...`, `Synced <time>`, or `Error`, with a cloud configuration modal for inspection team settings.
+
 ---
 
 ## 4. Architecture & Technical Stack
 
 ```
 TEAM/app/
-├── index.html              # PWA shell, SVG icons, HUD banner, and drawer layout
-├── styles.css              # Mobile-first slate design system, responsive drawer snaps
-├── app.js                  # Core Leaflet engine, touch physics, GPS projection, rotation
+├── index.html              # PWA shell, SVG icons, HUD banner, sync pill, and drawer layout
+├── styles.css              # Mobile-first slate design system, responsive drawer snaps, sync modal
+├── config.js               # Supabase credentials, cloud settings, inspector device profile
+├── sync.js                 # Offline-first sync engine, queue management, LWW conflict resolution
+├── app.js                  # Core Leaflet engine, touch physics, GPS projection, rotation, sync hooks
 ├── manifest.json           # PWA standalone manifest with vector train icon
 ├── nginx.conf              # Production Nginx reverse proxy configuration
 ├── Dockerfile              # Lightweight alpine container definition
@@ -131,8 +140,8 @@ TEAM/app/
 │   └── leaflet-rotate.js   # Offline map rotation engine (0 CDN dependencies)
 ├── data/
 │   ├── section03_centerline.json   # 1,669 Catmull-Rom spline points (PK 82+902 to 124+521)
-│   ├── section03_assets.json       # 177 georeferenced Section 03 drainage structures
-│   └── bundle.js                   # Static offline bundle of centerline & assets
+│   ├── section03_assets.json       # 842 georeferenced Section 03 drainage & slope protection structures
+│   └── bundle.js                   # Static offline bundle of centerline & 842 assets
 └── scripts/
     ├── alignment_processor.py      # Centerline splining from AutoCAD Civil 3D KMZ
     └── asset_compiler.py           # Asset projection and GeoJSON compiler
