@@ -248,11 +248,11 @@
     esriDarkCanvas.addTo(state.map);
 
     const baseMaps = {
-      '⚡ Barebones Dark (Esri Canvas)': esriDarkCanvas,
-      '⚡ Barebones Light (Esri Canvas)': esriLightCanvas,
-      '🗺️ Roads & Towns (OSM)': osmStandard,
-      '🛰️ Satellite Imagery (Esri)': esriSatellite,
-      '📶 Offline Technical Grid': offlineGrid
+      'Dark Slate Canvas (Esri)': esriDarkCanvas,
+      'Light Gray Canvas (Esri)': esriLightCanvas,
+      'Street Map (OSM)': osmStandard,
+      'Satellite Imagery (Esri)': esriSatellite,
+      'Offline Technical Grid': offlineGrid
     };
 
     L.control.layers(baseMaps, null, { position: 'topright' }).addTo(state.map);
@@ -483,11 +483,11 @@
       }
 
       const statusBadge = hasDefect
-        ? `<span style="display:inline-block;padding:2px 6px;border-radius:4px;background:#EF4444;color:#fff;font-size:10px;font-weight:bold;">⚠️ DEFECT / SNAG</span>`
+        ? `<span style="display:inline-block;padding:2px 6px;border-radius:4px;background:#EF4444;color:#fff;font-size:10px;font-weight:bold;letter-spacing:0.02em;">DEFECT / SNAG</span>`
         : status === 'Completed & Approved'
-        ? `<span style="display:inline-block;padding:2px 6px;border-radius:4px;background:#10B981;color:#fff;font-size:10px;font-weight:bold;">✓ APPROVED</span>`
+        ? `<span style="display:inline-block;padding:2px 6px;border-radius:4px;background:#10B981;color:#fff;font-size:10px;font-weight:bold;letter-spacing:0.02em;">APPROVED</span>`
         : status !== 'Not Started'
-        ? `<span style="display:inline-block;padding:2px 6px;border-radius:4px;background:#F59E0B;color:#000;font-size:10px;font-weight:bold;">⚡ ${status.toUpperCase()}</span>`
+        ? `<span style="display:inline-block;padding:2px 6px;border-radius:4px;background:#F59E0B;color:#000;font-size:10px;font-weight:bold;letter-spacing:0.02em;">${status.toUpperCase()}</span>`
         : `<span style="display:inline-block;padding:2px 6px;border-radius:4px;background:#475569;color:#CBD5E1;font-size:10px;">NOT STARTED</span>`;
 
       if (geom.type === 'LineString') {
@@ -517,15 +517,20 @@
       } else if (geom.type === 'Point') {
         const latlng = [geom.coordinates[1], geom.coordinates[0]];
 
-        let iconHtml = '💧';
-        if (p.category === 'Cross Drainage') iconHtml = '🔲';
-        else if (p.category === 'Overhead Crossing') iconHtml = '🌉';
-        else if (p.category === 'Underpass') iconHtml = '🚇';
-        else if (p.category === 'Shoulder / Cascade') iconHtml = '🔻';
+        let iconSvg = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>';
+        if (p.category === 'Cross Drainage') {
+          iconSvg = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><line x1="3" y1="12" x2="21" y2="12"/></svg>';
+        } else if (p.category === 'Overhead Crossing') {
+          iconSvg = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18h18M4 14a8 8 0 0 1 16 0M3 18v-4M21 18v-4"/></svg>';
+        } else if (p.category === 'Underpass') {
+          iconSvg = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V9a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10"/><path d="M9 19v-6a3 3 0 0 1 6 0v6"/></svg>';
+        } else if (p.category === 'Shoulder / Cascade') {
+          iconSvg = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/><polyline points="6 4 12 10 18 4"/></svg>';
+        }
 
         const customIcon = L.divIcon({
           className: 'custom-pin-container',
-          html: `<div class="${pinClass}" style="background:${pinColor};">${iconHtml}</div>`,
+          html: `<div class="${pinClass}" style="background:${pinColor};">${iconSvg}</div>`,
           iconSize: [26, 26],
           iconAnchor: [13, 13]
         });
@@ -579,8 +584,8 @@
     document.getElementById('defectNotes').value = insp.notes || '';
     document.getElementById('chkDefect').checked = !!insp.hasDefect;
 
-    // Expand Drawer
-    expandDrawer();
+    // Open Drawer in Compact MID State (shows specs + milestones without covering map)
+    midDrawer();
 
     // Highlight on Map
     if (feat.geometry.type === 'Point') {
@@ -608,19 +613,44 @@
     });
   }
 
-  function expandDrawer() {
+  // --- 7.5. Three-Point Drawer Controller (Peek, Mid, Full, Hidden) ---
+  let currentDrawerState = 'collapsed';
+
+  function setDrawerState(targetState) {
     const d = document.getElementById('inspectionDrawer');
-    d.classList.remove('hidden', 'collapsed');
+    if (!d) return;
+
+    d.style.transform = ''; // Clear inline styles from drag
+    d.classList.remove('dragging');
+    d.classList.remove('hidden', 'collapsed', 'mid', 'expanded');
+    d.classList.add(targetState);
+    currentDrawerState = targetState;
+  }
+
+  function expandDrawer() {
+    setDrawerState('expanded');
+  }
+
+  function midDrawer() {
+    setDrawerState('mid');
   }
 
   function collapseDrawer() {
-    const d = document.getElementById('inspectionDrawer');
-    d.classList.add('collapsed');
+    setDrawerState('collapsed');
   }
 
   function hideDrawer() {
-    const d = document.getElementById('inspectionDrawer');
-    d.classList.add('hidden');
+    setDrawerState('hidden');
+  }
+
+  function toggleDrawer() {
+    if (currentDrawerState === 'collapsed' || currentDrawerState === 'hidden') {
+      setDrawerState('mid');
+    } else if (currentDrawerState === 'mid') {
+      setDrawerState('expanded');
+    } else {
+      setDrawerState('collapsed');
+    }
   }
 
   function saveCurrentInspection(showExplicitToast = true) {
@@ -722,9 +752,7 @@
       document.getElementById('hudCurrentPk').textContent = `PK ${km}+${m.padStart(5, '0')}`;
       document.getElementById('hudCurrentOffset').textContent = sideText;
       document.getElementById('hudAccuracy').textContent = `±${Math.round(accuracy)}m`;
-
-      // Check proximity to assets (< 60m)
-      checkAssetProximity(proj.pk);
+      // Note: Auto-opening drawer during GPS tracking disabled per engineering directive
     }
 
     // Update GPS Marker on Map
@@ -760,21 +788,136 @@
     showToast(`GPS Error: ${err.message}`);
   }
 
-  function checkAssetProximity(currentPk) {
-    if (!state.assetsData || !state.assetsData.features) return;
+  // --- 8.5. Fluid Drawer Swipe Gestures & Snapping ---
+  function setupDrawerGestures() {
+    const d = document.getElementById('inspectionDrawer');
+    const handleBar = document.getElementById('drawerHandleBar');
+    const miniBar = document.getElementById('drawerMiniBar');
+    const toggleBtn = document.getElementById('btnDrawerToggle');
 
-    for (const feat of state.assetsData.features) {
-      const p = feat.properties;
-      if (currentPk >= p.start_pk - 25 && currentPk <= p.end_pk + 25) {
-        // Near this asset - if drawer is closed or different asset, notify or suggest
-        if (!state.selectedAsset || state.selectedAsset.properties.id !== p.id) {
-          // Auto-preview asset in drawer if user is walking
-          selectAsset(feat);
-          showToast(`Approaching: ${p.short_code} (${p.chainage_str})`);
-          break;
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        toggleDrawer();
+      });
+    }
+
+    if (!d || !handleBar) return;
+
+    let startY = 0;
+    let currentY = 0;
+    let startTime = 0;
+    let isDragging = false;
+    let initialTranslateY = 0;
+
+    function getSnapTranslate(stateName) {
+      const drawerHeight = d.offsetHeight || 520;
+      if (stateName === 'expanded') return 0;
+      if (stateName === 'mid') return drawerHeight - 280;
+      if (stateName === 'collapsed') return drawerHeight - 64;
+      if (stateName === 'hidden') return drawerHeight;
+      return drawerHeight - 64;
+    }
+
+    function onPointerDown(e) {
+      // Don't drag if tapping inside interactive buttons or form fields
+      if (e.target.closest('button, input, textarea, a, select')) return;
+
+      isDragging = true;
+      startY = e.clientY || (e.touches && e.touches[0].clientY) || 0;
+      currentY = startY;
+      startTime = Date.now();
+      initialTranslateY = getSnapTranslate(currentDrawerState);
+
+      d.classList.add('dragging');
+      d.style.transition = 'none';
+
+      window.addEventListener('pointermove', onPointerMove, { passive: true });
+      window.addEventListener('pointerup', onPointerUp, { passive: true });
+      window.addEventListener('pointercancel', onPointerUp, { passive: true });
+    }
+
+    function onPointerMove(e) {
+      if (!isDragging) return;
+      currentY = e.clientY || (e.touches && e.touches[0].clientY) || startY;
+      const deltaY = currentY - startY;
+
+      let newY = initialTranslateY + deltaY;
+      if (newY < 0) {
+        newY = newY * 0.2; // Rubberband resistance when pulled above top
+      }
+
+      d.style.transform = `translateY(${newY}px)`;
+    }
+
+    function onPointerUp(e) {
+      if (!isDragging) return;
+      isDragging = false;
+
+      window.removeEventListener('pointermove', onPointerMove);
+      window.removeEventListener('pointerup', onPointerUp);
+      window.removeEventListener('pointercancel', onPointerUp);
+
+      d.classList.remove('dragging');
+      d.style.transition = 'transform 0.28s cubic-bezier(0.16, 1, 0.3, 1)';
+
+      const deltaY = currentY - startY;
+      const duration = Math.max(Date.now() - startTime, 1);
+      const velocity = deltaY / duration; // px/ms (+ down, - up)
+      const currentTranslateY = initialTranslateY + deltaY;
+
+      // 1. Check strong flick velocity
+      if (velocity > 0.4) {
+        // Fast swipe down
+        if (currentDrawerState === 'expanded') {
+          setDrawerState('mid');
+        } else if (currentDrawerState === 'mid') {
+          setDrawerState('collapsed');
+        } else {
+          setDrawerState('hidden');
+        }
+      } else if (velocity < -0.4) {
+        // Fast swipe up
+        if (currentDrawerState === 'collapsed' || currentDrawerState === 'hidden') {
+          setDrawerState('mid');
+        } else {
+          setDrawerState('expanded');
+        }
+      } else {
+        // 2. Nearest position snap
+        const distExpanded = Math.abs(currentTranslateY - getSnapTranslate('expanded'));
+        const distMid = Math.abs(currentTranslateY - getSnapTranslate('mid'));
+        const distCollapsed = Math.abs(currentTranslateY - getSnapTranslate('collapsed'));
+        const distHidden = Math.abs(currentTranslateY - getSnapTranslate('hidden'));
+
+        if (distHidden < 45 && deltaY > 40) {
+          setDrawerState('hidden');
+        } else if (distExpanded <= distMid && distExpanded <= distCollapsed) {
+          setDrawerState('expanded');
+        } else if (distMid <= distExpanded && distMid <= distCollapsed) {
+          setDrawerState('mid');
+        } else {
+          setDrawerState('collapsed');
         }
       }
     }
+
+    handleBar.addEventListener('pointerdown', onPointerDown);
+    miniBar.addEventListener('pointerdown', onPointerDown);
+
+    // Tap without drag to cycle states
+    handleBar.addEventListener('click', function (e) {
+      if (Math.abs(currentY - startY) < 6) {
+        toggleDrawer();
+      }
+    });
+
+    miniBar.addEventListener('click', function (e) {
+      if (e.target.closest('button, input, textarea, a, select')) return;
+      if (Math.abs(currentY - startY) < 6) {
+        toggleDrawer();
+      }
+    });
   }
 
   // --- 9. Quick Jump to PK ---
@@ -911,16 +1054,8 @@
     document.getElementById('selectFilter').addEventListener('change', applyLayerFilter);
     document.getElementById('btnExport').addEventListener('click', exportProgressExcel);
 
-    // Drawer Handle Toggles
-    document.getElementById('drawerHandleBar').addEventListener('click', function () {
-      const d = document.getElementById('inspectionDrawer');
-      if (d.classList.contains('collapsed')) {
-        expandDrawer();
-      } else {
-        collapseDrawer();
-      }
-    });
-
+    // Initialize Fluid Touch Gestures & Snap Points (Swipe up / down)
+    setupDrawerGestures();
     document.getElementById('btnCloseDrawer').addEventListener('click', collapseDrawer);
     document.getElementById('btnSaveInspection').addEventListener('click', () => saveCurrentInspection(true));
 

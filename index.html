@@ -11,8 +11,8 @@
 
   <!-- PWA Manifest & App Icon -->
   <link rel="manifest" href="manifest.json">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚆</text></svg>">
-  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚆</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2338BDF8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='4' y='3' width='16' height='15' rx='3'/><line x1='4' y1='11' x2='20' y2='11'/><line x1='12' y1='3' x2='12' y2='11'/><circle cx='8.5' cy='15' r='1.2' fill='%2338BDF8'/><circle cx='15.5' cy='15' r='1.2' fill='%2338BDF8'/><path d='M8 18l-2 3M16 18l2 3M7 21h10'/></svg>">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2338BDF8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='4' y='3' width='16' height='15' rx='3'/><line x1='4' y1='11' x2='20' y2='11'/><line x1='12' y1='3' x2='12' y2='11'/><circle cx='8.5' cy='15' r='1.2' fill='%2338BDF8'/><circle cx='15.5' cy='15' r='1.2' fill='%2338BDF8'/><path d='M8 18l-2 3M16 18l2 3M7 21h10'/></svg>">
 
   <!-- Leaflet GIS Stylesheet -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
@@ -26,7 +26,16 @@
   <header class="app-header">
     <div class="header-row-main">
       <div class="brand-block">
-        <div class="brand-icon">🚆</div>
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="3" width="16" height="15" rx="3"></rect>
+            <line x1="4" y1="11" x2="20" y2="11"></line>
+            <line x1="12" y1="3" x2="12" y2="11"></line>
+            <circle cx="8.5" cy="15" r="1.2" fill="#38BDF8"></circle>
+            <circle cx="15.5" cy="15" r="1.2" fill="#38BDF8"></circle>
+            <path d="M8 18l-2 3M16 18l2 3M7 21h10"></path>
+          </svg>
+        </div>
         <div class="brand-titles">
           <h1>KMD DRAINAGE INSPECTOR</h1>
           <p>Section 03: KZDR (PK 82+902 — 124+521)</p>
@@ -34,11 +43,24 @@
       </div>
       <div class="header-actions">
         <button id="btnLocate" class="btn-icon-text btn-locate" title="Toggle Live GPS Tracking">
-          <span>📍</span>
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="8"></circle>
+            <line x1="12" y1="2" x2="12" y2="6"></line>
+            <line x1="12" y1="18" x2="12" y2="22"></line>
+            <line x1="2" y1="12" x2="6" y2="12"></line>
+            <line x1="18" y1="12" x2="22" y2="12"></line>
+            <circle cx="12" cy="12" r="2" fill="currentColor"></circle>
+          </svg>
           <span>Locate Me</span>
         </button>
         <button id="btnExport" class="btn-icon-text btn-export" title="Export Progress to Excel">
-          <span>📊</span>
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="8" y1="13" x2="16" y2="13"></line>
+            <line x1="8" y1="17" x2="16" y2="17"></line>
+            <line x1="12" y1="9" x2="12" y2="17"></line>
+          </svg>
           <span>Excel</span>
         </button>
       </div>
@@ -51,10 +73,21 @@
       </div>
       <div class="view-mode-toggle" id="viewModeToggle">
         <button id="btnModeTypology" class="btn-mode active" title="Color by Drainage Typology">
-          <span>🎨</span> Typology
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+          <span>Typology</span>
         </button>
         <button id="btnModeProgress" class="btn-mode" title="Color by Construction Progress">
-          <span>📊</span> Progress
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="20" x2="18" y2="10"></line>
+            <line x1="12" y1="20" x2="12" y2="4"></line>
+            <line x1="6" y1="20" x2="6" y2="14"></line>
+            <line x1="2" y1="20" x2="22" y2="20"></line>
+          </svg>
+          <span>Progress</span>
         </button>
       </div>
       <select id="selectFilter" class="filter-select">
@@ -123,13 +156,20 @@
       <div class="drawer-handle"></div>
     </div>
     
-    <div class="drawer-mini-bar">
+    <div class="drawer-mini-bar" id="drawerMiniBar">
       <div class="mini-title">
         <span class="badge-tag" id="drawerAssetCode" style="background:#3B82F6;">Type 1</span>
         <span class="badge-tag" id="drawerSideBadge" style="background:#1D4ED8;">Left</span>
         <span class="mini-chainage" id="drawerChainage">Select an Asset on Map</span>
       </div>
-      <span class="mini-status" id="drawerPosition" style="color:var(--text-muted); font-size:0.75rem;">Tap map or enter PK</span>
+      <div class="mini-actions">
+        <span class="mini-status" id="drawerPosition" style="color:var(--text-muted); font-size:0.75rem;">Tap map or enter PK</span>
+        <button id="btnDrawerToggle" class="btn-drawer-toggle" aria-label="Toggle Drawer Height" title="Toggle Compact / Full Height">
+          <svg class="drawer-chevron-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </button>
+      </div>
     </div>
 
     <div class="drawer-content" id="drawerContent">
@@ -180,7 +220,10 @@
       <!-- Photo Attachment -->
       <div class="photo-section">
         <label class="btn-photo">
-          <span>📷</span>
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+            <circle cx="12" cy="13" r="4"></circle>
+          </svg>
           <span>Attach Photo</span>
           <input type="file" id="cameraInput" accept="image/*" capture="environment" style="display:none;">
         </label>
@@ -189,7 +232,14 @@
 
       <!-- Action Buttons -->
       <div class="drawer-actions">
-        <button class="btn-primary" id="btnSaveInspection">💾 Save Inspection Record</button>
+        <button class="btn-primary" id="btnSaveInspection">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+            <polyline points="17 21 17 13 7 13 7 21"></polyline>
+            <polyline points="7 3 7 8 15 8"></polyline>
+          </svg>
+          <span>Save Record</span>
+        </button>
         <button class="btn-secondary" id="btnCloseDrawer">Close</button>
       </div>
     </div>

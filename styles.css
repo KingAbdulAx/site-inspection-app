@@ -30,8 +30,9 @@
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.4);
   --shadow-drawer: 0 -8px 24px rgba(0, 0, 0, 0.6);
   
-  --drawer-height-collapsed: 72px;
-  --drawer-height-expanded: 440px;
+  --drawer-height-collapsed: 64px;
+  --drawer-height-mid: 280px;
+  --drawer-height-expanded: min(520px, 80vh);
 }
 
 * {
@@ -486,35 +487,60 @@ body {
   z-index: 1500;
   background: var(--bg-card);
   border-top: 2px solid var(--border-light);
-  border-radius: 16px 16px 0 0;
+  border-radius: 18px 18px 0 0;
   box-shadow: var(--shadow-drawer);
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  max-height: 85vh;
+  height: var(--drawer-height-expanded);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
+  user-select: none;
+  touch-action: pan-y;
+  will-change: transform;
+}
+
+.drawer-container.expanded {
+  transform: translateY(0);
+}
+
+.drawer-container.mid {
+  transform: translateY(calc(var(--drawer-height-expanded) - var(--drawer-height-mid)));
 }
 
 .drawer-container.collapsed {
-  transform: translateY(calc(100% - var(--drawer-height-collapsed)));
+  transform: translateY(calc(var(--drawer-height-expanded) - var(--drawer-height-collapsed)));
 }
 
 .drawer-container.hidden {
   transform: translateY(100%);
 }
 
+.drawer-container.dragging {
+  transition: none !important;
+}
+
 .drawer-handle-bar {
   width: 100%;
-  padding: 8px 0 4px;
+  padding: 10px 0 6px;
   display: flex;
   justify-content: center;
-  cursor: pointer;
+  cursor: grab;
+  touch-action: none;
+}
+
+.drawer-handle-bar:active {
+  cursor: grabbing;
 }
 
 .drawer-handle {
-  width: 40px;
-  height: 4px;
+  width: 44px;
+  height: 5px;
   background: var(--border-light);
-  border-radius: 2px;
+  border-radius: 3px;
+  transition: background 0.15s ease;
+}
+
+.drawer-handle-bar:hover .drawer-handle {
+  background: var(--text-muted);
 }
 
 .drawer-mini-bar {
@@ -523,6 +549,49 @@ body {
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  touch-action: none;
+}
+
+.mini-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-drawer-toggle {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-drawer-toggle:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-primary);
+}
+
+.drawer-chevron-icon {
+  transition: transform 0.25s ease;
+}
+
+.drawer-container.expanded .drawer-chevron-icon {
+  transform: rotate(180deg);
+}
+
+.drawer-container.mid .drawer-chevron-icon {
+  transform: rotate(90deg);
+}
+
+.drawer-container.collapsed .drawer-chevron-icon {
+  transform: rotate(0deg);
 }
 
 .mini-title {
