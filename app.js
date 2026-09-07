@@ -184,8 +184,17 @@
       zoom: 16,
       minZoom: 11,
       maxZoom: 20,
-      zoomControl: false
+      zoomControl: false,
+      rotate: true,
+      touchRotate: true,
+      touchZoom: true,
+      shiftKeyRotate: true,
+      rotateControl: false
     });
+
+    if (state.map.on) {
+      state.map.on('rotate', onMapRotate);
+    }
 
     L.control.zoom({ position: 'bottomright' }).addTo(state.map);
 
@@ -788,11 +797,65 @@
     showToast(`GPS Error: ${err.message}`);
   }
 
-  // --- 8.5. Fluid Drawer Swipe Gestures & Snapping ---
+  // --- 8.4. Map Rotation & Compass Controller ---
+  function onMapRotate() {
+    if (!state.map || typeof state.map.getBearing !== 'function') return;
+    const bearing = state.map.getBearing() || 0;
+    const normalized = (bearing % 360 + 360) % 360;
+
+    const needle = document.getElementById('compassNeedleSvg');
+    if (needle) {
+      // Needle points to true North (opposite of map bearing)
+      needle.style.transform = `rotate(${-normalized}deg)`;
+    }
+
+    const lbl = document.getElementById('lblBearing');
+    if (lbl) {
+      let dir = 'N';
+      if (normalized >= 22.5 && normalized < 67.5) dir = 'NE';
+      else if (normalized >= 67.5 && normalized < 112.5) dir = 'E';
+      else if (normalized >= 112.5 && normalized < 157.5) dir = 'SE';
+      else if (normalized >= 157.5 && normalized < 202.5) dir = 'S';
+      else if (normalized >= 202.5 && normalized < 247.5) dir = 'SW';
+      else if (normalized >= 247.5 && normalized < 292.5) dir = 'W';
+      else if (normalized >= 292.5 && normalized < 337.5) dir = 'NW';
+      lbl.textContent = `${Math.round(normalized)}° ${dir}`;
+    }
+
+    const btn = document.getElementById('btnCompass');
+    if (btn) {
+      if (normalized > 2 && normalized < 358) {
+        btn.classList.add('rotated');
+      } else {
+        btn.classList.remove('rotated');
+      }
+    }
+  }
+
+  function toggleMapBearing() {
+    if (!state.map || typeof state.map.setBearing !== 'function') return;
+    const bearing = state.map.getBearing() || 0;
+    const normalized = (bearing % 360 + 360) % 360;
+
+    // Nominal track corridor orientation for Section 03 is 314.5° (NW toward Daura)
+    if (normalized > 4 && normalized < 356) {
+      // If rotated, snap back to True North (0°)
+      state.map.setBearing(0);
+      showToast('Aligned to True North (0°)');
+    } else {
+      // Snap along the Railway Track Corridor (315° NW)
+      state.map.setBearing(314.5);
+      showToast('Aligned to Track Corridor (315° NW)');
+    }
+    onMapRotate();
+  }
+
+  // --- 8.5. Fluid Drawer Swipe Gestures & Snapping (Mobile Touch & Pointer) ---
   function setupDrawerGestures() {
     const d = document.getElementById('inspectionDrawer');
     const handleBar = document.getElementById('drawerHandleBar');
     const miniBar = document.getElementById('drawerMiniBar');
+    const drawerContent = document.getElementById('drawerContent');
     const toggleBtn = document.getElementById('btnDrawerToggle');
 
     if (toggleBtn) {
@@ -802,13 +865,14 @@
       });
     }
 
-    if (!d || !handleBar) return;
+    if (!d) return;
 
     let startY = 0;
     let currentY = 0;
     let startTime = 0;
     let isDragging = false;
     let initialTranslateY = 0;
+    let hasMoved = false;
 
     function getSnapTranslate(stateName) {
       const drawerHeight = d.offsetHeight || 520;
@@ -819,44 +883,38 @@
       return drawerHeight - 64;
     }
 
-    function onPointerDown(e) {
-      // Don't drag if tapping inside interactive buttons or form fields
-      if (e.target.closest('button, input, textarea, a, select')) return;
-
+    function startDrag(clientY) {
       isDragging = true;
-      startY = e.clientY || (e.touches && e.touches[0].clientY) || 0;
-      currentY = startY;
+      hasMoved = false;
+      startY = clientY;
+      currentY = clientY;
       startTime = Date.now();
       initialTranslateY = getSnapTranslate(currentDrawerState);
 
       d.classList.add('dragging');
       d.style.transition = 'none';
-
-      window.addEventListener('pointermove', onPointerMove, { passive: true });
-      window.addEventListener('pointerup', onPointerUp, { passive: true });
-      window.addEventListener('pointercancel', onPointerUp, { passive: true });
     }
 
-    function onPointerMove(e) {
+    function moveDrag(clientY) {
       if (!isDragging) return;
-      currentY = e.clientY || (e.touches && e.touches[0].clientY) || startY;
+      currentY = clientY;
       const deltaY = currentY - startY;
+
+      if (Math.abs(deltaY) > 5) {
+        hasMoved = true;
+      }
 
       let newY = initialTranslateY + deltaY;
       if (newY < 0) {
-        newY = newY * 0.2; // Rubberband resistance when pulled above top
+        newY = newY * 0.22; // Rubberband resistance above top limit
       }
 
       d.style.transform = `translateY(${newY}px)`;
     }
 
-    function onPointerUp(e) {
+    function endDrag() {
       if (!isDragging) return;
       isDragging = false;
-
-      window.removeEventListener('pointermove', onPointerMove);
-      window.removeEventListener('pointerup', onPointerUp);
-      window.removeEventListener('pointercancel', onPointerUp);
 
       d.classList.remove('dragging');
       d.style.transition = 'transform 0.28s cubic-bezier(0.16, 1, 0.3, 1)';
@@ -866,8 +924,13 @@
       const velocity = deltaY / duration; // px/ms (+ down, - up)
       const currentTranslateY = initialTranslateY + deltaY;
 
-      // 1. Check strong flick velocity
-      if (velocity > 0.4) {
+      if (!hasMoved || Math.abs(deltaY) < 10) {
+        // Tap action, not drag
+        return;
+      }
+
+      // 1. High-velocity swipe flick detection
+      if (velocity > 0.35) {
         // Fast swipe down
         if (currentDrawerState === 'expanded') {
           setDrawerState('mid');
@@ -876,7 +939,7 @@
         } else {
           setDrawerState('hidden');
         }
-      } else if (velocity < -0.4) {
+      } else if (velocity < -0.35) {
         // Fast swipe up
         if (currentDrawerState === 'collapsed' || currentDrawerState === 'hidden') {
           setDrawerState('mid');
@@ -884,13 +947,13 @@
           setDrawerState('expanded');
         }
       } else {
-        // 2. Nearest position snap
+        // 2. Position snap to closest target state
         const distExpanded = Math.abs(currentTranslateY - getSnapTranslate('expanded'));
         const distMid = Math.abs(currentTranslateY - getSnapTranslate('mid'));
         const distCollapsed = Math.abs(currentTranslateY - getSnapTranslate('collapsed'));
         const distHidden = Math.abs(currentTranslateY - getSnapTranslate('hidden'));
 
-        if (distHidden < 45 && deltaY > 40) {
+        if (distHidden < 55 && deltaY > 40) {
           setDrawerState('hidden');
         } else if (distExpanded <= distMid && distExpanded <= distCollapsed) {
           setDrawerState('expanded');
@@ -902,22 +965,117 @@
       }
     }
 
-    handleBar.addEventListener('pointerdown', onPointerDown);
-    miniBar.addEventListener('pointerdown', onPointerDown);
-
-    // Tap without drag to cycle states
-    handleBar.addEventListener('click', function (e) {
-      if (Math.abs(currentY - startY) < 6) {
-        toggleDrawer();
-      }
-    });
-
-    miniBar.addEventListener('click', function (e) {
+    // --- Native Touch Events (Mobile Safari / Chrome) ---
+    function handleTouchStart(e) {
       if (e.target.closest('button, input, textarea, a, select')) return;
-      if (Math.abs(currentY - startY) < 6) {
-        toggleDrawer();
+      if (e.touches && e.touches.length === 1) {
+        startDrag(e.touches[0].clientY);
       }
+    }
+
+    function handleTouchMove(e) {
+      if (!isDragging) return;
+      if (e.touches && e.touches.length === 1) {
+        moveDrag(e.touches[0].clientY);
+        if (e.cancelable) {
+          e.preventDefault(); // Stop mobile browser page scroll / pull-to-refresh
+        }
+      }
+    }
+
+    function handleTouchEnd(e) {
+      endDrag();
+    }
+
+    // --- Pointer Events (Desktop Mouse & Stylus) ---
+    function handlePointerDown(e) {
+      if (e.pointerType === 'touch') return; // Handled by touch events
+      if (e.target.closest('button, input, textarea, a, select')) return;
+
+      startDrag(e.clientY);
+      try {
+        e.target.setPointerCapture(e.pointerId);
+      } catch (err) {}
+
+      window.addEventListener('pointermove', handlePointerMove);
+      window.addEventListener('pointerup', handlePointerUp);
+      window.addEventListener('pointercancel', handlePointerUp);
+    }
+
+    function handlePointerMove(e) {
+      if (e.pointerType === 'touch') return;
+      moveDrag(e.clientY);
+    }
+
+    function handlePointerUp(e) {
+      if (e.pointerType === 'touch') return;
+      window.removeEventListener('pointermove', handlePointerMove);
+      window.removeEventListener('pointerup', handlePointerUp);
+      window.removeEventListener('pointercancel', handlePointerUp);
+      endDrag();
+    }
+
+    // Attach listeners to Handle Bar and Mini Bar
+    const dragTargets = [handleBar, miniBar].filter(Boolean);
+    dragTargets.forEach(target => {
+      target.addEventListener('touchstart', handleTouchStart, { passive: false });
+      target.addEventListener('touchmove', handleTouchMove, { passive: false });
+      target.addEventListener('touchend', handleTouchEnd, { passive: false });
+      target.addEventListener('touchcancel', handleTouchEnd, { passive: false });
+      target.addEventListener('pointerdown', handlePointerDown);
     });
+
+    // Content top-edge swipe down (when scrolled to top)
+    if (drawerContent) {
+      let contentTouchStartY = 0;
+      let isContentSwipingDown = false;
+
+      drawerContent.addEventListener('touchstart', function(e) {
+        if (drawerContent.scrollTop <= 0 && e.touches.length === 1) {
+          contentTouchStartY = e.touches[0].clientY;
+          isContentSwipingDown = false;
+        }
+      }, { passive: true });
+
+      drawerContent.addEventListener('touchmove', function(e) {
+        if (e.touches.length === 1 && drawerContent.scrollTop <= 0) {
+          const delta = e.touches[0].clientY - contentTouchStartY;
+          if (delta > 10 && !isDragging) {
+            isContentSwipingDown = true;
+            startDrag(e.touches[0].clientY);
+          }
+          if (isDragging && isContentSwipingDown) {
+            moveDrag(e.touches[0].clientY);
+            if (e.cancelable) e.preventDefault();
+          }
+        }
+      }, { passive: false });
+
+      drawerContent.addEventListener('touchend', function() {
+        if (isDragging && isContentSwipingDown) {
+          isContentSwipingDown = false;
+          endDrag();
+        }
+      }, { passive: false });
+    }
+
+    // Tap on handle bar or mini bar to cycle states
+    if (handleBar) {
+      handleBar.addEventListener('click', function (e) {
+        if (!hasMoved) {
+          toggleDrawer();
+        }
+      });
+    }
+
+    if (miniBar) {
+      miniBar.addEventListener('click', function (e) {
+        if (e.target.closest('button, input, textarea, a, select')) return;
+        if (!hasMoved) {
+          toggleDrawer();
+        }
+      });
+    }
   }
 
   // --- 9. Quick Jump to PK ---
@@ -1031,6 +1189,11 @@
 
   // --- 12. UI Event Listeners ---
   function setupEventListeners() {
+    const btnCompass = document.getElementById('btnCompass');
+    if (btnCompass) {
+      btnCompass.addEventListener('click', toggleMapBearing);
+    }
+
     document.getElementById('btnLocate').addEventListener('click', toggleGpsLocation);
     document.getElementById('btnJump').addEventListener('click', jumpToChainage);
     document.getElementById('txtJumpPk').addEventListener('keypress', function (e) {
