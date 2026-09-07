@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "metadata": {
     "title": "Section 03 Verified Drainage Assets",
-    "count": 177,
+    "count": 226,
     "generated_at": "September 2026"
   },
   "features": [
@@ -79,7 +79,7 @@
       "id": "asset_003",
       "properties": {
         "id": "asset_003",
-        "chainage_str": "PK 82+975 \u2013 PK 83+482",
+        "chainage_str": "PK 82+975 – PK 83+482",
         "start_pk": 82975.0,
         "end_pk": 83482.0,
         "length_m": 507.0,
@@ -196,7 +196,7 @@
       "id": "asset_004",
       "properties": {
         "id": "asset_004",
-        "chainage_str": "PK 82+975 \u2013 PK 83+597",
+        "chainage_str": "PK 82+975 – PK 83+597",
         "start_pk": 82975.0,
         "end_pk": 83597.0,
         "length_m": 622.0,
@@ -329,14 +329,14 @@
       "id": "asset_005",
       "properties": {
         "id": "asset_005",
-        "chainage_str": "PK 83+275 \u2013 PK 83+525",
+        "chainage_str": "PK 83+275 – PK 83+525",
         "start_pk": 83275.0,
         "end_pk": 83525.0,
         "length_m": 250.0,
         "is_point": false,
         "side": "Center",
         "position": "Kazaure Station Track (Platform)",
-        "typology": "Sub-ballast Collector Line 1 (Perforated Pipe \u00d8400-\u00d8600 MH1.1 to MH1.6)",
+        "typology": "Sub-ballast Collector Line 1 (Perforated Pipe Ø400-Ø600 MH1.1 to MH1.6)",
         "short_code": "Type 6",
         "category": "Track Drainage",
         "color": "#8B5CF6",
@@ -409,12 +409,12 @@
         "is_point": true,
         "side": "Right",
         "position": "Right Side (Station Outfall)",
-        "typology": "Discharge Pipe 1 (Concrete \u00d8600 L=23.8m i=5.00%)",
+        "typology": "Discharge Pipe 1 (Concrete Ø600 L=23.8m i=5.00%)",
         "short_code": "Discharge Pipe",
         "category": "Track Drainage",
         "color": "#6366F1",
         "drawing_ref": "DW-03001",
-        "specs": "Concrete sub-ballast discharge pipe to outfall (\u00d8600 / \u00d8800)",
+        "specs": "Concrete sub-ballast discharge pipe to outfall (Ø600 / Ø800)",
         "icon": "collector",
         "status": "Not Started",
         "notes": "",
@@ -433,14 +433,14 @@
       "id": "asset_007",
       "properties": {
         "id": "asset_007",
-        "chainage_str": "PK 83+525 \u2013 PK 83+725",
+        "chainage_str": "PK 83+525 – PK 83+725",
         "start_pk": 83525.0,
         "end_pk": 83725.0,
         "length_m": 200.0,
         "is_point": false,
         "side": "Center",
         "position": "Kazaure Station Track (Platform)",
-        "typology": "Sub-ballast Collector Line 2 (Perforated Pipe \u00d8400-\u00d8600 MH2.1 to MH2.5)",
+        "typology": "Sub-ballast Collector Line 2 (Perforated Pipe Ø400-Ø600 MH2.1 to MH2.5)",
         "short_code": "Type 6",
         "category": "Track Drainage",
         "color": "#8B5CF6",
@@ -498,7 +498,7 @@
       "id": "asset_008",
       "properties": {
         "id": "asset_008",
-        "chainage_str": "PK 83+634 \u2013 PK 83+725",
+        "chainage_str": "PK 83+634 – PK 83+725",
         "start_pk": 83634.0,
         "end_pk": 83725.0,
         "length_m": 91.0,
@@ -547,7 +547,7 @@
       "id": "asset_009",
       "properties": {
         "id": "asset_009",
-        "chainage_str": "PK 83+715 \u2013 PK 84+406",
+        "chainage_str": "PK 83+715 – PK 84+406",
         "start_pk": 83715.0,
         "end_pk": 84406.0,
         "length_m": 691.0,
@@ -699,12 +699,12 @@
         "is_point": true,
         "side": "Center",
         "position": "Cross Drainage",
-        "typology": "Discharge Pipe 3 (Concrete \u00d8800 L=15m) & Energy Dissipator BS2",
+        "typology": "Discharge Pipe 3 (Concrete Ø800 L=15m) & Energy Dissipator BS2",
         "short_code": "Dissipator BS2",
         "category": "Energy Dissipator",
         "color": "#D97706",
         "drawing_ref": "DW-03001 / MDDTDW220010002",
-        "specs": "Energy Dissipator Structure BS2 at sub-ballast collector outfall (\u00d8800 transverse crossing)",
+        "specs": "Energy Dissipator Structure BS2 at sub-ballast collector outfall (Ø800 transverse crossing)",
         "icon": "cascade",
         "status": "Not Started",
         "notes": "",
@@ -723,14 +723,14 @@
       "id": "asset_011",
       "properties": {
         "id": "asset_011",
-        "chainage_str": "PK 83+725 \u2013 PK 84+000",
+        "chainage_str": "PK 83+725 – PK 84+000",
         "start_pk": 83725.0,
         "end_pk": 84000.0,
         "length_m": 275.0,
         "is_point": false,
         "side": "Center",
         "position": "Deep Cut Track (Sub-ballast)",
-        "typology": "Sub-ballast Collector Line 3 (Perforated Pipe \u00d8400-\u00d8600 MH3.1 to MH3.6)",
+        "typology": "Sub-ballast Collector Line 3 (Perforated Pipe Ø400-Ø600 MH3.1 to MH3.6)",
         "short_code": "Type 6",
         "category": "Track Drainage",
         "color": "#8B5CF6",
@@ -800,7 +800,7 @@
       "id": "asset_012",
       "properties": {
         "id": "asset_012",
-        "chainage_str": "PK 83+725 \u2013 PK 84+406",
+        "chainage_str": "PK 83+725 – PK 84+406",
         "start_pk": 83725.0,
         "end_pk": 84406.0,
         "length_m": 681.0,
@@ -945,7 +945,7 @@
       "id": "asset_013",
       "properties": {
         "id": "asset_013",
-        "chainage_str": "PK 83+725 \u2013 PK 84+800",
+        "chainage_str": "PK 83+725 – PK 84+800",
         "start_pk": 83725.0,
         "end_pk": 84800.0,
         "length_m": 1075.0,
@@ -1150,7 +1150,7 @@
       "id": "asset_014",
       "properties": {
         "id": "asset_014",
-        "chainage_str": "PK 84+406 \u2013 PK 84+620",
+        "chainage_str": "PK 84+406 – PK 84+620",
         "start_pk": 84406.0,
         "end_pk": 84620.0,
         "length_m": 214.0,
@@ -1219,7 +1219,7 @@
       "id": "asset_015",
       "properties": {
         "id": "asset_015",
-        "chainage_str": "PK 84+406 \u2013 PK 84+800",
+        "chainage_str": "PK 84+406 – PK 84+800",
         "start_pk": 84406.0,
         "end_pk": 84800.0,
         "length_m": 394.0,
@@ -1353,7 +1353,7 @@
       "id": "asset_017",
       "properties": {
         "id": "asset_017",
-        "chainage_str": "PK 84+682 \u2013 PK 84+891",
+        "chainage_str": "PK 84+682 – PK 84+891",
         "start_pk": 84682.0,
         "end_pk": 84891.0,
         "length_m": 209.0,
@@ -1422,7 +1422,7 @@
       "id": "asset_018",
       "properties": {
         "id": "asset_018",
-        "chainage_str": "PK 84+840 \u2013 PK 85+200",
+        "chainage_str": "PK 84+840 – PK 85+200",
         "start_pk": 84840.0,
         "end_pk": 85200.0,
         "length_m": 360.0,
@@ -1552,7 +1552,7 @@
       "id": "asset_020",
       "properties": {
         "id": "asset_020",
-        "chainage_str": "PK 84+891 \u2013 PK 85+101",
+        "chainage_str": "PK 84+891 – PK 85+101",
         "start_pk": 84891.0,
         "end_pk": 85101.0,
         "length_m": 210.0,
@@ -1621,7 +1621,7 @@
       "id": "asset_021",
       "properties": {
         "id": "asset_021",
-        "chainage_str": "PK 84+891 \u2013 PK 85+101",
+        "chainage_str": "PK 84+891 – PK 85+101",
         "start_pk": 84891.0,
         "end_pk": 85101.0,
         "length_m": 210.0,
@@ -1697,12 +1697,12 @@
         "is_point": true,
         "side": "Center",
         "position": "Cross Drainage",
-        "typology": "Pipe Culvert \u00d81.5m",
+        "typology": "Pipe Culvert Ø1.5m",
         "short_code": "Pipe Culv",
         "category": "Cross Drainage",
         "color": "#475569",
         "drawing_ref": "MDDTDW220000023-31 / DW-03006",
-        "specs": "Precast concrete pipe culvert (\u00d81.2m / \u00d81.5m on concrete cradle)",
+        "specs": "Precast concrete pipe culvert (Ø1.2m / Ø1.5m on concrete cradle)",
         "icon": "culvert_pipe",
         "status": "Not Started",
         "notes": "",
@@ -1727,7 +1727,7 @@
       "id": "asset_023",
       "properties": {
         "id": "asset_023",
-        "chainage_str": "PK 85+362 \u2013 PK 85+500",
+        "chainage_str": "PK 85+362 – PK 85+500",
         "start_pk": 85362.0,
         "end_pk": 85500.0,
         "length_m": 138.0,
@@ -1791,12 +1791,12 @@
         "is_point": true,
         "side": "Center",
         "position": "Cross Drainage",
-        "typology": "Pipe Culvert \u00d81.5m",
+        "typology": "Pipe Culvert Ø1.5m",
         "short_code": "Pipe Culv",
         "category": "Cross Drainage",
         "color": "#475569",
         "drawing_ref": "MDDTDW220000023-31 / DW-03006",
-        "specs": "Precast concrete pipe culvert (\u00d81.2m / \u00d81.5m on concrete cradle)",
+        "specs": "Precast concrete pipe culvert (Ø1.2m / Ø1.5m on concrete cradle)",
         "icon": "culvert_pipe",
         "status": "Not Started",
         "notes": "",
@@ -1821,7 +1821,7 @@
       "id": "asset_025",
       "properties": {
         "id": "asset_025",
-        "chainage_str": "PK 85+446 \u2013 PK 85+508",
+        "chainage_str": "PK 85+446 – PK 85+508",
         "start_pk": 85446.0,
         "end_pk": 85508.0,
         "length_m": 62.0,
@@ -1866,7 +1866,7 @@
       "id": "asset_026",
       "properties": {
         "id": "asset_026",
-        "chainage_str": "PK 85+500 \u2013 PK 85+638",
+        "chainage_str": "PK 85+500 – PK 85+638",
         "start_pk": 85500.0,
         "end_pk": 85638.0,
         "length_m": 138.0,
@@ -1923,7 +1923,7 @@
       "id": "asset_027",
       "properties": {
         "id": "asset_027",
-        "chainage_str": "PK 85+546 \u2013 PK 85+638",
+        "chainage_str": "PK 85+546 – PK 85+638",
         "start_pk": 85546.0,
         "end_pk": 85638.0,
         "length_m": 92.0,
@@ -2009,7 +2009,7 @@
       "id": "asset_029",
       "properties": {
         "id": "asset_029",
-        "chainage_str": "PK 85+635 \u2013 PK 85+743",
+        "chainage_str": "PK 85+635 – PK 85+743",
         "start_pk": 85635.0,
         "end_pk": 85743.0,
         "length_m": 108.0,
@@ -2062,7 +2062,7 @@
       "id": "asset_030",
       "properties": {
         "id": "asset_030",
-        "chainage_str": "PK 85+638 \u2013 PK 86+100",
+        "chainage_str": "PK 85+638 – PK 86+100",
         "start_pk": 85638.0,
         "end_pk": 86100.0,
         "length_m": 462.0,
@@ -2171,7 +2171,7 @@
       "id": "asset_031",
       "properties": {
         "id": "asset_031",
-        "chainage_str": "PK 86+100 \u2013 PK 86+300",
+        "chainage_str": "PK 86+100 – PK 86+300",
         "start_pk": 86100.0,
         "end_pk": 86300.0,
         "length_m": 200.0,
@@ -2236,7 +2236,7 @@
       "id": "asset_032",
       "properties": {
         "id": "asset_032",
-        "chainage_str": "PK 86+100 \u2013 PK 86+300",
+        "chainage_str": "PK 86+100 – PK 86+300",
         "start_pk": 86100.0,
         "end_pk": 86300.0,
         "length_m": 200.0,
@@ -2301,7 +2301,7 @@
       "id": "asset_033",
       "properties": {
         "id": "asset_033",
-        "chainage_str": "PK 86+200 \u2013 PK 86+344",
+        "chainage_str": "PK 86+200 – PK 86+344",
         "start_pk": 86200.0,
         "end_pk": 86344.0,
         "length_m": 144.0,
@@ -2395,7 +2395,7 @@
       "id": "asset_035",
       "properties": {
         "id": "asset_035",
-        "chainage_str": "PK 86+344 \u2013 PK 86+525",
+        "chainage_str": "PK 86+344 – PK 86+525",
         "start_pk": 86344.0,
         "end_pk": 86525.0,
         "length_m": 181.0,
@@ -2460,7 +2460,7 @@
       "id": "asset_036",
       "properties": {
         "id": "asset_036",
-        "chainage_str": "PK 86+344 \u2013 PK 86+844",
+        "chainage_str": "PK 86+344 – PK 86+844",
         "start_pk": 86344.0,
         "end_pk": 86844.0,
         "length_m": 500.0,
@@ -2647,7 +2647,7 @@
       "id": "asset_039",
       "properties": {
         "id": "asset_039",
-        "chainage_str": "PK 86+570 \u2013 PK 86+618",
+        "chainage_str": "PK 86+570 – PK 86+618",
         "start_pk": 86570.0,
         "end_pk": 86618.0,
         "length_m": 48.0,
@@ -2725,7 +2725,7 @@
       "id": "asset_041",
       "properties": {
         "id": "asset_041",
-        "chainage_str": "PK 86+704 \u2013 PK 86+777",
+        "chainage_str": "PK 86+704 – PK 86+777",
         "start_pk": 86704.0,
         "end_pk": 86777.0,
         "length_m": 73.0,
@@ -2770,7 +2770,7 @@
       "id": "asset_042",
       "properties": {
         "id": "asset_042",
-        "chainage_str": "PK 86+704 \u2013 PK 86+900",
+        "chainage_str": "PK 86+704 – PK 86+900",
         "start_pk": 86704.0,
         "end_pk": 86900.0,
         "length_m": 196.0,
@@ -2835,7 +2835,7 @@
       "id": "asset_043",
       "properties": {
         "id": "asset_043",
-        "chainage_str": "PK 86+900 \u2013 PK 87+100",
+        "chainage_str": "PK 86+900 – PK 87+100",
         "start_pk": 86900.0,
         "end_pk": 87100.0,
         "length_m": 200.0,
@@ -2900,7 +2900,7 @@
       "id": "asset_044",
       "properties": {
         "id": "asset_044",
-        "chainage_str": "PK 87+100 \u2013 PK 87+496",
+        "chainage_str": "PK 87+100 – PK 87+496",
         "start_pk": 87100.0,
         "end_pk": 87496.0,
         "length_m": 396.0,
@@ -2997,7 +2997,7 @@
       "id": "asset_045",
       "properties": {
         "id": "asset_045",
-        "chainage_str": "PK 87+250 \u2013 PK 87+443",
+        "chainage_str": "PK 87+250 – PK 87+443",
         "start_pk": 87250.0,
         "end_pk": 87443.0,
         "length_m": 193.0,
@@ -3062,7 +3062,7 @@
       "id": "asset_046",
       "properties": {
         "id": "asset_046",
-        "chainage_str": "PK 87+496 \u2013 PK 87+663",
+        "chainage_str": "PK 87+496 – PK 87+663",
         "start_pk": 87496.0,
         "end_pk": 87663.0,
         "length_m": 167.0,
@@ -3123,7 +3123,7 @@
       "id": "asset_047",
       "properties": {
         "id": "asset_047",
-        "chainage_str": "PK 87+663 \u2013 PK 87+943",
+        "chainage_str": "PK 87+663 – PK 87+943",
         "start_pk": 87663.0,
         "end_pk": 87943.0,
         "length_m": 280.0,
@@ -3204,7 +3204,7 @@
       "id": "asset_048",
       "properties": {
         "id": "asset_048",
-        "chainage_str": "PK 87+663 \u2013 PK 87+945",
+        "chainage_str": "PK 87+663 – PK 87+945",
         "start_pk": 87663.0,
         "end_pk": 87945.0,
         "length_m": 282.0,
@@ -3285,7 +3285,7 @@
       "id": "asset_049",
       "properties": {
         "id": "asset_049",
-        "chainage_str": "PK 87+663 \u2013 PK 87+996",
+        "chainage_str": "PK 87+663 – PK 87+996",
         "start_pk": 87663.0,
         "end_pk": 87996.0,
         "length_m": 333.0,
@@ -3374,7 +3374,7 @@
       "id": "asset_050",
       "properties": {
         "id": "asset_050",
-        "chainage_str": "PK 87+840 \u2013 PK 87+950",
+        "chainage_str": "PK 87+840 – PK 87+950",
         "start_pk": 87840.0,
         "end_pk": 87950.0,
         "length_m": 110.0,
@@ -3464,7 +3464,7 @@
       "id": "asset_052",
       "properties": {
         "id": "asset_052",
-        "chainage_str": "PK 87+840 \u2013 PK 88+050",
+        "chainage_str": "PK 87+840 – PK 88+050",
         "start_pk": 87840.0,
         "end_pk": 88050.0,
         "length_m": 210.0,
@@ -3564,7 +3564,7 @@
       "id": "asset_054",
       "properties": {
         "id": "asset_054",
-        "chainage_str": "PK 87+964 \u2013 PK 87+998",
+        "chainage_str": "PK 87+964 – PK 87+998",
         "start_pk": 87964.0,
         "end_pk": 87998.0,
         "length_m": 34.0,
@@ -3605,7 +3605,7 @@
       "id": "asset_055",
       "properties": {
         "id": "asset_055",
-        "chainage_str": "PK 87+970 \u2013 PK 88+209",
+        "chainage_str": "PK 87+970 – PK 88+209",
         "start_pk": 87970.0,
         "end_pk": 88209.0,
         "length_m": 239.0,
@@ -3715,7 +3715,7 @@
       "id": "asset_057",
       "properties": {
         "id": "asset_057",
-        "chainage_str": "PK 88+000 \u2013 PK 88+350",
+        "chainage_str": "PK 88+000 – PK 88+350",
         "start_pk": 88000.0,
         "end_pk": 88350.0,
         "length_m": 350.0,
@@ -3804,7 +3804,7 @@
       "id": "asset_058",
       "properties": {
         "id": "asset_058",
-        "chainage_str": "PK 88+209 \u2013 PK 88+276",
+        "chainage_str": "PK 88+209 – PK 88+276",
         "start_pk": 88209.0,
         "end_pk": 88276.0,
         "length_m": 67.0,
@@ -3856,12 +3856,12 @@
         "is_point": true,
         "side": "Center",
         "position": "Cross Drainage",
-        "typology": "Pipe Culvert \u00d81.2m",
+        "typology": "Pipe Culvert Ø1.2m",
         "short_code": "Pipe Culv",
         "category": "Cross Drainage",
         "color": "#475569",
         "drawing_ref": "MDDTDW220000023-31 / DW-03006",
-        "specs": "Precast concrete pipe culvert (\u00d81.2m / \u00d81.5m on concrete cradle)",
+        "specs": "Precast concrete pipe culvert (Ø1.2m / Ø1.5m on concrete cradle)",
         "icon": "culvert_pipe",
         "status": "Not Started",
         "notes": "",
@@ -3886,7 +3886,7 @@
       "id": "asset_060",
       "properties": {
         "id": "asset_060",
-        "chainage_str": "PK 88+276 \u2013 PK 88+400",
+        "chainage_str": "PK 88+276 – PK 88+400",
         "start_pk": 88276.0,
         "end_pk": 88400.0,
         "length_m": 124.0,
@@ -3939,7 +3939,7 @@
       "id": "asset_061",
       "properties": {
         "id": "asset_061",
-        "chainage_str": "PK 88+350 \u2013 PK 88+450",
+        "chainage_str": "PK 88+350 – PK 88+450",
         "start_pk": 88350.0,
         "end_pk": 88450.0,
         "length_m": 100.0,
@@ -3988,7 +3988,7 @@
       "id": "asset_062",
       "properties": {
         "id": "asset_062",
-        "chainage_str": "PK 88+450 \u2013 PK 88+520",
+        "chainage_str": "PK 88+450 – PK 88+520",
         "start_pk": 88450.0,
         "end_pk": 88520.0,
         "length_m": 70.0,
@@ -4040,12 +4040,12 @@
         "is_point": true,
         "side": "Center",
         "position": "Cross Drainage",
-        "typology": "Pipe Culvert \u00d81.2m",
+        "typology": "Pipe Culvert Ø1.2m",
         "short_code": "Pipe Culv",
         "category": "Cross Drainage",
         "color": "#475569",
         "drawing_ref": "MDDTDW220000023-31 / DW-03006",
-        "specs": "Precast concrete pipe culvert (\u00d81.2m / \u00d81.5m on concrete cradle)",
+        "specs": "Precast concrete pipe culvert (Ø1.2m / Ø1.5m on concrete cradle)",
         "icon": "culvert_pipe",
         "status": "Not Started",
         "notes": "",
@@ -4077,12 +4077,12 @@
         "is_point": true,
         "side": "Center",
         "position": "Cross Drainage",
-        "typology": "Pipe Culvert \u00d81.2m",
+        "typology": "Pipe Culvert Ø1.2m",
         "short_code": "Pipe Culv",
         "category": "Cross Drainage",
         "color": "#475569",
         "drawing_ref": "MDDTDW220000023-31 / DW-03006",
-        "specs": "Precast concrete pipe culvert (\u00d81.2m / \u00d81.5m on concrete cradle)",
+        "specs": "Precast concrete pipe culvert (Ø1.2m / Ø1.5m on concrete cradle)",
         "icon": "culvert_pipe",
         "status": "Not Started",
         "notes": "",
@@ -4107,7 +4107,7 @@
       "id": "asset_065",
       "properties": {
         "id": "asset_065",
-        "chainage_str": "PK 88+800 \u2013 PK 88+975",
+        "chainage_str": "PK 88+800 – PK 88+975",
         "start_pk": 88800.0,
         "end_pk": 88975.0,
         "length_m": 175.0,
@@ -4168,7 +4168,7 @@
       "id": "asset_066",
       "properties": {
         "id": "asset_066",
-        "chainage_str": "PK 88+975 \u2013 PK 89+375",
+        "chainage_str": "PK 88+975 – PK 89+375",
         "start_pk": 88975.0,
         "end_pk": 89375.0,
         "length_m": 400.0,
@@ -4265,7 +4265,7 @@
       "id": "asset_067",
       "properties": {
         "id": "asset_067",
-        "chainage_str": "PK 89+195 \u2013 PK 89+660",
+        "chainage_str": "PK 89+195 – PK 89+660",
         "start_pk": 89195.0,
         "end_pk": 89660.0,
         "length_m": 465.0,
@@ -4411,7 +4411,7 @@
       "id": "asset_069",
       "properties": {
         "id": "asset_069",
-        "chainage_str": "PK 89+375 \u2013 PK 89+550",
+        "chainage_str": "PK 89+375 – PK 89+550",
         "start_pk": 89375.0,
         "end_pk": 89550.0,
         "length_m": 175.0,
@@ -4472,7 +4472,7 @@
       "id": "asset_070",
       "properties": {
         "id": "asset_070",
-        "chainage_str": "PK 89+400 \u2013 PK 89+550",
+        "chainage_str": "PK 89+400 – PK 89+550",
         "start_pk": 89400.0,
         "end_pk": 89550.0,
         "length_m": 150.0,
@@ -4529,7 +4529,7 @@
       "id": "asset_071",
       "properties": {
         "id": "asset_071",
-        "chainage_str": "PK 89+700 \u2013 PK 89+980",
+        "chainage_str": "PK 89+700 – PK 89+980",
         "start_pk": 89700.0,
         "end_pk": 89980.0,
         "length_m": 280.0,
@@ -4610,7 +4610,7 @@
       "id": "asset_072",
       "properties": {
         "id": "asset_072",
-        "chainage_str": "PK 89+700 \u2013 PK 90+246",
+        "chainage_str": "PK 89+700 – PK 90+246",
         "start_pk": 89700.0,
         "end_pk": 90246.0,
         "length_m": 546.0,
@@ -4731,7 +4731,7 @@
       "id": "asset_073",
       "properties": {
         "id": "asset_073",
-        "chainage_str": "PK 89+700 \u2013 PK 90+246",
+        "chainage_str": "PK 89+700 – PK 90+246",
         "start_pk": 89700.0,
         "end_pk": 90246.0,
         "length_m": 546.0,
@@ -4926,7 +4926,7 @@
       "id": "asset_076",
       "properties": {
         "id": "asset_076",
-        "chainage_str": "PK 90+450 \u2013 PK 90+713",
+        "chainage_str": "PK 90+450 – PK 90+713",
         "start_pk": 90450.0,
         "end_pk": 90713.0,
         "length_m": 263.0,
@@ -5003,7 +5003,7 @@
       "id": "asset_077",
       "properties": {
         "id": "asset_077",
-        "chainage_str": "PK 90+450 \u2013 PK 90+713",
+        "chainage_str": "PK 90+450 – PK 90+713",
         "start_pk": 90450.0,
         "end_pk": 90713.0,
         "length_m": 263.0,
@@ -5087,12 +5087,12 @@
         "is_point": true,
         "side": "Center",
         "position": "Cross Drainage",
-        "typology": "Pipe Culvert \u00d81.2m",
+        "typology": "Pipe Culvert Ø1.2m",
         "short_code": "Pipe Culv",
         "category": "Cross Drainage",
         "color": "#475569",
         "drawing_ref": "MDDTDW220000023-31 / DW-03006",
-        "specs": "Precast concrete pipe culvert (\u00d81.2m / \u00d81.5m on concrete cradle)",
+        "specs": "Precast concrete pipe culvert (Ø1.2m / Ø1.5m on concrete cradle)",
         "icon": "culvert_pipe",
         "status": "Not Started",
         "notes": "",
@@ -5117,7 +5117,7 @@
       "id": "asset_079",
       "properties": {
         "id": "asset_079",
-        "chainage_str": "PK 90+713 \u2013 PK 90+858",
+        "chainage_str": "PK 90+713 – PK 90+858",
         "start_pk": 90713.0,
         "end_pk": 90858.0,
         "length_m": 145.0,
@@ -5174,7 +5174,7 @@
       "id": "asset_080",
       "properties": {
         "id": "asset_080",
-        "chainage_str": "PK 90+713 \u2013 PK 90+950",
+        "chainage_str": "PK 90+713 – PK 90+950",
         "start_pk": 90713.0,
         "end_pk": 90950.0,
         "length_m": 237.0,
@@ -5247,7 +5247,7 @@
       "id": "asset_081",
       "properties": {
         "id": "asset_081",
-        "chainage_str": "PK 90+713 \u2013 PK 90+950",
+        "chainage_str": "PK 90+713 – PK 90+950",
         "start_pk": 90713.0,
         "end_pk": 90950.0,
         "length_m": 237.0,
@@ -5320,7 +5320,7 @@
       "id": "asset_082",
       "properties": {
         "id": "asset_082",
-        "chainage_str": "PK 90+950 \u2013 PK 91+100",
+        "chainage_str": "PK 90+950 – PK 91+100",
         "start_pk": 90950.0,
         "end_pk": 91100.0,
         "length_m": 150.0,
@@ -5377,7 +5377,7 @@
       "id": "asset_083",
       "properties": {
         "id": "asset_083",
-        "chainage_str": "PK 90+950 \u2013 PK 91+100",
+        "chainage_str": "PK 90+950 – PK 91+100",
         "start_pk": 90950.0,
         "end_pk": 91100.0,
         "length_m": 150.0,
@@ -5434,7 +5434,7 @@
       "id": "asset_084",
       "properties": {
         "id": "asset_084",
-        "chainage_str": "PK 91+100 \u2013 PK 91+800",
+        "chainage_str": "PK 91+100 – PK 91+800",
         "start_pk": 91100.0,
         "end_pk": 91800.0,
         "length_m": 700.0,
@@ -5579,7 +5579,7 @@
       "id": "asset_085",
       "properties": {
         "id": "asset_085",
-        "chainage_str": "PK 91+800 \u2013 PK 92+100",
+        "chainage_str": "PK 91+800 – PK 92+100",
         "start_pk": 91800.0,
         "end_pk": 92100.0,
         "length_m": 300.0,
@@ -5697,7 +5697,7 @@
       "id": "asset_087",
       "properties": {
         "id": "asset_087",
-        "chainage_str": "PK 92+100 \u2013 PK 92+500",
+        "chainage_str": "PK 92+100 – PK 92+500",
         "start_pk": 92100.0,
         "end_pk": 92500.0,
         "length_m": 400.0,
@@ -5794,7 +5794,7 @@
       "id": "asset_088",
       "properties": {
         "id": "asset_088",
-        "chainage_str": "PK 92+994 \u2013 PK 93+195",
+        "chainage_str": "PK 92+994 – PK 93+195",
         "start_pk": 92994.0,
         "end_pk": 93195.0,
         "length_m": 201.0,
@@ -5870,12 +5870,12 @@
         "is_point": true,
         "side": "Center",
         "position": "Cross Drainage",
-        "typology": "Pipe Culvert \u00d81.5m",
+        "typology": "Pipe Culvert Ø1.5m",
         "short_code": "Pipe Culv",
         "category": "Cross Drainage",
         "color": "#475569",
         "drawing_ref": "MDDTDW220000023-31 / DW-03006",
-        "specs": "Precast concrete pipe culvert (\u00d81.2m / \u00d81.5m on concrete cradle)",
+        "specs": "Precast concrete pipe culvert (Ø1.2m / Ø1.5m on concrete cradle)",
         "icon": "culvert_pipe",
         "status": "Not Started",
         "notes": "",
@@ -5900,7 +5900,7 @@
       "id": "asset_090",
       "properties": {
         "id": "asset_090",
-        "chainage_str": "PK 93+195 \u2013 PK 93+900",
+        "chainage_str": "PK 93+195 – PK 93+900",
         "start_pk": 93195.0,
         "end_pk": 93900.0,
         "length_m": 705.0,
@@ -6049,7 +6049,7 @@
       "id": "asset_091",
       "properties": {
         "id": "asset_091",
-        "chainage_str": "PK 93+195 \u2013 PK 93+900",
+        "chainage_str": "PK 93+195 – PK 93+900",
         "start_pk": 93195.0,
         "end_pk": 93900.0,
         "length_m": 705.0,
@@ -6198,7 +6198,7 @@
       "id": "asset_092",
       "properties": {
         "id": "asset_092",
-        "chainage_str": "PK 93+500 \u2013 PK 94+300",
+        "chainage_str": "PK 93+500 – PK 94+300",
         "start_pk": 93500.0,
         "end_pk": 94300.0,
         "length_m": 800.0,
@@ -6359,7 +6359,7 @@
       "id": "asset_093",
       "properties": {
         "id": "asset_093",
-        "chainage_str": "PK 94+706 \u2013 PK 95+212",
+        "chainage_str": "PK 94+706 – PK 95+212",
         "start_pk": 94706.0,
         "end_pk": 95212.0,
         "length_m": 506.0,
@@ -6491,7 +6491,7 @@
         "specs": "Reinforced concrete single box culvert 1x(2.0x2.0m) / 1x(2.5x2.5m)",
         "icon": "culvert_box",
         "status": "Not Started",
-        "notes": "",
+        "notes": "[FLAG] Unsubstantiated by DW-03009-06 and omitted from Design Report RP-00001 Rev 09 Appendix II. Marked for site verification.",
         "inspection_date": ""
       },
       "geometry": {
@@ -6513,7 +6513,7 @@
       "id": "asset_095",
       "properties": {
         "id": "asset_095",
-        "chainage_str": "PK 95+300 \u2013 PK 96+000",
+        "chainage_str": "PK 95+300 – PK 96+000",
         "start_pk": 95300.0,
         "end_pk": 96000.0,
         "length_m": 700.0,
@@ -6658,7 +6658,7 @@
       "id": "asset_096",
       "properties": {
         "id": "asset_096",
-        "chainage_str": "PK 96+000 \u2013 PK 96+700",
+        "chainage_str": "PK 96+000 – PK 96+700",
         "start_pk": 96000.0,
         "end_pk": 96700.0,
         "length_m": 700.0,
@@ -6803,7 +6803,7 @@
       "id": "asset_097",
       "properties": {
         "id": "asset_097",
-        "chainage_str": "PK 96+835 \u2013 PK 97+008",
+        "chainage_str": "PK 96+835 – PK 97+008",
         "start_pk": 96835.0,
         "end_pk": 97008.0,
         "length_m": 173.0,
@@ -6901,7 +6901,7 @@
       "id": "asset_099",
       "properties": {
         "id": "asset_099",
-        "chainage_str": "PK 97+008 \u2013 PK 97+150",
+        "chainage_str": "PK 97+008 – PK 97+150",
         "start_pk": 97008.0,
         "end_pk": 97150.0,
         "length_m": 142.0,
@@ -6958,7 +6958,7 @@
       "id": "asset_100",
       "properties": {
         "id": "asset_100",
-        "chainage_str": "PK 97+050 \u2013 PK 97+124",
+        "chainage_str": "PK 97+050 – PK 97+124",
         "start_pk": 97050.0,
         "end_pk": 97124.0,
         "length_m": 74.0,
@@ -7003,7 +7003,7 @@
       "id": "asset_101",
       "properties": {
         "id": "asset_101",
-        "chainage_str": "PK 97+124 \u2013 PK 97+218",
+        "chainage_str": "PK 97+124 – PK 97+218",
         "start_pk": 97124.0,
         "end_pk": 97218.0,
         "length_m": 94.0,
@@ -7052,7 +7052,7 @@
       "id": "asset_102",
       "properties": {
         "id": "asset_102",
-        "chainage_str": "PK 97+200 \u2013 PK 98+100",
+        "chainage_str": "PK 97+200 – PK 98+100",
         "start_pk": 97200.0,
         "end_pk": 98100.0,
         "length_m": 900.0,
@@ -7229,7 +7229,7 @@
       "id": "asset_103",
       "properties": {
         "id": "asset_103",
-        "chainage_str": "PK 98+100 \u2013 PK 98+750",
+        "chainage_str": "PK 98+100 – PK 98+750",
         "start_pk": 98100.0,
         "end_pk": 98750.0,
         "length_m": 650.0,
@@ -7366,7 +7366,7 @@
       "id": "asset_104",
       "properties": {
         "id": "asset_104",
-        "chainage_str": "PK 98+750 \u2013 PK 99+500",
+        "chainage_str": "PK 98+750 – PK 99+500",
         "start_pk": 98750.0,
         "end_pk": 99500.0,
         "length_m": 750.0,
@@ -7519,7 +7519,7 @@
       "id": "asset_105",
       "properties": {
         "id": "asset_105",
-        "chainage_str": "PK 100+200 \u2013 PK 100+800",
+        "chainage_str": "PK 100+200 – PK 100+800",
         "start_pk": 100200.0,
         "end_pk": 100800.0,
         "length_m": 600.0,
@@ -7685,7 +7685,7 @@
       "id": "asset_107",
       "properties": {
         "id": "asset_107",
-        "chainage_str": "PK 100+917 \u2013 PK 101+242",
+        "chainage_str": "PK 100+917 – PK 101+242",
         "start_pk": 100917.0,
         "end_pk": 101242.0,
         "length_m": 325.0,
@@ -7807,7 +7807,7 @@
       "id": "asset_109",
       "properties": {
         "id": "asset_109",
-        "chainage_str": "PK 101+242 \u2013 PK 102+300",
+        "chainage_str": "PK 101+242 – PK 102+300",
         "start_pk": 101242.0,
         "end_pk": 102300.0,
         "length_m": 1058.0,
@@ -8012,7 +8012,7 @@
       "id": "asset_110",
       "properties": {
         "id": "asset_110",
-        "chainage_str": "PK 103+050 \u2013 PK 103+450",
+        "chainage_str": "PK 103+050 – PK 103+450",
         "start_pk": 103050.0,
         "end_pk": 103450.0,
         "length_m": 400.0,
@@ -8109,7 +8109,7 @@
       "id": "asset_111",
       "properties": {
         "id": "asset_111",
-        "chainage_str": "PK 103+050 \u2013 PK 103+450",
+        "chainage_str": "PK 103+050 – PK 103+450",
         "start_pk": 103050.0,
         "end_pk": 103450.0,
         "length_m": 400.0,
@@ -8243,7 +8243,7 @@
       "id": "asset_113",
       "properties": {
         "id": "asset_113",
-        "chainage_str": "PK 103+695 \u2013 PK 103+970",
+        "chainage_str": "PK 103+695 – PK 103+970",
         "start_pk": 103695.0,
         "end_pk": 103970.0,
         "length_m": 275.0,
@@ -8320,7 +8320,7 @@
       "id": "asset_114",
       "properties": {
         "id": "asset_114",
-        "chainage_str": "PK 103+695 \u2013 PK 103+970",
+        "chainage_str": "PK 103+695 – PK 103+970",
         "start_pk": 103695.0,
         "end_pk": 103970.0,
         "length_m": 275.0,
@@ -8434,7 +8434,7 @@
       "id": "asset_116",
       "properties": {
         "id": "asset_116",
-        "chainage_str": "PK 104+025 \u2013 PK 104+600",
+        "chainage_str": "PK 104+025 – PK 104+600",
         "start_pk": 104025.0,
         "end_pk": 104600.0,
         "length_m": 575.0,
@@ -8559,7 +8559,7 @@
       "id": "asset_117",
       "properties": {
         "id": "asset_117",
-        "chainage_str": "PK 104+600 \u2013 PK 105+225",
+        "chainage_str": "PK 104+600 – PK 105+225",
         "start_pk": 104600.0,
         "end_pk": 105225.0,
         "length_m": 625.0,
@@ -8692,7 +8692,7 @@
       "id": "asset_118",
       "properties": {
         "id": "asset_118",
-        "chainage_str": "PK 105+566 \u2013 PK 105+650",
+        "chainage_str": "PK 105+566 – PK 105+650",
         "start_pk": 105566.0,
         "end_pk": 105650.0,
         "length_m": 84.0,
@@ -8741,7 +8741,7 @@
       "id": "asset_119",
       "properties": {
         "id": "asset_119",
-        "chainage_str": "PK 105+700 \u2013 PK 106+263",
+        "chainage_str": "PK 105+700 – PK 106+263",
         "start_pk": 105700.0,
         "end_pk": 106263.0,
         "length_m": 563.0,
@@ -8866,7 +8866,7 @@
       "id": "asset_120",
       "properties": {
         "id": "asset_120",
-        "chainage_str": "PK 105+795 \u2013 PK 106+500",
+        "chainage_str": "PK 105+795 – PK 106+500",
         "start_pk": 105795.0,
         "end_pk": 106500.0,
         "length_m": 705.0,
@@ -9015,7 +9015,7 @@
       "id": "asset_121",
       "properties": {
         "id": "asset_121",
-        "chainage_str": "PK 106+500 \u2013 PK 107+183",
+        "chainage_str": "PK 106+500 – PK 107+183",
         "start_pk": 106500.0,
         "end_pk": 107183.0,
         "length_m": 683.0,
@@ -9160,7 +9160,7 @@
       "id": "asset_122",
       "properties": {
         "id": "asset_122",
-        "chainage_str": "PK 106+500 \u2013 PK 107+900",
+        "chainage_str": "PK 106+500 – PK 107+900",
         "start_pk": 106500.0,
         "end_pk": 107900.0,
         "length_m": 1400.0,
@@ -9417,7 +9417,7 @@
       "id": "asset_123",
       "properties": {
         "id": "asset_123",
-        "chainage_str": "PK 106+500 \u2013 PK 107+900",
+        "chainage_str": "PK 106+500 – PK 107+900",
         "start_pk": 106500.0,
         "end_pk": 107900.0,
         "length_m": 1400.0,
@@ -9674,7 +9674,7 @@
       "id": "asset_124",
       "properties": {
         "id": "asset_124",
-        "chainage_str": "PK 107+183 \u2013 PK 107+734",
+        "chainage_str": "PK 107+183 – PK 107+734",
         "start_pk": 107183.0,
         "end_pk": 107734.0,
         "length_m": 551.0,
@@ -9799,7 +9799,7 @@
       "id": "asset_125",
       "properties": {
         "id": "asset_125",
-        "chainage_str": "PK 107+450 \u2013 PK 107+668",
+        "chainage_str": "PK 107+450 – PK 107+668",
         "start_pk": 107450.0,
         "end_pk": 107668.0,
         "length_m": 218.0,
@@ -9868,7 +9868,7 @@
       "id": "asset_126",
       "properties": {
         "id": "asset_126",
-        "chainage_str": "PK 107+450 \u2013 PK 107+668",
+        "chainage_str": "PK 107+450 – PK 107+668",
         "start_pk": 107450.0,
         "end_pk": 107668.0,
         "length_m": 218.0,
@@ -9937,7 +9937,7 @@
       "id": "asset_127",
       "properties": {
         "id": "asset_127",
-        "chainage_str": "PK 107+734 \u2013 PK 107+901",
+        "chainage_str": "PK 107+734 – PK 107+901",
         "start_pk": 107734.0,
         "end_pk": 107901.0,
         "length_m": 167.0,
@@ -9998,7 +9998,7 @@
       "id": "asset_128",
       "properties": {
         "id": "asset_128",
-        "chainage_str": "PK 108+200 \u2013 PK 108+858",
+        "chainage_str": "PK 108+200 – PK 108+858",
         "start_pk": 108200.0,
         "end_pk": 108858.0,
         "length_m": 658.0,
@@ -10176,7 +10176,7 @@
       "id": "asset_130",
       "properties": {
         "id": "asset_130",
-        "chainage_str": "PK 108+858 \u2013 PK 109+050",
+        "chainage_str": "PK 108+858 – PK 109+050",
         "start_pk": 108858.0,
         "end_pk": 109050.0,
         "length_m": 192.0,
@@ -10272,7 +10272,7 @@
       "id": "asset_132",
       "properties": {
         "id": "asset_132",
-        "chainage_str": "PK 109+500 \u2013 PK 110+111",
+        "chainage_str": "PK 109+500 – PK 110+111",
         "start_pk": 109500.0,
         "end_pk": 110111.0,
         "length_m": 611.0,
@@ -10420,7 +10420,7 @@
         "specs": "Reinforced concrete twin box culvert 2x(2.0x2.0m)",
         "icon": "culvert_box",
         "status": "Not Started",
-        "notes": "",
+        "notes": "[FLAG] Unsubstantiated by DW-03020-06 and omitted from Design Report RP-00001 Rev 09 Appendix II. Marked for site verification.",
         "inspection_date": ""
       },
       "geometry": {
@@ -10442,7 +10442,7 @@
       "id": "asset_134",
       "properties": {
         "id": "asset_134",
-        "chainage_str": "PK 110+111 \u2013 PK 110+350",
+        "chainage_str": "PK 110+111 – PK 110+350",
         "start_pk": 110111.0,
         "end_pk": 110350.0,
         "length_m": 239.0,
@@ -10515,7 +10515,7 @@
       "id": "asset_135",
       "properties": {
         "id": "asset_135",
-        "chainage_str": "PK 110+700 \u2013 PK 111+900",
+        "chainage_str": "PK 110+700 – PK 111+900",
         "start_pk": 110700.0,
         "end_pk": 111900.0,
         "length_m": 1200.0,
@@ -10777,7 +10777,7 @@
       "id": "asset_137",
       "properties": {
         "id": "asset_137",
-        "chainage_str": "PK 113+500 \u2013 PK 114+046",
+        "chainage_str": "PK 113+500 – PK 114+046",
         "start_pk": 113500.0,
         "end_pk": 114046.0,
         "length_m": 546.0,
@@ -10898,7 +10898,7 @@
       "id": "asset_138",
       "properties": {
         "id": "asset_138",
-        "chainage_str": "PK 114+046 \u2013 PK 114+451",
+        "chainage_str": "PK 114+046 – PK 114+451",
         "start_pk": 114046.0,
         "end_pk": 114451.0,
         "length_m": 405.0,
@@ -11036,7 +11036,7 @@
       "id": "asset_140",
       "properties": {
         "id": "asset_140",
-        "chainage_str": "PK 114+451 \u2013 PK 114+750",
+        "chainage_str": "PK 114+451 – PK 114+750",
         "start_pk": 114451.0,
         "end_pk": 114750.0,
         "length_m": 299.0,
@@ -11117,7 +11117,7 @@
       "id": "asset_141",
       "properties": {
         "id": "asset_141",
-        "chainage_str": "PK 114+900 \u2013 PK 116+200",
+        "chainage_str": "PK 114+900 – PK 116+200",
         "start_pk": 114900.0,
         "end_pk": 116200.0,
         "length_m": 1300.0,
@@ -11395,7 +11395,7 @@
       "id": "asset_143",
       "properties": {
         "id": "asset_143",
-        "chainage_str": "PK 116+200 \u2013 PK 116+368",
+        "chainage_str": "PK 116+200 – PK 116+368",
         "start_pk": 116200.0,
         "end_pk": 116368.0,
         "length_m": 168.0,
@@ -11530,7 +11530,7 @@
       "id": "asset_146",
       "properties": {
         "id": "asset_146",
-        "chainage_str": "PK 116+425 \u2013 PK 116+630",
+        "chainage_str": "PK 116+425 – PK 116+630",
         "start_pk": 116425.0,
         "end_pk": 116630.0,
         "length_m": 205.0,
@@ -11599,7 +11599,7 @@
       "id": "asset_147",
       "properties": {
         "id": "asset_147",
-        "chainage_str": "PK 116+425 \u2013 PK 116+790",
+        "chainage_str": "PK 116+425 – PK 116+790",
         "start_pk": 116425.0,
         "end_pk": 116790.0,
         "length_m": 365.0,
@@ -11692,7 +11692,7 @@
       "id": "asset_148",
       "properties": {
         "id": "asset_148",
-        "chainage_str": "PK 116+800 \u2013 PK 118+500",
+        "chainage_str": "PK 116+800 – PK 118+500",
         "start_pk": 116800.0,
         "end_pk": 118500.0,
         "length_m": 1700.0,
@@ -11997,7 +11997,7 @@
       "id": "asset_149",
       "properties": {
         "id": "asset_149",
-        "chainage_str": "PK 117+700 \u2013 PK 118+900",
+        "chainage_str": "PK 117+700 – PK 118+900",
         "start_pk": 117700.0,
         "end_pk": 118900.0,
         "length_m": 1200.0,
@@ -12266,12 +12266,12 @@
         "is_point": true,
         "side": "Center",
         "position": "Cross Drainage",
-        "typology": "Pipe Culvert \u00d81.2m",
+        "typology": "Pipe Culvert Ø1.2m",
         "short_code": "Pipe Culv",
         "category": "Cross Drainage",
         "color": "#475569",
         "drawing_ref": "MDDTDW220000023-31 / DW-03006",
-        "specs": "Precast concrete pipe culvert (\u00d81.2m / \u00d81.5m on concrete cradle)",
+        "specs": "Precast concrete pipe culvert (Ø1.2m / Ø1.5m on concrete cradle)",
         "icon": "culvert_pipe",
         "status": "Not Started",
         "notes": "",
@@ -12296,7 +12296,7 @@
       "id": "asset_152",
       "properties": {
         "id": "asset_152",
-        "chainage_str": "PK 119+300 \u2013 PK 119+472",
+        "chainage_str": "PK 119+300 – PK 119+472",
         "start_pk": 119300.0,
         "end_pk": 119472.0,
         "length_m": 172.0,
@@ -12357,7 +12357,7 @@
       "id": "asset_153",
       "properties": {
         "id": "asset_153",
-        "chainage_str": "PK 119+472 \u2013 PK 120+450",
+        "chainage_str": "PK 119+472 – PK 120+450",
         "start_pk": 119472.0,
         "end_pk": 120450.0,
         "length_m": 978.0,
@@ -12557,12 +12557,12 @@
         "is_point": true,
         "side": "Center",
         "position": "Cross Drainage",
-        "typology": "Pipe Culvert \u00d81.2m",
+        "typology": "Pipe Culvert Ø1.2m",
         "short_code": "Pipe Culv",
         "category": "Cross Drainage",
         "color": "#475569",
         "drawing_ref": "MDDTDW220000023-31 / DW-03006",
-        "specs": "Precast concrete pipe culvert (\u00d81.2m / \u00d81.5m on concrete cradle)",
+        "specs": "Precast concrete pipe culvert (Ø1.2m / Ø1.5m on concrete cradle)",
         "icon": "culvert_pipe",
         "status": "Not Started",
         "notes": "",
@@ -12587,7 +12587,7 @@
       "id": "asset_155",
       "properties": {
         "id": "asset_155",
-        "chainage_str": "PK 120+450 \u2013 PK 120+670",
+        "chainage_str": "PK 120+450 – PK 120+670",
         "start_pk": 120450.0,
         "end_pk": 120670.0,
         "length_m": 220.0,
@@ -12656,7 +12656,7 @@
       "id": "asset_156",
       "properties": {
         "id": "asset_156",
-        "chainage_str": "PK 120+500 \u2013 PK 121+415",
+        "chainage_str": "PK 120+500 – PK 121+415",
         "start_pk": 120500.0,
         "end_pk": 121415.0,
         "length_m": 915.0,
@@ -12874,7 +12874,7 @@
       "id": "asset_158",
       "properties": {
         "id": "asset_158",
-        "chainage_str": "PK 121+415 \u2013 PK 121+602",
+        "chainage_str": "PK 121+415 – PK 121+602",
         "start_pk": 121415.0,
         "end_pk": 121602.0,
         "length_m": 187.0,
@@ -12939,7 +12939,7 @@
       "id": "asset_159",
       "properties": {
         "id": "asset_159",
-        "chainage_str": "PK 122+150 \u2013 PK 123+025",
+        "chainage_str": "PK 122+150 – PK 123+025",
         "start_pk": 122150.0,
         "end_pk": 123025.0,
         "length_m": 875.0,
@@ -13112,7 +13112,7 @@
       "id": "asset_160",
       "properties": {
         "id": "asset_160",
-        "chainage_str": "PK 122+200 \u2013 PK 122+700",
+        "chainage_str": "PK 122+200 – PK 122+700",
         "start_pk": 122200.0,
         "end_pk": 122700.0,
         "length_m": 500.0,
@@ -13225,7 +13225,7 @@
       "id": "asset_161",
       "properties": {
         "id": "asset_161",
-        "chainage_str": "PK 122+200 \u2013 PK 123+025",
+        "chainage_str": "PK 122+200 – PK 123+025",
         "start_pk": 122200.0,
         "end_pk": 123025.0,
         "length_m": 825.0,
@@ -13390,7 +13390,7 @@
       "id": "asset_162",
       "properties": {
         "id": "asset_162",
-        "chainage_str": "PK 122+557 \u2013 PK 122+705",
+        "chainage_str": "PK 122+557 – PK 122+705",
         "start_pk": 122557.0,
         "end_pk": 122705.0,
         "length_m": 148.0,
@@ -13447,7 +13447,7 @@
       "id": "asset_163",
       "properties": {
         "id": "asset_163",
-        "chainage_str": "PK 122+600 \u2013 PK 122+748",
+        "chainage_str": "PK 122+600 – PK 122+748",
         "start_pk": 122600.0,
         "end_pk": 122748.0,
         "length_m": 148.0,
@@ -13504,7 +13504,7 @@
       "id": "asset_164",
       "properties": {
         "id": "asset_164",
-        "chainage_str": "PK 122+691 \u2013 PK 122+821",
+        "chainage_str": "PK 122+691 – PK 122+821",
         "start_pk": 122691.0,
         "end_pk": 122821.0,
         "length_m": 130.0,
@@ -13598,7 +13598,7 @@
       "id": "asset_166",
       "properties": {
         "id": "asset_166",
-        "chainage_str": "PK 122+705 \u2013 PK 122+880",
+        "chainage_str": "PK 122+705 – PK 122+880",
         "start_pk": 122705.0,
         "end_pk": 122880.0,
         "length_m": 175.0,
@@ -13696,7 +13696,7 @@
       "id": "asset_168",
       "properties": {
         "id": "asset_168",
-        "chainage_str": "PK 122+748 \u2013 PK 122+896",
+        "chainage_str": "PK 122+748 – PK 122+896",
         "start_pk": 122748.0,
         "end_pk": 122896.0,
         "length_m": 148.0,
@@ -13790,7 +13790,7 @@
       "id": "asset_170",
       "properties": {
         "id": "asset_170",
-        "chainage_str": "PK 122+821 \u2013 PK 122+951",
+        "chainage_str": "PK 122+821 – PK 122+951",
         "start_pk": 122821.0,
         "end_pk": 122951.0,
         "length_m": 130.0,
@@ -13847,7 +13847,7 @@
       "id": "asset_171",
       "properties": {
         "id": "asset_171",
-        "chainage_str": "PK 122+863 \u2013 PK 123+300",
+        "chainage_str": "PK 122+863 – PK 123+300",
         "start_pk": 122863.0,
         "end_pk": 123300.0,
         "length_m": 437.0,
@@ -13952,7 +13952,7 @@
       "id": "asset_172",
       "properties": {
         "id": "asset_172",
-        "chainage_str": "PK 123+300 \u2013 PK 123+720",
+        "chainage_str": "PK 123+300 – PK 123+720",
         "start_pk": 123300.0,
         "end_pk": 123720.0,
         "length_m": 420.0,
@@ -14053,7 +14053,7 @@
       "id": "asset_173",
       "properties": {
         "id": "asset_173",
-        "chainage_str": "PK 123+600 \u2013 PK 124+450",
+        "chainage_str": "PK 123+600 – PK 124+450",
         "start_pk": 123600.0,
         "end_pk": 124450.0,
         "length_m": 850.0,
@@ -14222,7 +14222,7 @@
       "id": "asset_174",
       "properties": {
         "id": "asset_174",
-        "chainage_str": "PK 123+700 \u2013 PK 124+307",
+        "chainage_str": "PK 123+700 – PK 124+307",
         "start_pk": 123700.0,
         "end_pk": 124307.0,
         "length_m": 607.0,
@@ -14355,7 +14355,7 @@
       "id": "asset_175",
       "properties": {
         "id": "asset_175",
-        "chainage_str": "PK 123+720 \u2013 PK 124+170",
+        "chainage_str": "PK 123+720 – PK 124+170",
         "start_pk": 123720.0,
         "end_pk": 124170.0,
         "length_m": 450.0,
@@ -14467,12 +14467,12 @@
         "is_point": true,
         "side": "Center",
         "position": "Cross Drainage",
-        "typology": "Pipe Culvert \u00d81.5m (Culvert 124.1)",
+        "typology": "Pipe Culvert Ø1.5m (Culvert 124.1)",
         "short_code": "Pipe Culv",
         "category": "Cross Drainage",
         "color": "#475569",
         "drawing_ref": "MDDTDW220000023-31 / DW-03006",
-        "specs": "Precast concrete pipe culvert (\u00d81.2m / \u00d81.5m on concrete cradle)",
+        "specs": "Precast concrete pipe culvert (Ø1.2m / Ø1.5m on concrete cradle)",
         "icon": "culvert_pipe",
         "status": "Not Started",
         "notes": "",
@@ -14497,7 +14497,7 @@
       "id": "asset_177",
       "properties": {
         "id": "asset_177",
-        "chainage_str": "PK 124+500 \u2013 PK 124+521",
+        "chainage_str": "PK 124+500 – PK 124+521",
         "start_pk": 124500.0,
         "end_pk": 124521.0,
         "length_m": 21.0,
@@ -14529,6 +14529,1819 @@
           [
             8.3314381,
             12.9833552
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_178",
+      "properties": {
+        "id": "asset_178",
+        "chainage_str": "PK 89+140",
+        "start_pk": 89140.0,
+        "end_pk": 89140.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Box Culvert 1x(2.00 x 2.00m)",
+        "short_code": "1x Box Culv",
+        "category": "Cross Drainage",
+        "color": "#334155",
+        "drawing_ref": "DW-03005-06 / MDDTDW220010002 / RP-00001 App II",
+        "specs": "Reinforced concrete box culvert 1x(2.00 x 2.00m) [Culvert ID 89.1, Basin B3.25, Q=6.16 m3/s]",
+        "icon": "culvert_box",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3957543,
+            12.6765598
+          ],
+          [
+            8.3960171,
+            12.6764757
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_179",
+      "properties": {
+        "id": "asset_179",
+        "chainage_str": "PK 89+660",
+        "start_pk": 89660.0,
+        "end_pk": 89660.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Box Culvert 1x(2.50 x 2.50m)",
+        "short_code": "1x Box Culv",
+        "category": "Cross Drainage",
+        "color": "#334155",
+        "drawing_ref": "DW-03005-06 / MDDTDW220010002 / RP-00001 App II",
+        "specs": "Reinforced concrete box culvert 1x(2.50 x 2.50m) [Culvert ID 89.3, Basin B3.27, Q=11.02 m3/s]",
+        "icon": "culvert_box",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3970081,
+            12.6810417
+          ],
+          [
+            8.3972813,
+            12.6810003
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_180",
+      "properties": {
+        "id": "asset_180",
+        "chainage_str": "PK 92+525",
+        "start_pk": 92525.0,
+        "end_pk": 92525.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Box Culvert 1x(2.00 x 2.00m)",
+        "short_code": "1x Box Culv",
+        "category": "Cross Drainage",
+        "color": "#334155",
+        "drawing_ref": "DW-03007-06 / MDDTDW220010002 / RP-00001 App II",
+        "specs": "Reinforced concrete box culvert 1x(2.00 x 2.00m) [Culvert ID 92.1, Basin B3.31, Q=5.73 m3/s]",
+        "icon": "culvert_box",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3937463,
+            12.7065813
+          ],
+          [
+            8.3940195,
+            12.7066237
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_181",
+      "properties": {
+        "id": "asset_181",
+        "chainage_str": "PK 92+623",
+        "start_pk": 92623.0,
+        "end_pk": 92623.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Pipe Culvert 1xØø 1200",
+        "short_code": "Pipe Culv",
+        "category": "Cross Drainage",
+        "color": "#475569",
+        "drawing_ref": "DW-03008-06 / MDDTDW220000023-31 / RP-00001 App II",
+        "specs": "Precast concrete pipe culvert 1xØø 1200 [Culvert ID 92.2, Basin B3.32, Q=0.45 m3/s]",
+        "icon": "culvert_pipe",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3936035,
+            12.7074563
+          ],
+          [
+            8.3938766,
+            12.7074988
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_182",
+      "properties": {
+        "id": "asset_182",
+        "chainage_str": "PK 94+948",
+        "start_pk": 94948.0,
+        "end_pk": 94948.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Triple Box Culvert 3x(2.00 x 2.00m)",
+        "short_code": "3x Box Culv",
+        "category": "Cross Drainage",
+        "color": "#334155",
+        "drawing_ref": "DW-03009-06 / MDDTDW220010002 / RP-00001 App II",
+        "specs": "Reinforced concrete box culvert 3x(2.00 x 2.00m) [Culvert ID 94.1, Basin B3.36, Q=21.31 m3/s]",
+        "icon": "culvert_box",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3902131,
+            12.7282148
+          ],
+          [
+            8.3904863,
+            12.7282573
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_183",
+      "properties": {
+        "id": "asset_183",
+        "chainage_str": "PK 95+450",
+        "start_pk": 95450.0,
+        "end_pk": 95450.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Pipe Culvert 1xØø 1500",
+        "short_code": "Pipe Culv",
+        "category": "Cross Drainage",
+        "color": "#475569",
+        "drawing_ref": "DW-03010-07 / MDDTDW220000023-31 / RP-00001 App II",
+        "specs": "Precast concrete pipe culvert 1xØø 1500 [Culvert ID 95.1, Basin B3.37, Q=2.12 m3/s]",
+        "icon": "culvert_pipe",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3894811,
+            12.7326968
+          ],
+          [
+            8.3897543,
+            12.7327392
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_184",
+      "properties": {
+        "id": "asset_184",
+        "chainage_str": "PK 95+795",
+        "start_pk": 95795.0,
+        "end_pk": 95795.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Triple Box Culvert 3x(2.00 x 2.00m)",
+        "short_code": "3x Box Culv",
+        "category": "Cross Drainage",
+        "color": "#334155",
+        "drawing_ref": "DW-03010-07 / MDDTDW220010002 / RP-00001 App II",
+        "specs": "Reinforced concrete box culvert 3x(2.00 x 2.00m) [Culvert ID 95.2, Basin B3.38, Q=7.31 m3/s]",
+        "icon": "culvert_box",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3889779,
+            12.7357771
+          ],
+          [
+            8.3892511,
+            12.7358196
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_185",
+      "properties": {
+        "id": "asset_185",
+        "chainage_str": "PK 96+146",
+        "start_pk": 96146.0,
+        "end_pk": 96146.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Pipe Culvert 1xØø 1500",
+        "short_code": "Pipe Culv",
+        "category": "Cross Drainage",
+        "color": "#475569",
+        "drawing_ref": "DW-03010-07 / MDDTDW220000023-31 / RP-00001 App II",
+        "specs": "Precast concrete pipe culvert 1xØø 1500 [Culvert ID 96.1, Basin B3.39, Q=2.47 m3/s]",
+        "icon": "culvert_pipe",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.388466,
+            12.738911
+          ],
+          [
+            8.3887392,
+            12.7389534
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_186",
+      "properties": {
+        "id": "asset_186",
+        "chainage_str": "PK 96+615",
+        "start_pk": 96615.0,
+        "end_pk": 96615.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Triple Box Culvert 3x(2.00 x 2.00m)",
+        "short_code": "3x Box Culv",
+        "category": "Cross Drainage",
+        "color": "#334155",
+        "drawing_ref": "DW-03010-07 / MDDTDW220010002 / RP-00001 App II",
+        "specs": "Reinforced concrete box culvert 3x(2.00 x 2.00m) [Culvert ID 96.2, Basin B3.40, Q=14.98 m3/s]",
+        "icon": "culvert_box",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3878196,
+            12.7431208
+          ],
+          [
+            8.3880948,
+            12.7431481
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_187",
+      "properties": {
+        "id": "asset_187",
+        "chainage_str": "PK 97+175",
+        "start_pk": 97175.0,
+        "end_pk": 97175.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Box Culvert 1x(2.50 x 2.50m)",
+        "short_code": "1x Box Culv",
+        "category": "Cross Drainage",
+        "color": "#334155",
+        "drawing_ref": "DW-03011-06 / MDDTDW220010002 / RP-00001 App II",
+        "specs": "Reinforced concrete box culvert 1x(2.50 x 2.50m) [Culvert ID 97.2, Basin B3.42, Q=11.76 m3/s]",
+        "icon": "culvert_box",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3877797,
+            12.7482172
+          ],
+          [
+            8.3880561,
+            12.7482084
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_188",
+      "properties": {
+        "id": "asset_188",
+        "chainage_str": "PK 97+427",
+        "start_pk": 97427.0,
+        "end_pk": 97427.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Box Culvert 1x(2.00 x 2.00m)",
+        "short_code": "1x Box Culv",
+        "category": "Cross Drainage",
+        "color": "#334155",
+        "drawing_ref": "DW-03011-06 / MDDTDW220010002 / RP-00001 App II",
+        "specs": "Reinforced concrete box culvert 1x(2.00 x 2.00m) [Culvert ID 97.3, Basin B3.44, Q=5.51 m3/s]",
+        "icon": "culvert_box",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3878554,
+            12.7504947
+          ],
+          [
+            8.3881318,
+            12.7504859
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_189",
+      "properties": {
+        "id": "asset_189",
+        "chainage_str": "PK 98+145",
+        "start_pk": 98145.0,
+        "end_pk": 98145.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Pipe Culvert 1xØø 1200",
+        "short_code": "Pipe Culv",
+        "category": "Cross Drainage",
+        "color": "#475569",
+        "drawing_ref": "DW-03011-06 / MDDTDW220000023-31 / RP-00001 App II",
+        "specs": "Precast concrete pipe culvert 1xØø 1200 [Culvert ID 98.1, Basin B3.45, Q=0.58 m3/s]",
+        "icon": "culvert_pipe",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3880714,
+            12.7569837
+          ],
+          [
+            8.3883478,
+            12.7569749
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_190",
+      "properties": {
+        "id": "asset_190",
+        "chainage_str": "PK 98+499",
+        "start_pk": 98499.0,
+        "end_pk": 98499.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Pipe Culvert 1xØø 1200",
+        "short_code": "Pipe Culv",
+        "category": "Cross Drainage",
+        "color": "#475569",
+        "drawing_ref": "DW-03012-07 / MDDTDW220000023-31 / RP-00001 App II",
+        "specs": "Precast concrete pipe culvert 1xØø 1200 [Culvert ID 98.2, Basin B3.46, Q=0.46 m3/s]",
+        "icon": "culvert_pipe",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3881779,
+            12.7601829
+          ],
+          [
+            8.3884543,
+            12.7601742
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_191",
+      "properties": {
+        "id": "asset_191",
+        "chainage_str": "PK 98+797",
+        "start_pk": 98797.0,
+        "end_pk": 98797.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Pipe Culvert 1xØø 1500",
+        "short_code": "Pipe Culv",
+        "category": "Cross Drainage",
+        "color": "#475569",
+        "drawing_ref": "DW-03012-07 / MDDTDW220000023-31 / RP-00001 App II",
+        "specs": "Precast concrete pipe culvert 1xØø 1500 [Culvert ID 98.3, Basin B3.47, Q=1.39 m3/s]",
+        "icon": "culvert_pipe",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3882675,
+            12.7628761
+          ],
+          [
+            8.3885439,
+            12.7628674
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_192",
+      "properties": {
+        "id": "asset_192",
+        "chainage_str": "PK 98+996",
+        "start_pk": 98996.0,
+        "end_pk": 98996.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Pipe Culvert 1xØø 1200",
+        "short_code": "Pipe Culv",
+        "category": "Cross Drainage",
+        "color": "#475569",
+        "drawing_ref": "DW-03012-07 / MDDTDW220000023-31 / RP-00001 App II",
+        "specs": "Precast concrete pipe culvert 1xØø 1200 [Culvert ID 98.4, Basin B3.48, Q=0.34 m3/s]",
+        "icon": "culvert_pipe",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3883273,
+            12.7646747
+          ],
+          [
+            8.3886038,
+            12.7646658
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_193",
+      "properties": {
+        "id": "asset_193",
+        "chainage_str": "PK 99+220",
+        "start_pk": 99220.0,
+        "end_pk": 99220.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Pipe Culvert 1xØø 1200",
+        "short_code": "Pipe Culv",
+        "category": "Cross Drainage",
+        "color": "#475569",
+        "drawing_ref": "DW-03012-07 / MDDTDW220000023-31 / RP-00001 App II",
+        "specs": "Precast concrete pipe culvert 1xØø 1200 [Culvert ID 99.1, Basin B3.49, Q=0.93 m3/s]",
+        "icon": "culvert_pipe",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3883947,
+            12.7666991
+          ],
+          [
+            8.3886711,
+            12.7666903
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_194",
+      "properties": {
+        "id": "asset_194",
+        "chainage_str": "PK 99+399",
+        "start_pk": 99399.0,
+        "end_pk": 99399.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Pipe Culvert 1xØø 1200",
+        "short_code": "Pipe Culv",
+        "category": "Cross Drainage",
+        "color": "#475569",
+        "drawing_ref": "DW-03012-07 / MDDTDW220000023-31 / RP-00001 App II",
+        "specs": "Precast concrete pipe culvert 1xØø 1200 [Culvert ID 99.2, Basin B3.50, Q=0.52 m3/s]",
+        "icon": "culvert_pipe",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3884486,
+            12.7683167
+          ],
+          [
+            8.388725,
+            12.768308
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_195",
+      "properties": {
+        "id": "asset_195",
+        "chainage_str": "PK 99+602",
+        "start_pk": 99602.0,
+        "end_pk": 99602.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Pipe Culvert 1xØø 1200",
+        "short_code": "Pipe Culv",
+        "category": "Cross Drainage",
+        "color": "#475569",
+        "drawing_ref": "DW-03013-06 / MDDTDW220000023-31 / RP-00001 App II",
+        "specs": "Precast concrete pipe culvert 1xØø 1200 [Culvert ID 99.3, Basin B3.51, Q=1.23 m3/s]",
+        "icon": "culvert_pipe",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3885096,
+            12.7701513
+          ],
+          [
+            8.388786,
+            12.7701426
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_196",
+      "properties": {
+        "id": "asset_196",
+        "chainage_str": "PK 99+866",
+        "start_pk": 99866.0,
+        "end_pk": 99866.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Box Culvert 1x(2.00 x 2.00m)",
+        "short_code": "1x Box Culv",
+        "category": "Cross Drainage",
+        "color": "#334155",
+        "drawing_ref": "DW-03013-06 / MDDTDW220010002 / RP-00001 App II",
+        "specs": "Reinforced concrete box culvert 1x(2.00 x 2.00m) [Culvert ID 99.4, Basin B3.52, Q=3.7 m3/s]",
+        "icon": "culvert_box",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.388589,
+            12.7725379
+          ],
+          [
+            8.3888655,
+            12.772529
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_197",
+      "properties": {
+        "id": "asset_197",
+        "chainage_str": "PK 100+174",
+        "start_pk": 100174.0,
+        "end_pk": 100174.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Pipe Culvert 1xØø 1200",
+        "short_code": "Pipe Culv",
+        "category": "Cross Drainage",
+        "color": "#475569",
+        "drawing_ref": "DW-03013-06 / MDDTDW220000023-31 / RP-00001 App II",
+        "specs": "Precast concrete pipe culvert 1xØø 1200 [Culvert ID 100.1, Basin B3.53, Q=1.08 m3/s]",
+        "icon": "culvert_pipe",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.388681,
+            12.775305
+          ],
+          [
+            8.3889576,
+            12.7752963
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_198",
+      "properties": {
+        "id": "asset_198",
+        "chainage_str": "PK 100+778",
+        "start_pk": 100778.0,
+        "end_pk": 100778.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Box Culvert 1x(2.00 x 2.00m)",
+        "short_code": "1x Box Culv",
+        "category": "Cross Drainage",
+        "color": "#334155",
+        "drawing_ref": "DW-03013-06 / MDDTDW220010002 / RP-00001 App II",
+        "specs": "Reinforced concrete box culvert 1x(2.00 x 2.00m) [Culvert ID 100.2, Basin B3.55, Q=3.86 m3/s]",
+        "icon": "culvert_box",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3888627,
+            12.7807638
+          ],
+          [
+            8.3891393,
+            12.7807551
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_199",
+      "properties": {
+        "id": "asset_199",
+        "chainage_str": "PK 100+909",
+        "start_pk": 100909.0,
+        "end_pk": 100909.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Pipe Culvert 1xØø 1200",
+        "short_code": "Pipe Culv",
+        "category": "Cross Drainage",
+        "color": "#475569",
+        "drawing_ref": "DW-03013-06 / MDDTDW220000023-31 / RP-00001 App II",
+        "specs": "Precast concrete pipe culvert 1xØø 1200 [Culvert ID 100.3, Basin B3.56, Q=0.34 m3/s]",
+        "icon": "culvert_pipe",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3889021,
+            12.7819477
+          ],
+          [
+            8.3891787,
+            12.781939
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_200",
+      "properties": {
+        "id": "asset_200",
+        "chainage_str": "PK 101+080",
+        "start_pk": 101080.0,
+        "end_pk": 101080.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Box Culvert 1x(2.00 x 2.00m)",
+        "short_code": "1x Box Culv",
+        "category": "Cross Drainage",
+        "color": "#334155",
+        "drawing_ref": "DW-03014-06 / MDDTDW220010002 / RP-00001 App II",
+        "specs": "Reinforced concrete box culvert 1x(2.00 x 2.00m) [Culvert ID 101.1, Basin B3.57, Q=2.98 m3/s]",
+        "icon": "culvert_box",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3889536,
+            12.7834931
+          ],
+          [
+            8.3892302,
+            12.7834843
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_201",
+      "properties": {
+        "id": "asset_201",
+        "chainage_str": "PK 101+866",
+        "start_pk": 101866.0,
+        "end_pk": 101866.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Pipe Culvert 1xØø 1500",
+        "short_code": "Pipe Culv",
+        "category": "Cross Drainage",
+        "color": "#475569",
+        "drawing_ref": "DW-03014-06 / MDDTDW220000023-31 / RP-00001 App II",
+        "specs": "Precast concrete pipe culvert 1xØø 1500 [Culvert ID 101.2, Basin B3.58, Q=2.03 m3/s]",
+        "icon": "culvert_pipe",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.38919,
+            12.7905966
+          ],
+          [
+            8.3894666,
+            12.7905879
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_202",
+      "properties": {
+        "id": "asset_202",
+        "chainage_str": "PK 102+010",
+        "start_pk": 102010.0,
+        "end_pk": 102010.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Pipe Culvert 1xØø 1200",
+        "short_code": "Pipe Culv",
+        "category": "Cross Drainage",
+        "color": "#475569",
+        "drawing_ref": "DW-03014-06 / MDDTDW220000023-31 / RP-00001 App II",
+        "specs": "Precast concrete pipe culvert 1xØø 1200 [Culvert ID 102.1, Basin B3.59, Q=0.46 m3/s]",
+        "icon": "culvert_pipe",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3892333,
+            12.791898
+          ],
+          [
+            8.3895099,
+            12.7918893
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_203",
+      "properties": {
+        "id": "asset_203",
+        "chainage_str": "PK 102+905",
+        "start_pk": 102905.0,
+        "end_pk": 102905.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Pipe Culvert 1xØø 1200",
+        "short_code": "Pipe Culv",
+        "category": "Cross Drainage",
+        "color": "#475569",
+        "drawing_ref": "DW-03015-06 / MDDTDW220000023-31 / RP-00001 App II",
+        "specs": "Precast concrete pipe culvert 1xØø 1200 [Culvert ID 102.2, Basin B3.62, Q=0.23 m3/s]",
+        "icon": "culvert_pipe",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3895025,
+            12.7999866
+          ],
+          [
+            8.3897791,
+            12.7999779
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_204",
+      "properties": {
+        "id": "asset_204",
+        "chainage_str": "PK 103+450",
+        "start_pk": 103450.0,
+        "end_pk": 103450.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Pipe Culvert 1xØø 1500",
+        "short_code": "Pipe Culv",
+        "category": "Cross Drainage",
+        "color": "#475569",
+        "drawing_ref": "DW-03015-06 / MDDTDW220000023-31 / RP-00001 App II",
+        "specs": "Precast concrete pipe culvert 1xØø 1500 [Culvert ID 103.1, Basin B3.61, Q=2.81 m3/s]",
+        "icon": "culvert_pipe",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3896081,
+            12.8049013
+          ],
+          [
+            8.3898847,
+            12.8049035
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_205",
+      "properties": {
+        "id": "asset_205",
+        "chainage_str": "PK 103+970",
+        "start_pk": 103970.0,
+        "end_pk": 103970.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Pipe Culvert 1xØø 1500",
+        "short_code": "Pipe Culv",
+        "category": "Cross Drainage",
+        "color": "#475569",
+        "drawing_ref": "DW-03016-06 / MDDTDW220000023-31 / RP-00001 App II",
+        "specs": "Precast concrete pipe culvert 1xØø 1500 [Culvert ID 103.2, Basin B3.63, Q=2.46 m3/s]",
+        "icon": "culvert_pipe",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3895422,
+            12.8096014
+          ],
+          [
+            8.3898189,
+            12.8096051
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_206",
+      "properties": {
+        "id": "asset_206",
+        "chainage_str": "PK 105+334",
+        "start_pk": 105334.0,
+        "end_pk": 105334.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Box Culvert 1x(2.00 x 2.00m)",
+        "short_code": "1x Box Culv",
+        "category": "Cross Drainage",
+        "color": "#334155",
+        "drawing_ref": "DW-03017-06 / MDDTDW220010002 / RP-00001 App II",
+        "specs": "Reinforced concrete box culvert 1x(2.00 x 2.00m) [Culvert ID 105.1, Basin B3.66, Q=3.33 m3/s]",
+        "icon": "culvert_box",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3889362,
+            12.8219063
+          ],
+          [
+            8.3892125,
+            12.821922
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_207",
+      "properties": {
+        "id": "asset_207",
+        "chainage_str": "PK 105+519",
+        "start_pk": 105519.0,
+        "end_pk": 105519.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Pipe Culvert 1xØø 1200",
+        "short_code": "Pipe Culv",
+        "category": "Cross Drainage",
+        "color": "#475569",
+        "drawing_ref": "DW-03017-06 / MDDTDW220000023-31 / RP-00001 App II",
+        "specs": "Precast concrete pipe culvert 1xØø 1200 [Culvert ID 105.2, Basin B3.67, Q=0.22 m3/s]",
+        "icon": "culvert_pipe",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3888361,
+            12.8235763
+          ],
+          [
+            8.3891124,
+            12.823592
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_208",
+      "properties": {
+        "id": "asset_208",
+        "chainage_str": "PK 107+190",
+        "start_pk": 107190.0,
+        "end_pk": 107190.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Box Culvert 1x(2.50 x 2.50m)",
+        "short_code": "1x Box Culv",
+        "category": "Cross Drainage",
+        "color": "#334155",
+        "drawing_ref": "DW-03018-06 / MDDTDW220010002 / RP-00001 App II",
+        "specs": "Reinforced concrete box culvert 1x(2.50 x 2.50m) [Culvert ID 107.1, Basin B3.70, Q=6.85 m3/s]",
+        "icon": "culvert_box",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3879322,
+            12.8386591
+          ],
+          [
+            8.3882084,
+            12.8386758
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_209",
+      "properties": {
+        "id": "asset_209",
+        "chainage_str": "PK 107+750",
+        "start_pk": 107750.0,
+        "end_pk": 107750.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Box Culvert 1x(2.50 x 2.50m)",
+        "short_code": "1x Box Culv",
+        "category": "Cross Drainage",
+        "color": "#334155",
+        "drawing_ref": "DW-03018-06 / MDDTDW220010002 / RP-00001 App II",
+        "specs": "Reinforced concrete box culvert 1x(2.50 x 2.50m) [Culvert ID 107.2, Basin B3.71, Q=7.75 m3/s]",
+        "icon": "culvert_box",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3873642,
+            12.8436705
+          ],
+          [
+            8.3876386,
+            12.8437055
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_210",
+      "properties": {
+        "id": "asset_210",
+        "chainage_str": "PK 109+066",
+        "start_pk": 109066.0,
+        "end_pk": 109066.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Pipe Culvert 1xØø 1500",
+        "short_code": "Pipe Culv",
+        "category": "Cross Drainage",
+        "color": "#475569",
+        "drawing_ref": "DW-03019-06 / MDDTDW220000023-31 / RP-00001 App II",
+        "specs": "Precast concrete pipe culvert 1xØø 1500 [Culvert ID 109.1, Basin B3.75, Q=2.27 m3/s]",
+        "icon": "culvert_pipe",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3857756,
+            12.8554676
+          ],
+          [
+            8.38605,
+            12.8555027
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_211",
+      "properties": {
+        "id": "asset_211",
+        "chainage_str": "PK 110+172",
+        "start_pk": 110172.0,
+        "end_pk": 110172.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Pipe Culvert 1xØø 1200",
+        "short_code": "Pipe Culv",
+        "category": "Cross Drainage",
+        "color": "#475569",
+        "drawing_ref": "DW-03020-06 / MDDTDW220000023-31 / RP-00001 App II",
+        "specs": "Precast concrete pipe culvert 1xØø 1200 [Culvert ID 110.1, Basin B3.79, Q=0.23 m3/s]",
+        "icon": "culvert_pipe",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3844403,
+            12.8653822
+          ],
+          [
+            8.3847147,
+            12.8654174
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_212",
+      "properties": {
+        "id": "asset_212",
+        "chainage_str": "PK 110+306",
+        "start_pk": 110306.0,
+        "end_pk": 110306.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Pipe Culvert 1xØø 1500",
+        "short_code": "Pipe Culv",
+        "category": "Cross Drainage",
+        "color": "#475569",
+        "drawing_ref": "DW-03020-06 / MDDTDW220000023-31 / RP-00001 App II",
+        "specs": "Precast concrete pipe culvert 1xØø 1500 [Culvert ID 110.2, Basin B3.80, Q=2.16 m3/s]",
+        "icon": "culvert_pipe",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3842786,
+            12.8665834
+          ],
+          [
+            8.3845529,
+            12.8666186
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_213",
+      "properties": {
+        "id": "asset_213",
+        "chainage_str": "PK 110+420",
+        "start_pk": 110420.0,
+        "end_pk": 110420.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Pipe Culvert 1xØø 1200",
+        "short_code": "Pipe Culv",
+        "category": "Cross Drainage",
+        "color": "#475569",
+        "drawing_ref": "DW-03020-06 / MDDTDW220000023-31 / RP-00001 App II",
+        "specs": "Precast concrete pipe culvert 1xØø 1200 [Culvert ID 110.3, Basin B3.81, Q=0.69 m3/s]",
+        "icon": "culvert_pipe",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3841409,
+            12.8676054
+          ],
+          [
+            8.3844153,
+            12.8676405
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_214",
+      "properties": {
+        "id": "asset_214",
+        "chainage_str": "PK 110+656",
+        "start_pk": 110656.0,
+        "end_pk": 110656.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Box Culvert 1x(2.00 x 2.00m)",
+        "short_code": "1x Box Culv",
+        "category": "Cross Drainage",
+        "color": "#334155",
+        "drawing_ref": "DW-03020-06 / MDDTDW220010002 / RP-00001 App II",
+        "specs": "Reinforced concrete box culvert 1x(2.00 x 2.00m) [Culvert ID 110.4, Basin B3.82, Q=6.29 m3/s]",
+        "icon": "culvert_box",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3838572,
+            12.8697204
+          ],
+          [
+            8.3841315,
+            12.8697556
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_215",
+      "properties": {
+        "id": "asset_215",
+        "chainage_str": "PK 111+017",
+        "start_pk": 111017.0,
+        "end_pk": 111017.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Pipe Culvert 1xØø 1500",
+        "short_code": "Pipe Culv",
+        "category": "Cross Drainage",
+        "color": "#475569",
+        "drawing_ref": "DW-03021-06 / MDDTDW220000023-31 / RP-00001 App II",
+        "specs": "Precast concrete pipe culvert 1xØø 1500 [Culvert ID 111.1, Basin B3.83, Q=1.67 m3/s]",
+        "icon": "culvert_pipe",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3831945,
+            12.8728685
+          ],
+          [
+            8.3834599,
+            12.872945
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_216",
+      "properties": {
+        "id": "asset_216",
+        "chainage_str": "PK 111+349",
+        "start_pk": 111349.0,
+        "end_pk": 111349.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Pipe Culvert 1xØø 1200",
+        "short_code": "Pipe Culv",
+        "category": "Cross Drainage",
+        "color": "#475569",
+        "drawing_ref": "DW-03021-06 / MDDTDW220000023-31 / RP-00001 App II",
+        "specs": "Precast concrete pipe culvert 1xØø 1200 [Culvert ID 111.2, Basin B3.85, Q=1.45 m3/s]",
+        "icon": "culvert_pipe",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3820925,
+            12.8756147
+          ],
+          [
+            8.3823417,
+            12.8757322
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_217",
+      "properties": {
+        "id": "asset_217",
+        "chainage_str": "PK 111+836",
+        "start_pk": 111836.0,
+        "end_pk": 111836.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Pipe Culvert 1xØø 1200",
+        "short_code": "Pipe Culv",
+        "category": "Cross Drainage",
+        "color": "#475569",
+        "drawing_ref": "DW-03021-06 / MDDTDW220000023-31 / RP-00001 App II",
+        "specs": "Precast concrete pipe culvert 1xØø 1200 [Culvert ID 111.3, Basin B3.86, Q=1.48 m3/s]",
+        "icon": "culvert_pipe",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3798888,
+            12.8794284
+          ],
+          [
+            8.3801286,
+            12.879563
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_218",
+      "properties": {
+        "id": "asset_218",
+        "chainage_str": "PK 111+965",
+        "start_pk": 111965.0,
+        "end_pk": 111965.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Pipe Culvert 1xØø 1200",
+        "short_code": "Pipe Culv",
+        "category": "Cross Drainage",
+        "color": "#475569",
+        "drawing_ref": "DW-03021-06 / MDDTDW220000023-31 / RP-00001 App II",
+        "specs": "Precast concrete pipe culvert 1xØø 1200 [Culvert ID 111.4, Basin B3.87, Q=0.6 m3/s]",
+        "icon": "culvert_pipe",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3792925,
+            12.8804375
+          ],
+          [
+            8.3795323,
+            12.8805722
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_219",
+      "properties": {
+        "id": "asset_219",
+        "chainage_str": "PK 112+500",
+        "start_pk": 112500.0,
+        "end_pk": 112500.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Pipe Culvert 1xØø 1200",
+        "short_code": "Pipe Culv",
+        "category": "Cross Drainage",
+        "color": "#475569",
+        "drawing_ref": "DW-03022-06 / MDDTDW220000023-31 / RP-00001 App II",
+        "specs": "Precast concrete pipe culvert 1xØø 1200 [Culvert ID 112.1, Basin B3.88, Q=0.12 m3/s]",
+        "icon": "culvert_pipe",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3768197,
+            12.8846229
+          ],
+          [
+            8.3770595,
+            12.8847575
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_220",
+      "properties": {
+        "id": "asset_220",
+        "chainage_str": "PK 112+865",
+        "start_pk": 112865.0,
+        "end_pk": 112865.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Pipe Culvert 1xØø 1200",
+        "short_code": "Pipe Culv",
+        "category": "Cross Drainage",
+        "color": "#475569",
+        "drawing_ref": "DW-03022-06 / MDDTDW220000023-31 / RP-00001 App II",
+        "specs": "Precast concrete pipe culvert 1xØø 1200 [Culvert ID 112.2, Basin B3.89, Q=0.28 m3/s]",
+        "icon": "culvert_pipe",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3751325,
+            12.8874782
+          ],
+          [
+            8.3753723,
+            12.887613
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_221",
+      "properties": {
+        "id": "asset_221",
+        "chainage_str": "PK 113+120",
+        "start_pk": 113120.0,
+        "end_pk": 113120.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Pipe Culvert 1xØø 1200",
+        "short_code": "Pipe Culv",
+        "category": "Cross Drainage",
+        "color": "#475569",
+        "drawing_ref": "DW-03022-06 / MDDTDW220000023-31 / RP-00001 App II",
+        "specs": "Precast concrete pipe culvert 1xØø 1200 [Culvert ID 113.1, Basin B3.90, Q=0.17 m3/s]",
+        "icon": "culvert_pipe",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3739538,
+            12.8894731
+          ],
+          [
+            8.3741936,
+            12.8896078
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_222",
+      "properties": {
+        "id": "asset_222",
+        "chainage_str": "PK 113+697",
+        "start_pk": 113697.0,
+        "end_pk": 113697.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Triple Box Culvert 3x(2.50 x 2.50m)",
+        "short_code": "3x Box Culv",
+        "category": "Cross Drainage",
+        "color": "#334155",
+        "drawing_ref": "DW-03023-06 / MDDTDW220010002 / RP-00001 App II",
+        "specs": "Reinforced concrete box culvert 3x(2.50 x 2.50m) [Culvert ID 113.2, Basin B3.91, Q=20.81 m3/s]",
+        "icon": "culvert_box",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3712867,
+            12.8939869
+          ],
+          [
+            8.3715265,
+            12.8941216
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_223",
+      "properties": {
+        "id": "asset_223",
+        "chainage_str": "PK 114+075",
+        "start_pk": 114075.0,
+        "end_pk": 114075.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Pipe Culvert 1xØø 1200",
+        "short_code": "Pipe Culv",
+        "category": "Cross Drainage",
+        "color": "#475569",
+        "drawing_ref": "DW-03023-06 / MDDTDW220000023-31 / RP-00001 App II",
+        "specs": "Precast concrete pipe culvert 1xØø 1200 [Culvert ID 114.1, Basin B3.92, Q=1.24 m3/s]",
+        "icon": "culvert_pipe",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3695393,
+            12.8969439
+          ],
+          [
+            8.3697791,
+            12.8970787
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_224",
+      "properties": {
+        "id": "asset_224",
+        "chainage_str": "PK 114+914",
+        "start_pk": 114914.0,
+        "end_pk": 114914.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Pipe Culvert 1xØø 1200",
+        "short_code": "Pipe Culv",
+        "category": "Cross Drainage",
+        "color": "#475569",
+        "drawing_ref": "DW-03023-06 / MDDTDW220000023-31 / RP-00001 App II",
+        "specs": "Precast concrete pipe culvert 1xØø 1200 [Culvert ID 114.3, Basin B3.94, Q=0.38 m3/s]",
+        "icon": "culvert_pipe",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3656608,
+            12.9035073
+          ],
+          [
+            8.3659006,
+            12.903642
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_225",
+      "properties": {
+        "id": "asset_225",
+        "chainage_str": "PK 115+125",
+        "start_pk": 115125.0,
+        "end_pk": 115125.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Triple Box Culvert 3x(2.00 x 2.00m)",
+        "short_code": "3x Box Culv",
+        "category": "Cross Drainage",
+        "color": "#334155",
+        "drawing_ref": "DW-03024-07 / MDDTDW220010002 / RP-00001 App II",
+        "specs": "Reinforced concrete box culvert 3x(2.00 x 2.00m) [Culvert ID 115.1, Basin B3.95, Q=13.46 m3/s]",
+        "icon": "culvert_box",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3646853,
+            12.905158
+          ],
+          [
+            8.3649251,
+            12.9052926
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_226",
+      "properties": {
+        "id": "asset_226",
+        "chainage_str": "PK 115+495",
+        "start_pk": 115495.0,
+        "end_pk": 115495.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Center",
+        "position": "Cross Drainage",
+        "typology": "Single Box Culvert 1x(2.50 x 2.50m)",
+        "short_code": "1x Box Culv",
+        "category": "Cross Drainage",
+        "color": "#334155",
+        "drawing_ref": "DW-03024-07 / MDDTDW220010002 / RP-00001 App II",
+        "specs": "Reinforced concrete box culvert 1x(2.50 x 2.50m) [Culvert ID 115.2, Basin B3.96, Q=7.4 m3/s]",
+        "icon": "culvert_box",
+        "status": "Not Started",
+        "notes": "",
+        "inspection_date": ""
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.3629747,
+            12.9080524
+          ],
+          [
+            8.3632147,
+            12.908187
           ]
         ]
       }
