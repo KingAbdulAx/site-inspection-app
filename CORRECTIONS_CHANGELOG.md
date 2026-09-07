@@ -146,3 +146,22 @@ Prior to modifying any dataset records, three test items were selected at random
 | asset_109 | PK 101+242 – PK 102+300 | FLAG | Ditch Runs (Row 55) | DW-03014-06 | [FLAG] No drawing symbology found on DW-03014-06 supporting this run. Retained pending site verification. Existing record retained. |
 | asset_135 | PK 110+700 – PK 111+900 | FLAG | Ditch Runs (Row 56) | DW-03020-06 / DW-03021-06 | [FLAG] No drawing symbology found on DW-03020-06 / DW-03021-06 supporting this run. Retained pending site verification. Existing record retained. |
 | asset_153 | PK 119+472 – PK 120+450 | FLAG | Ditch Runs (Row 57) | DW-03027-06 | [FLAG] No drawing symbology found on DW-03027-06 supporting this run. Retained pending site verification. Existing record retained. |
+
+### Phase 4 — Siding and Typology Corrections (Side and Type Tab)
+
+| Record ID | Chainage Extent | Action | Register Reference | Drawing / Document Reference | Notes & Field Data Continuity |
+|:---|:---|:---|:---|:---|:---|
+| asset_020 | CH 84+900 – 85+110 | FLIP SIDE | Side and Type (Row 4) | DW-03002-07 | Reconciled side discrepancy. Verified successor run on Left is asset_227. Original record retained with cross-reference note. |
+| asset_096 | CH 96+010 – 96+590 | FLIP SIDE | Side and Type (Row 5) | DW-03010-07 | Reconciled side discrepancy. Verified successor run on Left is asset_237. Original record retained with cross-reference note. |
+| asset_103 | CH 98+150 – 98+380 | FLIP SIDE | Side and Type (Row 6) | DW-03011-06 | Reconciled side discrepancy. Verified successor run on Left is asset_240. Original record retained with cross-reference note. |
+| asset_109 | CH 101+240 – 101+880 | FLIP SIDE | Side and Type (Row 7) | DW-03014-06 | Reconciled side discrepancy. Verified successor run on Right is asset_241. Original record retained with cross-reference note. |
+| asset_109 | CH 101+910 – 102+030 | FLIP SIDE | Side and Type (Row 8) | DW-03014-06 | Reconciled side discrepancy. Verified successor run on Right is asset_241. Original record retained with cross-reference note. |
+| asset_109 | CH 102+060 – 102+310 | FLIP SIDE | Side and Type (Row 9) | DW-03014-06 | Reconciled side discrepancy. Verified successor run on Right is asset_242. Original record retained with cross-reference note. |
+| asset_135 | CH 110+700 – 111+740 | FLIP SIDE | Side and Type (Row 10) | DW-03020-06 / DW-03021-06 | Reconciled side discrepancy. Verified successor run on Left is asset_249. Original record retained with cross-reference note. |
+| asset_153 | CH 119+470 – 119+620 | FLIP SIDE | Side and Type (Row 11) | DW-03027-06 | Reconciled side discrepancy. Verified successor run on Left is asset_259. Original record retained with cross-reference note. |
+| asset_013 | PK 83+725 – PK 84+800 | RETYPE | Side and Type (Row 15) | DW-03001-05 | Updated typology / technical specifications per primary drawing evidence and master dataset. Initial field data intact. |
+| asset_043 | PK 86+900 – PK 87+100 | RETYPE | Side and Type (Row 18) | DW-03004-06 | Updated typology / technical specifications per primary drawing evidence and master dataset. Initial field data intact. |
+| asset_072 | PK 89+700 – PK 90+246 | RETYPE | Side and Type (Row 14) | DW-03005-06 | Updated typology / technical specifications per primary drawing evidence and master dataset. Initial field data intact. |
+| asset_073 | PK 89+700 – PK 90+246 | RETYPE | Side and Type (Row 14) | DW-03005-06 | Updated typology / technical specifications per primary drawing evidence and master dataset. Initial field data intact. |
+| asset_065 | PK 88+800 – PK 88+975 | RETYPE | Side and Type (Row 19) | DW-03005-06 | Updated typology / technical specifications per primary drawing evidence and master dataset. Initial field data intact. |
+| asset_153 | PK 119+472 – PK 120+450 | RETYPE | Side and Type (Row 20) | DW-03027-06 | Updated typology / technical specifications per primary drawing evidence and master dataset. Initial field data intact. |

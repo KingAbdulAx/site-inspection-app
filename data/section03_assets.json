@@ -952,15 +952,15 @@
         "is_point": false,
         "side": "Right",
         "position": "Right Side (Track Cut)",
-        "typology": "Concrete Lined Side Ditch (Type 1 Standard b=0.75m/h=0.75m)",
-        "short_code": "Type 1 Std",
+        "typology": "Concrete Lined Side Ditch (Type 1 Larger Variant B=0.75m/H=0.75m)",
+        "short_code": "Type 1 Lgr",
         "category": "Side Ditch",
         "color": "#3B82F6",
         "drawing_ref": "MDDTDW220010001",
         "specs": "Concrete trapezoidal cut ditch (b=0.75m, h=0.75m, 1:1)",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "[FLAG] No drawing symbology found on DW-03001-05 supporting this run. Retained pending site verification.",
+        "notes": "[FLAG] No drawing symbology found on DW-03001-05 supporting this run. Retained pending site verification. Concrete trapezoidal cut side ditch (B=0.75m, H=0.75m, 1:1) per DW-03001-05 and Report Table 3.4 / §3.5.1 [Ref: SD-006]",
         "inspection_date": ""
       },
       "geometry": {
@@ -1567,7 +1567,7 @@
         "specs": "Concrete trapezoidal toe ditch (B=1.50m, H=0.50m, 1:1.5)",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "[FLAG] No drawing symbology found on DW-03002-07 supporting this run. Retained pending site verification.",
+        "notes": "[FLAG] No drawing symbology found on DW-03002-07 supporting this run. Retained pending site verification. [RECONCILED - FLIP SIDE] Drawing DW-03002-07 places this ditch on the LEFT side (successor asset_227). Retained on original side pending final engineer sign-off.",
         "inspection_date": ""
       },
       "geometry": {
@@ -2850,7 +2850,7 @@
         "specs": "Concrete trapezoidal toe ditch (B=1.50m, H=0.50m, 1:1.5)",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "",
+        "notes": "[RETYPE NOTE] At CH 87+020 to 87+100, ditch transitions from Type 12 to Type 1 concrete lined side ditch (B=0.40m, H=0.40m) per DW-03004-06 [Ref: SD-005].",
         "inspection_date": ""
       },
       "geometry": {
@@ -4122,7 +4122,7 @@
         "specs": "Unlined earth ditch at embankment foot (H=1.0m, 1:1.5, i>=0.5%)",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "",
+        "notes": "[RETYPE NOTE] Drawing DW-03005-06 shows Type 12 trapezoidal lined ditch at foot of slope [Ref: FS-087].",
         "inspection_date": ""
       },
       "geometry": {
@@ -4625,7 +4625,7 @@
         "specs": "Concrete trapezoidal cut ditch (b=0.75m, h=0.75m, 1:1)",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "[FLAG] No drawing symbology found on DW-03005-06 / DW-03006-05 supporting this run. Retained pending site verification.",
+        "notes": "[FLAG] No drawing symbology found on DW-03005-06 / DW-03006-05 supporting this run. Retained pending site verification. [RETYPE NOTE] Drawing DW-03005-06 / DW-03006-05 shows Type 12 trapezoidal toe ditch at foot of slope (B=1.50m, H=0.50m) rather than platform Type 1 [Ref: FS-008].",
         "inspection_date": ""
       },
       "geometry": {
@@ -4746,7 +4746,7 @@
         "specs": "Concrete trapezoidal cut ditch (b=0.75m, h=0.75m, 1:1)",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "[FLAG] No drawing symbology found on DW-03006-05 supporting this run. Retained pending site verification.",
+        "notes": "[FLAG] No drawing symbology found on DW-03006-05 supporting this run. Retained pending site verification. [RETYPE NOTE] Drawing DW-03005-06 / DW-03006-05 shows Type 12 trapezoidal toe ditch at foot of slope (B=1.50m, H=0.50m) rather than platform Type 1 [Ref: FS-090].",
         "inspection_date": ""
       },
       "geometry": {
@@ -6673,7 +6673,7 @@
         "specs": "Concrete trapezoidal toe ditch (B=1.50m, H=0.50m, 1:1.5)",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "[FLAG] No drawing symbology found on DW-03010-07 supporting this run. Retained pending site verification.",
+        "notes": "[FLAG] No drawing symbology found on DW-03010-07 supporting this run. Retained pending site verification. [RECONCILED - FLIP SIDE] Drawing DW-03010-07 places this ditch on the LEFT side (successor asset_237). Retained on original side pending final engineer sign-off.",
         "inspection_date": ""
       },
       "geometry": {
@@ -7244,7 +7244,7 @@
         "specs": "Concrete lined triangular toe ditch (H=0.80m, 1:1.5)",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "[FLAG] No drawing symbology found on DW-03011-06 / DW-03012-07 supporting this run. Retained pending site verification. [FLAG] No drawing symbology found on DW-03012-07 supporting this run. Retained pending site verification.",
+        "notes": "[FLAG] No drawing symbology found on DW-03011-06 / DW-03012-07 supporting this run. Retained pending site verification. [FLAG] No drawing symbology found on DW-03012-07 supporting this run. Retained pending site verification. [RECONCILED - FLIP SIDE] Drawing DW-03011-06 places this ditch on the LEFT side (successor asset_240). Retained on original side pending final engineer sign-off.",
         "inspection_date": ""
       },
       "geometry": {
@@ -7822,7 +7822,7 @@
         "specs": "Concrete lined triangular toe ditch (H=0.80m, 1:1.5)",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "[FLAG] No drawing symbology found on DW-03014-06 supporting this run. Retained pending site verification.",
+        "notes": "[FLAG] No drawing symbology found on DW-03014-06 supporting this run. Retained pending site verification. [RECONCILED - FLIP SIDE] Drawing DW-03014-06 places this ditch on the RIGHT side (successor asset_241). Retained on original side pending final engineer sign-off. [RECONCILED - FLIP SIDE] Drawing DW-03014-06 places this ditch on the RIGHT side (successor asset_242). Retained on original side pending final engineer sign-off.",
         "inspection_date": ""
       },
       "geometry": {
@@ -10530,7 +10530,7 @@
         "specs": "Concrete lined triangular toe ditch (H=0.80m, 1:1.5)",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "[FLAG] No drawing symbology found on DW-03020-06 / DW-03021-06 supporting this run. Retained pending site verification.",
+        "notes": "[FLAG] No drawing symbology found on DW-03020-06 / DW-03021-06 supporting this run. Retained pending site verification. [RECONCILED - FLIP SIDE] Drawing DW-03020-06 / DW-03021-06 places this ditch on the LEFT side (successor asset_249). Retained on original side pending final engineer sign-off.",
         "inspection_date": ""
       },
       "geometry": {
@@ -12372,7 +12372,7 @@
         "specs": "Concrete lined triangular toe ditch (H=0.80m, 1:1.5)",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "[FLAG] No drawing symbology found on DW-03027-06 supporting this run. Retained pending site verification.",
+        "notes": "[FLAG] No drawing symbology found on DW-03027-06 supporting this run. Retained pending site verification. [RECONCILED - FLIP SIDE] Drawing DW-03027-06 places this ditch on the LEFT side (successor asset_259). Retained on original side pending final engineer sign-off. [RETYPE NOTE] At CH 120+280, drawing DW-03027-06 indicates transition to Type 12 / Type 4 toe ditch [Ref: FS-034].",
         "inspection_date": ""
       },
       "geometry": {
