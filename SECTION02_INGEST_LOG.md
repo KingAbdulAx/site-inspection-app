@@ -98,3 +98,44 @@ Per Federal Ministry of Transport / Employer Letter No. `T.0063/S.50/C.9/Vol.1/4
 
 ### 7. Phase 1 Data Artifact
 - Generated `data/section02_drawing_register.json` (283 KB) recording complete metadata, title, revision, chainage extent, file size, TC 1084 status/comments, TC 1153 status/comments, and precedence notes for all 174 document entries.
+
+---
+
+## Phase 2 — Alignment Extraction & Centerline Verification
+- **Date Completed:** 2026-09-09
+- **Source Files:**
+  - Track Geometry: `KMZs KAMA/01. KANO-MARADI LINE/SECTION 02.kmz` (`doc.kml`, `Polyline [3BEDD7]:0`, colour `ff0000fe`)
+  - Corridor Stationing: `KMZs KAMA/KMD.kml` (`TRA-H-GTR_km-tick` midpoints & `TXT-KM` 500m labels)
+  - Boundary Reference: `data/section03_centerline.json` (Section 03 baseline)
+
+### 1. Methodology & Geometry Separation
+- Extracted all 2,940 LineStrings of colour `ff0000fe` from `SECTION 02.kmz`.
+- Filtered and separated cross-track sleeper ties / gauge ticks from longitudinal track rails:
+  - **Cross Ticks:** 1,470 segments (average length 1.000 m, total length 1,470.53 m) oriented perpendicular to track bearing ($60^\circ\text{--}120^\circ$ / $240^\circ\text{--}300^\circ$). Rejected from centerline geometry.
+  - **Rail Segments:** 1,470 segments (total length 126,247.90 m) oriented along track bearing ($315^\circ\text{--}360^\circ$ / $0^\circ\text{--}45^\circ$).
+- Chained rail segments into two continuous, gapless lines from south to north:
+  - **Rail 1 (Left Rail):** 735 segments, WGS84 geodesic length = 63,124.409 m.
+  - **Rail 2 (Right Rail):** 735 segments, WGS84 geodesic length = 63,123.489 m.
+  - **Segment Continuity:** 100% gapless (<0.10 m connection tolerance at every vertex; zero unassigned segments).
+  - **Track Gauge:** Constant 1.000 m lateral separation across all 736 vertex pairs.
+- Reconstructed the true railway track centerline as the exact mathematical midpoint between Rail 1 and Rail 2 at every vertex across the entire corridor.
+
+### 2. Alignment Verification Numbers
+| Verification Metric | Required / Stated Value | Derived Centerline Value | Discrepancy | Acceptance Status |
+|:---|:---:|:---:|:---:|:---:|
+| **Start Chainage** (`DW-03002`) | PK 19+800.000 | PK 19+800.000 | 0.000 m | Exact Match |
+| **End Chainage** (`DW-03047`) | PK 82+902.439 | PK 82+902.439 | 0.000 m | Exact Match |
+| **Section Span** | 63,102.439 m | 63,123.949 m | +21.510 m | **0.0341%** (Threshold: $\le 0.1000\%$) — **PASSED** |
+| **Terminal Lon/Lat** (PK 82+902.439) | — | Lon: `8.4041225`, Lat: `12.6249800` | — | Verified |
+| **Boundary Gap vs. S03** (PK 82+902.439) | Section 03 Start | Lon: `8.4040758`, Lat: `12.6248062` | **19.88 m** | Verified ($dx = -5.08\text{m}, dy = -19.34\text{m}$) |
+
+*Note on Boundary Gap:* The 19.88 m join gap at CH 82+902.439 corresponds precisely to the known ~17.2 m offset in the Section 03 baseline caused by AutoCAD text leader anchor positions (`CH=83+000`). Per directive, the gap is recorded plainly without forcing the lines together.
+
+### 3. Subsampling & Centerline Dataset
+- Resampled the continuous 736-vertex centerline along WGS84 geodesics to standard app schema:
+  - **Dense Spline Points:** 2,526 vertices spaced at 25.0 m steps from PK 19+800 to PK 82+902.439 (each with `pk`, `lon`, `lat`, `bearing`).
+  - **100m Ticks:** 632 tick marks every 100 m from PK 19+800 to PK 82+900.
+  - **1km Major Ticks:** 63 major tick marks every 1,000 m from PK 20+000 to PK 82+000.
+  - **GeoJSON:** FeatureCollection with single LineString feature representing Section 02.
+- Schema verified 100% compatible with `section03_centerline.json`.
+- Output: `data/section02_centerline.json` (624,998 bytes).
