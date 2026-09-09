@@ -274,3 +274,44 @@ Per Federal Ministry of Transport / Employer Letter No. `T.0063/S.50/C.9/Vol.1/4
   - Initial status: `Not Started` for all 1,710 assets
 - **Asset Data Artifact:** `data/section02_assets.json` (2,558,753 bytes, 1,710 assets).
 
+---
+
+## Phase 5: Multi-Section App Integration & Offline Bundling — COMPLETED
+
+### 1. Integration Scope & Architecture
+- Integrated Section 02 alongside Section 03 in the PWA Field Inspector with multi-section viewing:
+  - **All (02+03):** Default view. Displays the full 105.1 km Kano–Daura corridor (PK 19+800 to 124+521) with 2,552 verified assets and unified stationing.
+  - **Section 02 (DWKZ):** Filtered view for Section 02 alone (PK 19+800 to 82+902, 1,710 assets).
+  - **Section 03 (KZDR):** Filtered view for Section 03 alone (PK 82+902 to 124+521, 842 assets).
+- **Offline Script Bundle:** Generated `data/section02_bundle.js` (3,174,821 bytes) containing `window.SECTION02_CENTERLINE` and `window.SECTION02_ASSETS`. Loaded synchronously alongside `bundle.js` for instant offline loading under `file://` or PWA standalone mode.
+
+### 2. Core Components Modified
+- **`index.html`:**
+  - Added `.section-selector` pill in `.header-row-tools` with tabs for `All (02+03)`, `Section 02`, and `Section 03`.
+  - Added dynamic subtitle `#lblSectionSubtitle` updating chainage extent on section switch.
+  - Added `<script src="data/section02_bundle.js?v=20260909_1"></script>` and bumped cache query versions.
+- **`styles.css`:**
+  - Added responsive engineering styles for `.section-selector` and `.btn-sec-tab` matching the corporate slate theme.
+- **`app.js`:**
+  - `state.activeSection`: Defaults to `'all'` per engineering directive, persisted in `localStorage.getItem('KMD_ACTIVE_SECTION')`.
+  - Dynamic getters `getActiveCenterlines()` and `getActiveFeatures()` providing seamless unified or isolated data streams.
+  - Dual-key LocalStorage partitioning: `KMD_DRAINAGE_INSPECTIONS_SEC03_V1` and `KMD_DRAINAGE_INSPECTIONS_SEC02_V1` preserving Section 03 records with zero cross-talk.
+  - Multi-centerline `renderCenterline()` rendering continuous track line and station ticks across all active centerlines.
+  - Dynamic `updateProgressHUD()` computing total, completed, ongoing, and defect counts for active assets.
+  - Multi-centerline `projectGpsToAlignment()` projecting GPS fixes to the nearest track segment across active sections.
+  - Multi-centerline `jumpToChainage()` supporting station jump across the entire corridor.
+  - Dynamic `exportProgressExcel()` exporting active assets with section-specific filename.
+- **`sync.js`:**
+  - Partitioned local storage saving on cloud pull to preserve distinct storage keys by ID prefix.
+
+### 3. Verification & Validation Audit
+- Script: `scripts/test_pwa_integration.js` (100% PASS):
+  - Assets count in 'all': **2,552** (KPI Total = 2,552)
+  - Assets count in '02': **1,710** (KPI Total = 1,710)
+  - Assets count in '03': **842** (KPI Total = 842)
+  - Dawanau GPS projection: PK 19+800.7 (Section 02)
+  - Kazaure GPS projection: PK 82+900.1 (Section 03)
+  - Daura GPS projection: PK 124+500.0 (Section 03)
+  - LocalStorage partitioning: 100% strict isolation, zero key contamination.
+
+

@@ -9,8 +9,9 @@
   // --- 1. Global State ---
   const state = {
     map: null,
-    centerlineData: window.SECTION03_CENTERLINE || null,
-    assetsData: window.SECTION03_ASSETS || null,
+    activeSection: localStorage.getItem('KMD_ACTIVE_SECTION') || 'all', // 'all', '02', '03' (defaults to 'all')
+    centerlineData: null,
+    assetsData: null,
     viewMode: 'typology', // 'typology' or 'progress'
     activeFilter: 'all',  // 'all', 'ditches', 'structures', 'status_not_started', 'status_ongoing', 'status_completed', 'status_defect'
     selectedAsset: null,
@@ -32,15 +33,54 @@
   };
   window.appState = state;
 
+  // --- 1.5. Multi-Section Data Helpers ---
+  function getActiveCenterlines() {
+    if (state.activeSection === '02') {
+      return window.SECTION02_CENTERLINE ? [window.SECTION02_CENTERLINE] : [];
+    } else if (state.activeSection === '03') {
+      return window.SECTION03_CENTERLINE ? [window.SECTION03_CENTERLINE] : [];
+    } else {
+      // 'all'
+      const list = [];
+      if (window.SECTION02_CENTERLINE) list.push(window.SECTION02_CENTERLINE);
+      if (window.SECTION03_CENTERLINE) list.push(window.SECTION03_CENTERLINE);
+      return list;
+    }
+  }
+
+  function getActiveFeatures() {
+    const s02Feats = (window.SECTION02_ASSETS && window.SECTION02_ASSETS.features) || [];
+    const s03Feats = (window.SECTION03_ASSETS && window.SECTION03_ASSETS.features) || [];
+    if (state.activeSection === '02') {
+      return s02Feats;
+    } else if (state.activeSection === '03') {
+      return s03Feats;
+    } else {
+      // 'all'
+      return [...s02Feats, ...s03Feats];
+    }
+  }
+
+  function syncActiveDataPointers() {
+    const cls = getActiveCenterlines();
+    state.centerlineData = cls.length === 1 ? cls[0] : (cls[0] || null);
+    state.assetsData = {
+      type: 'FeatureCollection',
+      features: getActiveFeatures()
+    };
+  }
+
   // --- 2. Local Storage Persistence & KPI Tracker ---
-  const STORAGE_KEY = 'KMD_DRAINAGE_INSPECTIONS_SEC03_V1';
+  const STORAGE_KEY_S03 = 'KMD_DRAINAGE_INSPECTIONS_SEC03_V1';
+  const STORAGE_KEY_S02 = 'KMD_DRAINAGE_INSPECTIONS_SEC02_V1';
 
   function loadInspectionsFromStorage() {
     try {
-      const raw = localStorage.getItem(STORAGE_KEY);
-      if (raw) {
-        state.inspections = JSON.parse(raw);
-      }
+      state.inspections = {};
+      const rawS03 = localStorage.getItem(STORAGE_KEY_S03);
+      if (rawS03) Object.assign(state.inspections, JSON.parse(rawS03));
+      const rawS02 = localStorage.getItem(STORAGE_KEY_S02);
+      if (rawS02) Object.assign(state.inspections, JSON.parse(rawS02));
     } catch (e) {
       console.warn('LocalStorage error:', e);
     }
@@ -48,15 +88,25 @@
 
   function saveInspectionsToStorage() {
     try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(state.inspections));
+      const s03 = {};
+      const s02 = {};
+      for (const [id, val] of Object.entries(state.inspections)) {
+        if (id.startsWith('s02_')) {
+          s02[id] = val;
+        } else {
+          s03[id] = val;
+        }
+      }
+      localStorage.setItem(STORAGE_KEY_S03, JSON.stringify(s03));
+      localStorage.setItem(STORAGE_KEY_S02, JSON.stringify(s02));
     } catch (e) {
       console.warn('LocalStorage save error:', e);
     }
   }
+  window.saveInspectionsToStorage = saveInspectionsToStorage;
 
   function updateProgressHUD() {
-    if (!state.assetsData || !state.assetsData.features) return;
-    const feats = state.assetsData.features;
+    const feats = getActiveFeatures();
     const total = feats.length;
     let notStarted = 0;
     let ongoing = 0;
@@ -99,78 +149,85 @@
   const R_EARTH = 6371000.0;
 
   function projectGpsToAlignment(gpsLat, gpsLon) {
-    if (!state.centerlineData || !state.centerlineData.dense_points) return null;
-    const pts = state.centerlineData.dense_points;
-    if (pts.length < 2) return null;
+    const centerlines = getActiveCenterlines();
+    if (centerlines.length === 0) return null;
 
-    let bestDistSq = Infinity;
-    let bestSegmentIdx = 0;
+    let globalBest = null;
 
-    // 1. Fast coarse search to find closest vertex
-    for (let i = 0; i < pts.length; i += 2) {
-      const dLat = (gpsLat - pts[i].lat) * 111139.0;
-      const dLon = (gpsLon - pts[i].lon) * 111139.0 * Math.cos((gpsLat * Math.PI) / 180);
-      const dSq = dLat * dLat + dLon * dLon;
-      if (dSq < bestDistSq) {
-        bestDistSq = dSq;
-        bestSegmentIdx = Math.max(0, i - 1);
+    centerlines.forEach(cl => {
+      const pts = cl.dense_points;
+      if (!pts || pts.length < 2) return;
+
+      let bestDistSq = Infinity;
+      let bestSegmentIdx = 0;
+
+      // 1. Fast coarse search to find closest vertex
+      for (let i = 0; i < pts.length; i += 2) {
+        const dLat = (gpsLat - pts[i].lat) * 111139.0;
+        const dLon = (gpsLon - pts[i].lon) * 111139.0 * Math.cos((gpsLat * Math.PI) / 180);
+        const dSq = dLat * dLat + dLon * dLon;
+        if (dSq < bestDistSq) {
+          bestDistSq = dSq;
+          bestSegmentIdx = Math.max(0, i - 1);
+        }
       }
-    }
 
-    // 2. Local fine orthogonal projection on adjacent segments
-    const searchStart = Math.max(0, bestSegmentIdx - 4);
-    const searchEnd = Math.min(pts.length - 2, bestSegmentIdx + 4);
+      // 2. Local fine orthogonal projection on adjacent segments
+      const searchStart = Math.max(0, bestSegmentIdx - 4);
+      const searchEnd = Math.min(pts.length - 2, bestSegmentIdx + 4);
 
-    let finalPk = pts[bestSegmentIdx].pk;
-    let finalOffset = 0;
-    let minPerpDist = Infinity;
-    let finalBearing = pts[bestSegmentIdx].bearing;
+      let finalPk = pts[bestSegmentIdx].pk;
+      let finalOffset = 0;
+      let minPerpDist = Infinity;
+      let finalBearing = pts[bestSegmentIdx].bearing;
 
-    for (let i = searchStart; i <= searchEnd; i++) {
-      const p1 = pts[i];
-      const p2 = pts[i + 1];
+      for (let i = searchStart; i <= searchEnd; i++) {
+        const p1 = pts[i];
+        const p2 = pts[i + 1];
 
-      // Convert to local planar meters relative to p1
-      const cosLat = Math.cos((p1.lat * Math.PI) / 180.0);
-      const vx = (p2.lon - p1.lon) * ((Math.PI * R_EARTH) / 180.0) * cosLat;
-      const vy = (p2.lat - p1.lat) * ((Math.PI * R_EARTH) / 180.0);
+        // Convert to local planar meters relative to p1
+        const cosLat = Math.cos((p1.lat * Math.PI) / 180.0);
+        const vx = (p2.lon - p1.lon) * ((Math.PI * R_EARTH) / 180.0) * cosLat;
+        const vy = (p2.lat - p1.lat) * ((Math.PI * R_EARTH) / 180.0);
 
-      const ux = (gpsLon - p1.lon) * ((Math.PI * R_EARTH) / 180.0) * cosLat;
-      const uy = (gpsLat - p1.lat) * ((Math.PI * R_EARTH) / 180.0);
+        const ux = (gpsLon - p1.lon) * ((Math.PI * R_EARTH) / 180.0) * cosLat;
+        const uy = (gpsLat - p1.lat) * ((Math.PI * R_EARTH) / 180.0);
 
-      const lenSq = vx * vx + vy * vy;
-      if (lenSq === 0) continue;
+        const lenSq = vx * vx + vy * vy;
+        if (lenSq === 0) continue;
 
-      let t = (ux * vx + uy * vy) / lenSq;
-      t = Math.max(0, Math.min(1, t)); // Clamp to segment
+        let t = (ux * vx + uy * vy) / lenSq;
+        t = Math.max(0, Math.min(1, t)); // Clamp to segment
 
-      const projX = t * vx;
-      const projY = t * vy;
+        const projX = t * vx;
+        const projY = t * vy;
 
-      const dx = ux - projX;
-      const dy = uy - projY;
-      const perpDist = Math.sqrt(dx * dx + dy * dy);
+        const dx = ux - projX;
+        const dy = uy - projY;
+        const perpDist = Math.sqrt(dx * dx + dy * dy);
 
-      if (perpDist < minPerpDist) {
-        minPerpDist = perpDist;
-        finalPk = p1.pk + t * (p2.pk - p1.pk);
-        finalBearing = p1.bearing;
+        if (perpDist < minPerpDist) {
+          minPerpDist = perpDist;
+          finalPk = p1.pk + t * (p2.pk - p1.pk);
+          finalBearing = p1.bearing;
 
-        // 2D Cross-product for Left/Right transverse offset:
-        // When facing along the track vector v (in direction of increasing chainage, e.g. PK 84 -> 89):
-        // A point u to the RIGHT (clockwise) has (vy * ux - vx * uy) > 0.
-        // Positive = Right of alignment, Negative = Left of alignment
-        const cross = vy * ux - vx * uy;
-        finalOffset = (cross >= 0 ? 1 : -1) * perpDist;
+          const cross = vy * ux - vx * uy;
+          finalOffset = (cross >= 0 ? 1 : -1) * perpDist;
+        }
       }
-    }
 
-    return {
-      pk: finalPk,
-      offsetM: finalOffset,
-      distM: minPerpDist,
-      bearing: finalBearing
-    };
+      if (!globalBest || minPerpDist < globalBest.distM) {
+        globalBest = {
+          pk: finalPk,
+          offsetM: finalOffset,
+          distM: minPerpDist,
+          bearing: finalBearing,
+          section: cl.metadata ? cl.metadata.section : ''
+        };
+      }
+    });
+
+    return globalBest;
   }
   window.projectGpsToAlignment = projectGpsToAlignment;
 
@@ -276,10 +333,8 @@
     state.mapLayers.ditches = L.layerGroup().addTo(state.map);
     state.mapLayers.structures = L.layerGroup().addTo(state.map);
 
-    // Render data
-    renderCenterline();
-    renderAssets();
-    updateProgressHUD();
+    // Initialize active section data, UI, and fit bounds
+    setSection(state.activeSection, true);
 
     // Map Click Handler (deselect / close drawer if clicking background)
     state.map.on('click', function (e) {
@@ -370,85 +425,100 @@
 
   // --- 5. Render Track Centerline & Station Ticks ---
   function renderCenterline() {
-    if (!state.centerlineData) return;
+    if (!state.mapLayers.centerline) return;
+    state.mapLayers.centerline.clearLayers();
+    state.mapLayers.ticks100m.clearLayers();
+    state.mapLayers.ticks1km.clearLayers();
 
-    const coords = state.centerlineData.geojson.features[0].geometry.coordinates.map(c => [c[1], c[0]]);
+    const centerlines = getActiveCenterlines();
+    if (centerlines.length === 0) return;
 
-    // Outer track casing (Dark Slate)
-    L.polyline(coords, {
-      color: '#0F172A',
-      weight: 7,
-      opacity: 0.95,
-      lineCap: 'round'
-    }).addTo(state.mapLayers.centerline);
+    centerlines.forEach(cl => {
+      if (!cl.geojson || !cl.geojson.features || !cl.geojson.features[0]) return;
+      const coords = cl.geojson.features[0].geometry.coordinates.map(c => [c[1], c[0]]);
 
-    // Mid track rail ballast line (Sky Blue)
-    L.polyline(coords, {
-      color: '#0284C7',
-      weight: 4,
-      opacity: 0.85
-    }).addTo(state.mapLayers.centerline);
+      // Outer track casing (Dark Slate)
+      L.polyline(coords, {
+        color: '#0F172A',
+        weight: 7,
+        opacity: 0.95,
+        lineCap: 'round'
+      }).addTo(state.mapLayers.centerline);
 
-    // Inner railroad sleeper dashed line (Crisp White)
-    L.polyline(coords, {
-      color: '#FFFFFF',
-      weight: 2.5,
-      dashArray: '6, 8',
-      opacity: 1.0
-    }).addTo(state.mapLayers.centerline);
+      // Mid track rail ballast line (Sky Blue)
+      L.polyline(coords, {
+        color: '#0284C7',
+        weight: 4,
+        opacity: 0.85
+      }).addTo(state.mapLayers.centerline);
 
-    // 100m Station Ticks
-    const ticks100 = state.centerlineData.ticks_100m || [];
-    ticks100.forEach(t => {
-      const isMajor = t.is_major;
-      const html = `<div class="chainage-pill ${isMajor ? 'major' : ''}">${t.label}</div>`;
+      // Inner railroad sleeper dashed line (Crisp White)
+      L.polyline(coords, {
+        color: '#FFFFFF',
+        weight: 2.5,
+        dashArray: '6, 8',
+        opacity: 1.0
+      }).addTo(state.mapLayers.centerline);
 
-      const icon = L.divIcon({
-        className: 'chainage-label-icon',
-        html: html,
-        iconSize: [40, 16],
-        iconAnchor: [20, 8]
+      // 100m Station Ticks
+      const ticks100 = cl.ticks_100m || [];
+      ticks100.forEach(t => {
+        const isMajor = t.is_major;
+        const html = `<div class="chainage-pill ${isMajor ? 'major' : ''}">${t.label}</div>`;
+
+        const icon = L.divIcon({
+          className: 'chainage-label-icon',
+          html: html,
+          iconSize: [40, 16],
+          iconAnchor: [20, 8]
+        });
+
+        const marker = L.marker([t.lat, t.lon], { icon: icon, interactive: true });
+        marker.bindTooltip(`Chainage Station: ${t.full_label}`, { direction: 'top' });
+        marker.on('click', () => {
+          state.map.setView([t.lat, t.lon], 18);
+          showToast(`Centered at ${t.full_label}`);
+        });
+
+        if (isMajor) {
+          marker.addTo(state.mapLayers.ticks1km);
+        } else {
+          marker.addTo(state.mapLayers.ticks100m);
+        }
       });
-
-      const marker = L.marker([t.lat, t.lon], { icon: icon, interactive: true });
-      marker.bindTooltip(`Chainage Station: ${t.full_label}`, { direction: 'top' });
-      marker.on('click', () => {
-        state.map.setView([t.lat, t.lon], 18);
-        showToast(`Centered at ${t.full_label}`);
-      });
-
-      if (isMajor) {
-        marker.addTo(state.mapLayers.ticks1km);
-      } else {
-        marker.addTo(state.mapLayers.ticks100m);
-      }
     });
 
     // Dynamic tick display based on zoom level
-    state.map.on('zoomend', function () {
-      const zoom = state.map.getZoom();
-      if (zoom >= 16) {
-        if (!state.map.hasLayer(state.mapLayers.ticks100m)) {
-          state.map.addLayer(state.mapLayers.ticks100m);
-        }
-      } else {
-        if (state.map.hasLayer(state.mapLayers.ticks100m)) {
-          state.map.removeLayer(state.mapLayers.ticks100m);
-        }
+    updateTickVisibility();
+  }
+
+  function updateTickVisibility() {
+    if (!state.map) return;
+    const zoom = state.map.getZoom();
+    if (zoom >= 16) {
+      if (!state.map.hasLayer(state.mapLayers.ticks100m)) {
+        state.map.addLayer(state.mapLayers.ticks100m);
       }
-    });
+    } else {
+      if (state.map.hasLayer(state.mapLayers.ticks100m)) {
+        state.map.removeLayer(state.mapLayers.ticks100m);
+      }
+    }
   }
 
   // --- 6. Render Drainage Assets ---
   function renderAssets() {
-    if (!state.assetsData || !state.assetsData.features) return;
+    if (!state.mapLayers.ditches || !state.mapLayers.structures) return;
 
     state.mapLayers.ditches.clearLayers();
     state.mapLayers.structures.clearLayers();
 
+    const feats = getActiveFeatures();
+    if (feats.length === 0) return;
+
     const isProgressMode = state.viewMode === 'progress';
 
-    state.assetsData.features.forEach(feat => {
+    feats.forEach(feat => {
       if (!isAssetMatchingFilter(feat, state.activeFilter)) return;
 
       const p = feat.properties;
@@ -1110,21 +1180,29 @@
       }
     }
 
-    if (targetPk === null || !state.centerlineData) {
-      alert('Please enter a valid chainage, e.g. "84+400" or "84.4"');
+    const centerlines = getActiveCenterlines();
+    if (targetPk === null || centerlines.length === 0) {
+      alert('Please enter a valid chainage, e.g. "24+500" or "84+400"');
       return;
     }
 
-    const pts = state.centerlineData.dense_points;
-    let closestPt = pts[0];
+    let closestPt = null;
     let minDiff = Infinity;
 
-    for (const pt of pts) {
-      const diff = Math.abs(pt.pk - targetPk);
-      if (diff < minDiff) {
-        minDiff = diff;
-        closestPt = pt;
+    centerlines.forEach(cl => {
+      const pts = cl.dense_points || [];
+      for (const pt of pts) {
+        const diff = Math.abs(pt.pk - targetPk);
+        if (diff < minDiff) {
+          minDiff = diff;
+          closestPt = pt;
+        }
       }
+    });
+
+    if (!closestPt) {
+      alert('Could not locate chainage on active alignment.');
+      return;
     }
 
     state.map.setView([closestPt.lat, closestPt.lon], 17, { animate: true });
@@ -1161,7 +1239,8 @@
       'Last Inspected Date'
     ]);
 
-    state.assetsData.features.forEach(f => {
+    const feats = getActiveFeatures();
+    feats.forEach(f => {
       const p = f.properties;
       const insp = state.inspections[p.id] || {};
       rows.push([
@@ -1197,14 +1276,81 @@
       { wch: 18 }
     ];
 
-    XLSX.utils.book_append_sheet(wb, ws, 'DRAINAGE PROGRESS');
+    const sheetName = state.activeSection === '02' ? 'Section 02' : (state.activeSection === '03' ? 'Section 03' : 'All Sections');
+    XLSX.utils.book_append_sheet(wb, ws, sheetName);
     const today = new Date().toISOString().substring(0, 10);
-    XLSX.writeFile(wb, `KMD_Section03_Drainage_Inspection_Progress_${today}.xlsx`);
-    showToast('Downloaded Excel Progress Report!');
+    const fileSuffix = state.activeSection === '02' ? 'Section02' : (state.activeSection === '03' ? 'Section03' : 'All_Sections');
+    XLSX.writeFile(wb, `KMD_${fileSuffix}_Drainage_Inspection_Progress_${today}.xlsx`);
+    showToast(`Downloaded Excel Progress Report (${feats.length} assets)!`);
   }
+
+  // --- 11.5. Section Selector Controller ---
+  function setSection(sectionId, shouldFitBounds = true) {
+    state.activeSection = sectionId;
+    localStorage.setItem('KMD_ACTIVE_SECTION', sectionId);
+
+    // Update tab buttons UI
+    document.querySelectorAll('.btn-sec-tab').forEach(btn => {
+      if (btn.getAttribute('data-section') === sectionId) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+
+    // Update subtitle & jump placeholder
+    const elSub = document.getElementById('lblSectionSubtitle');
+    const txtJump = document.getElementById('txtJumpPk');
+    if (sectionId === '02') {
+      if (elSub) elSub.textContent = 'Section 02: DWKZ (PK 19+800 — 82+902)';
+      if (txtJump) txtJump.placeholder = 'Jump to PK (e.g. 24+500)';
+    } else if (sectionId === '03') {
+      if (elSub) elSub.textContent = 'Section 03: KZDR (PK 82+902 — 124+521)';
+      if (txtJump) txtJump.placeholder = 'Jump to PK (e.g. 84+400)';
+    } else {
+      if (elSub) elSub.textContent = 'All Sections: Dawanau to Daura (PK 19+800 — 124+521)';
+      if (txtJump) txtJump.placeholder = 'Jump to PK (e.g. 24+500 or 84+400)';
+    }
+
+    syncActiveDataPointers();
+    renderCenterline();
+    renderAssets();
+    updateProgressHUD();
+
+    if (shouldFitBounds && state.map) {
+      fitMapToActiveSection();
+    }
+  }
+  window.setSection = setSection;
+
+  function fitMapToActiveSection() {
+    const cls = getActiveCenterlines();
+    if (cls.length === 0 || !state.map) return;
+
+    let allCoords = [];
+    cls.forEach(cl => {
+      if (cl.geojson && cl.geojson.features && cl.geojson.features[0]) {
+        const coords = cl.geojson.features[0].geometry.coordinates.map(c => [c[1], c[0]]);
+        allCoords = allCoords.concat(coords);
+      }
+    });
+
+    if (allCoords.length > 0) {
+      state.map.fitBounds(L.polyline(allCoords).getBounds(), { padding: [30, 30] });
+    }
+  }
+  window.fitMapToActiveSection = fitMapToActiveSection;
 
   // --- 12. UI Event Listeners ---
   function setupEventListeners() {
+    // Section Selector Tabs (All, Section 02, Section 03)
+    document.querySelectorAll('.btn-sec-tab').forEach(btn => {
+      btn.addEventListener('click', function () {
+        const sec = this.getAttribute('data-section');
+        setSection(sec, true);
+      });
+    });
+
     const btnCompass = document.getElementById('btnCompass');
     if (btnCompass) {
       btnCompass.addEventListener('click', toggleMapBearing);

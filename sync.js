@@ -216,8 +216,18 @@
     });
 
     if (hasLocalChanges) {
-      // Save merged inspections locally
-      localStorage.setItem('KMD_DRAINAGE_INSPECTIONS_SEC03_V1', JSON.stringify(state.inspections));
+      // Save merged inspections locally partitioned by section
+      const s03 = {};
+      const s02 = {};
+      for (const [id, val] of Object.entries(state.inspections)) {
+        if (id.startsWith('s02_')) {
+          s02[id] = val;
+        } else {
+          s03[id] = val;
+        }
+      }
+      localStorage.setItem('KMD_DRAINAGE_INSPECTIONS_SEC03_V1', JSON.stringify(s03));
+      localStorage.setItem('KMD_DRAINAGE_INSPECTIONS_SEC02_V1', JSON.stringify(s02));
       if (typeof window.onExternalInspectionsUpdated === 'function') {
         window.onExternalInspectionsUpdated();
       }

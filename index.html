@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
   
   <!-- Custom App Styles -->
-  <link rel="stylesheet" href="styles.css?v=20260907_5">
+  <link rel="stylesheet" href="styles.css?v=20260909_1">
 </head>
 <body>
 
@@ -38,7 +38,7 @@
         </div>
         <div class="brand-titles">
           <h1>KMD DRAINAGE INSPECTOR</h1>
-          <p>Section 03: KZDR (PK 82+902 — 124+521)</p>
+          <p id="lblSectionSubtitle">All Sections: Dawanau to Daura (PK 19+800 — 124+521)</p>
         </div>
       </div>
       <div class="header-actions">
@@ -83,6 +83,11 @@
     </div>
 
     <div class="header-row-tools">
+      <div class="section-selector" id="sectionSelector">
+        <button type="button" class="btn-sec-tab active" data-section="all" title="Show Both Sections (PK 19+800 to 124+521)">All (02+03)</button>
+        <button type="button" class="btn-sec-tab" data-section="02" title="Section 02: Dawanau to Kazaure (PK 19+800 to 82+902)">Section 02</button>
+        <button type="button" class="btn-sec-tab" data-section="03" title="Section 03: Kazaure to Daura (PK 82+902 to 124+521)">Section 03</button>
+      </div>
       <div class="jump-box">
         <input type="text" id="txtJumpPk" placeholder="Jump to PK (e.g. 84+400)" autocomplete="off">
         <button id="btnJump" class="btn-jump">Go</button>
@@ -316,14 +321,15 @@
   <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
 
   <!-- 3. Pre-compiled Alignment & Drainage Assets Data (Works offline / file://) -->
-  <script src="data/bundle.js?v=20260907_6"></script>
+  <script src="data/bundle.js?v=20260909_1"></script>
+  <script src="data/section02_bundle.js?v=20260909_1"></script>
 
   <!-- 3.5. Cloud Database Config & Offline-First Sync Engine -->
-  <script src="config.js?v=20260907_6"></script>
-  <script src="sync.js?v=20260907_6"></script>
+  <script src="config.js?v=20260909_1"></script>
+  <script src="sync.js?v=20260909_1"></script>
 
   <!-- 4. Core Application Logic -->
-  <script src="app.js?v=20260907_6"></script>
+  <script src="app.js?v=20260909_1"></script>
 
 </body>
 </html>
