@@ -110,6 +110,10 @@ for idx, feat in enumerate(features, start=1):
     # Sign for side offset: Left = -1, Right = +1, Center = 0
     sign = -1.0 if side == "Left" else (1.0 if side == "Right" else 0.0)
     
+    # Normalize short_code to match Section 03 conventions exactly
+    if short_code in ["Type 8 Ditch", "Type 9 Ditch", "Type 7 Ditch", "Type 4 Ditch", "Type 12 Ditch"]:
+        short_code = short_code.replace(" Ditch", "")
+
     # Determine color, icon, and offset_m
     if cat == "Section Boundary":
         color = "#64748B"
@@ -140,7 +144,7 @@ for idx, feat in enumerate(features, start=1):
         icon = "ditch"
     elif cat == "Riprap Protection":
         color = "#78716C"
-        icon = "ditch"
+        icon = "protection"
         offset_m = 10.0 * (sign if sign != 0 else 1.0)
     elif cat == "Berm Ditch":
         color = "#0D9488"
