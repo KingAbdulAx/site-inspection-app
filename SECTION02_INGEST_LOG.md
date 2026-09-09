@@ -213,32 +213,64 @@ Per Federal Ministry of Transport / Employer Letter No. `T.0063/S.50/C.9/Vol.1/4
   3. `DW-08002-02` (PK 48+100 – PK 49+600): Dambatta Station track drainage collector lines (Discharge Pipes 1DB–4DB, LEVEL A)
   4. `DW-08003-01` (PK 79+200 – PK 80+700): Kazaure Yard collector lines and discharge pipes (1YKZ–3YKZ, LEVEL A)
 
-### 6. Longitudinal Ditches & Callouts from 47 Plan Sheets
+### 6. Longitudinal Ditches, Callouts & Type 9 Extraction from 47 Plan Sheets
 - Extracted 1,323 raw marker runs, stitched across adjacent overlapping sheet boundaries into **929 continuous Toe Ditch features** (96,787.9 m total).
-- Extracted **69 Berm Ditch features** (Type 8 Half-Round, 3,450.0 m) from plan callouts.
+- **Type 8 vs Type 9 Distinction & Resolution:**
+  - Investigation into user note on Type 9 revealed that precast half-round ditches on embankment shoulders were previously lumped into Berm Ditch (Type 8).
+  - Cross-referencing Design Report Vol 6 §3.5.1 and standard details `MDDT DW-10020` & `DW-10003`:
+    - **Type 8 (Berm Ditches):** Half-round lined bench ditches on intermediate cut/fill berms (embankment/cut height > 8.0m). Exactly **10 features** (500.0 m) identified by text callout `HALF ROUND LINED BENCH DITCH`.
+    - **Type 9 (Platform Shoulder Ditches):** Half-round lined ditches along the embankment platform shoulder (fills > 4.0m) connecting directly to slope chutes. Exactly **59 features** (2,950.0 m) identified by text callout `HALF ROUND LINED DITCH`.
+    - **Type 9 (Precast Water Descents / Chutes):** Stepped cascade structures down embankment slopes discharging shoulder ditch flow into toe dissipators per `MDDT DW-10003-04-A`. Exactly **326 discrete chute structures** identified by CAD vector stepped block signature (`RGB (0.0, 0.647, 0.867)` / `#00A5DD`) clustered within 12m lateral windows.
 - Extracted **251 Riprap Protection features** (Embankment riprap armor and wingwall scour protection, 7,028.0 m) from plan callouts.
 
-### 7. Phase 3 Feature Inventory Summary
+### 7. Phase 3 Feature Inventory Summary (Refined with Type 9)
 | Category | Feature Count | Total Length (m) | Typology & Standard Details | Primary Source | Confidence Grade |
 |:---|:---:|:---:|:---|:---|:---|
 | **Toe Ditch** | 929 | 96,787.9 | Type 7 (Concrete Triangular), Type 4 (Unlined Triangular), Type 12 (Trapezoidal Lined) — MDDT DW-10001 | Plan Sheets `DW-03002`..`03047` | PROBABLE (100% Vector Derived) |
+| **Water Descent** | 326 | 0.0 | Precast Water Descent (Type 9 Chute) — MDDT DW-10003 | Plan Sheets CAD Stepped Vector Blocks | PROBABLE |
 | **Riprap Protection** | 251 | 7,028.0 | Embankment Riprap Armor & Scour Protection ($D_{50}=200\text{ mm}$) — MDDT DW-10004 | Plan Sheets `DW-03002`..`03047` | PROBABLE |
 | **Cross Drainage** | 119 | 0.0 | Box Culverts (67) & Pipe Culverts (52) | Culvert Drawings `DW-04002`..`04123` & Report Appendix II | CONFIRMED (110) / PROBABLE (9) |
-| **Berm Ditch** | 69 | 3,450.0 | Half-Round Lined Bench Ditch (Type 8) — MDDT DW-10020 | Plan Sheets `DW-03002`..`03047` | PROBABLE |
+| **Shoulder / Cascade** | 59 | 2,950.0 | Half-Round Platform Shoulder Ditch (Type 9) — MDDT DW-10020 / DW-10003 | Plan Sheets `DW-03002`..`03047` | PROBABLE |
 | **Diversion Channel** | 10 | 5,129.6 | Concrete Trapezoidal Channel (Type B, Type C) — MDDT DW-10002 | Design Report Table 3.28 & Plan Sheets | CONFIRMED (9) / NEEDS_VERIFICATION (1) |
+| **Berm Ditch** | 10 | 500.0 | Half-Round Lined Bench Ditch (Type 8) — MDDT DW-10020 | Plan Sheets `DW-03002`..`03047` | PROBABLE |
 | **Track Drainage** | 4 | 5,800.0 | Sub-ballast Collector Network (Perforated Pipes Ø400–Ø1000 & Manholes) — MDDT DW-10022 | Drawings `DW-08001`..`08004` & Report Table 3.29 | CONFIRMED |
 | **Section Boundary** | 2 | 0.0 | Section 02 Nominal Boundaries (PK 19+800 & PK 82+902.439) | `DW-03002` & `DW-03047` | CONFIRMED |
-| **TOTAL** | **1,384** | **118,195.5** | | | **125 CONFIRMED, 1258 PROBABLE, 1 NV** |
+| **TOTAL** | **1,710** | **118,195.5** | | | **125 CONFIRMED, 1584 PROBABLE, 1 NV** |
 
 ### 8. Vetting Status Distribution Across Features
 | Consultant Vetting Status | Feature Count | Percentage | Operational Guidance |
 |:---|:---:|:---:|:---|
-| **LEVEL B** (Proceed Subject to Amendments) | 1,032 | 74.6% | Approved for construction; amend minor drafting notes in as-builts. |
-| **LEVEL C** (Subject to Amendment as Noted) | 178 | 12.9% | Requires technical clarification/revision before execution. |
-| **LEVEL A** (Approved with No Comments) | 124 | 9.0% | Fully vetted and unconditionally approved for execution. |
-| **ON-HOLD** (Freight Yard Relocation Package) | 50 | 3.6% | Frozen due to Federal Ministry of Transport Dawanau relocation directive. |
-| **TOTAL** | **1,384** | **100.0%** | |
+| **LEVEL B** (Proceed Subject to Amendments) | 1,070 | 62.6% | Approved for construction; amend minor drafting notes in as-builts. |
+| **LEVEL C** (Subject to Amendment as Noted) | 439 | 25.7% | Requires technical clarification/revision before execution. |
+| **LEVEL A** (Approved with No Comments) | 124 | 7.3% | Fully vetted and unconditionally approved for execution. |
+| **ON-HOLD** (Freight Yard Relocation Package) | 77 | 4.5% | Frozen due to Federal Ministry of Transport Dawanau relocation directive. |
+| **TOTAL** | **1,710** | **100.0%** | |
 
 ### 9. Phase 3 Data Artifact
-- Generated intermediate feature dataset: `data/section02_features.json` (1,063,673 bytes, 1,384 features).
+- Generated intermediate feature dataset: `data/section02_features.json` (1,340,058 bytes, 1,710 features).
+
+---
+
+## Phase 4: Full App Asset Compilation (`section02_assets.json`) — COMPLETED
+
+### 1. GeoJSON Asset Compilation & Geodesic Transformation
+- Script: `scripts/compile_section02_assets_geojson.py`.
+- Transformed all 1,710 features into standard GeoJSON Features mapped along the Section 02 spline (`data/section02_centerline.json`):
+  - **Namespace Isolation:** All asset IDs assigned strictly in the range `s02_asset_001` to `s02_asset_1710`. Zero overlap with Section 03 IDs (`asset_001`..`asset_842`).
+  - **Cross Drainage (119 culverts):** Generated as transverse `LineString` elements perpendicular to the railway centerline (spanning -15.0m to +15.0m from track center).
+  - **Water Descents (326 chutes):** Generated as discrete `Point` elements offset +6.0m (Right) or -6.0m (Left) along the embankment slope face.
+  - **Linear Ditches & Channels (1,263 linear features):** Sampled along geodesic offsets at 25m intervals.
+  - **Section Boundaries (2 points):** Generated as track center `Point` markers at PK 19+800 and PK 82+902.439.
+
+### 2. Schema Integrity & Validation Results
+- Script: `scripts/validate_section02_assets.py`.
+- **Validation Audit:**
+  - Section 02 assets compiled: **1,710**
+  - Section 03 assets verified: **842** (unmodified, 100% byte integrity preserved)
+  - Namespace compliance: **1,710 / 1,710** conform to `^s02_asset_\d+$`
+  - Collisions with Section 03: **0**
+  - Missing mandatory properties: **0**
+  - Coordinates out-of-bounds: **0** (all coordinates reside within corridor bounds $8.3^\circ\text{E} \le \text{Lon} \le 8.6^\circ\text{E}$, $12.0^\circ\text{N} \le \text{Lat} \le 12.8^\circ\text{N}$)
+  - Initial status: `Not Started` for all 1,710 assets
+- **Asset Data Artifact:** `data/section02_assets.json` (2,558,753 bytes, 1,710 assets).
 
