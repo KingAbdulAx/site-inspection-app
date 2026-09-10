@@ -31,12 +31,14 @@
       // Category aggregations: { total: 0, completed: 0, totalM: 0, completedM: 0 }
       const cats = {
         'Toe Ditch': { name: 'Toe Ditches (Types 4, 7, 12)', total: 0, completed: 0, totalM: 0, completedM: 0 },
-        'Water Descent': { name: 'Water Descents (Type 9 Chutes)', total: 0, completed: 0, totalM: 0, completedM: 0 },
+        'Water Descent': { name: 'Water Descents (Cascades)', total: 0, completed: 0, totalM: 0, completedM: 0 },
+        'Shoulder Ditch': { name: 'Platform Shoulder Ditches (Type 9)', total: 0, completed: 0, totalM: 0, completedM: 0 },
         'Shoulder / Cascade': { name: 'Platform Shoulder Ditches (Type 9)', total: 0, completed: 0, totalM: 0, completedM: 0 },
         'Berm Ditch': { name: 'Berm Ditches (Type 8)', total: 0, completed: 0, totalM: 0, completedM: 0 },
         'Cross Drainage': { name: 'Cross Drainage Culverts (Box & Pipe)', total: 0, completed: 0, totalM: 0, completedM: 0 },
         'Riprap Protection': { name: 'Riprap Armor & Scour Protection', total: 0, completed: 0, totalM: 0, completedM: 0 },
-        'Diversion Channel': { name: 'Diversion Channels (Trapezoidal)', total: 0, completed: 0, totalM: 0, completedM: 0 },
+        'Diversion Channel': { name: 'Open & Diversion Channels (Types A–C)', total: 0, completed: 0, totalM: 0, completedM: 0 },
+        'Energy Dissipator': { name: 'Energy Dissipators (Basins)', total: 0, completed: 0, totalM: 0, completedM: 0 },
         'Track Drainage': { name: 'Track & Yard Collector Networks', total: 0, completed: 0, totalM: 0, completedM: 0 }
       };
 

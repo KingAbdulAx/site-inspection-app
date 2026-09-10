@@ -113,15 +113,18 @@
           <button type="button" id="btnSldZoomIn" class="sld-ctrl-btn" title="Zoom In (+)">+</button>
           <button type="button" id="btnSldZoomOut" class="sld-ctrl-btn" title="Zoom Out (−)">−</button>
           <button type="button" id="btnSldFit" class="sld-ctrl-btn" title="Fit Corridor Bounds">Fit</button>
+          <button type="button" id="btnSldDw10003" class="sld-ctrl-btn" title="Drawing DW-10003 Detail: Ditch & Water Descent Connection Rules">📐 DW-10003</button>
           <div class="sld-layers-menu-wrap">
             <button type="button" id="btnSldLayers" class="sld-ctrl-btn" title="Layer Toggles">Layers ▾</button>
             <div class="sld-layers-dropdown" id="sldLayersDropdown" style="display:none;">
               <label><input type="checkbox" id="chkSldTrack" checked> Track Rails & Sleepers</label>
               <label><input type="checkbox" id="chkSldTicks" checked> Station Ticks (100m/1km)</label>
-              <label><input type="checkbox" id="chkSldCulverts" checked> Cross Culverts</label>
-              <label><input type="checkbox" id="chkSldDitches" checked> Longitudinal Ditches</label>
-              <label><input type="checkbox" id="chkSldChutes" checked> Water Descents (Type 9)</label>
-              <label><input type="checkbox" id="chkSldRiprap" checked> Riprap Armor</label>
+              <label><input type="checkbox" id="chkSldCulverts" checked> Cross Culverts & Bridges</label>
+              <label><input type="checkbox" id="chkSldDitches" checked> Longitudinal Ditches (Types 1–16)</label>
+              <label><input type="checkbox" id="chkSldChannels" checked> Open Channels (Types A–C & Diversion)</label>
+              <label><input type="checkbox" id="chkSldChutes" checked> Water Descents (Cascades)</label>
+              <label><input type="checkbox" id="chkSldDissipators" checked> Energy Dissipators</label>
+              <label><input type="checkbox" id="chkSldRiprap" checked> Riprap Scour Protection</label>
               <label><input type="checkbox" id="chkSldLabels" checked> Feature Labels</label>
             </div>
           </div>
@@ -299,9 +302,10 @@
           <label class="sheet-section-title">Filter Features</label>
           <select id="selectFilter" class="filter-select-sheet">
             <option value="all">All Features (2,552 Assets)</option>
-            <option value="ditches">Longitudinal Ditches & Channels</option>
+            <option value="ditches">Longitudinal Ditches (Types 1–16)</option>
+            <option value="channels">Open Channels (Types A–C & Diversions)</option>
             <option value="structures">Cross Drainage Culverts & Bridges</option>
-            <option value="slope_protection">Riprap Armor & Type 9 Chutes</option>
+            <option value="slope_protection">Riprap Armor & Water Descents</option>
             <option disabled>──────────────</option>
             <option value="status_ongoing">Status: In Progress</option>
             <option value="status_completed">Status: Completed & Approved</option>
@@ -421,6 +425,145 @@
         <button class="btn-primary" id="btnSaveCloudSettings">Save Settings</button>
         <button class="btn-secondary" id="btnModalSyncNow">Sync Now</button>
         <button class="btn-secondary" id="btnTestCloudConn">Test Connection</button>
+      </div>
+  </div>
+
+  <!-- DW-10003 Standard Detail & Hydraulic Connection Modal -->
+  <div class="modal-overlay" id="dw10003Modal" style="display:none;">
+    <div class="modal-content modal-dw10003">
+      <div class="modal-header">
+        <div class="dw-modal-title-block">
+          <span class="dw-badge-approved">Level A Approved · TC 677/25</span>
+          <h3 class="modal-title">Standard Detail: Ditch & Water Descent Connections</h3>
+          <p class="dw-subtitle">Drawing Ref: <code>T2019-323-DD-MD-MDDT-2200-DW-10003-04-A</code></p>
+        </div>
+        <button type="button" class="btn-modal-close" id="btnCloseDw10003Modal">&times;</button>
+      </div>
+      <div class="modal-body dw-modal-body">
+        <!-- Visual SVG Engineering Cross-Section Diagram -->
+        <div class="dw-schematic-wrap">
+          <div class="dw-schematic-header">
+            <span>📐 Full Corridor Cross-Section (DW-10003): Crest Ditch (T11) ── Cut Ditch (T1) ── Track CL ── Shoulder (T9) → Water Descent → Bench (T8) → Dissipator → Toe (T7/4) + Riprap ── Outer Channel (Type B/C)</span>
+          </div>
+          <svg viewBox="0 0 920 270" class="dw-svg-diagram" width="100%" height="auto">
+            <!-- Background sky / subgrade -->
+            <rect x="0" y="0" width="920" height="270" fill="#0F172A" rx="6"></rect>
+            
+            <!-- Ground Profile Line: Cutting Slope -> Formation -> Embankment Slope 1 -> Berm -> Slope 2 -> Toe -> Outer Ground -->
+            <path d="M 15 35 L 75 35 L 150 90 L 290 90 L 420 155 L 495 155 L 620 220 L 750 220 L 905 220" fill="none" stroke="#475569" stroke-width="2.5"></path>
+            
+            <!-- 1. LEFT CUTTING CREST: Type 11 Triangular Concrete Lined Crest Ditch -->
+            <path d="M 45 32 L 60 48 L 75 32 Z" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5"></path>
+            <text x="60" y="24" fill="#38BDF8" font-size="9" font-weight="700" text-anchor="middle">TYPE 11 (Crest)</text>
+            <text x="60" y="60" fill="#64748B" font-size="8" text-anchor="middle">Cut Top Ditch</text>
+
+            <!-- 2. CUTTING FORMATION SHOULDER: Type 1 Trapezoidal Cutting Side Ditch -->
+            <path d="M 140 85 L 150 100 L 165 100 L 175 85 Z" fill="#0284C7" stroke="#38BDF8" stroke-width="1.5"></path>
+            <text x="157" y="76" fill="#38BDF8" font-size="9" font-weight="700" text-anchor="middle">TYPE 1 (Cut Ditch)</text>
+            <text x="157" y="112" fill="#64748B" font-size="8" text-anchor="middle">Formation Side</text>
+
+            <!-- 3. RAILWAY TRACK BED & RAILS (FORMATION LEVEL) -->
+            <rect x="195" y="78" width="80" height="12" fill="#334155" rx="2"></rect>
+            <line x1="215" y1="74" x2="215" y2="78" stroke="#94A3B8" stroke-width="3"></line>
+            <line x1="255" y1="74" x2="255" y2="78" stroke="#94A3B8" stroke-width="3"></line>
+            <text x="235" y="66" fill="#94A3B8" font-size="9.5" font-weight="700" text-anchor="middle">TRACK CL</text>
+            
+            <!-- 4. RIGHT EMBANKMENT SHOULDER: Type 9 Platform Edge Half-Round Ditch -->
+            <path d="M 285 84 Q 295 98 305 84 Z" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5"></path>
+            <circle cx="295" cy="88" r="3" fill="#FFFFFF"></circle>
+            <text x="295" y="74" fill="#38BDF8" font-size="9.5" font-weight="700" text-anchor="middle">TYPE 9 (Shoulder)</text>
+            <text x="295" y="110" fill="#64748B" font-size="8" text-anchor="middle">Precast D=0.30m</text>
+            
+            <!-- Flared Inlet Collar Hopper (DW-10003 Section A-A) -->
+            <path d="M 300 90 L 310 90 L 320 100 L 310 104 Z" fill="#F59E0B" stroke="#D97706" stroke-width="1"></path>
+            
+            <!-- 5. UPPER STEPPED WATER DESCENT (Slope 1:1.5) -->
+            <line x1="310" y1="95" x2="420" y2="155" stroke="#0284C7" stroke-width="3.5" stroke-linecap="round"></line>
+            <!-- Steps / rungs -->
+            <line x1="335" y1="102" x2="341" y2="111" stroke="#FFFFFF" stroke-width="1.8"></line>
+            <line x1="365" y1="118" x2="371" y2="127" stroke="#FFFFFF" stroke-width="1.8"></line>
+            <line x1="395" y1="134" x2="401" y2="143" stroke="#FFFFFF" stroke-width="1.8"></line>
+            <text x="375" y="106" fill="#0284C7" font-size="9" font-weight="700" transform="rotate(26 375 106)">WATER DESCENT</text>
+            
+            <!-- 6. INTERMEDIATE BERM: Type 8 Precast Half-Round Bench Ditch -->
+            <rect x="420" y="155" width="75" height="3.5" fill="#334155"></rect>
+            <path d="M 445 149 Q 455 163 465 149 Z" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5"></path>
+            <circle cx="455" cy="153" r="3" fill="#FFFFFF"></circle>
+            <text x="455" y="141" fill="#38BDF8" font-size="9" font-weight="700" text-anchor="middle">TYPE 8 (Bench)</text>
+            <text x="455" y="172" fill="#64748B" font-size="8" text-anchor="middle">Berm Ditch</text>
+            
+            <!-- 7. LOWER STEPPED WATER DESCENT (Slope 1:1.5) -->
+            <line x1="470" y1="155" x2="615" y2="220" stroke="#0284C7" stroke-width="3.5" stroke-linecap="round"></line>
+            <line x1="500" y1="164" x2="506" y2="173" stroke="#FFFFFF" stroke-width="1.8"></line>
+            <line x1="540" y1="182" x2="546" y2="191" stroke="#FFFFFF" stroke-width="1.8"></line>
+            <line x1="580" y1="200" x2="586" y2="209" stroke="#FFFFFF" stroke-width="1.8"></line>
+            
+            <!-- 8. POINT ENERGY DISSIPATOR BASIN (DW-10003: 1.2m x 1.8m Baffle Basin) -->
+            <rect x="605" y="206" width="34" height="17" fill="#D97706" stroke="#FFFFFF" stroke-width="1.5" rx="1"></rect>
+            <line x1="638" y1="206" x2="638" y2="223" stroke="#FFFFFF" stroke-width="2.5"></line>
+            <circle cx="614" cy="214" r="1.5" fill="#FFFFFF"></circle>
+            <circle cx="622" cy="214" r="1.5" fill="#FFFFFF"></circle>
+            <circle cx="630" cy="214" r="1.5" fill="#FFFFFF"></circle>
+            <text x="622" y="198" fill="#F59E0B" font-size="9" font-weight="700" text-anchor="middle">DISSIPATOR</text>
+            <text x="622" y="235" fill="#94A3B8" font-size="7.5" text-anchor="middle">1.2m x 1.8m Basin</text>
+            
+            <!-- 9. TOE LONGITUDINAL DITCH (Type 7 Concrete / Type 4 Earth) -->
+            <path d="M 650 214 L 665 228 L 680 214 Z" fill="#10B981" stroke="#059669" stroke-width="1.5"></path>
+            <text x="665" y="204" fill="#10B981" font-size="9" font-weight="700" text-anchor="middle">DITCH TYPE 7 / 4</text>
+            <text x="665" y="238" fill="#64748B" font-size="8" text-anchor="middle">Toe Ditch</text>
+
+            <!-- 10. CONTINUOUS EMBANKMENT RIPRAP SCOUR ARMOR (Along Toe) -->
+            <path d="M 688 221 L 738 221" stroke="#64748B" stroke-width="5" stroke-dasharray="4,2"></path>
+            <circle cx="698" cy="221" r="1.5" fill="#94A3B8"></circle>
+            <circle cx="712" cy="221" r="1.5" fill="#94A3B8"></circle>
+            <circle cx="728" cy="221" r="1.5" fill="#94A3B8"></circle>
+            <text x="713" y="208" fill="#94A3B8" font-size="8.5" font-weight="700" text-anchor="middle">RIPRAP ARMOR</text>
+            <text x="713" y="238" fill="#64748B" font-size="8" text-anchor="middle">Longitudinal Stretch</text>
+            
+            <!-- 11. OUTERMOST OPEN CHANNEL (Type B Concrete / Type C / Diversion) -->
+            <path d="M 770 206 L 788 224 L 830 224 L 848 206" fill="none" stroke="#06B6D4" stroke-width="2.5"></path>
+            <text x="809" y="198" fill="#06B6D4" font-size="9.5" font-weight="700" text-anchor="middle">OPEN CHANNEL (Type B)</text>
+            <text x="809" y="238" fill="#64748B" font-size="8" text-anchor="middle">Outermost Corridor (Outer Lane)</text>
+          </svg>
+        </div>
+
+        <!-- Technical Specification Directives Matrix -->
+        <div class="dw-specs-grid">
+          <div class="dw-spec-card">
+            <h4>1. Water Descents</h4>
+            <p>Water descents are <strong>transverse slope cascades</strong> (DW-10003), not an independent ditch type. They can <strong>only connect to half-round ditches</strong> (Type 9 at the platform shoulder, Type 8 on intermediate benches) to convey runoff safely down slopes.</p>
+          </div>
+          <div class="dw-spec-card">
+            <h4>2. Transverse Hierarchy</h4>
+            <p><strong>Crest:</strong> Type 11 / 5 (top of cut slope).<br>
+               <strong>Formation:</strong> Type 1 (cut) / Type 9 (shoulder fill).<br>
+               <strong>Berm:</strong> Type 8 Bench ditch (fills &gt; 8m).<br>
+               <strong>Toe:</strong> Dissipator + Type 7/4 Ditch + Riprap.<br>
+               <strong>Outermost:</strong> Channels A–C & Diversions.</p>
+          </div>
+          <div class="dw-spec-card">
+            <h4>3. Energy Dissipator Basins</h4>
+            <p>Standard fixed point basins (1.2m &times; 1.8m &times; 0.4m drop per DW-10002/DW-10003) positioned strictly as point structures at ditch/channel outfalls and at the base of water descents entering toe ditches.</p>
+          </div>
+          <div class="dw-spec-card">
+            <h4>4. Embankment Riprap Armor</h4>
+            <p>Continuous longitudinal stone armor ($D_{50}=100\text{--}200\text{mm}$) placed along erodible toes/slopes over a span (DW-10004); never represented as cross-drainage structures.</p>
+          </div>
+        </div>
+
+        <!-- Batch Verification Spreadsheet Download Link -->
+        <div class="dw-audit-callout">
+          <div class="dw-audit-info">
+            <strong>📋 Batch Verification & Drawing Audit Spreadsheet Ready</strong>
+            <p>Download the complete multi-tab audit workbook partitioned by drawing sheet to verify feature extraction against CAD plans.</p>
+          </div>
+          <a href="data/KMD_Drainage_Extraction_Batch_Verification_Workbook.xlsx" download class="btn-download-workbook">
+            ⬇️ Download Audit Workbook (.xlsx)
+          </a>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-secondary" id="btnDismissDw10003">Close Reference</button>
       </div>
     </div>
   </div>

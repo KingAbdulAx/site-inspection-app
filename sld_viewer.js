@@ -52,20 +52,26 @@
       this.maxScale = 3.5;  // 100m = 350px (detailed structure view)
 
       // Lateral Lane Offsets in Pixels from Track Centerline
+      // Physically ordered per CAD drawings & DW-10003 from centerline outward:
       this.laneOffsets = {
-        shoulder: 28,
-        toe: 60,
-        berm: 95
+        shoulder: 28,  // Type 9 half-round platform edge, Type 1 cutting side ditch, Type 6 sub-ballast collector, Type 2, 3, 10, 15
+        bench: 60,     // Type 8 half-round intermediate bench/berm ditch
+        toe: 94,       // Type 7 concrete toe ditch, Type 4 unlined toe ditch, Type 12 trapezoidal toe ditch, Riprap armor
+        crest: 126,    // Type 5 unlined crest ditch, Type 11 lined crest ditch, cut crest channels
+        channel: 160   // Open channels (Type A earth channel, Type B concrete channel, Type C, diversion channels)
       };
 
       // Layer Visibility Flags
       this.layers = {
         track: true,
         ticks: true,
-        culverts: true,
-        ditches: true,
-        chutes: true,
-        riprap: true,
+        culverts: true,       // True cross-drainage structures crossing the track (Box & Pipe Culverts, Underpasses, Bridges)
+        ditches: true,        // Longitudinal side, bench, toe, and crest ditches
+        channels: true,       // Open Channels (Types A, B, C, Diversion channels on outermost lane) - SEPARATE LAYER!
+        waterDescents: true,  // Water Descents / Cascades down slope
+        chutes: true,         // Backward compatible alias for waterDescents
+        dissipators: true,    // Energy Dissipators (point structures at ditch/channel/descent terminus)
+        riprap: true,         // Riprap Armor & Scour Protection (longitudinal toe stretches)
         labels: true
       };
 
@@ -257,6 +263,56 @@
       this.render();
     }
 
+    // Determine lateral lane offset for a feature based on drawing layout & DW-10003
+    getFeatureLane(p) {
+      const cat = (p.category || '').toLowerCase();
+      const typ = (p.typology || '').toLowerCase();
+      const code = (p.typology_code || p.short_code || '').toLowerCase();
+
+      // 1. Channel (Outermost extent)
+      if (cat === 'diversion channel' || cat === 'open channel' || typ.includes('channel') || code.includes('chan') || typ.includes('zone iii') || typ.includes('zone i') || typ.includes('rectangular channel')) {
+        return this.laneOffsets.channel;
+      }
+      // 2. Crest Ditch (Top of cutting slope)
+      if (cat === 'crest ditch' || cat === 'crest channel' || typ.includes('crest') || code.includes('type 11') || code.includes('type 5')) {
+        return this.laneOffsets.crest;
+      }
+      // 3. Bench / Berm Ditch (Intermediate slope bench)
+      if (cat === 'berm ditch' || typ.includes('bench') || typ.includes('berm') || code.includes('type 8')) {
+        return this.laneOffsets.bench;
+      }
+      // 4. Toe / Foot of Slope
+      if (cat === 'toe ditch' || typ.includes('foot of slope') || typ.includes('toe') || code.includes('type 7') || code.includes('type 4') || code.includes('type 12') || code === 'riprap' || cat === 'riprap protection') {
+        return this.laneOffsets.toe;
+      }
+      // 5. Shoulder / Platform edge (Closest to rail)
+      return this.laneOffsets.shoulder;
+    }
+
+    // Classify feature into true engineering category
+    classifyFeature(p) {
+      const cat = (p.category || '').toLowerCase();
+      const typ = (p.typology || '').toLowerCase();
+      const code = (p.typology_code || p.short_code || '').toLowerCase();
+
+      if (cat === 'riprap protection' || typ.includes('riprap') || code === 'riprap' || typ.includes('scour protection')) {
+        return 'riprap';
+      }
+      if (cat === 'water descent' || typ.includes('water descent') || typ.includes('chute') || code === 'desc' || code === 'descent' || code.includes('descent') || code.includes('chute')) {
+        return 'waterDescent';
+      }
+      if (cat === 'energy dissipator' || typ.includes('dissipator') || typ.includes('energy sink') || code.includes('dissipator') || code === 'bs1' || code === 'bs2') {
+        return 'dissipator';
+      }
+      if (cat === 'diversion channel' || cat === 'open channel' || typ.includes('channel') || code.startsWith('chan') || code.includes('chan') || code === 'rect chan' || typ.includes('zone i') || typ.includes('zone iii')) {
+        return 'channel';
+      }
+      if (cat === 'cross drainage' || typ.includes('box culvert') || typ.includes('pipe culvert') || typ.includes('underpass') || typ.includes('overbridge') || typ.includes('bridge') || code.includes('culv') || code.includes('box') || code.includes('pipe') || p.is_point) {
+        return 'cross';
+      }
+      return 'ditch';
+    }
+
     // --- COORDINATE PROJECTION: Linear PK & Lateral Offset -> Screen (X, Y) ---
     pkToScreen(pk, lateralOffsetPx = 0) {
       const isHoriz = this.orientation === 'horizontal';
@@ -317,9 +373,13 @@
       const viewMode = (window.appState && window.appState.viewMode) || 'typology';
       const activeFilter = (window.appState && window.appState.activeFilter) || 'all';
 
-      // Separate linear and point structures
-      const linearFeatures = [];
-      const pointFeatures = [];
+      // Segregate features by engineering classification
+      const riprapFeatures = [];
+      const channelFeatures = [];
+      const ditchFeatures = [];
+      const waterDescentFeatures = [];
+      const dissipatorFeatures = [];
+      const crossFeatures = [];
 
       for (let i = 0; i < features.length; i++) {
         const f = features[i];
@@ -333,47 +393,54 @@
         // Filter evaluation
         if (!this._matchesFilter(p, inspections[p.id], activeFilter)) continue;
 
-        if (p.is_point) {
-          pointFeatures.push(f);
-        } else {
-          linearFeatures.push(f);
-        }
+        const kind = this.classifyFeature(p);
+        if (kind === 'riprap') riprapFeatures.push(f);
+        else if (kind === 'channel') channelFeatures.push(f);
+        else if (kind === 'waterDescent') waterDescentFeatures.push(f);
+        else if (kind === 'dissipator') dissipatorFeatures.push(f);
+        else if (kind === 'cross') crossFeatures.push(f);
+        else ditchFeatures.push(f);
       }
 
-      // Render Riprap first (background layer)
+      // 1. Render Riprap Scour Protection along embankment toe
       if (this.layers.riprap) {
-        for (let i = 0; i < linearFeatures.length; i++) {
-          const p = linearFeatures[i].properties;
-          if (p.typology_code === 'RIPRAP') {
-            this._renderLinearFeature(ctx, linearFeatures[i], inspections[p.id], viewMode);
-          }
+        for (let i = 0; i < riprapFeatures.length; i++) {
+          this._renderRiprapFeature(ctx, riprapFeatures[i], inspections[riprapFeatures[i].properties.id], viewMode);
         }
       }
 
-      // Render Longitudinal Ditches
+      // 2. Render Open Channels on outermost extent
+      if (this.layers.channels) {
+        for (let i = 0; i < channelFeatures.length; i++) {
+          this._renderChannelFeature(ctx, channelFeatures[i], inspections[channelFeatures[i].properties.id], viewMode);
+        }
+      }
+
+      // 3. Render Longitudinal Ditches (Types 1-16) on shoulder, bench, toe, crest
       if (this.layers.ditches) {
-        for (let i = 0; i < linearFeatures.length; i++) {
-          const p = linearFeatures[i].properties;
-          if (p.typology_code !== 'RIPRAP' && p.typology_code !== 'TYPE_9') {
-            this._renderLinearFeature(ctx, linearFeatures[i], inspections[p.id], viewMode);
-          }
+        for (let i = 0; i < ditchFeatures.length; i++) {
+          this._renderDitchFeature(ctx, ditchFeatures[i], inspections[ditchFeatures[i].properties.id], viewMode);
         }
       }
 
-      // Render Chutes (Type 9)
-      if (this.layers.chutes) {
-        for (let i = 0; i < linearFeatures.length; i++) {
-          const p = linearFeatures[i].properties;
-          if (p.typology_code === 'TYPE_9') {
-            this._renderChuteFeature(ctx, linearFeatures[i], inspections[p.id], viewMode);
-          }
+      // 4. Render Water Descents connecting Type 9 shoulder ditch -> Type 8 bench -> toe dissipator
+      if (this.layers.waterDescents && this.layers.chutes) {
+        for (let i = 0; i < waterDescentFeatures.length; i++) {
+          this._renderWaterDescentFeature(ctx, waterDescentFeatures[i], ditchFeatures, inspections[waterDescentFeatures[i].properties.id], viewMode);
         }
       }
 
-      // Render Cross Culverts & Bridges
+      // 5. Render Energy Dissipators at ditch/channel/descent terminus
+      if (this.layers.dissipators) {
+        for (let i = 0; i < dissipatorFeatures.length; i++) {
+          this._renderEnergyDissipator(ctx, dissipatorFeatures[i], inspections[dissipatorFeatures[i].properties.id], viewMode);
+        }
+      }
+
+      // 6. Render Cross Culverts & Bridges crossing track
       if (this.layers.culverts) {
-        for (let i = 0; i < pointFeatures.length; i++) {
-          this._renderCrossCulvert(ctx, pointFeatures[i], inspections[pointFeatures[i].properties.id], viewMode);
+        for (let i = 0; i < crossFeatures.length; i++) {
+          this._renderCrossCulvert(ctx, crossFeatures[i], inspections[crossFeatures[i].properties.id], viewMode);
         }
       }
 
@@ -531,18 +598,172 @@
       }
     }
 
-    // --- LONGITUDINAL DITCHES & RIPRAP ---
-    _renderLinearFeature(ctx, feature, inspection, viewMode) {
+    // --- RIPRAP SCOUR PROTECTION (LONGITUDINAL TOE STRETCHES) ---
+    _renderRiprapFeature(ctx, feature, inspection, viewMode) {
+      const p = feature.properties;
+      const isLeft = p.side === 'Left';
+      const isBoth = p.side === 'Center' || !p.side;
+      const sides = isBoth ? [-1, 1] : [isLeft ? -1 : 1];
+
+      const startPk = p.start_pk;
+      const lenM = p.length_m > 0 ? p.length_m : 28.0;
+      const endPk = (p.end_pk && p.end_pk > startPk) ? p.end_pk : (startPk + lenM);
+
+      const isSelected = this.selectedAssetId === p.id;
+      const isHovered = this.hoveredAsset && this.hoveredAsset.id === p.id;
+
+      let color = p.color || '#64748B';
+      if (viewMode === 'progress') {
+        const status = (inspection && inspection.status) || 'Not Started';
+        color = this._getProgressColor(status, inspection && inspection.hasDefect);
+      }
+
+      sides.forEach(sideSign => {
+        const lateralPx = sideSign * this.laneOffsets.toe;
+        const p1 = this.pkToScreen(startPk, lateralPx);
+        const p2 = this.pkToScreen(endPk, lateralPx);
+
+        ctx.save();
+        // Selection highlight
+        if (isSelected || isHovered) {
+          ctx.strokeStyle = '#FBBF24';
+          ctx.lineWidth = 14;
+          ctx.beginPath();
+          ctx.moveTo(p1.x, p1.y);
+          ctx.lineTo(p2.x, p2.y);
+          ctx.stroke();
+        }
+
+        // Protective rock band casing
+        ctx.strokeStyle = color;
+        ctx.lineWidth = isSelected ? 8 : 6;
+        ctx.lineCap = 'butt';
+        ctx.setLineDash([5, 3]); // Rock armor dashed pattern
+        ctx.beginPath();
+        ctx.moveTo(p1.x, p1.y);
+        ctx.lineTo(p2.x, p2.y);
+        ctx.stroke();
+        ctx.setLineDash([]);
+
+        // Stone armor stippling along the span
+        ctx.fillStyle = color;
+        const spanM = endPk - startPk;
+        const stippleCount = Math.min(20, Math.max(3, Math.floor(spanM / 15)));
+        for (let s = 0; s <= stippleCount; s++) {
+          const t = s / stippleCount;
+          const spk = startPk + spanM * t;
+          const spt = this.pkToScreen(spk, lateralPx);
+          ctx.beginPath();
+          ctx.arc(spt.x, spt.y, 2, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        // Label
+        if (this.layers.labels && (this.pixelsPerMeter >= 0.4 || isSelected || isHovered)) {
+          const midPk = (startPk + endPk) / 2;
+          const midPt = this.pkToScreen(midPk, lateralPx);
+          const txt = `RIPRAP (${Math.round(spanM)}m)`;
+
+          ctx.fillStyle = isSelected ? '#FBBF24' : '#94A3B8';
+          ctx.font = '600 9px ' + this.options.fontFamily;
+          if (this.orientation === 'horizontal') {
+            ctx.textAlign = 'center';
+            ctx.textBaseline = sideSign < 0 ? 'bottom' : 'top';
+            ctx.fillText(txt, midPt.x, midPt.y + (sideSign < 0 ? -6 : 6));
+          } else {
+            ctx.textAlign = sideSign < 0 ? 'right' : 'left';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(txt, midPt.x + (sideSign < 0 ? -6 : 6), midPt.y);
+          }
+        }
+
+        ctx.restore();
+        this._registerLinearHitBox(p1, p2, p, 18);
+      });
+    }
+
+    // --- OPEN CHANNELS (OUTERMOST CORRIDOR EXTENT) ---
+    _renderChannelFeature(ctx, feature, inspection, viewMode) {
       const p = feature.properties;
       const isLeft = p.side === 'Left';
       const sideSign = isLeft ? -1 : 1;
 
-      let laneOffset = this.laneOffsets.toe;
-      if (p.typology && p.typology.toLowerCase().includes('shoulder')) {
-        laneOffset = this.laneOffsets.shoulder;
-      } else if (p.typology && (p.typology.toLowerCase().includes('berm') || p.typology.toLowerCase().includes('catchwater'))) {
-        laneOffset = this.laneOffsets.berm;
+      const lateralPx = sideSign * this.laneOffsets.channel;
+      const p1 = this.pkToScreen(p.start_pk, lateralPx);
+      const p2 = this.pkToScreen(p.end_pk, lateralPx);
+
+      const isSelected = this.selectedAssetId === p.id;
+      const isHovered = this.hoveredAsset && this.hoveredAsset.id === p.id;
+
+      let color = p.color || '#0284C7';
+      if (viewMode === 'progress') {
+        const status = (inspection && inspection.status) || 'Not Started';
+        color = this._getProgressColor(status, inspection && inspection.hasDefect);
       }
+
+      ctx.save();
+      if (isSelected || isHovered) {
+        ctx.strokeStyle = '#FBBF24';
+        ctx.lineWidth = 12;
+        ctx.beginPath();
+        ctx.moveTo(p1.x, p1.y);
+        ctx.lineTo(p2.x, p2.y);
+        ctx.stroke();
+      }
+
+      // Outer channel bank casing
+      ctx.strokeStyle = 'rgba(2, 132, 199, 0.4)';
+      ctx.lineWidth = isSelected ? 10 : 8;
+      ctx.beginPath();
+      ctx.moveTo(p1.x, p1.y);
+      ctx.lineTo(p2.x, p2.y);
+      ctx.stroke();
+
+      // Channel invert line
+      ctx.strokeStyle = color;
+      ctx.lineWidth = isSelected ? 6 : 4.5;
+      ctx.beginPath();
+      ctx.moveTo(p1.x, p1.y);
+      ctx.lineTo(p2.x, p2.y);
+      ctx.stroke();
+
+      // Station endpoints
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.arc(p1.x, p1.y, 3.5, 0, Math.PI * 2);
+      ctx.arc(p2.x, p2.y, 3.5, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Label
+      if (this.layers.labels) {
+        const midPk = (p.start_pk + p.end_pk) / 2;
+        const midPt = this.pkToScreen(midPk, lateralPx);
+        const txt = `${p.short_code || 'CHANNEL'} (${Math.round(p.length_m || (p.end_pk - p.start_pk))}m)`;
+
+        ctx.fillStyle = isSelected ? '#FBBF24' : '#38BDF8';
+        ctx.font = '700 9px ' + this.options.fontFamily;
+        if (this.orientation === 'horizontal') {
+          ctx.textAlign = 'center';
+          ctx.textBaseline = isLeft ? 'bottom' : 'top';
+          ctx.fillText(txt, midPt.x, midPt.y + (isLeft ? -6 : 6));
+        } else {
+          ctx.textAlign = isLeft ? 'right' : 'left';
+          ctx.textBaseline = 'middle';
+          ctx.fillText(txt, midPt.x + (isLeft ? -6 : 6), midPt.y);
+        }
+      }
+
+      ctx.restore();
+      this._registerLinearHitBox(p1, p2, p, 18);
+    }
+
+    // --- LONGITUDINAL DITCHES (TYPES 1-16) ---
+    _renderDitchFeature(ctx, feature, inspection, viewMode) {
+      const p = feature.properties;
+      const isLeft = p.side === 'Left';
+      const sideSign = isLeft ? -1 : 1;
+
+      const laneOffset = this.getFeatureLane(p);
       const lateralPx = sideSign * laneOffset;
 
       const p1 = this.pkToScreen(p.start_pk, lateralPx);
@@ -570,17 +791,10 @@
         ctx.stroke();
       }
 
-      // Ditch Line / Band
+      // Ditch Line
       ctx.strokeStyle = color;
-      ctx.lineWidth = isSelected ? 6 : (p.typology_code === 'RIPRAP' ? 7 : 4);
+      ctx.lineWidth = isSelected ? 6 : 4;
       ctx.lineCap = 'round';
-
-      if (p.typology_code === 'RIPRAP') {
-        ctx.setLineDash([4, 3]);
-      } else {
-        ctx.setLineDash([]);
-      }
-
       ctx.beginPath();
       ctx.moveTo(p1.x, p1.y);
       ctx.lineTo(p2.x, p2.y);
@@ -599,7 +813,7 @@
       if (lenPx > 70 && this.layers.labels) {
         const midPk = (p.start_pk + p.end_pk) / 2;
         const midPt = this.pkToScreen(midPk, lateralPx);
-        const text = `${p.short_code || 'DITCH'} (${Math.round(p.length_m)}m)`;
+        const text = `${p.short_code || 'DITCH'} (${Math.round(p.length_m || (p.end_pk - p.start_pk))}m)`;
 
         ctx.fillStyle = isSelected ? '#FBBF24' : this.options.textColor;
         ctx.font = '600 10px ' + this.options.fontFamily;
@@ -619,45 +833,95 @@
       this._registerLinearHitBox(p1, p2, p, 16);
     }
 
-    // --- WATER DESCENTS / CHUTES (TYPE 9) ---
-    _renderChuteFeature(ctx, feature, inspection, viewMode) {
+    // Compatibility alias for existing automated tests
+    _renderLinearFeature(ctx, feature, inspection, viewMode) {
+      const p = feature.properties;
+      if (p.typology_code === 'RIPRAP') {
+        return this._renderRiprapFeature(ctx, feature, inspection, viewMode);
+      }
+      return this._renderDitchFeature(ctx, feature, inspection, viewMode);
+    }
+
+    // --- WATER DESCENTS / CASCADES (DW-10003 CONNECTIONS) ---
+    _renderWaterDescentFeature(ctx, feature, visibleDitches, inspection, viewMode) {
       const p = feature.properties;
       const isLeft = p.side === 'Left';
       const sideSign = isLeft ? -1 : 1;
 
-      const shoulderPt = this.pkToScreen(p.start_pk, sideSign * this.laneOffsets.shoulder);
+      // Check if a Type 9 shoulder ditch exists at this PK on this side
+      const hasType9 = visibleDitches && visibleDitches.some(d => {
+        const dp = d.properties;
+        const code = (dp.typology_code || dp.short_code || '').toUpperCase();
+        const typ = (dp.typology || '').toUpperCase();
+        const cat = (dp.category || '').toUpperCase();
+        const isT9 = (code.includes('TYPE 9') || typ.includes('TYPE 9') || code.includes('TYPE_9') || cat.includes('SHOULDER')) && !typ.includes('CHUTE') && !typ.includes('DESCENT');
+        const dSide = dp.side || 'Left';
+        const matchSide = dSide === p.side || dSide === 'Center' || p.side === 'Center';
+        return isT9 && matchSide && (p.start_pk >= dp.start_pk - 25 && p.start_pk <= dp.end_pk + 25);
+      });
+
+      // Check if a Type 8 bench ditch exists at this PK on this side
+      const hasType8 = visibleDitches && visibleDitches.some(d => {
+        const dp = d.properties;
+        const code = (dp.typology_code || dp.short_code || '').toUpperCase();
+        const typ = (dp.typology || '').toUpperCase();
+        const cat = (dp.category || '').toUpperCase();
+        const isT8 = code.includes('TYPE 8') || typ.includes('TYPE 8') || code.includes('TYPE_8') || cat.includes('BERM');
+        const dSide = dp.side || 'Left';
+        const matchSide = dSide === p.side || dSide === 'Center' || p.side === 'Center';
+        return isT8 && matchSide && (p.start_pk >= dp.start_pk - 25 && p.start_pk <= dp.end_pk + 25);
+      });
+
+      const isConnected = hasType9 || hasType8;
+      const startLaneOffset = hasType9 ? this.laneOffsets.shoulder : (hasType8 ? this.laneOffsets.bench : this.laneOffsets.shoulder);
+      const startPt = this.pkToScreen(p.start_pk, sideSign * startLaneOffset);
+      const benchPt = this.pkToScreen(p.start_pk, sideSign * this.laneOffsets.bench);
       const toePt = this.pkToScreen(p.end_pk || p.start_pk, sideSign * this.laneOffsets.toe);
 
       const isSelected = this.selectedAssetId === p.id;
-      let color = p.color || '#F97316';
+      const isHovered = this.hoveredAsset && this.hoveredAsset.id === p.id;
+
+      let color = p.color || '#0284C7';
       if (viewMode === 'progress') {
         const status = (inspection && inspection.status) || 'Not Started';
         color = this._getProgressColor(status, inspection && inspection.hasDefect);
       }
 
       ctx.save();
-      if (isSelected) {
+
+      // Selection / Hover Halo
+      if (isSelected || isHovered) {
         ctx.strokeStyle = '#FBBF24';
-        ctx.lineWidth = 8;
+        ctx.lineWidth = 10;
         ctx.beginPath();
-        ctx.moveTo(shoulderPt.x, shoulderPt.y);
+        ctx.moveTo(startPt.x, startPt.y);
         ctx.lineTo(toePt.x, toePt.y);
         ctx.stroke();
       }
 
+      // Cascade Linework (Down Slope - Never crosses centerline!)
       ctx.strokeStyle = color;
       ctx.lineWidth = 3.5;
+      ctx.lineCap = 'round';
       ctx.beginPath();
-      ctx.moveTo(shoulderPt.x, shoulderPt.y);
+      ctx.moveTo(startPt.x, startPt.y);
       ctx.lineTo(toePt.x, toePt.y);
       ctx.stroke();
 
+      // Connection Collar at Top (DW-10003 Section A-A: flared inlet collar)
+      ctx.fillStyle = isConnected ? color : '#EF4444';
+      ctx.beginPath();
+      ctx.arc(startPt.x, startPt.y, 4, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Stepped Cascade Teeth
+      ctx.strokeStyle = color;
       ctx.lineWidth = 2;
-      const steps = 3;
+      const steps = 4;
       for (let s = 1; s <= steps; s++) {
         const t = s / (steps + 1);
-        const mx = shoulderPt.x + (toePt.x - shoulderPt.x) * t;
-        const my = shoulderPt.y + (toePt.y - shoulderPt.y) * t;
+        const mx = startPt.x + (toePt.x - startPt.x) * t;
+        const my = startPt.y + (toePt.y - startPt.y) * t;
         ctx.beginPath();
         if (this.orientation === 'horizontal') {
           ctx.moveTo(mx - 4, my);
@@ -668,9 +932,141 @@
         }
         ctx.stroke();
       }
-      ctx.restore();
 
-      this._registerLinearHitBox(shoulderPt, toePt, p, 16);
+      // Bench junction if Type 8 is present along a shoulder run
+      if (hasType9 && hasType8) {
+        ctx.fillStyle = '#F59E0B';
+        ctx.beginPath();
+        ctx.arc(benchPt.x, benchPt.y, 3.5, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      // Energy Dissipator Basin at Toe (DW-10003: discharges into toe ditch 7/4)
+      ctx.fillStyle = color;
+      ctx.strokeStyle = '#FFFFFF';
+      ctx.lineWidth = 1;
+      const bW = 8;
+      const bH = 6;
+      if (this.orientation === 'horizontal') {
+        const by = isLeft ? toePt.y - bH : toePt.y;
+        ctx.beginPath();
+        ctx.rect(toePt.x - bW / 2, by, bW, bH);
+        ctx.fill();
+        ctx.stroke();
+      } else {
+        const bx = isLeft ? toePt.x - bW : toePt.x;
+        ctx.beginPath();
+        ctx.rect(bx, toePt.y - bH / 2, bW, bH);
+        ctx.fill();
+        ctx.stroke();
+      }
+
+      // Label or Warning indicator if unconnected
+      if (this.layers.labels && (this.pixelsPerMeter >= 0.8 || isSelected || isHovered || !isConnected)) {
+        ctx.fillStyle = !isConnected ? '#EF4444' : (isSelected ? '#FBBF24' : this.options.textMutedColor);
+        ctx.font = (!isConnected ? 'bold 8px ' : '500 8px ') + this.options.fontFamily;
+        let lbl = '⚠️ Unlinked (Audit)';
+        if (hasType9 && hasType8) lbl = 'Descent (T9→T8→Toe)';
+        else if (hasType9) lbl = 'Descent (T9→Toe)';
+        else if (hasType8) lbl = 'Descent (T8→Toe)';
+
+        if (this.orientation === 'horizontal') {
+          ctx.textAlign = 'center';
+          ctx.textBaseline = isLeft ? 'bottom' : 'top';
+          ctx.fillText(lbl, toePt.x, toePt.y + (isLeft ? -8 : 8));
+        } else {
+          ctx.textAlign = isLeft ? 'right' : 'left';
+          ctx.textBaseline = 'middle';
+          ctx.fillText(lbl, toePt.x + (isLeft ? -8 : 8), toePt.y);
+        }
+      }
+
+      ctx.restore();
+      this._registerLinearHitBox(startPt, toePt, p, 16);
+    }
+
+    // Compatibility alias for existing automated tests
+    _renderChuteFeature(ctx, feature, inspection, viewMode) {
+      return this._renderWaterDescentFeature(ctx, feature, [], inspection, viewMode);
+    }
+
+    // --- POINT ENERGY DISSIPATORS ---
+    _renderEnergyDissipator(ctx, feature, inspection, viewMode) {
+      const p = feature.properties;
+      const isLeft = p.side === 'Left';
+      const sideSign = isLeft ? -1 : 1;
+      const pk = p.start_pk !== undefined ? p.start_pk : p.pk;
+
+      // Position on toe lane or channel lane
+      const isChan = p.typology && p.typology.toLowerCase().includes('channel');
+      const lateralPx = sideSign * (isChan ? this.laneOffsets.channel : this.laneOffsets.toe);
+      const pt = this.pkToScreen(pk, lateralPx);
+
+      const isSelected = this.selectedAssetId === p.id;
+      const isHovered = this.hoveredAsset && this.hoveredAsset.id === p.id;
+
+      let color = p.color || '#D97706';
+      if (viewMode === 'progress') {
+        const status = (inspection && inspection.status) || 'Not Started';
+        color = this._getProgressColor(status, inspection && inspection.hasDefect);
+      }
+
+      ctx.save();
+      if (isSelected || isHovered) {
+        ctx.fillStyle = 'rgba(251, 191, 36, 0.3)';
+        ctx.beginPath();
+        ctx.arc(pt.x, pt.y, 12, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      // Stepped Stilling Basin glyph (14x10 px)
+      const bw = 12;
+      const bh = 8;
+      ctx.fillStyle = color;
+      ctx.strokeStyle = '#FFFFFF';
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.rect(pt.x - bw / 2, pt.y - bh / 2, bw, bh);
+      ctx.fill();
+      ctx.stroke();
+
+      // End baffle sill line
+      ctx.strokeStyle = '#FFFFFF';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      if (this.orientation === 'horizontal') {
+        ctx.moveTo(pt.x + bw / 2, pt.y - bh / 2);
+        ctx.lineTo(pt.x + bw / 2, pt.y + bh / 2);
+      } else {
+        ctx.moveTo(pt.x - bw / 2, pt.y + bh / 2);
+        ctx.lineTo(pt.x + bw / 2, pt.y + bh / 2);
+      }
+      ctx.stroke();
+
+      // Label
+      if (this.layers.labels && (this.pixelsPerMeter >= 0.5 || isSelected || isHovered)) {
+        ctx.fillStyle = isSelected ? '#FBBF24' : '#FCD34D';
+        ctx.font = '700 9px ' + this.options.fontFamily;
+        const txt = p.short_code || 'Dissipator';
+        if (this.orientation === 'horizontal') {
+          ctx.textAlign = 'center';
+          ctx.textBaseline = isLeft ? 'bottom' : 'top';
+          ctx.fillText(txt, pt.x, pt.y + (isLeft ? -7 : 7));
+        } else {
+          ctx.textAlign = isLeft ? 'right' : 'left';
+          ctx.textBaseline = 'middle';
+          ctx.fillText(txt, pt.x + (isLeft ? -7 : 7), pt.y);
+        }
+      }
+
+      ctx.restore();
+      this.hitBoxes.push({
+        x1: pt.x - 10,
+        y1: pt.y - 10,
+        x2: pt.x + 10,
+        y2: pt.y + 10,
+        properties: p
+      });
     }
 
     // --- CROSS-DRAINAGE CULVERTS & BRIDGES ---

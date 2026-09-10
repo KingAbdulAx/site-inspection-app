@@ -53,7 +53,10 @@
         ticks: true,
         culverts: true,
         ditches: true,
+        channels: true,
+        waterDescents: true,
         chutes: true,
+        dissipators: true,
         riprap: true,
         labels: true
       };
@@ -429,6 +432,30 @@
       }
     }
 
+    // Classify feature into true engineering category (matches SldViewer)
+    classifyFeature(p) {
+      const cat = (p.category || '').toLowerCase();
+      const typ = (p.typology || '').toLowerCase();
+      const code = (p.typology_code || p.short_code || '').toLowerCase();
+
+      if (cat === 'riprap protection' || typ.includes('riprap') || code === 'riprap' || typ.includes('scour protection')) {
+        return 'riprap';
+      }
+      if (cat === 'water descent' || typ.includes('water descent') || typ.includes('chute') || code === 'desc' || code === 'descent' || code.includes('descent') || code.includes('chute')) {
+        return 'waterDescent';
+      }
+      if (cat === 'energy dissipator' || typ.includes('dissipator') || typ.includes('energy sink') || code.includes('dissipator') || code === 'bs1' || code === 'bs2') {
+        return 'dissipator';
+      }
+      if (cat === 'diversion channel' || cat === 'open channel' || typ.includes('channel') || code.startsWith('chan') || code.includes('chan') || code === 'rect chan' || typ.includes('zone i') || typ.includes('zone iii')) {
+        return 'channel';
+      }
+      if (cat === 'cross drainage' || typ.includes('box culvert') || typ.includes('pipe culvert') || typ.includes('underpass') || typ.includes('overbridge') || typ.includes('bridge') || code.includes('culv') || code.includes('box') || code.includes('pipe')) {
+        return 'cross';
+      }
+      return 'ditch';
+    }
+
     _renderFeatures(ctx) {
       const feats = window.getActiveFeatures ? window.getActiveFeatures() : [];
       if (!feats || !feats.length) return;
@@ -441,11 +468,14 @@
         const geom = f.geometry;
         if (!geom) return;
 
+        const kind = this.classifyFeature(p);
         // Apply layer visibility filter
-        if (p.category === 'Toe Ditch' && !this.layers.ditches) return;
-        if (p.category === 'Cross Drainage' && !this.layers.culverts) return;
-        if (p.category === 'Water Descent' && !this.layers.chutes) return;
-        if (p.category === 'Riprap Protection' && !this.layers.riprap) return;
+        if (kind === 'ditch' && !this.layers.ditches) return;
+        if (kind === 'cross' && !this.layers.culverts) return;
+        if (kind === 'waterDescent' && (!this.layers.waterDescents && !this.layers.chutes)) return;
+        if (kind === 'riprap' && !this.layers.riprap) return;
+        if (kind === 'channel' && !this.layers.channels) return;
+        if (kind === 'dissipator' && !this.layers.dissipators) return;
 
         // Apply active filter from appState if defined
         if (window.isAssetMatchingFilter && window.appState && window.appState.activeFilter) {
@@ -501,9 +531,9 @@
         return;
       }
 
-      const isCulvert = props.category === 'Cross Drainage';
+      const kind = this.classifyFeature(props);
 
-      if (isCulvert) {
+      if (kind === 'cross') {
         // Cross Drainage Culvert: thick transverse bar with wingwall chevrons
         ctx.strokeStyle = isSelected ? '#FACC15' : color;
         ctx.lineWidth = Math.max(3.5, Math.min(8, 2.0 * this.scale));
@@ -532,8 +562,26 @@
           ctx.textAlign = 'center';
           ctx.fillText(label, px, py + 3);
         }
+      } else if (kind === 'riprap') {
+        // Longitudinal Riprap Scour Protection: rock casing with dashed pattern
+        ctx.strokeStyle = isSelected ? '#FACC15' : color;
+        ctx.lineWidth = Math.max(3.5, Math.min(8, 2.5 * this.scale));
+        ctx.setLineDash([5, 3]);
+        ctx.lineCap = 'butt';
+        ctx.stroke();
+        ctx.setLineDash([]);
+      } else if (kind === 'channel') {
+        // Open Channel: wider bank lines
+        ctx.strokeStyle = 'rgba(2, 132, 199, 0.4)';
+        ctx.lineWidth = Math.max(5, Math.min(12, 3.5 * this.scale));
+        ctx.stroke();
+
+        ctx.strokeStyle = isSelected ? '#FACC15' : color;
+        ctx.lineWidth = Math.max(2.5, Math.min(6, 2.0 * this.scale));
+        ctx.lineCap = 'round';
+        ctx.stroke();
       } else {
-        // Longitudinal ditch / channel
+        // Longitudinal ditch
         ctx.strokeStyle = isSelected ? '#FACC15' : color;
         ctx.lineWidth = Math.max(2, Math.min(6, 1.5 * this.scale));
         ctx.lineCap = 'round';
@@ -557,19 +605,53 @@
 
       ctx.save();
       const r = isSelected ? 6 : Math.max(3, Math.min(6, 1.2 * this.scale));
+      const kind = this.classifyFeature(props);
 
-      if (props.category === 'Water Descent') {
-        // Type 9 Chute: cascade stepped diamond/chevron
+      if (kind === 'dissipator') {
+        // Energy Dissipator: Stepped Stilling Basin glyph (rect with end sill)
+        const bw = Math.max(8, Math.min(16, 4 * this.scale));
+        const bh = Math.max(6, Math.min(12, 3 * this.scale));
+        ctx.fillStyle = isSelected ? '#FACC15' : color;
+        ctx.strokeStyle = '#FFFFFF';
+        ctx.lineWidth = 1.2;
+        ctx.beginPath();
+        ctx.rect(px - bw / 2, py - bh / 2, bw, bh);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.strokeStyle = '#FFFFFF';
+        ctx.lineWidth = 1.8;
+        ctx.beginPath();
+        ctx.moveTo(px + bw / 2, py - bh / 2);
+        ctx.lineTo(px + bw / 2, py + bh / 2);
+        ctx.stroke();
+      } else if (kind === 'waterDescent') {
+        // Water Descent: Stepped cascade drop chevron
         ctx.fillStyle = isSelected ? '#FACC15' : color;
         ctx.beginPath();
         ctx.arc(px, py, r, 0, Math.PI * 2);
         ctx.fill();
 
-        if (isSelected || this.scale >= 1.2) {
-          ctx.strokeStyle = '#FFFFFF';
-          ctx.lineWidth = 1.5;
-          ctx.stroke();
-        }
+        ctx.strokeStyle = '#FFFFFF';
+        ctx.lineWidth = 1.5;
+        ctx.stroke();
+
+        // Transverse cascade drop tick
+        ctx.strokeStyle = color;
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(px - r, py);
+        ctx.lineTo(px + r, py);
+        ctx.stroke();
+      } else if (kind === 'riprap') {
+        // Riprap Point: rock armor symbol
+        ctx.fillStyle = isSelected ? '#FACC15' : color;
+        ctx.strokeStyle = '#FFFFFF';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.arc(px, py, r, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.stroke();
       } else {
         // Standard marker point
         ctx.fillStyle = isSelected ? '#FACC15' : color;

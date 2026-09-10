@@ -434,7 +434,11 @@
     const status = insp.status || 'Not Started';
 
     if (filter === 'ditches') {
-      return p.category !== 'Cross Drainage' && p.category !== 'Overhead Crossing' && p.category !== 'Underpass' && p.category !== 'Riprap Protection' && p.category !== 'Water Descent' && p.category !== 'Energy Dissipator';
+      const isChan = p.category === 'Diversion Channel' || p.category === 'Open Channel' || (p.typology && p.typology.toLowerCase().includes('channel')) || (p.typology_code && p.typology_code.toLowerCase().includes('chan'));
+      return !isChan && p.category !== 'Cross Drainage' && p.category !== 'Overhead Crossing' && p.category !== 'Underpass' && p.category !== 'Riprap Protection' && p.category !== 'Water Descent' && p.category !== 'Energy Dissipator';
+    }
+    if (filter === 'channels') {
+      return p.category === 'Diversion Channel' || p.category === 'Open Channel' || (p.typology && p.typology.toLowerCase().includes('channel')) || (p.typology_code && p.typology_code.toLowerCase().includes('chan'));
     }
     if (filter === 'structures') {
       return p.category === 'Cross Drainage' || p.category === 'Overhead Crossing' || p.category === 'Underpass';
@@ -697,8 +701,32 @@
 
     // Spec Grid
     document.getElementById('specTypology').textContent = p.typology;
-    document.getElementById('specLength').textContent = p.length_m > 0 ? `${p.length_m} m` : 'Cross Structure';
-    document.getElementById('specDrawing').textContent = p.drawing_ref || 'Standard Details';
+    let lengthText = p.length_m > 0 ? `${p.length_m} m` : 'Point Structure';
+    if (p.category === 'Water Descent' || p.typology_code === 'WATER_DESCENT') {
+      lengthText = 'Slope Cascade Drop (DW-10003)';
+    } else if (p.category === 'Energy Dissipator' || p.typology_code === 'DISSIPATOR') {
+      lengthText = 'Point Baffle Basin (DW-10002/3)';
+    } else if (p.category === 'Riprap Protection' && (!p.length_m || p.length_m === 0)) {
+      lengthText = 'Armor Stretch (Span to verify in sheet)';
+    } else if (p.category === 'Cross Drainage') {
+      lengthText = 'Cross Drainage Crossing';
+    }
+    document.getElementById('specLength').textContent = lengthText;
+
+    // DW-10003 connection standard link
+    const isDw10003Related = (p.category === 'Water Descent') ||
+      (p.typology_code === 'WATER_DESCENT') ||
+      (p.typology_code === 'DISSIPATOR') ||
+      (p.typology && (p.typology.includes('Type 9') || p.typology.includes('Type 8') || p.typology.includes('Descent') || p.typology.includes('Chute') || p.typology.includes('Dissipator'))) ||
+      (p.drawing_ref && p.drawing_ref.includes('10003'));
+
+    const specDrawingEl = document.getElementById('specDrawing');
+    if (isDw10003Related) {
+      specDrawingEl.innerHTML = `${p.drawing_ref || 'DW-10003'} <button type="button" class="btn-xs-dw10003" onclick="if(window.openDw10003Modal) window.openDw10003Modal();" title="View DW-10003 Standard Detail Schematic">📐 Detail</button>`;
+    } else {
+      specDrawingEl.textContent = p.drawing_ref || 'Standard Details';
+    }
+
     document.getElementById('specDimensions').textContent = p.specs || 'Per Detail Drawing';
 
     // Status Buttons
@@ -723,6 +751,17 @@
         }
       } catch (e) {
         console.warn('Leaflet panTo error:', e);
+      }
+    }
+
+    // Highlight and center in SLD Linear Track Viewer
+    if (window.sldViewer) {
+      window.sldViewer.selectedAssetId = p.id;
+      const targetPk = p.start_pk || p.pk;
+      if (targetPk) {
+        window.sldViewer.jumpToPk(targetPk, false);
+      } else {
+        window.sldViewer.render();
       }
     }
 
@@ -1615,12 +1654,57 @@
         }
       });
 
+      // DW-10003 Standard Detail Modal Controls
+      const btnDw10003 = document.getElementById('btnSldDw10003');
+      const modalDw10003 = document.getElementById('dw10003Modal');
+      const btnCloseDw10003 = document.getElementById('btnCloseDw10003Modal');
+      const btnDismissDw10003 = document.getElementById('btnDismissDw10003');
+
+      function openDw10003Modal() {
+        if (modalDw10003) {
+          modalDw10003.style.display = 'flex';
+          modalDw10003.classList.add('active');
+        }
+      }
+      function closeDw10003Modal() {
+        if (modalDw10003) {
+          modalDw10003.style.display = 'none';
+          modalDw10003.classList.remove('active');
+        }
+      }
+      window.openDw10003Modal = openDw10003Modal;
+      window.closeDw10003Modal = closeDw10003Modal;
+
+      if (btnDw10003) {
+        btnDw10003.addEventListener('click', openDw10003Modal);
+      }
+      if (btnCloseDw10003) {
+        btnCloseDw10003.addEventListener('click', closeDw10003Modal);
+      }
+      if (btnDismissDw10003) {
+        btnDismissDw10003.addEventListener('click', closeDw10003Modal);
+      }
+      if (modalDw10003) {
+        modalDw10003.addEventListener('click', (e) => {
+          if (e.target === modalDw10003) {
+            closeDw10003Modal();
+          }
+        });
+      }
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modalDw10003 && modalDw10003.style.display !== 'none') {
+          closeDw10003Modal();
+        }
+      });
+
       const sldLayerMap = {
         chkSldTrack: 'track',
         chkSldTicks: 'ticks',
         chkSldCulverts: 'culverts',
         chkSldDitches: 'ditches',
-        chkSldChutes: 'chutes',
+        chkSldChannels: 'channels',
+        chkSldChutes: 'waterDescents',
+        chkSldDissipators: 'dissipators',
         chkSldRiprap: 'riprap',
         chkSldLabels: 'labels'
       };
@@ -1629,9 +1713,20 @@
         const chk = document.getElementById(elemId);
         if (chk) {
           chk.addEventListener('change', (e) => {
+            const isChecked = e.target.checked;
             if (window.sldViewer) {
-              window.sldViewer.layers[layerProp] = e.target.checked;
+              window.sldViewer.layers[layerProp] = isChecked;
+              if (layerProp === 'waterDescents') {
+                window.sldViewer.layers.chutes = isChecked;
+              }
               window.sldViewer.render();
+            }
+            if (window.cadViewer) {
+              window.cadViewer.layers[layerProp] = isChecked;
+              if (layerProp === 'waterDescents') {
+                window.cadViewer.layers.chutes = isChecked;
+              }
+              window.cadViewer.render();
             }
           });
         }
