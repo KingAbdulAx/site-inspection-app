@@ -121,9 +121,11 @@
       if (updateSlider) this.slider.value = this.currentPk;
       this.activePkLabel.innerText = this.formatPk(this.currentPk);
 
-      // 1. Move CAD Viewer
-      if (window.cadViewer) {
-        window.cadViewer.jumpToPk(this.currentPk, true);
+      // 1. Move SLD / CAD Viewer
+      if (window.sldViewer) {
+        window.sldViewer.jumpToPk(this.currentPk, false);
+      } else if (window.cadViewer) {
+        window.cadViewer.jumpToPk(this.currentPk, false);
       }
 
       // 2. Move Leaflet map if visible

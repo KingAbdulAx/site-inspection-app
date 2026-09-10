@@ -341,7 +341,10 @@
     state.mapLayers.structures = L.layerGroup().addTo(state.map);
 
     // Instantiate Specialized Engineering Modules
-    if (typeof CadViewer !== 'undefined') {
+    if (typeof SldViewer !== 'undefined') {
+      window.sldViewer = new SldViewer('sldViewportContainer');
+      window.cadViewer = window.sldViewer; // Alias for backward compatibility
+    } else if (typeof CadViewer !== 'undefined') {
       window.cadViewer = new CadViewer('cadViewportContainer');
     }
     if (typeof ChainageScrubber !== 'undefined') {
@@ -1395,13 +1398,21 @@
     localStorage.setItem('KMD_ACTIVE_SECTION', sectionId);
 
     // Update tab buttons UI
-    document.querySelectorAll('.btn-sec-tab').forEach(btn => {
+    document.querySelectorAll('.btn-sec-tab, .btn-sec-option').forEach(btn => {
       if (btn.getAttribute('data-section') === sectionId) {
         btn.classList.add('active');
       } else {
         btn.classList.remove('active');
       }
     });
+
+    // Update section dropdown pill label
+    const pillLabel = document.getElementById('lblActiveSectionPill');
+    if (pillLabel) {
+      if (sectionId === '02') pillLabel.textContent = 'Sec 02 (DWKZ)';
+      else if (sectionId === '03') pillLabel.textContent = 'Sec 03 (KZDR)';
+      else pillLabel.textContent = 'All (02+03)';
+    }
 
     // Update subtitle & jump placeholder
     const elSub = document.getElementById('lblSectionSubtitle');
@@ -1422,7 +1433,9 @@
     renderAssets();
     updateProgressHUD();
 
-    if (window.cadViewer) {
+    if (window.sldViewer) {
+      window.sldViewer.fitSection();
+    } else if (window.cadViewer) {
       window.cadViewer.fitBounds(sectionId);
     }
     if (window.chainageScrubber) {
@@ -1459,12 +1472,12 @@
   }
   window.fitMapToActiveSection = fitMapToActiveSection;
 
-  // --- 11.8. Primary View Stage Navigation & CAD Controls ---
+  // --- 11.8. Primary View Stage Navigation & SLD / CAD Controls ---
   function setActiveView(viewId) {
     state.activeView = viewId;
 
-    // Update tab buttons
-    document.querySelectorAll('.btn-nav-tab').forEach(tab => {
+    // Update tab buttons (both desktop and mobile bottom bar)
+    document.querySelectorAll('.btn-nav-tab, .bottom-nav-tab').forEach(tab => {
       if (tab.getAttribute('data-view') === viewId) {
         tab.classList.add('active');
       } else {
@@ -1492,9 +1505,21 @@
       }
     });
 
+    const drawerEl = document.getElementById('inspectionDrawer');
+    if (drawerEl) {
+      if (viewId === 'cad' || viewId === 'gis') {
+        drawerEl.style.display = '';
+      } else {
+        drawerEl.style.display = 'none';
+      }
+    }
+
     // Refresh active view
     if (viewId === 'cad') {
-      if (window.cadViewer) {
+      if (window.sldViewer) {
+        window.sldViewer.resize();
+        window.sldViewer.render();
+      } else if (window.cadViewer) {
         window.cadViewer.resize();
         window.cadViewer.render();
       }
@@ -1521,7 +1546,7 @@
   window.setActiveView = setActiveView;
 
   function setupViewNavigation() {
-    document.querySelectorAll('.btn-nav-tab').forEach(tab => {
+    document.querySelectorAll('.btn-nav-tab, .bottom-nav-tab').forEach(tab => {
       tab.addEventListener('click', function () {
         const view = this.getAttribute('data-view');
         setActiveView(view);
@@ -1529,18 +1554,91 @@
     });
 
     window.addEventListener('resize', () => {
-      if (state.activeView === 'cad' && window.cadViewer) {
-        window.cadViewer.resize();
+      if (state.activeView === 'cad') {
+        if (window.sldViewer) window.sldViewer.resize();
+        else if (window.cadViewer) window.cadViewer.resize();
       } else if (state.activeView === 'gis' && state.map) {
         state.map.invalidateSize();
       }
     });
 
-    // Set initial view (defaults to CAD View)
+    // Set initial view (defaults to CAD/Alignment View)
     setActiveView(state.activeView || 'cad');
   }
 
   function setupCadControls() {
+    // 1. SLD Linear Track Controls
+    const btnSldOrient = document.getElementById('btnSldOrientation');
+    const btnSldIn = document.getElementById('btnSldZoomIn');
+    const btnSldOut = document.getElementById('btnSldZoomOut');
+    const btnSldFit = document.getElementById('btnSldFit');
+    const btnSldLayers = document.getElementById('btnSldLayers');
+    const sldDropdown = document.getElementById('sldLayersDropdown');
+
+    if (btnSldOrient) {
+      btnSldOrient.addEventListener('click', () => {
+        if (window.sldViewer) {
+          const mode = window.sldViewer.toggleOrientation();
+          btnSldOrient.textContent = mode === 'horizontal' ? '⇄ Horiz' : '⇅ Vert';
+          showToast(`Track Layout: ${mode.toUpperCase()}`);
+        }
+      });
+    }
+
+    if (btnSldIn) {
+      btnSldIn.addEventListener('click', () => {
+        if (window.sldViewer) window.sldViewer.zoomIn();
+      });
+    }
+
+    if (btnSldOut) {
+      btnSldOut.addEventListener('click', () => {
+        if (window.sldViewer) window.sldViewer.zoomOut();
+      });
+    }
+
+    if (btnSldFit) {
+      btnSldFit.addEventListener('click', () => {
+        if (window.sldViewer) window.sldViewer.fitSection();
+      });
+    }
+
+    if (btnSldLayers && sldDropdown) {
+      btnSldLayers.addEventListener('click', (e) => {
+        e.stopPropagation();
+        sldDropdown.style.display = sldDropdown.style.display === 'none' ? 'flex' : 'none';
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!sldDropdown.contains(e.target) && e.target !== btnSldLayers) {
+          sldDropdown.style.display = 'none';
+        }
+      });
+
+      const sldLayerMap = {
+        chkSldTrack: 'track',
+        chkSldTicks: 'ticks',
+        chkSldCulverts: 'culverts',
+        chkSldDitches: 'ditches',
+        chkSldChutes: 'chutes',
+        chkSldRiprap: 'riprap',
+        chkSldLabels: 'labels'
+      };
+
+      Object.entries(sldLayerMap).forEach(([elemId, layerProp]) => {
+        const chk = document.getElementById(elemId);
+        if (chk) {
+          chk.addEventListener('change', (e) => {
+            if (window.sldViewer) {
+              window.sldViewer.layers[layerProp] = e.target.checked;
+              window.sldViewer.render();
+            }
+          });
+        }
+      });
+    }
+
+    // 2. Legacy CAD View Controls (Backward compatibility)
     const btnZoomIn = document.getElementById('btnCadZoomIn');
     const btnZoomOut = document.getElementById('btnCadZoomOut');
     const btnFit = document.getElementById('btnCadFit');
@@ -1553,86 +1651,136 @@
         if (window.cadViewer) window.cadViewer.zoomIn();
       });
     }
-
     if (btnZoomOut) {
       btnZoomOut.addEventListener('click', () => {
         if (window.cadViewer) window.cadViewer.zoomOut();
       });
     }
-
     if (btnFit) {
       btnFit.addEventListener('click', () => {
         if (window.cadViewer) window.cadViewer.fitBounds(state.activeSection);
       });
     }
-
     if (btnOrient) {
       btnOrient.addEventListener('click', () => {
         if (!window.cadViewer) return;
         const newMode = window.cadViewer.orientationMode === 'north' ? 'track' : 'north';
         window.cadViewer.setOrientation(newMode);
         btnOrient.textContent = newMode === 'track' ? 'North-Up' : 'Track-Up';
-        showToast(newMode === 'track' ? 'CAD Aligned to Track Corridor' : 'CAD Aligned to True North');
       });
     }
-
     if (btnLayers && dropdownLayers) {
       btnLayers.addEventListener('click', (e) => {
         e.stopPropagation();
         dropdownLayers.style.display = dropdownLayers.style.display === 'none' ? 'block' : 'none';
-      });
-
-      document.addEventListener('click', (e) => {
-        if (!dropdownLayers.contains(e.target) && e.target !== btnLayers) {
-          dropdownLayers.style.display = 'none';
-        }
-      });
-
-      const layerMap = {
-        chkLayerGrid: 'grid',
-        chkLayerAlign: 'alignment',
-        chkLayerTicks: 'ticks',
-        chkLayerCulverts: 'culverts',
-        chkLayerDitches: 'ditches',
-        chkLayerChutes: 'chutes',
-        chkLayerRiprap: 'riprap',
-        chkLayerLabels: 'labels'
-      };
-
-      Object.entries(layerMap).forEach(([elemId, layerProp]) => {
-        const chk = document.getElementById(elemId);
-        if (chk) {
-          chk.addEventListener('change', (e) => {
-            if (window.cadViewer) {
-              window.cadViewer.layers[layerProp] = e.target.checked;
-              window.cadViewer.render();
-            }
-          });
-        }
       });
     }
   }
 
   // --- 12. UI Event Listeners ---
   function setupEventListeners() {
-    // Section Selector Tabs (All, Section 02, Section 03)
-    document.querySelectorAll('.btn-sec-tab').forEach(btn => {
+    // Section Selector Tabs & Options (All, Section 02, Section 03)
+    document.querySelectorAll('.btn-sec-tab, .btn-sec-option').forEach(btn => {
       btn.addEventListener('click', function () {
         const sec = this.getAttribute('data-section');
         setSection(sec, true);
+        const sectionDropdown = document.getElementById('sectionDropdownMenu');
+        if (sectionDropdown) sectionDropdown.style.display = 'none';
       });
     });
+
+    // Section Pill Dropdown Trigger
+    const btnSectionPill = document.getElementById('btnSectionPill');
+    const sectionDropdown = document.getElementById('sectionDropdownMenu');
+    if (btnSectionPill && sectionDropdown) {
+      btnSectionPill.addEventListener('click', (e) => {
+        e.stopPropagation();
+        sectionDropdown.style.display = sectionDropdown.style.display === 'none' ? 'flex' : 'none';
+      });
+      document.addEventListener('click', (e) => {
+        if (!sectionDropdown.contains(e.target) && e.target !== btnSectionPill) {
+          sectionDropdown.style.display = 'none';
+        }
+      });
+    }
+
+    // Quick Jump Slide Sheet
+    const sheetQuickJump = document.getElementById('sheetQuickJump');
+    const btnQuickJump = document.getElementById('btnQuickJump');
+    const btnCloseQuickJump = document.getElementById('btnCloseQuickJump');
+    if (btnQuickJump && sheetQuickJump) {
+      btnQuickJump.addEventListener('click', () => {
+        sheetQuickJump.style.display = 'flex';
+        const input = document.getElementById('txtJumpPk');
+        if (input) setTimeout(() => input.focus(), 60);
+      });
+    }
+    if (btnCloseQuickJump && sheetQuickJump) {
+      btnCloseQuickJump.addEventListener('click', () => {
+        sheetQuickJump.style.display = 'none';
+      });
+    }
+    if (sheetQuickJump) {
+      sheetQuickJump.addEventListener('click', (e) => {
+        if (e.target === sheetQuickJump) sheetQuickJump.style.display = 'none';
+      });
+    }
+    document.querySelectorAll('.chip-hop').forEach(chip => {
+      chip.addEventListener('click', function () {
+        const pk = parseFloat(this.getAttribute('data-pk'));
+        if (window.chainageScrubber) window.chainageScrubber.setChainage(pk, true);
+        if (window.sldViewer) window.sldViewer.jumpToPk(pk, true);
+        if (sheetQuickJump) sheetQuickJump.style.display = 'none';
+      });
+    });
+
+    // More Options & Secondary Tools Slide Sheet
+    const sheetMoreMenu = document.getElementById('sheetMoreMenu');
+    const btnMoreMenu = document.getElementById('btnMoreMenu');
+    const btnCloseMoreMenu = document.getElementById('btnCloseMoreMenu');
+    if (btnMoreMenu && sheetMoreMenu) {
+      btnMoreMenu.addEventListener('click', () => {
+        sheetMoreMenu.style.display = 'flex';
+      });
+    }
+    if (btnCloseMoreMenu && sheetMoreMenu) {
+      btnCloseMoreMenu.addEventListener('click', () => {
+        sheetMoreMenu.style.display = 'none';
+      });
+    }
+    if (sheetMoreMenu) {
+      sheetMoreMenu.addEventListener('click', (e) => {
+        if (e.target === sheetMoreMenu) sheetMoreMenu.style.display = 'none';
+      });
+    }
 
     const btnCompass = document.getElementById('btnCompass');
     if (btnCompass) {
       btnCompass.addEventListener('click', toggleMapBearing);
     }
 
-    document.getElementById('btnLocate').addEventListener('click', toggleGpsLocation);
-    document.getElementById('btnJump').addEventListener('click', jumpToChainage);
-    document.getElementById('txtJumpPk').addEventListener('keypress', function (e) {
-      if (e.key === 'Enter') jumpToChainage();
-    });
+    const btnLocate = document.getElementById('btnLocate');
+    if (btnLocate) {
+      btnLocate.addEventListener('click', toggleGpsLocation);
+    }
+
+    const btnJump = document.getElementById('btnJump');
+    if (btnJump) {
+      btnJump.addEventListener('click', () => {
+        jumpToChainage();
+        if (sheetQuickJump) sheetQuickJump.style.display = 'none';
+      });
+    }
+
+    const txtJump = document.getElementById('txtJumpPk');
+    if (txtJump) {
+      txtJump.addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+          jumpToChainage();
+          if (sheetQuickJump) sheetQuickJump.style.display = 'none';
+        }
+      });
+    }
 
     // View Mode Toggle (Typology vs Birds-Eye Progress)
     const btnTypology = document.getElementById('btnModeTypology');
