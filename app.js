@@ -9,6 +9,7 @@
   // --- 1. Global State ---
   const state = {
     map: null,
+    activeView: 'cad', // 'cad', 'gis', 'dashboard', 'reports', 'data'
     activeSection: localStorage.getItem('KMD_ACTIVE_SECTION') || 'all', // 'all', '02', '03' (defaults to 'all')
     centerlineData: null,
     assetsData: null,
@@ -19,6 +20,9 @@
     isLocating: false,
     userGpsMarker: null,
     userAccuracyCircle: null,
+    userGpsLat: null,
+    userGpsLon: null,
+    userAccuracyM: null,
     userCurrentPk: null,
     userCurrentOffset: null,
     inspections: {}, // Stored progress: { assetId: { status, notes, hasDefect, date, photos } }
@@ -69,6 +73,9 @@
       features: getActiveFeatures()
     };
   }
+  window.getActiveCenterlines = getActiveCenterlines;
+  window.getActiveFeatures = getActiveFeatures;
+  window.syncActiveDataPointers = syncActiveDataPointers;
 
   // --- 2. Local Storage Persistence & KPI Tracker ---
   const STORAGE_KEY_S03 = 'KMD_DRAINAGE_INSPECTIONS_SEC03_V1';
@@ -333,6 +340,26 @@
     state.mapLayers.ditches = L.layerGroup().addTo(state.map);
     state.mapLayers.structures = L.layerGroup().addTo(state.map);
 
+    // Instantiate Specialized Engineering Modules
+    if (typeof CadViewer !== 'undefined') {
+      window.cadViewer = new CadViewer('cadViewportContainer');
+    }
+    if (typeof ChainageScrubber !== 'undefined') {
+      window.chainageScrubber = new ChainageScrubber('scrubberMount');
+    }
+    if (typeof ProjectDashboard !== 'undefined') {
+      window.projectDashboard = new ProjectDashboard('dashboardMount');
+    }
+    if (typeof ReportGenerator !== 'undefined') {
+      window.reportGenerator = new ReportGenerator('reportsMount');
+    }
+    if (typeof DataExchange !== 'undefined') {
+      window.dataExchange = new DataExchange('dataExchangeMount');
+    }
+
+    setupCadControls();
+    setupViewNavigation();
+
     // Initialize active section data, UI, and fit bounds
     setSection(state.activeSection, true);
 
@@ -369,6 +396,7 @@
     }
 
     renderAssets();
+    if (window.cadViewer) window.cadViewer.render();
   }
 
   function setFilter(filterValue) {
@@ -389,6 +417,9 @@
     });
 
     renderAssets();
+    if (window.cadViewer) window.cadViewer.render();
+    if (window.chainageScrubber) window.chainageScrubber.queryNearbyFeatures();
+
     const cleanName = filterValue.replace('status_', '').replace('_', ' ').toUpperCase();
     showToast(`Filter: ${cleanName}`);
   }
@@ -422,6 +453,7 @@
     }
     return true;
   }
+  window.isAssetMatchingFilter = isAssetMatchingFilter;
 
   // --- 5. Render Track Centerline & Station Ticks ---
   function renderCenterline() {
@@ -676,16 +708,37 @@
     // Open Drawer in Compact MID State (shows specs + milestones without covering map)
     midDrawer();
 
-    // Highlight on Map
-    if (feat.geometry.type === 'Point') {
-      state.map.panTo([feat.geometry.coordinates[1], feat.geometry.coordinates[0]], { animate: true });
-    } else {
-      const coords = feat.geometry.coordinates;
-      const midIdx = Math.floor(coords.length / 2);
-      state.map.panTo([coords[midIdx][1], coords[midIdx][0]], { animate: true });
+    // Highlight on Leaflet Map (if initialized and active)
+    if (state.map && feat.geometry) {
+      try {
+        if (feat.geometry.type === 'Point') {
+          state.map.panTo([feat.geometry.coordinates[1], feat.geometry.coordinates[0]], { animate: true });
+        } else if (feat.geometry.coordinates && feat.geometry.coordinates.length > 0) {
+          const coords = feat.geometry.coordinates;
+          const midIdx = Math.floor(coords.length / 2);
+          state.map.panTo([coords[midIdx][1], coords[midIdx][0]], { animate: true });
+        }
+      } catch (e) {
+        console.warn('Leaflet panTo error:', e);
+      }
+    }
+
+    // Highlight and center in CAD Viewer
+    if (window.cadViewer) {
+      window.cadViewer.selectedAssetId = p.id;
+      const targetPk = p.start_pk || p.pk;
+      if (targetPk) {
+        window.cadViewer.jumpToPk(targetPk, true);
+        if (window.chainageScrubber && Math.abs(window.chainageScrubber.currentPk - targetPk) > 10) {
+          window.chainageScrubber.setChainage(targetPk, true);
+        }
+      } else {
+        window.cadViewer.render();
+      }
     }
   }
   state.selectAsset = selectAsset;
+  window.selectAsset = selectAsset;
 
   function updateMilestoneButtonsUI(activeStatus) {
     const buttons = document.querySelectorAll('.btn-milestone');
@@ -731,6 +784,9 @@
   function hideDrawer() {
     setDrawerState('hidden');
   }
+  window.collapseDrawer = collapseDrawer;
+  window.expandDrawer = expandDrawer;
+  window.midDrawer = midDrawer;
 
   function toggleDrawer() {
     if (currentDrawerState === 'collapsed' || currentDrawerState === 'hidden') {
@@ -771,6 +827,10 @@
     }
     updateProgressHUD();
     renderAssets(); // Re-render to show updated progress colors
+    if (window.cadViewer) window.cadViewer.render();
+    if (window.chainageScrubber) window.chainageScrubber.queryNearbyFeatures();
+    if (window.projectDashboard) window.projectDashboard.render();
+
     if (showExplicitToast) {
       showToast(`Saved progress for ${p.short_code} (${status})`);
     } else {
@@ -789,9 +849,17 @@
         state.gpsWatchId = null;
       }
       state.isLocating = false;
+      state.userGpsLat = null;
+      state.userGpsLon = null;
+      state.userAccuracyM = null;
+      if (window.cadViewer) window.cadViewer.render();
+
       btn.classList.remove('active');
       document.getElementById('gpsStatusDot').classList.remove('active');
       document.getElementById('hudGpsState').textContent = 'GPS OFF';
+      document.getElementById('hudCurrentPk').textContent = '—';
+      document.getElementById('hudCurrentOffset').textContent = '—';
+      document.getElementById('hudAccuracy').textContent = '±0m';
       showToast('Live GPS Tracking Stopped');
 
       if (state.userGpsMarker) {
@@ -832,6 +900,10 @@
     const lon = pos.coords.longitude;
     const accuracy = pos.coords.accuracy;
 
+    state.userGpsLat = lat;
+    state.userGpsLon = lon;
+    state.userAccuracyM = accuracy;
+
     // Run Orthogonal Projection
     const proj = projectGpsToAlignment(lat, lon);
 
@@ -847,34 +919,43 @@
       document.getElementById('hudCurrentPk').textContent = `PK ${km}+${m.padStart(5, '0')}`;
       document.getElementById('hudCurrentOffset').textContent = sideText;
       document.getElementById('hudAccuracy').textContent = `±${Math.round(accuracy)}m`;
-      // Note: Auto-opening drawer during GPS tracking disabled per engineering directive
+
+      if (window.chainageScrubber) {
+        window.chainageScrubber.setChainage(proj.pk, true);
+      }
     }
 
-    // Update GPS Marker on Map
-    const latlng = [lat, lon];
-    if (!state.userGpsMarker) {
-      const pulseIcon = L.divIcon({
-        className: 'user-gps-pulse',
-        html: '<div style="width:16px;height:16px;border-radius:50%;background:#3B82F6;border:3px solid #FFFFFF;box-shadow:0 0 12px #3B82F6;"></div>',
-        iconSize: [16, 16],
-        iconAnchor: [8, 8]
-      });
-      state.userGpsMarker = L.marker(latlng, { icon: pulseIcon }).addTo(state.map);
-      state.userAccuracyCircle = L.circle(latlng, {
-        radius: accuracy,
-        color: '#3B82F6',
-        fillColor: '#3B82F6',
-        fillOpacity: 0.15,
-        weight: 1
-      }).addTo(state.map);
-    } else {
-      state.userGpsMarker.setLatLng(latlng);
-      state.userAccuracyCircle.setLatLng(latlng);
-      state.userAccuracyCircle.setRadius(accuracy);
+    if (window.cadViewer) {
+      window.cadViewer.render();
     }
 
-    // Follow user if close to track
-    state.map.panTo(latlng, { animate: true });
+    // Update GPS Marker on Leaflet Map
+    if (state.map) {
+      const latlng = [lat, lon];
+      if (!state.userGpsMarker) {
+        const pulseIcon = L.divIcon({
+          className: 'user-gps-pulse',
+          html: '<div style="width:16px;height:16px;border-radius:50%;background:#3B82F6;border:3px solid #FFFFFF;box-shadow:0 0 12px #3B82F6;"></div>',
+          iconSize: [16, 16],
+          iconAnchor: [8, 8]
+        });
+        state.userGpsMarker = L.marker(latlng, { icon: pulseIcon }).addTo(state.map);
+        state.userAccuracyCircle = L.circle(latlng, {
+          radius: accuracy,
+          color: '#3B82F6',
+          fillColor: '#3B82F6',
+          fillOpacity: 0.15,
+          weight: 1
+        }).addTo(state.map);
+      } else {
+        state.userGpsMarker.setLatLng(latlng);
+        state.userAccuracyCircle.setLatLng(latlng);
+        state.userAccuracyCircle.setRadius(accuracy);
+      }
+
+      // Follow user if close to track
+      state.map.panTo(latlng, { animate: true });
+    }
   }
 
   function onGpsLocationError(err) {
@@ -919,6 +1000,15 @@
   }
 
   function toggleMapBearing() {
+    if (state.activeView === 'cad' && window.cadViewer) {
+      const newMode = window.cadViewer.orientationMode === 'north' ? 'track' : 'north';
+      window.cadViewer.setOrientation(newMode);
+      const btnOrient = document.getElementById('btnCadOrientation');
+      if (btnOrient) btnOrient.textContent = newMode === 'track' ? 'North-Up' : 'Track-Up';
+      showToast(newMode === 'track' ? 'CAD Aligned to Track Heading' : 'CAD Aligned to True North');
+      return;
+    }
+
     if (!state.map || typeof state.map.setBearing !== 'function') return;
     const bearing = state.map.getBearing() || 0;
     const normalized = (bearing % 360 + 360) % 360;
@@ -1205,7 +1295,22 @@
       return;
     }
 
-    state.map.setView([closestPt.lat, closestPt.lon], 17, { animate: true });
+    if (state.map) {
+      try {
+        state.map.setView([closestPt.lat, closestPt.lon], 17, { animate: true });
+      } catch (e) {
+        console.warn('Leaflet setView error:', e);
+      }
+    }
+
+    if (window.cadViewer) {
+      window.cadViewer.jumpToPk(targetPk, true);
+    }
+
+    if (window.chainageScrubber) {
+      window.chainageScrubber.setChainage(targetPk, true);
+    }
+
     const km = Math.floor(targetPk / 1000);
     const m = Math.floor(targetPk % 1000);
     showToast(`Jumped to PK ${km}+${m.toString().padStart(3, '0')}`);
@@ -1317,6 +1422,19 @@
     renderAssets();
     updateProgressHUD();
 
+    if (window.cadViewer) {
+      window.cadViewer.fitBounds(sectionId);
+    }
+    if (window.chainageScrubber) {
+      window.chainageScrubber.updateRange();
+    }
+    if (window.projectDashboard) {
+      window.projectDashboard.render();
+    }
+    if (window.reportGenerator) {
+      window.reportGenerator.generateReport();
+    }
+
     if (shouldFitBounds && state.map) {
       fitMapToActiveSection();
     }
@@ -1340,6 +1458,160 @@
     }
   }
   window.fitMapToActiveSection = fitMapToActiveSection;
+
+  // --- 11.8. Primary View Stage Navigation & CAD Controls ---
+  function setActiveView(viewId) {
+    state.activeView = viewId;
+
+    // Update tab buttons
+    document.querySelectorAll('.btn-nav-tab').forEach(tab => {
+      if (tab.getAttribute('data-view') === viewId) {
+        tab.classList.add('active');
+      } else {
+        tab.classList.remove('active');
+      }
+    });
+
+    // Update panel containers
+    const panels = {
+      cad: document.getElementById('panelCadView'),
+      gis: document.getElementById('panelGisView'),
+      dashboard: document.getElementById('panelDashboardView'),
+      reports: document.getElementById('panelReportsView'),
+      data: document.getElementById('panelDataView')
+    };
+
+    Object.entries(panels).forEach(([key, el]) => {
+      if (!el) return;
+      if (key === viewId) {
+        el.classList.add('active');
+        el.style.display = 'flex';
+      } else {
+        el.classList.remove('active');
+        el.style.display = 'none';
+      }
+    });
+
+    // Refresh active view
+    if (viewId === 'cad') {
+      if (window.cadViewer) {
+        window.cadViewer.resize();
+        window.cadViewer.render();
+      }
+      if (window.chainageScrubber) {
+        window.chainageScrubber.queryNearbyFeatures();
+      }
+    } else if (viewId === 'gis') {
+      if (state.map) {
+        setTimeout(() => {
+          state.map.invalidateSize();
+          fitMapToActiveSection();
+        }, 60);
+      }
+    } else if (viewId === 'dashboard') {
+      if (window.projectDashboard) {
+        window.projectDashboard.render();
+      }
+    } else if (viewId === 'reports') {
+      if (window.reportGenerator) {
+        window.reportGenerator.generateReport();
+      }
+    }
+  }
+  window.setActiveView = setActiveView;
+
+  function setupViewNavigation() {
+    document.querySelectorAll('.btn-nav-tab').forEach(tab => {
+      tab.addEventListener('click', function () {
+        const view = this.getAttribute('data-view');
+        setActiveView(view);
+      });
+    });
+
+    window.addEventListener('resize', () => {
+      if (state.activeView === 'cad' && window.cadViewer) {
+        window.cadViewer.resize();
+      } else if (state.activeView === 'gis' && state.map) {
+        state.map.invalidateSize();
+      }
+    });
+
+    // Set initial view (defaults to CAD View)
+    setActiveView(state.activeView || 'cad');
+  }
+
+  function setupCadControls() {
+    const btnZoomIn = document.getElementById('btnCadZoomIn');
+    const btnZoomOut = document.getElementById('btnCadZoomOut');
+    const btnFit = document.getElementById('btnCadFit');
+    const btnOrient = document.getElementById('btnCadOrientation');
+    const btnLayers = document.getElementById('btnCadLayers');
+    const dropdownLayers = document.getElementById('cadLayersDropdown');
+
+    if (btnZoomIn) {
+      btnZoomIn.addEventListener('click', () => {
+        if (window.cadViewer) window.cadViewer.zoomIn();
+      });
+    }
+
+    if (btnZoomOut) {
+      btnZoomOut.addEventListener('click', () => {
+        if (window.cadViewer) window.cadViewer.zoomOut();
+      });
+    }
+
+    if (btnFit) {
+      btnFit.addEventListener('click', () => {
+        if (window.cadViewer) window.cadViewer.fitBounds(state.activeSection);
+      });
+    }
+
+    if (btnOrient) {
+      btnOrient.addEventListener('click', () => {
+        if (!window.cadViewer) return;
+        const newMode = window.cadViewer.orientationMode === 'north' ? 'track' : 'north';
+        window.cadViewer.setOrientation(newMode);
+        btnOrient.textContent = newMode === 'track' ? 'North-Up' : 'Track-Up';
+        showToast(newMode === 'track' ? 'CAD Aligned to Track Corridor' : 'CAD Aligned to True North');
+      });
+    }
+
+    if (btnLayers && dropdownLayers) {
+      btnLayers.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdownLayers.style.display = dropdownLayers.style.display === 'none' ? 'block' : 'none';
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!dropdownLayers.contains(e.target) && e.target !== btnLayers) {
+          dropdownLayers.style.display = 'none';
+        }
+      });
+
+      const layerMap = {
+        chkLayerGrid: 'grid',
+        chkLayerAlign: 'alignment',
+        chkLayerTicks: 'ticks',
+        chkLayerCulverts: 'culverts',
+        chkLayerDitches: 'ditches',
+        chkLayerChutes: 'chutes',
+        chkLayerRiprap: 'riprap',
+        chkLayerLabels: 'labels'
+      };
+
+      Object.entries(layerMap).forEach(([elemId, layerProp]) => {
+        const chk = document.getElementById(elemId);
+        if (chk) {
+          chk.addEventListener('change', (e) => {
+            if (window.cadViewer) {
+              window.cadViewer.layers[layerProp] = e.target.checked;
+              window.cadViewer.render();
+            }
+          });
+        }
+      });
+    }
+  }
 
   // --- 12. UI Event Listeners ---
   function setupEventListeners() {
@@ -1517,6 +1789,9 @@
   window.onExternalInspectionsUpdated = function () {
     updateProgressHUD();
     renderAssets();
+    if (window.cadViewer) window.cadViewer.render();
+    if (window.chainageScrubber) window.chainageScrubber.queryNearbyFeatures();
+    if (window.projectDashboard) window.projectDashboard.render();
     if (state.selectedAsset) {
       selectAsset(state.selectedAsset);
     }

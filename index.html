@@ -41,6 +41,13 @@
           <p id="lblSectionSubtitle">All Sections: Dawanau to Daura (PK 19+800 — 124+521)</p>
         </div>
       </div>
+      <nav class="primary-nav-tabs" id="primaryNavTabs">
+        <button type="button" class="btn-nav-tab active" data-view="cad" title="Minimal CAD/GIS Vector Field Viewer">📐 CAD View</button>
+        <button type="button" class="btn-nav-tab" data-view="gis" title="Satellite / GIS Basemap">🗺️ GIS Map</button>
+        <button type="button" class="btn-nav-tab" data-view="dashboard" title="Executive Project Dashboard">📊 Dashboard</button>
+        <button type="button" class="btn-nav-tab" data-view="reports" title="Automated Daily Site Report Generator">📝 Site Reports</button>
+        <button type="button" class="btn-nav-tab" data-view="data" title="Engineering Data Portability & Exchange">💾 Data Portability</button>
+      </nav>
       <div class="header-actions">
         <button id="btnCompass" class="btn-icon-text btn-compass" title="Map Bearing — Tap to toggle North (0°) / Track Corridor (315°)">
           <svg id="compassNeedleSvg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transition: transform 0.25s ease;">
@@ -169,8 +176,56 @@
     </div>
   </div>
 
-  <!-- 3. Fullscreen Interactive Map -->
-  <div id="map"></div>
+  <!-- 3. Modular View Stage -->
+  <main class="main-stage">
+    <!-- View 1: Minimal CAD/GIS Vector Engineering Viewer (Default) -->
+    <section class="view-panel active" id="panelCadView">
+      <div class="cad-viewport-container" id="cadViewportContainer">
+        <!-- Floating CAD Toolbar Controls -->
+        <div class="cad-floating-controls">
+          <button type="button" id="btnCadZoomIn" class="cad-ctrl-btn" title="Zoom In (+)">+</button>
+          <button type="button" id="btnCadZoomOut" class="cad-ctrl-btn" title="Zoom Out (−)">−</button>
+          <button type="button" id="btnCadFit" class="cad-ctrl-btn" title="Fit Corridor Bounds">Fit</button>
+          <button type="button" id="btnCadOrientation" class="cad-ctrl-btn" title="Toggle Track-Up / North-Up Orientation">Track-Up</button>
+          <div class="cad-layers-menu-wrap">
+            <button type="button" id="btnCadLayers" class="cad-ctrl-btn" title="Layer Visibility Toggles">Layers ▾</button>
+            <div class="cad-layers-dropdown" id="cadLayersDropdown" style="display:none;">
+              <label><input type="checkbox" id="chkLayerGrid" checked> Coordinate Grid</label>
+              <label><input type="checkbox" id="chkLayerAlign" checked> Track Centerline</label>
+              <label><input type="checkbox" id="chkLayerTicks" checked> Station Ticks (100m/1km)</label>
+              <label><input type="checkbox" id="chkLayerCulverts" checked> Cross Culverts</label>
+              <label><input type="checkbox" id="chkLayerDitches" checked> Toe & Side Ditches</label>
+              <label><input type="checkbox" id="chkLayerChutes" checked> Water Descents (Chutes)</label>
+              <label><input type="checkbox" id="chkLayerRiprap" checked> Riprap Armor</label>
+              <label><input type="checkbox" id="chkLayerLabels" checked> Station Labels</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Chainage Navigation Scrubber Bar & Proximity Inspector -->
+      <div id="scrubberMount" class="scrubber-mount"></div>
+    </section>
+
+    <!-- View 2: Leaflet GIS Basemap (Satellite / Dark Canvas) -->
+    <section class="view-panel" id="panelGisView" style="display:none;">
+      <div id="map"></div>
+    </section>
+
+    <!-- View 3: Executive Project Dashboard -->
+    <section class="view-panel" id="panelDashboardView" style="display:none;">
+      <div id="dashboardMount" class="dashboard-mount"></div>
+    </section>
+
+    <!-- View 4: Automated Site Reports Generator -->
+    <section class="view-panel" id="panelReportsView" style="display:none;">
+      <div id="reportsMount" class="reports-mount"></div>
+    </section>
+
+    <!-- View 5: Data Portability & Exchange -->
+    <section class="view-panel" id="panelDataView" style="display:none;">
+      <div id="dataExchangeMount" class="data-exchange-mount"></div>
+    </section>
+  </main>
 
   <!-- 4. Bottom Slide-Up Inspection & Progress Drawer -->
   <div class="drawer-container collapsed" id="inspectionDrawer">
@@ -311,25 +366,31 @@
   </div>
 
   <!-- Scripts -->
-  <!-- 1. Leaflet JS -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-  
-  <!-- 1.5. Leaflet Map Rotation Engine (Offline Bundled) -->
-  <script src="lib/leaflet-rotate.js?v=20260907_6"></script>
+  <!-- 0. Project Hierarchy & Extensible Multi-Section Manifest -->
+  <script src="manifest.js?v=20260910_1"></script>
 
-  <!-- 2. SheetJS (Excel Export) -->
+  <!-- 1. Pre-compiled Alignment Splines & Drainage Assets Data (Offline Bundles) -->
+  <script src="data/bundle.js?v=20260910_1"></script>
+  <script src="data/section02_bundle.js?v=20260910_1"></script>
+
+  <!-- 2. GIS & Utility Libraries -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="lib/leaflet-rotate.js?v=20260907_6"></script>
   <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
 
-  <!-- 3. Pre-compiled Alignment & Drainage Assets Data (Works offline / file://) -->
-  <script src="data/bundle.js?v=20260909_1"></script>
-  <script src="data/section02_bundle.js?v=20260909_1"></script>
+  <!-- 3. Cloud Sync Engine -->
+  <script src="config.js?v=20260910_1"></script>
+  <script src="sync.js?v=20260910_1"></script>
 
-  <!-- 3.5. Cloud Database Config & Offline-First Sync Engine -->
-  <script src="config.js?v=20260909_1"></script>
-  <script src="sync.js?v=20260909_1"></script>
+  <!-- 4. Specialized Engineering Views & Navigation Engines -->
+  <script src="cad_viewer.js?v=20260910_1"></script>
+  <script src="scrubber.js?v=20260910_1"></script>
+  <script src="dashboard.js?v=20260910_1"></script>
+  <script src="reports.js?v=20260910_1"></script>
+  <script src="data_exchange.js?v=20260910_1"></script>
 
-  <!-- 4. Core Application Logic -->
-  <script src="app.js?v=20260909_1"></script>
+  <!-- 5. Core Application Logic & View Coordinator -->
+  <script src="app.js?v=20260910_1"></script>
 
 </body>
 </html>
