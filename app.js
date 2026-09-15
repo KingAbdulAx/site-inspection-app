@@ -440,13 +440,13 @@
 
     if (filter === 'ditches') {
       const isChan = p.category === 'Diversion Channel' || p.category === 'Open Channel' || (p.typology && p.typology.toLowerCase().includes('channel')) || (p.typology_code && p.typology_code.toLowerCase().includes('chan'));
-      return !isChan && p.category !== 'Cross Drainage' && p.category !== 'Overhead Crossing' && p.category !== 'Underpass' && p.category !== 'Riprap Protection' && p.category !== 'Water Descent' && p.category !== 'Energy Dissipator';
+      return !isChan && p.category !== 'Structure' && p.category !== 'Cross Drainage' && p.category !== 'Overhead Crossing' && p.category !== 'Underpass' && p.category !== 'Riprap Protection' && p.category !== 'Water Descent' && p.category !== 'Energy Dissipator';
     }
     if (filter === 'channels') {
       return p.category === 'Diversion Channel' || p.category === 'Open Channel' || (p.typology && p.typology.toLowerCase().includes('channel')) || (p.typology_code && p.typology_code.toLowerCase().includes('chan'));
     }
     if (filter === 'structures') {
-      return p.category === 'Cross Drainage' || p.category === 'Overhead Crossing' || p.category === 'Underpass';
+      return p.category === 'Structure' || p.category === 'Cross Drainage' || p.category === 'Overhead Crossing' || p.category === 'Underpass';
     }
     if (filter === 'slope_protection') {
       return p.category === 'Riprap Protection' || p.category === 'Water Descent' || p.category === 'Energy Dissipator';
@@ -884,6 +884,7 @@
     }
     updateProgressHUD();
     renderAssets(); // Re-render to show updated progress colors
+    if (window.sldViewer && typeof window.sldViewer.render === 'function') window.sldViewer.render();
     if (window.cadViewer) window.cadViewer.render();
     if (window.chainageScrubber) window.chainageScrubber.queryNearbyFeatures();
     if (window.projectDashboard) window.projectDashboard.render();
@@ -2063,7 +2064,8 @@
         const opt = document.createElement('option');
         opt.value = t.typology;
         opt.textContent = `[${t.short_code}] ${t.typology}`;
-        opt.setAttribute('data-code', t.code);
+        opt.setAttribute('data-code', t.short_code);
+        opt.setAttribute('data-typology-code', t.code);
         opt.setAttribute('data-side', t.sideDefault);
         opt.setAttribute('data-lane', t.lane);
         opt.setAttribute('data-point', t.is_point ? '1' : '0');
@@ -2240,8 +2242,26 @@
         const drawing = document.getElementById('editTxtDrawing').value.trim();
         const notes = document.getElementById('editTxtNotes').value.trim();
 
+        if (isNaN(sPk) || sPk < 1000) {
+          alert('Please enter a valid start chainage (e.g. 84+200 or 84200)');
+          return;
+        }
+
+        if (!isPoint && (isNaN(ePk) || ePk < 1000)) {
+          alert('Please enter a valid end chainage (e.g. 84+350 or 84350)');
+          return;
+        }
+
+        if (!isPoint && Math.abs(sPk - ePk) < 0.5) {
+          alert('For linear structures, start and end chainage must be different.');
+          return;
+        }
+
+        const typologyCode = (opt && opt.getAttribute('data-typology-code')) || state.selectedAsset.properties.typology_code || '';
+
         const updatedFields = {
           typology,
+          typology_code: typologyCode,
           short_code: shortCode,
           category,
           color,
@@ -2363,8 +2383,21 @@
           return;
         }
 
+        if (!isPoint && (isNaN(ePk) || ePk < 1000)) {
+          alert('Please enter a valid end chainage (e.g. 84+350 or 84350)');
+          return;
+        }
+
+        if (!isPoint && Math.abs(sPk - ePk) < 0.5) {
+          alert('For linear structures, start and end chainage must be different.');
+          return;
+        }
+
+        const typologyCode = (opt && opt.getAttribute('data-typology-code')) || '';
+
         editMgr.addStructure({
           typology,
+          typology_code: typologyCode,
           short_code: shortCode,
           category,
           color,
@@ -2397,6 +2430,7 @@
   window.onExternalInspectionsUpdated = function () {
     updateProgressHUD();
     renderAssets();
+    if (window.sldViewer && typeof window.sldViewer.render === 'function') window.sldViewer.render();
     if (window.cadViewer) window.cadViewer.render();
     if (window.chainageScrubber) window.chainageScrubber.queryNearbyFeatures();
     if (window.projectDashboard) window.projectDashboard.render();

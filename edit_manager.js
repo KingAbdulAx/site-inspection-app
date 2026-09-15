@@ -394,31 +394,53 @@
   }
 
   // --- 3. Geometric Centerline Spatial Projection ---
+  function getCenterlinePoints(pk) {
+    if (pk < 82902 && window.SECTION02_CENTERLINE && window.SECTION02_CENTERLINE.dense_points) {
+      return window.SECTION02_CENTERLINE.dense_points;
+    }
+    if (window.SECTION03_CENTERLINE && window.SECTION03_CENTERLINE.dense_points) {
+      return window.SECTION03_CENTERLINE.dense_points;
+    }
+    if (window.SECTION02_CENTERLINE && window.SECTION02_CENTERLINE.dense_points) {
+      return window.SECTION02_CENTERLINE.dense_points;
+    }
+    return [];
+  }
+
+  function interpolateCenterline(targetPk) {
+    const pts = getCenterlinePoints(targetPk);
+    if (!pts || pts.length === 0) {
+      return { pk: targetPk, lon: 8.3948, lat: 12.6328, bearing: 0 };
+    }
+    if (targetPk <= pts[0].pk) return pts[0];
+    if (targetPk >= pts[pts.length - 1].pk) return pts[pts.length - 1];
+
+    for (let i = 0; i < pts.length - 1; i++) {
+      if (pts[i].pk <= targetPk && targetPk <= pts[i + 1].pk) {
+        const p0 = pts[i];
+        const p1 = pts[i + 1];
+        const span = p1.pk - p0.pk;
+        const t = span === 0 ? 0 : (targetPk - p0.pk) / span;
+
+        let diff = (p1.bearing || 0) - (p0.bearing || 0);
+        while (diff < -180) diff += 360;
+        while (diff > 180) diff -= 360;
+        const bearing = ((p0.bearing || 0) + t * diff + 360) % 360;
+
+        return {
+          pk: targetPk,
+          lon: p0.lon + t * (p1.lon - p0.lon),
+          lat: p0.lat + t * (p1.lat - p0.lat),
+          bearing: p0.bearing !== undefined ? Math.round(bearing * 100) / 100 : (p0.bearing || 0)
+        };
+      }
+    }
+    return pts[0];
+  }
+
   function computeGeometryForPk(startPk, endPk, isPoint, side, customOffsetM) {
     const sPk = Math.min(startPk, endPk);
     const ePk = Math.max(startPk, endPk);
-
-    // Pick appropriate centerline based on chainage
-    let centerline = null;
-    if (sPk < 82902 && window.SECTION02_CENTERLINE) {
-      centerline = window.SECTION02_CENTERLINE;
-    } else if (window.SECTION03_CENTERLINE) {
-      centerline = window.SECTION03_CENTERLINE;
-    } else if (window.SECTION02_CENTERLINE) {
-      centerline = window.SECTION02_CENTERLINE;
-    }
-
-    if (!centerline || !centerline.dense_points || centerline.dense_points.length === 0) {
-      // Fallback coordinate approximation
-      const baseLat = 12.6328;
-      const baseLon = 8.3948;
-      if (isPoint) {
-        return { type: 'Point', coordinates: [baseLon, baseLat] };
-      }
-      return { type: 'LineString', coordinates: [[baseLon, baseLat], [baseLon + 0.001, baseLat + 0.001]] };
-    }
-
-    const pts = centerline.dense_points;
 
     // Helper: offset a single point perpendicular to bearing
     function offsetPoint(pt, distM) {
@@ -441,15 +463,7 @@
 
     // A. Cross-drainage culvert point structure (LineString spanning track from Left to Right)
     if (isPoint && (side === 'Center' || side === 'Cross')) {
-      let closestPt = pts[0];
-      let minDiff = Infinity;
-      for (let i = 0; i < pts.length; i++) {
-        const diff = Math.abs(pts[i].pk - sPk);
-        if (diff < minDiff) {
-          minDiff = diff;
-          closestPt = pts[i];
-        }
-      }
+      const closestPt = interpolateCenterline(sPk);
       const bearingRad = ((closestPt.bearing || 0) * Math.PI) / 180.0;
       const latRad = (closestPt.lat * Math.PI) / 180.0;
       const spanM = 15.0; // 15m culvert wingwall to wingwall span across track
@@ -474,15 +488,7 @@
 
     // B. Point structure (Dissipator, Cascade, Manhole, Boundary)
     if (isPoint) {
-      let closestPt = pts[0];
-      let minDiff = Infinity;
-      for (let i = 0; i < pts.length; i++) {
-        const diff = Math.abs(pts[i].pk - sPk);
-        if (diff < minDiff) {
-          minDiff = diff;
-          closestPt = pts[i];
-        }
-      }
+      const closestPt = interpolateCenterline(sPk);
       return {
         type: 'Point',
         coordinates: offsetPoint(closestPt, offset)
@@ -490,29 +496,35 @@
     }
 
     // C. Linear structure (Ditch, Channel, Riprap)
-    // Collect all centerline points between sPk and ePk
-    const coords = [];
-    for (let i = 0; i < pts.length; i++) {
-      const p = pts[i];
-      if (p.pk >= sPk - 25 && p.pk <= ePk + 25) {
-        coords.push(offsetPoint(p, offset));
-      }
-    }
+    // Starts exactly at sPk, includes intermediate vertices, terminates exactly at ePk
+    const startPt = interpolateCenterline(sPk);
+    const endPt = interpolateCenterline(ePk);
+    const coords = [offsetPoint(startPt, offset)];
 
-    if (coords.length < 2) {
-      // Find two bounding points
-      let before = pts[0];
-      let after = pts[pts.length - 1];
-      for (let i = 0; i < pts.length; i++) {
-        if (pts[i].pk <= sPk) before = pts[i];
-        if (pts[i].pk >= ePk) {
-          after = pts[i];
-          break;
+    const intermediatePoints = [];
+    if (window.SECTION02_CENTERLINE && window.SECTION02_CENTERLINE.dense_points && sPk < 82902) {
+      const s02Pts = window.SECTION02_CENTERLINE.dense_points;
+      for (let i = 0; i < s02Pts.length; i++) {
+        if (s02Pts[i].pk > sPk && s02Pts[i].pk < ePk) {
+          intermediatePoints.push(s02Pts[i]);
         }
       }
-      coords.push(offsetPoint(before, offset));
-      coords.push(offsetPoint(after, offset));
     }
+    if (window.SECTION03_CENTERLINE && window.SECTION03_CENTERLINE.dense_points && ePk >= 82800) {
+      const s03Pts = window.SECTION03_CENTERLINE.dense_points;
+      for (let i = 0; i < s03Pts.length; i++) {
+        if (s03Pts[i].pk > sPk && s03Pts[i].pk < ePk) {
+          if (!intermediatePoints.some(p => Math.abs(p.pk - s03Pts[i].pk) < 1.0)) {
+            intermediatePoints.push(s03Pts[i]);
+          }
+        }
+      }
+    }
+    intermediatePoints.sort((a, b) => a.pk - b.pk);
+    for (let i = 0; i < intermediatePoints.length; i++) {
+      coords.push(offsetPoint(intermediatePoints[i], offset));
+    }
+    coords.push(offsetPoint(endPt, offset));
 
     return {
       type: 'LineString',
@@ -527,32 +539,45 @@
     constructor() {
       this.isEditMode = false;
       this.edits = {
-        created: {}, // { [id]: GeoJSONFeature }
-        updated: {}, // { [id]: { properties: {...}, geometry?: {...} } }
-        deleted: []  // [ id1, id2, ... ]
+        created: {},  // { [id]: GeoJSONFeature }
+        updated: {},  // { [id]: { properties: {...}, geometry?: {...}, updated_at: ... } }
+        deleted: {},  // { [id]: ISOString }
+        reverted: {}  // { [id]: ISOString }
       };
       this.loadEdits();
     }
 
     loadEdits() {
       try {
+        if (typeof localStorage === 'undefined' || typeof localStorage.getItem !== 'function') return;
         const raw = localStorage.getItem(STORAGE_KEY_EDITS);
         if (raw) {
           const parsed = JSON.parse(raw);
+          let deleted = {};
+          if (Array.isArray(parsed.deleted)) {
+            parsed.deleted.forEach(id => {
+              deleted[id] = new Date().toISOString();
+            });
+          } else if (parsed.deleted && typeof parsed.deleted === 'object') {
+            deleted = parsed.deleted;
+          }
+
           this.edits = {
             created: parsed.created || {},
             updated: parsed.updated || {},
-            deleted: Array.isArray(parsed.deleted) ? parsed.deleted : []
+            deleted: deleted,
+            reverted: parsed.reverted || {}
           };
         }
       } catch (e) {
         console.warn('Error loading structure edits from localStorage:', e);
-        this.edits = { created: {}, updated: {}, deleted: [] };
+        this.edits = { created: {}, updated: {}, deleted: {}, reverted: {} };
       }
     }
 
     saveEdits() {
       try {
+        if (typeof localStorage === 'undefined' || typeof localStorage.setItem !== 'function') return;
         localStorage.setItem(STORAGE_KEY_EDITS, JSON.stringify(this.edits));
       } catch (e) {
         console.error('Error saving structure edits to localStorage:', e);
@@ -639,6 +664,7 @@
       const txtStartPk = document.getElementById('editTxtStartPk');
       const txtEndPk = document.getElementById('editTxtEndPk');
       const chkIsPoint = document.getElementById('editChkIsPoint');
+      const grpEnd = document.getElementById('groupEditEndPk');
       const selSide = document.getElementById('editSelectSide');
       const selLane = document.getElementById('editSelectLane');
       const txtSpecs = document.getElementById('editTxtSpecs');
@@ -649,7 +675,6 @@
       const lblCustomBadge = document.getElementById('editCustomBadge');
 
       if (selTypology) {
-        // Find matching option or set custom
         let found = false;
         for (let i = 0; i < selTypology.options.length; i++) {
           if (selTypology.options[i].value === p.typology || selTypology.options[i].text.includes(p.short_code)) {
@@ -664,8 +689,23 @@
       if (txtStartPk) txtStartPk.value = formatPk(p.start_pk || p.pk || 0);
       if (txtEndPk) txtEndPk.value = formatPk(p.end_pk || p.start_pk || p.pk || 0);
       if (chkIsPoint) chkIsPoint.checked = !!p.is_point;
+      if (grpEnd) grpEnd.style.display = p.is_point ? 'none' : 'block';
       if (selSide) selSide.value = p.side || 'Left';
-      if (selLane) selLane.value = p.lane || 'Shoulder';
+
+      // Infer physical lane from typology/category if not explicitly recorded
+      const inferredLane = p.lane || (function () {
+        const cat = (p.category || '').toLowerCase();
+        const typ = (p.typology || '').toLowerCase();
+        const code = (p.short_code || '').toLowerCase();
+        if (cat.includes('channel') || typ.includes('channel') || code.includes('chan')) return 'Channel';
+        if (cat.includes('crest') || typ.includes('crest') || code.includes('type 5') || code.includes('type 11')) return 'Crest';
+        if (cat.includes('berm') || typ.includes('bench') || typ.includes('berm') || code.includes('type 8')) return 'Bench';
+        if (cat.includes('toe') || typ.includes('foot of slope') || typ.includes('toe') || code.includes('type 7') || code.includes('type 4') || code.includes('type 12') || code.includes('riprap') || cat.includes('riprap') || cat.includes('dissipator')) return 'Toe';
+        if (cat.includes('cross') || (p.is_point && p.side === 'Center')) return 'Centerline';
+        return 'Shoulder';
+      })();
+      if (selLane) selLane.value = inferredLane;
+
       if (txtSpecs) txtSpecs.value = p.specs || '';
       if (txtDrawing) txtDrawing.value = p.drawing_ref || '';
       if (txtNotes) txtNotes.value = p.notes || '';
@@ -734,6 +774,7 @@
           position: `${side} (${lane})`,
           lane: lane,
           typology: data.typology || catEntry.typology || 'Custom Drainage Structure',
+          typology_code: data.typology_code || catEntry.code || '',
           short_code: shortCode,
           category: category,
           color: color,
@@ -749,6 +790,9 @@
         },
         geometry: geometry
       };
+
+      if (this.edits.deleted && this.edits.deleted[newId]) delete this.edits.deleted[newId];
+      if (this.edits.reverted && this.edits.reverted[newId]) delete this.edits.reverted[newId];
 
       this.edits.created[newId] = feature;
       this.saveEdits();
@@ -791,8 +835,12 @@
           p.pk = sPk;
           p.length_m = p.is_point ? 0 : Math.round(Math.abs(ePk - sPk) * 100) / 100;
           p.chainage_str = formatChainageStr(sPk, p.end_pk, p.is_point);
+          p.section = sPk < 82902 ? '02' : '03';
           feat.geometry = computeGeometryForPk(sPk, p.end_pk, p.is_point, p.side, p.offsetM);
         }
+
+        if (this.edits.reverted && this.edits.reverted[id]) delete this.edits.reverted[id];
+        if (this.edits.deleted && this.edits.deleted[id]) delete this.edits.deleted[id];
 
         this.saveEdits();
         if (window.syncEngine && window.syncEngine.queueStructureEdit) {
@@ -828,13 +876,18 @@
           p.pk = sPk;
           p.length_m = p.is_point ? 0 : Math.round(Math.abs(ePk - sPk) * 100) / 100;
           p.chainage_str = formatChainageStr(sPk, p.end_pk, p.is_point);
+          p.section = sPk < 82902 ? '02' : '03';
           rec.properties.start_pk = p.start_pk;
           rec.properties.end_pk = p.end_pk;
           rec.properties.length_m = p.length_m;
           rec.properties.chainage_str = p.chainage_str;
+          rec.properties.section = p.section;
           rec.geometry = computeGeometryForPk(sPk, p.end_pk, p.is_point, p.side, p.offsetM);
         }
       }
+
+      if (this.edits.reverted && this.edits.reverted[id]) delete this.edits.reverted[id];
+      if (this.edits.deleted && this.edits.deleted[id]) delete this.edits.deleted[id];
 
       this.saveEdits();
 
@@ -856,14 +909,22 @@
 
     // --- 7. Delete Structure ---
     deleteStructure(id) {
+      const nowIso = new Date().toISOString();
+
       if (this.edits.created[id]) {
         delete this.edits.created[id];
-      } else {
-        if (!this.edits.deleted.includes(id)) {
-          this.edits.deleted.push(id);
-        }
+      }
+      if (this.edits.updated[id]) {
         delete this.edits.updated[id];
       }
+      if (this.edits.reverted && this.edits.reverted[id]) {
+        delete this.edits.reverted[id];
+      }
+
+      if (!this.edits.deleted || Array.isArray(this.edits.deleted)) {
+        this.edits.deleted = {};
+      }
+      this.edits.deleted[id] = nowIso;
 
       this.saveEdits();
 
@@ -887,10 +948,19 @@
 
     // --- 8. Revert Modified Structure to Design ---
     revertStructure(id) {
+      const nowIso = new Date().toISOString();
+
       if (this.edits.updated[id]) {
         delete this.edits.updated[id];
       }
-      this.edits.deleted = this.edits.deleted.filter(dId => dId !== id);
+      if (this.edits.deleted && this.edits.deleted[id]) {
+        delete this.edits.deleted[id];
+      }
+
+      if (!this.edits.reverted) {
+        this.edits.reverted = {};
+      }
+      this.edits.reverted[id] = nowIso;
 
       this.saveEdits();
 
@@ -910,32 +980,48 @@
     }
 
     isModified(id) {
-      return !!this.edits.updated[id];
+      return !this.isDeleted(id) && !!this.edits.updated[id];
     }
 
     isCreated(id) {
-      return !!this.edits.created[id];
+      return !this.isDeleted(id) && !!this.edits.created[id];
+    }
+
+    isDeleted(id) {
+      if (!this.edits.deleted) return false;
+      if (Array.isArray(this.edits.deleted)) return this.edits.deleted.includes(id);
+      return !!this.edits.deleted[id];
     }
 
     // --- 9. Merging Edits into Active Features ---
     applyEditsToFeatures(baseFeatures, activeSection) {
       if (!Array.isArray(baseFeatures)) return [];
 
-      const deletedSet = new Set(this.edits.deleted);
+      const merged = [];
+      const baseIdSet = new Set();
 
       // 1. Filter out deleted features and apply updates to base features
-      const merged = [];
       for (let i = 0; i < baseFeatures.length; i++) {
         const f = baseFeatures[i];
         const fid = f.properties && f.properties.id;
-        if (deletedSet.has(fid)) continue;
+        if (fid) baseIdSet.add(fid);
+
+        if (this.isDeleted(fid)) continue;
 
         if (this.edits.updated[fid]) {
           const mod = this.edits.updated[fid];
+          const mergedProps = Object.assign({}, f.properties, mod.properties);
+          const effSection = mergedProps.section || (mergedProps.start_pk < 82902 ? '02' : '03');
+
+          // If this feature was moved out of activeSection, omit from this section view
+          if (activeSection !== 'all' && effSection !== activeSection) {
+            continue;
+          }
+
           const updatedFeature = {
             type: 'Feature',
             id: fid,
-            properties: Object.assign({}, f.properties, mod.properties),
+            properties: mergedProps,
             geometry: mod.geometry || f.geometry
           };
           merged.push(updatedFeature);
@@ -944,12 +1030,31 @@
         }
       }
 
-      // 2. Append user-created features
+      // 2. Append base features from another section that were moved INTO activeSection
+      if (activeSection !== 'all') {
+        for (const [uid, mod] of Object.entries(this.edits.updated)) {
+          if (this.isDeleted(uid)) continue;
+          if (this.edits.created[uid]) continue; // handled in step 3
+          if (baseIdSet.has(uid)) continue; // already processed in step 1
+
+          const movedFeat = this.getFeatureById(uid);
+          if (!movedFeat) continue;
+
+          const p = movedFeat.properties;
+          const effSection = p.section || (p.start_pk < 82902 ? '02' : '03');
+          if (effSection === activeSection) {
+            merged.push(movedFeat);
+          }
+        }
+      }
+
+      // 3. Append user-created features
       for (const [cid, custFeat] of Object.entries(this.edits.created)) {
-        if (deletedSet.has(cid)) continue;
+        if (this.isDeleted(cid)) continue;
         const p = custFeat.properties;
-        if (activeSection === '02' && p.section !== '02') continue;
-        if (activeSection === '03' && p.section !== '03') continue;
+        const effSection = p.section || (p.start_pk < 82902 ? '02' : '03');
+        if (activeSection === '02' && effSection !== '02') continue;
+        if (activeSection === '03' && effSection !== '03') continue;
         merged.push(custFeat);
       }
 
@@ -963,10 +1068,10 @@
     }
 
     getFeatureById(id) {
+      if (this.isDeleted(id)) return null;
       if (this.edits.created[id]) return this.edits.created[id];
       const base = this._getBaseFeatureById(id);
       if (!base) return null;
-      if (this.edits.deleted.includes(id)) return null;
       if (this.edits.updated[id]) {
         return {
           type: 'Feature',
@@ -994,18 +1099,26 @@
 
     // --- 10. Supabase Sync Payload Packaging ---
     getSyncPayload(featureId) {
+      if (this.edits.reverted && this.edits.reverted[featureId]) {
+        return {
+          action: 'REVERT',
+          feature: { id: featureId },
+          updated_at: this.edits.reverted[featureId]
+        };
+      }
+      if (this.isDeleted(featureId)) {
+        const delTime = (this.edits.deleted && typeof this.edits.deleted === 'object' && !Array.isArray(this.edits.deleted) && this.edits.deleted[featureId]) || new Date().toISOString();
+        return {
+          action: 'DELETE',
+          feature: { id: featureId },
+          updated_at: delTime
+        };
+      }
       if (this.edits.created[featureId]) {
         return {
           action: 'CREATE',
           feature: this.edits.created[featureId],
           updated_at: this.edits.created[featureId].properties.updated_at
-        };
-      }
-      if (this.edits.deleted.includes(featureId)) {
-        return {
-          action: 'DELETE',
-          feature: { id: featureId },
-          updated_at: new Date().toISOString()
         };
       }
       if (this.edits.updated[featureId]) {
@@ -1029,18 +1142,34 @@
         localTime = new Date(this.edits.created[fid].properties.updated_at || 0).getTime();
       } else if (this.edits.updated[fid]) {
         localTime = new Date(this.edits.updated[fid].updated_at || 0).getTime();
+      } else if (this.isDeleted(fid)) {
+        const delIso = (this.edits.deleted && typeof this.edits.deleted === 'object' && !Array.isArray(this.edits.deleted) && this.edits.deleted[fid]) || 0;
+        localTime = new Date(delIso).getTime();
+      } else if (this.edits.reverted && this.edits.reverted[fid]) {
+        localTime = new Date(this.edits.reverted[fid]).getTime();
       }
 
       // Conflict Resolution: Last-Write-Wins based on timestamp
       if (localTime > cloudTime) {
-        return false; // Local is newer
+        return false; // Local change is newer; reject stale cloud edit
       }
 
-      if (action === 'CREATE' && editPayload.data) {
+      if (action === 'REVERT') {
+        delete this.edits.updated[fid];
+        if (this.edits.deleted && this.edits.deleted[fid]) delete this.edits.deleted[fid];
+        if (!this.edits.reverted) this.edits.reverted = {};
+        this.edits.reverted[fid] = cloudUpdatedAt || new Date().toISOString();
+        this.saveEdits();
+        return true;
+      } else if (action === 'CREATE' && editPayload.data) {
+        if (this.edits.deleted && this.edits.deleted[fid]) delete this.edits.deleted[fid];
+        if (this.edits.reverted && this.edits.reverted[fid]) delete this.edits.reverted[fid];
         this.edits.created[fid] = editPayload.data;
         this.saveEdits();
         return true;
       } else if (action === 'UPDATE' && editPayload.data) {
+        if (this.edits.deleted && this.edits.deleted[fid]) delete this.edits.deleted[fid];
+        if (this.edits.reverted && this.edits.reverted[fid]) delete this.edits.reverted[fid];
         if (this.edits.created[fid]) {
           this.edits.created[fid] = editPayload.data;
         } else {
@@ -1055,9 +1184,9 @@
       } else if (action === 'DELETE') {
         delete this.edits.created[fid];
         delete this.edits.updated[fid];
-        if (!this.edits.deleted.includes(fid)) {
-          this.edits.deleted.push(fid);
-        }
+        if (this.edits.reverted && this.edits.reverted[fid]) delete this.edits.reverted[fid];
+        if (!this.edits.deleted || Array.isArray(this.edits.deleted)) this.edits.deleted = {};
+        this.edits.deleted[fid] = cloudUpdatedAt || new Date().toISOString();
         this.saveEdits();
         return true;
       }
@@ -1069,6 +1198,7 @@
   window.DRAINAGE_TYPOLOGIES = DRAINAGE_TYPOLOGIES;
   window.editManager = new EditManager();
   window.computeGeometryForPk = computeGeometryForPk;
+  window.interpolateCenterline = interpolateCenterline;
   window.parsePk = parsePk;
   window.formatPk = formatPk;
 })();

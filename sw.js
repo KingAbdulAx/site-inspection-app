@@ -4,9 +4,9 @@
  * Bypasses cache for Supabase REST synchronization.
  */
 
-const CACHE_NAME = 'kmd-drainage-cache-v1';
+const CACHE_NAME = 'kmd-drainage-cache-v2';
 
-const PRECACHE_ASSETS = [
+const PRECACHE_LOCAL_ASSETS = [
   './',
   './index.html',
   './styles.css',
@@ -22,14 +22,26 @@ const PRECACHE_ASSETS = [
   './reports.js',
   './data_exchange.js',
   './app.js',
+  './lib/leaflet-rotate.js',
   './data/bundle.js',
   './data/section02_bundle.js'
 ];
 
+const EXTERNAL_VENDOR_ASSETS = [
+  'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css',
+  'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js',
+  'https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js'
+];
+
 self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => {
-      return cache.addAll(PRECACHE_ASSETS);
+    caches.open(CACHE_NAME).then(async cache => {
+      await cache.addAll(PRECACHE_LOCAL_ASSETS);
+      try {
+        await cache.addAll(EXTERNAL_VENDOR_ASSETS);
+      } catch (err) {
+        console.warn('Vendor asset precache deferred to runtime:', err);
+      }
     }).then(() => self.skipWaiting())
   );
 });
@@ -53,19 +65,21 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  // 2. Local assets: Cache first with network fallback
+  // 2. GET requests: Cache-first with ignoreSearch: true (handles cache buster query strings)
   if (event.request.method === 'GET') {
     event.respondWith(
-      caches.match(event.request).then(cachedResponse => {
+      caches.match(event.request, { ignoreSearch: true }).then(cachedResponse => {
         if (cachedResponse) {
-          // Fetch fresh copy in background to keep cache up to date
+          // Revalidate in background when online
           fetch(event.request).then(networkResponse => {
             if (networkResponse && networkResponse.status === 200) {
-              caches.open(CACHE_NAME).then(cache => cache.put(event.request, networkResponse));
+              const resClone = networkResponse.clone();
+              caches.open(CACHE_NAME).then(cache => cache.put(event.request, resClone));
             }
           }).catch(() => {});
           return cachedResponse;
         }
+
         return fetch(event.request).then(networkResponse => {
           if (networkResponse && networkResponse.status === 200) {
             const resClone = networkResponse.clone();
@@ -73,9 +87,9 @@ self.addEventListener('fetch', event => {
           }
           return networkResponse;
         }).catch(() => {
-          // Offline fallback
+          // Offline navigation fallback
           if (event.request.mode === 'navigate') {
-            return caches.match('./index.html');
+            return caches.match('./index.html', { ignoreSearch: true });
           }
         });
       })

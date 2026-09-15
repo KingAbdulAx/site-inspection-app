@@ -265,6 +265,13 @@
 
     // Determine lateral lane offset for a feature based on drawing layout & DW-10003
     getFeatureLane(p) {
+      if (p.lane) {
+        const l = p.lane.toLowerCase();
+        if (this.laneOffsets[l] !== undefined) {
+          return this.laneOffsets[l];
+        }
+      }
+
       const cat = (p.category || '').toLowerCase();
       const typ = (p.typology || '').toLowerCase();
       const code = (p.typology_code || p.short_code || '').toLowerCase();

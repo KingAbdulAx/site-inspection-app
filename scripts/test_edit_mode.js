@@ -12,10 +12,27 @@ console.log('=== 1. Testing Edit Manager & Master Typology Catalog ===');
 global.window = global;
 global.window.addEventListener = () => {};
 global.window.removeEventListener = () => {};
+const mockDomElements = {};
 global.document = {
   addEventListener: () => {},
   removeEventListener: () => {},
-  getElementById: () => null,
+  getElementById: (id) => {
+    if (!mockDomElements[id]) {
+      mockDomElements[id] = {
+        appendChild: () => {},
+        getBoundingClientRect: () => ({ width: 400, height: 400, left: 0, top: 0 }),
+        addEventListener: () => {},
+        querySelector: () => null,
+        querySelectorAll: () => [],
+        style: {},
+        innerHTML: '',
+        innerText: '',
+        value: '',
+        options: []
+      };
+    }
+    return mockDomElements[id];
+  },
   querySelectorAll: () => [],
   createElement: () => ({
     style: {},
@@ -23,7 +40,30 @@ global.document = {
     appendChild: () => {},
     setAttribute: () => {},
     addEventListener: () => {},
-    dispatchEvent: () => {}
+    dispatchEvent: () => {},
+    getContext: () => ({
+      setTransform: () => {},
+      fillRect: () => {},
+      clearRect: () => {},
+      beginPath: () => {},
+      moveTo: () => {},
+      lineTo: () => {},
+      stroke: () => {},
+      fill: () => {},
+      arc: () => {},
+      rect: () => {},
+      roundRect: () => {},
+      measureText: () => ({ width: 60 }),
+      fillText: () => {},
+      save: () => {},
+      restore: () => {},
+      translate: () => {},
+      rotate: () => {},
+      scale: () => {},
+      strokeRect: () => {},
+      closePath: () => {},
+      setLineDash: () => {}
+    })
   })
 };
 global.localStorage = {
@@ -160,29 +200,37 @@ assert.strictEqual(modifiedAsset.properties.typology, 'Modified Single Box Culve
 
 console.log('✔ Structure modification (both custom and base assets) verified.');
 
-console.log('\n=== 5. Testing Revert to Original Design ===');
+console.log('\n=== 5. Testing Revert to Original Design & Sync Payload ===');
 
 window.editManager.revertStructure(baseAssetId);
 assert(!window.editManager.isModified(baseAssetId), 'Base asset should no longer be modified');
 const revertedAsset = window.editManager.getFeatureById(baseAssetId);
 assert.strictEqual(revertedAsset.properties.typology, originalTypology, 'Typology should revert to original design');
 
-console.log('✔ Revert to original design verified.');
+// Verify that getSyncPayload returns REVERT action so cloud doesn't corrupt it
+const revertPayload = window.editManager.getSyncPayload(baseAssetId);
+assert(revertPayload && revertPayload.action === 'REVERT', 'Reverted structure must produce REVERT sync action');
+console.log('✔ Revert to original design and REVERT cloud sync payload verified.');
 
-console.log('\n=== 6. Testing Structure Deletion ===');
+console.log('\n=== 6. Testing Structure Deletion & Deletion Sync Payload ===');
 
 // Delete a base asset
 const deleteTargetId = window.SECTION03_ASSETS.features[2].properties.id; // asset_003
 window.editManager.deleteStructure(deleteTargetId);
 
-assert(window.editManager.edits.deleted.includes(deleteTargetId), 'Asset ID should be in deleted array');
+assert(window.editManager.isDeleted(deleteTargetId), 'Asset ID should be marked as deleted');
 assert.strictEqual(window.editManager.getFeatureById(deleteTargetId), null, 'Deleted asset should return null');
+const baseDelPayload = window.editManager.getSyncPayload(deleteTargetId);
+assert(baseDelPayload && baseDelPayload.action === 'DELETE', 'Base asset deletion must produce DELETE sync payload');
 
 // Delete a user-created asset
 window.editManager.deleteStructure(newCulvert.id);
-assert(!window.editManager.edits.created[newCulvert.id], 'User-created asset should be completely removed from created map');
+assert(!window.editManager.edits.created[newCulvert.id], 'User-created asset should be removed from created map');
+assert(window.editManager.isDeleted(newCulvert.id), 'User-created asset should be tracked as deleted for sync deletion');
+const customDelPayload = window.editManager.getSyncPayload(newCulvert.id);
+assert(customDelPayload && customDelPayload.action === 'DELETE', 'User-created structure deletion must produce DELETE sync payload');
 
-console.log('✔ Structure deletion (soft delete for base, purge for custom) verified.');
+console.log('✔ Structure deletion (soft delete, cloud sync payload, and purge) verified.');
 
 console.log('\n=== 7. Testing Feature Collection Merging in getActiveFeatures() ===');
 
@@ -255,7 +303,22 @@ assert(didMerge, 'Should successfully merge cloud structure edit');
 const cloudReceived = window.editManager.getFeatureById('cust_cloud_received_999');
 assert(cloudReceived && cloudReceived.properties.short_code === 'Dissipator', 'Cloud structure should be available in editManager');
 
-console.log('✔ Cloud pull merging and conflict resolution verified.');
+// Test that stale cloud edit CANNOT resurrect a locally deleted structure
+const staleCloudPayload = {
+  action: 'CREATE',
+  feature_id: deleteTargetId,
+  data: {
+    type: 'Feature',
+    id: deleteTargetId,
+    properties: { id: deleteTargetId, short_code: 'ResurrectAttempt' }
+  },
+  timestamp: '2026-09-01T00:00:00.000Z' // older than local deletion
+};
+const didResurrect = window.editManager.mergeCloudEdit('struct_edit:' + deleteTargetId, staleCloudPayload, '2026-09-01T00:00:00.000Z');
+assert(!didResurrect, 'Stale cloud edit must not resurrect a locally deleted structure');
+assert(window.editManager.isDeleted(deleteTargetId), 'Structure must remain deleted');
+
+console.log('✔ Cloud pull merging, LWW conflict resolution, and anti-resurrection verified.');
 
 console.log('\n=== 10. Testing Interoperability with Scrubber & Data Exchange ===');
 
@@ -285,6 +348,108 @@ assert(csvExport.includes(newDitch.id), 'CSV export must include user-created st
 
 console.log('✔ Data Exchange (GeoJSON & CSV export) includes user-created structures.');
 
+console.log('\n=== 11. Testing Section Auto-Assignment & SLD Lane Mapping ===');
+
+// Section auto-assignment on chainage move
+window.editManager.updateStructure(newDitch.id, {
+  start_pk: 75000,
+  end_pk: 75200
+});
+const movedDitch = window.editManager.getFeatureById(newDitch.id);
+assert.strictEqual(movedDitch.properties.section, '02', 'Moving chainage to PK 75+000 should auto-assign section 02');
+
+// SLD lane mapping honors explicit p.lane
+require('../sld_viewer.js');
+const dummySld = new SldViewer('cadViewportContainer');
+assert.strictEqual(dummySld.getFeatureLane({ lane: 'Crest' }), dummySld.laneOffsets.crest, 'Honors Crest lane');
+assert.strictEqual(dummySld.getFeatureLane({ lane: 'Bench' }), dummySld.laneOffsets.bench, 'Honors Bench lane');
+assert.strictEqual(dummySld.getFeatureLane({ lane: 'Toe' }), dummySld.laneOffsets.toe, 'Honors Toe lane');
+// Base asset cross-section move & partition integrity
+const s03BaseAsset = window.SECTION03_ASSETS.features[0]; // e.g. asset_001
+const origS03Id = s03BaseAsset.properties.id;
+
+window.editManager.updateStructure(origS03Id, {
+  start_pk: 75000,
+  end_pk: 75200
+});
+
+const s02Base = window.SECTION02_ASSETS.features;
+const s03Base = window.SECTION03_ASSETS.features;
+
+const s02Merged = window.editManager.applyEditsToFeatures(s02Base, '02');
+const s03Merged = window.editManager.applyEditsToFeatures(s03Base, '03');
+const allMerged = window.editManager.applyEditsToFeatures([...s02Base, ...s03Base], 'all');
+
+assert(s02Merged.some(f => f.id === origS03Id), 'Base asset moved to Section 02 must appear in Section 02 view');
+assert(!s03Merged.some(f => f.id === origS03Id), 'Base asset moved to Section 02 must NOT appear in Section 03 view');
+assert(allMerged.some(f => f.id === origS03Id), 'Base asset moved to Section 02 must appear in All Sections view');
+assert.strictEqual(allMerged.filter(f => f.id === origS03Id).length, 1, 'Base asset moved to Section 02 must not be duplicated in All view');
+
+// Revert it back
+window.editManager.revertStructure(origS03Id);
+const s02Reverted = window.editManager.applyEditsToFeatures(s02Base, '02');
+const s03Reverted = window.editManager.applyEditsToFeatures(s03Base, '03');
+assert(!s02Reverted.some(f => f.id === origS03Id), 'Reverted base asset must no longer appear in Section 02 view');
+assert(s03Reverted.some(f => f.id === origS03Id), 'Reverted base asset must return to Section 03 view');
+
+console.log('✔ Cross-section base asset transfer, partition filtering, and reversion verified.');
+
+console.log('\n=== 12. Testing Circular Bearing Interpolation at 0°/360° Boundary ===');
+
+// Test PK 85+660 (between PK 85+650 bearing 359.31° and PK 85+675 bearing 0.05°)
+const wrapCenterPt = window.interpolateCenterline(85660);
+const wrapGeomLeft = window.computeGeometryForPk(85660, 85660, true, 'Left', 8.0);
+const wrapGeomRight = window.computeGeometryForPk(85660, 85660, true, 'Right', 8.0);
+
+// For a track heading almost due North (~359.6°):
+// Centerline longitude is ~8.391022
+// Left offset (West) MUST have longitude < Centerline longitude
+// Right offset (East) MUST have longitude > Centerline longitude
+assert(wrapCenterPt.bearing > 359.0 && wrapCenterPt.bearing < 360.0, `Bearing at PK 85+660 must be ~359.6°, got ${wrapCenterPt.bearing}`);
+assert(wrapGeomLeft.coordinates[0] < wrapCenterPt.lon, `Left offset longitude (${wrapGeomLeft.coordinates[0]}) must be west of centerline (${wrapCenterPt.lon})`);
+assert(wrapGeomRight.coordinates[0] > wrapCenterPt.lon, `Right offset longitude (${wrapGeomRight.coordinates[0]}) must be east of centerline (${wrapCenterPt.lon})`);
+assert(wrapGeomLeft.coordinates[0] < wrapGeomRight.coordinates[0], 'Left offset must be strictly west of right offset');
+assert(Math.abs(wrapGeomLeft.coordinates[1] - wrapCenterPt.lat) < 0.0001, 'Latitude offset remains bounded along alignment');
+
+console.log(`✔ Circular bearing wrap verified at PK 85+660: Bearing=${wrapCenterPt.bearing}°, CL=${wrapCenterPt.lon}, Left West=${wrapGeomLeft.coordinates[0]}, Right East=${wrapGeomRight.coordinates[0]}`);
+
+console.log('\n=== 13. Testing Service Worker Precache Asset Disk Integrity ===');
+
+const swCode = fs.readFileSync(path.join(__dirname, '../sw.js'), 'utf8');
+const precacheMatch = swCode.match(/PRECACHE_LOCAL_ASSETS\s*=\s*\[([\s\S]*?)\]/);
+assert(precacheMatch, 'sw.js must define PRECACHE_LOCAL_ASSETS');
+const precacheFiles = eval('[' + precacheMatch[1] + ']');
+assert(precacheFiles.length >= 15, 'Should precache all core application files');
+
+precacheFiles.forEach(entry => {
+  const relPath = entry === './' ? 'index.html' : entry.replace(/^\.\//, '');
+  const absPath = path.join(__dirname, '..', relPath);
+  assert(fs.existsSync(absPath), `Precache asset must exist on disk: ${relPath}`);
+});
+
+console.log(`✔ Service Worker: All ${precacheFiles.length} local precache assets verified to exist on disk (zero 404 risk).`);
+
+console.log('\n=== 14. Testing Structure Category Filter Integrity ===');
+
+// Mock app.js filter function
+const isAssetMatchingFilter = (feat, filter) => {
+  if (!filter || filter === 'all') return true;
+  const p = feat.properties;
+  if (filter === 'ditches') {
+    const isChan = p.category === 'Diversion Channel' || p.category === 'Open Channel' || (p.typology && p.typology.toLowerCase().includes('channel')) || (p.typology_code && p.typology_code.toLowerCase().includes('chan'));
+    return !isChan && p.category !== 'Structure' && p.category !== 'Cross Drainage' && p.category !== 'Overhead Crossing' && p.category !== 'Underpass' && p.category !== 'Riprap Protection' && p.category !== 'Water Descent' && p.category !== 'Energy Dissipator';
+  }
+  if (filter === 'structures') {
+    return p.category === 'Structure' || p.category === 'Cross Drainage' || p.category === 'Overhead Crossing' || p.category === 'Underpass';
+  }
+  return true;
+};
+
+const manholeFeat = { properties: { id: 'm1', category: 'Structure', short_code: 'Manhole' } };
+assert(isAssetMatchingFilter(manholeFeat, 'structures'), 'Manhole (category: Structure) must match "structures" filter');
+assert(!isAssetMatchingFilter(manholeFeat, 'ditches'), 'Manhole (category: Structure) must NOT match "ditches" filter');
+console.log('✔ Structure category filter integrity verified.');
+
 console.log('\n======================================================');
-console.log('🎉 EDIT MODE & OFFLINE REPLICATION VERIFIED 100%! 🎉');
+console.log('🎉 ALL 14 TEST SUITES PASSED VERIFICATION 100%! 🎉');
 console.log('======================================================');

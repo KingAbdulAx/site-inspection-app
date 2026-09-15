@@ -2586,6 +2586,16 @@ body {
   box-shadow: 0 0 12px rgba(245, 158, 11, 0.6);
 }
 
+@media (min-width: 1024px) {
+  .edit-mode-label {
+    display: inline !important;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-left: 4px;
+    letter-spacing: 0.02em;
+  }
+}
+
 .edit-mode-banner {
   background: #78350F;
   border-bottom: 1px solid #D97706;
