@@ -451,5 +451,5 @@ assert(!isAssetMatchingFilter(manholeFeat, 'ditches'), 'Manhole (category: Struc
 console.log('✔ Structure category filter integrity verified.');
 
 console.log('\n======================================================');
-console.log('🎉 ALL 14 TEST SUITES PASSED VERIFICATION 100%! 🎉');
+console.log('ALL 14 TEST SUITES PASSED VERIFICATION 100%! ');
 console.log('======================================================');

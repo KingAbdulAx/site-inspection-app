@@ -233,5 +233,5 @@ assert(sql.includes('INSERT OR REPLACE INTO kmd_drainage_assets'), 'SQL must ins
 console.log(`✔ SQLite / SQL Dump verified: DDL schema and ${feats.length} DML inserts generated`);
 
 console.log('\n=============================================');
-console.log('🎉 ALL AUTOMATED VERIFICATION TESTS PASSED! 🎉');
+console.log('ALL AUTOMATED VERIFICATION TESTS PASSED! ');
 console.log('=============================================\n');

@@ -262,5 +262,5 @@ if (mockCad.layers.channels !== true || mockCad.layers.dissipators !== true || m
 console.log('✔ CadViewer layers verified with full parity (channels, dissipators, waterDescents, riprap)');
 
 console.log('=============================================');
-console.log('🎉 SLD LINEAR TRACK VIEWER VERIFIED 100%! 🎉');
+console.log('SLD LINEAR TRACK VIEWER VERIFIED 100%! ');
 console.log('=============================================');

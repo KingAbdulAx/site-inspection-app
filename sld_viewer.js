@@ -968,25 +968,7 @@
         ctx.stroke();
       }
 
-      // Label or Warning indicator if unconnected
-      if (this.layers.labels && (this.pixelsPerMeter >= 0.8 || isSelected || isHovered || !isConnected)) {
-        ctx.fillStyle = !isConnected ? '#EF4444' : (isSelected ? '#FBBF24' : this.options.textMutedColor);
-        ctx.font = (!isConnected ? 'bold 8px ' : '500 8px ') + this.options.fontFamily;
-        let lbl = '⚠️ Unlinked (Audit)';
-        if (hasType9 && hasType8) lbl = 'Descent (T9→T8→Toe)';
-        else if (hasType9) lbl = 'Descent (T9→Toe)';
-        else if (hasType8) lbl = 'Descent (T8→Toe)';
-
-        if (this.orientation === 'horizontal') {
-          ctx.textAlign = 'center';
-          ctx.textBaseline = isLeft ? 'bottom' : 'top';
-          ctx.fillText(lbl, toePt.x, toePt.y + (isLeft ? -8 : 8));
-        } else {
-          ctx.textAlign = isLeft ? 'right' : 'left';
-          ctx.textBaseline = 'middle';
-          ctx.fillText(lbl, toePt.x + (isLeft ? -8 : 8), toePt.y);
-        }
-      }
+      // Removed text label for Water Descent to reduce visual clutter.
 
       ctx.restore();
       this._registerLinearHitBox(startPt, toePt, p, 16);
@@ -1050,21 +1032,7 @@
       }
       ctx.stroke();
 
-      // Label
-      if (this.layers.labels && (this.pixelsPerMeter >= 0.5 || isSelected || isHovered)) {
-        ctx.fillStyle = isSelected ? '#FBBF24' : '#FCD34D';
-        ctx.font = '700 9px ' + this.options.fontFamily;
-        const txt = p.short_code || 'Dissipator';
-        if (this.orientation === 'horizontal') {
-          ctx.textAlign = 'center';
-          ctx.textBaseline = isLeft ? 'bottom' : 'top';
-          ctx.fillText(txt, pt.x, pt.y + (isLeft ? -7 : 7));
-        } else {
-          ctx.textAlign = isLeft ? 'right' : 'left';
-          ctx.textBaseline = 'middle';
-          ctx.fillText(txt, pt.x + (isLeft ? -7 : 7), pt.y);
-        }
-      }
+      // Removed Dissipator text labels to reduce clutter
 
       ctx.restore();
       this.hitBoxes.push({

@@ -55,11 +55,11 @@
 
       <!-- Desktop Primary Navigation Tabs (Auto-hidden on mobile) -->
       <nav class="primary-nav-tabs" id="primaryNavTabs">
-        <button type="button" class="btn-nav-tab active" data-view="cad" title="Straight-Line Track Alignment Diagram">📏 Alignment</button>
-        <button type="button" class="btn-nav-tab" data-view="gis" title="Satellite / GIS Basemap">🗺️ GIS Map</button>
-        <button type="button" class="btn-nav-tab" data-view="dashboard" title="Executive Project Dashboard">📊 Dashboard</button>
-        <button type="button" class="btn-nav-tab" data-view="reports" title="Automated Daily Site Report Generator">📝 Reports</button>
-        <button type="button" class="btn-nav-tab" data-view="data" title="Engineering Data Portability & Exchange">💾 Export</button>
+        <button type="button" class="btn-nav-tab active" data-view="cad" title="Straight-Line Track Alignment Diagram">Alignment</button>
+        <button type="button" class="btn-nav-tab" data-view="gis" title="Satellite / GIS Basemap">GIS Map</button>
+        <button type="button" class="btn-nav-tab" data-view="dashboard" title="Executive Project Dashboard">Dashboard</button>
+        <button type="button" class="btn-nav-tab" data-view="reports" title="Automated Daily Site Report Generator">Reports</button>
+        <button type="button" class="btn-nav-tab" data-view="data" title="Engineering Data Portability & Exchange">Export</button>
       </nav>
 
       <!-- Clean Header Quick Actions -->
@@ -104,7 +104,7 @@
   <div id="editModeBanner" class="edit-mode-banner" style="display:none;">
     <div class="edit-mode-banner-content">
       <div class="edit-banner-left">
-        <span class="edit-banner-badge">✏️ EDIT MODE</span>
+        <span class="edit-banner-badge">EDIT MODE</span>
         <span class="edit-banner-msg">Tap any structure to edit, or click "+ Add Structure" to insert.</span>
       </div>
       <div class="edit-banner-actions">
@@ -135,15 +135,16 @@
           <button type="button" id="btnSldZoomIn" class="sld-ctrl-btn" title="Zoom In (+)">+</button>
           <button type="button" id="btnSldZoomOut" class="sld-ctrl-btn" title="Zoom Out (−)">−</button>
           <button type="button" id="btnSldFit" class="sld-ctrl-btn" title="Fit Corridor Bounds">Fit</button>
-          <button type="button" id="btnSldDw10003" class="sld-ctrl-btn" title="Drawing DW-10003 Detail: Ditch & Water Descent Connection Rules">📐 DW-10003</button>
+          <button type="button" id="btnSldDw10003" class="sld-ctrl-btn" title="Drawing DW-10003 Detail: Ditch & Water Descent Connection Rules">DW-10003</button>
           <div class="sld-layers-menu-wrap">
             <button type="button" id="btnSldLayers" class="sld-ctrl-btn" title="Layer Toggles">Layers ▾</button>
             <div class="sld-layers-dropdown" id="sldLayersDropdown" style="display:none;">
               <label><input type="checkbox" id="chkSldTrack" checked> Track Rails & Sleepers</label>
               <label><input type="checkbox" id="chkSldTicks" checked> Station Ticks (100m/1km)</label>
               <label><input type="checkbox" id="chkSldCulverts" checked> Cross Culverts & Bridges</label>
-              <label><input type="checkbox" id="chkSldDitches" checked> Longitudinal Ditches (Types 1–16)</label>
-              <label><input type="checkbox" id="chkSldChannels" checked> Open Channels (Types A–C & Diversion)</label>
+              <label><input type="checkbox" id="chkSldDitches" checked> Longitudinal Ditches (Types 1-16)</label>
+              <label><input type="checkbox" id="chkSldSubsurface" checked> Subsurface Drains (Type 6)</label>
+              <label><input type="checkbox" id="chkSldChannels" checked> Open Channels (Types A-C & Diversion)</label>
               <label><input type="checkbox" id="chkSldChutes" checked> Water Descents (Cascades)</label>
               <label><input type="checkbox" id="chkSldDissipators" checked> Energy Dissipators</label>
               <label><input type="checkbox" id="chkSldRiprap" checked> Riprap Scour Protection</label>
@@ -202,8 +203,8 @@
     <div class="drawer-content" id="drawerContent">
       <!-- Mode Tabs: Inspection vs Structure Edit -->
       <div class="drawer-mode-tabs" id="drawerModeTabs">
-        <button type="button" class="drawer-tab active" id="tabInspectionMode" data-tab="inspection">📋 Inspection Record</button>
-        <button type="button" class="drawer-tab" id="tabEditMode" data-tab="edit">✏️ Edit Structure</button>
+        <button type="button" class="drawer-tab active" id="tabInspectionMode" data-tab="inspection">Inspection Record</button>
+        <button type="button" class="drawer-tab" id="tabEditMode" data-tab="edit">Edit Structure</button>
       </div>
 
       <!-- Panel 1: Inspection & Quality Progress -->
@@ -358,10 +359,10 @@
             <span>Save Changes</span>
           </button>
           <button type="button" class="btn-secondary btn-revert-edit" id="btnRevertStructureEdit" style="display:none;">
-            <span>↩️ Revert to Design</span>
+            <span>Revert to Design</span>
           </button>
           <button type="button" class="btn-danger btn-delete-struct" id="btnDeleteStructure">
-            <span>🗑️ Delete</span>
+            <span>Delete</span>
           </button>
         </div>
       </div>
@@ -420,8 +421,13 @@
           <label class="sheet-section-title">Filter Features</label>
           <select id="selectFilter" class="filter-select-sheet">
             <option value="all">All Features (2,552 Assets)</option>
-            <option value="ditches">Longitudinal Ditches (Types 1–16)</option>
-            <option value="channels">Open Channels (Types A–C & Diversions)</option>
+            <option value="type_1">Type 1 Ditches</option>
+            <option value="type_7">Type 7 Ditches</option>
+            <option value="type_9">Type 9 Ditches</option>
+            <option value="type_12">Type 12 Ditches</option>
+            <option value="subsurface">Type 6 / Subsurface Drains</option>
+            <option value="ditches">Longitudinal Ditches (Types 1-16)</option>
+            <option value="channels">Open Channels (Types A-C & Diversions)</option>
             <option value="structures">Cross Drainage Culverts & Bridges</option>
             <option value="slope_protection">Riprap Armor & Water Descents</option>
             <option disabled>──────────────</option>
@@ -644,7 +650,7 @@
         <!-- Visual SVG Engineering Cross-Section Diagram -->
         <div class="dw-schematic-wrap">
           <div class="dw-schematic-header">
-            <span>📐 Full Corridor Cross-Section (DW-10003): Crest Ditch (T11) ── Cut Ditch (T1) ── Track CL ── Shoulder (T9) → Water Descent → Bench (T8) → Dissipator → Toe (T7/4) + Riprap ── Outer Channel (Type B/C)</span>
+            <span>Full Corridor Cross-Section (DW-10003): Crest Ditch (T11) ── Cut Ditch (T1) ── Track CL ── Shoulder (T9) → Water Descent → Bench (T8) → Dissipator → Toe (T7/4) + Riprap ── Outer Channel (Type B/C)</span>
           </div>
           <svg viewBox="0 0 920 270" class="dw-svg-diagram" width="100%" height="auto">
             <!-- Background sky / subgrade -->
@@ -755,7 +761,7 @@
         <!-- Batch Verification Spreadsheet Download Link -->
         <div class="dw-audit-callout">
           <div class="dw-audit-info">
-            <strong>📋 Batch Verification & Drawing Audit Spreadsheet Ready</strong>
+            <strong>Batch Verification & Drawing Audit Spreadsheet Ready</strong>
             <p>Download the complete multi-tab audit workbook partitioned by drawing sheet to verify feature extraction against CAD plans.</p>
           </div>
           <a href="data/KMD_Drainage_Extraction_Batch_Verification_Workbook.xlsx" download class="btn-download-workbook">

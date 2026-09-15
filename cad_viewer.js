@@ -51,6 +51,7 @@
         grid: true,
         alignment: true,
         ticks: true,
+        subsurface: true,
         culverts: true,
         ditches: true,
         channels: true,
@@ -453,6 +454,9 @@
       if (cat === 'cross drainage' || typ.includes('box culvert') || typ.includes('pipe culvert') || typ.includes('underpass') || typ.includes('overbridge') || typ.includes('bridge') || code.includes('culv') || code.includes('box') || code.includes('pipe')) {
         return 'cross';
       }
+      if (cat === 'subsurface' || code.includes('type 6') || code.includes('type_6') || typ.includes('type 6') || typ.includes('subsurface') || typ.includes('underdrain') || typ.includes('french')) {
+        return 'subsurface';
+      }
       return 'ditch';
     }
 
@@ -471,6 +475,7 @@
         const kind = this.classifyFeature(p);
         // Apply layer visibility filter
         if (kind === 'ditch' && !this.layers.ditches) return;
+        if (kind === 'subsurface' && !this.layers.subsurface) return;
         if (kind === 'cross' && !this.layers.culverts) return;
         if (kind === 'waterDescent' && (!this.layers.waterDescents && !this.layers.chutes)) return;
         if (kind === 'riprap' && !this.layers.riprap) return;
@@ -562,6 +567,14 @@
           ctx.textAlign = 'center';
           ctx.fillText(label, px, py + 3);
         }
+      } else if (kind === 'subsurface') {
+        // Subsurface / Type 6 underdrain: dashed slotted line with violet tint
+        ctx.strokeStyle = isSelected ? '#FACC15' : (color || '#A855F7');
+        ctx.lineWidth = Math.max(2.5, Math.min(6, 2.0 * this.scale));
+        ctx.setLineDash([6, 4]);
+        ctx.lineCap = 'round';
+        ctx.stroke();
+        ctx.setLineDash([]);
       } else if (kind === 'riprap') {
         // Longitudinal Riprap Scour Protection: rock casing with dashed pattern
         ctx.strokeStyle = isSelected ? '#FACC15' : color;

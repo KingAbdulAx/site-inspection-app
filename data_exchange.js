@@ -35,7 +35,7 @@
 
             <!-- 2. CSV -->
             <div class="exchange-card">
-              <div class="ex-icon">📊</div>
+              <div class="ex-icon"></div>
               <div class="ex-info">
                 <h4>CSV Tabular Export</h4>
                 <p>Flat comma-separated spreadsheet with all chainages, typology scopes, drawing numbers, status, and punchlist notes.</p>

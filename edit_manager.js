@@ -627,7 +627,7 @@
       if (window.showToast) {
         window.showToast(
           this.isEditMode
-            ? '✏️ Edit Mode Activated: Tap any structure to edit, or click + Add Structure.'
+            ? 'Edit Mode Activated: Tap any structure to edit, or click + Add Structure.'
             : '🔒 Read-Only Inspection Mode Activated.'
         );
       }
@@ -942,7 +942,7 @@
       this.refreshAppViews();
 
       if (window.showToast) {
-        window.showToast(`🗑️ Structure deleted`);
+        window.showToast(`Structure deleted`);
       }
     }
 
@@ -975,7 +975,7 @@
       }
 
       if (window.showToast) {
-        window.showToast(`↩️ Reverted to original design: ${(restored && restored.properties.short_code) || id}`);
+        window.showToast(`Reverted to original design: ${(restored && restored.properties.short_code) || id}`);
       }
     }
 

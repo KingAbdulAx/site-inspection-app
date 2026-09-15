@@ -32,6 +32,8 @@
       ticks1km: null,
       ditches: null,
       structures: null,
+      riprap: null,
+      subsurface: null,
       gridOffline: null
     }
   };
@@ -344,6 +346,8 @@
     state.mapLayers.ticks1km = L.layerGroup().addTo(state.map);
     state.mapLayers.ditches = L.layerGroup().addTo(state.map);
     state.mapLayers.structures = L.layerGroup().addTo(state.map);
+    state.mapLayers.riprap = L.layerGroup().addTo(state.map);
+    state.mapLayers.subsurface = L.layerGroup().addTo(state.map);
 
     // Instantiate Specialized Engineering Modules
     if (typeof SldViewer !== 'undefined') {
@@ -438,19 +442,44 @@
     const insp = state.inspections[p.id] || {};
     const status = insp.status || 'Not Started';
 
+    const cat = (p.category || '').toLowerCase();
+    const typ = (p.typology || '').toLowerCase();
+    const code = (p.typology_code || p.short_code || '').toLowerCase();
+
+    // Granular Drainage Typology Filters
+    if (filter === 'type_1') return (code.includes('type 1') || code === 't1' || typ.includes('type 1')) && !code.includes('type 10') && !code.includes('type 11') && !code.includes('type 12') && !code.includes('type 13') && !code.includes('type 14') && !code.includes('type 15') && !code.includes('type 16');
+    if (filter === 'type_2') return code.includes('type 2') || code === 't2' || typ.includes('type 2');
+    if (filter === 'type_3') return code.includes('type 3') || code === 't3' || typ.includes('type 3');
+    if (filter === 'type_4') return code.includes('type 4') || code === 't4' || typ.includes('type 4');
+    if (filter === 'type_5') return code.includes('type 5') || code === 't5' || typ.includes('type 5');
+    if (filter === 'type_6' || filter === 'subsurface') return code.includes('type 6') || code === 't6' || typ.includes('type 6') || typ.includes('subsurface') || typ.includes('underdrain') || typ.includes('french') || cat.includes('subsurface');
+    if (filter === 'type_7') return code.includes('type 7') || code === 't7' || typ.includes('type 7');
+    if (filter === 'type_8') return code.includes('type 8') || code === 't8' || typ.includes('type 8');
+    if (filter === 'type_9') return (code.includes('type 9') || code === 't9' || typ.includes('type 9')) && !typ.includes('descent') && !typ.includes('chute');
+    if (filter === 'type_10') return code.includes('type 10') || code === 't10' || typ.includes('type 10');
+    if (filter === 'type_11') return code.includes('type 11') || code === 't11' || typ.includes('type 11');
+    if (filter === 'type_12') return code.includes('type 12') || code === 't12' || typ.includes('type 12');
+
+    if (filter === 'channels') return cat === 'diversion channel' || cat === 'open channel' || typ.includes('channel') || code.includes('chan');
+    if (filter === 'chutes' || filter === 'water_descents') return cat === 'water descent' || typ.includes('descent') || typ.includes('chute') || code.includes('desc');
+    if (filter === 'dissipators') return cat === 'energy dissipator' || typ.includes('dissipator') || code.includes('diss') || code === 'bs1' || code === 'bs2';
+    if (filter === 'riprap') return cat === 'riprap protection' || typ.includes('riprap') || code === 'riprap' || typ.includes('scour protection');
+    if (filter === 'culverts') return (cat === 'cross drainage' || typ.includes('culvert') || code.includes('culv') || code.includes('clv') || code.includes('box') || code.includes('pipe')) && !typ.includes('bridge') && !typ.includes('underpass');
+    if (filter === 'bridges') return cat === 'bridge crossing' || cat === 'overhead crossing' || cat === 'underpass' || typ.includes('bridge') || typ.includes('underpass') || typ.includes('overpass') || code.includes('brg') || code.includes('udr') || code.includes('ovr');
+
+    // Broad Engineering Categories
     if (filter === 'ditches') {
-      const isChan = p.category === 'Diversion Channel' || p.category === 'Open Channel' || (p.typology && p.typology.toLowerCase().includes('channel')) || (p.typology_code && p.typology_code.toLowerCase().includes('chan'));
-      return !isChan && p.category !== 'Structure' && p.category !== 'Cross Drainage' && p.category !== 'Overhead Crossing' && p.category !== 'Underpass' && p.category !== 'Riprap Protection' && p.category !== 'Water Descent' && p.category !== 'Energy Dissipator';
-    }
-    if (filter === 'channels') {
-      return p.category === 'Diversion Channel' || p.category === 'Open Channel' || (p.typology && p.typology.toLowerCase().includes('channel')) || (p.typology_code && p.typology_code.toLowerCase().includes('chan'));
+      const isChan = cat === 'diversion channel' || cat === 'open channel' || typ.includes('channel') || code.includes('chan');
+      return !isChan && !p.is_point && p.category !== 'Structure' && p.category !== 'Cross Drainage' && p.category !== 'Overhead Crossing' && p.category !== 'Underpass' && p.category !== 'Riprap Protection' && p.category !== 'Water Descent' && p.category !== 'Energy Dissipator' && cat !== 'subsurface';
     }
     if (filter === 'structures') {
-      return p.category === 'Structure' || p.category === 'Cross Drainage' || p.category === 'Overhead Crossing' || p.category === 'Underpass';
+      return p.category === 'Structure' || p.category === 'Cross Drainage' || p.category === 'Overhead Crossing' || p.category === 'Underpass' || p.is_point;
     }
     if (filter === 'slope_protection') {
-      return p.category === 'Riprap Protection' || p.category === 'Water Descent' || p.category === 'Energy Dissipator';
+      return p.category === 'Riprap Protection' || p.category === 'Water Descent' || p.category === 'Energy Dissipator' || p.typology_code === 'RIPRAP';
     }
+
+    // Status Filters
     if (filter === 'status_not_started') {
       return status === 'Not Started';
     }
@@ -556,6 +585,8 @@
 
     state.mapLayers.ditches.clearLayers();
     state.mapLayers.structures.clearLayers();
+    state.mapLayers.riprap.clearLayers();
+    state.mapLayers.subsurface.clearLayers();
 
     const feats = getActiveFeatures();
     if (feats.length === 0) return;
@@ -640,6 +671,10 @@
 
         if (p.category === 'Cross Drainage' || p.category === 'Overhead Crossing' || p.category === 'Underpass') {
           line.addTo(state.mapLayers.structures);
+        } else if (p.category === 'Riprap Protection' || p.typology_code === 'RIPRAP' || (p.typology && p.typology.toLowerCase().includes('riprap'))) {
+          line.addTo(state.mapLayers.riprap);
+        } else if (p.category === 'subsurface' || (p.typology_code && p.typology_code.toLowerCase().includes('type 6')) || (p.typology && p.typology.toLowerCase().includes('subsurface'))) {
+          line.addTo(state.mapLayers.subsurface);
         } else {
           line.addTo(state.mapLayers.ditches);
         }
@@ -727,7 +762,7 @@
 
     const specDrawingEl = document.getElementById('specDrawing');
     if (isDw10003Related) {
-      specDrawingEl.innerHTML = `${p.drawing_ref || 'DW-10003'} <button type="button" class="btn-xs-dw10003" onclick="if(window.openDw10003Modal) window.openDw10003Modal();" title="View DW-10003 Standard Detail Schematic">📐 Detail</button>`;
+      specDrawingEl.innerHTML = `${p.drawing_ref || 'DW-10003'} <button type="button" class="btn-xs-dw10003" onclick="if(window.openDw10003Modal) window.openDw10003Modal();" title="View DW-10003 Standard Detail Schematic">Detail</button>`;
     } else {
       specDrawingEl.textContent = p.drawing_ref || 'Standard Details';
     }
@@ -816,7 +851,7 @@
   let currentDrawerState = 'collapsed';
 
   function setDrawerState(targetState) {
-    const d = document.getElementById('inspectionDrawer');
+    const d = document.getElementById('inspectionDrawer') || document.getElementById('assetDetailDrawer');
     if (!d) return;
 
     d.style.transform = ''; // Clear inline styles from drag
@@ -824,6 +859,13 @@
     d.classList.remove('hidden', 'collapsed', 'mid', 'expanded');
     d.classList.add(targetState);
     currentDrawerState = targetState;
+
+    if (window.innerWidth >= 1024) {
+      const isOpen = targetState === 'expanded' || targetState === 'mid';
+      document.body.classList.toggle('drawer-open', isOpen);
+      if (window.sldViewer) window.sldViewer.resize();
+      if (window.cadViewer) window.cadViewer.resize();
+    }
   }
 
   function expandDrawer() {
@@ -841,9 +883,23 @@
   function hideDrawer() {
     setDrawerState('hidden');
   }
+
+  function openAssetDrawer(feat) {
+    if (feat) selectAsset(feat);
+    else midDrawer();
+  }
+
+  function closeAssetDrawer() {
+    collapseDrawer();
+  }
+
   window.collapseDrawer = collapseDrawer;
   window.expandDrawer = expandDrawer;
   window.midDrawer = midDrawer;
+  window.openAssetDrawer = openAssetDrawer;
+  window.closeAssetDrawer = closeAssetDrawer;
+  state.openAssetDrawer = openAssetDrawer;
+  state.closeAssetDrawer = closeAssetDrawer;
 
   function toggleDrawer() {
     if (currentDrawerState === 'collapsed' || currentDrawerState === 'hidden') {
