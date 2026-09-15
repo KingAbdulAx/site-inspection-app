@@ -22307,7 +22307,7 @@ window.SECTION03_ASSETS = {
         "specs": "Precast half-round ditch (D=0.30m, DW-10020) with stepped cascades along shoulder (L=360m)",
         "icon": "cascade",
         "status": "Not Started",
-        "notes": "",
+        "notes": "Verified on DW-03002: Left platform shoulder ditch from PK 84+840 to 85+200 on embankment fill.",
         "inspection_date": "",
         "typology_code": "TYPE_9"
       },
@@ -22425,9 +22425,9 @@ window.SECTION03_ASSETS = {
       "properties": {
         "id": "asset_020",
         "chainage_str": "PK 84+891 – PK 85+101",
-        "start_pk": 84891.0,
-        "end_pk": 85101.0,
-        "length_m": 210.0,
+        "start_pk": 84891.6,
+        "end_pk": 85101.5,
+        "length_m": 209.9,
         "is_point": false,
         "side": "Right",
         "position": "Right Side (Embankment Toe)",
@@ -22439,7 +22439,7 @@ window.SECTION03_ASSETS = {
         "specs": "Concrete trapezoidal toe ditch (B=1.50m, H=0.50m, 1:1.5)",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "[FLAG] No drawing symbology found on DW-03002-07 supporting this run. Retained pending site verification. [RECONCILED - FLIP SIDE] Drawing DW-03002-07 places this ditch on the LEFT side (successor asset_227). Retained on original side pending final engineer sign-off.",
+        "notes": "Verified on DW-03002: Right toe ditch along embankment from BC 84+891.",
         "inspection_date": ""
       },
       "geometry": {
@@ -22565,22 +22565,23 @@ window.SECTION03_ASSETS = {
       "properties": {
         "id": "asset_022",
         "chainage_str": "PK 85+194",
-        "start_pk": 85194.0,
-        "end_pk": 85194.0,
+        "start_pk": 85194.101,
+        "end_pk": 85194.101,
         "length_m": 0.0,
         "is_point": true,
         "side": "Center",
         "position": "Cross Drainage",
-        "typology": "Pipe Culvert Ø1.5m",
+        "typology": "Precast Concrete Pipe Culvert 1xØ1.5m (PC 85+194)",
         "short_code": "Pipe Culv",
         "category": "Cross Drainage",
         "color": "#475569",
         "drawing_ref": "MDDTDW220000023-31 / DW-03006",
-        "specs": "Precast concrete pipe culvert (Ø1.2m / Ø1.5m on concrete cradle)",
+        "specs": "PIPE 1.5m CH=85+194.101 with slope protection L=28m (culvert) and L=36m + L=129m (embankment).",
         "icon": "culvert_pipe",
         "status": "Not Started",
-        "notes": "",
-        "inspection_date": ""
+        "notes": "Verified on DW-03002: Pipe culvert Ø1.5m with extensive slope armor.",
+        "inspection_date": "",
+        "pk": 85194.101
       },
       "geometry": {
         "type": "LineString",
@@ -22606,9 +22607,9 @@ window.SECTION03_ASSETS = {
         "end_pk": 85500.0,
         "length_m": 138.0,
         "is_point": false,
-        "side": "Left",
+        "side": "Right",
         "position": "Left Platform Shoulder",
-        "typology": "Half-Round Lined Ditch (Type 9)",
+        "typology": "Half-Round Platform Shoulder Ditch (Type 9)",
         "short_code": "Type 9",
         "category": "Shoulder Ditch",
         "color": "#10B981",
@@ -22616,9 +22617,10 @@ window.SECTION03_ASSETS = {
         "specs": "Precast half-round ditch (D=0.30m) / Stepped cascades down slope",
         "icon": "cascade",
         "status": "Not Started",
-        "notes": "",
+        "notes": "Verified on DW-03002: Right shoulder half-round ditch connecting into DW-03003; 4 water descents attached along this run.",
         "inspection_date": "",
-        "typology_code": "TYPE_9"
+        "typology_code": "TYPE_9",
+        "dimensions": "L=138.0m / i=0.30%"
       },
       "geometry": {
         "type": "LineString",
@@ -22660,22 +22662,23 @@ window.SECTION03_ASSETS = {
       "properties": {
         "id": "asset_024",
         "chainage_str": "PK 85+446",
-        "start_pk": 85446.0,
-        "end_pk": 85446.0,
+        "start_pk": 85445.98,
+        "end_pk": 85445.98,
         "length_m": 0.0,
         "is_point": true,
         "side": "Center",
         "position": "Cross Drainage",
-        "typology": "Pipe Culvert Ø1.5m",
+        "typology": "Precast Concrete Pipe Culvert 1xØ1.5m (PC 85+446)",
         "short_code": "Pipe Culv",
         "category": "Cross Drainage",
         "color": "#475569",
         "drawing_ref": "MDDTDW220000023-31 / DW-03006",
-        "specs": "Precast concrete pipe culvert (Ø1.2m / Ø1.5m on concrete cradle)",
+        "specs": "PIPE 1.5m CH=85+445.980 with unlined outfall ditch L=62.26m.",
         "icon": "culvert_pipe",
         "status": "Not Started",
-        "notes": "",
-        "inspection_date": ""
+        "notes": "Verified on DW-03002: Single pipe culvert Ø1.5m.",
+        "inspection_date": "",
+        "pk": 85445.98
       },
       "geometry": {
         "type": "LineString",
@@ -22699,11 +22702,11 @@ window.SECTION03_ASSETS = {
         "chainage_str": "PK 85+446 – PK 85+508",
         "start_pk": 85446.0,
         "end_pk": 85508.0,
-        "length_m": 62.0,
+        "length_m": 62.26,
         "is_point": false,
         "side": "Right",
         "position": "Right Side (Culvert Outfall)",
-        "typology": "Unlined Trapezoidal Culvert Ditch",
+        "typology": "Culvert Outfall Channel (Unlined Trapezoidal B=3.5m)",
         "short_code": "Drain",
         "category": "Miscellaneous",
         "color": "#64748B",
@@ -22711,8 +22714,9 @@ window.SECTION03_ASSETS = {
         "specs": "Unlined Trapezoidal Culvert Ditch",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "",
-        "inspection_date": ""
+        "notes": "Verified on DW-03002 / DW-03003: Unlined outfall ditch discharging straight downstream from PC 85+445.980.",
+        "inspection_date": "",
+        "dimensions": "L=62.26m / B=3.5m / 1.5:1 / i=0.50%"
       },
       "geometry": {
         "type": "LineString",
@@ -22743,12 +22747,12 @@ window.SECTION03_ASSETS = {
         "id": "asset_026",
         "chainage_str": "PK 85+500 – PK 85+638",
         "start_pk": 85500.0,
-        "end_pk": 85638.0,
-        "length_m": 138.0,
+        "end_pk": 85650.0,
+        "length_m": 150.0,
         "is_point": false,
-        "side": "Left",
+        "side": "Right",
         "position": "Left Platform Shoulder",
-        "typology": "Half-Round Lined Ditch (Type 9)",
+        "typology": "Half-Round Platform Shoulder Ditch (Type 9)",
         "short_code": "Type 9",
         "category": "Shoulder Ditch",
         "color": "#10B981",
@@ -22756,7 +22760,7 @@ window.SECTION03_ASSETS = {
         "specs": "Precast half-round ditch (D=0.30m) / Stepped cascades down slope",
         "icon": "cascade",
         "status": "Not Started",
-        "notes": "",
+        "notes": "Verified on DW-03003: Right shoulder half-round ditch continuation to PK 85+650.",
         "inspection_date": "",
         "typology_code": "TYPE_9"
       },
@@ -22850,22 +22854,23 @@ window.SECTION03_ASSETS = {
       "properties": {
         "id": "asset_028",
         "chainage_str": "PK 85+635",
-        "start_pk": 85635.0,
-        "end_pk": 85635.0,
+        "start_pk": 85635.505,
+        "end_pk": 85635.505,
         "length_m": 0.0,
         "is_point": true,
         "side": "Center",
         "position": "Cross Drainage",
-        "typology": "Twin Box Culvert 2x(2.0x2.0m)",
+        "typology": "Twin Box Culvert 2x(2.0x2.0m) (BC 85.635)",
         "short_code": "2x Box Culv",
         "category": "Cross Drainage",
         "color": "#334155",
         "drawing_ref": "MDDTDW220010002",
-        "specs": "Reinforced concrete twin box culvert 2x(2.0x2.0m)",
+        "specs": "B.C. (2.0x2.0)m CH=85+635.505 with unlined outfall ditch L=107.77m.",
         "icon": "culvert_box",
         "status": "Not Started",
-        "notes": "",
-        "inspection_date": ""
+        "notes": "Verified on DW-03003: Twin box culvert with slope protection L=28m left/right.",
+        "inspection_date": "",
+        "pk": 85635.505
       },
       "geometry": {
         "type": "LineString",
@@ -22889,11 +22894,11 @@ window.SECTION03_ASSETS = {
         "chainage_str": "PK 85+635 – PK 85+743",
         "start_pk": 85635.0,
         "end_pk": 85743.0,
-        "length_m": 108.0,
+        "length_m": 107.77,
         "is_point": false,
         "side": "Right",
         "position": "Right Side (Culvert Outfall)",
-        "typology": "Unlined Trapezoidal Culvert Ditch",
+        "typology": "Culvert Outfall Channel (Unlined Trapezoidal B=4.0m)",
         "short_code": "Drain",
         "category": "Miscellaneous",
         "color": "#64748B",
@@ -22901,8 +22906,9 @@ window.SECTION03_ASSETS = {
         "specs": "Unlined Trapezoidal Culvert Ditch",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "",
-        "inspection_date": ""
+        "notes": "Verified on DW-03003: Unlined outfall ditch discharging straight downstream from BC 85+635.505.",
+        "inspection_date": "",
+        "dimensions": "L=107.77m / B=4.0m / 1.5:1 / i=0.50%"
       },
       "geometry": {
         "type": "LineString",
@@ -22940,13 +22946,13 @@ window.SECTION03_ASSETS = {
       "properties": {
         "id": "asset_030",
         "chainage_str": "PK 85+638 – PK 86+100",
-        "start_pk": 85638.0,
+        "start_pk": 85635.5,
         "end_pk": 86100.0,
-        "length_m": 462.0,
+        "length_m": 464.5,
         "is_point": false,
         "side": "Left",
         "position": "Left Side (Embankment Toe)",
-        "typology": "Concrete Lined Toe Ditch (Type 7)",
+        "typology": "Concrete Lined Side / Toe Ditch (Type 12 to Type 1 Standard)",
         "short_code": "Type 7",
         "category": "Toe Ditch",
         "color": "#EA580C",
@@ -22954,7 +22960,7 @@ window.SECTION03_ASSETS = {
         "specs": "Concrete lined triangular toe ditch (H=0.80m, 1:1.5)",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "",
+        "notes": "Verified on DW-03003: Type 12 from BC 85+635 to ~85+800, then Type 1 standard cut ditch to 86+100.",
         "inspection_date": ""
       },
       "geometry": {
@@ -23055,7 +23061,7 @@ window.SECTION03_ASSETS = {
         "is_point": false,
         "side": "Left",
         "position": "Left Side (Track Cut)",
-        "typology": "Concrete Lined Side Ditch (Type 1 Larger Variant)",
+        "typology": "Concrete Lined Side Ditch (Type 1 Larger Variant b=0.75m/h=0.75m)",
         "short_code": "Type 1 Lgr",
         "category": "Side Ditch",
         "color": "#1D4ED8",
@@ -23063,7 +23069,7 @@ window.SECTION03_ASSETS = {
         "specs": "Concrete trapezoidal cut ditch (B=4.0-4.5m, H=0.60m, 1:2)",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "",
+        "notes": "Verified on DW-03003: Deep cutting left ditch; terminates with energy dissipator into spread-out zone before BC 86+344.",
         "inspection_date": ""
       },
       "geometry": {
@@ -23115,12 +23121,12 @@ window.SECTION03_ASSETS = {
         "id": "asset_032",
         "chainage_str": "PK 86+100 – PK 86+300",
         "start_pk": 86100.0,
-        "end_pk": 86300.0,
-        "length_m": 200.0,
+        "end_pk": 86250.0,
+        "length_m": 150.0,
         "is_point": false,
         "side": "Right",
         "position": "Right Side (Track Cut)",
-        "typology": "Concrete Lined Side Ditch (Type 1 Larger Variant)",
+        "typology": "Concrete Lined Side Ditch (Type 1 Larger Variant b=0.75m/h=0.75m)",
         "short_code": "Type 1 Lgr",
         "category": "Side Ditch",
         "color": "#1D4ED8",
@@ -23128,7 +23134,7 @@ window.SECTION03_ASSETS = {
         "specs": "Concrete trapezoidal cut ditch (B=4.0-4.5m, H=0.60m, 1:2)",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "",
+        "notes": "Verified on DW-03003: Deep cutting right ditch; terminates around 86+220/250 with energy dissipator into spread-out zone.",
         "inspection_date": ""
       },
       "geometry": {
@@ -23179,13 +23185,13 @@ window.SECTION03_ASSETS = {
       "properties": {
         "id": "asset_033",
         "chainage_str": "PK 86+200 – PK 86+344",
-        "start_pk": 86200.0,
-        "end_pk": 86344.0,
-        "length_m": 144.0,
+        "start_pk": 86101.018,
+        "end_pk": 86344.028,
+        "length_m": 243.01,
         "is_point": false,
         "side": "Left",
         "position": "Outer Diversion Corridor (Channel)",
-        "typology": "Concrete Trapezoidal Channel (Type B)",
+        "typology": "Concrete Trapezoidal Channel (B=1.0m/H=1.0m)",
         "short_code": "Chan B",
         "category": "Diversion Channel",
         "color": "#EF4444",
@@ -23193,9 +23199,10 @@ window.SECTION03_ASSETS = {
         "specs": "Concrete trapezoidal diversion channel (B=0.6-7.0m, H=0.8-1.0m, 1:1)",
         "icon": "channel",
         "status": "Not Started",
-        "notes": "",
+        "notes": "Verified on DW-03003: Concrete trapezoidal channel on Left side discharging into BC 86+344.",
         "inspection_date": "",
-        "typology_code": "CHANNEL"
+        "typology_code": "CHANNEL",
+        "dimensions": "L=243.01m / B=1.00m / H=1.00m / 1:1 / i=0.30%"
       },
       "geometry": {
         "type": "LineString",
@@ -23237,22 +23244,23 @@ window.SECTION03_ASSETS = {
       "properties": {
         "id": "asset_034",
         "chainage_str": "PK 86+344",
-        "start_pk": 86344.0,
-        "end_pk": 86344.0,
+        "start_pk": 86344.028,
+        "end_pk": 86344.028,
         "length_m": 0.0,
         "is_point": true,
         "side": "Center",
         "position": "Cross Drainage",
-        "typology": "Twin Box Culvert 2x(2.0x2.0m)",
+        "typology": "Twin Box Culvert 2x(2.0x2.0m) (BC 86.344)",
         "short_code": "2x Box Culv",
         "category": "Cross Drainage",
         "color": "#334155",
         "drawing_ref": "MDDTDW220010002",
-        "specs": "Reinforced concrete twin box culvert 2x(2.0x2.0m)",
+        "specs": "B.C. (2.0x2.0)m CH=86+344.028 with slope protection L=28m.",
         "icon": "culvert_box",
         "status": "Not Started",
-        "notes": "",
-        "inspection_date": ""
+        "notes": "Verified on DW-03003: Twin box culvert receiving left trapezoidal channel.",
+        "inspection_date": "",
+        "pk": 86344.028
       },
       "geometry": {
         "type": "LineString",
@@ -23280,7 +23288,7 @@ window.SECTION03_ASSETS = {
         "is_point": false,
         "side": "Left",
         "position": "Left Side (Embankment Toe)",
-        "typology": "Concrete Lined Toe Ditch (Type 7)",
+        "typology": "Concrete Lined Toe Ditch (Type 7 to Type 12 Transition)",
         "short_code": "Type 7",
         "category": "Toe Ditch",
         "color": "#EA580C",
@@ -23288,7 +23296,7 @@ window.SECTION03_ASSETS = {
         "specs": "Concrete lined triangular toe ditch (H=0.80m, 1:1.5)",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "",
+        "notes": "Verified on DW-03003: Type 7 from BC 86+344, transitioning to Type 12 entering cattle crossing / underpass at 86+525.",
         "inspection_date": ""
       },
       "geometry": {
@@ -23339,13 +23347,13 @@ window.SECTION03_ASSETS = {
       "properties": {
         "id": "asset_036",
         "chainage_str": "PK 86+344 – PK 86+844",
-        "start_pk": 86344.0,
-        "end_pk": 86844.0,
+        "start_pk": 86344.028,
+        "end_pk": 86844.028,
         "length_m": 500.0,
         "is_point": false,
         "side": "Right",
         "position": "Right Platform Shoulder",
-        "typology": "Half-Round Lined Ditch (Type 9)",
+        "typology": "Half-Round Platform Shoulder Ditch (Type 9)",
         "short_code": "Type 9",
         "category": "Shoulder Ditch",
         "color": "#10B981",
@@ -23353,9 +23361,10 @@ window.SECTION03_ASSETS = {
         "specs": "Precast half-round ditch (D=0.30m) / Stepped cascades down slope",
         "icon": "cascade",
         "status": "Not Started",
-        "notes": "",
+        "notes": "Verified on DW-03003: Right shoulder half-round ditch spanning 500m; 6 water descents attached along this run.",
         "inspection_date": "",
-        "typology_code": "TYPE_9"
+        "typology_code": "TYPE_9",
+        "dimensions": "L=500.0m / i=0.60%"
       },
       "geometry": {
         "type": "LineString",
@@ -23459,7 +23468,7 @@ window.SECTION03_ASSETS = {
         "is_point": true,
         "side": "Center",
         "position": "Underpass Crossing",
-        "typology": "Water Passage in Underpass (Type A / Type 16)",
+        "typology": "Water Passage in Underpass (Type A)",
         "short_code": "Underpass",
         "category": "Underpass",
         "color": "#1E293B",
@@ -23467,8 +23476,9 @@ window.SECTION03_ASSETS = {
         "specs": "Underpass / Cattle Crossing (UDR) with slope protection L=98m",
         "icon": "underpass",
         "status": "Not Started",
-        "notes": "",
-        "inspection_date": ""
+        "notes": "Verified on DW-03003: WATER PASSAGE USED IN UNDERPASS - TYPE A at Cattle Crossing CH=86+525.",
+        "inspection_date": "",
+        "pk": 86525.0
       },
       "geometry": {
         "type": "LineString",
@@ -23490,22 +23500,23 @@ window.SECTION03_ASSETS = {
       "properties": {
         "id": "asset_038",
         "chainage_str": "PK 86+570",
-        "start_pk": 86570.0,
-        "end_pk": 86570.0,
+        "start_pk": 86570.033,
+        "end_pk": 86570.033,
         "length_m": 0.0,
         "is_point": true,
         "side": "Center",
         "position": "Cross Drainage",
-        "typology": "Twin Box Culvert 2x(2.0x2.0m)",
+        "typology": "Twin Box Culvert 2x(2.0x2.0m) (BC 86.570)",
         "short_code": "2x Box Culv",
         "category": "Cross Drainage",
         "color": "#334155",
         "drawing_ref": "MDDTDW220010002",
-        "specs": "Reinforced concrete twin box culvert 2x(2.0x2.0m)",
+        "specs": "B.C. (2.0x2.0)m CH=86+570.033 with unlined outfall ditch L=48.36m.",
         "icon": "culvert_box",
         "status": "Not Started",
-        "notes": "",
-        "inspection_date": ""
+        "notes": "Verified on DW-03003: Twin box culvert with slope protection L=28m left/right.",
+        "inspection_date": "",
+        "pk": 86570.033
       },
       "geometry": {
         "type": "LineString",
@@ -23529,11 +23540,11 @@ window.SECTION03_ASSETS = {
         "chainage_str": "PK 86+570 – PK 86+618",
         "start_pk": 86570.0,
         "end_pk": 86618.0,
-        "length_m": 48.0,
+        "length_m": 48.36,
         "is_point": false,
         "side": "Right",
         "position": "Right Side (Culvert Outfall)",
-        "typology": "Unlined Trapezoidal Culvert Ditch",
+        "typology": "Culvert Outfall Channel (Unlined Trapezoidal B=4.0m)",
         "short_code": "Drain",
         "category": "Miscellaneous",
         "color": "#64748B",
@@ -23541,8 +23552,9 @@ window.SECTION03_ASSETS = {
         "specs": "Unlined Trapezoidal Culvert Ditch",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "",
-        "inspection_date": ""
+        "notes": "Verified on DW-03003: Unlined outfall ditch discharging straight downstream from BC 86+570.033.",
+        "inspection_date": "",
+        "dimensions": "L=48.36m / B=4.0m / 1.5:1 / i=0.50%"
       },
       "geometry": {
         "type": "LineString",
@@ -23568,22 +23580,23 @@ window.SECTION03_ASSETS = {
       "properties": {
         "id": "asset_040",
         "chainage_str": "PK 86+704",
-        "start_pk": 86704.0,
-        "end_pk": 86704.0,
+        "start_pk": 86704.006,
+        "end_pk": 86704.006,
         "length_m": 0.0,
         "is_point": true,
         "side": "Center",
         "position": "Cross Drainage",
-        "typology": "Twin Box Culvert 2x(2.0x2.0m)",
+        "typology": "Twin Box Culvert 2x(2.0x2.0m) (BC 86.704)",
         "short_code": "2x Box Culv",
         "category": "Cross Drainage",
         "color": "#334155",
         "drawing_ref": "MDDTDW220010002",
-        "specs": "Reinforced concrete twin box culvert 2x(2.0x2.0m)",
+        "specs": "B.C. (2.0x2.0)m CH=86+704.006 with unlined outfall ditch L=73.25m.",
         "icon": "culvert_box",
         "status": "Not Started",
-        "notes": "",
-        "inspection_date": ""
+        "notes": "Verified on DW-03003: Twin box culvert with slope protection L=28m left/right.",
+        "inspection_date": "",
+        "pk": 86704.006
       },
       "geometry": {
         "type": "LineString",
@@ -23607,11 +23620,11 @@ window.SECTION03_ASSETS = {
         "chainage_str": "PK 86+704 – PK 86+777",
         "start_pk": 86704.0,
         "end_pk": 86777.0,
-        "length_m": 73.0,
+        "length_m": 73.25,
         "is_point": false,
         "side": "Right",
         "position": "Right Side (Culvert Outfall)",
-        "typology": "Unlined Trapezoidal Culvert Ditch",
+        "typology": "Culvert Outfall Channel (Unlined Trapezoidal B=4.0m)",
         "short_code": "Drain",
         "category": "Miscellaneous",
         "color": "#64748B",
@@ -23619,8 +23632,9 @@ window.SECTION03_ASSETS = {
         "specs": "Unlined Trapezoidal Culvert Ditch",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "",
-        "inspection_date": ""
+        "notes": "Verified on DW-03003: Unlined outfall ditch discharging straight downstream from BC 86+704.006.",
+        "inspection_date": "",
+        "dimensions": "L=73.25m / B=4.0m / 1.5:1 / i=0.50%"
       },
       "geometry": {
         "type": "LineString",
@@ -23656,7 +23670,7 @@ window.SECTION03_ASSETS = {
         "is_point": false,
         "side": "Left",
         "position": "Left Side (Embankment Toe)",
-        "typology": "Trapezoidal Lined Toe Ditch (Type 12)",
+        "typology": "Concrete Lined Toe Ditch (Type 7)",
         "short_code": "Type 12",
         "category": "Toe Ditch",
         "color": "#F59E0B",
@@ -23664,7 +23678,7 @@ window.SECTION03_ASSETS = {
         "specs": "Concrete trapezoidal toe ditch (B=1.50m, H=0.50m, 1:1.5)",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "",
+        "notes": "Verified on DW-03003: Left toe ditch Type 7 continuing to sheet match line at PK 86+900.",
         "inspection_date": ""
       },
       "geometry": {
@@ -37280,13 +37294,13 @@ window.SECTION03_ASSETS = {
       "properties": {
         "id": "asset_227",
         "chainage_str": "PK 84+900 – PK 85+140",
-        "start_pk": 84900.0,
-        "end_pk": 85140.0,
-        "length_m": 240.0,
+        "start_pk": 84891.6,
+        "end_pk": 85134.0,
+        "length_m": 242.4,
         "is_point": false,
         "side": "Left",
         "position": "Left Side (Embankment Toe)",
-        "typology": "Concrete Lined Toe Ditch (Type 12, Type 7)",
+        "typology": "Concrete Lined Toe Ditch (Type 12 to Type 7 Transition)",
         "short_code": "Toe Ditch",
         "category": "Toe Ditch",
         "color": "#F59E0B",
@@ -37294,7 +37308,7 @@ window.SECTION03_ASSETS = {
         "specs": "Concrete lined toe ditch (Type 12, Type 7) per DW-03002-07 [Ref: FS-001, FS-036]",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "",
+        "notes": "Verified on DW-03002: Type 12 from BC 84+891 to connection box (~85+050), then Type 7 to culvert slope protection (~85+134).",
         "inspection_date": ""
       },
       "geometry": {
@@ -37353,9 +37367,9 @@ window.SECTION03_ASSETS = {
       "properties": {
         "id": "asset_228",
         "chainage_str": "PK 85+810 – PK 86+100",
-        "start_pk": 85810.0,
+        "start_pk": 85800.0,
         "end_pk": 86100.0,
-        "length_m": 290.0,
+        "length_m": 300.0,
         "is_point": false,
         "side": "Right",
         "position": "Right Side (Track Cut / Platform)",
@@ -37367,7 +37381,7 @@ window.SECTION03_ASSETS = {
         "specs": "Concrete trapezoidal cut side ditch (b=0.75m, h=0.75m, 1:1) per DW-03003-06 [Ref: SD-008]",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "",
+        "notes": "Verified on DW-03003: Right cut ditch Type 1 standard from 85+800 to 86+100.",
         "inspection_date": ""
       },
       "geometry": {
@@ -37434,13 +37448,13 @@ window.SECTION03_ASSETS = {
       "properties": {
         "id": "asset_229",
         "chainage_str": "PK 86+530 – PK 86+700",
-        "start_pk": 86530.0,
-        "end_pk": 86700.0,
-        "length_m": 170.0,
+        "start_pk": 86570.0,
+        "end_pk": 86704.0,
+        "length_m": 134.0,
         "is_point": false,
         "side": "Left",
         "position": "Left Side (Embankment Toe)",
-        "typology": "Concrete Lined Toe Ditch (Type 12, Type 7)",
+        "typology": "Concrete Lined Toe Ditch (Type 12 / Type 7 / Type 12 Sequence)",
         "short_code": "Toe Ditch",
         "category": "Toe Ditch",
         "color": "#F59E0B",
@@ -37448,7 +37462,7 @@ window.SECTION03_ASSETS = {
         "specs": "Concrete lined toe ditch (Type 12, Type 7) per DW-03003-06 [Ref: FS-004, FS-005, FS-006, FS-038]",
         "icon": "ditch",
         "status": "Not Started",
-        "notes": "",
+        "notes": "Verified on DW-03003: Left toe ditch sequence between BC 86+570 and BC 86+704.",
         "inspection_date": ""
       },
       "geometry": {
@@ -50280,7 +50294,7 @@ window.SECTION03_ASSETS = {
         "specs": "Precast stepped water descent down embankment slope connecting Type 9 shoulder ditch / Type 8 bench ditch to toe dissipator per Drawing T2019-323-DD-MD-MDDT-2200-DW-10003-04-A.",
         "icon": "cascade",
         "status": "Not Started",
-        "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
+        "notes": "Verified on DW-03002/DW-03003: Precast water descent on Right fill slope connected to Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT"
       },
@@ -50313,7 +50327,7 @@ window.SECTION03_ASSETS = {
         "specs": "Precast stepped water descent down embankment slope connecting Type 9 shoulder ditch / Type 8 bench ditch to toe dissipator per Drawing T2019-323-DD-MD-MDDT-2200-DW-10003-04-A.",
         "icon": "cascade",
         "status": "Not Started",
-        "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
+        "notes": "Verified on DW-03002/DW-03003: Precast water descent on Right fill slope connected to Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT"
       },
@@ -50346,7 +50360,7 @@ window.SECTION03_ASSETS = {
         "specs": "Precast stepped water descent down embankment slope connecting Type 9 shoulder ditch / Type 8 bench ditch to toe dissipator per Drawing T2019-323-DD-MD-MDDT-2200-DW-10003-04-A.",
         "icon": "cascade",
         "status": "Not Started",
-        "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
+        "notes": "Verified on DW-03002/DW-03003: Precast water descent on Right fill slope connected to Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT"
       },
@@ -50379,7 +50393,7 @@ window.SECTION03_ASSETS = {
         "specs": "Precast stepped water descent down embankment slope connecting Type 9 shoulder ditch / Type 8 bench ditch to toe dissipator per Drawing T2019-323-DD-MD-MDDT-2200-DW-10003-04-A.",
         "icon": "cascade",
         "status": "Not Started",
-        "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
+        "notes": "Verified on DW-03002/DW-03003: Precast water descent on Right fill slope connected to Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT"
       },
@@ -50388,72 +50402,6 @@ window.SECTION03_ASSETS = {
         "coordinates": [
           8.3911272,
           12.6455102
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "asset_543",
-      "properties": {
-        "id": "asset_543",
-        "ref_id": "WD-011",
-        "chainage_str": "PK 86+232",
-        "start_pk": 86232.5,
-        "end_pk": 86232.5,
-        "length_m": 0.0,
-        "is_point": true,
-        "side": "Right",
-        "position": "Embankment Slope Face (Water Descent)",
-        "typology": "Precast Water Descent (DW-10003)",
-        "short_code": "Descent",
-        "category": "Water Descent",
-        "color": "#0284C7",
-        "drawing_ref": "T2019-323-DD-KM-KZDR-2200-DW-03003 / DW-10003-04-A",
-        "specs": "Precast stepped water descent down embankment slope connecting Type 9 shoulder ditch / Type 8 bench ditch to toe dissipator per Drawing T2019-323-DD-MD-MDDT-2200-DW-10003-04-A.",
-        "icon": "cascade",
-        "status": "Not Started",
-        "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
-        "inspection_date": "",
-        "typology_code": "WATER_DESCENT"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          8.3915386,
-          12.6506455
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "asset_544",
-      "properties": {
-        "id": "asset_544",
-        "ref_id": "WD-012",
-        "chainage_str": "PK 86+308",
-        "start_pk": 86307.8,
-        "end_pk": 86307.8,
-        "length_m": 0.0,
-        "is_point": true,
-        "side": "Left",
-        "position": "Embankment Slope Face (Water Descent)",
-        "typology": "Precast Water Descent (DW-10003)",
-        "short_code": "Descent",
-        "category": "Water Descent",
-        "color": "#0284C7",
-        "drawing_ref": "T2019-323-DD-KM-KZDR-2200-DW-03003 / DW-10003-04-A",
-        "specs": "Precast stepped water descent down embankment slope connecting Type 9 shoulder ditch / Type 8 bench ditch to toe dissipator per Drawing T2019-323-DD-MD-MDDT-2200-DW-10003-04-A.",
-        "icon": "cascade",
-        "status": "Not Started",
-        "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
-        "inspection_date": "",
-        "typology_code": "WATER_DESCENT"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          8.3915953,
-          12.6513243
         ]
       }
     },
@@ -50478,7 +50426,7 @@ window.SECTION03_ASSETS = {
         "specs": "Precast stepped water descent down embankment slope connecting Type 9 shoulder ditch / Type 8 bench ditch to toe dissipator per Drawing T2019-323-DD-MD-MDDT-2200-DW-10003-04-A.",
         "icon": "cascade",
         "status": "Not Started",
-        "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
+        "notes": "Verified on DW-03003: Precast water descent on Right fill slope connected to 500m Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT"
       },
@@ -50511,7 +50459,7 @@ window.SECTION03_ASSETS = {
         "specs": "Precast stepped water descent down embankment slope connecting Type 9 shoulder ditch / Type 8 bench ditch to toe dissipator per Drawing T2019-323-DD-MD-MDDT-2200-DW-10003-04-A.",
         "icon": "cascade",
         "status": "Not Started",
-        "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
+        "notes": "Verified on DW-03003: Precast water descent on Right fill slope connected to 500m Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT"
       },
@@ -50544,7 +50492,7 @@ window.SECTION03_ASSETS = {
         "specs": "Precast stepped water descent down embankment slope connecting Type 9 shoulder ditch / Type 8 bench ditch to toe dissipator per Drawing T2019-323-DD-MD-MDDT-2200-DW-10003-04-A.",
         "icon": "cascade",
         "status": "Not Started",
-        "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
+        "notes": "Verified on DW-03003: Precast water descent on Right fill slope connected to 500m Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT"
       },
@@ -50577,7 +50525,7 @@ window.SECTION03_ASSETS = {
         "specs": "Precast stepped water descent down embankment slope connecting Type 9 shoulder ditch / Type 8 bench ditch to toe dissipator per Drawing T2019-323-DD-MD-MDDT-2200-DW-10003-04-A.",
         "icon": "cascade",
         "status": "Not Started",
-        "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
+        "notes": "Verified on DW-03003: Precast water descent on Right fill slope connected to 500m Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT"
       },
@@ -50610,7 +50558,7 @@ window.SECTION03_ASSETS = {
         "specs": "Precast stepped water descent down embankment slope connecting Type 9 shoulder ditch / Type 8 bench ditch to toe dissipator per Drawing T2019-323-DD-MD-MDDT-2200-DW-10003-04-A.",
         "icon": "cascade",
         "status": "Not Started",
-        "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
+        "notes": "Verified on DW-03003: Precast water descent on Right fill slope connected to 500m Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT"
       },
@@ -50643,7 +50591,7 @@ window.SECTION03_ASSETS = {
         "specs": "Precast stepped water descent down embankment slope connecting Type 9 shoulder ditch / Type 8 bench ditch to toe dissipator per Drawing T2019-323-DD-MD-MDDT-2200-DW-10003-04-A.",
         "icon": "cascade",
         "status": "Not Started",
-        "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
+        "notes": "Verified on DW-03003: Precast water descent on Right fill slope connected to 500m Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT"
       },
@@ -60314,6 +60262,70 @@ window.SECTION03_ASSETS = {
         "color": "#EF4444",
         "drawing_ref": "T2019-323-DD-KM-KZDR-2200-DW-03001",
         "notes": "Off-alignment box culvert under station access road connecting 622.28m loop channel to 91.06m diagonal track link."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_265",
+      "properties": {
+        "id": "asset_265",
+        "chainage_str": "PK 84+544",
+        "start_pk": 84544.0,
+        "end_pk": 84544.0,
+        "length_m": 0.0,
+        "is_point": true,
+        "side": "Left",
+        "position": "Left Cut Crest Descent",
+        "typology": "Precast Water Descent (DW-10003)",
+        "short_code": "Descent",
+        "category": "Water Descent",
+        "color": "#D97706",
+        "drawing_ref": "DW-03002-07 / DW-10003-04-A",
+        "specs": "Special cutting slope descent connecting Type 11 crest ditch to Type 1 platform ditch at ~PK 84+544.",
+        "icon": "cascade",
+        "status": "Not Started",
+        "notes": "Verified by engineer visual review: Crest ditch converges and drops down cutting slope into Type 1 platform ditch.",
+        "inspection_date": "",
+        "typology_code": "WATER_DESCENT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5262,
+          12.0578
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "asset_016_trans",
+      "properties": {
+        "id": "asset_016_trans",
+        "chainage_str": "PK 84+406",
+        "start_pk": 84406.0,
+        "end_pk": 84406.0,
+        "length_m": 4.0,
+        "is_point": true,
+        "side": "Left",
+        "position": "Road Approach Transition",
+        "typology": "Road Ditch Transition Structure BxH/1:n=4.0x0.60/2.0 (Concrete)",
+        "short_code": "TRANS-RD",
+        "category": "Cross Drainage Structure",
+        "color": "#0284C7",
+        "drawing_ref": "DW-03002-07",
+        "specs": "Concrete transition structure BxH/1:n=4.0x0.60/2.0 connecting road trapezoidal channel to railway ditch at overbridge OVR-2801 approach.",
+        "icon": "box",
+        "status": "Not Started",
+        "notes": "Verified on DW-03002: Transition between overbridge road drainage and railway ditch.",
+        "inspection_date": "",
+        "typology_code": "CHANNEL"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.527,
+          12.056
+        ]
       }
     }
   ]
