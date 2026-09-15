@@ -54,9 +54,11 @@
       // Lateral Lane Offsets in Pixels from Track Centerline
       // Physically ordered per CAD drawings & DW-10003 from centerline outward:
       this.laneOffsets = {
-        shoulder: 28,  // Type 9 half-round platform edge, Type 1 cutting side ditch, Type 6 sub-ballast collector, Type 2, 3, 10, 15
+        subsurface: 14,
+        shoulder: 28,  // Type 9 half-round platform edge, Type 1 cutting side ditch, Type 2, 3, 10, 15
         bench: 60,     // Type 8 half-round intermediate bench/berm ditch
-        toe: 94,       // Type 7 concrete toe ditch, Type 4 unlined toe ditch, Type 12 trapezoidal toe ditch, Riprap armor
+        toe: 94,       // Type 7 concrete toe ditch, Type 4 unlined toe ditch, Type 12 trapezoidal toe ditch
+        riprap: 110,   // Riprap Armor & Scour Protection
         crest: 126,    // Type 5 unlined crest ditch, Type 11 lined crest ditch, cut crest channels
         channel: 160   // Open channels (Type A earth channel, Type B concrete channel, Type C, diversion channels)
       };
@@ -276,23 +278,24 @@
       const typ = (p.typology || '').toLowerCase();
       const code = (p.typology_code || p.short_code || '').toLowerCase();
 
-      // 1. Channel (Outermost extent)
+      if (cat === 'subsurface' || code.includes('type 6') || typ.includes('subsurface')) {
+        return this.laneOffsets.subsurface;
+      }
       if (cat === 'diversion channel' || cat === 'open channel' || typ.includes('channel') || code.includes('chan') || typ.includes('zone iii') || typ.includes('zone i') || typ.includes('rectangular channel')) {
         return this.laneOffsets.channel;
       }
-      // 2. Crest Ditch (Top of cutting slope)
       if (cat === 'crest ditch' || cat === 'crest channel' || typ.includes('crest') || code.includes('type 11') || code.includes('type 5')) {
         return this.laneOffsets.crest;
       }
-      // 3. Bench / Berm Ditch (Intermediate slope bench)
+      if (cat === 'riprap protection' || typ.includes('riprap') || code === 'riprap' || typ.includes('scour protection')) {
+        return this.laneOffsets.riprap;
+      }
       if (cat === 'berm ditch' || typ.includes('bench') || typ.includes('berm') || code.includes('type 8')) {
         return this.laneOffsets.bench;
       }
-      // 4. Toe / Foot of Slope
-      if (cat === 'toe ditch' || typ.includes('foot of slope') || typ.includes('toe') || code.includes('type 7') || code.includes('type 4') || code.includes('type 12') || code === 'riprap' || cat === 'riprap protection') {
+      if (cat === 'toe ditch' || typ.includes('foot of slope') || typ.includes('toe') || code.includes('type 7') || code.includes('type 4') || code.includes('type 12')) {
         return this.laneOffsets.toe;
       }
-      // 5. Shoulder / Platform edge (Closest to rail)
       return this.laneOffsets.shoulder;
     }
 

@@ -2136,7 +2136,7 @@
       // Custom option
       const optCustom = document.createElement('option');
       optCustom.value = 'CUSTOM';
-      optCustom.textContent = '⚙️ Custom / Other Structure';
+      optCustom.textContent = 'Custom / Other Structure';
       sel.appendChild(optCustom);
     }
 

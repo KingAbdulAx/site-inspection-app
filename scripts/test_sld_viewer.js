@@ -150,13 +150,17 @@ if (offsets.shoulder !== 28 || offsets.bench !== 60 || offsets.toe !== 94 || off
   console.error('FAIL: Lane offset values do not match DW-10003 specifications', offsets);
   process.exit(1);
 }
-if (!(offsets.shoulder < offsets.bench && offsets.bench < offsets.toe && offsets.toe < offsets.crest && offsets.crest < offsets.channel)) {
+if (!(offsets.subsurface < offsets.shoulder && offsets.shoulder < offsets.bench && offsets.bench < offsets.toe && offsets.toe < offsets.riprap && offsets.riprap < offsets.crest && offsets.crest < offsets.channel)) {
   console.error('FAIL: Lateral lanes are not monotonically increasing from centerline outward');
   process.exit(1);
 }
-console.log('✔ Monotonic transverse lane offsets verified: Shoulder (28px) < Bench (60px) < Toe (94px) < Crest (126px) < Channel (160px)');
+console.log('✔ Monotonic transverse lane offsets verified: Subsurface (14px) < Shoulder (28px) < Bench (60px) < Toe (94px) < Riprap (110px) < Crest (126px) < Channel (160px)');
 
 // getFeatureLane tests
+if (viewer.getFeatureLane({ typology: 'Type 6 Subsurface Drain' }) !== 14) {
+  console.error('FAIL: Type 6 not mapped to subsurface lane (14)');
+  process.exit(1);
+}
 if (viewer.getFeatureLane({ typology: 'Type 1 Platform Ditch' }) !== 28) {
   console.error('FAIL: Type 1 not mapped to shoulder lane (28)');
   process.exit(1);
@@ -173,8 +177,8 @@ if (viewer.getFeatureLane({ category: 'Toe Ditch', typology: 'Type 7 Concrete Di
   console.error('FAIL: Type 7 not mapped to toe lane (94)');
   process.exit(1);
 }
-if (viewer.getFeatureLane({ typology_code: 'RIPRAP' }) !== 94) {
-  console.error('FAIL: Riprap not mapped to toe lane (94)');
+if (viewer.getFeatureLane({ typology_code: 'RIPRAP' }) !== 110) {
+  console.error('FAIL: Riprap not mapped to riprap lane (110)');
   process.exit(1);
 }
 if (viewer.getFeatureLane({ typology: 'Cut Crest Ditch Type 11' }) !== 126) {
@@ -185,7 +189,7 @@ if (viewer.getFeatureLane({ category: 'Diversion Channel', typology: 'Open Trape
   console.error('FAIL: Type B Channel not mapped to outermost channel lane (160)');
   process.exit(1);
 }
-console.log('✔ getFeatureLane accurately maps physical typologies across all 5 transverse lanes');
+console.log('✔ getFeatureLane accurately maps physical typologies across all transverse lanes');
 
 console.log('--- 6. Testing Feature Engineering Classification ---');
 const fRip = viewer.classifyFeature({ typology_code: 'RIPRAP', category: 'Riprap Protection' });
