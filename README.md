@@ -122,29 +122,54 @@ $$\theta_{\text{offset}} = (\theta_{\text{track}} - 90^\circ) \pmod{360^\circ} \
 * **Bi-Directional LWW Conflict Resolution:** Merges edits using Last-Write-Wins timestamps (`updated_at`), protecting local field edits from being overwritten by stale cloud records.
 * **Header Status Pill & Modal:** Interactive status indicator in header shows `Offline`, `Syncing...`, `Synced <time>`, or `Error`, with a cloud configuration modal for inspection team settings.
 
+### 3.7 In-App Structure Authoring & Live Edit Mode (`edit_manager.js`)
+* **Global Edit Mode Switch (`#btnToggleEditMode`):** Toggles between Read-Only Inspection Mode and Live Structure Authoring Mode with high-visibility amber status indicators.
+* **Direct Structure Creation (`+ Add Structure`):**
+  * Insert new drainage structures at any chainage via the SLD floating controls, Scrubber (`+ Add at PK`), or top banner.
+  * Point structures (Culverts, Dissipators, Cascades, Manholes) or linear channels/ditches.
+  * Accurate spatial geometry automatically calculated along the active corridor centerline spline (`computeGeometryForPk`).
+* **Complete KMD Master Typology Catalog:** Pre-configured with 25 standard typologies matching drawings `MDDT-2200-DW-10001` through `10023` (Ditches Types 1–16, Cascades, Dissipators, Riprap, Box Culverts 1x/2x, Pipe Culverts Ø1000, Manholes).
+* **Modify Anything & Everything:** Change typology, side (Left/Right/Cross), lane (Shoulder/Bench/Toe/Crest/Channel), start/end PK, dimensions, drawing references, and notes directly from the bottom drawer.
+* **Revert & Delete Support:** Revert modified base structures back to design intent or delete structures with full synchronization.
+* **Seamless PWA Offline Replication:** Structure edits queue into `localStorage` (`KMD_DRAINAGE_STRUCTURE_EDITS_V1`) and auto-push to Supabase `/rest/v1/inspections` when internet returns, with Last-Write-Wins conflict resolution.
+
+### 3.8 Progressive Web App & Offline Caching (`sw.js`)
+* **Service Worker Caching:** Automatically caches core shell assets, CSS, data bundles, and scripts for 100% offline field operation in remote railway corridors.
+* **Network-Only API Pass-Through:** Supabase REST sync endpoints bypass service worker caching to ensure live data exchange is never stale.
+
 ---
 
 ## 4. Architecture & Technical Stack
 
 ```
 TEAM/app/
-├── index.html              # PWA shell, SVG icons, HUD banner, sync pill, and drawer layout
-├── styles.css              # Mobile-first slate design system, responsive drawer snaps, sync modal
+├── index.html              # PWA shell, SVG icons, HUD banner, sync pill, drawer layout, edit modals
+├── styles.css              # Mobile-first slate design system, responsive drawer snaps, edit mode styles
 ├── config.js               # Supabase credentials, cloud settings, inspector device profile
 ├── sync.js                 # Offline-first sync engine, queue management, LWW conflict resolution
-├── app.js                  # Core Leaflet engine, touch physics, GPS projection, rotation, sync hooks
+├── edit_manager.js         # Master typology catalog, structure authoring, geometric projection, edit store
+├── sld_viewer.js           # Straight-Line Diagram (SLD) 6-lane linear track viewer
+├── cad_viewer.js           # CAD alignment strip viewer
+├── scrubber.js             # Dual-direction alignment chainage scrubber with Wagwan strip
+├── dashboard.js            # Executive project KPI dashboard
+├── reports.js              # Automated daily site report generator (TEAM standard markdown)
+├── data_exchange.js        # Data portability engine (GeoJSON, CSV, XLSX, SQLite SQL)
+├── app.js                  # Core Leaflet engine, touch physics, GPS projection, event coordination
+├── sw.js                   # PWA Service Worker for offline shell and bundle caching
 ├── manifest.json           # PWA standalone manifest with vector train icon
 ├── nginx.conf              # Production Nginx reverse proxy configuration
 ├── Dockerfile              # Lightweight alpine container definition
 ├── lib/
 │   └── leaflet-rotate.js   # Offline map rotation engine (0 CDN dependencies)
 ├── data/
-│   ├── section03_centerline.json   # 1,669 Catmull-Rom spline points (PK 82+902 to 124+521)
-│   ├── section03_assets.json       # 842 georeferenced Section 03 drainage & slope protection structures
-│   └── bundle.js                   # Static offline bundle of centerline & 842 assets
+│   ├── section02_centerline.json   # Section 02 Catmull-Rom spline points (PK 19+800 to 82+902)
+│   ├── section02_bundle.js         # Offline bundle of Section 02 assets (1,710 features)
+│   ├── bundle.js                   # Offline bundle of Section 03 assets (836 features)
+│   └── section03_centerline.json   # Section 03 Catmull-Rom spline points (PK 82+902 to 124+521)
 └── scripts/
-    ├── alignment_processor.py      # Centerline splining from AutoCAD Civil 3D KMZ
-    └── asset_compiler.py           # Asset projection and GeoJSON compiler
+    ├── test_sld_viewer.js          # Automated verification for SLD linear track viewer
+    ├── test_new_views.js           # Automated verification for CAD/GIS, Scrubber, Dashboard, Reports
+    └── test_edit_mode.js           # Automated verification for Edit Mode and offline replication
 ```
 
 ---

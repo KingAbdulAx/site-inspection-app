@@ -30,6 +30,7 @@
               <span class="scrubber-active-pk" id="scrubberActivePk">PK 84+406</span>
             </div>
             <div class="scrubber-step-tools">
+              <button type="button" class="btn-step btn-step-add" id="btnScrubberAdd" title="Add New Structure at Current Chainage">+ Add at PK</button>
               <button type="button" class="btn-step" data-step="-500" title="Back 500m">-500m</button>
               <button type="button" class="btn-step" data-step="-100" title="Back 100m">-100m</button>
               <button type="button" class="btn-step" data-step="100" title="Forward 100m">+100m</button>
@@ -82,6 +83,16 @@
           this.setChainage(newPk, true);
         });
       });
+
+      // Quick "+ Add at PK" action
+      const btnAdd = this.container.querySelector('#btnScrubberAdd');
+      if (btnAdd) {
+        btnAdd.addEventListener('click', () => {
+          if (typeof window.openAddStructureModal === 'function') {
+            window.openAddStructureModal(this.currentPk);
+          }
+        });
+      }
     }
 
     updateRange() {

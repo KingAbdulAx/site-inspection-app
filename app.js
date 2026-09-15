@@ -55,14 +55,19 @@
   function getActiveFeatures() {
     const s02Feats = (window.SECTION02_ASSETS && window.SECTION02_ASSETS.features) || [];
     const s03Feats = (window.SECTION03_ASSETS && window.SECTION03_ASSETS.features) || [];
+    let list = [];
     if (state.activeSection === '02') {
-      return s02Feats;
+      list = s02Feats;
     } else if (state.activeSection === '03') {
-      return s03Feats;
+      list = s03Feats;
     } else {
       // 'all'
-      return [...s02Feats, ...s03Feats];
+      list = [...s02Feats, ...s03Feats];
     }
+    if (window.editManager && typeof window.editManager.applyEditsToFeatures === 'function') {
+      return window.editManager.applyEditsToFeatures(list, state.activeSection);
+    }
+    return list;
   }
 
   function syncActiveDataPointers() {
@@ -735,6 +740,16 @@
     // Notes
     document.getElementById('defectNotes').value = insp.notes || '';
     document.getElementById('chkDefect').checked = !!insp.hasDefect;
+
+    // Populate Edit Form in Drawer
+    if (window.editManager && typeof window.editManager.populateDrawerEditForm === 'function') {
+      window.editManager.populateDrawerEditForm();
+      if (window.editManager.isEditMode) {
+        window.editManager.setDrawerTab('edit');
+      } else {
+        window.editManager.setDrawerTab('inspection');
+      }
+    }
 
     // Open Drawer in Compact MID State (shows specs + milestones without covering map)
     midDrawer();
@@ -2024,6 +2039,356 @@
         } catch (e) {
           showToast(`Network Error: ${e.message}`);
         }
+      });
+    }
+
+    // Initialize Structure Authoring & Edit Mode Controls
+    setupEditModeControls();
+  }
+
+  // --- 12. Structure Authoring & Edit Mode Controls ---
+  function setupEditModeControls() {
+    const editMgr = window.editManager;
+    if (!editMgr) return;
+
+    // 1. Populate Typology Dropdowns
+    const typologies = window.DRAINAGE_TYPOLOGIES || [];
+    const selEdit = document.getElementById('editSelectTypology');
+    const selNew = document.getElementById('newSelectTypology');
+
+    function populateSelect(sel) {
+      if (!sel) return;
+      sel.innerHTML = '';
+      typologies.forEach(t => {
+        const opt = document.createElement('option');
+        opt.value = t.typology;
+        opt.textContent = `[${t.short_code}] ${t.typology}`;
+        opt.setAttribute('data-code', t.code);
+        opt.setAttribute('data-side', t.sideDefault);
+        opt.setAttribute('data-lane', t.lane);
+        opt.setAttribute('data-point', t.is_point ? '1' : '0');
+        opt.setAttribute('data-specs', t.specs);
+        opt.setAttribute('data-drawing', t.drawing_ref);
+        opt.setAttribute('data-color', t.color);
+        opt.setAttribute('data-category', t.category);
+        opt.setAttribute('data-icon', t.icon);
+        opt.setAttribute('data-offset', t.offsetM);
+        sel.appendChild(opt);
+      });
+      // Custom option
+      const optCustom = document.createElement('option');
+      optCustom.value = 'CUSTOM';
+      optCustom.textContent = '⚙️ Custom / Other Structure';
+      sel.appendChild(optCustom);
+    }
+
+    populateSelect(selEdit);
+    populateSelect(selNew);
+
+    // Auto-fill form fields on Typology change
+    if (selEdit) {
+      selEdit.addEventListener('change', () => {
+        const opt = selEdit.options[selEdit.selectedIndex];
+        if (!opt || opt.value === 'CUSTOM') return;
+        const side = opt.getAttribute('data-side');
+        const lane = opt.getAttribute('data-lane');
+        const isPoint = opt.getAttribute('data-point') === '1';
+        const specs = opt.getAttribute('data-specs');
+        const drawing = opt.getAttribute('data-drawing');
+
+        if (side) document.getElementById('editSelectSide').value = side;
+        if (lane) document.getElementById('editSelectLane').value = lane;
+        if (specs) document.getElementById('editTxtSpecs').value = specs;
+        if (drawing) document.getElementById('editTxtDrawing').value = drawing;
+        const chkPoint = document.getElementById('editChkIsPoint');
+        if (chkPoint) {
+          chkPoint.checked = isPoint;
+          toggleEditPointState();
+        }
+      });
+    }
+
+    if (selNew) {
+      selNew.addEventListener('change', () => {
+        const opt = selNew.options[selNew.selectedIndex];
+        if (!opt || opt.value === 'CUSTOM') return;
+        const side = opt.getAttribute('data-side');
+        const lane = opt.getAttribute('data-lane');
+        const isPoint = opt.getAttribute('data-point') === '1';
+        const specs = opt.getAttribute('data-specs');
+        const drawing = opt.getAttribute('data-drawing');
+
+        if (side) document.getElementById('newSelectSide').value = side;
+        if (lane) document.getElementById('newSelectLane').value = lane;
+        if (specs) document.getElementById('newTxtSpecs').value = specs;
+        if (drawing) document.getElementById('newTxtDrawing').value = drawing;
+        const chkPoint = document.getElementById('newChkIsPoint');
+        if (chkPoint) {
+          chkPoint.checked = isPoint;
+          toggleNewPointState();
+        }
+      });
+    }
+
+    // 2. Point structure toggles & length calculation
+    function toggleEditPointState() {
+      const chk = document.getElementById('editChkIsPoint');
+      const isPoint = chk ? chk.checked : false;
+      const grpEnd = document.getElementById('groupEditEndPk');
+      const lblLen = document.getElementById('editLblLength');
+      if (grpEnd) grpEnd.style.display = isPoint ? 'none' : 'block';
+      if (isPoint) {
+        if (lblLen) lblLen.textContent = '0 m (Point)';
+      } else {
+        updateEditLength();
+      }
+    }
+
+    function updateEditLength() {
+      const sPk = window.parsePk ? window.parsePk(document.getElementById('editTxtStartPk').value) : 0;
+      const ePk = window.parsePk ? window.parsePk(document.getElementById('editTxtEndPk').value) : 0;
+      const lblLen = document.getElementById('editLblLength');
+      if (lblLen) {
+        const len = Math.abs(ePk - sPk);
+        lblLen.textContent = `${Math.round(len * 10) / 10} m`;
+      }
+    }
+
+    const editChkIsPoint = document.getElementById('editChkIsPoint');
+    if (editChkIsPoint) editChkIsPoint.addEventListener('change', toggleEditPointState);
+    const editTxtStartPk = document.getElementById('editTxtStartPk');
+    if (editTxtStartPk) editTxtStartPk.addEventListener('input', updateEditLength);
+    const editTxtEndPk = document.getElementById('editTxtEndPk');
+    if (editTxtEndPk) editTxtEndPk.addEventListener('input', updateEditLength);
+
+    function toggleNewPointState() {
+      const chk = document.getElementById('newChkIsPoint');
+      const isPoint = chk ? chk.checked : false;
+      const grpEnd = document.getElementById('groupNewEndPk');
+      const lblLen = document.getElementById('newLblLength');
+      if (grpEnd) grpEnd.style.display = isPoint ? 'none' : 'block';
+      if (isPoint) {
+        if (lblLen) lblLen.textContent = '0 m (Point)';
+      } else {
+        updateNewLength();
+      }
+    }
+
+    function updateNewLength() {
+      const sPk = window.parsePk ? window.parsePk(document.getElementById('newTxtStartPk').value) : 0;
+      const ePk = window.parsePk ? window.parsePk(document.getElementById('newTxtEndPk').value) : 0;
+      const lblLen = document.getElementById('newLblLength');
+      if (lblLen) {
+        const len = Math.abs(ePk - sPk);
+        lblLen.textContent = `${Math.round(len * 10) / 10} m`;
+      }
+    }
+
+    const newChkIsPoint = document.getElementById('newChkIsPoint');
+    if (newChkIsPoint) newChkIsPoint.addEventListener('change', toggleNewPointState);
+    const newTxtStartPk = document.getElementById('newTxtStartPk');
+    if (newTxtStartPk) newTxtStartPk.addEventListener('input', updateNewLength);
+    const newTxtEndPk = document.getElementById('newTxtEndPk');
+    if (newTxtEndPk) newTxtEndPk.addEventListener('input', updateNewLength);
+
+    // 3. Edit Mode Toggle Buttons
+    const btnToggleEdit = document.getElementById('btnToggleEditMode');
+    if (btnToggleEdit) {
+      btnToggleEdit.addEventListener('click', () => {
+        editMgr.toggleEditMode();
+      });
+    }
+
+    const btnBannerExit = document.getElementById('btnBannerExitEdit');
+    if (btnBannerExit) {
+      btnBannerExit.addEventListener('click', () => {
+        editMgr.toggleEditMode(false);
+      });
+    }
+
+    // 4. Drawer Tabs (Inspection vs Edit)
+    const tabInsp = document.getElementById('tabInspectionMode');
+    const tabEdit = document.getElementById('tabEditMode');
+    if (tabInsp) {
+      tabInsp.addEventListener('click', () => editMgr.setDrawerTab('inspection'));
+    }
+    if (tabEdit) {
+      tabEdit.addEventListener('click', () => editMgr.setDrawerTab('edit'));
+    }
+
+    // 5. Save Structure Changes
+    const btnSaveEdit = document.getElementById('btnSaveStructureEdit');
+    if (btnSaveEdit) {
+      btnSaveEdit.addEventListener('click', () => {
+        if (!state.selectedAsset) return;
+        const fid = state.selectedAsset.properties.id;
+        const sel = document.getElementById('editSelectTypology');
+        const opt = sel.options[sel.selectedIndex];
+
+        const typology = sel.value === 'CUSTOM' ? (state.selectedAsset.properties.typology || 'Custom Structure') : sel.value;
+        const shortCode = (opt && opt.getAttribute('data-code')) || state.selectedAsset.properties.short_code || 'Custom';
+        const category = (opt && opt.getAttribute('data-category')) || state.selectedAsset.properties.category || 'Drainage Structure';
+        const color = (opt && opt.getAttribute('data-color')) || state.selectedAsset.properties.color || '#38BDF8';
+        const icon = (opt && opt.getAttribute('data-icon')) || state.selectedAsset.properties.icon || 'ditch';
+
+        const side = document.getElementById('editSelectSide').value;
+        const lane = document.getElementById('editSelectLane').value;
+        const isPoint = document.getElementById('editChkIsPoint').checked;
+        const sPk = window.parsePk(document.getElementById('editTxtStartPk').value);
+        const ePk = isPoint ? sPk : window.parsePk(document.getElementById('editTxtEndPk').value || document.getElementById('editTxtStartPk').value);
+        const specs = document.getElementById('editTxtSpecs').value.trim();
+        const drawing = document.getElementById('editTxtDrawing').value.trim();
+        const notes = document.getElementById('editTxtNotes').value.trim();
+
+        const updatedFields = {
+          typology,
+          short_code: shortCode,
+          category,
+          color,
+          icon,
+          side,
+          position: `${side} (${lane})`,
+          lane,
+          is_point: isPoint,
+          start_pk: sPk,
+          end_pk: ePk,
+          pk: sPk,
+          specs,
+          drawing_ref: drawing,
+          notes
+        };
+
+        editMgr.updateStructure(fid, updatedFields);
+      });
+    }
+
+    // 6. Revert Structure to Original Design
+    const btnRevertEdit = document.getElementById('btnRevertStructureEdit');
+    if (btnRevertEdit) {
+      btnRevertEdit.addEventListener('click', () => {
+        if (!state.selectedAsset) return;
+        const fid = state.selectedAsset.properties.id;
+        editMgr.revertStructure(fid);
+      });
+    }
+
+    // 7. Delete Structure
+    const btnDelete = document.getElementById('btnDeleteStructure');
+    if (btnDelete) {
+      btnDelete.addEventListener('click', () => {
+        if (!state.selectedAsset) return;
+        const p = state.selectedAsset.properties;
+        const confirmMsg = `Are you sure you want to delete structure "${p.short_code} (${p.chainage_str})"? This change will sync to the cloud.`;
+        if (confirm(confirmMsg)) {
+          editMgr.deleteStructure(p.id);
+        }
+      });
+    }
+
+    // 8. Add Structure Modal & Actions
+    const modalAdd = document.getElementById('modalAddStructure');
+    function openAddModal(targetPk) {
+      if (!modalAdd) return;
+      let pk = typeof targetPk === 'number' ? targetPk : null;
+      if (pk === null && state.selectedAsset) {
+        pk = state.selectedAsset.properties.start_pk || state.selectedAsset.properties.pk;
+      }
+      if (pk === null && window.chainageScrubber) {
+        pk = window.chainageScrubber.currentPk;
+      }
+      if (pk === null && window.sldViewer) {
+        pk = window.sldViewer.centerPk;
+      }
+      if (pk === null) pk = 84406;
+
+      document.getElementById('newTxtStartPk').value = formatPk(pk);
+      document.getElementById('newTxtEndPk').value = formatPk(pk + 150);
+      document.getElementById('newChkIsPoint').checked = false;
+      toggleNewPointState();
+
+      if (selNew && selNew.options.length > 0) {
+        selNew.selectedIndex = 0;
+        selNew.dispatchEvent(new Event('change'));
+      }
+      modalAdd.style.display = 'flex';
+    }
+    window.openAddStructureModal = openAddModal;
+
+    function closeAddModal() {
+      if (modalAdd) modalAdd.style.display = 'none';
+    }
+
+    const btnAddSld = document.getElementById('btnAddStructureSld');
+    if (btnAddSld) btnAddSld.addEventListener('click', () => openAddModal());
+
+    const btnBannerAdd = document.getElementById('btnBannerAddStructure');
+    if (btnBannerAdd) btnBannerAdd.addEventListener('click', () => openAddModal());
+
+    const btnCloseAdd = document.getElementById('btnCloseAddStructure');
+    if (btnCloseAdd) btnCloseAdd.addEventListener('click', closeAddModal);
+
+    const btnCancelAdd = document.getElementById('btnCancelAddStructure');
+    if (btnCancelAdd) btnCancelAdd.addEventListener('click', closeAddModal);
+
+    if (modalAdd) {
+      modalAdd.addEventListener('click', (e) => {
+        if (e.target === modalAdd) closeAddModal();
+      });
+    }
+
+    // 9. Save New Structure
+    const btnSaveNew = document.getElementById('btnSaveNewStructure');
+    if (btnSaveNew) {
+      btnSaveNew.addEventListener('click', () => {
+        const sel = document.getElementById('newSelectTypology');
+        const opt = sel.options[sel.selectedIndex];
+
+        const typology = sel.value === 'CUSTOM' ? 'Custom Drainage Structure' : sel.value;
+        const shortCode = (opt && opt.getAttribute('data-code')) || 'Custom';
+        const category = (opt && opt.getAttribute('data-category')) || 'Drainage Structure';
+        const color = (opt && opt.getAttribute('data-color')) || '#38BDF8';
+        const icon = (opt && opt.getAttribute('data-icon')) || 'ditch';
+
+        const side = document.getElementById('newSelectSide').value;
+        const lane = document.getElementById('newSelectLane').value;
+        const isPoint = document.getElementById('newChkIsPoint').checked;
+        const sPk = window.parsePk(document.getElementById('newTxtStartPk').value);
+        const ePk = isPoint ? sPk : window.parsePk(document.getElementById('newTxtEndPk').value || document.getElementById('newTxtStartPk').value);
+        const specs = document.getElementById('newTxtSpecs').value.trim() || (opt && opt.getAttribute('data-specs')) || '';
+        const drawing = document.getElementById('newTxtDrawing').value.trim() || (opt && opt.getAttribute('data-drawing')) || '';
+        const notes = document.getElementById('newTxtNotes').value.trim();
+
+        if (isNaN(sPk) || sPk < 1000) {
+          alert('Please enter a valid start chainage (e.g. 84+200 or 84200)');
+          return;
+        }
+
+        editMgr.addStructure({
+          typology,
+          short_code: shortCode,
+          category,
+          color,
+          icon,
+          side,
+          lane,
+          is_point: isPoint,
+          start_pk: sPk,
+          end_pk: ePk,
+          specs,
+          drawing_ref: drawing,
+          notes
+        });
+
+        closeAddModal();
+      });
+    }
+
+    // 10. Offline PWA Service Worker Registration
+    if ('serviceWorker' in navigator && (window.location.protocol === 'https:' || window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')) {
+      navigator.serviceWorker.register('./sw.js').then(reg => {
+        console.log('KMD Offline PWA ServiceWorker registered with scope:', reg.scope);
+      }).catch(err => {
+        console.warn('ServiceWorker registration failed:', err);
       });
     }
   }

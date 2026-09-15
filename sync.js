@@ -97,6 +97,30 @@
 
     const idsToPush = [...syncState.pendingQueue];
     const payload = idsToPush.map(id => {
+      if (id.startsWith('struct_edit:')) {
+        const fid = id.replace('struct_edit:', '');
+        const editPayload = window.editManager ? window.editManager.getSyncPayload(fid) : null;
+        const action = editPayload ? editPayload.action : 'UPDATE';
+        const dataObj = editPayload ? editPayload.feature : { id: fid };
+        const updatedIso = (editPayload && editPayload.updated_at) || new Date().toISOString();
+        return {
+          asset_id: id,
+          status: 'Structure ' + action,
+          notes: JSON.stringify({
+            action: action,
+            feature_id: fid,
+            data: dataObj,
+            device_id: getDeviceId(),
+            timestamp: updatedIso
+          }),
+          has_defect: false,
+          inspection_date: updatedIso.substring(0, 10),
+          inspected_by: config.inspectorName || 'Field Engineer',
+          device_id: getDeviceId(),
+          updated_at: updatedIso
+        };
+      }
+
       const insp = state.inspections[id] || {};
       return {
         asset_id: id,
@@ -163,6 +187,22 @@
     cloudRecords.forEach(cr => {
       const aid = cr.asset_id;
       if (!aid) return;
+
+      if (aid.startsWith('struct_edit:')) {
+        try {
+          const editPayload = JSON.parse(cr.notes || '{}');
+          if (window.editManager && window.editManager.mergeCloudEdit) {
+            const didMerge = window.editManager.mergeCloudEdit(aid, editPayload, cr.updated_at);
+            if (didMerge) {
+              hasLocalChanges = true;
+              dequeueAssets([aid]);
+            }
+          }
+        } catch (e) {
+          console.warn('Error parsing cloud structure edit:', e);
+        }
+        return;
+      }
 
       const localInsp = state.inspections[aid];
       const isPendingLocal = syncState.pendingQueue.includes(aid);
@@ -378,6 +418,7 @@
   window.syncEngine = {
     syncNow: () => syncNow(true),
     queueAssetForSync,
+    queueStructureEdit: (editId) => queueAssetForSync(editId),
     getPendingCount: () => syncState.pendingQueue.length,
     updateUI: updateSyncUI,
     getDeviceId

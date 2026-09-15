@@ -64,6 +64,12 @@
 
       <!-- Clean Header Quick Actions -->
       <div class="header-quick-actions">
+        <button type="button" id="btnToggleEditMode" class="btn-header-action btn-edit-toggle" title="Toggle Edit Mode (Add or Modify Drainage Structures)">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+          </svg>
+        </button>
         <button type="button" id="btnQuickJump" class="btn-header-action" title="Jump to Chainage (Search PK)">
           <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="11" cy="11" r="8"></circle>
@@ -93,6 +99,20 @@
     <div id="progressKpiBar"><span id="kpiTotal">2552</span><span id="kpiNotStarted">2352</span><span id="kpiOngoing">2</span><span id="kpiCompleted">198</span><span id="kpiDefects">1</span></div>
   </div>
 
+  <!-- Floating Edit Mode Active Indicator Banner -->
+  <div id="editModeBanner" class="edit-mode-banner" style="display:none;">
+    <div class="edit-mode-banner-content">
+      <div class="edit-banner-left">
+        <span class="edit-banner-badge">✏️ EDIT MODE</span>
+        <span class="edit-banner-msg">Tap any structure to edit, or click "+ Add Structure" to insert.</span>
+      </div>
+      <div class="edit-banner-actions">
+        <button type="button" id="btnBannerAddStructure" class="btn-banner-add">+ Add Structure</button>
+        <button type="button" id="btnBannerExitEdit" class="btn-banner-close" title="Exit Edit Mode">&times;</button>
+      </div>
+    </div>
+  </div>
+
   <!-- 2. Modular View Stage -->
   <main class="main-stage">
     <!-- View 1: Straight-Line Diagram (SLD) Linear Track Viewer (Default) -->
@@ -109,6 +129,7 @@
 
         <!-- Floating Alignment Canvas Controls -->
         <div class="sld-floating-controls">
+          <button type="button" id="btnAddStructureSld" class="sld-ctrl-btn btn-add-structure" title="Add New Drainage Structure">+ Add</button>
           <button type="button" id="btnSldOrientation" class="sld-ctrl-btn" title="Toggle Horizontal / Vertical Track Layout">⇄ Horiz</button>
           <button type="button" id="btnSldZoomIn" class="sld-ctrl-btn" title="Zoom In (+)">+</button>
           <button type="button" id="btnSldZoomOut" class="sld-ctrl-btn" title="Zoom Out (−)">−</button>
@@ -178,74 +199,170 @@
     </div>
 
     <div class="drawer-content" id="drawerContent">
-      <!-- Technical Design Specs -->
-      <div class="spec-grid">
-        <div class="spec-item">
-          <span class="spec-label">Typology Scope</span>
-          <span class="spec-value" id="specTypology">—</span>
-        </div>
-        <div class="spec-item">
-          <span class="spec-label">Linear Scope</span>
-          <span class="spec-value" id="specLength">—</span>
-        </div>
-        <div class="spec-item">
-          <span class="spec-label">Detail Drawing</span>
-          <span class="spec-value" id="specDrawing">—</span>
-        </div>
-        <div class="spec-item">
-          <span class="spec-label">Dimensions / Geometry</span>
-          <span class="spec-value" id="specDimensions">—</span>
-        </div>
+      <!-- Mode Tabs: Inspection vs Structure Edit -->
+      <div class="drawer-mode-tabs" id="drawerModeTabs">
+        <button type="button" class="drawer-tab active" id="tabInspectionMode" data-tab="inspection">📋 Inspection Record</button>
+        <button type="button" class="drawer-tab" id="tabEditMode" data-tab="edit">✏️ Edit Structure</button>
       </div>
 
-      <!-- Construction Progress Milestones -->
-      <div class="progress-section">
-        <span class="section-label">Construction Progress Milestone</span>
-        <div class="milestone-grid">
-          <button class="btn-milestone selected" data-status="Not Started">Not Started</button>
-          <button class="btn-milestone" data-status="Excavation">Excavation</button>
-          <button class="btn-milestone" data-status="Blinding">Blinding</button>
-          <button class="btn-milestone" data-status="Rebar / Shuttering">Rebar / Shuttering</button>
-          <button class="btn-milestone" data-status="Concreted">Concreted</button>
-          <button class="btn-milestone" data-status="Completed & Approved">Completed & Approved</button>
+      <!-- Panel 1: Inspection & Quality Progress -->
+      <div class="drawer-view-panel active" id="drawerViewInspection">
+        <!-- Technical Design Specs -->
+        <div class="spec-grid">
+          <div class="spec-item">
+            <span class="spec-label">Typology Scope</span>
+            <span class="spec-value" id="specTypology">—</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Linear Scope</span>
+            <span class="spec-value" id="specLength">—</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Detail Drawing</span>
+            <span class="spec-value" id="specDrawing">—</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Dimensions / Geometry</span>
+            <span class="spec-value" id="specDimensions">—</span>
+          </div>
         </div>
-      </div>
 
-      <!-- Punchlist & Quality Notes -->
-      <div class="notes-section">
-        <div style="display:flex; justify-content:space-between; align-items:center;">
-          <span class="section-label">Inspection & Punchlist Notes</span>
-          <label style="font-size:0.72rem; color:#EF4444; font-weight:700; display:flex; align-items:center; gap:4px; cursor:pointer;">
-            <input type="checkbox" id="chkDefect"> Log as Defect / Snag
+        <!-- Construction Progress Milestones -->
+        <div class="progress-section">
+          <span class="section-label">Construction Progress Milestone</span>
+          <div class="milestone-grid">
+            <button class="btn-milestone selected" data-status="Not Started">Not Started</button>
+            <button class="btn-milestone" data-status="Excavation">Excavation</button>
+            <button class="btn-milestone" data-status="Blinding">Blinding</button>
+            <button class="btn-milestone" data-status="Rebar / Shuttering">Rebar / Shuttering</button>
+            <button class="btn-milestone" data-status="Concreted">Concreted</button>
+            <button class="btn-milestone" data-status="Completed & Approved">Completed & Approved</button>
+          </div>
+        </div>
+
+        <!-- Punchlist & Quality Notes -->
+        <div class="notes-section">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span class="section-label">Inspection & Punchlist Notes</span>
+            <label style="font-size:0.72rem; color:#EF4444; font-weight:700; display:flex; align-items:center; gap:4px; cursor:pointer;">
+              <input type="checkbox" id="chkDefect"> Log as Defect / Snag
+            </label>
+          </div>
+          <textarea id="defectNotes" placeholder="Enter engineering observation, joint alignment, scouring, or punch items..."></textarea>
+        </div>
+
+        <!-- Photo Attachment -->
+        <div class="photo-section">
+          <label class="btn-photo">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+              <circle cx="12" cy="13" r="4"></circle>
+            </svg>
+            <span>Attach Photo</span>
+            <input type="file" id="cameraInput" accept="image/*" capture="environment" style="display:none;">
           </label>
+          <div class="photo-preview-list" id="photoPreviewList"></div>
         </div>
-        <textarea id="defectNotes" placeholder="Enter engineering observation, joint alignment, scouring, or punch items..."></textarea>
+
+        <!-- Action Buttons -->
+        <div class="drawer-actions">
+          <button class="btn-primary" id="btnSaveInspection">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+              <polyline points="17 21 17 13 7 13 7 21"></polyline>
+              <polyline points="7 3 7 8 15 8"></polyline>
+            </svg>
+            <span>Save Record</span>
+          </button>
+          <button class="btn-secondary" id="btnCloseDrawer">Close</button>
+        </div>
       </div>
 
-      <!-- Photo Attachment -->
-      <div class="photo-section">
-        <label class="btn-photo">
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
-            <circle cx="12" cy="13" r="4"></circle>
-          </svg>
-          <span>Attach Photo</span>
-          <input type="file" id="cameraInput" accept="image/*" capture="environment" style="display:none;">
-        </label>
-        <div class="photo-preview-list" id="photoPreviewList"></div>
-      </div>
+      <!-- Panel 2: Structure Authoring & Property Modifications -->
+      <div class="drawer-view-panel" id="drawerViewEdit" style="display:none;">
+        <div class="edit-status-header">
+          <span class="edit-badge-pill" id="editCustomBadge" style="display:none;">Site Added</span>
+          <span class="edit-help-hint">Modify structure properties, geometry, or alignment scope.</span>
+        </div>
 
-      <!-- Action Buttons -->
-      <div class="drawer-actions">
-        <button class="btn-primary" id="btnSaveInspection">
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
-            <polyline points="17 21 17 13 7 13 7 21"></polyline>
-            <polyline points="7 3 7 8 15 8"></polyline>
-          </svg>
-          <span>Save Record</span>
-        </button>
-        <button class="btn-secondary" id="btnCloseDrawer">Close</button>
+        <div class="edit-form-grid">
+          <div class="edit-form-group">
+            <label for="editSelectTypology">Typology / Standard Type</label>
+            <select id="editSelectTypology" class="edit-form-control"></select>
+          </div>
+
+          <div class="edit-form-row">
+            <div class="edit-form-group">
+              <label for="editSelectSide">Lateral Placement (Side)</label>
+              <select id="editSelectSide" class="edit-form-control">
+                <option value="Left">Left Side</option>
+                <option value="Right">Right Side</option>
+                <option value="Center">Center / Cross Drainage</option>
+              </select>
+            </div>
+            <div class="edit-form-group">
+              <label for="editSelectLane">Corridor Lane</label>
+              <select id="editSelectLane" class="edit-form-control">
+                <option value="Shoulder">Shoulder (Platform Edge)</option>
+                <option value="Bench">Bench (Intermediate Berm)</option>
+                <option value="Toe">Toe (Foot of Slope)</option>
+                <option value="Crest">Crest (Cutting Top)</option>
+                <option value="Channel">Outer Channel Corridor</option>
+                <option value="Centerline">Centerline (Cross Culvert)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="edit-form-row">
+            <div class="edit-form-group">
+              <label for="editTxtStartPk">Start Chainage (PK)</label>
+              <input type="text" id="editTxtStartPk" class="edit-form-control" placeholder="e.g. 84+200">
+            </div>
+            <div class="edit-form-group" id="groupEditEndPk">
+              <label for="editTxtEndPk">End Chainage (PK)</label>
+              <input type="text" id="editTxtEndPk" class="edit-form-control" placeholder="e.g. 84+400">
+            </div>
+          </div>
+
+          <div class="edit-form-row edit-checkbox-row">
+            <label class="edit-inline-check">
+              <input type="checkbox" id="editChkIsPoint"> Point Structure (Single Chainage)
+            </label>
+            <span class="edit-calc-length" id="editLblLength">0 m</span>
+          </div>
+
+          <div class="edit-form-group">
+            <label for="editTxtSpecs">Dimensions & Specifications</label>
+            <input type="text" id="editTxtSpecs" class="edit-form-control" placeholder="e.g. L=200m / B=0.6m / H=0.8m / C25/30">
+          </div>
+
+          <div class="edit-form-group">
+            <label for="editTxtDrawing">Detail Drawing Reference</label>
+            <input type="text" id="editTxtDrawing" class="edit-form-control" placeholder="e.g. T2019-323-DD-MD-MDDT-2200-DW-10001-05-A">
+          </div>
+
+          <div class="edit-form-group">
+            <label for="editTxtNotes">Design & Site Notes</label>
+            <textarea id="editTxtNotes" class="edit-form-control edit-textarea" placeholder="Enter site modifications, CAD cross-references, or remarks..."></textarea>
+          </div>
+        </div>
+
+        <div class="drawer-actions edit-drawer-actions">
+          <button type="button" class="btn-primary btn-save-edit" id="btnSaveStructureEdit">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+              <polyline points="17 21 17 13 7 13 7 21"></polyline>
+              <polyline points="7 3 7 8 15 8"></polyline>
+            </svg>
+            <span>Save Changes</span>
+          </button>
+          <button type="button" class="btn-secondary btn-revert-edit" id="btnRevertStructureEdit" style="display:none;">
+            <span>↩️ Revert to Design</span>
+          </button>
+          <button type="button" class="btn-danger btn-delete-struct" id="btnDeleteStructure">
+            <span>🗑️ Delete</span>
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -426,6 +543,89 @@
         <button class="btn-secondary" id="btnModalSyncNow">Sync Now</button>
         <button class="btn-secondary" id="btnTestCloudConn">Test Connection</button>
       </div>
+    </div>
+  </div>
+
+  <!-- Modal: Add New Drainage Structure -->
+  <div class="modal-backdrop" id="modalAddStructure" style="display:none;">
+    <div class="modal-dialog modal-structure-dialog">
+      <div class="modal-header">
+        <div class="modal-title-block">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#F59E0B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 5v14M5 12h14"></path>
+          </svg>
+          <h3 id="modalStructureTitle">Add Drainage Structure</h3>
+        </div>
+        <button type="button" class="modal-close" id="btnCloseAddStructure">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="edit-form-grid">
+          <div class="edit-form-group">
+            <label for="newSelectTypology">Drainage Typology & Category</label>
+            <select id="newSelectTypology" class="edit-form-control"></select>
+          </div>
+
+          <div class="edit-form-row">
+            <div class="edit-form-group">
+              <label for="newSelectSide">Placement Side</label>
+              <select id="newSelectSide" class="edit-form-control">
+                <option value="Left">Left Side</option>
+                <option value="Right">Right Side</option>
+                <option value="Center">Center / Cross Drainage</option>
+              </select>
+            </div>
+            <div class="edit-form-group">
+              <label for="newSelectLane">Corridor Lane</label>
+              <select id="newSelectLane" class="edit-form-control">
+                <option value="Shoulder">Shoulder (Platform Edge)</option>
+                <option value="Bench">Bench (Intermediate Berm)</option>
+                <option value="Toe">Toe (Foot of Slope)</option>
+                <option value="Crest">Crest (Cutting Top)</option>
+                <option value="Channel">Outer Channel Corridor</option>
+                <option value="Centerline">Centerline (Cross Culvert)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="edit-form-row">
+            <div class="edit-form-group">
+              <label for="newTxtStartPk">Start Chainage (PK)</label>
+              <input type="text" id="newTxtStartPk" class="edit-form-control" placeholder="e.g. 84+200">
+            </div>
+            <div class="edit-form-group" id="groupNewEndPk">
+              <label for="newTxtEndPk">End Chainage (PK)</label>
+              <input type="text" id="newTxtEndPk" class="edit-form-control" placeholder="e.g. 84+450">
+            </div>
+          </div>
+
+          <div class="edit-form-row edit-checkbox-row">
+            <label class="edit-inline-check">
+              <input type="checkbox" id="newChkIsPoint"> Point Structure (Single Chainage)
+            </label>
+            <span class="edit-calc-length" id="newLblLength">0 m</span>
+          </div>
+
+          <div class="edit-form-group">
+            <label for="newTxtSpecs">Dimensions & Specifications</label>
+            <input type="text" id="newTxtSpecs" class="edit-form-control" placeholder="e.g. L=250m / B=0.6m / H=0.8m / C25/30">
+          </div>
+
+          <div class="edit-form-group">
+            <label for="newTxtDrawing">Detail Drawing Reference</label>
+            <input type="text" id="newTxtDrawing" class="edit-form-control" placeholder="e.g. T2019-323-DD-MD-MDDT-2200-DW-10001-05-A">
+          </div>
+
+          <div class="edit-form-group">
+            <label for="newTxtNotes">Engineering Notes / Alignment Context</label>
+            <textarea id="newTxtNotes" class="edit-form-control edit-textarea" placeholder="Enter observation, connected structures, or CAD details..."></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-secondary" id="btnCancelAddStructure">Cancel</button>
+        <button type="button" class="btn-primary btn-save-struct" id="btnSaveNewStructure">Create Structure</button>
+      </div>
+    </div>
   </div>
 
   <!-- DW-10003 Standard Detail & Hydraulic Connection Modal -->
@@ -585,7 +785,8 @@
   <script src="config.js?v=20260915_1"></script>
   <script src="sync.js?v=20260915_1"></script>
 
-  <!-- 4. Specialized Engineering Views & Navigation Engines -->
+  <!-- 4. Structure Edit Engine, Specialized Views & Navigation Engines -->
+  <script src="edit_manager.js?v=20260915_1"></script>
   <script src="sld_viewer.js?v=20260915_1"></script>
   <script src="cad_viewer.js?v=20260915_1"></script>
   <script src="scrubber.js?v=20260915_1"></script>

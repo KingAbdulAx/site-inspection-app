@@ -1264,7 +1264,8 @@
     }
 
     _renderHoverTooltip(ctx, p) {
-      const text = `${p.short_code || p.id} · ${p.typology} (${p.chainage_str})`;
+      const tag = p.is_user_created ? ' [Site Added]' : (window.editManager && window.editManager.isModified(p.id) ? ' [Modified]' : '');
+      const text = `${p.short_code || p.id}${tag} · ${p.typology} (${p.chainage_str})`;
       ctx.save();
       ctx.font = '600 11px ' + this.options.fontFamily;
       const textWidth = ctx.measureText(text).width;
