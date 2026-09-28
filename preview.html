@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Drainage Inspector - Component Preview (Phase 1)</title>
+    
+    <!-- Self-hosted Fonts, Design Tokens & Components -->
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="tokens.css">
+    <link rel="stylesheet" href="components.css">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--paper);
+            color: var(--ink);
+            min-height: 100vh;
+            padding-bottom: 80px;
+            font-family: 'Barlow', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .preview-container {
+            max-width: 412px;
+            margin: 0 auto;
+            border-left: 1px solid var(--rule);
+            border-right: 1px solid var(--rule);
+            min-height: 100vh;
+            background: var(--paper);
+        }
+
+        .preview-header {
+            padding: 16px;
+            border-bottom: 1px solid var(--rule);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--surface);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .section {
+            padding: 24px 16px;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .section-header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 14px;
+        }
+
+        .section-desc {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 11px;
+            color: var(--ink-3);
+            text-transform: uppercase;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .h-row {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .color-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            min-width: 52px;
+        }
+
+        .color-swatch {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-sm, 4px);
+            border: 1px solid var(--rule);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .color-label {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 10px;
+            color: var(--ink-2);
+            text-align: center;
+        }
+
+        .pattern-box {
+            width: 72px;
+            height: 48px;
+            border-radius: var(--radius-sm, 4px);
+            border: 1px solid var(--rule);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .icon-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 6px;
+            background: var(--surface);
+            border: 1px solid var(--rule);
+            border-radius: var(--radius-sm, 4px);
+            gap: 6px;
+            width: calc(25% - 8px);
+            min-width: 78px;
+            box-sizing: border-box;
+        }
+
+        .icon-card__chip {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            color: var(--ink);
+        }
+
+        .icon-card__label {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 9px;
+            color: var(--ink-3);
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+        }
+
+        .theme-btn {
+            background: var(--ink);
+            color: var(--surface);
+            border: 1px solid var(--ink);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 11px;
+            font-weight: 600;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-container">
+        
+        <!-- Header & Theme Toggle -->
+        <header class="preview-header">
+            <div>
+                <div class="font-label" style="color: var(--ink-3);">DRAINAGE INSPECTOR</div>
+                <div class="font-row-title" style="margin-top: 2px;">Phase 1 Component Preview</div>
+            </div>
+            <button id="theme-toggle" class="theme-btn">Sun / Office</button>
+        </header>
+
+        <!-- 1. Typography Scale -->
+        <section class="section">
+            <div class="section-header-row">
+                <h2 class="di-section-title" style="margin-bottom:0; border:none; padding:0;">1. Typography Scale</h2>
+                <span class="section-desc">Barlow & Plex Mono</span>
+            </div>
+            
+            <div class="row" style="gap: 14px;">
+                <div>
+                    <span class="section-desc">Position (Barlow Condensed 700, 62px)</span>
+                    <div style="font: var(--font-position); color: var(--ink);">PK 111+050</div>
+                </div>
+                <div>
+                    <span class="section-desc">Action Button (Barlow Condensed 700, 26px)</span>
+                    <div style="font: var(--font-action); color: var(--ink); text-transform: uppercase;">RECORD STAGE</div>
+                </div>
+                <div>
+                    <span class="section-desc">Title (Barlow 700, 20px)</span>
+                    <div style="font: var(--font-title); color: var(--ink);">Section 03: Kazaure - Daura</div>
+                </div>
+                <div>
+                    <span class="section-desc">Row Title (Barlow 600, 16px)</span>
+                    <div style="font: var(--font-row-title); color: var(--ink);">Concrete Lined Side Ditch (Type 12)</div>
+                </div>
+                <div>
+                    <span class="section-desc">Body (Barlow 500, 16px / 1.4)</span>
+                    <div style="font: var(--font-body); color: var(--ink);">Trapezoidal concrete lined ditch at foot of slope, C25/30, B=1.50m, H=0.50m with 1.5:1 side slopes.</div>
+                </div>
+                <div>
+                    <span class="section-desc">Label (Barlow 700 uppercase, 13px)</span>
+                    <div style="font: var(--font-label); color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.08em;">POSITION CERTAINTY &bull; PROVENANCE</div>
+                </div>
+                <div>
+                    <span class="section-desc">Data Tabular (IBM Plex Mono 500, 14px)</span>
+                    <div style="font: var(--font-data); color: var(--ink);">CH 84+406.229 &bull; OFFSET L 14.50m &bull; DW-10001-05-A</div>
+                </div>
+                <div>
+                    <span class="section-desc">Data Large (IBM Plex Mono 600, 17px)</span>
+                    <div style="font: var(--font-data-lg); color: var(--ink);">DW-03004-05 &bull; LEVEL A APPROVED</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Color Tokens -->
+        <section class="section">
+            <div class="section-header-row">
+                <h2 class="di-section-title" style="margin-bottom:0; border:none; padding:0;">2. Core Palette</h2>
+                <span class="section-desc">Tokens</span>
+            </div>
+            
+            <div class="h-row" style="margin-bottom: 16px;">
+                <div class="color-box">
+                    <div class="color-swatch" style="background: var(--paper);"></div>
+                    <div class="color-label">paper</div>
+                </div>
+                <div class="color-box">
+                    <div class="color-swatch" style="background: var(--surface);"></div>
+                    <div class="color-label">surface</div>
+                </div>
+                <div class="color-box">
+                    <div class="color-swatch" style="background: var(--ink);"></div>
+                    <div class="color-label">ink</div>
+                </div>
+                <div class="color-box">
+                    <div class="color-swatch" style="background: var(--ink-2);"></div>
+                    <div class="color-label">ink-2</div>
+                </div>
+                <div class="color-box">
+                    <div class="color-swatch" style="background: var(--ink-3);"></div>
+                    <div class="color-label">ink-3</div>
+                </div>
+                <div class="color-box">
+                    <div class="color-swatch" style="background: var(--rule);"></div>
+                    <div class="color-label">rule</div>
+                </div>
+                <div class="color-box">
+                    <div class="color-swatch" style="background: var(--hivis);"></div>
+                    <div class="color-label">hivis</div>
+                </div>
+                <div class="color-box">
+                    <div class="color-swatch" style="background: var(--defect);"></div>
+                    <div class="color-label">defect</div>
+                </div>
+                <div class="color-box">
+                    <div class="color-swatch" style="background: var(--rev);"></div>
+                    <div class="color-label">rev</div>
+                </div>
+            </div>
+
+            <span class="section-desc">Strip Lane Tints (outside to track spine)</span>
+            <div class="h-row" style="margin-top: 8px;">
+                <div class="color-box"><div class="color-swatch" style="background: var(--lane-off);"></div><div class="color-label">off</div></div>
+                <div class="color-box"><div class="color-swatch" style="background: var(--lane-crest);"></div><div class="color-label">crest</div></div>
+                <div class="color-box"><div class="color-swatch" style="background: var(--lane-toe);"></div><div class="color-label">toe</div></div>
+                <div class="color-box"><div class="color-swatch" style="background: var(--lane-face);"></div><div class="color-label">face</div></div>
+                <div class="color-box"><div class="color-swatch" style="background: var(--lane-plat);"></div><div class="color-label">plat</div></div>
+                <div class="color-box"><div class="color-swatch" style="background: var(--lane-spine);"></div><div class="color-label">spine</div></div>
+            </div>
+        </section>
+
+        <!-- 3. Side Badges -->
+        <section class="section">
+            <div class="section-header-row">
+                <h2 class="di-section-title" style="margin-bottom:0; border:none; padding:0;">3. Side Badges</h2>
+                <span class="section-desc">40px height</span>
+            </div>
+            <div class="h-row">
+                <div class="di-side-badge di-side-badge--left"><span class="di-side-arrow">&#x25C0;</span> L</div>
+                <div class="di-side-badge di-side-badge--left"><span class="di-side-arrow">&#x25C0;</span> LEFT</div>
+                <div class="di-side-badge di-side-badge--centre">C</div>
+                <div class="di-side-badge di-side-badge--right">R <span class="di-side-arrow">&#x25B6;</span></div>
+                <div class="di-side-badge di-side-badge--right">RIGHT <span class="di-side-arrow">&#x25B6;</span></div>
+            </div>
+        </section>
+
+        <!-- 4. Position Certainty Chips -->
+        <section class="section">
+            <div class="section-header-row">
+                <h2 class="di-section-title" style="margin-bottom:0; border:none; padding:0;">4. Certainty Chips</h2>
+                <span class="section-desc">Truth hierarchy</span>
+            </div>
+            <div class="h-row">
+                <span class="di-certainty di-certainty--exact">EXACT</span>
+                <span class="di-certainty di-certainty--derived">&plusmn;4m</span>
+                <span class="di-certainty di-certainty--label">LABEL</span>
+                <span class="di-certainty di-certainty--measured">MEASURED</span>
+            </div>
+        </section>
+
+        <!-- 5. Stage Meters -->
+        <section class="section">
+            <div class="section-header-row">
+                <h2 class="di-section-title" style="margin-bottom:0; border:none; padding:0;">5. Stage Meters</h2>
+                <span class="section-desc">6 segments</span>
+            </div>
+            <div class="row" style="gap: 16px;">
+                <div>
+                    <div class="di-stage-meter">
+                        <div class="di-stage-meter__bars">
+                            <div class="di-stage-meter__segment"></div>
+                            <div class="di-stage-meter__segment"></div>
+                            <div class="di-stage-meter__segment"></div>
+                            <div class="di-stage-meter__segment"></div>
+                            <div class="di-stage-meter__segment"></div>
+                            <div class="di-stage-meter__segment"></div>
+                        </div>
+                        <div class="di-stage-meter__label">Stage 0/6 &bull; Not Started</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="di-stage-meter">
+                        <div class="di-stage-meter__bars">
+                            <div class="di-stage-meter__segment di-stage-meter__segment--complete"></div>
+                            <div class="di-stage-meter__segment di-stage-meter__segment--partial"></div>
+                            <div class="di-stage-meter__segment"></div>
+                            <div class="di-stage-meter__segment"></div>
+                            <div class="di-stage-meter__segment"></div>
+                            <div class="di-stage-meter__segment"></div>
+                        </div>
+                        <div class="di-stage-meter__label">Stage 2/6 &bull; Excavation (Hatched: Claimed)</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="di-stage-meter">
+                        <div class="di-stage-meter__bars">
+                            <div class="di-stage-meter__segment di-stage-meter__segment--complete"></div>
+                            <div class="di-stage-meter__segment di-stage-meter__segment--complete"></div>
+                            <div class="di-stage-meter__segment di-stage-meter__segment--complete"></div>
+                            <div class="di-stage-meter__segment di-stage-meter__segment--complete"></div>
+                            <div class="di-stage-meter__segment"></div>
+                            <div class="di-stage-meter__segment"></div>
+                        </div>
+                        <div class="di-stage-meter__label">Stage 4/6 &bull; Rebar In Place</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="di-stage-meter">
+                        <div class="di-stage-meter__bars">
+                            <div class="di-stage-meter__segment di-stage-meter__segment--complete"></div>
+                            <div class="di-stage-meter__segment di-stage-meter__segment--complete"></div>
+                            <div class="di-stage-meter__segment di-stage-meter__segment--complete"></div>
+                            <div class="di-stage-meter__segment di-stage-meter__segment--complete"></div>
+                            <div class="di-stage-meter__segment di-stage-meter__segment--complete"></div>
+                            <div class="di-stage-meter__segment di-stage-meter__segment--complete"></div>
+                        </div>
+                        <div class="di-stage-meter__label">Stage 6/6 &bull; Completed &amp; Approved</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Action Buttons -->
+        <section class="section">
+            <div class="section-header-row">
+                <h2 class="di-section-title" style="margin-bottom:0; border:none; padding:0;">6. Action Buttons</h2>
+                <span class="section-desc">72px / 56px / 44px</span>
+            </div>
+            <div class="row">
+                <button class="di-btn di-btn--primary">RECORD STAGE</button>
+                <button class="di-btn di-btn--secondary">Add Observation Note</button>
+                <div class="h-row" style="justify-content: space-between;">
+                    <button class="di-btn di-btn--defect" style="flex: 1;">Raise Defect</button>
+                    <button class="di-btn di-btn--rev" style="flex: 1;">Design Rev &Delta;07</button>
+                </div>
+                <div style="display:flex; justify-content: flex-end;">
+                    <button class="di-btn di-btn--tertiary">Cancel Action</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Reasoning Patterns -->
+        <section class="section">
+            <div class="section-header-row">
+                <h2 class="di-section-title" style="margin-bottom:0; border:none; padding:0;">7. Status Patterns</h2>
+                <span class="section-desc">Greyscale surviving</span>
+            </div>
+            <div class="h-row">
+                <div class="color-box">
+                    <div class="pattern-box di-pattern--hatch"></div>
+                    <div class="color-label">hatch<br>(IR claim)</div>
+                </div>
+                <div class="color-box">
+                    <div class="pattern-box di-pattern--hazard"></div>
+                    <div class="color-label">hazard<br>(&gt;6mo stalled)</div>
+                </div>
+                <div class="color-box">
+                    <div class="pattern-box di-pattern--none-by-design"></div>
+                    <div class="color-label">none-by-design<br>(designed absent)</div>
+                </div>
+                <div class="color-box">
+                    <div class="pattern-box di-pattern--no-data"></div>
+                    <div class="color-label">no-data<br>(unextracted)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Cross-Section Type Icons -->
+        <section class="section">
+            <div class="section-header-row">
+                <h2 class="di-section-title" style="margin-bottom:0; border:none; padding:0;">8. Type Cross-Section Icons</h2>
+                <span class="section-desc">28x17px chips</span>
+            </div>
+            <div id="icon-catalogue-grid" class="h-row" style="gap: 8px;">
+                <!-- Populated dynamically from window.TYPE_CATALOGUE -->
+            </div>
+        </section>
+
+        <!-- 9. Toast with 8s Undo -->
+        <section class="section">
+            <div class="section-header-row">
+                <h2 class="di-section-title" style="margin-bottom:0; border:none; padding:0;">9. Field Record Toast</h2>
+                <span class="section-desc">8s Undo window</span>
+            </div>
+            <div class="di-toast" style="--toast-progress: 65%;">
+                <div>
+                    <div class="di-toast__message">Saved on this phone &bull; Concreted</div>
+                    <div class="font-data" style="color: var(--ink-3); font-size: 11px; margin-top: 2px;">14:32:08 &bull; Engr. Abdulaziz A.</div>
+                </div>
+                <button class="di-toast__action">UNDO</button>
+            </div>
+        </section>
+
+        <!-- 10. Position Header (3 GPS States) -->
+        <section class="section">
+            <div class="section-header-row">
+                <h2 class="di-section-title" style="margin-bottom:0; border:none; padding:0;">10. Position Header (116px)</h2>
+                <span class="section-desc">Good / Poor / None</span>
+            </div>
+            
+            <div class="row" style="gap: 16px;">
+                <!-- Good GPS -->
+                <div class="di-position-header">
+                    <div class="di-position-header__top">
+                        <div class="di-chip-group">
+                            <span class="di-chip-section">KM &bull; KZDR</span>
+                            <span class="di-gps-chip di-gps-chip--good">GPS &plusmn;3.8m</span>
+                        </div>
+                        <div class="di-position-header__side">L 14m</div>
+                    </div>
+                    <div class="di-position-header__mid">
+                        <div class="di-position-header__chainage">111+050</div>
+                    </div>
+                    <div class="di-position-header__facing">FACING &#x25B2; INCREASING</div>
+                </div>
+
+                <!-- Poor GPS -->
+                <div class="di-position-header" style="background: var(--surface);">
+                    <div class="di-position-header__top">
+                        <div class="di-chip-group">
+                            <span class="di-chip-section">KM &bull; KZDR</span>
+                            <span class="di-gps-chip di-gps-chip--poor">GPS &plusmn;14.2m POOR</span>
+                        </div>
+                        <div class="di-position-header__side">SIDE ?</div>
+                    </div>
+                    <div class="di-position-header__mid">
+                        <div class="di-position-header__chainage" style="color: var(--ink-2);">&#x2248; 111+050</div>
+                    </div>
+                    <div class="di-position-header__facing" style="color: var(--defect);">STAND ON EXACT POINT TO FIX</div>
+                </div>
+
+                <!-- Manual / No GPS -->
+                <div class="di-position-header" style="background: var(--surface);">
+                    <div class="di-position-header__top">
+                        <div class="di-chip-group">
+                            <span class="di-chip-section">KM &bull; KZDR</span>
+                            <span class="di-gps-chip di-gps-chip--none">NO GPS &bull; MANUAL</span>
+                        </div>
+                        <div class="di-position-header__side">SET BY HAND</div>
+                    </div>
+                    <div class="di-position-header__mid">
+                        <div class="di-position-header__chainage" style="color: var(--ink-3); -webkit-text-stroke: 1px var(--ink); color: transparent;">111+050</div>
+                    </div>
+                    <div class="di-position-header__facing">FACING &#x25BC; DECREASING</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. At-You Bar (4 Variants) -->
+        <section class="section" style="padding-left: 0; padding-right: 0;">
+            <div style="padding: 0 16px 12px 16px;">
+                <div class="section-header-row">
+                    <h2 class="di-section-title" style="margin-bottom:0; border:none; padding:0;">11. At-You Bar (72px)</h2>
+                    <span class="section-desc">Key interaction bar</span>
+                </div>
+            </div>
+            
+            <div class="row" style="gap: 12px;">
+                <!-- 1. Normal Feature at you -->
+                <div class="di-at-you-bar">
+                    <div class="di-at-you-bar__left">
+                        <div class="di-side-badge di-side-badge--left" style="height: 36px; min-width: 36px; padding: 0 10px; font-size: 13px;"><span class="di-side-arrow">&#x25C0;</span> L</div>
+                        <div class="di-at-you-bar__info">
+                            <div class="di-at-you-bar__sub">AT YOU &bull; TAP TO RECORD</div>
+                            <div class="di-at-you-bar__title">Type 12 &bull; Trapezoidal Lined Toe <span class="di-certainty di-certainty--exact" style="margin-left: 4px;">EXACT</span></div>
+                        </div>
+                    </div>
+                    <div class="di-at-you-bar__right">
+                        <span>+3 within 20m</span>
+                        <span style="font-size: 18px; line-height: 1;">&#x203A;</span>
+                    </div>
+                </div>
+
+                <!-- 2. Poor GPS variant -->
+                <div class="di-at-you-bar di-at-you-bar--poor">
+                    <div class="di-at-you-bar__left">
+                        <div class="di-at-you-bar__info">
+                            <div class="di-at-you-bar__sub" style="color: #121311; font-weight: 700;">GPS &plusmn;14m &bull; CANNOT RESOLVE SIDE</div>
+                            <div class="di-at-you-bar__title" style="color: #121311; font-size: 14px;">Stand on exact feature to anchor position</div>
+                        </div>
+                    </div>
+                    <button class="di-btn di-btn--primary" style="height: 48px; width: auto; font-size: 16px; padding: 0 14px; margin-bottom: 0;">I'm On Culvert</button>
+                </div>
+
+                <!-- 3. Revision View variant -->
+                <div class="di-at-you-bar di-at-you-bar--rev">
+                    <div class="di-at-you-bar__left">
+                        <div class="di-at-you-bar__info">
+                            <div class="di-at-you-bar__sub" style="color: var(--rev); font-weight: 700;">&Delta;07 &bull; 3 CHANGES NEAR YOU</div>
+                            <div class="di-at-you-bar__title">DW-03008 rev 07 &bull; Level B Pending</div>
+                        </div>
+                    </div>
+                    <button class="di-btn di-btn--rev" style="height: 44px; font-size: 13px; padding: 0 12px; margin-bottom: 0;">Compare rev 06</button>
+                </div>
+
+                <!-- 4. Empty by design variant -->
+                <div class="di-at-you-bar di-at-you-bar--empty">
+                    <div class="di-at-you-bar__left">
+                        <div class="di-at-you-bar__info">
+                            <div class="di-at-you-bar__sub">ABSENT BY DESIGN &bull; DW-03019-06</div>
+                            <div class="di-at-you-bar__title" style="color: var(--ink-3); font-weight: 500;">No side ditch designed along this embankment fill</div>
+                        </div>
+                    </div>
+                    <div class="di-at-you-bar__right" style="color: var(--ink-3); font-size: 12px;">
+                        <span>NEXT &#x25B2; 600m Box</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 12. Feature Rows (72px, Drawer List) -->
+        <section class="section" style="padding-left: 0; padding-right: 0;">
+            <div style="padding: 0 16px 12px 16px;">
+                <div class="section-header-row">
+                    <h2 class="di-section-title" style="margin-bottom:0; border:none; padding:0;">12. Feature Drawer Rows</h2>
+                    <span class="section-desc">72px list items</span>
+                </div>
+            </div>
+            
+            <div class="row" style="gap: 0;">
+                <!-- Feature 1: Complete -->
+                <div class="di-feature-row">
+                    <div class="di-feature-row__left">
+                        <div class="di-side-badge di-side-badge--left"><span class="di-side-arrow">&#x25C0;</span> L</div>
+                    </div>
+                    <div class="di-feature-row__center">
+                        <div class="di-feature-row__name">Concrete Lined Toe Ditch (Type 12)</div>
+                        <div class="di-feature-row__details">
+                            <span class="di-certainty di-certainty--exact">EXACT</span>
+                            <span>PK 111+000 &bull; at you</span>
+                        </div>
+                    </div>
+                    <div class="di-feature-row__right">
+                        <div class="di-stage-meter">
+                            <div class="di-stage-meter__bars" style="margin:0;">
+                                <div class="di-stage-meter__segment di-stage-meter__segment--complete"></div>
+                                <div class="di-stage-meter__segment di-stage-meter__segment--complete"></div>
+                                <div class="di-stage-meter__segment di-stage-meter__segment--complete"></div>
+                                <div class="di-stage-meter__segment di-stage-meter__segment--complete"></div>
+                                <div class="di-stage-meter__segment di-stage-meter__segment--complete"></div>
+                                <div class="di-stage-meter__segment di-stage-meter__segment--complete"></div>
+                            </div>
+                            <div class="di-stage-meter__label" style="text-align: right;">COMPLETE</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feature 2: In progress / Derived -->
+                <div class="di-feature-row">
+                    <div class="di-feature-row__left">
+                        <div class="di-side-badge di-side-badge--centre">C</div>
+                    </div>
+                    <div class="di-feature-row__center">
+                        <div class="di-feature-row__name">Precast Box Culvert 1x2.5x2.5m</div>
+                        <div class="di-feature-row__details">
+                            <span class="di-certainty di-certainty--derived">&plusmn;4m</span>
+                            <span>PK 111+017 &bull; 17m &#x25B2;</span>
+                        </div>
+                    </div>
+                    <div class="di-feature-row__right">
+                        <div class="di-stage-meter">
+                            <div class="di-stage-meter__bars" style="margin:0;">
+                                <div class="di-stage-meter__segment di-stage-meter__segment--complete"></div>
+                                <div class="di-stage-meter__segment di-stage-meter__segment--complete"></div>
+                                <div class="di-stage-meter__segment di-stage-meter__segment--partial"></div>
+                                <div class="di-stage-meter__segment"></div>
+                                <div class="di-stage-meter__segment"></div>
+                                <div class="di-stage-meter__segment"></div>
+                            </div>
+                            <div class="di-stage-meter__label" style="text-align: right;">STAGE 3/6</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 3: Right side / Measured -->
+                <div class="di-feature-row">
+                    <div class="di-feature-row__left">
+                        <div class="di-side-badge di-side-badge--right">R <span class="di-side-arrow">&#x25B6;</span></div>
+                    </div>
+                    <div class="di-feature-row__center">
+                        <div class="di-feature-row__name">Slope Descent Chute + Dissipator</div>
+                        <div class="di-feature-row__details">
+                            <span class="di-certainty di-certainty--measured">MEASURED</span>
+                            <span>PK 111+035 &bull; 35m &#x25B2;</span>
+                        </div>
+                    </div>
+                    <div class="di-feature-row__right">
+                        <div class="di-stage-meter">
+                            <div class="di-stage-meter__bars" style="margin:0;">
+                                <div class="di-stage-meter__segment"></div>
+                                <div class="di-stage-meter__segment"></div>
+                                <div class="di-stage-meter__segment"></div>
+                                <div class="di-stage-meter__segment"></div>
+                                <div class="di-stage-meter__segment"></div>
+                                <div class="di-stage-meter__segment"></div>
+                            </div>
+                            <div class="di-stage-meter__label" style="text-align: right;">NOT SEEN</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 13. Category Filter Chips (44px) -->
+        <section class="section">
+            <div class="section-header-row">
+                <h2 class="di-section-title" style="margin-bottom:0; border:none; padding:0;">13. Filter Chips</h2>
+                <span class="section-desc">44px touch floor</span>
+            </div>
+            <div class="h-row" style="flex-wrap: nowrap; overflow-x: auto; padding-bottom: 8px;">
+                <button class="di-filter-chip di-filter-chip--active">All Types (38)</button>
+                <button class="di-filter-chip">Toe Ditches (14)</button>
+                <button class="di-filter-chip">Culverts (8)</button>
+                <button class="di-filter-chip">Descents &amp; Chutes (12)</button>
+                <button class="di-filter-chip">Bridges &amp; Crossings (4)</button>
+            </div>
+        </section>
+
+        <!-- 14. Bottom Navigation (68px) -->
+        <section class="section" style="padding-left: 0; padding-right: 0;">
+            <div style="padding: 0 16px 12px 16px;">
+                <div class="section-header-row">
+                    <h2 class="di-section-title" style="margin-bottom:0; border:none; padding:0;">14. Bottom Navigation</h2>
+                    <span class="section-desc">68px: Walk / Section / Day</span>
+                </div>
+            </div>
+            
+            <nav class="di-bottom-nav">
+                <button class="di-bottom-nav__item di-bottom-nav__item--active">
+                    <div class="di-bottom-nav__icon" id="nav-icon-walk"></div>
+                    <span>Walk</span>
+                </button>
+                <button class="di-bottom-nav__item">
+                    <div class="di-bottom-nav__icon" id="nav-icon-section"></div>
+                    <span>Section</span>
+                </button>
+                <button class="di-bottom-nav__item">
+                    <div class="di-bottom-nav__icon" id="nav-icon-day"></div>
+                    <div style="display:flex; align-items:center;">
+                        <span>Day</span>
+                        <span class="di-bottom-nav__badge">17</span>
+                    </div>
+                </button>
+            </nav>
+        </section>
+
+        <!-- 15. Phase 4 — Walk View, Walk Strip, At-You Bar, Drawer & Identify (§6.1, §6.2) -->
+        <section class="section" style="padding-left: 0; padding-right: 0;">
+            <div style="padding: 0 16px 12px 16px;">
+                <div class="section-header-row">
+                    <h2 class="di-section-title" style="margin-bottom:0; border:none; padding:0;">15. Phase 4 Walk View & Strip</h2>
+                    <span class="section-desc">Mobile 390px Viewport Mockup</span>
+                </div>
+                <p style="font-family:'Barlow',sans-serif; font-size:13px; color:var(--ink-2); margin-bottom:12px;">
+                    Full core inspection experience: 7-lane mirrored strip (1.9 px/m), reading line at 80%, near band (+/-20m), 72px At-You bar with selection rule, 50% slide-up drawer, and Identify cross-section view.
+                </p>
+                <!-- Interactive Test Controls -->
+                <div class="h-row" style="margin-bottom: 12px; gap: 6px;">
+                    <button type="button" class="di-btn di-btn--tertiary" id="btnWalkForward" style="height:36px; padding:0 10px; font-size:11px;">▲ Ahead +10m</button>
+                    <button type="button" class="di-btn di-btn--tertiary" id="btnWalkBackward" style="height:36px; padding:0 10px; font-size:11px;">▼ Back -10m</button>
+                    <button type="button" class="di-btn di-btn--tertiary" id="btnToggleFacing" style="height:36px; padding:0 10px; font-size:11px;">Flip Facing</button>
+                    <button type="button" class="di-btn di-btn--tertiary" id="btnToggleGps" style="height:36px; padding:0 10px; font-size:11px;">Toggle Poor GPS</button>
+                    <button type="button" class="di-btn di-btn--tertiary" id="btnToggleDrawer" style="height:36px; padding:0 10px; font-size:11px;">Toggle Drawer</button>
+                </div>
+            </div>
+
+            <!-- 390px Mobile Viewport Container -->
+            <div style="padding: 0 10px;">
+                <div id="live-walk-view-container" style="width: 390px; height: 680px; max-width: 100%; border: 2px solid var(--ink); border-radius: 12px; overflow: hidden; position: relative; margin: 0 auto; box-shadow: var(--shadow-lg); background: var(--paper);">
+                    <!-- WalkView attaches here -->
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Scripts: Type Catalogue, Type Icons & Phase 2/4/5 Modules -->
+    <script src="type_catalogue.js"></script>
+    <script src="type_icons.js"></script>
+    <script src="data_model.js"></script>
+    <script src="data_store.js"></script>
+    <script src="data/kmd_alignment_stations_bundle.js"></script>
+    <script src="position_engine.js"></script>
+    <script src="walk_strip.js"></script>
+    <script src="walk_drawer.js"></script>
+    <script src="identify_view.js"></script>
+    <script src="toast_manager.js"></script>
+    <script src="record_view.js"></script>
+    <script src="defect_view.js"></script>
+    <script src="feature_detail_view.js"></script>
+    <script src="walk_view.js"></script>
+    <script>
+        // 1. Theme Toggle
+        const themeBtn = document.getElementById('theme-toggle');
+        themeBtn.addEventListener('click', () => {
+            const currentTheme = document.body.getAttribute('data-theme');
+            if (currentTheme === 'office') {
+                document.body.removeAttribute('data-theme');
+            } else {
+                document.body.setAttribute('data-theme', 'office');
+            }
+        });
+
+        // 2. Render Navigation Icons
+        if (window.TypeIcons) {
+            const nw = document.getElementById('nav-icon-walk');
+            if (nw) nw.innerHTML = window.TypeIcons.walk();
+            
+            const ns = document.getElementById('nav-icon-section');
+            if (ns) ns.innerHTML = window.TypeIcons.section();
+            
+            const nd = document.getElementById('nav-icon-day');
+            if (nd) nd.innerHTML = window.TypeIcons.day();
+        }
+
+        // 3. Render Type Cross-Section Icons from window.TYPE_CATALOGUE
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.getElementById('icon-catalogue-grid');
+            if (grid && window.TYPE_CATALOGUE && window.TypeIcons) {
+                const displayCodes = [
+                    '1', '1L', '3', '4', '5', '6', '7', '8', '9', '10', 
+                    '11', '12', '13', '14', '15', '16', 
+                    'CH-A', 'CH-B', 'CH-R', 'D-SOZ', 'D-SD', 'BRG', 'OP', 'UP'
+                ];
+
+                displayCodes.forEach(code => {
+                    const info = window.TYPE_CATALOGUE[code];
+                    if (!info) return;
+
+                    const card = document.createElement('div');
+                    card.className = 'icon-card';
+
+                    const iconDiv = document.createElement('div');
+                    iconDiv.style.width = '28px';
+                    iconDiv.style.height = '17px';
+                    iconDiv.style.display = 'flex';
+                    iconDiv.style.alignItems = 'center';
+                    iconDiv.style.justifyContent = 'center';
+                    iconDiv.innerHTML = window.TypeIcons.render(code, 28);
+
+                    const chip = document.createElement('div');
+                    chip.className = 'icon-card__chip';
+                    chip.textContent = info.strip || info.code;
+
+                    const label = document.createElement('div');
+                    label.className = 'icon-card__label';
+                    label.textContent = info.shortName;
+                    label.title = info.fullName;
+
+                    card.appendChild(iconDiv);
+                    card.appendChild(chip);
+                    card.appendChild(label);
+                    grid.appendChild(card);
+                });
+            }
+
+            // 4. Initialize Phase 4 Live Walk View Component
+            const walkContainer = document.getElementById('live-walk-view-container');
+            if (walkContainer && window.WalkView) {
+                // Sample realistic features along corridor
+                const sampleFeatures = [
+                    {
+                        feature_id: 'bc_82902',
+                        geometry: 'crossing',
+                        ch: 82902.439,
+                        ch_start: 82902.439,
+                        ch_end: 82902.439,
+                        side: 'C',
+                        offset_m: 0,
+                        position_certainty: 'exact',
+                        tolerance_m: 0,
+                        type_code: 'CULV_BOX',
+                        short_name: 'Box Culvert 2.5x2.5m',
+                        category: 'Cross drainage',
+                        current_stage: 'Concreted'
+                    },
+                    {
+                        feature_id: 'ditch_toe_82880',
+                        geometry: 'linear',
+                        ch_start: 82860,
+                        ch_end: 82940,
+                        side: 'L',
+                        lane: 'toe',
+                        offset_m: 13.0,
+                        position_certainty: 'derived',
+                        tolerance_m: 4,
+                        type_code: '12',
+                        short_name: 'Trapezoidal toe ditch',
+                        category: 'Toe ditch',
+                        current_stage: 'Excavation',
+                        has_defect: true
+                    },
+                    {
+                        feature_id: 'ditch_plat_82870',
+                        geometry: 'linear',
+                        ch_start: 82870,
+                        ch_end: 82960,
+                        side: 'L',
+                        lane: 'plat',
+                        offset_m: 3.5,
+                        position_certainty: 'derived',
+                        tolerance_m: 4,
+                        type_code: '1',
+                        short_name: 'Concrete lined side ditch',
+                        category: 'Side ditch',
+                        current_stage: 'Completed'
+                    },
+                    {
+                        feature_id: 'ditch_toe_r_82880',
+                        geometry: 'linear',
+                        ch_start: 82880,
+                        ch_end: 82935,
+                        side: 'R',
+                        lane: 'toe',
+                        offset_m: -13.0,
+                        position_certainty: 'derived',
+                        tolerance_m: 4,
+                        type_code: '12',
+                        short_name: 'Trapezoidal toe ditch',
+                        category: 'Toe ditch',
+                        current_stage: 'Blinding'
+                    },
+                    {
+                        feature_id: 'descent_82905',
+                        geometry: 'point',
+                        ch: 82905,
+                        side: 'L',
+                        lane: 'face',
+                        offset_m: 7.0,
+                        position_certainty: 'exact',
+                        type_code: 'D-SD',
+                        short_name: 'Slope descent dissipator',
+                        category: 'Energy dissipator',
+                        current_stage: 'Rebar'
+                    },
+                    {
+                        feature_id: 'descent_cluster_1',
+                        geometry: 'point',
+                        ch: 82906,
+                        side: 'L',
+                        lane: 'toe',
+                        offset_m: 13.0,
+                        type_code: 'D-SD',
+                        short_name: 'Slope descent',
+                        category: 'Energy dissipator'
+                    },
+                    {
+                        feature_id: 'descent_cluster_2',
+                        geometry: 'point',
+                        ch: 82908,
+                        side: 'L',
+                        lane: 'toe',
+                        offset_m: 13.0,
+                        type_code: 'D-SD',
+                        short_name: 'Slope descent',
+                        category: 'Energy dissipator'
+                    },
+                    {
+                        feature_id: 'descent_cluster_3',
+                        geometry: 'point',
+                        ch: 82910,
+                        side: 'L',
+                        lane: 'toe',
+                        offset_m: 13.0,
+                        type_code: 'D-SD',
+                        short_name: 'Slope descent',
+                        category: 'Energy dissipator'
+                    },
+                    {
+                        feature_id: 'collector_82850',
+                        geometry: 'linear',
+                        ch_start: 82850,
+                        ch_end: 82980,
+                        side: 'C',
+                        lane: 'cl',
+                        type_code: '6',
+                        short_name: 'Collector drain',
+                        category: 'Track drainage',
+                        current_stage: 'Completed'
+                    },
+                    {
+                        feature_id: 'riprap_82920',
+                        geometry: 'label',
+                        ch: 82920,
+                        side: 'R',
+                        lane: 'crest',
+                        offset_m: -24.0,
+                        specs: 'L=28m',
+                        short_name: 'Riprap armor',
+                        category: 'Riprap protection'
+                    },
+                    {
+                        feature_id: 'off_chan_82915',
+                        geometry: 'off_alignment',
+                        ch: 82915,
+                        serves_ch: 82902,
+                        distance_out_m: 180,
+                        side: 'L',
+                        lane: 'off',
+                        offset_m: 55.0,
+                        type_code: 'CH-A',
+                        short_name: 'Trapezoidal earth channel',
+                        category: 'Diversion channel'
+                    }
+                ];
+
+                const sampleAbsences = [
+                    {
+                        absence_id: 'abs_demo',
+                        subsection: 'KZDR',
+                        side: 'R',
+                        lane: 'plat',
+                        ch_start: 82950,
+                        ch_end: 83050,
+                        reason: 'Natural drainage slope sufficient',
+                        drawing_ref: 'DW-03019-06',
+                        approval_level: 'A'
+                    }
+                ];
+
+                let dataStore = null;
+                if (window.DataStore) {
+                    dataStore = new window.DataStore();
+                    if (window.DataModel && window.DataModel.InspectionRequest) {
+                        dataStore.inspectionRequests['IR-DEMO-01'] = new window.DataModel.InspectionRequest({
+                            ir_no: 'IR-2026-042',
+                            feature_id: 'bc_82902',
+                            activity: 'Concreting of culvert barrel',
+                            claimed_stage: 'Concreted',
+                            date: '2026-09-18',
+                            outcome: 'pending'
+                        });
+                        dataStore.inspectionRequests['IR-DEMO-02'] = new window.DataModel.InspectionRequest({
+                            ir_no: 'IR-2026-015',
+                            feature_id: 'ditch_toe_82880',
+                            activity: 'Excavation of toe ditch',
+                            claimed_stage: 'Blinding',
+                            date: '2026-09-10',
+                            outcome: 'approved'
+                        });
+                    }
+                }
+
+                const walkView = new window.WalkView(walkContainer, {
+                    dataStore: dataStore,
+                    initialCh: 82902.0,
+                    initialSide: 'L',
+                    initialOffset: 13.0,
+                    initialAccuracy: 4.0,
+                    initialFacing: 'increasing',
+                    features: sampleFeatures,
+                    absences: sampleAbsences
+                });
+
+                // Wire up Interactive Controls
+                const btnFwd = document.getElementById('btnWalkForward');
+                if (btnFwd) {
+                    btnFwd.addEventListener('click', () => {
+                        const d = walkView.userPosition.facing === 'decreasing' ? -10 : 10;
+                        walkView.updatePosition({ ch: walkView.userPosition.ch + d });
+                    });
+                }
+
+                const btnBwd = document.getElementById('btnWalkBackward');
+                if (btnBwd) {
+                    btnBwd.addEventListener('click', () => {
+                        const d = walkView.userPosition.facing === 'decreasing' ? 10 : -10;
+                        walkView.updatePosition({ ch: walkView.userPosition.ch + d });
+                    });
+                }
+
+                const btnFacing = document.getElementById('btnToggleFacing');
+                if (btnFacing) {
+                    btnFacing.addEventListener('click', () => {
+                        const newFacing = walkView.userPosition.facing === 'increasing' ? 'decreasing' : 'increasing';
+                        walkView.updatePosition({ facing: newFacing });
+                    });
+                }
+
+                const btnGps = document.getElementById('btnToggleGps');
+                if (btnGps) {
+                    btnGps.addEventListener('click', () => {
+                        const newAcc = walkView.userPosition.accuracy_m > 8 ? 3.5 : 16.0;
+                        walkView.updatePosition({ accuracy_m: newAcc });
+                    });
+                }
+
+                const btnDrawer = document.getElementById('btnToggleDrawer');
+                if (btnDrawer) {
+                    btnDrawer.addEventListener('click', () => {
+                        if (walkView.walkDrawer) walkView.walkDrawer.toggle();
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+</html>

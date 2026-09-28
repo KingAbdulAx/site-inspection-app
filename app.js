@@ -253,7 +253,7 @@
     const initialLat = 12.6328;
     const initialLon = 8.3948;
 
-    state.map = L.map('map', {
+    state.map = L.map('legacyMap', {
       center: [initialLat, initialLon],
       zoom: 16,
       minZoom: 11,
@@ -367,6 +367,21 @@
     }
     if (typeof DataExchange !== 'undefined') {
       window.dataExchange = new DataExchange('dataExchangeMount');
+    }
+
+    if (typeof DayView !== 'undefined' && document.getElementById('dayMount')) {
+      window.dayView = new DayView(document.getElementById('dayMount'), ds);
+    }
+
+    if (typeof SectionView !== 'undefined' && document.getElementById('panelSectionView')) {
+      let ds = null;
+      if (typeof window.DataStore !== 'undefined') {
+         ds = new window.DataStore();
+         if (typeof window.KMD_BUNDLE !== 'undefined') {
+            ds.updateDatasets(window.KMD_BUNDLE.features || [], []);
+         }
+      }
+      window.sectionView = new SectionView(document.getElementById('panelSectionView'), ds);
     }
 
     setupCadControls();
@@ -1602,7 +1617,9 @@
       gis: document.getElementById('panelGisView'),
       dashboard: document.getElementById('panelDashboardView'),
       reports: document.getElementById('panelReportsView'),
-      data: document.getElementById('panelDataView')
+      data: document.getElementById('panelDataView'),
+      day: document.getElementById('panelDayView'),
+      section: document.getElementById('panelSectionView')
     };
 
     Object.entries(panels).forEach(([key, el]) => {
@@ -1626,7 +1643,18 @@
     }
 
     // Refresh active view
-    if (viewId === 'cad') {
+    if (viewId === 'gis') {
+      if (!window.mapView && typeof window.MapView !== 'undefined') {
+        let ds = null;
+        if (typeof window.DataStore !== 'undefined') ds = new window.DataStore();
+        if (ds && typeof window.KMD_BUNDLE !== 'undefined') ds.updateDatasets(window.KMD_BUNDLE.features || [], []);
+        window.mapView = new window.MapView('newGisMap', ds, window.PositionEngine.defaultEngine);
+      }
+      if (window.mapView) {
+        window.mapView.show();
+        window.mapView.refresh();
+      }
+    } else if (viewId === 'cad') {
       if (window.sldViewer) {
         window.sldViewer.resize();
         window.sldViewer.render();

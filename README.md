@@ -72,19 +72,101 @@ Drainage polyline features are offset from the surveyed centerline using spheric
 $$\theta_{\text{offset}} = (\theta_{\text{track}} + 90^\circ) \pmod{360^\circ} \quad \text{for Right (+)}$$
 $$\theta_{\text{offset}} = (\theta_{\text{track}} - 90^\circ) \pmod{360^\circ} \quad \text{for Left (-)}$$
 
+### 2.4 Phase 3 Master Linear Referencing Position Engine (`position_engine.js`)
+Implements the Master Specification §5 & §10 offline position engine:
+* **Piecewise-Linear Calibration:** Ground-truth surveyed 500m station labels from `KMD.kml` (570 stations for Kano–Maradi `line_km`, 216 stations for Kano–Dutse `line_kd`). Computes geodesic segment chord lengths, design spans, and segment residuals, exposing `maxResidualM` and `worstStation` for Layers inspection.
+* **Side Sign Convention:** Signed perpendicular distance from the centreline: **Left = positive (> 0), Right = negative (< 0)** when facing in the direction of increasing chainage. Snapped to Center (`side: 'C'`) within 5cm.
+* **Master Output Schema:** `{ line, subsection, ch, chFormatted, side, offset_m, accuracy_m, source, heading, facing, status, tier }`.
+* **Dual-Line Disambiguation & Line-Stickiness Hysteresis:** Kano–Maradi mainline vs Kano–Dutse branch line both originate at Kano (PK 0+000). Resolves line by lateral distance with a 25m hysteresis threshold to prevent erratic toggling near junctions. Never resolves by chainage alone.
+* **GPS Accuracy Tiers:**
+  * **Good ($\le 10\text{m}$):** Normal display (`tier: 'good'`).
+  * **Poor ($> 10\text{m}$):** Chainage prefixed with `≈`, side withheld as `'?'`, `tier: 'poor'`.
+  * **None:** Manual keypad entry (`source: 'hand'`, `tier: 'none'`).
+* **Anchor Fix ("I'm on it"):** Locks position to an exact structure's chainage with offset snapped to 0 (`source: 'anchor'`), preserves feature side, and auto-releases when GPS accuracy returns to $\le 5\text{m}$. Persists through GPS signal dropouts via `getCurrentPosition()` / `projectGps(null)`.
+* **Facing & Heading Detection:** Compares GPS heading to track tangent bearing ($\le 90^\circ \implies \text{'increasing'}$, $> 90^\circ \implies \text{'decreasing'}$). Features stationary GPS jitter hysteresis ($\ge 1\text{m}$ threshold) and cross-line partition safety to prevent erratic 180° flip-flopping.
+* **Inverse Coordinate Projection:** `projectChainageOffsetToGps(line, ch, offsetM)` provides sub-millimeter (< 10mm) round-trip precision with deterministic forward segment selection at station boundaries.
+* **Robust Civil Station Parsing & Formatting:**
+  * `formatPk` uses boundary-aware rounding (e.g. 999.8m yields `PK 1+000`, not `PK 0+1000`).
+  * `parsePk` supports Portuguese / Continental European decimal comma notation (`PK 82+902,439` $\to 82902.439$).
+* **Lifecycle & State APIs:** `getCurrentPosition()`, `setManualPosition()`, `clearManualPosition()`, `setAnchor()`, `clearAnchor()`, and `loadKml()`.
+
+### 2.5 Phase 4 Master Walk Strip UI, At-You Bar, Drawer & Identify (§6.1, §6.2 & §10)
+Implements the core inspection experience:
+* **The Walk Strip Engine (`walk_strip.js`):**
+  * **7 Offset Lanes Mirrored (11 Columns, 390px Total):** OFF (33px), CREST (33px), TOE (33px), FACE (33px), PLAT (33px), SPINE (60px), PLAT (33px), FACE (33px), TOE (33px), CREST (33px), OFF (33px).
+  * **Scale & Reading Line:** 1.9 px/m when walking. Reading line sits at 80% of strip height (~225m ahead, ~60m behind). High-visibility 14px band with 2px ink edges. Current user position is a 24px hi-vis dot with 4px ink ring in the lane matching user lateral offset.
+  * **Near Band:** +/-20m around reading line tinted hi-vis at 16% (`rgba(255, 209, 0, 0.16)`) with dashed edges labelled "+20 m" / "-20 m".
+  * **Spine:** 4px ink centerline, ticks at 10m (5px), 50m (10px), 100m (14px, 2px thick), bold chainage labels every 50m ("111+100", "+050").
+  * **Facing Flip Transformation:** When facing decreasing, the strip rotates 180° so the engineer always walks forward into the screen; lanes retain their left/right designations (Left is on engineer's right hand), and header displays "FACING ▼ decreasing".
+  * **Feature Rendering:**
+    * Linear features: 11px wide bar in feature's lane with outline/hatch/solid fills.
+    * Derived extent ends: bar stops 4m short with 3px dotted cap exactly 4m long.
+    * Type chips: 28x17px chips near top of bar (`T12`, `T1L`, etc.).
+    * Crossing structures: 12px band across corridor from Left TOE to Right TOE with black exact-chainage chip on right ("+017.229").
+    * Point features: 16px squares.
+    * Clusters: 3+ points within 10m in one lane form a 24px count chip.
+    * Label positions: 20px dashed circle with italic text ("L=28m").
+    * Off-alignment features: 18x28px mark in OFF lane, dashed leader to spine, distance text.
+    * Buried T6 collector: 3px dashed line inside spine.
+    * Absence: none-by-design pattern with vertical text "NONE · BY DESIGN".
+    * Defects: 18px red warning triangle beside mark.
+  * **Power & Motion:** Zero continuous RAF looping; redraws only when position changes by >= 2m or on touch scroll/drag.
+* **At-You Bar Logic & Selection Rule (`walk_view.js`):**
+  * 72px touch target.
+  * Prioritizes crossing and point structures nearest first, then nearest linear feature by lateral offset, then fallback to designed absence or "NEXT ▲ N m: {feature}".
+  * 4 Master Variants: Normal, Poor GPS (with "I'm on Culvert EXACT" anchor button), Revision view (rev-bg with Compare button), and Empty by design.
+* **WalkDrawer (`walk_drawer.js`):**
+  * Slides up to cover 50% of screen; strip re-scrolls to keep reading line visible above drawer.
+  * 44px category filter chips at top.
+  * 72px rows sorted strictly from left to right as faced: side badge (40px), type icon + name, position certainty chip, offset & relative distance, 6-segment stage meter.
+* **Identify View — Cross-Section at You (`identify_view.js`):**
+  * In-plane cross-section diagram at reading chainage: embankment, ballast, rails, culvert barrel with headwalls, ditches.
+  * Features within +/-20m carry numbered bubbles (① to ⑤) matching a 3x2 grid of 60px buttons, with 6th button "As a list ▲" opening the drawer.
+* **Automated Verification:** 181 automated assertions in `scripts/test_walk_strip.js` verifying all 12 layout, sorting, clustering, and transformation subsystems.
+
+### 2.6 Phase 5 Record Flow, Feature Detail & Defect Workflow (§6.3, §6.4, §6.5 & §10)
+Implements the fast 2-tap field recording and defect lifecycle:
+* **The Record Sheet (`record_view.js`):**
+  * **2-Tap Write Flow (< 2 seconds):** Tap 1 opens the sheet; Tap 2 on any 72px smart suggestion button or 56px ladder row appends the `FieldRecord` and dismisses the sheet immediately.
+  * **Presentation Header:** Side badge, cross-section icon (`TypeIcons`), chainage extent, certainty chip, and contractor claim banner.
+  * **Evidence Boxes:** Side-by-side comparison of "Seen by you" (active observed stage) vs "Contractor IR" (claimed stage and IR reference).
+  * **Smart Suggestion Buttons (72px):** Up to three de-duplicated quick options: Contractor claimed stage (primary), next sequential stage (`last seen + 1`), or current stage (`no change`).
+  * **Dynamic Stage Ladder Adaptation:** Adapts dynamically: 7 stages for concrete-lined structures (`['Not started', 'Excavation', 'Blinding', 'Rebar', 'Shuttered', 'Concreted', 'Completed']`) vs. 3 stages for unlined earth ditches (`['Not started', 'Excavated', 'Completed']`).
+  * **Auto-Discrepancy Query:** If inspector records a stage differing from the latest contractor IR, an open office query of reason `'claim_ahead'` is automatically created in `DataStore`.
+  * **Secondary Actions:** "Report defect", "Flag design revision", "Add note / photo", "Cancel".
+* **Toast Notification & 8-Second Undo Manager (`toast_manager.js`):**
+  * Displays a non-intrusive floating toast: `Saved on this phone · {stage} · {time} · {author}`.
+  * Active depleting progress bar with a high-visibility yellow "UNDO" button.
+  * Tapping UNDO calls `DataStore.voidObservation()` to non-destructively void the record and rolls back the feature stage in memory.
+* **Defect Reporting Workflow (`defect_view.js`):**
+  * 10 standard defect type chips (44px): Scour / erosion, Cracking, Honeycombing, Blocked / silted, Alignment error, Joint failure, Exposed rebar, Outfall scour, Standing water, Other.
+  * 3 severity levels: Minor (monitor), Major (rework required), Critical (safety / structural risk).
+  * Snapped chainage input, field notes textarea, and GPS-stamped photo attachment support.
+  * 72px red "LOG DEFECT" primary action: generates a monotonic `DEF-YYYY-NNNN` identifier, appends a `FieldRecord` of kind `'defect'`, raises an open office `Query` of reason `'defect'`, sets `has_defect = true` on the feature, and triggers an 18px red warning triangle beside the feature on the `WalkStrip`.
+* **Feature Detail View (`feature_detail_view.js`):**
+  * Read-only comprehensive audit sheet opened by a 500ms long-press on any `WalkStrip` feature or `WalkDrawer` row.
+  * Header with side badge, full asset name, type code, sub-section, lane, and certainty chip.
+  * "What is built on site" card with verdict vs contractor claim.
+  * Open defects card listing all active defects.
+  * "Position & Geometry" card with chainage extent, lateral offset, lane category, and tolerance.
+  * "From the Drawing" card with drawing reference, revision, approval level, and cross-section dimensions.
+  * Contractor IR list with outcome badges and automatic hazard warning when no contractor activity has been submitted for > 6 months.
+  * Complete audit history ("never overwritten") listing all historical observations with strike-through styling on non-destructively voided records.
+* **Automated Verification Suite:** 267 automated assertions in `scripts/test_record_flow.js` verifying all 9 record flow, voiding, defect, ladder, and active query subsystems.
+
 ---
 
 ## 3. Core Capabilities & User Interface
 
 ### 3.1 Dual Map Operating Modes
-* **🎨 Typology Mode (Design View):** Features are color-coded by standard detail drawing typologies:
+* **Typology Mode (Design View):** Features are color-coded by standard detail drawing typologies:
   * **Deep Red (`#DC2626`):** Concrete Rectangular Channels Zone I ($B=2.5\text{m}, H=1.5\text{m}$).
   * **Royal Blue (`#1D4ED8`):** Type 1 Larger Variant Cutting Ditches ($B=4.0\text{--}4.5\text{m}$).
   * **Sky Blue (`#38BDF8`):** Type 1 Standard Cutting Ditches ($b=0.75\text{m}$).
   * **Amber / Orange (`#F97316`):** Type 11 Concrete Lined Crest Ditches.
   * **Emerald Green (`#059669`):** Type 12 Concrete Embankment Toe Ditches.
   * **Violet / Slate:** Cascades, Underpasses, and Box Culverts.
-* **📊 Birds-Eye Progress Mode (Construction View):** Dynamic status visualization updated in real-time from site records:
+* **Birds-Eye Progress Mode (Construction View):** Dynamic status visualization updated in real-time from site records:
   * **Alert Crimson (`#EF4444`, 6px pulse):** Logged punchlist snags, QA/QC non-conformances, or defects.
   * **Emerald Green (`#10B981`, 5px solid):** Completed & Approved structures.
   * **Construction Amber (`#F59E0B`, 6px glow):** In-progress works (`Excavation`, `Blinding`, `Rebar / Shuttering`, `Concreted`).
@@ -144,6 +226,19 @@ $$\theta_{\text{offset}} = (\theta_{\text{track}} - 90^\circ) \pmod{360^\circ} \
 ```
 TEAM/app/
 ├── index.html              # PWA shell, SVG icons, HUD banner, sync pill, drawer layout, edit modals
+├── tokens.css              # Design tokens (colors, typography, dimensions, contrast)
+├── fonts.css               # Self-hosted typography (Space Grotesk, JetBrains Mono, Inter)
+├── components.css          # Base mobile-first components (meters, chips, badges, buttons, sheets)
+├── type_catalogue.js       # Master drainage typology catalogue (25 standard details)
+├── type_icons.js           # Lightweight SVG typology icons
+├── data_model.js           # Decoupled entities, UUIDv7 monotonicity, revisions & conflict detection
+├── data_store.js           # Append-only local storage engine, anti-LWW sync, migration backups
+├── position_engine.js      # Linear referencing position engine, surveyed 500m station calibration, hysteresis
+├── walk_strip.js           # Phase 4 Walk Strip 7-lane canvas & proportional layout engine (§6.1)
+├── walk_drawer.js          # Phase 4 Walk Drawer 50% slide-up sheet with TypeIcons & auto-scroll (§6.1)
+├── identify_view.js        # Phase 4 Identify cross-section SVG view with facing adaptation (§6.2)
+├── walk_view.js            # Phase 4 Walk View shell, position header & At-You bar coordinator (§6.1, §10)
+├── preview.html            # Component and Phase 4 live interactive preview mockup
 ├── styles.css              # Mobile-first slate design system, responsive drawer snaps, edit mode styles
 ├── config.js               # Supabase credentials, cloud settings, inspector device profile
 ├── sync.js                 # Offline-first sync engine, queue management, LWW conflict resolution
@@ -162,11 +257,17 @@ TEAM/app/
 ├── lib/
 │   └── leaflet-rotate.js   # Offline map rotation engine (0 CDN dependencies)
 ├── data/
+│   ├── kmd_alignment_stations.json # Complete surveyed 500m station database (786 stations)
+│   ├── kmd_alignment_stations_bundle.js # Offline window bundle for station datasets
 │   ├── section02_centerline.json   # Section 02 Catmull-Rom spline points (PK 19+800 to 82+902)
 │   ├── section02_bundle.js         # Offline bundle of Section 02 assets (1,710 features)
-│   ├── bundle.js                   # Offline bundle of Section 03 assets (836 features)
+│   ├── bundle.js                   # Offline bundle of Section 03 assets (837 features)
 │   └── section03_centerline.json   # Section 03 Catmull-Rom spline points (PK 82+902 to 124+521)
 └── scripts/
+    ├── test_walk_strip.js          # 12 automated test suites for Phase 4 Walk Strip & Identify (181 assertions)
+    ├── test_position_engine.js     # 11 automated test suites for Phase 3 Position Engine (171 assertions)
+    ├── test_phase2_model.js        # 10 automated test suites for Phase 2 Data Model (150 assertions)
+    ├── test_pwa_integration.js     # Multi-section PWA integration & storage partition tests
     ├── test_sld_viewer.js          # Automated verification for SLD linear track viewer
     ├── test_new_views.js           # Automated verification for CAD/GIS, Scrubber, Dashboard, Reports
     └── test_edit_mode.js           # Automated verification for Edit Mode and offline replication

@@ -1,0 +1,1126 @@
+/* ================================================================
+   DRAINAGE INSPECTOR -- BASE COMPONENTS STYLESHEET
+   Follows the 8 Non-Negotiables & Phase 1 Design Specification
+   ================================================================ */
+
+/* 1. SIDE BADGES (40px, pill shape, ink with arrows / outlined C) */
+.di-side-badge {
+  height: 40px;
+  min-width: 40px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 14px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  box-sizing: border-box;
+  user-select: none;
+  gap: 6px;
+}
+.di-side-badge--left {
+  background: var(--ink);
+  color: var(--surface);
+  border: 2px solid var(--ink);
+}
+.di-side-badge--right {
+  background: var(--ink);
+  color: var(--surface);
+  border: 2px solid var(--ink);
+}
+.di-side-badge--centre {
+  background: transparent;
+  color: var(--ink);
+  border: 2px solid var(--ink);
+}
+.di-side-arrow {
+  font-size: 11px;
+  line-height: 1;
+}
+
+/* 2. POSITION CERTAINTY CHIPS */
+.di-certainty {
+  display: inline-flex;
+  align-items: center;
+  height: 22px;
+  padding: 0 7px;
+  border-radius: 3px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  user-select: none;
+  box-sizing: border-box;
+}
+.di-certainty--exact {
+  background: var(--ink);
+  color: var(--surface);
+  border: 1px solid var(--ink);
+}
+.di-certainty--derived {
+  background: transparent;
+  border: 1.5px dashed var(--ink);
+  color: var(--ink);
+}
+.di-certainty--label {
+  background: transparent;
+  border: 1.5px dotted var(--ink-3);
+  color: var(--ink-3);
+}
+.di-certainty--measured {
+  background: var(--hivis);
+  color: #121311;
+  border: 1px solid #121311;
+  font-weight: 700;
+}
+
+/* 3. STAGE METER (6-segment horizontal bar) */
+.di-stage-meter {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 4px;
+}
+.di-stage-meter__bars {
+  display: flex;
+  gap: 3px;
+  height: 8px;
+  width: 100%;
+}
+.di-stage-meter__segment {
+  flex: 1;
+  border: 1px solid var(--rule);
+  background: transparent;
+  border-radius: 1px;
+  box-sizing: border-box;
+}
+.di-stage-meter__segment--partial {
+  background: var(--pattern-hatch);
+  border: 1px solid var(--ink);
+}
+.di-stage-meter__segment--complete {
+  background: var(--ink);
+  border: 1px solid var(--ink);
+}
+.di-stage-meter__label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  font-size: 11px;
+  color: var(--ink-2);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* 4. BUTTONS HIERARCHY (72px / 56px / 44px) */
+.di-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md, 8px);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Barlow', sans-serif;
+  transition: opacity 0.15s ease, transform 0.05s ease;
+}
+.di-btn:active {
+  transform: scale(0.99);
+  opacity: 0.92;
+}
+.di-btn:focus-visible {
+  outline: 2px solid var(--hivis);
+  outline-offset: 2px;
+}
+
+/* Primary Action Button: 72px touch target */
+.di-btn--primary {
+  height: var(--touch-primary, 72px);
+  width: 100%;
+  background: var(--ink);
+  color: var(--surface);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  border: none;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Secondary Button: 56px */
+.di-btn--secondary {
+  height: var(--touch-secondary, 56px);
+  width: 100%;
+  background: var(--surface);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Tertiary Action Button / Filter / Toggle: 44px */
+.di-btn--tertiary {
+  height: var(--touch-tertiary, 44px);
+  background: transparent;
+  color: var(--ink-2);
+  border: 1px solid var(--rule);
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  padding: 0 16px;
+}
+
+/* Defect Action Button: 56px red outline */
+.di-btn--defect {
+  height: var(--touch-secondary, 56px);
+  background: var(--defect-bg);
+  color: var(--defect);
+  border: 2px solid var(--defect);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* Revision Action Button: 56px rev blue outline */
+.di-btn--rev {
+  height: var(--touch-secondary, 56px);
+  background: var(--rev-bg);
+  color: var(--rev);
+  border: 2px solid var(--rev);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* 5. TOAST NOTIFICATION WITH UNDO */
+.di-toast {
+  background: var(--surface);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-md, 8px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.di-toast::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: var(--hivis);
+  width: var(--toast-progress, 100%);
+  transition: width 0.1s linear;
+}
+.di-toast__message {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--ink);
+  line-height: 1.3;
+}
+.di-toast__action {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--ink);
+  background: var(--hivis);
+  border: 1px solid var(--ink);
+  border-radius: 4px;
+  padding: 6px 14px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* 6. BOTTOM NAVIGATION (68px: Walk / Section / Day) */
+.di-bottom-nav {
+  height: 68px;
+  background: var(--surface);
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  user-select: none;
+  box-sizing: border-box;
+}
+.di-bottom-nav__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-3);
+  font-family: 'Barlow', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 16px;
+  min-width: 72px;
+  text-decoration: none;
+  gap: 3px;
+}
+.di-bottom-nav__item--active {
+  color: var(--ink);
+}
+.di-bottom-nav__icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.di-bottom-nav__badge {
+  background: var(--ink);
+  color: var(--surface);
+  border-radius: 10px;
+  padding: 1px 7px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+/* 7. POSITION HEADER (116px) */
+.di-position-header {
+  min-height: 116px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-md, 8px);
+  box-sizing: border-box;
+}
+.di-position-header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.di-chip-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.di-chip-section {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+.di-gps-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+}
+.di-gps-chip--good {
+  background: var(--ink);
+  color: var(--surface);
+}
+.di-gps-chip--poor {
+  background: var(--hivis);
+  color: #121311;
+  border: 1px solid #121311;
+}
+.di-gps-chip--none {
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid var(--ink);
+}
+.di-position-header__mid {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 4px 0;
+}
+.di-position-header__chainage {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 62px;
+  line-height: 0.95;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.di-position-header__side {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--ink);
+}
+.di-position-header__facing {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: var(--ink-3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* 8. AT-YOU BAR (72px) */
+.di-at-you-bar {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  background: var(--surface);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  box-sizing: border-box;
+  gap: 12px;
+}
+.di-at-you-bar--poor {
+  background: var(--hivis);
+  border-color: #121311;
+}
+.di-at-you-bar--rev {
+  background: var(--rev-bg);
+  border: 2px solid var(--rev);
+}
+.di-at-you-bar--empty {
+  background: var(--paper);
+  border-style: dashed;
+}
+.di-at-you-bar__left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+.di-at-you-bar__info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.di-at-you-bar__sub {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  color: var(--ink-3);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.di-at-you-bar__title {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.di-at-you-bar__right {
+  min-width: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-family: 'Barlow', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-2);
+  gap: 4px;
+  cursor: pointer;
+}
+
+/* 9. FEATURE ROW (72px, Drawer Item) */
+.di-feature-row {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--rule);
+  box-sizing: border-box;
+  gap: 12px;
+}
+.di-feature-row__left {
+  flex-shrink: 0;
+}
+.di-feature-row__center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+.di-feature-row__name {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.di-feature-row__details {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: var(--ink-2);
+}
+.di-feature-row__right {
+  width: 90px;
+  flex-shrink: 0;
+}
+
+/* 10. CATEGORY FILTER CHIPS (44px touch target) */
+.di-filter-chip {
+  height: var(--touch-tertiary, 44px);
+  border-radius: 22px;
+  padding: 0 16px;
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  border: 1px solid var(--rule);
+  background: var(--surface);
+  color: var(--ink-3);
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  box-sizing: border-box;
+  transition: all 0.15s ease;
+}
+.di-filter-chip--active {
+  background: var(--ink);
+  color: var(--surface);
+  border-color: var(--ink);
+}
+
+/* 11. REASONING PATTERNS */
+.di-pattern--hatch {
+  background: var(--pattern-hatch);
+}
+.di-pattern--hazard {
+  background: var(--pattern-hazard);
+}
+.di-pattern--none-by-design {
+  background: var(--pattern-none-by-design);
+}
+.di-pattern--no-data {
+  background: var(--pattern-no-data);
+}
+
+/* 12. CARD & SECTION CONTAINERS */
+.di-card {
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-md, 8px);
+  padding: 16px;
+  box-sizing: border-box;
+}
+.di-section-title {
+  font-family: 'Barlow', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--ink);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 8px;
+  margin: 0 0 16px 0;
+}
+.di-data-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.di-data-row:last-child {
+  border-bottom: none;
+}
+.di-data-row__label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: var(--ink-3);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.di-data-row__value {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* 13. WALK VIEW SHELL & LAYOUT (Phase 4, §6.1) */
+.di-walk-view {
+  width: 100%;
+  max-width: 390px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  background: var(--paper);
+  box-sizing: border-box;
+}
+
+.di-walk-content-container {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 14. WALK STRIP & 7-LANE CANVASES (§6.1) */
+.di-strip-header {
+  height: 40px;
+  min-height: 40px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--ink-2);
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.di-floating-mode-control {
+  position: absolute;
+  bottom: 148px;
+  left: 16px;
+  height: 44px;
+  background: var(--surface);
+  border: 1.5px solid var(--ink);
+  border-radius: 22px;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  z-index: 50;
+  box-sizing: border-box;
+}
+
+/* 15. WALK DRAWER (50% Slide-Up Bottom Sheet, §6.1) */
+.di-walk-drawer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50%;
+  background: var(--surface);
+  border-top: 2px solid var(--ink);
+  box-shadow: var(--shadow-lg);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(100%);
+  pointer-events: none;
+}
+
+.di-walk-drawer--open {
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.di-feature-row--highlighted {
+  background-color: var(--hivis-16, rgba(255, 209, 0, 0.25)) !important;
+  transition: background-color 0.5s ease;
+}
+
+.di-drawer-header {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--surface);
+  box-sizing: border-box;
+}
+
+.di-drawer-filters {
+  display: flex;
+  gap: 8px;
+  padding: 8px 16px;
+  overflow-x: auto;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--rule);
+  box-sizing: border-box;
+}
+
+.di-drawer-list {
+  flex: 1;
+  overflow-y: auto;
+  background: var(--paper);
+}
+
+/* 16. IDENTIFY VIEW & CROSS-SECTION DIAGRAM (§6.2) */
+.di-identify-view {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  box-sizing: border-box;
+}
+
+.di-identify-diagram {
+  width: 100%;
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper);
+}
+
+.di-identify-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  padding: 12px 16px;
+  box-sizing: border-box;
+}
+
+.di-identify-bubble {
+  transition: transform 0.1s ease;
+}
+
+.di-identify-bubble:hover {
+  transform: scale(1.1);
+}
+
+/* 17. PHASE 5 MODAL SHEETS & WORKFLOW COMPONENTS (§6.3, §6.4, §6.5, §10) */
+.di-sheet-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(18, 19, 17, 0.4);
+  z-index: 250;
+  backdrop-filter: blur(2px);
+}
+
+.di-modal-sheet {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 390px;
+  max-height: 90vh;
+  background: var(--surface, #FFFFFF);
+  border-top: 2px solid var(--ink, #121311);
+  border-radius: 16px 16px 0 0;
+  box-shadow: var(--shadow-lg, 0 -8px 24px rgba(18, 19, 17, 0.2));
+  z-index: 260;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.di-sheet-handle {
+  width: 36px;
+  height: 4px;
+  background: var(--rule, #CFD0C9);
+  border-radius: 2px;
+  margin: 8px auto 4px auto;
+}
+
+.di-sheet-header {
+  padding: 8px 16px 12px 16px;
+  border-bottom: 1px solid var(--rule, #CFD0C9);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.di-sheet-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-sizing: border-box;
+}
+
+.di-sheet-footer {
+  padding: 10px 16px;
+  background: var(--paper, #F6F5F0);
+  border-top: 1px solid var(--rule, #CFD0C9);
+  box-sizing: border-box;
+}
+
+/* Record Sheet Specifics */
+.di-record-sheet {
+  max-height: 90vh;
+}
+
+.di-claim-banner {
+  background: var(--paper, #F6F5F0);
+  border: 1px solid var(--rule, #CFD0C9);
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin: 10px 16px 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.di-badge-claimed {
+  background: #121311;
+  color: #FFFFFF;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.di-evidence-row {
+  display: flex;
+  gap: 8px;
+  padding: 12px 16px 4px 16px;
+  box-sizing: border-box;
+}
+
+.di-evidence-box {
+  flex: 1;
+  border-radius: 8px;
+  padding: 8px 10px;
+  box-sizing: border-box;
+}
+
+.di-suggestion-btn {
+  height: 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 12px;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+.di-stage-ladder-container {
+  flex: 1;
+  overflow-y: auto;
+  margin-top: 12px;
+  border-top: 1px solid var(--rule, #CFD0C9);
+  box-sizing: border-box;
+}
+
+.di-stage-row {
+  height: 56px;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--rule, #CFD0C9);
+  cursor: pointer;
+  background: var(--surface, #FFFFFF);
+  box-sizing: border-box;
+  transition: background 0.1s ease;
+}
+
+.di-stage-row:hover {
+  background: var(--paper, #F6F5F0);
+}
+
+.di-stage-row--current {
+  background: var(--hivis-16, rgba(255, 209, 0, 0.18)) !important;
+}
+
+/* Defect Sheet Specifics */
+.di-defect-sheet {
+  border-top: 2px solid var(--defect, #B3141A);
+  z-index: 280;
+}
+
+.di-defect-chips-scroll {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.di-defect-type-chip {
+  height: 44px;
+  padding: 0 14px;
+  font-size: 13px;
+  border-radius: 22px;
+  white-space: nowrap;
+}
+
+.di-severity-btn {
+  flex: 1;
+  height: 44px;
+  border: none;
+  border-radius: 6px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.di-photo-attach-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  border: 1.5px dashed var(--ink, #121311);
+  border-radius: 8px;
+  background: var(--paper, #F6F5F0);
+  cursor: pointer;
+}
+
+/* Feature Detail View Specifics */
+.di-feature-detail-sheet {
+  max-height: 92vh;
+  height: 92vh;
+  background: var(--paper, #F6F5F0);
+}
+
+/* Toast Container & Notification Styles */
+.di-toast-container {
+  position: fixed;
+  bottom: 76px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 390px;
+  padding: 0 16px;
+  box-sizing: border-box;
+  z-index: 300;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.di-toast {
+  pointer-events: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: var(--surface, #FFFFFF);
+  border: 1.5px solid var(--ink, #121311);
+  border-radius: var(--radius-md, 8px);
+  box-shadow: var(--shadow-lg, 0 8px 24px rgba(18, 19, 17, 0.16));
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.di-toast--defect {
+  background: var(--defect-bg, #FCEBEA);
+  border-color: var(--defect, #B3141A);
+  color: var(--defect, #B3141A);
+}
+
+.di-toast__content {
+  flex: 1;
+  min-width: 0;
+  padding-right: 12px;
+}
+
+.di-toast__message {
+  font-family: 'Barlow', sans-serif;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--ink, #121311);
+  line-height: 1.2;
+}
+
+.di-toast__meta {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: var(--ink-3, #555952);
+  margin-top: 2px;
+}
+
+.di-toast__action {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #121311;
+  background: var(--hivis, #FFD100);
+  border: 1.5px solid #121311;
+  border-radius: 4px;
+  padding: 6px 14px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.di-toast__progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background: var(--hivis, #FFD100);
+  width: 100%;
+  transition: width 0.1s linear;
+}
+
+/ *   P h a s e   7   S e c t i o n   R i b b o n   C S S   * / 
+ . s e c t i o n - v i e w - c o n t e n t   { 
+     p a d d i n g :   1 6 p x ; 
+     o v e r f l o w - y :   a u t o ; 
+     h e i g h t :   1 0 0 % ; 
+ } 
+ . p r o j e c t - r i b b o n - c o n t a i n e r   { 
+     d i s p l a y :   f l e x ; 
+     f l e x - d i r e c t i o n :   c o l u m n ; 
+     g a p :   2 4 p x ; 
+ } 
+ . l i n e - g r o u p   { 
+     d i s p l a y :   f l e x ; 
+     f l e x - d i r e c t i o n :   c o l u m n ; 
+     g a p :   8 p x ; 
+ } 
+ . l i n e - h e a d e r   { 
+     m a r g i n :   0 ; 
+     f o n t - f a m i l y :   v a r ( - - f o n t - d i s p l a y ,   s a n s - s e r i f ) ; 
+     f o n t - s i z e :   1 8 p x ; 
+     c o l o r :   v a r ( - - i n k - 0 ) ; 
+ } 
+ . t h i n - p r o g r e s s - b a r   { 
+     h e i g h t :   4 p x ; 
+     b o r d e r - r a d i u s :   2 p x ; 
+     b a c k g r o u n d - c o l o r :   v a r ( - - i n k - 4 ) ; 
+     o v e r f l o w :   h i d d e n ; 
+ } 
+ . r i b b o n - s c r o l l   { 
+     d i s p l a y :   f l e x ; 
+     g a p :   1 2 p x ; 
+     o v e r f l o w - x :   a u t o ; 
+     p a d d i n g - b o t t o m :   1 2 p x ; 
+     - w e b k i t - o v e r f l o w - s c r o l l i n g :   t o u c h ; 
+     s c r o l l - s n a p - t y p e :   x   m a n d a t o r y ; 
+ } 
+ . s u b s e c t i o n - c a r d   { 
+     f l e x :   0   0   a u t o ; 
+     w i d t h :   2 0 0 p x ; 
+     m i n - h e i g h t :   1 2 0 p x ; 
+     s c r o l l - s n a p - a l i g n :   s t a r t ; 
+     c u r s o r :   p o i n t e r ; 
+     t r a n s i t i o n :   a l l   0 . 2 s   e a s e ; 
+     b o r d e r - l e f t :   3 p x   s o l i d   t r a n s p a r e n t ; 
+     d i s p l a y :   f l e x ; 
+     f l e x - d i r e c t i o n :   c o l u m n ; 
+ } 
+ . s u b s e c t i o n - c a r d . a c t i v e   { 
+     b o r d e r - l e f t - c o l o r :   v a r ( - - h i v i s ) ; 
+ } 
+ . s u b s e c t i o n - c a r d . s e l e c t e d   { 
+     t r a n s f o r m :   t r a n s l a t e Y ( - 2 p x ) ; 
+     b o x - s h a d o w :   0   4 p x   1 2 p x   r g b a ( 0 , 0 , 0 , 0 . 1 5 ) ; 
+ } 
+ . s u b s e c t i o n - c a r d   . c a r d - h e a d e r   { 
+     p a d d i n g :   1 2 p x ; 
+     p a d d i n g - b o t t o m :   4 p x ; 
+ } 
+ . s u b s e c t i o n - c a r d   . c o d e - b a d g e   { 
+     f o n t - f a m i l y :   " B a r l o w   C o n d e n s e d " ,   s a n s - s e r i f ; 
+     f o n t - w e i g h t :   7 0 0 ; 
+     f o n t - s i z e :   2 0 p x ; 
+     c o l o r :   v a r ( - - i n k - 0 ) ; 
+ } 
+ . s u b s e c t i o n - c a r d   . c a r d - b o d y   { 
+     p a d d i n g :   0   1 2 p x   1 2 p x   1 2 p x ; 
+     d i s p l a y :   f l e x ; 
+     f l e x - d i r e c t i o n :   c o l u m n ; 
+     g a p :   6 p x ; 
+     f l e x :   1 ; 
+ } 
+ . s u b s e c t i o n - c a r d   . s u b - n a m e   { 
+     f o n t - f a m i l y :   v a r ( - - f o n t - b o d y ,   s a n s - s e r i f ) ; 
+     f o n t - s i z e :   1 4 p x ; 
+     c o l o r :   v a r ( - - i n k - 1 ) ; 
+     f o n t - w e i g h t :   5 0 0 ; 
+ } 
+ . s u b s e c t i o n - c a r d   . s u b - c h a i n a g e   { 
+     f o n t - f a m i l y :   v a r ( - - f o n t - d a t a ,   m o n o s p a c e ) ; 
+     f o n t - s i z e :   1 2 p x ; 
+     c o l o r :   v a r ( - - i n k - 3 ) ; 
+ } 
+ . s u b s e c t i o n - c a r d   . s t a t u s - i n d i c a t o r   { 
+     m a r g i n - t o p :   a u t o ; 
+     a l i g n - s e l f :   f l e x - s t a r t ; 
+ } 
+ . s u b s e c t i o n - c a r d   . s u b - p r o g r e s s   { 
+     m a r g i n - t o p :   6 p x ; 
+     w i d t h :   0 % ; 
+ } 
+ . s u b s e c t i o n - d e t a i l - p a n e l   { 
+     m a r g i n - t o p :   2 4 p x ; 
+     b a c k g r o u n d :   v a r ( - - i n k - 6 ) ; 
+     b o r d e r - r a d i u s :   8 p x ; 
+     p a d d i n g :   2 0 p x ; 
+     b o r d e r :   1 p x   s o l i d   v a r ( - - i n k - 5 ) ; 
+ } 
+ . d e t a i l - s t a t s   h 4   { 
+     m a r g i n :   0   0   1 2 p x   0 ; 
+     f o n t - s i z e :   1 6 p x ; 
+     c o l o r :   v a r ( - - i n k - 1 ) ; 
+ } 
+ . s t a t - g r o u p   { 
+     d i s p l a y :   f l e x ; 
+     f l e x - w r a p :   w r a p ; 
+     g a p :   1 2 p x ; 
+     m a r g i n - b o t t o m :   2 4 p x ; 
+ } 
+ . s t a t - p i l l   { 
+     b a c k g r o u n d :   v a r ( - - i n k - 7 ) ; 
+     p a d d i n g :   8 p x   1 2 p x ; 
+     b o r d e r - r a d i u s :   1 6 p x ; 
+     d i s p l a y :   f l e x ; 
+     g a p :   8 p x ; 
+     a l i g n - i t e m s :   c e n t e r ; 
+     f o n t - s i z e :   1 4 p x ; 
+     b o r d e r :   1 p x   s o l i d   v a r ( - - i n k - 5 ) ; 
+ } 
+ . s t a t - p i l l   s t r o n g   { 
+     c o l o r :   v a r ( - - h i v i s ) ; 
+ } 
+ . d e t a i l - m e t a   { 
+     f o n t - s i z e :   1 3 p x ; 
+     c o l o r :   v a r ( - - i n k - 3 ) ; 
+     m a r g i n - b o t t o m :   1 6 p x ; 
+ } 
+ . b t n - s w i t c h - s e c t i o n   { 
+     b a c k g r o u n d :   v a r ( - - h i v i s ) ; 
+     c o l o r :   v a r ( - - i n k - 0 ) ; 
+     b o r d e r :   n o n e ; 
+     p a d d i n g :   1 2 p x   2 4 p x ; 
+     b o r d e r - r a d i u s :   2 0 p x ; 
+     f o n t - w e i g h t :   6 0 0 ; 
+     c u r s o r :   p o i n t e r ; 
+     w i d t h :   1 0 0 % ; 
+ }  
+ 

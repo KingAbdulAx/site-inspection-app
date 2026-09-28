@@ -4,14 +4,36 @@
  * Bypasses cache for Supabase REST synchronization.
  */
 
-const CACHE_NAME = 'kmd-drainage-cache-v2';
+const CACHE_NAME = 'kmd-drainage-cache-v4';
 
 const PRECACHE_LOCAL_ASSETS = [
   './',
   './index.html',
   './styles.css',
+  './fonts.css',
+  './tokens.css',
+  './components.css',
   './manifest.json',
   './manifest.js',
+  './type_catalogue.js',
+  './type_icons.js',
+  './data_model.js',
+  './data_store.js',
+  './data/kmd_alignment_stations_bundle.js',
+  './position_engine.js',
+  './edit_door.js',
+  './walk_strip.js',
+  './walk_drawer.js',
+  './identify_view.js',
+  './section_view.js',
+  './walk_view.js',
+  './map_view.js',
+  './toast_manager.js',
+  './record_view.js',
+  './defect_view.js',
+  './export_engine.js',
+  './day_view.js',
+  './feature_detail_view.js',
   './config.js',
   './sync.js',
   './edit_manager.js',
@@ -65,7 +87,25 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  // 2. GET requests: Cache-first with ignoreSearch: true (handles cache buster query strings)
+  // 2. Map Tiles (arcgisonline, openstreetmap): Cache-first, handle opaque responses (status 0)
+  if (url.hostname.includes('arcgisonline.com') || url.hostname.includes('tile.openstreetmap.org')) {
+    event.respondWith(
+      caches.match(event.request, { ignoreSearch: true }).then(cachedResponse => {
+        if (cachedResponse) return cachedResponse;
+        return fetch(event.request).then(networkResponse => {
+          // Allow opaque responses (status 0) for CORS-less tile requests
+          if (networkResponse && (networkResponse.status === 200 || networkResponse.status === 0)) {
+            const resClone = networkResponse.clone();
+            caches.open(CACHE_NAME).then(cache => cache.put(event.request, resClone));
+          }
+          return networkResponse;
+        });
+      })
+    );
+    return;
+  }
+
+  // 3. GET requests: Cache-first with ignoreSearch: true (handles cache buster query strings)
   if (event.request.method === 'GET') {
     event.respondWith(
       caches.match(event.request, { ignoreSearch: true }).then(cachedResponse => {
