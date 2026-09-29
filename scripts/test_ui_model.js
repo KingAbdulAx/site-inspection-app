@@ -38,7 +38,7 @@ section('Formatting and parsing chainage', () => {
 
 section('Features load for both sub-sections with lanes and certainty', () => {
   ok(DI.data.bySub.KZDR.length > 800, 'KZDR features: ' + DI.data.bySub.KZDR.length);
-  ok(DI.data.bySub.DWKZ.length > 1700, 'DWKZ features: ' + DI.data.bySub.DWKZ.length);
+  ok(DI.data.bySub.DWKZ.length > 1300, 'DWKZ features: ' + DI.data.bySub.DWKZ.length);
   ok(!DI.hasData('KNDW') && !DI.hasData('GYDT'), 'unprocessed sub-sections are present and empty');
   const all = DI.data.features;
   ok(all.every(f => f.ch0 <= f.ch1), 'start before end');

@@ -536,6 +536,7 @@
     });
     (data.bySub[sub] || []).filter(f => !done.has(f.id)).forEach(f => out.push(featureOut(f, sub)));
     const meta = Object.assign({}, src.metadata || {});
+    if ('count' in meta) meta.count = out.length;
     const n = baseRecords().filter(r => ((data.byId[r.featureId] || {}).sub || r.sub) === sub).length;
     if (n) Object.assign(meta, {
       base_corrections_applied: n,
