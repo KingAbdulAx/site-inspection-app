@@ -38,7 +38,8 @@ POINT_LAYERS = {
     'DRN_CONNECTION_BOX_3': 'connection_box', 'DRN_CONNECTION_BOX_4': 'connection_box',
     'DRN_CONNECTION_BOX_5': 'connection_box', 'DRN_CONNECTION_BOX_6': 'connection_box',
 }
-RIPRAP_HATCH_LAYERS = {'Enrochement_Talus': 'riprap_slope', 'OUTLET-PROTECTION_HATCH': 'outlet_protection'}
+RIPRAP_HATCH_LAYERS = {'Enrochement_Talus': 'riprap_slope', 'OUTLET-PROTECTION_HATCH': 'outlet_protection',
+                       'Enrochement_Talus_BRIDGES': 'riprap_bridge'}
 CH_RE = re.compile(r'^\s*(\d{1,3})\+(\d{3}(?:[.,]\d+)?)\s*$')
 
 
@@ -71,6 +72,14 @@ class Axis:
                 if m:
                     labels.append((int(m.group(1)) * 1000 + float(m.group(2).replace(',', '.')), xy(t.dxf.insert)))
         log(f'axis: {len(ticks)} ticks (25 m), {len(labels)} chainage labels (100 m)')
+        # The same tick drawn twice (S03 has two) would make a zero-length step.
+        keep = []
+        for i, t in enumerate(ticks):
+            if not keep or np.min(np.hypot(*(ticks[keep] - t).T)) > 0.5:
+                keep.append(i)
+        if len(keep) < len(ticks):
+            log(f'  dropped {len(ticks) - len(keep)} duplicate ticks')
+            ticks = ticks[keep]
         order = cls._chain(ticks)
         ticks = ticks[order]
         steps = np.hypot(*np.diff(ticks, axis=0).T)
@@ -93,6 +102,13 @@ class Axis:
         c0, n, sgn, votes = best
         log(f'  tick 0 = {fmt(c0)}, chainage {"grows" if sgn > 0 else "falls"} along the chain; agreed by {n} of {len(labels)} labels; next {votes.most_common(3)[1:]}')
         ch = c0 + sgn * 25 * idx
+        off = []
+        for c, p in labels:
+            i = int(np.argmin(np.hypot(*(ticks - p).T)))
+            if abs(ch[i] - c) > 1 and len(off) < 40:
+                off.append((fmt(c), fmt(ch[i]), round(float(np.min(np.hypot(*(ticks - p).T))), 1)))
+        if off:
+            log(f'  labels that disagree (label, axis there, distance to tick m): {off[:20]}')
         if sgn < 0:
             ch, ticks = ch[::-1], ticks[::-1]
         return cls(ch, ticks)
@@ -200,8 +216,22 @@ def main():
                 skipped['far from axis'] += 1
                 continue
             feats.append(r)
-        elif lay == 'DRN_WATER_DISCHARGE' and e.dxftype() == 'LINE':
-            a, b = xy(e.dxf.start), xy(e.dxf.end)
+        elif lay == 'MH' and e.dxftype() == 'LWPOLYLINE' and e.closed:
+            # S03 draws manholes as closed squares rather than blocks: one point at the centre.
+            q = [xy(v) for v in e.get_points('xy')]
+            p = (sum(v[0] for v in q) / len(q), sum(v[1] for v in q) / len(q))
+            ch, off = axis.project([p])
+            o = float(off[0])
+            if abs(o) > args.max_offset:
+                skipped['far from axis'] += 1
+                continue
+            feats.append({'kind': 'point', 'code': 'manhole', 'layer': lay, 'block': None, 'handle': e.dxf.handle,
+                          'ch0': round(float(ch[0]), 2), 'ch1': round(float(ch[0]), 2),
+                          'side': 'C' if abs(o) < 1.75 else ('L' if o > 0 else 'R'), 'offset': round(abs(o), 2),
+                          'xy': [round(p[0], 3), round(p[1], 3)]})
+        elif lay == 'DRN_WATER_DISCHARGE' and (e.dxftype() == 'LINE' or (e.dxftype() == 'LWPOLYLINE' and len(e) == 2)):
+            # A descent is one straight stroke down the slope: a LINE, or (S03) a two-point polyline.
+            a, b = (xy(e.dxf.start), xy(e.dxf.end)) if e.dxftype() == 'LINE' else tuple(xy(v) for v in e.get_points('xy'))
             ch, off = axis.project([a, b])
             mid_ch = float(ch.mean())
             feats.append({'kind': 'descent', 'code': 'WD', 'layer': lay, 'handle': e.dxf.handle,
@@ -258,8 +288,9 @@ def main():
             continue
         txt = re.sub(r'\\P', ' ', txt or '').strip()
         ch, off = axis.project([tip])
-        L = re.search(r'L:\s*([\d.]+)\s*m', txt)
-        i = re.search(r'i:\s*([\d.]+)\s*%', txt)
+        # S02 writes 'L:125m / i:0.3%', S03 'L=28M / I:0.10%'.
+        L = re.search(r'\bL\s*[:=]\s*([\d.]+)\s*m', txt, re.I)
+        i = re.search(r'\bi\s*[:=]\s*([\d.]+)\s*%', txt, re.I)
         notes.append({'text': txt, 'ch': round(float(ch[0]), 2), 'offset': round(float(off[0]), 2),
                       'stated_length': float(L.group(1)) if L else None, 'gradient_pct': float(i.group(1)) if i else None})
     # Riprap callouts ("SLOPE PROTECTION L:28m / D50=100mm") become riprap label
@@ -286,6 +317,9 @@ def main():
                 if d < bd:
                     best, bd = f, d
         if best is not None and bd < 8:
+            # A long run is called out once per plan sheet it crosses, with the same text: count it once.
+            if n['clean'] in best.get('notes', []):
+                continue
             best.setdefault('notes', []).append(n['clean'])
             best['noted_length'] = round(best.get('noted_length', 0) + (n['stated_length'] or 0), 1)
             if n['gradient_pct'] is not None:

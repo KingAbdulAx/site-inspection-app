@@ -40,7 +40,7 @@ const cadFile = path.basename(cad.source.drainage).replace(/\.dxf$/i, '');
 const regPath = opt('--register');
 const sheets = regPath ? JSON.parse(fs.readFileSync(regPath, 'utf8')).documents
   .filter(d => d.category === 'Plan Sheet' && d.start_pk != null)
-  .map(d => ({ id: d.doc_number.replace(/^.*-(DW-\d{5})$/, '$1') + '-' + d.submitted_revision, a: d.start_pk, b: d.end_pk })) : [];
+  .map(d => ({ id: d.doc_number.replace(/^.*-(DW-\d{5})$/, '$1') + (d.submitted_revision ? '-' + d.submitted_revision : ''), a: d.start_pk, b: d.end_pk })) : [];
 const sheetAt = ch => { const s = sheets.find(x => ch >= x.a && ch < x.b); return s ? s.id : 'CAD ' + cadFile; };
 const sheet = 'CAD ' + cadFile;
 
@@ -125,7 +125,8 @@ function matchPoints(appList, cadList, tol, preset, label, extra) {
       const d = Math.abs(c.ch0 - f.ch0);
       if (d <= bd) { bd = d; best = i; }
     });
-    if (best == null) { st.removed++; recs.push(base({ action: 'delete', featureId: f.id, note: 'No ' + label + ' in the CAD within ' + tol + ' m (' + sheet + ')' })); return; }
+    // A kind the CAD holds none of is not drawn on this file at all (S03 has no dissipator layer), so nothing is removed for it.
+    if (best == null) { if (!cadList.length) { st.kept = (st.kept || 0) + 1; return; } st.removed++; recs.push(base({ action: 'delete', featureId: f.id, note: 'No ' + label + ' in the CAD within ' + tol + ' m (' + sheet + ')' })); return; }
     used.add(best);
     const c = cadList[best];
     st.matched++; st.moved.push(c.ch0 - f.ch0);
@@ -165,7 +166,7 @@ md += 'Start shift of carried features (CAD − app): median ' + med(stats.ditch
 const td = [...typeDiff.entries()].sort((a, b) => b[1] - a[1]);
 if (td.length) { md += '### Where the type differed (app → CAD)\n\n| Change | length |\n|---|---|\n'; td.slice(0, 20).forEach(([k, v]) => { md += '| ' + k + ' | ' + v + ' m |\n'; }); md += '\n'; }
 md += '## Water descents\n\nApp ' + descents.app + ', CAD ' + descents.cad + '. Matched ' + descents.matched + ' (within 15 m, same side; median shift ' + med(descents.moved).toFixed(1) + ' m), to add ' + descents.added + ', to remove ' + descents.removed + '.\n\n';
-md += '## Dissipators\n\nApp ' + dissip.app + ', CAD ' + dissip.cad + '. Matched ' + dissip.matched + ', to add ' + dissip.added + ', to remove ' + dissip.removed + '.\n\n';
+md += '## Dissipators\n\nApp ' + dissip.app + ', CAD ' + dissip.cad + '. Matched ' + dissip.matched + ', to add ' + dissip.added + ', to remove ' + dissip.removed + (dissip.kept ? ' (the CAD file has no dissipator layer, so the app\'s ' + dissip.kept + ' are left as they are)' : '') + '.\n\n';
 md += '## Riprap\n\nApp label positions ' + riprap.app + ', CAD callouts ' + riprap.cad + ' (plus ' + ripCad.length + ' hatched areas, not used yet). Matched ' + riprap.matched + ' (within 50 m, same side; median shift ' + med(riprap.moved).toFixed(1) + ' m), to add ' + riprap.added + ', to remove ' + riprap.removed + '.\n\n';
 md += '## Corrections file\n\n' + recs.length + ' records: ' + Object.entries(counts).map(([k, v]) => v + ' ' + k).join(', ') + '. Import on the phone (Project → Base data → Import corrections), then review with Check against drawings; every record can be undone.\n';
 

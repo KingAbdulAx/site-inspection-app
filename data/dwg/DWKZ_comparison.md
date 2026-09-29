@@ -34,7 +34,7 @@ Start shift of carried features (CAD − app): median -12.1 m, 90% within 220 m.
 
 ## Water descents
 
-App 326, CAD 483. Matched 3 (within 15 m, same side; median shift -12.5 m), to add 480, to remove 323.
+App 326, CAD 485. Matched 3 (within 15 m, same side; median shift -12.5 m), to add 482, to remove 323.
 
 ## Dissipators
 
@@ -46,4 +46,6 @@ App label positions 251, CAD callouts 263 (plus 474 hatched areas, not used yet)
 
 ## Corrections file
 
-2271 records: 486 edit, 692 add, 1093 delete. These are now baked into `data/section02_bundle.js` and `data/section02_assets.json` (1,710 → 1,309 features); corrected features carry `di_set` in their properties. Re-importing the file on the phone changes nothing.
+2273 records: 486 edit, 694 add, 1093 delete. These are baked into `data/section02_bundle.js` and `data/section02_assets.json` (1,710 → 1,311 features); corrected features carry `di_set` in their properties. Re-importing the file on the phone changes nothing.
+
+The last two records (`cad-DWKZ-02272`, `cad-DWKZ-02273`) were added in a second pass: two descents at 72+442 L and 72+546 R, drawn as polylines, which the first extraction skipped. The other 2,271 records keep their ids.
