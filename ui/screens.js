@@ -78,21 +78,23 @@
   }
 
   function openFeature(fid) {
-    const f = DI.data.byId[fid];
+    let f = DI.data.byId[fid];
     if (!f) return;
     const ov = DA.openOverlay('', 'full', {});
     ov.refresh = () => draw();
     const draw = () => {
+      f = DI.data.byId[fid] || f;
       const st = DI.statusOf(f);
       const L = lineOf(f);
       let h = topbar('Feature', { caps: true, right: '<button class="ib" data-act="copy-prov" data-id="' + esc(f.id) + '">' + I.icon('share') + '</button>' }) + '<div class="scroll">';
+      h += DA.baseDeletedBanner(f);
       if (f.level === 'C') h += '<div class="banner">' + I.icon('warn') + '<div><b>Drawing not cleared for construction</b><span>' + esc(f.sheet || 'Drawing') + ' · Level C · revise and resubmit</span></div></div>';
       if (st.removed) h += '<div class="banner" style="background:var(--rev)">' + I.icon('x') + '<div><b>Removed from the design · pending</b><span>' + esc(st.changes.find(r => r.action === 'remove').source.drawing || '') + ' rev ' + esc(st.changes.find(r => r.action === 'remove').source.rev || '') + '</span></div></div>';
       h += '<div style="padding:18px 16px;background:var(--surface);border-bottom:1px solid var(--rule)"><div class="fhead">' + DA.sideBadge(f.side, 'xl') + '<div style="min-width:0"><div style="font:700 36px/1.02 var(--f-cond)">' + esc(f.name) + '</div>' +
         (f.full && f.full !== f.name ? '<div style="font:500 17px/1.3 var(--f-sans);color:var(--ink-2);margin-top:4px">' + esc(f.full) + '</div>' : '') + '</div></div>';
       h += '<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:14px;font:500 24px/1 var(--f-mono)">' + DA.chText(f) + ' ' + DA.certChip(f) + ' <span style="font:500 18px/1 var(--f-sans);color:var(--ink-2)">' + (f.kind === 'cross' ? 'crosses under track' : '') + '</span></div>';
       const where = f.kind === 'cross' ? L.short + ' · ' + f.sub + ' · ' + f.catLabel : DA.offText(f).replace('≈', '≈ ') + ' ' + (f.side === 'L' ? 'left' : f.side === 'R' ? 'right' : '') + ' of CL · ' + ({ toe: 'toe of slope', plat: 'platform edge', face: 'slope face', crest: 'crest', off: 'off alignment', cl: 'under the track' }[f.lane] || '');
-      h += '<div class="lbl-caps" style="margin-top:12px;color:var(--ink-3)">' + esc(where) + '</div></div>';
+      h += '<div class="lbl-caps" style="margin-top:12px;color:var(--ink-3)">' + esc(where) + '</div>' + DA.baseStrip(f) + '</div>';
 
       // what is built
       h += '<div class="section-h"><span class="lbl-caps">What is built</span></div><div class="pad">';
@@ -174,7 +176,7 @@
         h += '<div style="border:3px solid var(--ink);background:var(--surface)">';
         recs.forEach(r => {
           const what = r.kind === 'stage' ? '<div>' + DA.meter(f, { s: r.stage, c: -1 }, 'md') + '<b style="display:block;font:700 19px/1.2 var(--f-sans);margin-top:5px">' + esc(f.ladder[r.stage]) + '</b></div>'
-            : '<div><b style="font:700 19px/1.2 var(--f-sans)">' + esc(r.kind === 'defect' ? 'Defect · ' + r.defect : r.kind === 'note' ? 'Note' : r.kind === 'photo' ? 'Photo' : r.kind === 'query' ? 'Query · ' + (r.title || '') : r.kind === 'design' ? 'Design change · ' + r.action : r.kind) + '</b>' + (r.note ? '<div class="muted" style="font-size:15px">' + esc(r.note) + '</div>' : '') + '</div>';
+            : '<div><b style="font:700 19px/1.2 var(--f-sans)">' + esc(r.kind === 'defect' ? 'Defect · ' + r.defect : r.kind === 'note' ? 'Note' : r.kind === 'photo' ? 'Photo' : r.kind === 'query' ? 'Query · ' + (r.title || '') : r.kind === 'design' ? 'Design change · ' + r.action : DA.recLabel(r) || r.kind) + '</b>' + (r.note ? '<div class="muted" style="font-size:15px">' + esc(r.note) + '</div>' : '') + '</div>';
           h += '<div style="display:grid;grid-template-columns:96px 1fr auto;gap:10px;align-items:center;padding:14px;border-bottom:1px solid var(--rule)"><div class="mono" style="font-size:14.5px;line-height:1.35;color:var(--ink-2)">' + DI.fmtDate(r.at, true) + '<br>' + DI.fmtTime(r.at) + '</div>' + what + statusIcons(r) + '</div>';
         });
         h += '<div style="padding:14px;font:500 16px/1.4 var(--f-sans);color:var(--ink-2)">A correction is added as a new record; the old one stays.</div></div>';
@@ -291,6 +293,8 @@
     h += '<div class="pad mt16"><p class="big-stat">' + part + ' of ' + list.length + ' part-built</p><div style="font:500 18px/1.3 var(--f-sans);color:var(--ink-2);margin-top:4px">' + b.stalled + ' of them unchanged for over 6 months</div>';
     const tot = Math.max(1, list.length);
     h += '<div class="stack"><i style="width:' + (b.none / tot * 100) + '%;background:var(--surface)"></i><i style="width:' + (b.moving / tot * 100) + '%;background:var(--part)"></i><i style="width:' + (b.stalled / tot * 100) + '%;background:var(--hazard)"></i><i style="width:' + (b.done / tot * 100) + '%;background:var(--ink)"></i></div>';
+    const chk = list.filter(f => f.verified).length;
+    h += '<button data-act="check-sheets" data-sub="' + sub.id + '" style="display:flex;align-items:center;gap:10px;width:100%;margin:0 0 14px;padding:10px 12px;border:2px dashed var(--ink);background:var(--surface);text-align:left"><span style="flex:1;font:600 16px/1.3 var(--f-sans)">' + chk + ' of ' + list.length + ' checked against the drawings</span><span class="lbl-caps">Check ›</span></button>';
     h += '<div class="legend"><div><i style="background:var(--surface)"></i><b>' + b.none + '</b>Not started</div><div><i style="background:var(--part)"></i><b>' + b.moving + '</b>Part-built, moving</div><div><i style="background:var(--hazard)"></i><b>' + b.stalled + '</b>Part-built, stalled &gt; 6 mo</div><div><i style="background:var(--ink)"></i><b>' + b.done + '</b>Completed</div></div>';
     const names = ['Excavation', 'Blinding', 'Rebar', 'Shuttered', 'Concreted'];
     const hist = [0, 0, 0, 0, 0];
@@ -409,6 +413,7 @@
       });
       // settings
       let theme = document.documentElement.getAttribute('data-theme');
+      h += DA.basePanel();
       h += '<div style="border-top:3px solid var(--ink);margin-top:18px"><div class="section-h"><span class="lbl-caps">This phone</span></div>';
       h += '<button class="setrow" data-act="set-name"><span><b>Inspector</b><small>' + esc(DI.inspector()) + '</small></span>' + I.icon('edit').replace('<svg', '<svg width="24" height="24"') + '</button>';
       h += '<button class="setrow' + (theme === 'sun' ? ' sel' : '') + '" data-act="set-theme" data-v="sun"><span><b>Sun</b><small>Ink on paper. Reads best in full sun.</small></span><span class="radio' + (theme === 'sun' ? ' on' : '') + '"></span></button>';
@@ -492,7 +497,7 @@
   }
   function dayRow(r, f, diffText) {
     const st = { s: r.kind === 'stage' ? r.stage : null, c: -1 };
-    const what = r.kind === 'stage' ? f.ladder[r.stage] : r.kind === 'defect' ? 'Defect · ' + r.defect : r.kind === 'note' ? 'Note' : r.kind === 'photo' ? 'Photo' : r.kind === 'query' ? 'Query' : r.kind === 'design' ? 'Design · ' + r.action : r.kind;
+    const what = r.kind === 'stage' ? f.ladder[r.stage] : r.kind === 'defect' ? 'Defect · ' + r.defect : r.kind === 'note' ? 'Note' : r.kind === 'photo' ? 'Photo' : r.kind === 'query' ? 'Query' : r.kind === 'design' ? 'Design · ' + r.action : DA.recLabel(r) || r.kind;
     return '<button class="frow" data-act="feature" data-id="' + esc(f.id) + '"><span class="time">' + DI.fmtTime(r.at) + '</span>' + DA.sideBadge(f.side) +
       '<div class="mid"><div class="t1"><span>' + esc(f.name) + '</span></div><div class="t2">' + DA.chText(f) + ' ' + DA.certChip(f) + '</div></div><div class="right">' +
       (r.kind === 'stage' ? DA.meter(f, st) : '') + '<span class="st' + (diffText ? ' diff' : '') + '"' + (r.kind === 'defect' ? ' style="color:var(--defect)"' : '') + '>' + esc(diffText || what) + '</span></div></button>';
@@ -557,6 +562,7 @@
         else if (r.kind === 'photo') ev.push({ at: r.at, t: 'field', dot: 'seen', tag: '<span class="chip claim">Photo</span>', h: '', m: esc(String(r.by).replace(/^Engr\.\s*/, '')) });
         else if (r.kind === 'design') ev.push({ at: r.at, t: 'design', dot: 'd', tag: '<span class="chip rev">Δ ' + esc(r.source.rev || '') + '</span>', h: esc({ remove: 'Removed', move: 'Moved', retype: 'Type or size changed', add: 'Added' }[r.action]), b: esc(r.summary || ''), m: esc([r.source.drawing, r.source.rev ? 'rev ' + r.source.rev : '', r.source.level ? 'Level ' + r.source.level : '', r.source.kind].filter(Boolean).join(' · ')) + ' · pending' });
       });
+      DI.live(r => r.kind === 'base' && r.featureId === fid).forEach(r => ev.push({ at: r.at, t: 'design', dot: 'd', tag: '<span class="chip claim">Data</span>', h: esc(DA.recLabel(r)), b: esc([Object.keys(r.set || {}).map(k => k + ' → ' + (k.startsWith('ch') ? DI.fmtCh(r.set[k], 3) : r.set[k])).join(', '), r.note].filter(Boolean).join(' · ')), m: esc(String(r.by).replace(/^Engr\.\s*/, '')) + ' · base data, not a revision' }));
       (DI.data.irs[fid] || []).forEach(r => ev.push({ at: r.date, t: 'field', dot: 'ir', tag: '<span class="chip claim">IR ' + esc(r.ir) + '</span>', h: esc(r.milestone) + ' claimed', m: 'Contractor · ' + r.status }));
       ev.push({ at: '0000', t: 'design', dot: 'd', tag: '<span class="chip rev">Drawing</span>', h: 'From the drawing set', b: esc(f.full) + ' at ' + DA.chText(f), m: esc(f.sheet || '') + (f.level ? ' · Level ' + f.level : '') + ' · office import' });
       ev.sort((a, b) => a.at < b.at ? 1 : -1);
@@ -588,6 +594,7 @@
       '<button data-act="design-edit" data-id="' + esc(fid) + '" data-v="remove">' + I.icon('x') + 'Removed in a revision' + I.icon('chev', 'chev') + '</button>' +
       '<button data-act="design-edit" data-id="' + esc(fid) + '" data-v="move">' + I.icon('pin') + 'Moved in a revision' + I.icon('chev', 'chev') + '</button>' +
       '<button data-act="design-edit" data-id="' + esc(fid) + '" data-v="retype">' + I.icon('sizes') + 'Type or size changed in a revision' + I.icon('chev', 'chev') + '</button></div>' +
+      DA.baseDoor(fid) +
       '<div class="lock-note" style="padding:4px 0 10px">' + I.icon('lock') + 'Nothing is deleted or written over. Every change is a new version you can step back from.</div>';
     DA.openOverlay(h, 'sheet tall');
   }

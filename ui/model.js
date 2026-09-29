@@ -258,11 +258,92 @@
     // The typical offset of the lane, signed: left positive when facing increasing.
     const mag = LANE_OFFSET[f.lane] || 0;
     f.offset = f.side === 'L' ? mag : f.side === 'R' ? -mag : 0;
+    // Corrections already baked into the bundled data carry their settings.
+    if (p.di_set) { applySet(f, p.di_set); f.corrected = 1; f.baseSet = Object.assign({}, p.di_set); }
+    if (p.di_verified) f.verified = p.di_verified;
+    return f;
+  }
+
+  // ------------------------------------------------------ base-data presets
+  // What a corrected or added feature can be. Picking one sets the category,
+  // the lane, how it is drawn, its code and its stage ladder together.
+  const P = (catKey, code, name, lane, kind, icon, ladder, typeKey) => ({ catKey, code, name, lane, kind, icon, ladder: ladder || LADDER_CONCRETE, typeKey: typeKey || null });
+  const PRESETS = {
+    T1: P('side', 'T1', 'Type 1 side ditch', 'plat', 'linear', 'trap', null, '1'),
+    T1L: P('side', 'T1L', 'Type 1L side ditch', 'plat', 'linear', 'trap', null, '1L'),
+    T3: P('side', 'T3', 'Type 3 side ditch, unlined', 'plat', 'linear', 'vee-dash', LADDER_UNLINED, '3'),
+    T10: P('side', 'T10', 'Type 10 side ditch with trench filter', 'plat', 'linear', 'trap', null, '10'),
+    T15: P('side', 'T15', 'Type 15 rectangular side ditch', 'plat', 'linear', 'trap', null, '15'),
+    T2: P('shoulder', 'T2', 'Type 2 half-round ditch', 'plat', 'linear', 'half', null, '2'),
+    T9: P('shoulder', 'T9', 'Type 9 shoulder ditch', 'plat', 'linear', 'half', null, '9'),
+    T4: P('toe', 'T4', 'Type 4 toe ditch, unlined', 'toe', 'linear', 'vee-dash', LADDER_UNLINED, '4'),
+    T7: P('toe', 'T7', 'Type 7 toe ditch', 'toe', 'linear', 'vee', null, '7'),
+    T12: P('toe', 'T12', 'Type 12 toe ditch', 'toe', 'linear', 'trap', null, '12'),
+    T13: P('toe', 'T13', 'Type 13 rectangular toe ditch', 'toe', 'linear', 'trap', null, '13'),
+    T14: P('toe', 'T14', 'Type 14 convergence ditch', 'toe', 'linear', 'vee', null, '14'),
+    T8: P('berm', 'T8', 'Type 8 bench ditch', 'face', 'linear', 'half', null, '8'),
+    T5: P('crest', 'T5', 'Type 5 crest ditch, unlined', 'crest', 'linear', 'vee-dash', LADDER_UNLINED, '5'),
+    T11: P('crest', 'T11', 'Type 11 crest ditch', 'crest', 'linear', 'vee', null, '11'),
+    T6: P('track', 'T6', 'Type 6 collector drain', 'cl', 'buried', 'collector', null, '6'),
+    WD: P('descent', 'WD', 'Water descent, precast', 'face', 'point', 'descent', LADDER_PRECAST),
+    RIP: P('riprap', '', 'Riprap protection', 'face', 'label', 'riprap', LADDER_RIPRAP),
+    BC: P('cross', 'BC', 'Box culvert', 'across', 'cross', 'box'),
+    PC: P('cross', 'PC', 'Pipe culvert', 'across', 'cross', 'pipe'),
+    T16: P('underpass', 'T16', 'Underpass water passage', 'across', 'cross', 'arch', null, '16'),
+    'CH-A': P('diversion', 'CH-A', 'Diversion channel, earth', 'off', 'linear', 'divert', LADDER_UNLINED),
+    'CH-B': P('diversion', 'CH-B', 'Diversion channel, concrete', 'off', 'linear', 'divert'),
+    'CH-C': P('diversion', 'CH-C', 'Diversion channel with embankments', 'off', 'linear', 'divert'),
+    'CH-R': P('diversion', 'CH-R', 'Rectangular channel', 'off', 'linear', 'divert'),
+    'D-SOZ': P('dissipator', 'D-SOZ', 'Spread-out zone dissipator', 'toe', 'point', 'dissip'),
+    'D-SD': P('dissipator', 'D-SD', 'Slope descent dissipator', 'toe', 'point', 'dissip'),
+    'D-TC': P('dissipator', 'D-TC', 'Trapezoidal channel dissipator', 'toe', 'point', 'dissip'),
+    'D-ST': P('dissipator', 'D-ST', 'Stool ditch dissipator', 'toe', 'point', 'dissip'),
+    'D-RF': P('dissipator', 'D-RF', 'Rockfill dissipator', 'toe', 'point', 'dissip'),
+    BRG: P('bridge', 'BRG', 'Railway bridge', 'across', 'cross', 'bridge'),
+    OP: P('bridge', 'OP', 'Road overbridge', 'across', 'cross', 'bridge'),
+    UP: P('underpass', 'UP', 'Road underpass', 'across', 'cross', 'arch'),
+    CC: P('cross', 'CC', 'Cattle crossing', 'across', 'cross', 'box'),
+    MD: P('misc', 'MD', 'Culvert approach ditch', 'toe', 'linear', 'trap', LADDER_UNLINED)
+  };
+  const CAT_LABEL = {};
+  Object.values(CAT).forEach(c => { if (!CAT_LABEL[c.key]) CAT_LABEL[c.key] = c.label; });
+  const CAT_NAME = {};
+  Object.keys(CAT).forEach(n => { if (!CAT_NAME[CAT[n].key]) CAT_NAME[CAT[n].key] = n; });
+
+  function presetOf(f) {
+    if (f.catKey === 'riprap') return 'RIP';
+    if (f.catKey === 'descent') return 'WD';
+    if (PRESETS[f.code]) return f.code;
+    if (f.catKey === 'track') return 'T6';
+    return null;
+  }
+  // Apply a set of corrected fields to a feature. Values are absolute, so
+  // applying the same correction twice gives the same result.
+  function applySet(f, s) {
+    if (!s) return f;
+    if (s.preset && PRESETS[s.preset]) {
+      const p = PRESETS[s.preset];
+      Object.assign(f, { catKey: p.catKey, catLabel: CAT_LABEL[p.catKey] || p.catKey, code: p.code, typeKey: p.typeKey, lane: p.lane, kind: p.kind, icon: p.icon, ladder: p.ladder });
+      if (!s.name) { f.name = p.name; f.full = p.name; }
+    }
+    ['name', 'side', 'lane', 'cert', 'sheet', 'level', 'notes', 'specs'].forEach(k => { if (s[k] != null && s[k] !== '') f[k] = s[k]; });
+    if (s.name) f.full = s.fullName || s.name;
+    if (s.ch0 != null && !isNaN(s.ch0)) f.ch0 = Number(s.ch0);
+    if (s.ch1 != null && !isNaN(s.ch1)) f.ch1 = Number(s.ch1);
+    if (f.kind === 'cross' && f.catKey !== 'bridge') f.ch1 = f.ch0;
+    if (f.kind === 'point' || f.kind === 'label') f.ch1 = f.ch0;
+    if (f.ch1 < f.ch0) { const x = f.ch0; f.ch0 = f.ch1; f.ch1 = x; }
+    if (s.kind) f.kind = s.kind;
+    if (s.stated != null) f.stated = Number(s.stated);
+    if (s.offsetM !== undefined) f.offsetM = s.offsetM === null || s.offsetM === '' ? null : Math.abs(Number(s.offsetM));
+    if (s.sheet) f.drawings = [s.sheet].concat((f.drawings || []).filter(d => d !== s.sheet));
+    const mag = f.offsetM != null ? f.offsetM : (LANE_OFFSET[f.lane] || 0);
+    f.offset = f.side === 'L' ? mag : f.side === 'R' ? -mag : 0;
     return f;
   }
 
   // ------------------------------------------------------ data per sub-section
-  const data = { features: [], bySub: {}, byId: {}, centre: {}, irs: {} };
+  const data = { features: [], bySub: {}, byId: {}, centre: {}, irs: {}, pristine: {}, meta: {}, source: {}, deleted: [] };
 
   function loadCentre(sub, cl) {
     if (!cl || !cl.dense_points) return;
@@ -275,16 +356,18 @@
     const add = (sub, geo) => {
       if (!geo || !geo.features) return;
       const list = [];
+      const seen = {};
       geo.features.forEach(g => {
         const f = normalise(g.properties || {}, sub);
-        if (f && !data.byId[f.id]) { list.push(f); data.byId[f.id] = f; }
+        if (f && !seen[f.id]) { f.geom = g.geometry || null; list.push(f); seen[f.id] = 1; }
       });
-      list.sort((a, b) => a.ch0 - b.ch0);
-      data.bySub[sub] = list;
-      data.features = data.features.concat(list);
+      data.pristine[sub] = list;
+      data.meta[sub] = geo.metadata || {};
+      data.source[sub] = geo;
     };
     add('DWKZ', window.SECTION02_ASSETS);
     add('KZDR', window.SECTION03_ASSETS);
+    applyBase();
     loadCentre('DWKZ', window.SECTION02_CENTERLINE);
     loadCentre('KZDR', window.SECTION03_CENTERLINE);
     SUBS.DWKZ.count = (data.bySub.DWKZ || []).length;
@@ -363,15 +446,134 @@
     records.push(r);
     saveRecords();
     if (r.kind === 'stage' || r.kind === 'defect') mirrorLegacy(r.featureId);
+    if (r.kind === 'base') applyBase();
     return r;
   }
   function voidRecord(id) {
     if (live(r => r.id === id).length === 0) return null;
     const r = addRecord({ kind: 'void', target: id });
     const t = records.find(x => x.id === id);
-    if (t && t.featureId) mirrorLegacy(t.featureId);
+    if (t && t.kind === 'base') applyBase();
+    else if (t && t.featureId) mirrorLegacy(t.featureId);
     return r;
   }
+  // ------------------------------------------------------- base data
+  // Corrections to the extracted data: the drawing was read wrong, or a
+  // feature was missed. Not a design revision and not a field finding.
+  // Kept as append-only 'base' records, applied over the extraction on load.
+  function applyBase() {
+    const v = voided();
+    const base = records.filter(r => r.kind === 'base' && !v.has(r.id)).sort((a, b) => a.at < b.at ? -1 : 1);
+    data.byId = {}; data.bySub = {}; data.deleted = [];
+    Object.keys(data.pristine).forEach(sub => {
+      data.bySub[sub] = data.pristine[sub].map(f => { const c = Object.assign({}, f); data.byId[c.id] = c; return c; });
+    });
+    base.forEach(r => {
+      let f = data.byId[r.featureId];
+      if (r.action === 'add' && !f) {
+        const p = PRESETS[(r.set && r.set.preset) || 'T12'];
+        const sub = r.sub || 'KZDR';
+        if (!SUBS[sub]) return;
+        f = { id: r.featureId, sub, line: SUBS[sub].line, catKey: p.catKey, catLabel: CAT_LABEL[p.catKey], kind: p.kind, lane: p.lane, side: 'L', ch0: 0, ch1: 0, cert: 'derived', code: p.code, typeKey: p.typeKey, name: p.name, full: p.name, icon: p.icon, ladder: p.ladder, sheet: '', drawings: [], level: null, onHold: false, confidence: '', specs: '', notes: '', stated: null, raw: {}, added: r.at };
+        (data.bySub[sub] = data.bySub[sub] || []).push(f);
+        data.byId[f.id] = f;
+      }
+      if (!f) return;
+      if (r.action === 'edit' || r.action === 'add') {
+        applySet(f, r.set);
+        f.corrected = (f.corrected || 0) + 1;
+        f.baseSet = Object.assign({}, f.baseSet || {}, r.set);
+        f.lastCorrected = r.at;
+      }
+      if (r.action === 'delete') f.deleted = { at: r.at, note: r.note || '' };
+      if (r.action === 'verify') f.verified = { at: r.at, by: r.by, sheet: r.sheet || f.sheet };
+      if (r.action === 'unverify') f.verified = null;
+    });
+    data.features = [];
+    Object.keys(data.bySub).forEach(sub => {
+      const all = data.bySub[sub];
+      data.deleted = data.deleted.concat(all.filter(f => f.deleted));
+      data.bySub[sub] = all.filter(f => !f.deleted).sort((a, b) => a.ch0 - b.ch0);
+      data.features = data.features.concat(data.bySub[sub]);
+    });
+    if (SUBS.DWKZ) SUBS.DWKZ.count = (data.bySub.DWKZ || []).length;
+    if (SUBS.KZDR) SUBS.KZDR.count = (data.bySub.KZDR || []).length;
+  }
+  function baseRecords() { return live(r => r.kind === 'base'); }
+  function correctBase(fid, set, note) { return addRecord({ kind: 'base', action: 'edit', featureId: fid, set, note }); }
+  function addBase(sub, set, note) { return addRecord({ kind: 'base', action: 'add', featureId: 'base_' + uid().replace(/-/g, '').slice(0, 16), sub, set, note }); }
+  function deleteBase(fid, note) { return addRecord({ kind: 'base', action: 'delete', featureId: fid, note }); }
+  function verifyBase(fid, sheet) { return addRecord({ kind: 'base', action: 'verify', featureId: fid, sheet }); }
+  function unverifyBase(fid) { return addRecord({ kind: 'base', action: 'unverify', featureId: fid }); }
+
+  // A corrected sub-section, in the same shape as the bundled data, so it
+  // can replace data/bundle.js (via scripts/apply_base_corrections.js) or
+  // open in QGIS. Corrected features are re-placed from the centreline.
+  function exportGeo(sub) {
+    const src = data.source[sub] || { type: 'FeatureCollection', features: [] };
+    const idOf = g => (g.properties || {}).id || (g.properties || {}).Asset_ID;
+    const done = new Set();
+    const deletedIds = new Set(data.deleted.map(f => f.id));
+    // Keep the source order and everything the app does not model (section
+    // boundaries etc.) exactly as it was; replace only what was corrected.
+    const out = [];
+    src.features.forEach(g => {
+      const id = idOf(g);
+      if (deletedIds.has(id)) return;
+      const f = data.byId[id];
+      if (f && f.sub === sub && !done.has(id)) { done.add(id); out.push(f.baseSet || f.verified ? featureOut(f, sub) : g); } else out.push(g);
+    });
+    (data.bySub[sub] || []).filter(f => !done.has(f.id)).forEach(f => out.push(featureOut(f, sub)));
+    const meta = Object.assign({}, src.metadata || {});
+    const n = baseRecords().filter(r => ((data.byId[r.featureId] || {}).sub || r.sub) === sub).length;
+    if (n) Object.assign(meta, {
+      base_corrections_applied: n,
+      removed_as_extraction_errors: data.deleted.filter(f => f.sub === sub).map(f => ({ id: f.id, note: f.deleted.note })),
+      corrected_at: new Date().toISOString()
+    });
+    return Object.assign({}, src, { metadata: meta, features: out });
+  }
+  function featureOut(f, sub) {
+    const SIDE = { L: 'Left', R: 'Right', C: 'Center' };
+    if (!f.baseSet && !f.verified && f.geom) return { type: 'Feature', properties: f.raw, geometry: f.geom };
+    const props = Object.assign({}, f.raw);
+    delete props.di_set; delete props.di_verified;
+    Object.assign(props, {
+      id: f.id, start_pk: round3(f.ch0), end_pk: round3(f.ch1), length_m: round3(f.ch1 - f.ch0), is_point: f.ch1 - f.ch0 < 0.5,
+      side: SIDE[f.side], category: props.category || CAT_NAME[f.catKey], typology: props.typology || f.full,
+      chainage_str: 'PK ' + fmtCh(f.ch0) + (f.ch1 - f.ch0 >= 0.5 ? ' – PK ' + fmtCh(f.ch1) : '')
+    });
+    if (!props.status) props.status = 'Not Started';
+    if (f.baseSet) { props.di_set = f.baseSet; props.category = CAT_NAME[f.catKey]; props.typology = f.full; props.short_code = f.code || props.short_code; if (f.sheet) props.drawing_ref = [f.sheet].concat((f.drawings || []).filter(d => d !== f.sheet)).join(' / '); }
+    if (f.offsetM != null) props.offset_m = f.offsetM;
+    if (f.verified) { props.di_verified = f.verified; props.confidence = 'CONFIRMED'; }
+    let geom = f.geom;
+    if (f.baseSet || !geom) {
+      const pts = [];
+      const step = f.ch1 - f.ch0 < 0.5 ? 0 : Math.max(5, (f.ch1 - f.ch0) / 60);
+      for (let c = f.ch0; ; c += step) {
+        const q = pointAt(sub, Math.min(c, f.ch1), f.offset * (f.kind === 'cross' ? 0 : 1));
+        if (q) pts.push([+q.lon.toFixed(7), +q.lat.toFixed(7)]);
+        if (!step || c >= f.ch1) break;
+      }
+      geom = pts.length > 1 ? { type: 'LineString', coordinates: pts } : pts.length ? { type: 'Point', coordinates: pts[0] } : null;
+    }
+    return { type: 'Feature', properties: props, geometry: geom };
+  }
+  function round3(n) { return Math.round(n * 1000) / 1000; }
+  function exportCorrections() {
+    return { kind: 'kmd-base-corrections', version: 1, exported_at: new Date().toISOString(), by: inspector(), records: records.filter(r => r.kind === 'base' || (r.kind === 'void' && records.some(x => x.id === r.target && x.kind === 'base'))) };
+  }
+  function importRecords(list) {
+    const have = new Set(records.map(r => r.id));
+    let n = 0;
+    (list || []).forEach(r => { if (r && r.id && !have.has(r.id)) { records.push(r); n++; } });
+    records.sort((a, b) => a.at < b.at ? -1 : 1);
+    saveRecords();
+    applyBase();
+    return n;
+  }
+
   function recordsFor(fid) { return live(r => r.featureId === fid).sort((a, b) => a.at < b.at ? 1 : -1); }
 
   // Legacy per-asset inspections (older app, and what the cloud sync reads).
@@ -580,6 +782,7 @@
     fmtCh, fmtPlus, parseCh, fmtDate, fmtTime, monthsBetween, esc, DAYS, MONTHS,
     inspector, setInspector, addRecord, voidRecord, live, recordsFor, seenOf, ownSeen, openDefects,
     designChanges, statusOf, drafts, saveDraft, putPhoto, getPhoto, uid, loadLegacy,
+    PRESETS, presetOf, applyBase, baseRecords, correctBase, addBase, deleteBase, verifyBase, unverifyBase, exportGeo, exportCorrections, importRecords,
     project, pointAt, laneOf, savePosition, lastPosition, csvCell,
     get records() { return records; }
   };

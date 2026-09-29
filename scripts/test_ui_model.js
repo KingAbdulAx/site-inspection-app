@@ -116,5 +116,45 @@ section('Defects and status', () => {
   ok(!DI.statusOf(f).removed, 'design change can be stepped back');
 });
 
+section('Base data: correct, add, remove, check, bake', () => {
+  const n0 = DI.data.bySub.KZDR.length;
+  const f = DI.data.bySub.KZDR.find(x => x.code === 'T12');
+  const orig = { ch0: f.ch0, code: f.code };
+  const r = DI.correctBase(f.id, { preset: 'T7', ch0: f.ch0 - 12, offsetM: 13.8, side: 'L' });
+  let g = DI.data.byId[f.id];
+  ok(g.code === 'T7' && g.ch0 === orig.ch0 - 12 && g.offset === 13.8 && g.lane === 'toe', 'correction applied');
+  ok(g.ladder.length === 7 && g.name === 'Type 7 toe ditch', 'type change brings its name and ladder');
+  DI.voidRecord(r.id);
+  g = DI.data.byId[f.id];
+  ok(g.code === orig.code && g.ch0 === orig.ch0, 'undo restores the extraction');
+  const a = DI.addBase('KZDR', { preset: 'PC', name: 'Pipe culvert Ø1.2 m', ch0: 111031.4, side: 'C', cert: 'exact', sheet: 'DW-03021-06' });
+  ok(DI.data.bySub.KZDR.length === n0 + 1 && DI.data.byId[a.featureId].kind === 'cross', 'missing feature added');
+  const gone = DI.data.bySub.KZDR[3];
+  DI.deleteBase(gone.id, 'Duplicate');
+  ok(DI.data.bySub.KZDR.length === n0 && !DI.data.features.includes(DI.data.byId[gone.id]) && DI.data.byId[gone.id].deleted, 'removed, but still openable');
+  DI.verifyBase(f.id, 'DW-03020-06');
+  ok(DI.data.byId[f.id].verified && DI.data.byId[f.id].verified.sheet === 'DW-03020-06', 'checked against a sheet');
+  DI.correctBase(f.id, { ch1: f.ch1 + 20 });
+  // bake: export, reload from the export with no records, compare
+  const geo = DI.exportGeo('KZDR');
+  const src = window.SECTION03_ASSETS;
+  ok(geo.features.length === src.features.length, 'feature count: one added, one removed');
+  const untouched = src.features.find(x => x.properties.id === DI.data.bySub.KZDR[10].id);
+  ok(geo.features.includes(untouched), 'untouched features pass through unchanged');
+  const keep = { recs: store.KMD_WALK_RECORDS_V1 };
+  window.SECTION03_ASSETS = geo;
+  store.KMD_WALK_RECORDS_V1 = '[]';
+  const mod = require.resolve(path.join(root, 'ui/model.js'));
+  delete require.cache[mod]; require(mod); window.DI.init();
+  const D2 = window.DI;
+  ok(D2.data.byId[f.id].ch1 === f.ch1 + 20 && D2.data.byId[f.id].verified, 'baked correction survives a reload');
+  ok(D2.data.byId[a.featureId] && D2.data.byId[a.featureId].name === 'Pipe culvert Ø1.2 m', 'baked addition survives a reload');
+  ok(!D2.data.byId[gone.id], 'baked removal is gone');
+  store.KMD_WALK_RECORDS_V1 = keep.recs;
+  delete require.cache[mod]; require(mod); window.DI.init();
+  ok(window.DI.data.bySub.KZDR.length === n0, 're-applying the same corrections on baked data changes nothing');
+  window.SECTION03_ASSETS = src;
+});
+
 console.log('\n' + (fail ? 'FAILED: ' : 'ALL PASSED: ') + pass + ' passed, ' + fail + ' failed');
 process.exit(fail ? 1 : 0);

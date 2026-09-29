@@ -30,11 +30,13 @@
   function certChip(f) {
     if (f.cert === 'exact') return '<span class="chip exact">Exact</span>';
     if (f.cert === 'label') return '<span class="chip label">Label</span>';
+    if (f.cert === 'measured') return '<span class="chip measured">Measured</span>';
     return '<span class="chip derived">±4 m</span>';
   }
   function chText(f, arrow) {
     if (f.cert === 'exact') return DI.fmtCh(f.ch0, 3);
     if (f.cert === 'label') return 'near ' + DI.fmtCh(f.ch0);
+    if (f.cert === 'measured') return DI.fmtCh(f.ch0, 1) + (f.ch1 - f.ch0 > 1 && arrow !== false ? ' → ' + DI.fmtCh(f.ch1, 1) : '');
     if (f.ch1 - f.ch0 > 1) return '≈' + DI.fmtCh(f.ch0) + (arrow === false ? '' : ' → ' + DI.fmtCh(f.ch1));
     return '≈' + DI.fmtCh(f.ch0);
   }
@@ -64,6 +66,7 @@
   function offText(f) {
     if (f.kind === 'cross') return 'Under track';
     if (f.lane === 'cl') return 'Under the track, buried';
+    if (f.offsetM != null) return (f.side === 'R' ? '+' : '−') + f.offsetM + ' m';
     const m = DI.LANE_OFFSET[f.lane];
     return '≈' + (f.side === 'R' ? '+' : '−') + m + ' m';
   }
@@ -402,7 +405,8 @@
         '<div class="right">' + meter(f, st) + stageLabel(f, st) + '</div></button>';
     });
     h += '</div><div class="grid2 mt16"><button class="btn" data-act="unlisted" style="font-size:16px;min-height:56px">' + '<span style="background:var(--hivis);color:#121311;border:2px solid #121311;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font:700 18px/1 var(--f-cond)">?</span> Not on the drawings</button>' +
-      '<button class="btn" data-act="add-design" style="font-size:16px;min-height:56px;border-color:var(--rev);color:var(--rev)">' + I.icon('plus') + ' Add to design</button></div>';
+      '<button class="btn" data-act="add-design" style="font-size:16px;min-height:56px;border-color:var(--rev);color:var(--rev)">' + I.icon('plus') + ' Add to design</button></div>' +
+      '<button class="btn mt8" data-act="base-add" data-ch="' + around + '" style="font-size:16px;min-height:56px;border-style:dashed">' + I.icon('edit') + ' Missing from the data — the extraction skipped it</button>';
     const ov = openOverlay(h, 'sheet tall');
     const row = hlId && ov.querySelector('#row-' + CSS.escape(hlId));
     if (row) row.scrollIntoView({ block: 'center' });
