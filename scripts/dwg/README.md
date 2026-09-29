@@ -44,6 +44,8 @@ Then either:
 - **Review on the phone:** Project → Base data → Import corrections, then work through *Check against drawings* sheet by sheet. Every record can be undone. Or,
 - **Bake straight into the data:** `node scripts/apply_base_corrections.js data/dwg/DWKZ_corrections.json`.
 
+DWKZ has been baked (1,710 → 1,309 features). Re-applying the file to the baked data changes nothing, so a phone that already imported it can keep or clear those records.
+
 ## Checks built in
 
 - **Chainage axis:** the ticks are chained by distance, and each 100 m label votes for the chainage and direction. On DWKZ, 630 of 632 labels agree. The app's centreline was compared with it and is within 0.1–0.4 m, with no chainage bias.

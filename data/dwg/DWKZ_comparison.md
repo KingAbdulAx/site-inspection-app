@@ -46,4 +46,4 @@ App label positions 251, CAD callouts 263 (plus 474 hatched areas, not used yet)
 
 ## Corrections file
 
-2271 records: 486 edit, 692 add, 1093 delete. Import on the phone (Project → Base data → Import corrections), then review with Check against drawings; every record can be undone.
+2271 records: 486 edit, 692 add, 1093 delete. These are now baked into `data/section02_bundle.js` and `data/section02_assets.json` (1,710 → 1,309 features); corrected features carry `di_set` in their properties. Re-importing the file on the phone changes nothing.

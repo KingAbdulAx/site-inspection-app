@@ -19,7 +19,13 @@ An offline-first, mobile Progressive Web Application (PWA) engineered for civil 
 | **Day** | Records safe on the phone vs. sent, unfinished drafts, what you covered, differences from the contractor, and an offline export (CSV plus an HTML report with photos). |
 | **Editing, two doors** | *The ground differs* makes a query (the design is untouched), for example built in a different place, measured against the GPS error. *The drawing changed* makes a pending design change, which must name its drawing and revision. Nothing is deleted; removed features stay struck through. |
 
-Code: `ui/model.js` (data, append-only records, position/projection), `ui/strip.js` (strip and section-cut renderer), `ui/app.js` (shell, Walk, record sheet), and `ui/screens.js` (other screens). Records are appended to `KMD_WALK_RECORDS_V1` and never edited; undo appends a void. The latest stage per asset is mirrored into the existing inspection store, so `sync.js` still sends it to the office. Photos go in IndexedDB.
+**On a computer** the same screens get more room, and the strip stays the main view:
+
+- **960 px and wider:** the bottom tabs become a rail on the left (with Go to, Project and the Sun/Office switch). The position header is one row. The list of everything within 20 m stays open on the right, and tapping a mark on the strip points the list at it. The record sheet and other forms dock into that column instead of rising from the bottom. Feature, Project and the other full pages open as a centred page. Section and Day read as one centred column.
+- **1360 px and wider:** the section cut (or the map) sits beside the strip rather than replacing it, and follows the chainage picked in the list.
+- **Keyboard:** Esc closes; digits, +, Backspace and Enter work the chainage keypad; G opens Go to; ↑ ↓ PgUp PgDn scroll the strip, like the mouse wheel.
+
+Code: `ui/model.js` (data, append-only records, position/projection), `ui/strip.js` (strip and section-cut renderer), `ui/app.js` (shell, Walk, record sheet, layout switching), `ui/screens.js` (other screens), and `ui/desk.css` (the computer layouts). Records are appended to `KMD_WALK_RECORDS_V1` and never edited; undo appends a void. The latest stage per asset is mirrored into the existing inspection store, so `sync.js` still sends it to the office. Photos go in IndexedDB.
 
 ### Correcting the base data (extraction errors)
 
@@ -39,7 +45,7 @@ node scripts/apply_base_corrections.js kmd-base-corrections-YYYYMMDDHHMM.json
 
 This rewrites `data/bundle.js` / `data/section02_bundle.js` (and the `*_assets.json`) with the same code the app uses, so the result matches what you saw on the phone. Untouched features pass through unchanged, and sub-sections without corrections are not rewritten. Corrections are absolute values, so baking twice or leaving them on the phone afterwards changes nothing.
 
-Try it without GPS: `index.html?sim=KZDR:111020:14:4` (sub-section : chainage : offset, left + : accuracy m). Use `…:38` for poor GPS or `…:none` for set-by-hand. Tests: `node scripts/test_ui_model.js`, `node scripts/test_ui_e2e.js` and `node scripts/test_ui_base_e2e.js` (the last two use Playwright).
+Try it without GPS: `index.html?sim=KZDR:111020:14:4` (sub-section : chainage : offset, left + : accuracy m). Use `…:38` for poor GPS or `…:none` for set-by-hand. Tests: `node scripts/test_ui_model.js`, `node scripts/test_ui_e2e.js`, `node scripts/test_ui_base_e2e.js` and `node scripts/test_ui_desk_e2e.js` (the last three use Playwright).
 
 ---
 

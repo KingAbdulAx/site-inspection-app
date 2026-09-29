@@ -305,22 +305,25 @@
   // ------------------------------------------------------- walk render
   function renderWalk() {
     $('#posHead').innerHTML = posHeader();
-    const mode = S.mode;
+    // Wide: the strip is always shown and the section or map sits beside it.
+    const wide = DA.layout === 'wide';
+    const mode = wide ? 'strip' : S.mode;
+    const second = wide ? S.pane : mode;
     document.querySelectorAll('.seg3 button').forEach(b => b.classList.toggle('on', b.dataset.mode === mode));
+    document.querySelectorAll('.seg2 button').forEach(b => b.classList.toggle('on', b.dataset.v === S.pane));
     $('#laneHead').classList.toggle('hidden', mode !== 'strip');
-    $('#cutHead').classList.toggle('hidden', mode !== 'section');
+    $('#cutHead').classList.toggle('hidden', second !== 'section');
     $('#stripHost').classList.toggle('hidden', mode !== 'strip');
-    $('#mapHost').classList.toggle('hidden', mode !== 'map');
-    $('#cutHost').classList.toggle('hidden', mode !== 'section');
+    $('#mapHost').classList.toggle('hidden', second !== 'map');
+    $('#cutHost').classList.toggle('hidden', second !== 'section');
     if (mode === 'strip') {
       $('#laneHead').innerHTML = laneHeader();
       renderStrip();
-    } else if (mode === 'section') {
-      renderCut();
-    } else if (mode === 'map' && DA.renderMap) {
-      DA.renderMap($('#mapHost'));
     }
+    if (second === 'section') renderCut();
+    else if (second === 'map' && DA.renderMap) DA.renderMap($('#mapHost'));
     atYouBar();
+    if (DA.layout !== 'phone') renderSide();
   }
   function renderStrip() {
     if (!DA.strip) {
@@ -339,12 +342,19 @@
   }
   function renderCut() {
     const p = S.pos;
-    const items = orderAsFaced(nearItems(p.ch, 20)).slice(0, 5).map(f => ({ f }));
-    const at = atYouPick(p.ch).f;
+    const wide = DA.layout === 'wide';
+    const docked = DA.layout !== 'phone';
+    const here = wide && S.sideCh != null ? S.sideCh : p.ch;
+    const items = orderAsFaced(nearItems(here, 20)).slice(0, 5).map(f => ({ f }));
+    const at = here === p.ch ? atYouPick(p.ch).f : DI.data.byId[S.sideHl] || null;
     const pick = items.find(x => x.f.kind === 'cross');
-    const cutCh = pick ? pick.f.ch0 : p.ch;
-    const W = $('#vp').clientWidth || 390;
-    const fitH = ($('#vp').clientHeight || 500) - (Math.ceil((items.length + 1) / 3) * 80 + 28) - 64;
+    const cutCh = pick ? pick.f.ch0 : here;
+    const host = $('#cutHost');
+    const W = host.clientWidth || $('#vp').clientWidth || 390;
+    // On desk the list is docked beside it, so the "As a list" tile is left out.
+    const cells = items.length + (docked ? 0 : 1);
+    const cols = wide ? Math.max(3, Math.min(cells, Math.floor(W / 150))) : 3;
+    const fitH = (host.clientHeight || $('#vp').clientHeight || 500) - (Math.ceil(cells / cols) * 80 + 28) - (wide ? 8 : 64);
     // The real design section, when this sub-section's cross sections are on the phone.
     if (p.sub && !DI.data.sections[p.sub] && !DA.sectionsAsked[p.sub]) {
       DA.sectionsAsked[p.sub] = true;
@@ -353,7 +363,7 @@
     const sec = p.sub ? DI.sectionAt(p.sub, cutCh) : null;
     $('#cutHead').innerHTML = '<span>SECTION AT ' + (sec ? DI.fmtCh(sec.ch) : pick ? DI.fmtCh(cutCh, 3) : DI.fmtCh(cutCh)) + '</span><span class="muted">LOOKING ' + (p.facing === 'decreasing' ? '▼' : '▲') + (sec ? ' · DESIGN · VERT. EXAGG.' : ' · NOT TO SCALE') + '</span>';
     let h = '<div style="background:var(--paper)">' + (sec ? window.DStrip.realCut(sec, items, p.facing, W, fitH) : window.DStrip.sectionCut(items, p.facing, W, fitH)) + '</div>';
-    h += '<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:14px 12px;border-top:2px solid var(--ink);background:var(--paper)">';
+    h += '<div style="display:grid;grid-template-columns:repeat(' + cols + ',1fr);gap:8px;padding:14px 12px;border-top:2px solid var(--ink);background:var(--paper)">';
     items.forEach((it, i) => {
       const f = it.f;
       const title = f.code && /^T\d/.test(f.code) ? 'Type ' + f.code.slice(1) : f.catKey === 'descent' ? 'Descent' : f.catKey === 'riprap' ? 'Riprap' : f.catKey === 'diversion' ? 'Channel' : f.kind === 'cross' ? f.name.replace(/Single |Twin |Triple /, '').split(' ').slice(0, 2).join(' ') : f.name.split(',')[0].split(' ').slice(0, 2).join(' ');
@@ -362,10 +372,11 @@
       const on = at && at.id === f.id;
       const short = rel === 'runs past you' ? 'on it' : rel.replace(' ahead', '').replace(' behind', '').replace('starts ', 'starts · ').replace('ends ', 'ends · ');
       h += '<button data-act="record" data-id="' + esc(f.id) + '" style="min-height:72px;border:2.5px solid var(--ink);background:' + (on ? 'var(--hivis);color:#121311' : 'var(--surface)') + ';display:flex;gap:8px;align-items:center;padding:6px 8px;text-align:left">' +
-        '<span style="flex:none;width:34px;height:34px;border-radius:50%;background:' + (on ? 'var(--surface)' : 'var(--hivis)') + ';border:2.5px solid #121311;color:#121311;display:flex;align-items:center;justify-content:center;font:700 19px/1 var(--f-cond)">' + (i + 1) + '</span>' +
+        '<span style="flex:none;width:34px;height:34px;border-radius:50%;background:' + (on ? '#FFFFFF' : 'var(--hivis)') + ';border:2.5px solid #121311;color:#121311;display:flex;align-items:center;justify-content:center;font:700 19px/1 var(--f-cond)">' + (i + 1) + '</span>' +
         '<span style="min-width:0"><b style="display:block;font:700 17px/1.1 var(--f-sans);overflow-wrap:break-word">' + esc(title) + '</b><span style="font:500 14.5px/1.2 var(--f-sans)">' + esc(short) + ' ' + tri + '</span></span></button>';
     });
-    h += '<button data-act="drawer" style="min-height:72px;border:2.5px dashed var(--ink);display:flex;align-items:center;justify-content:center;gap:8px;font:700 19px/1 var(--f-sans)">As a list ' + I.icon('chevUp').replace('<svg', '<svg width="20" height="20"') + '</button></div><div style="height:72px"></div>';
+    if (!docked) h += '<button data-act="drawer" style="min-height:72px;border:2.5px dashed var(--ink);display:flex;align-items:center;justify-content:center;gap:8px;font:700 19px/1 var(--f-sans)">As a list ' + I.icon('chevUp').replace('<svg', '<svg width="20" height="20"') + '</button>';
+    h += '</div>' + (wide ? '' : '<div style="height:72px"></div>');
     if (!items.length) h = '<div class="empty-state"><b>Nothing within 20 m</b>The section is drawn when a structure is at you.</div>';
     $('#cutHost').innerHTML = h;
   }
@@ -395,13 +406,13 @@
   Object.assign(DA, { openOverlay, closeOverlay, closeAll });
 
   // ------------------------------------------------------- drawer
-  function openDrawer(ch, hlId) {
-    const around = ch == null ? S.pos.ch : ch;
+  function drawerHtml(around, hlId, docked) {
     const list = orderAsFaced(nearItems(around, 20));
     const mine = Math.abs(around - S.pos.ch) < 1;
-    let h = '<div style="display:flex;justify-content:space-between;align-items:center;padding:4px 0 14px;border-bottom:3px solid var(--ink);margin:0 -16px;padding-left:16px;padding-right:16px">' +
-      '<div><div style="font:700 24px/1.15 var(--f-sans)">Within 20 m of ' + (mine ? 'you' : DI.fmtCh(around)) + ' · ' + list.length + '</div><div style="font:500 16px/1.3 var(--f-sans);color:var(--ink-3)">Left to right, as you face ' + (S.pos.facing === 'decreasing' ? '▼' : '▲') + '</div></div>' +
-      '<button data-act="close" style="width:48px;height:48px;display:flex;align-items:center;justify-content:center">' + I.icon('chevDown').replace('<svg', '<svg width="30" height="30"') + '</button></div>';
+    const btn = !docked ? '<button data-act="close" style="width:48px;height:48px;display:flex;align-items:center;justify-content:center">' + I.icon('chevDown').replace('<svg', '<svg width="30" height="30"') + '</button>'
+      : mine ? '' : '<button class="btn" data-act="side-me" style="width:auto;flex:none;min-height:44px;padding:0 12px;font-size:15px">Back to me</button>';
+    let h = '<div class="drawer-h" style="display:flex;justify-content:space-between;align-items:center;gap:10px;padding:4px 0 14px;border-bottom:3px solid var(--ink);margin:0 -16px;padding-left:16px;padding-right:16px">' +
+      '<div><div style="font:700 24px/1.15 var(--f-sans)">Within 20 m of ' + (mine ? 'you' : DI.fmtCh(around)) + ' · ' + list.length + '</div><div style="font:500 16px/1.3 var(--f-sans);color:var(--ink-3)">Left to right, as you face ' + (S.pos.facing === 'decreasing' ? '▼' : '▲') + '</div></div>' + btn + '</div>';
     h += '<div style="margin:0 -16px">';
     if (!list.length) h += '<div class="empty-state"><b>Nothing drawn here</b>No structure on the drawings within 20 m.</div>';
     list.forEach(f => {
@@ -414,11 +425,34 @@
     h += '</div><div class="grid2 mt16"><button class="btn" data-act="unlisted" style="font-size:16px;min-height:56px">' + '<span style="background:var(--hivis);color:#121311;border:2px solid #121311;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font:700 18px/1 var(--f-cond)">?</span> Not on the drawings</button>' +
       '<button class="btn" data-act="add-design" style="font-size:16px;min-height:56px;border-color:var(--rev);color:var(--rev)">' + I.icon('plus') + ' Add to design</button></div>' +
       '<button class="btn mt8" data-act="base-add" data-ch="' + around + '" style="font-size:16px;min-height:56px;border-style:dashed">' + I.icon('edit') + ' Missing from the data — the extraction skipped it</button>';
-    const ov = openOverlay(h, 'sheet tall');
+    return h;
+  }
+  function openDrawer(ch, hlId) {
+    const around = ch == null ? S.pos.ch : ch;
+    // Desk: the list is always docked on the right; point it at this chainage instead of opening a sheet.
+    if (DA.layout !== 'phone' && S.tab === 'walk') {
+      closeAll();
+      S.sideCh = Math.abs(around - S.pos.ch) < 1 ? null : around;
+      S.sideHl = hlId || null;
+      S.sideScroll = true;
+      render();
+      return;
+    }
+    const ov = openOverlay(drawerHtml(around, hlId, false), 'sheet tall');
     const row = hlId && ov.querySelector('#row-' + CSS.escape(hlId));
     if (row) row.scrollIntoView({ block: 'center' });
   }
   DA.openDrawer = openDrawer;
+  function renderSide() {
+    const el = $('#side');
+    const old = el.querySelector('.body');
+    const top = old ? old.scrollTop : 0;
+    el.innerHTML = '<div class="body">' + drawerHtml(S.sideCh == null ? S.pos.ch : S.sideCh, S.sideHl, true) + '</div>';
+    const body = el.querySelector('.body');
+    const row = S.sideScroll && S.sideHl && body.querySelector('#row-' + CSS.escape(S.sideHl));
+    if (row) row.scrollIntoView({ block: 'center' }); else body.scrollTop = top;
+    S.sideScroll = false;
+  }
 
   // ------------------------------------------------------- record sheet
   function openRecord(fid) {
@@ -594,10 +628,38 @@
 
   function navLabel() {
     const n = DI.live(r => r.kind !== 'void' && r.kind !== 'base' && sameDay(r.at)).length;
-    $('#navDay').textContent = 'Day · ' + n + ' on phone';
+    $('#navDay').textContent = DA.layout === 'phone' ? 'Day · ' + n + ' on phone' : 'Day · ' + n;
+    const office = document.documentElement.getAttribute('data-theme') === 'office';
+    $('#railTheme').innerHTML = (office ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M20 14.5 A8.5 8.5 0 1 1 9.5 4 A7 7 0 0 0 20 14.5 Z"/></svg>Office' : I.icon('sun') + 'Sun');
   }
   function sameDay(iso) { const d = new Date(iso), n = new Date(); return d.toDateString() === n.toDateString(); }
   DA.sameDay = sameDay;
+
+  // ------------------------------------------------------- layout
+  // phone: one column. desk (≥ 960 px): rail, strip, list docked on the right.
+  // wide (≥ 1360 px): the section or map beside the strip as well.
+  function layout() {
+    const w = window.innerWidth;
+    const next = w >= 1360 ? 'wide' : w >= 960 ? 'desk' : 'phone';
+    const c = document.documentElement.classList;
+    c.toggle('desk', next !== 'phone');
+    c.toggle('wide', next === 'wide');
+    if (next === DA.layout) return;
+    const was = DA.layout;
+    DA.layout = next;
+    const vp = $('#vp'), seg = vp.querySelector('.seg3');
+    if (next === 'wide') {
+      $('#pane2Head').insertBefore($('#cutHead'), $('#pane2Head').firstChild);
+      $('#pane2Body').appendChild($('#cutHost'));
+      $('#pane2Body').appendChild($('#mapHost'));
+    } else if (was === 'wide') {
+      vp.parentNode.insertBefore($('#cutHead'), vp);
+      vp.insertBefore($('#mapHost'), seg);
+      vp.insertBefore($('#cutHost'), seg);
+    }
+    if (next === 'phone') { S.sideCh = null; S.sideHl = null; }
+  }
+  DA.layoutNow = layout;
 
   let rq = null;
   function render() {
@@ -635,7 +697,10 @@
       case 'kp-gps': S.handAt = 0; S.pos.source = 'gps'; closeOverlay(); if (S.fixes.length) { const x = S.fixes[S.fixes.length - 1]; onFix(x.lat, x.lon, x.acc); } break;
       case 'facing': S.pos.facing = S.pos.facing === 'increasing' ? 'decreasing' : 'increasing'; DI.savePosition(S.pos); render(); break;
       case 'anchor': setAnchor(DI.data.byId[id]); break;
-      case 'recentre': if (DA.strip) DA.strip.recentre(); render(); break;
+      case 'recentre': if (DA.strip) DA.strip.recentre(); S.sideCh = null; S.sideHl = null; render(); break;
+      case 'side-me': S.sideCh = null; S.sideHl = null; render(); break;
+      case 'pane': S.pane = b.dataset.v; render(); break;
+      case 'theme-toggle': setTheme(document.documentElement.getAttribute('data-theme') === 'office' ? 'sun' : 'office'); render(); break;
       case 'goto-next': if (DA.strip) { DA.strip.viewCh = Number(b.dataset.ch); render(); } break;
       case 'note': openNote(id); break;
       case 'note-save': {
@@ -660,6 +725,36 @@
     }
   }
 
+  // ------------------------------------------------------- keyboard
+  // Esc closes; the keypad takes typed digits; arrows scroll the strip; G goes to a chainage.
+  function onKey(e) {
+    if (e.ctrlKey || e.metaKey || e.altKey) return;
+    const typing = e.target.closest && e.target.closest('input, textarea, select, [contenteditable]');
+    const top = DA.overlays[DA.overlays.length - 1];
+    if (e.key === 'Escape') {
+      if (typing) { e.target.blur(); return; }
+      if (top) closeOverlay();
+      else if (S.sideCh != null) { S.sideCh = null; S.sideHl = null; render(); }
+      e.preventDefault();
+      return;
+    }
+    if (typing) return;
+    if (top && top.el.kp) {
+      const k = e.key === 'Backspace' ? 'del' : /^[0-9+]$/.test(e.key) ? e.key : null;
+      if (k) { top.el.kp.key(k); e.preventDefault(); } else if (e.key === 'Enter') { top.el.kp.go(); e.preventDefault(); }
+      return;
+    }
+    if (top) return;
+    const step = { ArrowUp: 40, ArrowDown: -40, PageUp: 300, PageDown: -300 }[e.key];
+    if (step && S.tab === 'walk' && DA.strip && (S.mode === 'strip' || DA.layout === 'wide')) {
+      DA.strip.pan(step);
+      e.preventDefault();
+    } else if (e.key === 'g' || e.key === 'G') {
+      openKeypad();
+      e.preventDefault();
+    }
+  }
+
   // ------------------------------------------------------- boot
   function boot() {
     let theme = 'sun';
@@ -673,8 +768,12 @@
     if (q.get('tab')) S.tab = q.get('tab');
     if (q.get('mode')) S.mode = q.get('mode');
     S.absences = [];
+    S.pane = q.get('pane') || 'section';
+    S.sideCh = null;
+    layout();
     document.addEventListener('click', onClick);
-    window.addEventListener('resize', render);
+    document.addEventListener('keydown', onKey);
+    window.addEventListener('resize', () => { layout(); render(); });
     let sy = null;
     $('#atyou').addEventListener('touchstart', e => { sy = e.touches[0].clientY; }, { passive: true });
     $('#atyou').addEventListener('touchend', e => { if (sy != null && sy - e.changedTouches[0].clientY > 40) openDrawer(); sy = null; });

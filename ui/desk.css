@@ -1,0 +1,146 @@
+/* Drainage Inspector — desk layouts.
+   The same signage, given room: the strip stays first and keeps its lanes;
+   the width goes to showing more at once, never to a different map.
+
+   phone  < 960 px   one column (app.css)
+   desk   ≥ 960 px   rail · strip · list docked on the right; sheets dock there too
+   wide   ≥ 1360 px  rail · strip · section or map · docked list            */
+
+:root {
+  --rail-w: 96px;
+  --side-w: clamp(360px, 27vw, 440px);
+  --strip-w: clamp(440px, 33vw, 580px);
+  --page-w: 920px;
+  --head-h: 100px;
+  --page-gap: max(24px, calc((100vw - var(--rail-w) - var(--page-w)) / 2));
+  --desk-bg: #E2E1DA;
+  --hover: rgba(18, 19, 17, 0.06);
+}
+:root[data-theme="office"] {
+  --desk-bg: #0C0D0C;
+  --hover: rgba(242, 241, 236, 0.07);
+}
+
+html:not(.desk) .desk-only { display: none !important; }
+html:not(.wide) .pane2 { display: none !important; }
+
+/* ------------------------------------------------------------ frame */
+html.desk body { background: var(--paper); }
+html.desk #app {
+  max-width: none; border: 0;
+  display: grid;
+  grid-template-columns: var(--rail-w) minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
+}
+html.desk #overlay, html.desk #toastHost { display: contents; }
+html.desk .screen { grid-column: 2; grid-row: 1; }
+
+/* ------------------------------------------------------------ rail: the bottom nav stood on its end */
+html.desk .nav {
+  grid-column: 1; grid-row: 1;
+  position: relative; z-index: 40;
+  display: flex; flex-direction: column;
+  height: auto; padding: 0 0 8px;
+  border-top: 0; border-right: 3px solid var(--ink);
+}
+html.desk .nav button { flex: none; height: 78px; padding: 0 4px; gap: 6px; font-size: 14px; line-height: 1.1; text-align: center; }
+html.desk .nav button.on::before { top: 0; bottom: 0; left: auto; right: -3px; width: 6px; height: auto; }
+.rail-mark { flex: none; height: var(--head-h); display: flex; align-items: center; justify-content: center; border-bottom: 3px solid var(--ink); margin-bottom: 6px; }
+.rail-mark svg { width: 40px; height: 40px; }
+.rail-gap { flex: 1; }
+
+/* ------------------------------------------------------------ position header: one row */
+html.desk .pos {
+  grid-template-columns: auto auto minmax(0, 1fr) auto;
+  grid-template-rows: auto;
+  align-items: center;
+  column-gap: 28px;
+  height: var(--head-h);
+  padding: 0 20px;
+}
+html.desk .pos-line { grid-column: 1; grid-row: 1; flex-direction: column; align-items: flex-start; gap: 7px; }
+html.desk .pos-ch { grid-column: 2; grid-row: 1; margin-top: 0; font-size: 60px; align-self: center; }
+html.desk .pos-you { grid-column: 3; grid-row: 1; align-self: center; }
+html.desk .gps { grid-column: 4; grid-row: 1; align-self: center; height: 40px; padding: 0 14px; font-size: 16px; }
+
+/* ------------------------------------------------------------ walk */
+html.desk #scr-walk.on {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) var(--side-w);
+  grid-template-rows: auto auto minmax(0, 1fr) auto;
+  grid-template-areas: "pos side" "lanes side" "vp side" "atyou side";
+}
+html.wide #scr-walk.on {
+  grid-template-columns: var(--strip-w) minmax(0, 1fr) var(--side-w);
+  grid-template-areas: "pos pos side" "lanes pane side" "vp pane side" "atyou pane side";
+}
+html.desk #posHead { grid-area: pos; }
+html.desk #scr-walk > .lanes-head { grid-area: lanes; }
+html.desk #vp { grid-area: vp; }
+html.desk #atyou { grid-area: atyou; }
+html.desk .atyou::before { display: none; }
+html.desk #stripHost { cursor: grab; }
+html.desk #stripHost:active { cursor: grabbing; }
+html.wide #vp .seg3 { display: none; }
+
+/* the second pane: section or map beside the strip */
+.pane2 { grid-area: pane; display: flex; flex-direction: column; min-height: 0; min-width: 0; border-left: 3px solid var(--ink); background: var(--paper); }
+html.wide #laneHead, .pane2-h { height: 62px; }
+.pane2-h { flex: none; display: flex; align-items: center; gap: 12px; padding-right: 12px; border-bottom: 2px solid var(--ink); background: var(--paper); }
+.pane2-h .lanes-head { flex: 1; min-width: 0; border-bottom: 0 !important; background: transparent; overflow: hidden;
+  flex-direction: column; justify-content: center !important; align-items: flex-start; gap: 7px !important; padding: 0 16px !important; }
+.pane2-b { flex: 1; min-height: 0; position: relative; }
+.seg2 { margin-left: auto; flex: none; display: flex; border: 2px solid var(--ink); background: var(--surface); }
+.seg2 button { height: 40px; padding: 0 16px; font: 700 16px/1 var(--f-sans); border-right: 2px solid var(--ink); }
+.seg2 button:last-child { border-right: 0; }
+.seg2 button.on { background: var(--ink); color: var(--on-ink); }
+
+/* the list, docked */
+.dock { grid-area: side; min-height: 0; display: flex; flex-direction: column; border-left: 3px solid var(--ink); background: var(--paper); }
+.dock .body { flex: 1; min-height: 0; overflow-y: auto; padding: 0 16px 20px; }
+.dock .drawer-h { height: var(--head-h); padding-top: 0 !important; padding-bottom: 0 !important; position: sticky; top: 0; z-index: 2; background: var(--paper); }
+
+/* ------------------------------------------------------------ sheets dock on the right */
+html.desk .ov .scrim { display: none; }
+html.desk .sheet, html.desk .sheet.tall {
+  left: auto; right: 0; top: 0; bottom: 0;
+  width: var(--side-w); max-height: none;
+  border-top: 0; border-left: 3px solid var(--ink);
+  box-shadow: -10px 0 28px rgba(0, 0, 0, 0.14);
+  animation: dock 0.16s ease-out;
+}
+html.desk .sheet.rev { border-left-color: var(--rev); }
+html.desk .sheet .grab { height: 50px; justify-content: flex-end; padding: 0 16px; margin-bottom: 14px; border-bottom: 1px solid var(--rule); cursor: pointer; }
+html.desk .sheet .grab::after { content: 'CLOSE  ✕'; width: auto; height: auto; border-radius: 0; background: none; font: 700 13px/1 var(--f-sans); letter-spacing: 0.1em; color: var(--ink-2); white-space: pre; }
+html.desk .sheet .body { flex: 1; min-height: 0; }
+@keyframes dock { from { transform: translateX(28px); opacity: 0.4; } to { transform: none; opacity: 1; } }
+
+/* ------------------------------------------------------------ full pages: a page on the desk */
+html.desk .full {
+  left: calc(var(--rail-w) + var(--page-gap)); right: var(--page-gap);
+  border-left: 1px solid var(--rule); border-right: 1px solid var(--rule);
+  box-shadow: 0 0 0 100vmax var(--desk-bg);
+}
+
+/* ------------------------------------------------------------ section and day: one readable column */
+html.desk #scr-section > .scroll, html.desk #scr-day > .scroll {
+  padding-left: max(0px, calc((100vw - var(--rail-w) - var(--page-w)) / 2));
+  padding-right: max(0px, calc((100vw - var(--rail-w) - var(--page-w)) / 2));
+}
+
+/* ------------------------------------------------------------ toast: above the at-you bar, under the strip */
+html.desk .toast { left: calc(var(--rail-w) + 16px); right: auto; width: min(480px, calc(100vw - var(--rail-w) - 32px)); bottom: 100px; }
+
+/* ------------------------------------------------------------ pointer and keyboard */
+@media (hover: hover) and (pointer: fine) {
+  .frow:hover, .setrow:hover, .proj-sub:hover, .ribbon .r:hover, .opt:not(.primary):hover { background-color: var(--hover); }
+  .nav button:hover { color: var(--ink); }
+  .seg3 button:not(.on):hover, .seg2 button:not(.on):hover, .segm button:not(.on):hover { background: var(--hover); }
+  .atyou:not(.poor):not(.rev) .main:hover, .atyou:not(.poor):not(.rev) .more:hover { background: var(--hover); }
+  .btn:not([disabled]):hover { box-shadow: inset 0 0 0 1.5px currentColor; }
+}
+html.desk :focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
+
+/* filter chips wrap instead of scrolling sideways */
+html.desk .chips-scroll { flex-wrap: wrap; overflow: visible; }
+.dock .drawer-h > div:first-child > div:first-child { font-size: 21px !important; }

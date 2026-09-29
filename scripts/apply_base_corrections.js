@@ -44,8 +44,11 @@ targets.forEach(t => {
   const geo = DI.exportGeo(t.sub);
   console.log(t.sub + ': ' + before + ' → ' + geo.features.length + ' features' + (geo.metadata.removed_as_extraction_errors.length ? ', removed ' + geo.metadata.removed_as_extraction_errors.map(x => x.id).join(', ') : ''));
   if (dry) return;
-  const js = 'window.' + t.centre + ' = ' + JSON.stringify(window[t.centre], null, 2) + ';\n\nwindow.' + t.assets + ' = ' + JSON.stringify(geo, null, 2) + ';\n';
-  fs.writeFileSync(path.join(ROOT, t.bundle), js);
+  // Keep the centreline text as it is; only the assets block is rewritten.
+  const old = fs.readFileSync(path.join(ROOT, t.bundle), 'utf8');
+  const at = old.indexOf('\nwindow.' + t.assets + ' = ');
+  const head = at >= 0 ? old.slice(0, at + 1) : 'window.' + t.centre + ' = ' + JSON.stringify(window[t.centre], null, 2) + ';\n\n';
+  fs.writeFileSync(path.join(ROOT, t.bundle), head + 'window.' + t.assets + ' = ' + JSON.stringify(geo, null, 2) + ';\n');
   if (fs.existsSync(path.join(ROOT, t.json))) fs.writeFileSync(path.join(ROOT, t.json), JSON.stringify(geo, null, 2));
 });
 console.log(dry ? 'Dry run: nothing written.' : 'Written. Commit the data/ changes; the phone can keep or clear its corrections (re-applying them is harmless).');
