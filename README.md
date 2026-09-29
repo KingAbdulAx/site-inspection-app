@@ -5,6 +5,44 @@ An offline-first, mobile Progressive Web Application (PWA) engineered for civil 
 
 ---
 
+## 0. The app: "The line is the map" (visual redesign)
+
+`index.html` is the redesigned app from *Drainage Inspector – Visual Redesign* ("Survey signage"). The previous map-and-list app is still available as `legacy.html`, and is linked from **Section → Switch → Classic app**.
+
+| Screen | What it does |
+|---|---|
+| **Walk · Strip** | Chainage runs up the screen, and offset becomes five fixed lanes a side (OFF, CREST, TOE, FACE, PLAT). You get a ±20 m band and a reading line, and the strip turns with you when you face decreasing chainage. Outline = the drawing, hatched = part-built, solid = complete. Exact, ±4 m and LABEL positions are drawn differently. Drag to look ahead; tap a mark for the drawer. |
+| **Walk · Map / Section** | The same position on imagery under a wash (Leaflet, bundled in `lib/`), or a cross-section at your chainage with numbered features. |
+| **At-you bar** | Names the structure you are standing at. Tap it to record a stage (two taps, saved instantly, 8 s undo). The right end opens everything within 20 m, left to right as you face. Poor GPS turns the bar yellow and offers "I'm on the culvert" to fix position on an exact structure. |
+| **Feature** | What is built (seen by you vs. contractor claims from the IR register), open defects with photos, the read-only drawing panel, the IR history with gaps, never-overwritten records, and "Copy with provenance". |
+| **Section** | A sub-section summary: part-built / stalled > 6 months, every structure as one mark on 2 km rows or a north-up ribbon map, and the ones stalled longest. **Switch** opens the Project list (2 lines, 9 sub-sections). |
+| **Day** | Records safe on the phone vs. sent, unfinished drafts, what you covered, differences from the contractor, and an offline export (CSV plus an HTML report with photos). |
+| **Editing, two doors** | *The ground differs* makes a query (the design is untouched), for example built in a different place, measured against the GPS error. *The drawing changed* makes a pending design change, which must name its drawing and revision. Nothing is deleted; removed features stay struck through. |
+
+Code: `ui/model.js` (data, append-only records, position/projection), `ui/strip.js` (strip and section-cut renderer), `ui/app.js` (shell, Walk, record sheet), and `ui/screens.js` (other screens). Records are appended to `KMD_WALK_RECORDS_V1` and never edited; undo appends a void. The latest stage per asset is mirrored into the existing inspection store, so `sync.js` still sends it to the office. Photos go in IndexedDB.
+
+### Correcting the base data (extraction errors)
+
+The drawings were extracted automatically, and some features are misplaced, mistyped, missing or duplicated. That is a third kind of change, beside a field finding and a design revision: *the drawing was read wrong*. It fixes the base, needs no revision number, and raises no query.
+
+- **Feature → Correct the data** (also the third door in "What doesn't match?"). This changes the type, name, side, lane, start/end chainage, offset from CL (from a cross-section or measured on site), how exact the position is, and the sheet and level. "Where I stand" fills chainage or offset from GPS. **Not a real feature — remove** takes a reason and is undoable.
+- **Drawer → Missing from the data** adds a feature the extraction skipped.
+- **Section → Check against drawings** (or Project → Base data) works sheet by sheet. Open the PDF beside the phone, tick what is right, and tap a row to correct it. Progress shows as "N of M checked".
+- **Project → Base data** exports corrections (a small JSON file), exports corrected GeoJSON for QGIS, imports corrections, and lists them all with undo.
+
+To bake the corrections into the app's bundled data, so they become the base for everyone:
+
+```
+node scripts/apply_base_corrections.js kmd-base-corrections-YYYYMMDDHHMM.json --dry-run
+node scripts/apply_base_corrections.js kmd-base-corrections-YYYYMMDDHHMM.json
+```
+
+This rewrites `data/bundle.js` / `data/section02_bundle.js` (and the `*_assets.json`) with the same code the app uses, so the result matches what you saw on the phone. Untouched features pass through unchanged, and sub-sections without corrections are not rewritten. Corrections are absolute values, so baking twice or leaving them on the phone afterwards changes nothing.
+
+Try it without GPS: `index.html?sim=KZDR:111020:14:4` (sub-section : chainage : offset, left + : accuracy m). Use `…:38` for poor GPS or `…:none` for set-by-hand. Tests: `node scripts/test_ui_model.js`, `node scripts/test_ui_e2e.js` and `node scripts/test_ui_base_e2e.js` (the last two use Playwright).
+
+---
+
 ## 1. Spatial Orientation & Railway Chainage Conventions
 
 ### 1.1 The Universal Railway Rule for "Left" vs. "Right"
