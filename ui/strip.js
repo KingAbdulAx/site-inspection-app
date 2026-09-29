@@ -451,7 +451,7 @@
     (p.slope || []).forEach(l => { s += '<path d="' + path(l) + '" style="fill:none;stroke:var(--ink);stroke-width:2.5;stroke-linejoin:round"/>'; });
     ['toe_ditch', 'side_ditch', 'crest_ditch'].forEach(r => (p[r] || []).forEach(l => { s += '<path d="' + path(l) + '" style="fill:none;stroke:var(--ink);stroke-width:2.5;stroke-linejoin:round"/>'; }));
     (p.lining || []).forEach(l => { s += '<path d="' + path(l) + '" style="fill:none;stroke:var(--ink);stroke-width:4;stroke-linejoin:round"/>'; });
-    if (sec.h != null) s += '<text x="' + (W / 2) + '" y="' + (top - 20) + '" text-anchor="middle" style="fill:var(--ink);font:500 13px var(--f-mono)">height to LRL ' + sec.h.toFixed(2) + ' m</text>';
+    if (sec.h != null) s += '<text x="' + (W - 10) + '" y="' + (top - 16) + '" text-anchor="end" style="fill:var(--ink);font:500 13px var(--f-mono)">H to LRL ' + sec.h.toFixed(2) + ' m</text>';
     const lbl = (arr, side) => { if (!arr || !arr.length) return ''; const x = X((side === 'L' ? -1 : 1) * Math.max(...arr)); return '<text x="' + Math.max(28, Math.min(W - 28, x)) + '" y="' + (H - 44) + '" text-anchor="middle" style="fill:var(--ink-2);font:500 12.5px var(--f-mono)">L=' + Math.max(...arr).toFixed(2) + '</text>'; };
     s += lbl(sec.Ll, 'L') + lbl(sec.Lr, 'R');
     s += '<text x="14" y="' + (H - 18) + '" style="fill:var(--ink);font:700 16px var(--f-cond)">' + (flip ? '◀ RIGHT' : '◀ LEFT') + '</text>';

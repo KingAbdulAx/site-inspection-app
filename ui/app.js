@@ -78,7 +78,7 @@
       if (ch >= f.ch0 && ch <= f.ch1) return 'runs past you';
       const near = Math.abs(f.ch0 - ch) < Math.abs(f.ch1 - ch) ? f.ch0 : f.ch1;
       const startEnd = (near === f.ch0) === (dir > 0) ? 'starts' : 'ends';
-      return startEnd + ' ' + words(near - ch);
+      return startEnd + ' ' + (Math.abs(near - ch) < 1.5 ? 'here' : words(near - ch));
     }
     const d = f.ch0 - ch;
     if (Math.abs(d) < 1.5) return 'here';
