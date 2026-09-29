@@ -443,7 +443,8 @@
   window.addEventListener('online', () => { offlineSince = null; DA.render(); });
 
   function renderDay(el) {
-    const today = DI.live(r => DA.sameDay(r.at) && r.kind !== 'clear').sort((a, b) => a.at < b.at ? 1 : -1);
+    // Desk corrections to the base data are not field records; they live under Project → Base data.
+    const today = DI.live(r => DA.sameDay(r.at) && r.kind !== 'clear' && r.kind !== 'base').sort((a, b) => a.at < b.at ? 1 : -1);
     const now = new Date();
     const q = (window.syncState && window.syncState.pendingQueue) || [];
     const last = window.syncState && window.syncState.lastSyncTime;
@@ -517,7 +518,7 @@
     setTimeout(() => URL.revokeObjectURL(a.href), 4000);
   }
   function exportDay() {
-    const today = DI.live(r => DA.sameDay(r.at) && r.kind !== 'clear').sort((a, b) => a.at < b.at ? -1 : 1);
+    const today = DI.live(r => DA.sameDay(r.at) && r.kind !== 'clear' && r.kind !== 'base').sort((a, b) => a.at < b.at ? -1 : 1);
     const d = new Date(), stamp = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
     const head = ['time', 'line', 'sub_section', 'chainage', 'position_certainty', 'side', 'feature_id', 'feature', 'drawing', 'level', 'record', 'stage', 'contractor_claim', 'defect', 'part', 'note', 'photos', 'inspector', 'gps_accuracy_m', 'position_source', 'record_id'];
     const rows = today.map(r => {

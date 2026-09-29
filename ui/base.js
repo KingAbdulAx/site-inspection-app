@@ -172,7 +172,8 @@
   // ------------------------------------------------ check against drawings
   // Desk workflow: open the PDF sheet beside the phone, go down its list,
   // tick what is right and correct what is not.
-  function sheetKey(f) { return f.sheet || 'No sheet'; }
+  // Group by sheet number, so DW-03003 and DW-03003-05 are one sheet.
+  function sheetKey(f) { const m = String(f.sheet || '').match(/DW-\d{5}/); return m ? m[0] : (f.sheet || 'No sheet'); }
   function openCheck(sub) {
     const ov = DA.openOverlay('', 'full');
     let open = null, onlyUnchecked = false;

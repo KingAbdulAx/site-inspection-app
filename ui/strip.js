@@ -412,5 +412,76 @@
     return s + '</svg>';
   }
 
-  window.DStrip = { Strip, sectionCut, geom, SPINE };
+  // ------------------------------------------------------------------
+  // The real design section at your chainage (from the cross-section CAD),
+  // with the same numbered bubbles as the list. Vertical is exaggerated so a
+  // 5 m bank and a 0.5 m ditch both read on a phone; the header says by how much.
+  const GROUP_OF = { toe: 'toe', side: 'side', shoulder: 'side', crest: 'crest' };
+  function realCut(sec, items, facing, W, fitH) {
+    const H = Math.max(190, Math.min(320, fitH || 300));
+    const flip = facing === 'decreasing';
+    const p = sec.p || {};
+    const solid = ['slope', 'platform', 'toe_ditch', 'lining', 'side_ditch', 'crest_ditch'];
+    let xr = 12, ylo = 0, yhi = 0.5;
+    solid.forEach(r => (p[r] || []).forEach(l => l.forEach(([x, y]) => { xr = Math.max(xr, Math.abs(x)); ylo = Math.min(ylo, y); yhi = Math.max(yhi, y); })));
+    xr = Math.min(35, xr + 4);
+    (p.ground || []).forEach(l => l.forEach(([x, y]) => { if (Math.abs(x) <= xr) ylo = Math.min(ylo, y); }));
+    ylo -= 0.6; yhi += 1.2;
+    const sx = (W / 2 - 14) / xr;
+    const sy = Math.min(sx * 4, (H - 96) / (yhi - ylo));
+    const top = 34;
+    const X = x => W / 2 + (flip ? -x : x) * sx;
+    const Y = y => top + (yhi - y) * sy;
+    const path = l => l.map(([x, y], i) => (i ? 'L' : 'M') + X(x).toFixed(1) + ' ' + Y(y).toFixed(1)).join(' ');
+    const surface = x => {
+      let best = null;
+      ['slope', 'platform', 'ground', 'toe_ditch'].forEach(r => (p[r] || []).forEach(l => {
+        for (let i = 0; i < l.length - 1; i++) {
+          const [x0, y0] = l[i], [x1, y1] = l[i + 1];
+          if ((x - x0) * (x - x1) <= 0 && x0 !== x1) { const y = y0 + (y1 - y0) * (x - x0) / (x1 - x0); if (best == null || y > best) best = y; }
+        }
+      }));
+      return best == null ? 0 : best;
+    };
+    let s = '<svg viewBox="0 0 ' + W + ' ' + H + '" width="' + W + '" height="' + H + '">' + defs();
+    s += '<rect width="' + W + '" height="' + H + '" style="fill:var(--paper)"/>';
+    s += '<line x1="' + (W / 2) + '" y1="' + (top - 16) + '" x2="' + (W / 2) + '" y2="' + (H - 40) + '" style="stroke:var(--ink-3);stroke-width:1" stroke-dasharray="4 4"/>';
+    (p.ground || []).forEach(l => { s += '<path d="' + path(l) + '" style="fill:none;stroke:var(--ink-3);stroke-width:1.5"/>'; });
+    (p.platform || []).forEach(l => { s += '<path d="' + path(l) + '" style="fill:none;stroke:var(--ink-2);stroke-width:1.2"/>'; });
+    (p.slope || []).forEach(l => { s += '<path d="' + path(l) + '" style="fill:none;stroke:var(--ink);stroke-width:2.5;stroke-linejoin:round"/>'; });
+    ['toe_ditch', 'side_ditch', 'crest_ditch'].forEach(r => (p[r] || []).forEach(l => { s += '<path d="' + path(l) + '" style="fill:none;stroke:var(--ink);stroke-width:2.5;stroke-linejoin:round"/>'; }));
+    (p.lining || []).forEach(l => { s += '<path d="' + path(l) + '" style="fill:none;stroke:var(--ink);stroke-width:4;stroke-linejoin:round"/>'; });
+    if (sec.h != null) s += '<text x="' + (W - 10) + '" y="' + (top - 16) + '" text-anchor="end" style="fill:var(--ink);font:500 13px var(--f-mono)">H to LRL ' + sec.h.toFixed(2) + ' m</text>';
+    const lbl = (arr, side) => { if (!arr || !arr.length) return ''; const x = X((side === 'L' ? -1 : 1) * Math.max(...arr)); return '<text x="' + Math.max(28, Math.min(W - 28, x)) + '" y="' + (H - 44) + '" text-anchor="middle" style="fill:var(--ink-2);font:500 12.5px var(--f-mono)">L=' + Math.max(...arr).toFixed(2) + '</text>'; };
+    s += lbl(sec.Ll, 'L') + lbl(sec.Lr, 'R');
+    s += '<text x="14" y="' + (H - 18) + '" style="fill:var(--ink);font:700 16px var(--f-cond)">' + (flip ? '◀ RIGHT' : '◀ LEFT') + '</text>';
+    s += '<text x="' + (W - 14) + '" y="' + (H - 18) + '" text-anchor="end" style="fill:var(--ink);font:700 16px var(--f-cond)">' + (flip ? 'LEFT ▶' : 'RIGHT ▶') + '</text>';
+
+    const bubble = (x, y, n, tx, ty) => '<line x1="' + x + '" y1="' + y + '" x2="' + tx + '" y2="' + ty + '" style="stroke:var(--ink);stroke-width:1.8"/>' +
+      '<circle cx="' + x + '" cy="' + y + '" r="15" style="fill:var(--hivis);stroke:#121311;stroke-width:2.5"/><text x="' + x + '" y="' + (y + 7) + '" text-anchor="middle" style="fill:#121311;font:700 19px var(--f-cond)">' + n + '</text>';
+    const used = {};
+    items.forEach((it, i) => {
+      const f = it.f, n = i + 1;
+      if (f.kind === 'cross') {
+        const yb = Y(ylo + 0.9);
+        s += '<rect x="' + X(-xr + 5) + '" y="' + (yb - 8) + '" width="' + (X(xr - 5) - X(-xr + 5)) + '" height="16" style="fill:none;stroke:var(--ink);stroke-width:2" stroke-dasharray="7 4"/>';
+        s += bubble(W / 2, H - 70, n, W / 2, yb + 8);
+        return;
+      }
+      const sign = f.side === 'L' ? -1 : f.side === 'R' ? 1 : 0;
+      const g = GROUP_OF[f.catKey];
+      const d = g && (sec.d || []).find(q => q[0] === f.side && q[1] === (g === 'toe' ? 'toe' : g));
+      const off = d ? d[2] : (f.offsetM != null ? f.offsetM : ({ plat: 3.5, face: 7, toe: 11, crest: 20, off: 30, cl: 0 }[f.lane] || 8));
+      const xm = sign * Math.min(off, xr - 1);
+      const tx = X(xm), ty = Y(surface(xm));
+      const k = used[f.side] = (used[f.side] || 0) + 1;
+      const out = (tx < W / 2 ? -1 : 1);
+      const bx = Math.max(18, Math.min(W - 18, tx + out * (10 + (k - 1) * 22)));
+      const by = Math.max(18, ty - 46 - (k - 1) * 26);
+      s += bubble(bx, by, n, tx, ty - 3);
+    });
+    return s + '</svg>';
+  }
+
+  window.DStrip = { Strip, sectionCut, realCut, geom, SPINE };
 })();

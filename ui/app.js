@@ -18,7 +18,7 @@
     handAt: 0,
     lastSignal: null
   };
-  const DA = window.DA = { S, $, esc, overlays: [] };
+  const DA = window.DA = { S, $, esc, overlays: [], sectionsAsked: {} };
 
   // ----------------------------------------------------------- helpers
   function sideBadge(side, size) {
@@ -78,7 +78,7 @@
       if (ch >= f.ch0 && ch <= f.ch1) return 'runs past you';
       const near = Math.abs(f.ch0 - ch) < Math.abs(f.ch1 - ch) ? f.ch0 : f.ch1;
       const startEnd = (near === f.ch0) === (dir > 0) ? 'starts' : 'ends';
-      return startEnd + ' ' + words(near - ch);
+      return startEnd + ' ' + (Math.abs(near - ch) < 1.5 ? 'here' : words(near - ch));
     }
     const d = f.ch0 - ch;
     if (Math.abs(d) < 1.5) return 'here';
@@ -343,9 +343,16 @@
     const at = atYouPick(p.ch).f;
     const pick = items.find(x => x.f.kind === 'cross');
     const cutCh = pick ? pick.f.ch0 : p.ch;
-    $('#cutHead').innerHTML = '<span>SECTION AT ' + (pick ? DI.fmtCh(cutCh, 3) : DI.fmtCh(cutCh)) + '</span><span class="muted">LOOKING ' + (p.facing === 'decreasing' ? '▼' : '▲') + ' · NOT TO SCALE</span>';
     const W = $('#vp').clientWidth || 390;
-    let h = '<div style="background:var(--paper)">' + window.DStrip.sectionCut(items, p.facing, W, ($('#vp').clientHeight || 500) - (Math.ceil((items.length + 1) / 3) * 80 + 28) - 64) + '</div>';
+    const fitH = ($('#vp').clientHeight || 500) - (Math.ceil((items.length + 1) / 3) * 80 + 28) - 64;
+    // The real design section, when this sub-section's cross sections are on the phone.
+    if (p.sub && !DI.data.sections[p.sub] && !DA.sectionsAsked[p.sub]) {
+      DA.sectionsAsked[p.sub] = true;
+      fetch('data/sections_' + p.sub + '.json').then(r => r.ok ? r.json() : null).then(j => { if (j) { DI.loadSections(p.sub, j); render(); } }).catch(() => { /* none for this sub-section */ });
+    }
+    const sec = p.sub ? DI.sectionAt(p.sub, cutCh) : null;
+    $('#cutHead').innerHTML = '<span>SECTION AT ' + (sec ? DI.fmtCh(sec.ch) : pick ? DI.fmtCh(cutCh, 3) : DI.fmtCh(cutCh)) + '</span><span class="muted">LOOKING ' + (p.facing === 'decreasing' ? '▼' : '▲') + (sec ? ' · DESIGN · VERT. EXAGG.' : ' · NOT TO SCALE') + '</span>';
+    let h = '<div style="background:var(--paper)">' + (sec ? window.DStrip.realCut(sec, items, p.facing, W, fitH) : window.DStrip.sectionCut(items, p.facing, W, fitH)) + '</div>';
     h += '<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:14px 12px;border-top:2px solid var(--ink);background:var(--paper)">';
     items.forEach((it, i) => {
       const f = it.f;
@@ -586,7 +593,7 @@
   DA.setTab = setTab;
 
   function navLabel() {
-    const n = DI.live(r => r.kind !== 'void' && sameDay(r.at)).length;
+    const n = DI.live(r => r.kind !== 'void' && r.kind !== 'base' && sameDay(r.at)).length;
     $('#navDay').textContent = 'Day · ' + n + ' on phone';
   }
   function sameDay(iso) { const d = new Date(iso), n = new Date(); return d.toDateString() === n.toDateString(); }
