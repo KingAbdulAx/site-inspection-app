@@ -31,7 +31,8 @@ LAYER_ROLE = {
     'L50': 'toe_ditch', 'L320': 'lining', 'L431': 'lining', 'L446': 'side_ditch', 'L176': 'side_ditch', 'L168': 'crest_ditch',
 }
 PROFILE_ROLES = ('slope', 'platform', 'ground', 'toe_ditch', 'lining', 'side_ditch', 'crest_ditch')
-PK_RE = re.compile(r'\s*Pk=(\d+)\+(\d+(?:[.,]\d+)?)')
+# S02 labels sections 'Pk=19+825.000', S03 'CH=82+925.000'.
+PK_RE = re.compile(r'\s*(?:Pk|CH)\s*=\s*(\d+)\+(\d+(?:[.,]\d+)?)', re.I)
 NUM_RE = re.compile(r'([\d.]+)')
 
 
