@@ -31562,6 +31562,44 @@
     "stated": 51
    },
    "note": "In the CAD, missing from the data: SLOPE PROTECTION L:51M / D=200MM"
+  },
+  {
+   "id": "cad-DWKZ-02272",
+   "kind": "base",
+   "at": "2026-09-29T17:38:20.198Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_DWKZ_1C62B",
+   "sub": "DWKZ",
+   "set": {
+    "preset": "WD",
+    "ch0": 72442.44,
+    "ch1": 72442.44,
+    "side": "L",
+    "offsetM": 7.02,
+    "sheet": "DW-03039-04",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 1C62B"
+  },
+  {
+   "id": "cad-DWKZ-02273",
+   "kind": "base",
+   "at": "2026-09-29T17:38:20.198Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_DWKZ_4D3B3",
+   "sub": "DWKZ",
+   "set": {
+    "preset": "WD",
+    "ch0": 72546.1,
+    "ch1": 72546.1,
+    "side": "R",
+    "offsetM": 6.59,
+    "sheet": "DW-03039-04",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 4D3B3"
   }
  ]
 }

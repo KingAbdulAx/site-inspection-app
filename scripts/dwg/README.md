@@ -51,7 +51,7 @@ Then either:
 - **Review on the phone:** Project → Base data → Import corrections, then work through *Check against drawings* sheet by sheet. Every record can be undone. Or,
 - **Bake straight into the data:** `node scripts/apply_base_corrections.js data/dwg/DWKZ_corrections.json`.
 
-DWKZ has been baked (1,710 → 1,309 features), and KZDR too (837 → 1,132). Re-applying the file to the baked data changes nothing, so a phone that already imported it can keep or clear those records.
+DWKZ has been baked (1,710 → 1,311 features), and KZDR too (837 → 1,132). Re-applying the file to the baked data changes nothing, so a phone that already imported it can keep or clear those records.
 
 ## Checks built in
 

@@ -3,11 +3,11 @@
   "metadata": {
     "title": "Section 02 Verified Drainage Assets (Dawanau to Kazaure)",
     "section": "Section 02 (DWKZ)",
-    "count": 1309,
+    "count": 1311,
     "nominal_extent": "PK 19+800 to PK 82+902.439",
     "total_span_m": 63102.439,
     "generated_at": "September 2026",
-    "base_corrections_applied": 2271,
+    "base_corrections_applied": 2273,
     "removed_as_extraction_errors": [
       {
         "id": "s02_asset_001",
@@ -4382,7 +4382,7 @@
         "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
       }
     ],
-    "corrected_at": "2026-09-29T14:50:03.373Z"
+    "corrected_at": "2026-09-29T17:38:44.716Z"
   },
   "features": [
     {
@@ -102171,6 +102171,40 @@
     {
       "type": "Feature",
       "properties": {
+        "id": "cad_DWKZ_1C62B",
+        "start_pk": 72442.44,
+        "end_pk": 72442.44,
+        "length_m": 0,
+        "is_point": true,
+        "side": "Left",
+        "category": "Water Descent",
+        "typology": "Water descent, precast",
+        "chainage_str": "PK 72+442",
+        "status": "Not Started",
+        "di_set": {
+          "preset": "WD",
+          "ch0": 72442.44,
+          "ch1": 72442.44,
+          "side": "L",
+          "offsetM": 7.02,
+          "sheet": "DW-03039-04",
+          "cert": "exact"
+        },
+        "short_code": "WD",
+        "drawing_ref": "DW-03039-04",
+        "offset_m": 7.02
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.4544291,
+          12.5473374
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "id": "cad_DWKZ_1C62A",
         "start_pk": 72442.45,
         "end_pk": 72534.12,
@@ -102277,6 +102311,40 @@
             8.4543919,
             12.5481662
           ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cad_DWKZ_4D3B3",
+        "start_pk": 72546.1,
+        "end_pk": 72546.1,
+        "length_m": 0,
+        "is_point": true,
+        "side": "Right",
+        "category": "Water Descent",
+        "typology": "Water descent, precast",
+        "chainage_str": "PK 72+546",
+        "status": "Not Started",
+        "di_set": {
+          "preset": "WD",
+          "ch0": 72546.1,
+          "ch1": 72546.1,
+          "side": "R",
+          "offsetM": 6.59,
+          "sheet": "DW-03039-04",
+          "cert": "exact"
+        },
+        "short_code": "WD",
+        "drawing_ref": "DW-03039-04",
+        "offset_m": 6.59
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.4545466,
+          12.5482757
         ]
       }
     },

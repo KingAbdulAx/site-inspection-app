@@ -12628,7 +12628,7 @@
   "point:manhole": 89,
   "ditch:T9": 56,
   "point:pipe": 7,
-  "descent:WD": 483,
+  "descent:WD": 485,
   "point:connection_box": 598,
   "ditch:T8": 12,
   "ditch:T7": 41,
@@ -38688,12 +38688,10 @@
     1384019.672
    ],
    "notes": [
-    "HALF ROUND LINED DITCH L:125M / I:0.45%",
     "HALF ROUND LINED DITCH L:125M / I:0.45%"
    ],
-   "noted_length": 250.0,
+   "noted_length": 125.0,
    "gradients_pct": [
-    0.45,
     0.45
    ]
   },
@@ -40223,6 +40221,19 @@
    ]
   },
   {
+   "kind": "descent",
+   "code": "WD",
+   "layer": "DRN_WATER_DISCHARGE",
+   "handle": "1C62B",
+   "ch0": 72442.44,
+   "ch1": 72442.44,
+   "side": "L",
+   "offset": 7.02,
+   "offset_min": 4.08,
+   "offset_max": 9.96,
+   "drawn_length": 5.9
+  },
+  {
    "kind": "ditch",
    "code": "T5",
    "layer": "DRN_DITCH_TYPE5",
@@ -40272,6 +40283,19 @@
     440747.26,
     1387243.455
    ]
+  },
+  {
+   "kind": "descent",
+   "code": "WD",
+   "layer": "DRN_WATER_DISCHARGE",
+   "handle": "4D3B3",
+   "ch0": 72546.1,
+   "ch1": 72546.1,
+   "side": "R",
+   "offset": 6.59,
+   "offset_min": 3.66,
+   "offset_max": 9.53,
+   "drawn_length": 5.9
   },
   {
    "kind": "point",
