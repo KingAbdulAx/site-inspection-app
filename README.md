@@ -5,6 +5,26 @@ An offline-first, mobile Progressive Web Application (PWA) engineered for civil 
 
 ---
 
+## 0. The app: "The line is the map" (visual redesign)
+
+`index.html` is the redesigned app from *Drainage Inspector – Visual Redesign* ("Survey signage"). The previous map-and-list app is still available as `legacy.html`, and is linked from **Section → Switch → Classic app**.
+
+| Screen | What it does |
+|---|---|
+| **Walk · Strip** | Chainage runs up the screen, and offset becomes five fixed lanes a side (OFF, CREST, TOE, FACE, PLAT). You get a ±20 m band and a reading line, and the strip turns with you when you face decreasing chainage. Outline = the drawing, hatched = part-built, solid = complete. Exact, ±4 m and LABEL positions are drawn differently. Drag to look ahead; tap a mark for the drawer. |
+| **Walk · Map / Section** | The same position on imagery under a wash (Leaflet, bundled in `lib/`), or a cross-section at your chainage with numbered features. |
+| **At-you bar** | Names the structure you are standing at. Tap it to record a stage (two taps, saved instantly, 8 s undo). The right end opens everything within 20 m, left to right as you face. Poor GPS turns the bar yellow and offers "I'm on the culvert" to fix position on an exact structure. |
+| **Feature** | What is built (seen by you vs. contractor claims from the IR register), open defects with photos, the read-only drawing panel, the IR history with gaps, never-overwritten records, and "Copy with provenance". |
+| **Section** | A sub-section summary: part-built / stalled > 6 months, every structure as one mark on 2 km rows or a north-up ribbon map, and the ones stalled longest. **Switch** opens the Project list (2 lines, 9 sub-sections). |
+| **Day** | Records safe on the phone vs. sent, unfinished drafts, what you covered, differences from the contractor, and an offline export (CSV plus an HTML report with photos). |
+| **Editing, two doors** | *The ground differs* makes a query (the design is untouched), for example built in a different place, measured against the GPS error. *The drawing changed* makes a pending design change, which must name its drawing and revision. Nothing is deleted; removed features stay struck through. |
+
+Code: `ui/model.js` (data, append-only records, position/projection), `ui/strip.js` (strip and section-cut renderer), `ui/app.js` (shell, Walk, record sheet), and `ui/screens.js` (other screens). Records are appended to `KMD_WALK_RECORDS_V1` and never edited; undo appends a void. The latest stage per asset is mirrored into the existing inspection store, so `sync.js` still sends it to the office. Photos go in IndexedDB.
+
+Try it without GPS: `index.html?sim=KZDR:111020:14:4` (sub-section : chainage : offset, left + : accuracy m). Use `…:38` for poor GPS or `…:none` for set-by-hand. Tests: `node scripts/test_ui_model.js` and `node scripts/test_ui_e2e.js` (Playwright).
+
+---
+
 ## 1. Spatial Orientation & Railway Chainage Conventions
 
 ### 1.1 The Universal Railway Rule for "Left" vs. "Right"

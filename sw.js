@@ -4,11 +4,27 @@
  * Bypasses cache for Supabase REST synchronization.
  */
 
-const CACHE_NAME = 'kmd-drainage-cache-v4';
+const CACHE_NAME = 'kmd-drainage-cache-v5';
 
 const PRECACHE_LOCAL_ASSETS = [
   './',
   './index.html',
+  './ui/app.css',
+  './ui/model.js',
+  './ui/icons.js',
+  './ui/strip.js',
+  './ui/app.js',
+  './ui/screens.js',
+  './lib/leaflet.js',
+  './lib/leaflet.css',
+  './fonts/barlow-500.woff2',
+  './fonts/barlow-600.woff2',
+  './fonts/barlow-700.woff2',
+  './fonts/barlow-condensed-700.woff2',
+  './fonts/ibm-plex-mono-500.woff2',
+  './fonts/ibm-plex-mono-600.woff2',
+  './culvert_ir_progress_table.json',
+  './legacy.html',
   './styles.css',
   './fonts.css',
   './tokens.css',
@@ -105,34 +121,35 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  // 3. GET requests: Cache-first with ignoreSearch: true (handles cache buster query strings)
+  // 3. Same-origin GETs: network-first so a new release shows on the next load,
+  //    falling back to the cache when there is no signal.
+  if (event.request.method === 'GET' && url.origin === self.location.origin) {
+    event.respondWith(
+      fetch(event.request).then(networkResponse => {
+        if (networkResponse && networkResponse.status === 200) {
+          const resClone = networkResponse.clone();
+          caches.open(CACHE_NAME).then(cache => cache.put(event.request, resClone));
+        }
+        return networkResponse;
+      }).catch(() => caches.match(event.request, { ignoreSearch: true }).then(cached => {
+        if (cached) return cached;
+        if (event.request.mode === 'navigate') return caches.match('./index.html', { ignoreSearch: true });
+        return undefined;
+      }))
+    );
+    return;
+  }
+
+  // 4. Other GETs (vendor CDNs): cache-first
   if (event.request.method === 'GET') {
     event.respondWith(
-      caches.match(event.request, { ignoreSearch: true }).then(cachedResponse => {
-        if (cachedResponse) {
-          // Revalidate in background when online
-          fetch(event.request).then(networkResponse => {
-            if (networkResponse && networkResponse.status === 200) {
-              const resClone = networkResponse.clone();
-              caches.open(CACHE_NAME).then(cache => cache.put(event.request, resClone));
-            }
-          }).catch(() => {});
-          return cachedResponse;
+      caches.match(event.request, { ignoreSearch: true }).then(cached => cached || fetch(event.request).then(networkResponse => {
+        if (networkResponse && networkResponse.status === 200) {
+          const resClone = networkResponse.clone();
+          caches.open(CACHE_NAME).then(cache => cache.put(event.request, resClone));
         }
-
-        return fetch(event.request).then(networkResponse => {
-          if (networkResponse && networkResponse.status === 200) {
-            const resClone = networkResponse.clone();
-            caches.open(CACHE_NAME).then(cache => cache.put(event.request, resClone));
-          }
-          return networkResponse;
-        }).catch(() => {
-          // Offline navigation fallback
-          if (event.request.mode === 'navigate') {
-            return caches.match('./index.html', { ignoreSearch: true });
-          }
-        });
-      })
+        return networkResponse;
+      }))
     );
   }
 });
