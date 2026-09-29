@@ -279,6 +279,9 @@ svg { display: block; }
 .row-btns .btn { padding: 0 6px; gap: 6px; min-width: 0; font-size: 18px; }
 
 /* ------------------------------------------------------------- sheets */
+/* Each overlay is its own layer, so whatever opened last is on top. */
+.ov { position: absolute; inset: 0; z-index: 20; pointer-events: none; }
+.ov > * { pointer-events: auto; }
 .scrim { position: absolute; inset: 0; background: var(--scrim); z-index: 20; }
 .sheet {
   position: absolute; left: 0; right: 0; bottom: 0; z-index: 21;

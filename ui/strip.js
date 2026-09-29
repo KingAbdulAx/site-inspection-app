@@ -78,7 +78,11 @@
     }
     down(e) { this.drag = { y: e.clientY, x: e.clientX, y0: e.clientY, moved: false }; try { this.el.setPointerCapture(e.pointerId); } catch (x) { /* ignore */ } }
     move(e) {
-      if (!this.drag) return;
+      if (!this.drag) {
+        // Mouse: show a hand over anything a tap would open.
+        if (e.pointerType === 'mouse') { const r = this.el.getBoundingClientRect(); this.el.style.cursor = this.hitAt(e.clientX - r.left, e.clientY - r.top) ? 'pointer' : ''; }
+        return;
+      }
       const dy = e.clientY - this.drag.y;
       if (Math.abs(e.clientY - this.drag.y0) > 6) this.drag.moved = true;
       if (this.drag.moved) { this.pan(dy); this.drag.y = e.clientY; }
@@ -98,7 +102,7 @@
       this.render(this.state);
     }
     recentre() { this.viewCh = null; if (this.state) this.render(this.state); }
-    tap(x, y) {
+    hitAt(x, y) {
       let best = null, bd = 1e9;
       this.hits.forEach(h => {
         const dx = x < h.x0 ? h.x0 - x : x > h.x1 ? x - h.x1 : 0;
@@ -106,7 +110,11 @@
         const d = Math.hypot(dx, dy);
         if (d < bd) { bd = d; best = h; }
       });
-      if (best && bd < 16 && this.opts.onTap) this.opts.onTap(best.f);
+      return best && bd < 16 ? best : null;
+    }
+    tap(x, y) {
+      const best = this.hitAt(x, y);
+      if (best && this.opts.onTap) this.opts.onTap(best.f);
     }
 
     render(state) {
@@ -418,7 +426,8 @@
   // 5 m bank and a 0.5 m ditch both read on a phone; the header says by how much.
   const GROUP_OF = { toe: 'toe', side: 'side', shoulder: 'side', crest: 'crest' };
   function realCut(sec, items, facing, W, fitH) {
-    const H = Math.max(190, Math.min(320, fitH || 300));
+    // 320 px on a phone; a wide desk pane may draw it taller.
+    const H = Math.max(190, Math.min(W >= 440 ? W * 0.85 : 320, fitH || 300));
     const flip = facing === 'decreasing';
     const p = sec.p || {};
     const solid = ['slope', 'platform', 'toe_ditch', 'lining', 'side_ditch', 'crest_ditch'];
