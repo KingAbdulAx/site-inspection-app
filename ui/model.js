@@ -343,7 +343,7 @@
   }
 
   // ------------------------------------------------------ data per sub-section
-  const data = { features: [], bySub: {}, byId: {}, centre: {}, irs: {}, pristine: {}, meta: {}, source: {}, deleted: [] };
+  const data = { features: [], bySub: {}, byId: {}, centre: {}, irs: {}, pristine: {}, meta: {}, source: {}, deleted: [], sections: {} };
 
   function loadCentre(sub, cl) {
     if (!cl || !cl.dense_points) return;
@@ -373,6 +373,17 @@
     SUBS.DWKZ.count = (data.bySub.DWKZ || []).length;
     SUBS.KZDR.count = (data.bySub.KZDR || []).length;
     loadLegacy();
+  }
+
+  // Cross sections from the design CAD (data/sections_<SUB>.json), nearest within 15 m.
+  function loadSections(sub, j) { data.sections[sub] = (j.sections || []).slice().sort((a, b) => a.ch - b.ch); }
+  function sectionAt(sub, ch, tol) {
+    const L = data.sections[sub];
+    if (!L || !L.length) return null;
+    let lo = 0, hi = L.length - 1;
+    while (lo < hi) { const m = (lo + hi) >> 1; if (L[m].ch < ch) lo = m + 1; else hi = m; }
+    const c = [L[lo], L[lo - 1]].filter(Boolean).sort((a, b) => Math.abs(a.ch - ch) - Math.abs(b.ch - ch))[0];
+    return Math.abs(c.ch - ch) <= (tol || 15) ? c : null;
   }
 
   function hasData(sub) { return !!(data.bySub[sub] && data.bySub[sub].length); }
@@ -782,6 +793,7 @@
     fmtCh, fmtPlus, parseCh, fmtDate, fmtTime, monthsBetween, esc, DAYS, MONTHS,
     inspector, setInspector, addRecord, voidRecord, live, recordsFor, seenOf, ownSeen, openDefects,
     designChanges, statusOf, drafts, saveDraft, putPhoto, getPhoto, uid, loadLegacy,
+    loadSections, sectionAt,
     PRESETS, presetOf, applyBase, baseRecords, correctBase, addBase, deleteBase, verifyBase, unverifyBase, exportGeo, exportCorrections, importRecords,
     project, pointAt, laneOf, savePosition, lastPosition, csvCell,
     get records() { return records; }
