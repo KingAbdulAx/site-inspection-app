@@ -40,7 +40,8 @@ POINT_LAYERS = {
 }
 RIPRAP_HATCH_LAYERS = {'Enrochement_Talus': 'riprap_slope', 'OUTLET-PROTECTION_HATCH': 'outlet_protection',
                        'Enrochement_Talus_BRIDGES': 'riprap_bridge'}
-CH_RE = re.compile(r'^\s*(\d{1,3})\+(\d{3}(?:[.,]\d+)?)\s*$')
+# '19+800', and before Kano's zero (S01) '-0+200'.
+CH_RE = re.compile(r'^\s*(-?)(\d{1,3})\+(\d{3}(?:[.,]\d+)?)\s*$')
 
 
 def xy(v):
@@ -70,7 +71,8 @@ class Axis:
             for a in t.attribs:
                 m = CH_RE.match(a.dxf.text or '')
                 if m:
-                    labels.append((int(m.group(1)) * 1000 + float(m.group(2).replace(',', '.')), xy(t.dxf.insert)))
+                    v = int(m.group(2)) * 1000 + float(m.group(3).replace(',', '.'))
+                    labels.append((-v if m.group(1) else v, xy(t.dxf.insert)))
         log(f'axis: {len(ticks)} ticks (25 m), {len(labels)} chainage labels (100 m)')
         # The same tick drawn twice (S03 has two) would make a zero-length step.
         keep = []
@@ -153,8 +155,10 @@ class Axis:
 
 
 def fmt(m, d=0):
+    # -1107 reads '-1+107' (before Kano's zero), not '-2+893'.
+    sign, m = ('-', -m) if m < 0 else ('', m)
     km = int(m // 1000)
-    return f'{km}+{m - km * 1000:0{4 + d if d else 3}.{d}f}'
+    return f'{sign}{km}+{m - km * 1000:0{4 + d if d else 3}.{d}f}'
 
 
 # ------------------------------------------------------------------ extract

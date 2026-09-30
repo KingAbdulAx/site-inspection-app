@@ -1,0 +1,3201 @@
+{
+ "kind": "kmd-progress",
+ "asof": "2026-09-25",
+ "ditch_date": "2026-09-30",
+ "rows": [
+  {
+   "asset_id": "xc_KNDW_CC12",
+   "sub": "KNDW",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · CC12 at 12+510 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "xc_KNDW_4_1",
+   "sub": "KNDW",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 4.1 at 4+078 · done: excavation, bedding, installed, haunch, apron, wing walls, joints · Casted"
+  },
+  {
+   "asset_id": "xc_KNDW_4_2",
+   "sub": "KNDW",
+   "status": "Wing walls",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 4.2 at 4+290 · done: excavation, bedding, installed, haunch, apron, wing walls"
+  },
+  {
+   "asset_id": "xc_KNDW_4_3",
+   "sub": "KNDW",
+   "status": "Wing walls",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 4.3 at 4+400 · done: excavation, bedding, installed, apron, wing walls · Flooding Problems"
+  },
+  {
+   "asset_id": "xc_KNDW_4_4",
+   "sub": "KNDW",
+   "status": "Apron",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 4.4 at 4+789 · done: excavation, bedding, installed, haunch, apron · 9 Pcs Installed"
+  },
+  {
+   "asset_id": "xc_KNDW_4_5",
+   "sub": "KNDW",
+   "status": "Haunched",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 4.5 at 4+970 · done: excavation, bedding, installed, haunch · ongoing: apron"
+  },
+  {
+   "asset_id": "xc_KNDW_5_1",
+   "sub": "KNDW",
+   "status": "Apron",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 5.1 at 5+038 · done: haunch, apron, excavation, bedding, installed"
+  },
+  {
+   "asset_id": "xc_KNDW_5_A",
+   "sub": "KNDW",
+   "status": "Installed",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 5.A at 5+435 · done: excavation, bedding, installed"
+  },
+  {
+   "asset_id": "xc_KNDW_5_2",
+   "sub": "KNDW",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 5.2 at 5+576 · done: excavation, bedding, installed, haunch, apron, wing walls, joints"
+  },
+  {
+   "asset_id": "xc_KNDW_5_3",
+   "sub": "KNDW",
+   "status": "Apron",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 5.3 at 5+643 · done: excavation, bedding, installed, haunch, apron · ongoing: wing walls"
+  },
+  {
+   "asset_id": "xc_KNDW_5_4",
+   "sub": "KNDW",
+   "status": "Installed",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 5.4 at 5+735 · done: excavation, bedding, installed · ongoing: apron · Install From 1500mm"
+  },
+  {
+   "asset_id": "xc_KNDW_CC6",
+   "sub": "KNDW",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · CC6 at 6+225 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "xc_KNDW_6_1",
+   "sub": "KNDW",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 6.1 at 6+835 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "xc_KNDW_7_1",
+   "sub": "KNDW",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 7.1 at 7+060 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "xc_KNDW_7_2",
+   "sub": "KNDW",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 7.2 at 7+371 · done: excavation, bedding, installed, apron, wing walls, joints, haunch, backfill"
+  },
+  {
+   "asset_id": "xc_KNDW_CC7",
+   "sub": "KNDW",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · CC7 at 7+400 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "xc_KNDW_7_3",
+   "sub": "KNDW",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 7.3 at 7+488 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "xc_KNDW_8_1",
+   "sub": "KNDW",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 8.1 at 8+113 · done: excavation, bedding, installed, apron, wing walls, joints, haunch, backfill"
+  },
+  {
+   "asset_id": "xc_KNDW_8_2",
+   "sub": "KNDW",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 8.2 at 8+394 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "xc_KNDW_8_3",
+   "sub": "KNDW",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 8.3 at 8+594 · done: excavation, bedding, installed, haunch, apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "xc_KNDW_8_4",
+   "sub": "KNDW",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 8.4 at 8+811 · done: excavation, bedding, installed, haunch, apron, wing walls, joints"
+  },
+  {
+   "asset_id": "xc_KNDW_9_1",
+   "sub": "KNDW",
+   "status": "Wing walls",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 9.1 at 9+326 · done: apron, wing walls, excavation, bedding, installed"
+  },
+  {
+   "asset_id": "xc_KNDW_9_2",
+   "sub": "KNDW",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 9.2 at 9+416 · done: apron, excavation, bedding, installed, wing walls, joints, haunch, backfill"
+  },
+  {
+   "asset_id": "xc_KNDW_9_3",
+   "sub": "KNDW",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 9.3 at 9+685 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "xc_KNDW_10_1",
+   "sub": "KNDW",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 10.1 at 10+336 · done: excavation, bedding, installed, apron, wing walls, paint, backfill"
+  },
+  {
+   "asset_id": "xc_KNDW_10_2",
+   "sub": "KNDW",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 10.2 at 10+710 · done: excavation, bedding, installed, apron, wing walls, joints, haunch, backfill"
+  },
+  {
+   "asset_id": "xc_KNDW_11_1",
+   "sub": "KNDW",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 11.1 at 11+020 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "xc_KNDW_11_2",
+   "sub": "KNDW",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 11.2 at 11+613 · done: excavation, bedding, installed, apron, wing walls, joints, haunch, backfill · 12m Installed"
+  },
+  {
+   "asset_id": "xc_KNDW_11_3",
+   "sub": "KNDW",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 11.3 at 11+921 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "xc_KNDW_12_1",
+   "sub": "KNDW",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 12.1 at 12+200 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "xc_KNDW_12_2",
+   "sub": "KNDW",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 12.2 at 12+752 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "xc_KNDW_13_1",
+   "sub": "KNDW",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 13.1 at 13+364 · done: excavation, bedding, installed, apron, wing walls, joints, haunch, backfill · 15m Installed"
+  },
+  {
+   "asset_id": "xc_KNDW_13_2",
+   "sub": "KNDW",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 13.2 at 13+610 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "xc_KNDW_14_1",
+   "sub": "KNDW",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 14.1 at 14+323 · done: excavation, haunch, bedding, installed, apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "xc_KNDW_14_2",
+   "sub": "KNDW",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 14.2 at 14+494 · done: excavation, bedding, installed, haunch, apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "xc_KNDW_14_3",
+   "sub": "KNDW",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 14.3 at 14+856 · done: excavation, installed, apron, wing walls, joints, bedding, paint, backfill"
+  },
+  {
+   "asset_id": "xc_KNDW_15_1",
+   "sub": "KNDW",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 15.1 at 15+041 · done: excavation, bedding, apron, wing walls, joints, installed, haunch, backfill"
+  },
+  {
+   "asset_id": "xc_KNDW_15_2",
+   "sub": "KNDW",
+   "status": "Bedding",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 15.2 at 15+285 · done: excavation, bedding · ongoing: installed · Rockfill Rockfill"
+  },
+  {
+   "asset_id": "xc_KNDW_15_3",
+   "sub": "KNDW",
+   "status": "Installed",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 15.3 at 15+341 · done: excavation, bedding, installed · ongoing: apron · Excavate Rockfill"
+  },
+  {
+   "asset_id": "xc_KNDW_15_4",
+   "sub": "KNDW",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 15.4 at 15+500 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "xc_KNDW_16_1",
+   "sub": "KNDW",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 16.1 at 16+223 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "xc_KNDW_16_2",
+   "sub": "KNDW",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 16.2 at 16+637 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "xc_KNDW_17_1",
+   "sub": "KNDW",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 17.1 at 17+490 · done: excavation, bedding, installed, apron, wing walls, joints, haunch, backfill"
+  },
+  {
+   "asset_id": "xc_KNDW_18_1",
+   "sub": "KNDW",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S01 25/09/26 · 18.1 at 18+080 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1709",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 82.3 at 82+850 · done: excavation, bedding, installed, haunch, apron, wing walls, backfill, joints · To Start Aprons"
+  },
+  {
+   "asset_id": "s02_asset_1688",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 82.2 at 82+375 · done: excavation, bedding, installed, haunch, apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1682",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 82.1 at 82+225 · done: excavation, bedding, installed, haunch, apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1676",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 81.4 at 81+937 · done: excavation, bedding, installed, haunch, apron, wing walls, joints, backfill · _04118"
+  },
+  {
+   "asset_id": "s02_asset_1671",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 81.3 at 81+825 · done: excavation, bedding, installed, haunch, apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1656",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 81.1 at 81+189 · done: excavation, bedding, installed, apron, wing walls, joints, backfill · _04124"
+  },
+  {
+   "asset_id": "s02_asset_1639",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 80.2 at 80+189 · done: excavation, bedding, installed, apron, wing walls, joints, backfill, haunch"
+  },
+  {
+   "asset_id": "s02_asset_1632",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 80.1 at 80+047 · done: backfill, excavation, bedding, installed, haunch, apron, wing walls, joints"
+  },
+  {
+   "asset_id": "s02_asset_1625",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 79.3 at 79+503 · done: excavation, bedding, installed, haunch, apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1612",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 79.2 at 79+275 · done: excavation, bedding, installed, apron, wing walls, joints, backfill, paint"
+  },
+  {
+   "asset_id": "s02_asset_1605",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 79.1 at 79+077 · done: excavation, bedding, installed, apron, wing walls, joints, backfill, haunch"
+  },
+  {
+   "asset_id": "s02_asset_1582",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 78.2 at 78+521 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1566",
+   "sub": "DWKZ",
+   "status": "Wing walls",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 78.1 at 78+017 · done: excavation, bedding, installed, apron, wing walls, haunch, backfill"
+  },
+  {
+   "asset_id": "xc_DWKZ_CC_78",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · CC 78 at 78+825 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1560",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 77.2 at 77+852 · done: paint, excavation, bedding, installed, apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1552",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 77.1 at 77+491 · done: excavation, bedding, installed, haunch, apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1539",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 76.2 at 76+692 · done: excavation, bedding, installed, haunch, apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1523",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 76.1 at 76+373 · done: excavation, bedding, installed, apron, wing walls, joints, backfill, haunch"
+  },
+  {
+   "asset_id": "xc_DWKZ_CC_74",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · CC 74 at 74+725 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1494",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 74.1 at 74+370 · done: excavation, bedding, installed, haunch, apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1485",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 73.B at 73+960 · done: excavation, bedding, installed, haunch, apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1477",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 73.3 at 73+763 · done: excavation, bedding, installed, haunch, apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1469",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 73.2 at 73+360 · done: excavation, bedding, installed, haunch, apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1465",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 73.1 at 73+175 · done: excavation, bedding, installed, haunch, apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "xc_DWKZ_CC_73",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · CC 73 at 73+125 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1457",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 73.A at 73+002 · done: excavation, bedding, installed, haunch, apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1444",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 72.1 at 72+220 · done: excavation, bedding, installed, haunch, apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1438",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 71.2 at 71+870 · done: excavation, bedding, installed, haunch, apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1431",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 71.1 at 71+743 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1420",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 71.A at 71+200 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1406",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 70.2 at 70+487 · done: excavation, bedding, installed, haunch, apron, wing walls, joints, backfill · was Not Started (2026-09-10)",
+   "replaces": {
+    "status": "Not Started",
+    "by": "Engr. Abdulaziz A. A.",
+    "at": "2026-09-10T18:52:35.454+00:00"
+   }
+  },
+  {
+   "asset_id": "s02_asset_1395",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 70.1 at 70+124 · done: excavation, bedding, installed, haunch, apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "xc_DWKZ_CC_69",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · CC 69 at 69+175 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1392",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 69.A at 69+875 · done: excavation, bedding, installed, haunch, apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1389",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 69.3 at 69+645 · done: excavation, bedding, installed, haunch, apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1385",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 69.2 at 69+520 · done: excavation, bedding, installed, haunch, apron, wing walls, joints, backfill · To Check Installed Diameter"
+  },
+  {
+   "asset_id": "s02_asset_1374",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 69.1 at 69+251 · done: excavation, bedding, installed, haunch, apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1364",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 68.A at 68+950 · done: excavation, bedding, installed, haunch, apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1358",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 68.2 at 68+746 · done: excavation, bedding, installed, haunch, apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1350",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 68.1 at 68+296 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1338",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 67.2 at 67+909 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1322",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 67.1 at 67+397 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1313",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 66.3 at 66+878 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1302",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 66.2 at 66+570 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1293",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 66.1 at 66+071 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1287",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 65.3 at 65+857 · done: excavation, bedding, installed, apron, wing walls, joints, haunch, backfill"
+  },
+  {
+   "asset_id": "xc_DWKZ_CC_65",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · CC 65 at 65+725 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1278",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 65.2 at 65+560 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1264",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 65.1 at 65+192 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1258",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 64.2 at 64+894 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "xc_DWKZ_CC_64",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · CC 64 at 64+875 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1246",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 64.1 at 64+494 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1228",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 63.1 at 63+395 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1222",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 62.3 at 62+930 · done: excavation, bedding, installed, apron, wing walls, joints, haunch, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1213",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 62.2 at 62+750 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1205",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 62.1 at 62+557 · done: excavation, bedding, installed, haunch, apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1195",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 62.A at 62+300 · done: excavation, bedding, installed, haunch, apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1186",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 61.2 at 61+936 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1182",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 61.1 at 61+806 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_1167",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 60.2 at 60+989 · done: excavation, bedding, installed, apron, wing walls, joints, haunch, backfill"
+  },
+  {
+   "asset_id": "xc_DWKZ_CC_60",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · CC 60 at 60+550 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_877",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 59.1 at 59+036 · done: backfill, excavation, bedding, installed, apron, wing walls, joints, paint"
+  },
+  {
+   "asset_id": "s02_asset_866",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 58.2 at 58+793 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_854",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 58.A at 58+390 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_842",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 58.1 at 58+074 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_838",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 57.3 at 57+820 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill, haunch"
+  },
+  {
+   "asset_id": "s02_asset_830",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 57.2 at 57+606 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "xc_DWKZ_CC_57",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · CC 57 at 57+425 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_817",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 57.1 at 57+046 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_808",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 56.1 at 56+775 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill · was Not Started (2026-09-09)",
+   "replaces": {
+    "status": "Not Started",
+    "by": "",
+    "at": "2026-09-09T16:28:34.49+00:00"
+   }
+  },
+  {
+   "asset_id": "s02_asset_793",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 55.2 at 55+527 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill, haunch"
+  },
+  {
+   "asset_id": "s02_asset_776",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 55.1 at 55+172 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_765",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 54.3 at 54+903 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_756",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 54.2 at 54+545 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "xc_DWKZ_CC_54",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · CC 54 at 54+450 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_748",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 54.1 at 54+247 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_730",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 53.1 at 53+358 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "xc_DWKZ_CC_53",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · CC 53 at 53+225 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_720",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 52.2 at 52+878 · done: excavation, bedding, installed, apron, wing walls, joints, haunch, backfill"
+  },
+  {
+   "asset_id": "s02_asset_709",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 52.1 at 52+361 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_694",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 51.A at 51+590 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_681",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 51.1 at 51+119 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_669",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 50.A at 50+510 · done: excavation, bedding, installed, haunch, apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "xc_DWKZ_48_2",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 48.2 at 48+477 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_631",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 48.1 at 48+125 · done: excavation, bedding, installed, apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "xc_DWKZ_CC46",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · CC46 at 46+750 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_598",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 46.3 at 46+647 · done: excavation, bedding, installed, haunch, apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "s02_asset_588",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 46.2 at 46+424 · done: haunch, excavation, bedding, installed, apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "s02_asset_576",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 46.1 at 46+196 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_548",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 43.2 at 43+639 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "xc_DWKZ_CC_43",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · CC 43 at 43+100 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_539",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 43.1 at 43+198 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_510",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 42.1 at 42+373 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_479",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 40.1 at 40+226 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_469",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 39.2 at 39+753 · done: excavation, bedding, installed, apron, wing walls, joints, haunch, backfill"
+  },
+  {
+   "asset_id": "s02_asset_462",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 39.1 at 39+530 · done: apron, wing walls, joints, excavation, bedding, installed, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_440",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 38.1 at 38+101 · done: apron, wing walls, joints, excavation, bedding, installed, haunch, backfill"
+  },
+  {
+   "asset_id": "xc_DWKZ_CC_37",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · CC 37 at 37+750 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_427",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 37.1 at 37+668 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_409",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 36.1 at 36+980 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_379",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 35.4 at 35+560 · done: apron, excavation, bedding, installed, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_376",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 35.3 at 35+385 · done: apron, excavation, bedding, installed, haunch, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "s02_asset_371",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 35.2 at 35+197 · done: apron, excavation, bedding, installed, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_364",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 35.1 at 35+062 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_353",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 34.1 at 34+737 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_300",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 32.3 at 32+623 · done: excavation, bedding, installed, haunch, apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "s02_asset_297",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 32.2 at 32+580 · done: excavation, bedding, installed, haunch, apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "s02_asset_291",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 32.1 at 32+458 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_261",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 30.1 at 30+093 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_252",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 29.3 at 29+869 · done: excavation, bedding, installed, apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "s02_asset_244",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 29.2 at 29+112 · done: excavation, bedding, installed, apron, wing walls, joints, haunch, backfill"
+  },
+  {
+   "asset_id": "s02_asset_236",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 29.1 at 29+014 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_225",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 28.3 at 28+843 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill · 12m TC 417"
+  },
+  {
+   "asset_id": "s02_asset_218",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 28.2 at 28+533 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_206",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 28.1 at 28+046 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_194",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 27.2 at 27+729 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "xc_DWKZ_CC27",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · CC27 at 27+650 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_185",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 27.1 at 27+383 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_178",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 26.1 at 26+716 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_160",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 25.2 at 25+644 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_153",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 25.1 at 25+018 · done: excavation, bedding, installed, apron, wing walls, joints, haunch, backfill"
+  },
+  {
+   "asset_id": "xc_DWKZ_CC24",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · CC24 at 24+650 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_139",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 24.2 at 24+373 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_135",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 24.1 at 24+035 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_122",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 23.3 at 23+700 · done: excavation, bedding, installed, haunch, apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "s02_asset_113",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 23.2 at 23+121 · done: excavation, bedding, installed, haunch, apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "s02_asset_109",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 23.1 at 23+011 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_104",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 22.3 at 22+935 · done: excavation, bedding, installed, apron, wing walls, joints, haunch, backfill"
+  },
+  {
+   "asset_id": "s02_asset_091",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 22.2 at 22+742 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_081",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S02 25/09/26 · 22.1 at 22+544 · done: excavation, bedding, installed, apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "xc_KZDR_CC_86",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S03 25/09/26 · CC 86 at 86+525 · done: excavation, bedding, installed (D3B), apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "xc_KZDR_88_2",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S03 25/09/26 · 88.2 at 88+495 · done: excavation, bedding, installed (D2B), apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "xc_KZDR_CC_90",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S03 25/09/26 · CC 90 at 90+350 · done: excavation, bedding, installed (D3B), apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "xc_KZDR_CC_92",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S03 25/09/26 · CC 92 at 92+215 · done: excavation, bedding, installed (D3B), apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "xc_KZDR_CC_93",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S03 25/09/26 · CC 93 at 93+525 · done: excavation, bedding, installed (D3B), apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "xc_KZDR_CC_98",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S03 25/09/26 · CC 98 at 98+775 · done: excavation, bedding, installed (D3B), apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "xc_KZDR_CC_100",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S03 25/09/26 · CC 100 at 100+875 · done: excavation, bedding, installed (D3B), apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "xc_KZDR_CC_103",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S03 25/09/26 · CC 103 at 103+725 · done: excavation, bedding, installed (D3B), apron, wing walls, joints, backfill, paint"
+  },
+  {
+   "asset_id": "xc_KZDR_107_A",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S03 25/09/26 · 107.A at 107+450 · done: excavation, bedding, installed (D2B), apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "xc_KZDR_CC_109",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S03 25/09/26 · CC 109 at 109+200 · done: excavation, bedding, installed (D3B), apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "xc_KZDR_CC_110",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S03 25/09/26 · CC 110 at 110+275 · done: excavation, bedding, installed (D3B), apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "xc_KZDR_CC_112",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S03 25/09/26 · CC 112 at 112+000 · done: excavation, bedding, installed (D3B), apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "xc_KZDR_113_A",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S03 25/09/26 · 113.A at 113+792 · done: excavation, bedding, installed (D1.2P), apron, wing walls, joints, backfill"
+  },
+  {
+   "asset_id": "xc_KZDR_CC_116",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S03 25/09/26 · CC 116 at 116+300 · done: excavation, bedding, installed (D3B), apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "xc_KZDR_CC_118",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S03 25/09/26 · CC 118 at 118+550 · done: excavation, bedding, installed (D3B), apron, wing walls, joints, paint, backfill"
+  },
+  {
+   "asset_id": "s02_asset_171",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-01",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 375 of 375 m executed · IR 54150"
+  },
+  {
+   "asset_id": "s02_asset_189",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-01",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 200 of 200 m executed · IR 54152"
+  },
+  {
+   "asset_id": "s02_asset_214",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-01",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 275 of 275 m executed · IR 54153"
+  },
+  {
+   "asset_id": "s02_asset_331",
+   "sub": "DWKZ",
+   "status": "Concreted",
+   "has_defect": false,
+   "inspection_date": "2026-09-04",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 70 of 105 m executed (33+885–33+955) · IR 54316"
+  },
+  {
+   "asset_id": "s02_asset_338",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-04",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 125 of 125 m executed · IR 54316"
+  },
+  {
+   "asset_id": "s02_asset_344",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-04",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 400 of 400 m executed · IR 54316"
+  },
+  {
+   "asset_id": "s02_asset_392",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-04",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 90 of 98 m executed · IR 54317"
+  },
+  {
+   "asset_id": "s02_asset_400",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-07",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 85 of 95 m executed · IR 54431"
+  },
+  {
+   "asset_id": "s02_asset_402",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-07",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 125 of 125 m executed · IR 54431"
+  },
+  {
+   "asset_id": "s02_asset_426",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-07",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 150 of 150 m executed · IR 54434"
+  },
+  {
+   "asset_id": "s02_asset_456",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-07-10",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 100 of 100 m executed · IR 51365"
+  },
+  {
+   "asset_id": "s02_asset_465",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-07-10",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 125 of 125 m executed · IR 51365"
+  },
+  {
+   "asset_id": "cad_DWKZ_1C51D",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T1 30/09/26",
+   "notes": "Ditch progress T1 30/09/26 · 307 of 310 m executed"
+  },
+  {
+   "asset_id": "cad_DWKZ_1C3B8",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T1 30/09/26",
+   "notes": "Ditch progress T1 30/09/26 · 299 of 299 m executed"
+  },
+  {
+   "asset_id": "cad_DWKZ_1C51C",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T1 30/09/26",
+   "notes": "Ditch progress T1 30/09/26 · 4 of 4 m executed"
+  },
+  {
+   "asset_id": "s02_asset_518",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-07-10",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 100 of 108 m executed · IR 51367"
+  },
+  {
+   "asset_id": "s02_asset_533",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-07-10",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 285 of 288 m executed · IR 51368"
+  },
+  {
+   "asset_id": "cad_DWKZ_1C556",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T1 30/09/26",
+   "notes": "Ditch progress T1 30/09/26 · 291 of 291 m executed · IR 53896"
+  },
+  {
+   "asset_id": "cad_DWKZ_1C558",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T1 30/09/26",
+   "notes": "Ditch progress T1 30/09/26 · 270 of 270 m executed · IR 53896"
+  },
+  {
+   "asset_id": "cad_DWKZ_1C557",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T1 30/09/26",
+   "notes": "Ditch progress T1 30/09/26 · 134 of 134 m executed · IR 53896"
+  },
+  {
+   "asset_id": "s02_asset_578",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-07-10",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 125 of 125 m executed · IR 51369"
+  },
+  {
+   "asset_id": "s02_asset_594",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-07-10",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 200 of 200 m executed · IR 51370"
+  },
+  {
+   "asset_id": "s02_asset_612",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-07-10",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 60 of 67 m executed · IR 51372"
+  },
+  {
+   "asset_id": "cad_DWKZ_1C597",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-08-24",
+   "inspected_by": "Ditch progress T1 30/09/26",
+   "notes": "Ditch progress T1 30/09/26 · 397 of 397 m executed · IR 51297-01 / IR 54156"
+  },
+  {
+   "asset_id": "cad_DWKZ_1C518",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-08-24",
+   "inspected_by": "Ditch progress T1 30/09/26",
+   "notes": "Ditch progress T1 30/09/26 · 400 of 400 m executed · IR 51297-01 / IR 54157"
+  },
+  {
+   "asset_id": "cad_DWKZ_1D3BA",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-08-24",
+   "inspected_by": "Ditch progress T1 30/09/26",
+   "notes": "Ditch progress T1 30/09/26 · 304 of 304 m executed · IR 51297-01 / IR 54156"
+  },
+  {
+   "asset_id": "cad_DWKZ_1D3B9",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-08-24",
+   "inspected_by": "Ditch progress T1 30/09/26",
+   "notes": "Ditch progress T1 30/09/26 · 326 of 327 m executed · IR 51297-01 / IR 54157"
+  },
+  {
+   "asset_id": "s02_asset_646",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-07-10",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 295 of 300 m executed · IR 51378"
+  },
+  {
+   "asset_id": "s02_asset_648",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-07-10",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 175 of 175 m executed · IR 51378"
+  },
+  {
+   "asset_id": "s02_asset_675",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-07-10",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 250 of 250 m executed · IR 51379"
+  },
+  {
+   "asset_id": "s02_asset_735",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-07-21",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 317 of 317 m executed · IR 52028"
+  },
+  {
+   "asset_id": "s02_asset_739",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-07-21",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 133 of 133 m executed · IR 52028"
+  },
+  {
+   "asset_id": "s02_asset_761",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-07-10",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 675 of 675 m executed · IR 51381"
+  },
+  {
+   "asset_id": "s02_asset_815",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-07-10",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 50 of 50 m executed · IR 51383"
+  },
+  {
+   "asset_id": "s02_asset_821",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-07-10",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 525 of 525 m executed · IR 51383"
+  },
+  {
+   "asset_id": "s02_asset_1253",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 450 of 475 m executed · IR 49086"
+  },
+  {
+   "asset_id": "s02_asset_1282",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 350 of 350 m executed · IR 49087"
+  },
+  {
+   "asset_id": "s02_asset_1288",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 75 of 75 m executed · IR 49087"
+  },
+  {
+   "asset_id": "s02_asset_1356",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 100 of 100 m executed · IR 49088"
+  },
+  {
+   "asset_id": "cad_DWKZ_1C50E",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 50 of 50 m executed · IR 49088"
+  },
+  {
+   "asset_id": "s02_asset_1366",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 325 of 325 m executed · IR 49088"
+  },
+  {
+   "asset_id": "cad_DWKZ_1C50C",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 125 of 125 m executed · IR 49089"
+  },
+  {
+   "asset_id": "s02_asset_1380",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 75 of 75 m executed · IR 49090"
+  },
+  {
+   "asset_id": "cad_DWKZ_1C50B",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T1 30/09/26",
+   "notes": "Ditch progress T1 30/09/26 · 133 of 133 m executed · IR 48711 / IR 49697-01"
+  },
+  {
+   "asset_id": "cad_DWKZ_1C614",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T1 30/09/26",
+   "notes": "Ditch progress T1 30/09/26 · 95 of 97 m executed · IR 48711 / IR 49699-01"
+  },
+  {
+   "asset_id": "cad_DWKZ_1D3BB",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T1 30/09/26",
+   "notes": "Ditch progress T1 30/09/26 · 375 of 380 m executed · IR 46142 / IR 49700-01"
+  },
+  {
+   "asset_id": "cad_DWKZ_1D3BC",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T1 30/09/26",
+   "notes": "Ditch progress T1 30/09/26 · 325 of 331 m executed · IR 46142 / IR 49701-01"
+  },
+  {
+   "asset_id": "cad_DWKZ_1C613",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T1 30/09/26",
+   "notes": "Ditch progress T1 30/09/26 · 325 of 337 m executed · IR 43687-01 / IR 49704-01"
+  },
+  {
+   "asset_id": "cad_DWKZ_1D3BE",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T1 30/09/26",
+   "notes": "Ditch progress T1 30/09/26 · 320 of 322 m executed · IR 43687-01 / IR 49702-01"
+  },
+  {
+   "asset_id": "cad_DWKZ_1D3C0",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T1 30/09/26",
+   "notes": "Ditch progress T1 30/09/26 · 320 of 322 m executed · IR 43687-01 / IR 49702-01"
+  },
+  {
+   "asset_id": "cad_DWKZ_1C612",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 125 of 125 m executed · IR 49085"
+  },
+  {
+   "asset_id": "cad_DWKZ_1C611",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T1 30/09/26",
+   "notes": "Ditch progress T1 30/09/26 · 88 of 88 m executed · IR 42877-01 / IR 49707-01"
+  },
+  {
+   "asset_id": "s02_asset_1502",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 150 of 155 m executed · IR 49084"
+  },
+  {
+   "asset_id": "cad_DWKZ_44E60",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T1 30/09/26",
+   "notes": "Ditch progress T1 30/09/26 · 50 of 61 m executed · IR 42533 / IR 49760-01"
+  },
+  {
+   "asset_id": "cad_DWKZ_44E61",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T1 30/09/26",
+   "notes": "Ditch progress T1 30/09/26 · 50 of 50 m executed · IR 42533 / IR 49715-01"
+  },
+  {
+   "asset_id": "cad_DWKZ_44E58",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T1 30/09/26",
+   "notes": "Ditch progress T1 30/09/26 · 98 of 98 m executed · IR 42534 / IR 49717-01"
+  },
+  {
+   "asset_id": "cad_DWKZ_44E56",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T1 30/09/26",
+   "notes": "Ditch progress T1 30/09/26 · 225 of 229 m executed · IR 42534 / IR 49716-01"
+  },
+  {
+   "asset_id": "cad_DWKZ_44E57",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T1 30/09/26",
+   "notes": "Ditch progress T1 30/09/26 · 175 of 175 m executed · IR 42534 / IR 49717-01"
+  },
+  {
+   "asset_id": "s02_asset_1571",
+   "sub": "DWKZ",
+   "status": "Concreted",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 350 of 400 m executed (77+800–78+150) · IR 49083"
+  },
+  {
+   "asset_id": "s02_asset_1589",
+   "sub": "DWKZ",
+   "status": "Concreted",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 300 of 352 m executed (78+375–78+675) · IR 49082"
+  },
+  {
+   "asset_id": "s02_asset_1619",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 425 of 425 m executed · IR 49081"
+  },
+  {
+   "asset_id": "cad_KZDR_165218",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T1 30/09/26",
+   "notes": "Ditch progress T1 30/09/26 · 300 of 321 m executed · IR 30107 / IR 34833"
+  },
+  {
+   "asset_id": "asset_228",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T1 30/09/26",
+   "notes": "Ditch progress T1 30/09/26 · 425 of 444 m executed · IR 30107 / IR 34832"
+  },
+  {
+   "asset_id": "cad_KZDR_165217",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T1 30/09/26",
+   "notes": "Ditch progress T1 30/09/26 · 120 of 120 m executed · IR 29658 / IR 39111"
+  },
+  {
+   "asset_id": "cad_KZDR_165215",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T1 30/09/26",
+   "notes": "Ditch progress T1 30/09/26 · 120 of 120 m executed · IR 29020 / IR 39111"
+  },
+  {
+   "asset_id": "cad_KZDR_1CA067",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 225 of 225 m executed · IR 38990-01"
+  },
+  {
+   "asset_id": "cad_KZDR_1CA068",
+   "sub": "KZDR",
+   "status": "Concreted",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 50 of 100 m executed (88+675–88+725, 88+775–88+775) · IR 38990-01"
+  },
+  {
+   "asset_id": "asset_072",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 563 of 563 m executed · IR 39080-01"
+  },
+  {
+   "asset_id": "cad_KZDR_1CA06A",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 237 of 237 m executed · IR 39080-01"
+  },
+  {
+   "asset_id": "cad_KZDR_1CA058",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 375 of 375 m executed · IR 39081-01"
+  },
+  {
+   "asset_id": "cad_KZDR_1CA059",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 195 of 200 m executed · IR 39082-01"
+  },
+  {
+   "asset_id": "asset_091",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 209 of 210 m executed · IR 39082-01"
+  },
+  {
+   "asset_id": "cad_KZDR_1CA05F",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 156 of 156 m executed · IR 39082-01"
+  },
+  {
+   "asset_id": "cad_KZDR_1CA05B",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 175 of 175 m executed · IR 39083-01"
+  },
+  {
+   "asset_id": "cad_KZDR_1CA05C",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 100 of 100 m executed · IR 39084-01"
+  },
+  {
+   "asset_id": "cad_KZDR_1CA064",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 125 of 125 m executed · IR 39086-01"
+  },
+  {
+   "asset_id": "cad_KZDR_1CA063",
+   "sub": "KZDR",
+   "status": "Concreted",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 125 of 175 m executed (97+425–97+550) · IR 38992"
+  },
+  {
+   "asset_id": "cad_KZDR_1CA05D",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 150 of 150 m executed · IR 39087-01"
+  },
+  {
+   "asset_id": "cad_KZDR_1CA061",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 450 of 456 m executed · IR 38995-01"
+  },
+  {
+   "asset_id": "cad_KZDR_1CA3DA",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 134 of 138 m executed · IR 38996-01"
+  },
+  {
+   "asset_id": "cad_KZDR_1CA3DD",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 683 of 683 m executed · IR 38996-01"
+  },
+  {
+   "asset_id": "cad_KZDR_1CA3DC",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 526 of 551 m executed · IR 38996-01; IR 48189-01"
+  },
+  {
+   "asset_id": "cad_KZDR_1CA3DB",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 1360 of 1360 m executed · IR 48189-01"
+  },
+  {
+   "asset_id": "cad_KZDR_1CA3DF",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 598 of 598 m executed · IR 48189-01"
+  },
+  {
+   "asset_id": "cad_KZDR_1CA3E0",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 875 of 875 m executed · IR 48190-01"
+  },
+  {
+   "asset_id": "cad_KZDR_1CA6C1",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 150 of 150 m executed · IR 48191-01"
+  },
+  {
+   "asset_id": "cad_KZDR_1CA6C0",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 150 of 150 m executed · IR 48191-01"
+  },
+  {
+   "asset_id": "cad_KZDR_1CA6C2",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 200 of 200 m executed · IR 48239-01"
+  },
+  {
+   "asset_id": "cad_KZDR_1CA6C3",
+   "sub": "KZDR",
+   "status": "Concreted",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 200 of 225 m executed (114+400–114+600) · IR 48240-01"
+  },
+  {
+   "asset_id": "cad_KZDR_1CA6BE",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 513 of 513 m executed · IR 48241-01"
+  },
+  {
+   "asset_id": "cad_KZDR_1CA6BD",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 53 of 53 m executed · IR 48241-01"
+  },
+  {
+   "asset_id": "cad_KZDR_1CA6BF",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 34 of 34 m executed · IR 48241-01"
+  },
+  {
+   "asset_id": "cad_KZDR_1CA6C4",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 400 of 400 m executed · IR 48944-01"
+  }
+ ],
+ "skipped_existing": [
+  {
+   "asset_id": "s02_asset_055",
+   "chart": "Completed & Approved",
+   "database": "Concreted",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-28T14:51:49.468+00:00"
+  },
+  {
+   "asset_id": "asset_002",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_022",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_024",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_028",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_034",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_038",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_040",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_051",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_056",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_059",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_064",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_178",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_068",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_179",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_074",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_078",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_180",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_181",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_089",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_182",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_094",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_183",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_184",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_185",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_186",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_098",
+   "chart": "Joints",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_187",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_188",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_189",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_190",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_191",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_192",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_193",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_194",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_195",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_196",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_197",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_198",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_199",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_200",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_201",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_202",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_203",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_204",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_205",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_206",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_207",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_208",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_209",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_129",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_210",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_211",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_212",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_213",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_214",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_215",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_216",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_217",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_218",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_219",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_220",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_221",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_222",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_223",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_139",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_224",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_225",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_226",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_145",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_150",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_151",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_154",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_157",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_165",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_167",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_169",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "asset_176",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:27:58.548003+00:00"
+  },
+  {
+   "asset_id": "s02_asset_417",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-29T15:36:12.438+00:00"
+  },
+  {
+   "asset_id": "asset_012",
+   "chart": "Concreted",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:39:22.215+00:00"
+  },
+  {
+   "asset_id": "asset_013",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T15:39:47.904+00:00"
+  },
+  {
+   "asset_id": "asset_023",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T14:55:02+00:00"
+  },
+  {
+   "asset_id": "asset_026",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T14:55:02+00:00"
+  },
+  {
+   "asset_id": "asset_031",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-09T14:25:35.657+00:00"
+  },
+  {
+   "asset_id": "asset_036",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T14:55:02+00:00"
+  },
+  {
+   "asset_id": "asset_045",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T14:55:02+00:00"
+  },
+  {
+   "asset_id": "asset_049",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T14:55:02+00:00"
+  },
+  {
+   "asset_id": "asset_057",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T14:55:02+00:00"
+  },
+  {
+   "asset_id": "asset_107",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T14:55:02+00:00"
+  },
+  {
+   "asset_id": "asset_110",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T14:55:02+00:00"
+  },
+  {
+   "asset_id": "asset_113",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T14:55:02+00:00"
+  },
+  {
+   "asset_id": "asset_121",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T14:55:02+00:00"
+  }
+ ]
+}

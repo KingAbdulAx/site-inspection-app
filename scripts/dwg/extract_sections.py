@@ -32,7 +32,7 @@ LAYER_ROLE = {
 }
 PROFILE_ROLES = ('slope', 'platform', 'ground', 'toe_ditch', 'lining', 'side_ditch', 'crest_ditch')
 # S02 labels sections 'Pk=19+825.000', S03 'CH=82+925.000'.
-PK_RE = re.compile(r'\s*(?:Pk|CH)\s*=\s*(\d+)\+(\d+(?:[.,]\d+)?)', re.I)
+PK_RE = re.compile(r'\s*(?:Pk|CH)\s*=\s*(-?)(\d+)\+(\d+(?:[.,]\d+)?)', re.I)
 NUM_RE = re.compile(r'([\d.]+)')
 
 
@@ -73,7 +73,8 @@ def main():
         if t == 'ins' and ex[0] == 'S985':
             m = PK_RE.match(ex[1] or '')
             if m:
-                labels.append((int(m.group(1)) * 1000 + float(m.group(2).replace(',', '.')), float(P[0, 0]), float(P[0, 1])))
+                v = int(m.group(2)) * 1000 + float(m.group(3).replace(',', '.'))
+                labels.append((-v if m.group(1) else v, float(P[0, 0]), float(P[0, 1])))
     labels.sort(key=lambda l: l[2])
     ly = np.array([l[2] for l in labels])
     lx = np.array([l[1] for l in labels])
@@ -226,8 +227,9 @@ def cross_check(sections, plan_path, log):
 
 
 def fmt(m):
+    sign, m = ('-', -m) if m < 0 else ('', m)
     km = int(m // 1000)
-    return f'{km}+{m - km * 1000:07.3f}'
+    return f'{sign}{km}+{m - km * 1000:07.3f}'
 
 
 if __name__ == '__main__':

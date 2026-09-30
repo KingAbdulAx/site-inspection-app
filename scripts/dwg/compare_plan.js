@@ -27,6 +27,7 @@ global.window = global;
 const store = {};
 global.localStorage = { getItem: k => (k in store ? store[k] : null), setItem: (k, v) => { store[k] = String(v); }, removeItem: k => { delete store[k]; } };
 require(path.join(ROOT, 'data/bundle.js'));
+require(path.join(ROOT, 'data/section01_bundle.js'));
 require(path.join(ROOT, 'data/section02_bundle.js'));
 require(path.join(ROOT, 'ui/model.js'));
 const DI = window.DI;
@@ -161,7 +162,7 @@ md += '| App had it, same type | ' + km(metres.same) + ' | ' + (metres.same / to
 md += '| App had it, different type | ' + km(metres.otherType) + ' | ' + (metres.otherType / tot * 100).toFixed(0) + '% |\n';
 md += '| App missed it | ' + km(metres.missing) + ' | ' + (metres.missing / tot * 100).toFixed(0) + '% |\n';
 md += '| App has ditch where the CAD has none | ' + km(metres.extra) + ' | |\n\n';
-md += 'Features: ' + appDitches.length + ' app ditch pieces (median ' + (() => { const L = appDitches.map(f => f.ch1 - f.ch0).sort((x, y) => x - y); return L[L.length >> 1].toFixed(0); })() + ' m long) vs ' + cadDitches.length + ' CAD runs. Corrections: ' + stats.ditch.carried + ' app features take a CAD run (' + stats.ditch.typeChanged + ' change type), ' + stats.ditch.added + ' CAD runs added, ' + stats.ditch.merged + ' duplicate pieces removed, ' + stats.ditch.notInCad + ' pieces not in the CAD removed.\n\n';
+md += 'Features: ' + appDitches.length + ' app ditch pieces (median ' + (() => { const L = appDitches.map(f => f.ch1 - f.ch0).sort((x, y) => x - y); return L.length ? L[L.length >> 1].toFixed(0) : '0'; })() + ' m long) vs ' + cadDitches.length + ' CAD runs. Corrections: ' + stats.ditch.carried + ' app features take a CAD run (' + stats.ditch.typeChanged + ' change type), ' + stats.ditch.added + ' CAD runs added, ' + stats.ditch.merged + ' duplicate pieces removed, ' + stats.ditch.notInCad + ' pieces not in the CAD removed.\n\n';
 md += 'Start shift of carried features (CAD − app): median ' + med(stats.ditch.startErr).toFixed(1) + ' m, 90% within ' + absq(stats.ditch.startErr, 0.9).toFixed(0) + ' m.\n\n';
 const td = [...typeDiff.entries()].sort((a, b) => b[1] - a[1]);
 if (td.length) { md += '### Where the type differed (app → CAD)\n\n| Change | length |\n|---|---|\n'; td.slice(0, 20).forEach(([k, v]) => { md += '| ' + k + ' | ' + v + ' m |\n'; }); md += '\n'; }

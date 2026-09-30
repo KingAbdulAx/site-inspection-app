@@ -14,6 +14,7 @@ global.localStorage = {
   removeItem: k => { delete store[k]; }
 };
 require(path.join(root, 'data/bundle.js'));
+require(path.join(root, 'data/section01_bundle.js'));
 require(path.join(root, 'data/section02_bundle.js'));
 require(path.join(root, 'ui/model.js'));
 const DI = window.DI;
@@ -39,7 +40,8 @@ section('Formatting and parsing chainage', () => {
 section('Features load for both sub-sections with lanes and certainty', () => {
   ok(DI.data.bySub.KZDR.length > 800, 'KZDR features: ' + DI.data.bySub.KZDR.length);
   ok(DI.data.bySub.DWKZ.length > 1300, 'DWKZ features: ' + DI.data.bySub.DWKZ.length);
-  ok(!DI.hasData('KNDW') && !DI.hasData('GYDT'), 'unprocessed sub-sections are present and empty');
+  ok(DI.hasData('KNDW') && DI.data.bySub.KNDW.length > 300, 'KNDW features from the S01 CAD: ' + DI.data.bySub.KNDW.length);
+  ok(!DI.hasData('DRMR') && !DI.hasData('GYDT'), 'unprocessed sub-sections are present and empty');
   const all = DI.data.features;
   ok(all.every(f => f.ch0 <= f.ch1), 'start before end');
   ok(all.every(f => ['exact', 'derived', 'label'].includes(f.cert)), 'every feature has a certainty');
@@ -58,7 +60,10 @@ section('Features load for both sub-sections with lanes and certainty', () => {
 section('Sub-section lookup', () => {
   ok(DI.subAt('KM', 111020).id === 'KZDR', 'KZDR');
   ok(DI.subAt('KM', 50000).id === 'DWKZ', 'DWKZ');
-  ok(DI.subAt('KM', 5000) === null, 'Kano–Dawanau has no chainage yet');
+  ok(DI.subAt('KM', 5000).id === 'KNDW', 'KNDW');
+  ok(DI.subAt('KM', -1107).id === 'KNDW', 'KNDW before Kano\'s zero');
+  ok(DI.fmtCh(-1107) === '-1+107' && DI.parseCh('-1+107') === -1107, 'negative chainage reads -1+107');
+  ok(DI.subAt('KM', 130000) === null, 'past KZDR: no chainage yet');
   ok(DI.subAt('KD', 111020) === null, 'branch line is separate');
 });
 
@@ -82,6 +87,21 @@ section('Contractor claims', () => {
   ok(DI.data.irs[f.id].every((r, i, a) => i === 0 || a[i - 1].date <= r.date), 'IRs in date order');
 });
 
+section('Culverts: precast ladders from the execution charts', () => {
+  const box = DI.data.features.find(f => f.code === 'BC'), pipe = DI.data.features.find(f => f.code === 'PC');
+  ok(box.ladder.join('>') === 'Not started>Excavation>Bedding>Installed>Apron>Wing walls>Joints>Completed', 'box: complete after paint (joints, then completed)');
+  ok(pipe.ladder.join('>') === 'Not started>Excavation>Bedding>Installed>Haunched>Apron>Wing walls>Completed', 'pipe: haunched; complete after joints');
+  // a record made on the old cast-in-place ladder (7 steps, 6 = Completed) is said on the new one, once
+  const old = { id: 'old-1', kind: 'stage', featureId: box.id, stage: 6, at: '2026-01-01T00:00:00Z', by: 'x' };
+  const old2 = { id: 'old-2', kind: 'stage', featureId: pipe.id, stage: 4, at: '2026-01-01T00:00:00Z', by: 'x' };
+  DI.records.push(old, old2);
+  ok(DI.migrateCulvertStages() === 2, 'two old culvert records migrated');
+  ok(old.stage === box.ladder.length - 1 && old.stageName === 'Completed', 'old Completed stays Completed');
+  ok(old2.stage === pipe.ladder.indexOf('Installed'), 'old Shuttered reads Installed');
+  ok(DI.migrateCulvertStages() === 0, 'migration runs once');
+  DI.records.splice(DI.records.indexOf(old), 1); DI.records.splice(DI.records.indexOf(old2), 1);
+});
+
 section('Append-only records: undo never deletes', () => {
   const f = DI.data.bySub.KZDR.find(x => x.kind === 'cross');
   const before = DI.records.length;
@@ -95,7 +115,7 @@ section('Append-only records: undo never deletes', () => {
   ok(DI.voidRecord(r2.id) === null, 'cannot void twice');
   ok(DI.records.find(r => r.id === r1.id).stage === 2, 'first record untouched');
   const lg = JSON.parse(store.KMD_DRAINAGE_INSPECTIONS_SEC03_V1)[f.id];
-  ok(lg && lg.status === 'Blinding' && lg.source === 'walk', 'mirrored to the sync store');
+  ok(lg && lg.status === f.ladder[2] && lg.source === 'walk', 'mirrored to the sync store: ' + (lg && lg.status));
   ok(!DI.seenOf(f.id).office, 'own mirror is not mistaken for an office record');
 });
 

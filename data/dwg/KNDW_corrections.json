@@ -1,0 +1,7061 @@
+{
+ "kind": "kmd-base-corrections",
+ "version": 1,
+ "exported_at": "2026-09-30T09:23:51.546Z",
+ "by": "CAD extraction",
+ "source": {
+  "drainage": "/tmp/claude-0/-home-user-site-inspection-app/c9722d10-1251-55f6-8bc5-5e7312ce95ff/scratchpad/dw1/S01-DRN-LONG.dxf",
+  "axis": "/tmp/claude-0/-home-user-site-inspection-app/c9722d10-1251-55f6-8bc5-5e7312ce95ff/scratchpad/dw1/S01-TRA-PLAT.dxf"
+ },
+ "records": [
+  {
+   "id": "cad-KNDW-00001",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D77",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 16647.36,
+    "ch1": 17486.59,
+    "side": "R",
+    "offsetM": 8.79,
+    "cert": "exact",
+    "sheet": "DW-03015-05",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51D77"
+  },
+  {
+   "id": "cad-KNDW-00002",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_28C55",
+   "sub": "KNDW",
+   "set": {
+    "ch0": -2629.73,
+    "ch1": -1844.2,
+    "side": "L",
+    "offsetM": 5.56,
+    "cert": "exact",
+    "sheet": "DW-03001",
+    "preset": "T1"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE1 handle 28C55 · TRAPEZOIDAL SIDE DITCH H=0.75M / B=0.75M · check: offset varies 4.53–29.93 m"
+  },
+  {
+   "id": "cad-KNDW-00003",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_2852E",
+   "sub": "KNDW",
+   "set": {
+    "ch0": -2611.03,
+    "ch1": -1843.94,
+    "side": "R",
+    "offsetM": 3.89,
+    "cert": "exact",
+    "sheet": "DW-03001",
+    "preset": "T1"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE1 handle 2852E · TRAPEZOIDAL SIDE DITCH H=0.75M / B=0.75M · check: crosses the axis"
+  },
+  {
+   "id": "cad-KNDW-00004",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_6641A",
+   "sub": "KNDW",
+   "set": {
+    "ch0": -24.88,
+    "ch1": 519.49,
+    "side": "L",
+    "offsetM": 10.13,
+    "cert": "exact",
+    "sheet": "DW-03003",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 6641A"
+  },
+  {
+   "id": "cad-KNDW-00005",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D74",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 12752.22,
+    "ch1": 13273.86,
+    "side": "R",
+    "offsetM": 9.92,
+    "cert": "exact",
+    "sheet": "DW-03012",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51D74"
+  },
+  {
+   "id": "cad-KNDW-00006",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C59",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 7496.19,
+    "ch1": 7973.77,
+    "side": "R",
+    "offsetM": 9.67,
+    "cert": "exact",
+    "sheet": "DW-03008",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51C59"
+  },
+  {
+   "id": "cad-KNDW-00007",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_28464",
+   "sub": "KNDW",
+   "set": {
+    "ch0": -1844.22,
+    "ch1": -1374.49,
+    "side": "L",
+    "offsetM": 4.1,
+    "cert": "exact",
+    "sheet": "DW-03001",
+    "preset": "T1"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE1 handle 28464"
+  },
+  {
+   "id": "cad-KNDW-00008",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_2852F",
+   "sub": "KNDW",
+   "set": {
+    "ch0": -1843.94,
+    "ch1": -1375.35,
+    "side": "R",
+    "offsetM": 4.1,
+    "cert": "exact",
+    "sheet": "DW-03001",
+    "preset": "T1"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE1 handle 2852F"
+  },
+  {
+   "id": "cad-KNDW-00009",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_526E0",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 18089.99,
+    "ch1": 18549.17,
+    "side": "L",
+    "offsetM": 11.05,
+    "cert": "exact",
+    "sheet": "DW-03016",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 526E0"
+  },
+  {
+   "id": "cad-KNDW-00010",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C3B",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 2450.11,
+    "ch1": 2874.83,
+    "side": "R",
+    "offsetM": 8.83,
+    "cert": "exact",
+    "sheet": "DW-03004",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51C3B"
+  },
+  {
+   "id": "cad-KNDW-00011",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D7A",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 12300.01,
+    "ch1": 12699.97,
+    "side": "L",
+    "offsetM": 10.29,
+    "cert": "exact",
+    "sheet": "DW-03011",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51D7A"
+  },
+  {
+   "id": "cad-KNDW-00012",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C6F",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 15505.89,
+    "ch1": 15899.99,
+    "side": "R",
+    "offsetM": 8.66,
+    "cert": "exact",
+    "sheet": "DW-03014",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51C6F"
+  },
+  {
+   "id": "cad-KNDW-00013",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C6A",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 10339.41,
+    "ch1": 10711.13,
+    "side": "R",
+    "offsetM": 9.16,
+    "cert": "exact",
+    "sheet": "DW-03010",
+    "preset": "T4"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE4 handle 51C6A"
+  },
+  {
+   "id": "cad-KNDW-00014",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51CAE",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 3639.79,
+    "ch1": 4000,
+    "side": "R",
+    "offsetM": 3.25,
+    "cert": "exact",
+    "sheet": "DW-03005",
+    "preset": "T9"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE9 handle 51CAE · HALF ROUND LINED DITCH L=360M / I=0.85%"
+  },
+  {
+   "id": "cad-KNDW-00015",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51CCC",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 5474.97,
+    "ch1": 5824.97,
+    "side": "R",
+    "offsetM": 10.3,
+    "cert": "exact",
+    "sheet": "DW-03007",
+    "preset": "T9"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE9 handle 51CCC · HALF ROUND LINED DITCH L=350M / I=0.3%"
+  },
+  {
+   "id": "cad-KNDW-00016",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C8C",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 11275.12,
+    "ch1": 11613,
+    "side": "L",
+    "offsetM": 9.6,
+    "cert": "exact",
+    "sheet": "DW-03011",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51C8C"
+  },
+  {
+   "id": "cad-KNDW-00017",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D1E",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 15150,
+    "ch1": 15475,
+    "side": "L",
+    "offsetM": 3.25,
+    "cert": "exact",
+    "sheet": "DW-03013",
+    "preset": "T9"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE9 handle 51D1E · HALF ROUND LINED DITCH L=325M / I=0.5%"
+  },
+  {
+   "id": "cad-KNDW-00018",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C42",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 1450.2,
+    "ch1": 1756.38,
+    "side": "R",
+    "offsetM": 10.88,
+    "cert": "exact",
+    "sheet": "DW-03004",
+    "preset": "T4"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE4 handle 51C42"
+  },
+  {
+   "id": "cad-KNDW-00019",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C52",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 2874.85,
+    "ch1": 3178.44,
+    "side": "R",
+    "offsetM": 10.26,
+    "cert": "exact",
+    "sheet": "DW-03005",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 51C52 · check: offset varies 9.01–27.12 m"
+  },
+  {
+   "id": "cad-KNDW-00020",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C8D",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 11620.07,
+    "ch1": 11922.41,
+    "side": "L",
+    "offsetM": 10.65,
+    "cert": "exact",
+    "sheet": "DW-03011",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 51C8D"
+  },
+  {
+   "id": "cad-KNDW-00021",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C75",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 14498.04,
+    "ch1": 14799.6,
+    "side": "R",
+    "offsetM": 10.18,
+    "cert": "exact",
+    "sheet": "DW-03013",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 51C75"
+  },
+  {
+   "id": "cad-KNDW-00022",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_65F7D",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 17774.96,
+    "ch1": 18071.92,
+    "side": "R",
+    "offsetM": 11.45,
+    "cert": "exact",
+    "sheet": "DW-03015-05",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 65F7D"
+  },
+  {
+   "id": "cad-KNDW-00023",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_520A5",
+   "sub": "KNDW",
+   "set": {
+    "ch0": -475.74,
+    "ch1": -190.01,
+    "side": "L",
+    "offsetM": 10.18,
+    "cert": "exact",
+    "sheet": "DW-03002-05",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 520A5"
+  },
+  {
+   "id": "cad-KNDW-00024",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D58",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 3639.8,
+    "ch1": 3924.86,
+    "side": "L",
+    "offsetM": 12.75,
+    "cert": "exact",
+    "sheet": "DW-03005",
+    "preset": "T8"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE8 handle 51D58 · HALF ROUND LINED BENCH DITCH L=285M / I=0.85%"
+  },
+  {
+   "id": "cad-KNDW-00025",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D04",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 7225,
+    "ch1": 7500,
+    "side": "L",
+    "offsetM": 3.25,
+    "cert": "exact",
+    "sheet": "DW-03008",
+    "preset": "T9"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE9 handle 51D04 · HALF ROUND LINED DITCH L=275M / I=0.4%"
+  },
+  {
+   "id": "cad-KNDW-00026",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C79",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 16226.04,
+    "ch1": 16499.77,
+    "side": "R",
+    "offsetM": 11.68,
+    "cert": "exact",
+    "sheet": "DW-03014",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 51C79"
+  },
+  {
+   "id": "cad-KNDW-00027",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C64",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 9050.03,
+    "ch1": 9323.37,
+    "side": "R",
+    "offsetM": 10.39,
+    "cert": "exact",
+    "sheet": "DW-03009",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51C64"
+  },
+  {
+   "id": "cad-KNDW-00028",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C7B",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 15949.96,
+    "ch1": 16219.83,
+    "side": "R",
+    "offsetM": 10.03,
+    "cert": "exact",
+    "sheet": "DW-03014",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51C7B"
+  },
+  {
+   "id": "cad-KNDW-00029",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C8F",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 11927.32,
+    "ch1": 12197.05,
+    "side": "L",
+    "offsetM": 11.16,
+    "cert": "exact",
+    "sheet": "DW-03011",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 51C8F"
+  },
+  {
+   "id": "cad-KNDW-00030",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D59",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 3639.8,
+    "ch1": 3904.8,
+    "side": "R",
+    "offsetM": 12.75,
+    "cert": "exact",
+    "sheet": "DW-03005",
+    "preset": "T8"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE8 handle 51D59 · HALF ROUND LINED BENCH DITCH L=265M / I=0.85%"
+  },
+  {
+   "id": "cad-KNDW-00031",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51F5A",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 6617.07,
+    "ch1": 6875,
+    "side": "L",
+    "offsetM": 3.25,
+    "cert": "exact",
+    "sheet": "DW-03007",
+    "preset": "T9"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE9 handle 51F5A · HALF ROUND LINED DITCH L=258M / I=0.1%"
+  },
+  {
+   "id": "cad-KNDW-00032",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D78",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 15043.13,
+    "ch1": 15290.26,
+    "side": "R",
+    "offsetM": 12.57,
+    "cert": "exact",
+    "sheet": "DW-03013",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51D78 · HALF ROUND LINED BENCH DITCH L=80M / I=0.5% · check: offset varies 11.25–29.56 m"
+  },
+  {
+   "id": "cad-KNDW-00033",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C70",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 11242.61,
+    "ch1": 11475.68,
+    "side": "R",
+    "offsetM": 10.05,
+    "cert": "exact",
+    "sheet": "DW-03011",
+    "preset": "T4"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE4 handle 51C70"
+  },
+  {
+   "id": "cad-KNDW-00034",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C3A",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 1767.67,
+    "ch1": 1999.48,
+    "side": "R",
+    "offsetM": 11.31,
+    "cert": "exact",
+    "sheet": "DW-03004",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51C3A"
+  },
+  {
+   "id": "cad-KNDW-00035",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C53",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 4500.02,
+    "ch1": 4724.75,
+    "side": "R",
+    "offsetM": 10.27,
+    "cert": "exact",
+    "sheet": "DW-03006",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51C53"
+  },
+  {
+   "id": "cad-KNDW-00036",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_5349D",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 19575.7,
+    "ch1": 19800,
+    "side": "R",
+    "offsetM": 8.74,
+    "cert": "exact",
+    "sheet": "DW-03017",
+    "preset": "T4"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE4 handle 5349D"
+  },
+  {
+   "id": "cad-KNDW-00037",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D72",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 13363.09,
+    "ch1": 13575,
+    "side": "R",
+    "offsetM": 10.4,
+    "cert": "exact",
+    "sheet": "DW-03012",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 51D72"
+  },
+  {
+   "id": "cad-KNDW-00038",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_2984D",
+   "sub": "KNDW",
+   "set": {
+    "ch0": -2627.7,
+    "ch1": -2416.09,
+    "side": "L",
+    "offsetM": 10.3,
+    "cert": "exact",
+    "sheet": "DW-03001",
+    "preset": "T5"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE5 handle 2984D"
+  },
+  {
+   "id": "cad-KNDW-00039",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C4E",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 524.47,
+    "ch1": 734.98,
+    "side": "L",
+    "offsetM": 10.48,
+    "cert": "exact",
+    "sheet": "DW-03003",
+    "preset": "T4"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE4 handle 51C4E"
+  },
+  {
+   "id": "cad-KNDW-00040",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51CFA",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 14020.02,
+    "ch1": 14225.02,
+    "side": "R",
+    "offsetM": 9.84,
+    "cert": "exact",
+    "sheet": "DW-03013",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51CFA"
+  },
+  {
+   "id": "cad-KNDW-00041",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51F58",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 6875,
+    "ch1": 7075,
+    "side": "L",
+    "offsetM": 3.25,
+    "cert": "exact",
+    "sheet": "DW-03007",
+    "preset": "T9"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE9 handle 51F58 · HALF ROUND LINED DITCH L=200M / I=0.4%"
+  },
+  {
+   "id": "cad-KNDW-00042",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51CFB",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 9625,
+    "ch1": 9825,
+    "side": "L",
+    "offsetM": 3.25,
+    "cert": "exact",
+    "sheet": "DW-03009",
+    "preset": "T9"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE9 handle 51CFB · HALF ROUND LINED DITCH L=200M / I=0.30%"
+  },
+  {
+   "id": "cad-KNDW-00043",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D09",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 10200,
+    "ch1": 10400,
+    "side": "R",
+    "offsetM": 3.25,
+    "cert": "exact",
+    "sheet": "DW-03010",
+    "preset": "T9"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE9 handle 51D09 · HALF ROUND LINED DITCH L=200M / I=0.75%"
+  },
+  {
+   "id": "cad-KNDW-00044",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C5F",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 8401.67,
+    "ch1": 8594.62,
+    "side": "R",
+    "offsetM": 10.73,
+    "cert": "exact",
+    "sheet": "DW-03009",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 51C5F"
+  },
+  {
+   "id": "cad-KNDW-00045",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_2A371",
+   "sub": "KNDW",
+   "set": {
+    "ch0": -1645.16,
+    "ch1": -1460,
+    "side": "R",
+    "offsetM": 10.42,
+    "cert": "exact",
+    "sheet": "DW-03001",
+    "preset": "T11"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE11 handle 2A371"
+  },
+  {
+   "id": "cad-KNDW-00046",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C4A",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 1025.02,
+    "ch1": 1209.35,
+    "side": "L",
+    "offsetM": 9.92,
+    "cert": "exact",
+    "sheet": "DW-03003",
+    "preset": "T4"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE4 handle 51C4A"
+  },
+  {
+   "id": "cad-KNDW-00047",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_526E1",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 18549.91,
+    "ch1": 18734.12,
+    "side": "L",
+    "offsetM": 4.1,
+    "cert": "exact",
+    "sheet": "DW-03016",
+    "preset": "T1"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE1 handle 526E1"
+  },
+  {
+   "id": "cad-KNDW-00048",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_52042",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 6650.09,
+    "ch1": 6832.15,
+    "side": "L",
+    "offsetM": 13.7,
+    "cert": "exact",
+    "sheet": "DW-03007",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 52042"
+  },
+  {
+   "id": "cad-KNDW-00049",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C77",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 14859.84,
+    "ch1": 15039.29,
+    "side": "R",
+    "offsetM": 11.13,
+    "cert": "exact",
+    "sheet": "DW-03013",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 51C77"
+  },
+  {
+   "id": "cad-KNDW-00050",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_65FA6",
+   "sub": "KNDW",
+   "set": {
+    "ch0": -1003.88,
+    "ch1": -825,
+    "side": "R",
+    "offsetM": 8.52,
+    "cert": "exact",
+    "sheet": "DW-03002-05",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 65FA6"
+  },
+  {
+   "id": "cad-KNDW-00051",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C8A",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 10346.2,
+    "ch1": 10524.92,
+    "side": "L",
+    "offsetM": 10.51,
+    "cert": "exact",
+    "sheet": "DW-03010",
+    "preset": "T4"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE4 handle 51C8A"
+  },
+  {
+   "id": "cad-KNDW-00052",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C92",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 15498.8,
+    "ch1": 15676.03,
+    "side": "L",
+    "offsetM": 9.63,
+    "cert": "exact",
+    "sheet": "DW-03014",
+    "preset": "T4"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE4 handle 51C92"
+  },
+  {
+   "id": "cad-KNDW-00053",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_65F7C",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 17549.96,
+    "ch1": 17725.13,
+    "side": "R",
+    "offsetM": 10.64,
+    "cert": "exact",
+    "sheet": "DW-03015-05",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 65F7C"
+  },
+  {
+   "id": "cad-KNDW-00054",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C81",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 5900,
+    "ch1": 6075.03,
+    "side": "L",
+    "offsetM": 9.95,
+    "cert": "exact",
+    "sheet": "DW-03007",
+    "preset": "T4"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE4 handle 51C81"
+  },
+  {
+   "id": "cad-KNDW-00055",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C6D",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 11027.63,
+    "ch1": 11200.21,
+    "side": "R",
+    "offsetM": 10.24,
+    "cert": "exact",
+    "sheet": "DW-03010",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51C6D"
+  },
+  {
+   "id": "cad-KNDW-00056",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51DC3",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 3017.68,
+    "ch1": 3188.75,
+    "side": "L",
+    "offsetM": 18.9,
+    "cert": "exact",
+    "sheet": "DW-03005",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 51DC3 · check: offset varies 11.11–27.86 m"
+  },
+  {
+   "id": "cad-KNDW-00057",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C5B",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 8225.96,
+    "ch1": 8393.9,
+    "side": "R",
+    "offsetM": 10.86,
+    "cert": "exact",
+    "sheet": "DW-03008",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 51C5B"
+  },
+  {
+   "id": "cad-KNDW-00058",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C73",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 14322.01,
+    "ch1": 14487.93,
+    "side": "R",
+    "offsetM": 10.17,
+    "cert": "exact",
+    "sheet": "DW-03013",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 51C73"
+  },
+  {
+   "id": "cad-KNDW-00059",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C6B",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 10850.05,
+    "ch1": 11013.33,
+    "side": "R",
+    "offsetM": 9.77,
+    "cert": "exact",
+    "sheet": "DW-03010",
+    "preset": "T4"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE4 handle 51C6B"
+  },
+  {
+   "id": "cad-KNDW-00060",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C89",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 10175,
+    "ch1": 10334.03,
+    "side": "L",
+    "offsetM": 12.34,
+    "cert": "exact",
+    "sheet": "DW-03010",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 51C89"
+  },
+  {
+   "id": "cad-KNDW-00061",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C80",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 5741.88,
+    "ch1": 5900,
+    "side": "L",
+    "offsetM": 12.31,
+    "cert": "exact",
+    "sheet": "DW-03007",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 51C80"
+  },
+  {
+   "id": "cad-KNDW-00062",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C66",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 9420.09,
+    "ch1": 9574.2,
+    "side": "R",
+    "offsetM": 11.67,
+    "cert": "exact",
+    "sheet": "DW-03009",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51C66"
+  },
+  {
+   "id": "cad-KNDW-00063",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51F6E",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 6149.98,
+    "ch1": 6300,
+    "side": "R",
+    "offsetM": 3.24,
+    "cert": "exact",
+    "sheet": "DW-03007",
+    "preset": "T9"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE9 handle 51F6E · HALF ROUND LINED DITCH L=155M / I=0.1%"
+  },
+  {
+   "id": "cad-KNDW-00064",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C9B",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 1674.97,
+    "ch1": 1824.97,
+    "side": "R",
+    "offsetM": 4.49,
+    "cert": "exact",
+    "sheet": "DW-03004",
+    "preset": "T9"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE9 handle 51C9B · HALF ROUND LINED DITCH L=150M / I=0.55%"
+  },
+  {
+   "id": "cad-KNDW-00065",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C3F",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 1999.48,
+    "ch1": 2148.78,
+    "side": "R",
+    "offsetM": 8.47,
+    "cert": "exact",
+    "sheet": "DW-03004",
+    "preset": "T4"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE4 handle 51C3F"
+  },
+  {
+   "id": "cad-KNDW-00066",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C78",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 15352.41,
+    "ch1": 15498.94,
+    "side": "R",
+    "offsetM": 12.93,
+    "cert": "exact",
+    "sheet": "DW-03014",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51C78"
+  },
+  {
+   "id": "cad-KNDW-00067",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C57",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 7224.72,
+    "ch1": 7369.15,
+    "side": "R",
+    "offsetM": 11.9,
+    "cert": "exact",
+    "sheet": "DW-03008",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51C57"
+  },
+  {
+   "id": "cad-KNDW-00068",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C43",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 849.4,
+    "ch1": 990.69,
+    "side": "L",
+    "offsetM": 9.59,
+    "cert": "exact",
+    "sheet": "DW-03003",
+    "preset": "T4"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE4 handle 51C43"
+  },
+  {
+   "id": "cad-KNDW-00069",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D5C",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 15235.17,
+    "ch1": 15375,
+    "side": "L",
+    "offsetM": 12.75,
+    "cert": "exact",
+    "sheet": "DW-03013",
+    "preset": "T8"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE8 handle 51D5C · HALF ROUND LINED BENCH DITCH L=140M / I=0.5%"
+  },
+  {
+   "id": "cad-KNDW-00070",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C5A",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 7975,
+    "ch1": 8112.8,
+    "side": "R",
+    "offsetM": 10.48,
+    "cert": "exact",
+    "sheet": "DW-03008",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51C5A"
+  },
+  {
+   "id": "cad-KNDW-00071",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C7D",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 16500.31,
+    "ch1": 16635.67,
+    "side": "R",
+    "offsetM": 11.02,
+    "cert": "exact",
+    "sheet": "DW-03014",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51C7D"
+  },
+  {
+   "id": "cad-KNDW-00072",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51F55",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 6839.51,
+    "ch1": 6974.75,
+    "side": "R",
+    "offsetM": 14.91,
+    "cert": "exact",
+    "sheet": "DW-03007",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 51F55"
+  },
+  {
+   "id": "cad-KNDW-00073",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C88",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 10040.2,
+    "ch1": 10175,
+    "side": "L",
+    "offsetM": 11.96,
+    "cert": "exact",
+    "sheet": "DW-03010",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51C88"
+  },
+  {
+   "id": "cad-KNDW-00074",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C6C",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 10717.48,
+    "ch1": 10850,
+    "side": "R",
+    "offsetM": 9.88,
+    "cert": "exact",
+    "sheet": "DW-03010",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 51C6C"
+  },
+  {
+   "id": "cad-KNDW-00075",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_66429",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 17493.17,
+    "ch1": 17624.97,
+    "side": "L",
+    "offsetM": 10.64,
+    "cert": "exact",
+    "sheet": "DW-03015-05",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 66429"
+  },
+  {
+   "id": "cad-KNDW-00076",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C48",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 1275.73,
+    "ch1": 1405.57,
+    "side": "L",
+    "offsetM": 9.2,
+    "cert": "exact",
+    "sheet": "DW-03003",
+    "preset": "T4"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE4 handle 51C48"
+  },
+  {
+   "id": "cad-KNDW-00077",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C68",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 9691.29,
+    "ch1": 9818.83,
+    "side": "R",
+    "offsetM": 13.49,
+    "cert": "exact",
+    "sheet": "DW-03009",
+    "preset": "T4"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE4 handle 51C68"
+  },
+  {
+   "id": "cad-KNDW-00078",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C4D",
+   "sub": "KNDW",
+   "set": {
+    "ch0": -187.3,
+    "ch1": -61.14,
+    "side": "L",
+    "offsetM": 9.97,
+    "cert": "exact",
+    "sheet": "DW-03002-05",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 51C4D"
+  },
+  {
+   "id": "cad-KNDW-00079",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C41",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 2174.34,
+    "ch1": 2300.18,
+    "side": "R",
+    "offsetM": 10.22,
+    "cert": "exact",
+    "sheet": "DW-03004",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51C41"
+  },
+  {
+   "id": "cad-KNDW-00080",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C62",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 8925.07,
+    "ch1": 9050.03,
+    "side": "R",
+    "offsetM": 9.74,
+    "cert": "exact",
+    "sheet": "DW-03009",
+    "preset": "T4"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE4 handle 51C62"
+  },
+  {
+   "id": "cad-KNDW-00081",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51F57",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 6074.98,
+    "ch1": 6199.78,
+    "side": "L",
+    "offsetM": 11.44,
+    "cert": "exact",
+    "sheet": "DW-03007",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51F57"
+  },
+  {
+   "id": "cad-KNDW-00082",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_5275D",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 7100.43,
+    "ch1": 7224.72,
+    "side": "R",
+    "offsetM": 10.05,
+    "cert": "exact",
+    "sheet": "DW-03008",
+    "preset": "T4"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE4 handle 5275D"
+  },
+  {
+   "id": "cad-KNDW-00083",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_52040",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 6607.41,
+    "ch1": 6724.88,
+    "side": "R",
+    "offsetM": 13.87,
+    "cert": "exact",
+    "sheet": "DW-03007",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 52040"
+  },
+  {
+   "id": "cad-KNDW-00084",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_526EA",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 18536.8,
+    "ch1": 18653.61,
+    "side": "R",
+    "offsetM": 4.1,
+    "cert": "exact",
+    "sheet": "DW-03016",
+    "preset": "T1"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE1 handle 526EA"
+  },
+  {
+   "id": "cad-KNDW-00085",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D61",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 4175.01,
+    "ch1": 4290.03,
+    "side": "R",
+    "offsetM": 9.88,
+    "cert": "exact",
+    "sheet": "DW-03006",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51D61"
+  },
+  {
+   "id": "cad-KNDW-00086",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51F54",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 6200.18,
+    "ch1": 6313.79,
+    "side": "L",
+    "offsetM": 13.6,
+    "cert": "exact",
+    "sheet": "DW-03007",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 51F54"
+  },
+  {
+   "id": "cad-KNDW-00087",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C63",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 8813.37,
+    "ch1": 8924.29,
+    "side": "R",
+    "offsetM": 10.22,
+    "cert": "exact",
+    "sheet": "DW-03009",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51C63"
+  },
+  {
+   "id": "cad-KNDW-00088",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51DCE",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 2175,
+    "ch1": 2284.75,
+    "side": "L",
+    "offsetM": 10.73,
+    "cert": "exact",
+    "sheet": "DW-03004",
+    "preset": "T4"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE4 handle 51DCE"
+  },
+  {
+   "id": "cad-KNDW-00089",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C4C",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 740.9,
+    "ch1": 848.05,
+    "side": "L",
+    "offsetM": 9.69,
+    "cert": "exact",
+    "sheet": "DW-03003",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51C4C"
+  },
+  {
+   "id": "cad-KNDW-00090",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C5C",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 8118.18,
+    "ch1": 8224.88,
+    "side": "R",
+    "offsetM": 10.23,
+    "cert": "exact",
+    "sheet": "DW-03008",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51C5C"
+  },
+  {
+   "id": "cad-KNDW-00091",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_52041",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 6724.79,
+    "ch1": 6830.81,
+    "side": "R",
+    "offsetM": 14.75,
+    "cert": "exact",
+    "sheet": "DW-03007",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 52041"
+  },
+  {
+   "id": "cad-KNDW-00092",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C72",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 11919.91,
+    "ch1": 12024.93,
+    "side": "R",
+    "offsetM": 11.08,
+    "cert": "exact",
+    "sheet": "DW-03011",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 51C72"
+  },
+  {
+   "id": "cad-KNDW-00093",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51CAD",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 3050,
+    "ch1": 3154.23,
+    "side": "R",
+    "offsetM": 3.25,
+    "cert": "exact",
+    "sheet": "DW-03005",
+    "preset": "T9"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE9 handle 51CAD · HALF ROUND LINED DITCH L=104M / I=0.4%"
+  },
+  {
+   "id": "cad-KNDW-00094",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C67",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 9575.09,
+    "ch1": 9677.82,
+    "side": "R",
+    "offsetM": 11.81,
+    "cert": "exact",
+    "sheet": "DW-03009",
+    "preset": "T4"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE4 handle 51C67"
+  },
+  {
+   "id": "cad-KNDW-00095",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C71",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 12024.93,
+    "ch1": 12125,
+    "side": "R",
+    "offsetM": 10.33,
+    "cert": "exact",
+    "sheet": "DW-03011",
+    "preset": "T4"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE4 handle 51C71"
+  },
+  {
+   "id": "cad-KNDW-00096",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D60",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 4080.02,
+    "ch1": 4175.01,
+    "side": "R",
+    "offsetM": 10.53,
+    "cert": "exact",
+    "sheet": "DW-03005",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51D60"
+  },
+  {
+   "id": "cad-KNDW-00097",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51CF9",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 14225.02,
+    "ch1": 14316.96,
+    "side": "R",
+    "offsetM": 9.4,
+    "cert": "exact",
+    "sheet": "DW-03013",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 51CF9"
+  },
+  {
+   "id": "cad-KNDW-00098",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C94",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 15336.2,
+    "ch1": 15425.02,
+    "side": "L",
+    "offsetM": 14.27,
+    "cert": "exact",
+    "sheet": "DW-03013",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51C94"
+  },
+  {
+   "id": "cad-KNDW-00099",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51F56",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 6974.75,
+    "ch1": 7061.17,
+    "side": "R",
+    "offsetM": 13.71,
+    "cert": "exact",
+    "sheet": "DW-03008",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51F56"
+  },
+  {
+   "id": "cad-KNDW-00100",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C46",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 1681.25,
+    "ch1": 1767.56,
+    "side": "L",
+    "offsetM": 13.32,
+    "cert": "exact",
+    "sheet": "DW-03004",
+    "preset": "T4"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE4 handle 51C46"
+  },
+  {
+   "id": "cad-KNDW-00101",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C85",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 5485.1,
+    "ch1": 5568.19,
+    "side": "L",
+    "offsetM": 13.41,
+    "cert": "exact",
+    "sheet": "DW-03006",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 51C85"
+  },
+  {
+   "id": "cad-KNDW-00102",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_5206C",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 5350.13,
+    "ch1": 5433.08,
+    "side": "R",
+    "offsetM": 7.87,
+    "cert": "exact",
+    "sheet": "DW-03006",
+    "preset": "T4"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE4 handle 5206C"
+  },
+  {
+   "id": "cad-KNDW-00103",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D71",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 13273.87,
+    "ch1": 13356.6,
+    "side": "R",
+    "offsetM": 10.32,
+    "cert": "exact",
+    "sheet": "DW-03012",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 51D71"
+  },
+  {
+   "id": "cad-KNDW-00104",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_52044",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 6228.04,
+    "ch1": 6308.34,
+    "side": "R",
+    "offsetM": 13.29,
+    "cert": "exact",
+    "sheet": "DW-03007",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 52044"
+  },
+  {
+   "id": "cad-KNDW-00105",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D5B",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 15235.18,
+    "ch1": 15314.8,
+    "side": "R",
+    "offsetM": 12.75,
+    "cert": "exact",
+    "sheet": "DW-03013",
+    "preset": "T8"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE8 handle 51D5B"
+  },
+  {
+   "id": "cad-KNDW-00106",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C91",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 15175,
+    "ch1": 15254.44,
+    "side": "L",
+    "offsetM": 13.97,
+    "cert": "exact",
+    "sheet": "DW-03013",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51C91"
+  },
+  {
+   "id": "cad-KNDW-00107",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C3C",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 2371.96,
+    "ch1": 2450.11,
+    "side": "R",
+    "offsetM": 9.17,
+    "cert": "exact",
+    "sheet": "DW-03004",
+    "preset": "T13"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE13 handle 51C3C"
+  },
+  {
+   "id": "cad-KNDW-00108",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D5F",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 3999.51,
+    "ch1": 4076.39,
+    "side": "R",
+    "offsetM": 11.61,
+    "cert": "exact",
+    "sheet": "DW-03005",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51D5F"
+  },
+  {
+   "id": "cad-KNDW-00109",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C56",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 5501.88,
+    "ch1": 5578.72,
+    "side": "R",
+    "offsetM": 13.84,
+    "cert": "exact",
+    "sheet": "DW-03006",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 51C56"
+  },
+  {
+   "id": "cad-KNDW-00110",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D41",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 16600,
+    "ch1": 16674.99,
+    "side": "L",
+    "offsetM": 3.25,
+    "cert": "exact",
+    "sheet": "DW-03014",
+    "preset": "T9"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE9 handle 51D41 · HALF ROUND LINED DITCH L:75M / I:0.3%"
+  },
+  {
+   "id": "cad-KNDW-00111",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C60",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 8675,
+    "ch1": 8749.56,
+    "side": "R",
+    "offsetM": 10.49,
+    "cert": "exact",
+    "sheet": "DW-03009",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 51C60"
+  },
+  {
+   "id": "cad-KNDW-00112",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C69",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 9818.81,
+    "ch1": 9889.86,
+    "side": "R",
+    "offsetM": 13.59,
+    "cert": "exact",
+    "sheet": "DW-03010",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51C69"
+  },
+  {
+   "id": "cad-KNDW-00113",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_5206A",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 4324.84,
+    "ch1": 4394.99,
+    "side": "R",
+    "offsetM": 10.63,
+    "cert": "exact",
+    "sheet": "DW-03006",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 5206A"
+  },
+  {
+   "id": "cad-KNDW-00114",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C47",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 1409.33,
+    "ch1": 1475,
+    "side": "L",
+    "offsetM": 9.78,
+    "cert": "exact",
+    "sheet": "DW-03004",
+    "preset": "T4"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE4 handle 51C47"
+  },
+  {
+   "id": "cad-KNDW-00115",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C86",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 7487.22,
+    "ch1": 7551.9,
+    "side": "L",
+    "offsetM": 11.51,
+    "cert": "exact",
+    "sheet": "DW-03008",
+    "preset": "T4"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE4 handle 51C86"
+  },
+  {
+   "id": "cad-KNDW-00116",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D55",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 3090.49,
+    "ch1": 3154.5,
+    "side": "L",
+    "offsetM": 12.75,
+    "cert": "exact",
+    "sheet": "DW-03005",
+    "preset": "T8"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE8 handle 51D55 · HALF ROUND LINED DITCH L=64M / I=0.4%"
+  },
+  {
+   "id": "cad-KNDW-00117",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_278D2",
+   "sub": "KNDW",
+   "set": {
+    "ch0": -1519.8,
+    "ch1": -1455.97,
+    "side": "L",
+    "offsetM": 9.92,
+    "cert": "exact",
+    "sheet": "DW-03001",
+    "preset": "T11"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE11 handle 278D2"
+  },
+  {
+   "id": "cad-KNDW-00118",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D56",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 3090.64,
+    "ch1": 3153.95,
+    "side": "R",
+    "offsetM": 13.2,
+    "cert": "exact",
+    "sheet": "DW-03005",
+    "preset": "T8"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE8 handle 51D56 · HALF ROUND LINED BENCH DITCH L=63M / I=0.4%"
+  },
+  {
+   "id": "cad-KNDW-00119",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C58",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 7425.23,
+    "ch1": 7488.03,
+    "side": "R",
+    "offsetM": 11.97,
+    "cert": "exact",
+    "sheet": "DW-03008",
+    "preset": "T4"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE4 handle 51C58"
+  },
+  {
+   "id": "cad-KNDW-00120",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C49",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 1214.45,
+    "ch1": 1274.24,
+    "side": "L",
+    "offsetM": 10.34,
+    "cert": "exact",
+    "sheet": "DW-03003",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 51C49"
+  },
+  {
+   "id": "cad-KNDW-00121",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_5206B",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 5374.36,
+    "ch1": 5432.91,
+    "side": "L",
+    "offsetM": 8.46,
+    "cert": "exact",
+    "sheet": "DW-03006",
+    "preset": "T4"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE4 handle 5206B"
+  },
+  {
+   "id": "cad-KNDW-00122",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C61",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 8749.56,
+    "ch1": 8807.61,
+    "side": "R",
+    "offsetM": 10.32,
+    "cert": "exact",
+    "sheet": "DW-03009",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 51C61"
+  },
+  {
+   "id": "cad-KNDW-00123",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_65F7B",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 17492.73,
+    "ch1": 17550.17,
+    "side": "R",
+    "offsetM": 9.84,
+    "cert": "exact",
+    "sheet": "DW-03015-05",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 65F7B"
+  },
+  {
+   "id": "cad-KNDW-00124",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C65",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 9329.36,
+    "ch1": 9385.07,
+    "side": "R",
+    "offsetM": 12.55,
+    "cert": "exact",
+    "sheet": "DW-03009",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 51C65"
+  },
+  {
+   "id": "cad-KNDW-00125",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C95",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 16571.05,
+    "ch1": 16625.13,
+    "side": "L",
+    "offsetM": 11.49,
+    "cert": "exact",
+    "sheet": "DW-03014",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51C95"
+  },
+  {
+   "id": "cad-KNDW-00126",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C84",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 5646.12,
+    "ch1": 5700.03,
+    "side": "L",
+    "offsetM": 13.62,
+    "cert": "exact",
+    "sheet": "DW-03007",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 51C84"
+  },
+  {
+   "id": "cad-KNDW-00127",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C8B",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 12700.23,
+    "ch1": 12753.54,
+    "side": "L",
+    "offsetM": 9.18,
+    "cert": "exact",
+    "sheet": "DW-03012",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51C8B"
+  },
+  {
+   "id": "cad-KNDW-00128",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C39",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 7373.09,
+    "ch1": 7425,
+    "side": "R",
+    "offsetM": 12.56,
+    "cert": "exact",
+    "sheet": "DW-03008",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 51C39"
+  },
+  {
+   "id": "cad-KNDW-00129",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_5280C",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 14799.6,
+    "ch1": 14851.39,
+    "side": "R",
+    "offsetM": 11.1,
+    "cert": "exact",
+    "sheet": "DW-03013",
+    "preset": "T13"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE13 handle 5280C"
+  },
+  {
+   "id": "cad-KNDW-00130",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_65F14",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 6997.56,
+    "ch1": 7048.57,
+    "side": "L",
+    "offsetM": 13.76,
+    "cert": "exact",
+    "sheet": "DW-03008",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 65F14"
+  },
+  {
+   "id": "cad-KNDW-00131",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_28412",
+   "sub": "KNDW",
+   "set": {
+    "ch0": -1455.97,
+    "ch1": -1405.79,
+    "side": "L",
+    "offsetM": 9.05,
+    "cert": "exact",
+    "sheet": "DW-03001",
+    "preset": "T11"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE11 handle 28412"
+  },
+  {
+   "id": "cad-KNDW-00132",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C90",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 12249.99,
+    "ch1": 12300.01,
+    "side": "L",
+    "offsetM": 11.24,
+    "cert": "exact",
+    "sheet": "DW-03011",
+    "preset": "T13"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE13 handle 51C90"
+  },
+  {
+   "id": "cad-KNDW-00133",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C5D",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 8625,
+    "ch1": 8675,
+    "side": "R",
+    "offsetM": 10.26,
+    "cert": "exact",
+    "sheet": "DW-03009",
+    "preset": "T13"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE13 handle 51C5D"
+  },
+  {
+   "id": "cad-KNDW-00134",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D06",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 9825,
+    "ch1": 9875,
+    "side": "L",
+    "offsetM": 3.25,
+    "cert": "exact",
+    "sheet": "DW-03010",
+    "preset": "T9"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE9 handle 51D06 · HALF ROUND LINED DITCH L=50M / I=0.10%"
+  },
+  {
+   "id": "cad-KNDW-00135",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C7A",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 15899.99,
+    "ch1": 15949.99,
+    "side": "R",
+    "offsetM": 8.79,
+    "cert": "exact",
+    "sheet": "DW-03014",
+    "preset": "T13"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE13 handle 51C7A"
+  },
+  {
+   "id": "cad-KNDW-00136",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_527EE",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 4450.1,
+    "ch1": 4500.02,
+    "side": "R",
+    "offsetM": 10.73,
+    "cert": "exact",
+    "sheet": "DW-03006",
+    "preset": "T13"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE13 handle 527EE"
+  },
+  {
+   "id": "cad-KNDW-00137",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_65F7E",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 17725.13,
+    "ch1": 17774.96,
+    "side": "R",
+    "offsetM": 11.06,
+    "cert": "exact",
+    "sheet": "DW-03015-05",
+    "preset": "T13"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE13 handle 65F7E"
+  },
+  {
+   "id": "cad-KNDW-00138",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_52813",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 13970.48,
+    "ch1": 14018.06,
+    "side": "R",
+    "offsetM": 9.67,
+    "cert": "exact",
+    "sheet": "DW-03012",
+    "preset": "T13"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE13 handle 52813"
+  },
+  {
+   "id": "cad-KNDW-00139",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D1D",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 10053,
+    "ch1": 10100,
+    "side": "R",
+    "offsetM": 3.25,
+    "cert": "exact",
+    "sheet": "DW-03010",
+    "preset": "T9"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE9 handle 51D1D · HALF ROUND LINED DITCH L=47M / I=0.10%"
+  },
+  {
+   "id": "cad-KNDW-00140",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C8E",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 12203.98,
+    "ch1": 12249.99,
+    "side": "L",
+    "offsetM": 11.3,
+    "cert": "exact",
+    "sheet": "DW-03011",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51C8E"
+  },
+  {
+   "id": "cad-KNDW-00141",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C55",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 4404.8,
+    "ch1": 4450.1,
+    "side": "R",
+    "offsetM": 11.05,
+    "cert": "exact",
+    "sheet": "DW-03006",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51C55"
+  },
+  {
+   "id": "cad-KNDW-00142",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_28500",
+   "sub": "KNDW",
+   "set": {
+    "ch0": -2675,
+    "ch1": -2629.73,
+    "side": "L",
+    "offsetM": 5.76,
+    "cert": "exact",
+    "sheet": "DW-03001",
+    "preset": "T4"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE4 handle 28500"
+  },
+  {
+   "id": "cad-KNDW-00143",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C6E",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 11200.21,
+    "ch1": 11242.61,
+    "side": "R",
+    "offsetM": 10,
+    "cert": "exact",
+    "sheet": "DW-03011",
+    "preset": "T13"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE13 handle 51C6E"
+  },
+  {
+   "id": "cad-KNDW-00144",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_52047",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 6607.47,
+    "ch1": 6648.84,
+    "side": "L",
+    "offsetM": 15.34,
+    "cert": "exact",
+    "sheet": "DW-03007",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 52047"
+  },
+  {
+   "id": "cad-KNDW-00145",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D65",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 5601.9,
+    "ch1": 5640,
+    "side": "L",
+    "offsetM": 14.08,
+    "cert": "exact",
+    "sheet": "DW-03007",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 51D65"
+  },
+  {
+   "id": "cad-KNDW-00146",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C83",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 5700.12,
+    "ch1": 5737.84,
+    "side": "L",
+    "offsetM": 13.3,
+    "cert": "exact",
+    "sheet": "DW-03007",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 51C83"
+  },
+  {
+   "id": "cad-KNDW-00147",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C93",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 16638.33,
+    "ch1": 16675.46,
+    "side": "L",
+    "offsetM": 11.83,
+    "cert": "exact",
+    "sheet": "DW-03014",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51C93"
+  },
+  {
+   "id": "cad-KNDW-00148",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D73",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 13575,
+    "ch1": 13611.72,
+    "side": "R",
+    "offsetM": 10.68,
+    "cert": "exact",
+    "sheet": "DW-03012",
+    "preset": "T4"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE4 handle 51D73"
+  },
+  {
+   "id": "cad-KNDW-00149",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C51",
+   "sub": "KNDW",
+   "set": {
+    "ch0": -60.48,
+    "ch1": -24.88,
+    "side": "L",
+    "offsetM": 9.95,
+    "cert": "exact",
+    "sheet": "DW-03002-05",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 51C51"
+  },
+  {
+   "id": "cad-KNDW-00150",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_52046",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 7066.11,
+    "ch1": 7100.16,
+    "side": "R",
+    "offsetM": 11.41,
+    "cert": "exact",
+    "sheet": "DW-03008",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 52046"
+  },
+  {
+   "id": "cad-KNDW-00151",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_52069",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 4292.68,
+    "ch1": 4324.84,
+    "side": "R",
+    "offsetM": 10.15,
+    "cert": "exact",
+    "sheet": "DW-03006",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 52069"
+  },
+  {
+   "id": "cad-KNDW-00152",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C3D",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 2340.76,
+    "ch1": 2371.96,
+    "side": "R",
+    "offsetM": 10.76,
+    "cert": "exact",
+    "sheet": "DW-03004",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51C3D"
+  },
+  {
+   "id": "cad-KNDW-00153",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C87",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 11243.98,
+    "ch1": 11274.79,
+    "side": "L",
+    "offsetM": 10.77,
+    "cert": "exact",
+    "sheet": "DW-03011",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 51C87"
+  },
+  {
+   "id": "cad-KNDW-00154",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C4B",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 994.46,
+    "ch1": 1024.47,
+    "side": "L",
+    "offsetM": 9.88,
+    "cert": "exact",
+    "sheet": "DW-03003",
+    "preset": "T4"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE4 handle 51C4B"
+  },
+  {
+   "id": "cad-KNDW-00155",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D66",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 5572.16,
+    "ch1": 5600,
+    "side": "L",
+    "offsetM": 14.3,
+    "cert": "exact",
+    "sheet": "DW-03006",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 51D66"
+  },
+  {
+   "id": "cad-KNDW-00156",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C3E",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 2299.93,
+    "ch1": 2327.18,
+    "side": "R",
+    "offsetM": 10.3,
+    "cert": "exact",
+    "sheet": "DW-03004",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51C3E"
+  },
+  {
+   "id": "cad-KNDW-00157",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D70",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 9387.56,
+    "ch1": 9413.26,
+    "side": "R",
+    "offsetM": 12.15,
+    "cert": "exact",
+    "sheet": "DW-03009",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 51D70"
+  },
+  {
+   "id": "cad-KNDW-00158",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C5E",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 8600,
+    "ch1": 8625,
+    "side": "R",
+    "offsetM": 10.4,
+    "cert": "exact",
+    "sheet": "DW-03009",
+    "preset": "T12"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE12 handle 51C5E"
+  },
+  {
+   "id": "cad-KNDW-00159",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D92",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 15336,
+    "ch1": 15359.43,
+    "side": "R",
+    "offsetM": 12.75,
+    "cert": "exact",
+    "sheet": "DW-03013",
+    "preset": "T8"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE8 handle 51D92 · HALF ROUND LINED BENCH DITCH L=24M / I=0.5%"
+  },
+  {
+   "id": "cad-KNDW-00160",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D75",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 15303.14,
+    "ch1": 15324.99,
+    "side": "R",
+    "offsetM": 16.84,
+    "cert": "exact",
+    "sheet": "DW-03013",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51D75"
+  },
+  {
+   "id": "cad-KNDW-00161",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C40",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 2149.75,
+    "ch1": 2169.98,
+    "side": "R",
+    "offsetM": 11.88,
+    "cert": "exact",
+    "sheet": "DW-03004",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51C40"
+  },
+  {
+   "id": "cad-KNDW-00162",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D76",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 15325.91,
+    "ch1": 15344.68,
+    "side": "R",
+    "offsetM": 15.3,
+    "cert": "exact",
+    "sheet": "DW-03013",
+    "preset": "T7"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE7 handle 51D76"
+  },
+  {
+   "id": "cad-KNDW-00163",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D07",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 9882.77,
+    "ch1": 9884.87,
+    "side": "L",
+    "offsetM": 3.25,
+    "cert": "exact",
+    "sheet": "DW-03010",
+    "preset": "T9"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE9 handle 51D07"
+  },
+  {
+   "id": "cad-KNDW-00164",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51F59",
+   "sub": "KNDW",
+   "set": {
+    "ch0": 6887.13,
+    "ch1": 6888.23,
+    "side": "L",
+    "offsetM": 3.25,
+    "cert": "exact",
+    "sheet": "DW-03007",
+    "preset": "T9"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE9 handle 51F59"
+  },
+  {
+   "id": "cad-KNDW-00165",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_27891",
+   "sub": "KNDW",
+   "set": {
+    "ch0": -2350,
+    "ch1": -2350,
+    "side": "R",
+    "offsetM": 4.1,
+    "cert": "exact",
+    "sheet": "DW-03001",
+    "preset": "T1"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE1 handle 27891"
+  },
+  {
+   "id": "cad-KNDW-00166",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_52217",
+   "sub": "KNDW",
+   "set": {
+    "ch0": -2350,
+    "ch1": -2350,
+    "side": "R",
+    "offsetM": 4.1,
+    "cert": "exact",
+    "sheet": "DW-03001",
+    "preset": "T1"
+   },
+   "note": "In the CAD, missing from the data: DRN_DITCH_TYPE1 handle 52217"
+  },
+  {
+   "id": "cad-KNDW-00167",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_282B6",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": -1405.82,
+    "ch1": -1405.82,
+    "side": "L",
+    "offsetM": 6.38,
+    "sheet": "DW-03001",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 282B6"
+  },
+  {
+   "id": "cad-KNDW-00168",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C9C",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 1724.96,
+    "ch1": 1724.96,
+    "side": "R",
+    "offsetM": 8.17,
+    "sheet": "DW-03004",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51C9C"
+  },
+  {
+   "id": "cad-KNDW-00169",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51C9A",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 1775.57,
+    "ch1": 1775.57,
+    "side": "R",
+    "offsetM": 8.68,
+    "sheet": "DW-03004",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51C9A"
+  },
+  {
+   "id": "cad-KNDW-00170",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51E0E",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 1825.2,
+    "ch1": 1825.2,
+    "side": "R",
+    "offsetM": 7.34,
+    "sheet": "DW-03004",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51E0E"
+  },
+  {
+   "id": "cad-KNDW-00171",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51DC5",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 3049.91,
+    "ch1": 3049.91,
+    "side": "R",
+    "offsetM": 7.7,
+    "sheet": "DW-03005",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51DC5"
+  },
+  {
+   "id": "cad-KNDW-00172",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D4C",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 3102.11,
+    "ch1": 3102.11,
+    "side": "R",
+    "offsetM": 11.53,
+    "sheet": "DW-03005",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51D4C"
+  },
+  {
+   "id": "cad-KNDW-00173",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51E24",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 3123.61,
+    "ch1": 3123.61,
+    "side": "L",
+    "offsetM": 16.45,
+    "sheet": "DW-03005",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51E24"
+  },
+  {
+   "id": "cad-KNDW-00174",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51E1A",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 3136.97,
+    "ch1": 3136.97,
+    "side": "R",
+    "offsetM": 17.61,
+    "sheet": "DW-03005",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51E1A"
+  },
+  {
+   "id": "cad-KNDW-00175",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51E3F",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 3675.51,
+    "ch1": 3675.51,
+    "side": "R",
+    "offsetM": 17.49,
+    "sheet": "DW-03005",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51E3F"
+  },
+  {
+   "id": "cad-KNDW-00176",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51E63",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 3687.37,
+    "ch1": 3687.37,
+    "side": "L",
+    "offsetM": 18.24,
+    "sheet": "DW-03005",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51E63"
+  },
+  {
+   "id": "cad-KNDW-00177",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51CB0",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 3711.61,
+    "ch1": 3711.61,
+    "side": "R",
+    "offsetM": 12.94,
+    "sheet": "DW-03005",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51CB0"
+  },
+  {
+   "id": "cad-KNDW-00178",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51E6C",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 3734.87,
+    "ch1": 3734.87,
+    "side": "L",
+    "offsetM": 18.24,
+    "sheet": "DW-03005",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51E6C"
+  },
+  {
+   "id": "cad-KNDW-00179",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51E49",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 3747.51,
+    "ch1": 3747.51,
+    "side": "R",
+    "offsetM": 17.68,
+    "sheet": "DW-03005",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51E49"
+  },
+  {
+   "id": "cad-KNDW-00180",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51E75",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 3782.35,
+    "ch1": 3782.35,
+    "side": "L",
+    "offsetM": 17.36,
+    "sheet": "DW-03005",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51E75"
+  },
+  {
+   "id": "cad-KNDW-00181",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51E35",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 3783.54,
+    "ch1": 3783.54,
+    "side": "R",
+    "offsetM": 12.49,
+    "sheet": "DW-03005",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51E35"
+  },
+  {
+   "id": "cad-KNDW-00182",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51E53",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 3819.45,
+    "ch1": 3819.45,
+    "side": "R",
+    "offsetM": 17.58,
+    "sheet": "DW-03005",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51E53"
+  },
+  {
+   "id": "cad-KNDW-00183",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51E7E",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 3829.85,
+    "ch1": 3829.85,
+    "side": "L",
+    "offsetM": 16.91,
+    "sheet": "DW-03005",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51E7E"
+  },
+  {
+   "id": "cad-KNDW-00184",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51CB1",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 3855.65,
+    "ch1": 3855.65,
+    "side": "R",
+    "offsetM": 11.67,
+    "sheet": "DW-03005",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51CB1"
+  },
+  {
+   "id": "cad-KNDW-00185",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51E87",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 3877.34,
+    "ch1": 3877.34,
+    "side": "L",
+    "offsetM": 15.98,
+    "sheet": "DW-03005",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51E87"
+  },
+  {
+   "id": "cad-KNDW-00186",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51CBA",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 3927.71,
+    "ch1": 3927.71,
+    "side": "R",
+    "offsetM": 8.88,
+    "sheet": "DW-03005",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51CBA"
+  },
+  {
+   "id": "cad-KNDW-00187",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51CC3",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 3999.92,
+    "ch1": 3999.92,
+    "side": "R",
+    "offsetM": 7.14,
+    "sheet": "DW-03005",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51CC3"
+  },
+  {
+   "id": "cad-KNDW-00188",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51CCD",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 5520.18,
+    "ch1": 5520.18,
+    "side": "R",
+    "offsetM": 8.3,
+    "sheet": "DW-03006",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51CCD"
+  },
+  {
+   "id": "cad-KNDW-00189",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51CD6",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 5565.28,
+    "ch1": 5565.28,
+    "side": "R",
+    "offsetM": 8.43,
+    "sheet": "DW-03006",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51CD6"
+  },
+  {
+   "id": "cad-KNDW-00190",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51CDF",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 5610.54,
+    "ch1": 5610.54,
+    "side": "R",
+    "offsetM": 8.43,
+    "sheet": "DW-03007",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51CDF"
+  },
+  {
+   "id": "cad-KNDW-00191",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51CAF",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 5655.8,
+    "ch1": 5655.8,
+    "side": "R",
+    "offsetM": 8.36,
+    "sheet": "DW-03007",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51CAF"
+  },
+  {
+   "id": "cad-KNDW-00192",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51CF0",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 5700.87,
+    "ch1": 5700.87,
+    "side": "R",
+    "offsetM": 7.79,
+    "sheet": "DW-03007",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51CF0"
+  },
+  {
+   "id": "cad-KNDW-00193",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51DBA",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 5745.88,
+    "ch1": 5745.88,
+    "side": "R",
+    "offsetM": 7.59,
+    "sheet": "DW-03007",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51DBA"
+  },
+  {
+   "id": "cad-KNDW-00194",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51E98",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 5791.23,
+    "ch1": 5791.23,
+    "side": "R",
+    "offsetM": 7.72,
+    "sheet": "DW-03007",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51E98"
+  },
+  {
+   "id": "cad-KNDW-00195",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51DB1",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 5825.74,
+    "ch1": 5825.74,
+    "side": "R",
+    "offsetM": 7.75,
+    "sheet": "DW-03007",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51DB1"
+  },
+  {
+   "id": "cad-KNDW-00196",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51F6F",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 6150.26,
+    "ch1": 6150.26,
+    "side": "R",
+    "offsetM": 6.98,
+    "sheet": "DW-03007",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51F6F"
+  },
+  {
+   "id": "cad-KNDW-00197",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51F5B",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 6174.82,
+    "ch1": 6174.82,
+    "side": "R",
+    "offsetM": 7.6,
+    "sheet": "DW-03007",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51F5B"
+  },
+  {
+   "id": "cad-KNDW-00198",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51F80",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 6200.3,
+    "ch1": 6200.3,
+    "side": "R",
+    "offsetM": 7.86,
+    "sheet": "DW-03007",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51F80"
+  },
+  {
+   "id": "cad-KNDW-00199",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51FA7",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 6218.39,
+    "ch1": 6218.39,
+    "side": "R",
+    "offsetM": 7.89,
+    "sheet": "DW-03007",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51FA7"
+  },
+  {
+   "id": "cad-KNDW-00200",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51FB0",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 6230.37,
+    "ch1": 6230.37,
+    "side": "R",
+    "offsetM": 7.84,
+    "sheet": "DW-03007",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51FB0"
+  },
+  {
+   "id": "cad-KNDW-00201",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51F89",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 6250.26,
+    "ch1": 6250.26,
+    "side": "R",
+    "offsetM": 7.68,
+    "sheet": "DW-03007",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51F89"
+  },
+  {
+   "id": "cad-KNDW-00202",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51F65",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 6275.27,
+    "ch1": 6275.27,
+    "side": "R",
+    "offsetM": 7.68,
+    "sheet": "DW-03007",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51F65"
+  },
+  {
+   "id": "cad-KNDW-00203",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_5203F",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 6617.15,
+    "ch1": 6617.15,
+    "side": "L",
+    "offsetM": 9.65,
+    "sheet": "DW-03007",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 5203F"
+  },
+  {
+   "id": "cad-KNDW-00204",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_52035",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 6625.08,
+    "ch1": 6625.08,
+    "side": "L",
+    "offsetM": 9.45,
+    "sheet": "DW-03007",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 52035"
+  },
+  {
+   "id": "cad-KNDW-00205",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_5202C",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 6650.07,
+    "ch1": 6650.07,
+    "side": "L",
+    "offsetM": 8.34,
+    "sheet": "DW-03007",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 5202C"
+  },
+  {
+   "id": "cad-KNDW-00206",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_52023",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 6675.07,
+    "ch1": 6675.07,
+    "side": "L",
+    "offsetM": 8.34,
+    "sheet": "DW-03007",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 52023"
+  },
+  {
+   "id": "cad-KNDW-00207",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_5201A",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 6700.07,
+    "ch1": 6700.07,
+    "side": "L",
+    "offsetM": 8.34,
+    "sheet": "DW-03007",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 5201A"
+  },
+  {
+   "id": "cad-KNDW-00208",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_52011",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 6725.07,
+    "ch1": 6725.07,
+    "side": "L",
+    "offsetM": 8.52,
+    "sheet": "DW-03007",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 52011"
+  },
+  {
+   "id": "cad-KNDW-00209",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_52008",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 6750.1,
+    "ch1": 6750.1,
+    "side": "L",
+    "offsetM": 8.61,
+    "sheet": "DW-03007",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 52008"
+  },
+  {
+   "id": "cad-KNDW-00210",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51FFF",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 6775.11,
+    "ch1": 6775.11,
+    "side": "L",
+    "offsetM": 8.81,
+    "sheet": "DW-03007",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51FFF"
+  },
+  {
+   "id": "cad-KNDW-00211",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51FF6",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 6800.08,
+    "ch1": 6800.08,
+    "side": "L",
+    "offsetM": 8.87,
+    "sheet": "DW-03007",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51FF6"
+  },
+  {
+   "id": "cad-KNDW-00212",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51FED",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 6825.08,
+    "ch1": 6825.08,
+    "side": "L",
+    "offsetM": 9.09,
+    "sheet": "DW-03007",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51FED"
+  },
+  {
+   "id": "cad-KNDW-00213",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51FE4",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 6850.08,
+    "ch1": 6850.08,
+    "side": "L",
+    "offsetM": 8.9,
+    "sheet": "DW-03007",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51FE4"
+  },
+  {
+   "id": "cad-KNDW-00214",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51FD0",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 6875.07,
+    "ch1": 6875.07,
+    "side": "L",
+    "offsetM": 8.34,
+    "sheet": "DW-03007",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51FD0"
+  },
+  {
+   "id": "cad-KNDW-00215",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51F64",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 6925.08,
+    "ch1": 6925.08,
+    "side": "L",
+    "offsetM": 8.34,
+    "sheet": "DW-03007",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51F64"
+  },
+  {
+   "id": "cad-KNDW-00216",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51FBE",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 6975.07,
+    "ch1": 6975.07,
+    "side": "L",
+    "offsetM": 8.14,
+    "sheet": "DW-03007",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51FBE"
+  },
+  {
+   "id": "cad-KNDW-00217",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51FC7",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 7025.07,
+    "ch1": 7025.07,
+    "side": "L",
+    "offsetM": 8.14,
+    "sheet": "DW-03008",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51FC7"
+  },
+  {
+   "id": "cad-KNDW-00218",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51EB1",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 7225.04,
+    "ch1": 7225.04,
+    "side": "L",
+    "offsetM": 5.9,
+    "sheet": "DW-03008",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51EB1"
+  },
+  {
+   "id": "cad-KNDW-00219",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51EBA",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 7275.06,
+    "ch1": 7275.06,
+    "side": "L",
+    "offsetM": 6.85,
+    "sheet": "DW-03008",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51EBA"
+  },
+  {
+   "id": "cad-KNDW-00220",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51EC3",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 7320.07,
+    "ch1": 7320.07,
+    "side": "L",
+    "offsetM": 7.48,
+    "sheet": "DW-03008",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51EC3"
+  },
+  {
+   "id": "cad-KNDW-00221",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51ECC",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 7365.07,
+    "ch1": 7365.07,
+    "side": "L",
+    "offsetM": 7.55,
+    "sheet": "DW-03008",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51ECC"
+  },
+  {
+   "id": "cad-KNDW-00222",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51ED5",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 7410.07,
+    "ch1": 7410.07,
+    "side": "L",
+    "offsetM": 7.41,
+    "sheet": "DW-03008",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51ED5"
+  },
+  {
+   "id": "cad-KNDW-00223",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51EDE",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 7455.06,
+    "ch1": 7455.06,
+    "side": "L",
+    "offsetM": 7.21,
+    "sheet": "DW-03008",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51EDE"
+  },
+  {
+   "id": "cad-KNDW-00224",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D08",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 9624.93,
+    "ch1": 9624.93,
+    "side": "L",
+    "offsetM": 7.21,
+    "sheet": "DW-03009",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51D08"
+  },
+  {
+   "id": "cad-KNDW-00225",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51EED",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 9664.98,
+    "ch1": 9664.98,
+    "side": "L",
+    "offsetM": 8.46,
+    "sheet": "DW-03009",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51EED"
+  },
+  {
+   "id": "cad-KNDW-00226",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D05",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 9704.91,
+    "ch1": 9704.91,
+    "side": "L",
+    "offsetM": 8.63,
+    "sheet": "DW-03009",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51D05"
+  },
+  {
+   "id": "cad-KNDW-00227",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51EF6",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 9744.99,
+    "ch1": 9744.99,
+    "side": "L",
+    "offsetM": 8.52,
+    "sheet": "DW-03009",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51EF6"
+  },
+  {
+   "id": "cad-KNDW-00228",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51EFF",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 9784.99,
+    "ch1": 9784.99,
+    "side": "L",
+    "offsetM": 8.52,
+    "sheet": "DW-03009",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51EFF"
+  },
+  {
+   "id": "cad-KNDW-00229",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51F09",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 9849.9,
+    "ch1": 9849.9,
+    "side": "L",
+    "offsetM": 8.08,
+    "sheet": "DW-03010",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51F09"
+  },
+  {
+   "id": "cad-KNDW-00230",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D1C",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 9874.9,
+    "ch1": 9874.9,
+    "side": "L",
+    "offsetM": 8.08,
+    "sheet": "DW-03010",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51D1C"
+  },
+  {
+   "id": "cad-KNDW-00231",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D9E",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 10075.05,
+    "ch1": 10075.05,
+    "side": "R",
+    "offsetM": 8.13,
+    "sheet": "DW-03010",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51D9E"
+  },
+  {
+   "id": "cad-KNDW-00232",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D0A",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 10099.99,
+    "ch1": 10099.99,
+    "side": "R",
+    "offsetM": 7.2,
+    "sheet": "DW-03010",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51D0A"
+  },
+  {
+   "id": "cad-KNDW-00233",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D13",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 10200.07,
+    "ch1": 10200.07,
+    "side": "R",
+    "offsetM": 7.49,
+    "sheet": "DW-03010",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51D13"
+  },
+  {
+   "id": "cad-KNDW-00234",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51DA8",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 10270.91,
+    "ch1": 10270.91,
+    "side": "R",
+    "offsetM": 8.16,
+    "sheet": "DW-03010",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51DA8"
+  },
+  {
+   "id": "cad-KNDW-00235",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_5220C",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 10341.78,
+    "ch1": 10341.78,
+    "side": "R",
+    "offsetM": 7.86,
+    "sheet": "DW-03010",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 5220C"
+  },
+  {
+   "id": "cad-KNDW-00236",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D9D",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 15204.01,
+    "ch1": 15204.01,
+    "side": "L",
+    "offsetM": 8.38,
+    "sheet": "DW-03013",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51D9D"
+  },
+  {
+   "id": "cad-KNDW-00237",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D30",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 15257.86,
+    "ch1": 15257.86,
+    "side": "L",
+    "offsetM": 11.98,
+    "sheet": "DW-03013",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51D30"
+  },
+  {
+   "id": "cad-KNDW-00238",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51DD0",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 15277.61,
+    "ch1": 15277.61,
+    "side": "R",
+    "offsetM": 17.09,
+    "sheet": "DW-03013",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51DD0"
+  },
+  {
+   "id": "cad-KNDW-00239",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51F34",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 15289.9,
+    "ch1": 15289.9,
+    "side": "L",
+    "offsetM": 17.63,
+    "sheet": "DW-03013",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51F34"
+  },
+  {
+   "id": "cad-KNDW-00240",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51F16",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 15311.83,
+    "ch1": 15311.83,
+    "side": "L",
+    "offsetM": 13.38,
+    "sheet": "DW-03013",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51F16"
+  },
+  {
+   "id": "cad-KNDW-00241",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51F3E",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 15342.07,
+    "ch1": 15342.07,
+    "side": "L",
+    "offsetM": 16.77,
+    "sheet": "DW-03013",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51F3E"
+  },
+  {
+   "id": "cad-KNDW-00242",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51F20",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 15365.98,
+    "ch1": 15365.98,
+    "side": "L",
+    "offsetM": 11.42,
+    "sheet": "DW-03013",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51F20"
+  },
+  {
+   "id": "cad-KNDW-00243",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D2F",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 15419.95,
+    "ch1": 15419.95,
+    "side": "L",
+    "offsetM": 7.97,
+    "sheet": "DW-03014",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51D2F"
+  },
+  {
+   "id": "cad-KNDW-00244",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51F2A",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 15474.85,
+    "ch1": 15474.85,
+    "side": "L",
+    "offsetM": 7.97,
+    "sheet": "DW-03014",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51F2A"
+  },
+  {
+   "id": "cad-KNDW-00245",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51F4B",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 16645,
+    "ch1": 16645,
+    "side": "L",
+    "offsetM": 8.74,
+    "sheet": "DW-03014",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51F4B"
+  },
+  {
+   "id": "cad-KNDW-00246",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_51D43",
+   "sub": "KNDW",
+   "set": {
+    "preset": "WD",
+    "ch0": 16675.01,
+    "ch1": 16675.01,
+    "side": "L",
+    "offsetM": 6.52,
+    "sheet": "DW-03014",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_WATER_DISCHARGE handle 51D43"
+  },
+  {
+   "id": "cad-KNDW-00247",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_282C3",
+   "sub": "KNDW",
+   "set": {
+    "preset": "D-SD",
+    "ch0": -2675,
+    "ch1": -2675,
+    "side": "L",
+    "offsetM": 8.73,
+    "sheet": "DW-03001",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_DISSIPATOR handle 282C3"
+  },
+  {
+   "id": "cad-KNDW-00248",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_511EF",
+   "sub": "KNDW",
+   "set": {
+    "preset": "D-SD",
+    "ch0": -1645.16,
+    "ch1": -1645.16,
+    "side": "R",
+    "offsetM": 23.67,
+    "sheet": "DW-03001",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_DISSIPATOR handle 511EF"
+  },
+  {
+   "id": "cad-KNDW-00249",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_526EC",
+   "sub": "KNDW",
+   "set": {
+    "preset": "D-SD",
+    "ch0": 18536.8,
+    "ch1": 18536.8,
+    "side": "R",
+    "offsetM": 16.11,
+    "sheet": "DW-03016",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_DISSIPATOR handle 526EC"
+  },
+  {
+   "id": "cad-KNDW-00250",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_526E2",
+   "sub": "KNDW",
+   "set": {
+    "preset": "D-SD",
+    "ch0": 18549.91,
+    "ch1": 18549.91,
+    "side": "L",
+    "offsetM": 4.1,
+    "sheet": "DW-03016",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_DISSIPATOR handle 526E2"
+  },
+  {
+   "id": "cad-KNDW-00251",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_526F4",
+   "sub": "KNDW",
+   "set": {
+    "preset": "D-SD",
+    "ch0": 19575,
+    "ch1": 19575,
+    "side": "R",
+    "offsetM": 9.02,
+    "sheet": "DW-03016",
+    "cert": "exact"
+   },
+   "note": "In the CAD, missing from the data: DRN_DISSIPATOR handle 526F4"
+  },
+  {
+   "id": "cad-KNDW-00252",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n-11234R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": -1123.45,
+    "ch1": -1123.45,
+    "side": "R",
+    "offsetM": 7.2,
+    "sheet": "DW-03002-05",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M / H=0M TO 1.2M / D=100MM"
+  },
+  {
+   "id": "cad-KNDW-00253",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n-11009L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": -1100.9,
+    "ch1": -1100.9,
+    "side": "L",
+    "offsetM": 8.2,
+    "sheet": "DW-03002-05",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M / H=1M TO 1.2M / D=100MM"
+  },
+  {
+   "id": "cad-KNDW-00254",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n-10894R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": -1089.43,
+    "ch1": -1089.43,
+    "side": "R",
+    "offsetM": 8.87,
+    "sheet": "DW-03002-05",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M / H=1M TO 1.2M / D=100MM"
+  },
+  {
+   "id": "cad-KNDW-00255",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n-10325R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": -1032.5,
+    "ch1": -1032.5,
+    "side": "R",
+    "offsetM": 7.8,
+    "sheet": "DW-03002-05",
+    "cert": "label",
+    "stated": 103
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=103M / H= 1.0M / D=100MM"
+  },
+  {
+   "id": "cad-KNDW-00256",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n-8962L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": -896.2,
+    "ch1": -896.2,
+    "side": "L",
+    "offsetM": 5.53,
+    "sheet": "DW-03002-05",
+    "cert": "label",
+    "stated": 561
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=561M / H=1M / D=100MM"
+  },
+  {
+   "id": "cad-KNDW-00257",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n-4974L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": -497.45,
+    "ch1": -497.45,
+    "side": "L",
+    "offsetM": 7.25,
+    "sheet": "DW-03002-05",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=100MM"
+  },
+  {
+   "id": "cad-KNDW-00258",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n-4739L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": -473.95,
+    "ch1": -473.95,
+    "side": "L",
+    "offsetM": 7.41,
+    "sheet": "DW-03002-05",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=100MM"
+  },
+  {
+   "id": "cad-KNDW-00259",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n-1995L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": -199.54,
+    "ch1": -199.54,
+    "side": "L",
+    "offsetM": 7.12,
+    "sheet": "DW-03002-05",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00260",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n-1760L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": -176.04,
+    "ch1": -176.04,
+    "side": "L",
+    "offsetM": 7.75,
+    "sheet": "DW-03002-05",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00261",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n-760L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": -76,
+    "ch1": -76,
+    "side": "L",
+    "offsetM": 7.32,
+    "sheet": "DW-03002-05",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=100MM"
+  },
+  {
+   "id": "cad-KNDW-00262",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n-475L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": -47.51,
+    "ch1": -47.51,
+    "side": "L",
+    "offsetM": 7.42,
+    "sheet": "DW-03002-05",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=100MM"
+  },
+  {
+   "id": "cad-KNDW-00263",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n5080L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 508,
+    "ch1": 508,
+    "side": "L",
+    "offsetM": 7.67,
+    "sheet": "DW-03003",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00264",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n5280L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 528,
+    "ch1": 528,
+    "side": "L",
+    "offsetM": 7.45,
+    "sheet": "DW-03003",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00265",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n7306L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 730.6,
+    "ch1": 730.6,
+    "side": "L",
+    "offsetM": 7.9,
+    "sheet": "DW-03003",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00266",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n7519L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 751.91,
+    "ch1": 751.91,
+    "side": "L",
+    "offsetM": 8.39,
+    "sheet": "DW-03003",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00267",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n9803L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 980.26,
+    "ch1": 980.26,
+    "side": "L",
+    "offsetM": 8.01,
+    "sheet": "DW-03003",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=100MM"
+  },
+  {
+   "id": "cad-KNDW-00268",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n10011L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 1001.07,
+    "ch1": 1001.07,
+    "side": "L",
+    "offsetM": 7.64,
+    "sheet": "DW-03003",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=100MM"
+  },
+  {
+   "id": "cad-KNDW-00269",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n11976L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 1197.55,
+    "ch1": 1197.55,
+    "side": "L",
+    "offsetM": 7.81,
+    "sheet": "DW-03003",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00270",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n12250L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 1225,
+    "ch1": 1225,
+    "side": "L",
+    "offsetM": 8.16,
+    "sheet": "DW-03003",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00271",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n13960L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 1396.04,
+    "ch1": 1396.04,
+    "side": "L",
+    "offsetM": 7.26,
+    "sheet": "DW-03003",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=100MM"
+  },
+  {
+   "id": "cad-KNDW-00272",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n14288L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 1428.84,
+    "ch1": 1428.84,
+    "side": "L",
+    "offsetM": 7.41,
+    "sheet": "DW-03004",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=100MM"
+  },
+  {
+   "id": "cad-KNDW-00273",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n17450R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 1744.95,
+    "ch1": 1744.95,
+    "side": "R",
+    "offsetM": 11.53,
+    "sheet": "DW-03004",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00274",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n17776R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 1777.57,
+    "ch1": 1777.57,
+    "side": "R",
+    "offsetM": 11.37,
+    "sheet": "DW-03004",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00275",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n21587R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 2158.71,
+    "ch1": 2158.71,
+    "side": "R",
+    "offsetM": 8.13,
+    "sheet": "DW-03004",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00276",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n21870R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 2187.04,
+    "ch1": 2187.04,
+    "side": "R",
+    "offsetM": 7.93,
+    "sheet": "DW-03004",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00277",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n23140R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 2313.99,
+    "ch1": 2313.99,
+    "side": "R",
+    "offsetM": 7.89,
+    "sheet": "DW-03004",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00278",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n23502R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 2350.15,
+    "ch1": 2350.15,
+    "side": "R",
+    "offsetM": 8.41,
+    "sheet": "DW-03004",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00279",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n40640R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 4064,
+    "ch1": 4064,
+    "side": "R",
+    "offsetM": 8.87,
+    "sheet": "DW-03005",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=100MM"
+  },
+  {
+   "id": "cad-KNDW-00280",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n40940R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 4094,
+    "ch1": 4094,
+    "side": "R",
+    "offsetM": 8.65,
+    "sheet": "DW-03005",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=100MM"
+  },
+  {
+   "id": "cad-KNDW-00281",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n42775R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 4277.5,
+    "ch1": 4277.5,
+    "side": "R",
+    "offsetM": 7.59,
+    "sheet": "DW-03006",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=100MM"
+  },
+  {
+   "id": "cad-KNDW-00282",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n43043R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 4304.34,
+    "ch1": 4304.34,
+    "side": "R",
+    "offsetM": 7.63,
+    "sheet": "DW-03006",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=100MM"
+  },
+  {
+   "id": "cad-KNDW-00283",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n43875R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 4387.5,
+    "ch1": 4387.5,
+    "side": "R",
+    "offsetM": 8.35,
+    "sheet": "DW-03006",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00284",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n44200R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 4420,
+    "ch1": 4420,
+    "side": "R",
+    "offsetM": 8.5,
+    "sheet": "DW-03006",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00285",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n47643R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 4764.33,
+    "ch1": 4764.33,
+    "side": "R",
+    "offsetM": 8.08,
+    "sheet": "DW-03006",
+    "cert": "label",
+    "stated": 58
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=58M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00286",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n48607R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 4860.74,
+    "ch1": 4860.74,
+    "side": "R",
+    "offsetM": 8.14,
+    "sheet": "DW-03006",
+    "cert": "label",
+    "stated": 180
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=180M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00287",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n49980R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 4997.95,
+    "ch1": 4997.95,
+    "side": "R",
+    "offsetM": 8.28,
+    "sheet": "DW-03006",
+    "cert": "label",
+    "stated": 64
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=64M/D=100MM"
+  },
+  {
+   "id": "cad-KNDW-00288",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n51920R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 5191.99,
+    "ch1": 5191.99,
+    "side": "R",
+    "offsetM": 8.06,
+    "sheet": "DW-03006",
+    "cert": "label",
+    "stated": 308
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L:308M/D=100MM"
+  },
+  {
+   "id": "cad-KNDW-00289",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n54257L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 5425.66,
+    "ch1": 5425.66,
+    "side": "L",
+    "offsetM": 7.39,
+    "sheet": "DW-03006",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=100MM"
+  },
+  {
+   "id": "cad-KNDW-00290",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n54411L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 5441.08,
+    "ch1": 5441.08,
+    "side": "L",
+    "offsetM": 8.46,
+    "sheet": "DW-03006",
+    "cert": "label",
+    "stated": 12
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=12M/D=100MM"
+  },
+  {
+   "id": "cad-KNDW-00291",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n55494L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 5549.38,
+    "ch1": 5549.38,
+    "side": "L",
+    "offsetM": 11.94,
+    "sheet": "DW-03006",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=100MM"
+  },
+  {
+   "id": "cad-KNDW-00292",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n55849L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 5584.91,
+    "ch1": 5584.91,
+    "side": "L",
+    "offsetM": 11.09,
+    "sheet": "DW-03006",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=100MM"
+  },
+  {
+   "id": "cad-KNDW-00293",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n56276L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 5627.59,
+    "ch1": 5627.59,
+    "side": "L",
+    "offsetM": 11.69,
+    "sheet": "DW-03007",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00294",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n56574L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 5657.4,
+    "ch1": 5657.4,
+    "side": "L",
+    "offsetM": 11.63,
+    "sheet": "DW-03007",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00295",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n57250L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 5725,
+    "ch1": 5725,
+    "side": "L",
+    "offsetM": 11.14,
+    "sheet": "DW-03007",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00296",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n57539L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 5753.94,
+    "ch1": 5753.94,
+    "side": "L",
+    "offsetM": 10.59,
+    "sheet": "DW-03007",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00297",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n62419L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 6241.94,
+    "ch1": 6241.94,
+    "side": "L",
+    "offsetM": 11.01,
+    "sheet": "DW-03007",
+    "cert": "label",
+    "stated": 164
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=164M/D=CONSULT THE SPECIFIC PROJECT BRG-2602 CH6+480"
+  },
+  {
+   "id": "cad-KNDW-00298",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n62693R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 6269.26,
+    "ch1": 6269.26,
+    "side": "R",
+    "offsetM": 10.99,
+    "sheet": "DW-03007",
+    "cert": "label",
+    "stated": 155
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=155M/D=CONSULT THE SPECIFIC PROJECT BRG-2602 CH6+480"
+  },
+  {
+   "id": "cad-KNDW-00299",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n67380L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 6738,
+    "ch1": 6738,
+    "side": "L",
+    "offsetM": 11.18,
+    "sheet": "DW-03007",
+    "cert": "label",
+    "stated": 234
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=234M/D=CONSULT THE SPECIFIC PROJECT BRG-2602 CH6+480"
+  },
+  {
+   "id": "cad-KNDW-00300",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n68060R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 6806,
+    "ch1": 6806,
+    "side": "R",
+    "offsetM": 12.93,
+    "sheet": "DW-03007",
+    "cert": "label",
+    "stated": 234
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=234M/D=CONSULT THE SPECIFIC PROJECT BRG-2602 CH6+480"
+  },
+  {
+   "id": "cad-KNDW-00301",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n68700R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 6870,
+    "ch1": 6870,
+    "side": "R",
+    "offsetM": 12.34,
+    "sheet": "DW-03007",
+    "cert": "label",
+    "stated": 166
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=166M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00302",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n69160L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 6916,
+    "ch1": 6916,
+    "side": "L",
+    "offsetM": 12.34,
+    "sheet": "DW-03007",
+    "cert": "label",
+    "stated": 191
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=191M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00303",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n70492R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 7049.24,
+    "ch1": 7049.24,
+    "side": "R",
+    "offsetM": 10.22,
+    "sheet": "DW-03008",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00304",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n70780R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 7078,
+    "ch1": 7078,
+    "side": "R",
+    "offsetM": 9.16,
+    "sheet": "DW-03008",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00305",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n73593R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 7359.32,
+    "ch1": 7359.32,
+    "side": "R",
+    "offsetM": 9.9,
+    "sheet": "DW-03008",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=100MM"
+  },
+  {
+   "id": "cad-KNDW-00306",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n73800R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 7380,
+    "ch1": 7380,
+    "side": "R",
+    "offsetM": 10.11,
+    "sheet": "DW-03008",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=100MM"
+  },
+  {
+   "id": "cad-KNDW-00307",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n74815R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 7481.51,
+    "ch1": 7481.51,
+    "side": "R",
+    "offsetM": 8.27,
+    "sheet": "DW-03008",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00308",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n75045R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 7504.51,
+    "ch1": 7504.51,
+    "side": "R",
+    "offsetM": 7.2,
+    "sheet": "DW-03008",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00309",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n81020R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 8101.96,
+    "ch1": 8101.96,
+    "side": "R",
+    "offsetM": 7.88,
+    "sheet": "DW-03008",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00310",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n81320R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 8131.98,
+    "ch1": 8131.98,
+    "side": "R",
+    "offsetM": 8.17,
+    "sheet": "DW-03008",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00311",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n83820R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 8382.02,
+    "ch1": 8382.02,
+    "side": "R",
+    "offsetM": 10.14,
+    "sheet": "DW-03008",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00312",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n84125R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 8412.5,
+    "ch1": 8412.5,
+    "side": "R",
+    "offsetM": 8.4,
+    "sheet": "DW-03009",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00313",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n85820R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 8581.97,
+    "ch1": 8581.97,
+    "side": "R",
+    "offsetM": 8.52,
+    "sheet": "DW-03009",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00314",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n86090R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 8608.98,
+    "ch1": 8608.98,
+    "side": "R",
+    "offsetM": 6.58,
+    "sheet": "DW-03009",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00315",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n87952R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 8795.18,
+    "ch1": 8795.18,
+    "side": "R",
+    "offsetM": 7.35,
+    "sheet": "DW-03009",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00316",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n88222R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 8822.24,
+    "ch1": 8822.24,
+    "side": "R",
+    "offsetM": 7.91,
+    "sheet": "DW-03009",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00317",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n93120R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 9312,
+    "ch1": 9312,
+    "side": "R",
+    "offsetM": 8.32,
+    "sheet": "DW-03009",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00318",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n93359R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 9335.94,
+    "ch1": 9335.94,
+    "side": "R",
+    "offsetM": 9.06,
+    "sheet": "DW-03009",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00319",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n94090R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 9409.02,
+    "ch1": 9409.02,
+    "side": "R",
+    "offsetM": 11.01,
+    "sheet": "DW-03009",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00320",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n94361R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 9436.1,
+    "ch1": 9436.1,
+    "side": "R",
+    "offsetM": 8.41,
+    "sheet": "DW-03009",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00321",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n96625R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 9662.48,
+    "ch1": 9662.48,
+    "side": "R",
+    "offsetM": 11.41,
+    "sheet": "DW-03009",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00322",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n96750L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 9675,
+    "ch1": 9675,
+    "side": "L",
+    "offsetM": 12.18,
+    "sheet": "DW-03009",
+    "cert": "label",
+    "stated": 10
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=10M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00323",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n96966L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 9696.63,
+    "ch1": 9696.63,
+    "side": "L",
+    "offsetM": 13.51,
+    "sheet": "DW-03009",
+    "cert": "label",
+    "stated": 11
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=11M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00324",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n97045R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 9704.48,
+    "ch1": 9704.48,
+    "side": "R",
+    "offsetM": 11.03,
+    "sheet": "DW-03009",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00325",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n98848R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 9884.83,
+    "ch1": 9884.83,
+    "side": "R",
+    "offsetM": 9.28,
+    "sheet": "DW-03010",
+    "cert": "label",
+    "stated": 44
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=44M/D=CONSULT THE SPECIFIC PROJECT BRG-2603 CH9+970"
+  },
+  {
+   "id": "cad-KNDW-00326",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n100534R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 10053.43,
+    "ch1": 10053.43,
+    "side": "R",
+    "offsetM": 11.32,
+    "sheet": "DW-03010",
+    "cert": "label",
+    "stated": 49
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L:49M/D=CONSULT THE SPECIFIC PROJECT BRG-2603 CH9+970"
+  },
+  {
+   "id": "cad-KNDW-00327",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n103287L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 10328.73,
+    "ch1": 10328.73,
+    "side": "L",
+    "offsetM": 12.42,
+    "sheet": "DW-03010",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00328",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n103503L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 10350.28,
+    "ch1": 10350.28,
+    "side": "L",
+    "offsetM": 9.7,
+    "sheet": "DW-03010",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00329",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n107038R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 10703.78,
+    "ch1": 10703.78,
+    "side": "R",
+    "offsetM": 7.17,
+    "sheet": "DW-03010",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00330",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n107272R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 10727.22,
+    "ch1": 10727.22,
+    "side": "R",
+    "offsetM": 6.19,
+    "sheet": "DW-03010",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00331",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n110120R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 11012,
+    "ch1": 11012,
+    "side": "R",
+    "offsetM": 7.69,
+    "sheet": "DW-03010",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=100MM"
+  },
+  {
+   "id": "cad-KNDW-00332",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n110402R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 11040.23,
+    "ch1": 11040.23,
+    "side": "R",
+    "offsetM": 7.82,
+    "sheet": "DW-03010",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=100MM"
+  },
+  {
+   "id": "cad-KNDW-00333",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n116075L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 11607.5,
+    "ch1": 11607.5,
+    "side": "L",
+    "offsetM": 7.83,
+    "sheet": "DW-03011",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00334",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n116280L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 11628,
+    "ch1": 11628,
+    "side": "L",
+    "offsetM": 7.99,
+    "sheet": "DW-03011",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00335",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n119120L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 11912,
+    "ch1": 11912,
+    "side": "L",
+    "offsetM": 6.76,
+    "sheet": "DW-03011",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00336",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n119325L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 11932.52,
+    "ch1": 11932.52,
+    "side": "L",
+    "offsetM": 7.51,
+    "sheet": "DW-03011",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00337",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n121890L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 12189,
+    "ch1": 12189,
+    "side": "L",
+    "offsetM": 6.69,
+    "sheet": "DW-03011",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00338",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n122140L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 12214,
+    "ch1": 12214,
+    "side": "L",
+    "offsetM": 6.68,
+    "sheet": "DW-03011",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00339",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n127524L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 12752.37,
+    "ch1": 12752.37,
+    "side": "L",
+    "offsetM": 8.9,
+    "sheet": "DW-03012",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00340",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n127694L",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 12769.39,
+    "ch1": 12769.39,
+    "side": "L",
+    "offsetM": 6.4,
+    "sheet": "DW-03012",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00341",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n133482R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 13348.19,
+    "ch1": 13348.19,
+    "side": "R",
+    "offsetM": 8.13,
+    "sheet": "DW-03012",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00342",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n133720R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 13372,
+    "ch1": 13372,
+    "side": "R",
+    "offsetM": 8.05,
+    "sheet": "DW-03012",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00343",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n136073R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 13607.32,
+    "ch1": 13607.32,
+    "side": "R",
+    "offsetM": 8.58,
+    "sheet": "DW-03012",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00344",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n136260R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 13626,
+    "ch1": 13626,
+    "side": "R",
+    "offsetM": 8.63,
+    "sheet": "DW-03012",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00345",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n143080R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 14308,
+    "ch1": 14308,
+    "side": "R",
+    "offsetM": 7.29,
+    "sheet": "DW-03013",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=100MM"
+  },
+  {
+   "id": "cad-KNDW-00346",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n143275R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 14327.5,
+    "ch1": 14327.5,
+    "side": "R",
+    "offsetM": 7.54,
+    "sheet": "DW-03013",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=100MM"
+  },
+  {
+   "id": "cad-KNDW-00347",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n144741R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 14474.05,
+    "ch1": 14474.05,
+    "side": "R",
+    "offsetM": 7.88,
+    "sheet": "DW-03013",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00348",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n144976R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 14497.62,
+    "ch1": 14497.62,
+    "side": "R",
+    "offsetM": 8.14,
+    "sheet": "DW-03013",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00349",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n148450R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 14845,
+    "ch1": 14845,
+    "side": "R",
+    "offsetM": 7.94,
+    "sheet": "DW-03013",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00350",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n148695R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 14869.49,
+    "ch1": 14869.49,
+    "side": "R",
+    "offsetM": 8.16,
+    "sheet": "DW-03013",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00351",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n150300R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 15030,
+    "ch1": 15030,
+    "side": "R",
+    "offsetM": 8.93,
+    "sheet": "DW-03013",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00352",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n150547R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 15054.74,
+    "ch1": 15054.74,
+    "side": "R",
+    "offsetM": 8.87,
+    "sheet": "DW-03013",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00353",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n152829R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 15282.85,
+    "ch1": 15282.85,
+    "side": "R",
+    "offsetM": 21.83,
+    "sheet": "DW-03013",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00354",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n153270R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 15326.95,
+    "ch1": 15326.95,
+    "side": "R",
+    "offsetM": 11.91,
+    "sheet": "DW-03013",
+    "cert": "label",
+    "stated": 51
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=51M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00355",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n153660R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 15366,
+    "ch1": 15366,
+    "side": "R",
+    "offsetM": 11.71,
+    "sheet": "DW-03013",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00356",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n154923R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 15492.26,
+    "ch1": 15492.26,
+    "side": "R",
+    "offsetM": 9.39,
+    "sheet": "DW-03014",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00357",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n155219R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 15521.85,
+    "ch1": 15521.85,
+    "side": "R",
+    "offsetM": 9.52,
+    "sheet": "DW-03014",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00358",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n162123R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 16212.26,
+    "ch1": 16212.26,
+    "side": "R",
+    "offsetM": 8.39,
+    "sheet": "DW-03014",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00359",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n162403R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 16240.26,
+    "ch1": 16240.26,
+    "side": "R",
+    "offsetM": 8.77,
+    "sheet": "DW-03014",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00360",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n166275R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 16627.49,
+    "ch1": 16627.49,
+    "side": "R",
+    "offsetM": 13.4,
+    "sheet": "DW-03014",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00361",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n166940R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 16694.03,
+    "ch1": 16694.03,
+    "side": "R",
+    "offsetM": 8.54,
+    "sheet": "DW-03014",
+    "cert": "label",
+    "stated": 68
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=68M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00362",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n174818R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 17481.8,
+    "ch1": 17481.8,
+    "side": "R",
+    "offsetM": 6.89,
+    "sheet": "DW-03015-05",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00363",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n175080R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 17508,
+    "ch1": 17508,
+    "side": "R",
+    "offsetM": 7.2,
+    "sheet": "DW-03015-05",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M/D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00364",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n180609R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 18060.87,
+    "ch1": 18060.87,
+    "side": "R",
+    "offsetM": 8.69,
+    "sheet": "DW-03015-05",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M / H=0M TO 2.5M / D=200MM"
+  },
+  {
+   "id": "cad-KNDW-00365",
+   "kind": "base",
+   "at": "2026-09-30T09:23:51.546Z",
+   "by": "CAD extraction",
+   "action": "add",
+   "featureId": "cad_KNDW_n180950R",
+   "sub": "KNDW",
+   "set": {
+    "preset": "RIP",
+    "ch0": 18094.96,
+    "ch1": 18094.96,
+    "side": "R",
+    "offsetM": 9.15,
+    "sheet": "DW-03015-05",
+    "cert": "label",
+    "stated": 28
+   },
+   "note": "In the CAD, missing from the data: SLOPE PROTECTION L=28M / H=0M TO 2.5M / D=200MM"
+  }
+ ]
+}

@@ -1,0 +1,1768 @@
+{
+ "kind": "kmd-base-corrections",
+ "app": "Drainage Inspector",
+ "exported_at": "2026-09-25T12:00:00.000Z",
+ "source": "Culvert Monitoring & Execution Status charts, 25/09/26",
+ "records": [
+  {
+   "id": "xc-KNDW-0001",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_CC12",
+   "sub": "KNDW",
+   "set": {
+    "preset": "CC",
+    "ch0": 12510,
+    "ch1": 12510,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC12 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (CC12 at 12+510), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0002",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_E_1",
+   "sub": "KNDW",
+   "set": {
+    "preset": "BC",
+    "ch0": -2175,
+    "ch1": -2175,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Triple box culvert 3×(2.5×2.5 m)",
+    "fullName": "Triple box culvert 3×(2.5×2.5 m) — E.1 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (E.1 at -2+175), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0003",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_0_1",
+   "sub": "KNDW",
+   "set": {
+    "preset": "PC",
+    "ch0": -1107,
+    "ch1": -1107,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 0.1 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (0.1 at -1+107), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0004",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_0_2",
+   "sub": "KNDW",
+   "set": {
+    "preset": "PC",
+    "ch0": -487,
+    "ch1": -487,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 0.2 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (0.2 at -0+487), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0005",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_0_3",
+   "sub": "KNDW",
+   "set": {
+    "preset": "PC",
+    "ch0": -187,
+    "ch1": -187,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 0.3 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (0.3 at -0+187), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0006",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_0_4",
+   "sub": "KNDW",
+   "set": {
+    "preset": "PC",
+    "ch0": -61,
+    "ch1": -61,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 0.4 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (0.4 at -0+061), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0007",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_0_5",
+   "sub": "KNDW",
+   "set": {
+    "preset": "PC",
+    "ch0": 524,
+    "ch1": 524,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 0.5 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (0.5 at 0+524), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0008",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_0_6",
+   "sub": "KNDW",
+   "set": {
+    "preset": "BC",
+    "ch0": 743,
+    "ch1": 743,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 0.6 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (0.6 at 0+743), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0009",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_0_7",
+   "sub": "KNDW",
+   "set": {
+    "preset": "PC",
+    "ch0": 993,
+    "ch1": 993,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 0.7 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (0.7 at 0+993), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0010",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_1_1",
+   "sub": "KNDW",
+   "set": {
+    "preset": "PC",
+    "ch0": 1213,
+    "ch1": 1213,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 1.1 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (1.1 at 1+213), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0011",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_1_2",
+   "sub": "KNDW",
+   "set": {
+    "preset": "PC",
+    "ch0": 1412,
+    "ch1": 1412,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 1.2 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (1.2 at 1+412), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0012",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_1_3",
+   "sub": "KNDW",
+   "set": {
+    "preset": "BC",
+    "ch0": 1768,
+    "ch1": 1768,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Triple box culvert 3×(2.5×2.5 m)",
+    "fullName": "Triple box culvert 3×(2.5×2.5 m) — 1.3 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (1.3 at 1+768), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0013",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_2_1",
+   "sub": "KNDW",
+   "set": {
+    "preset": "BC",
+    "ch0": 2172,
+    "ch1": 2172,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 2.1 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (2.1 at 2+172), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0014",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_2_2",
+   "sub": "KNDW",
+   "set": {
+    "preset": "BC",
+    "ch0": 2333,
+    "ch1": 2333,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Triple box culvert 3×(2.0×2.0 m)",
+    "fullName": "Triple box culvert 3×(2.0×2.0 m) — 2.2 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (2.2 at 2+333), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0015",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_4_1",
+   "sub": "KNDW",
+   "set": {
+    "preset": "PC",
+    "ch0": 4078,
+    "ch1": 4078,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 4.1 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (4.1 at 4+078), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0016",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_4_2",
+   "sub": "KNDW",
+   "set": {
+    "preset": "PC",
+    "ch0": 4290,
+    "ch1": 4290,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 4.2 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (4.2 at 4+290), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0017",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_4_3",
+   "sub": "KNDW",
+   "set": {
+    "preset": "BC",
+    "ch0": 4400,
+    "ch1": 4400,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 4.3 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (4.3 at 4+400), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0018",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_4_4",
+   "sub": "KNDW",
+   "set": {
+    "preset": "PC",
+    "ch0": 4789,
+    "ch1": 4789,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 4.4 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (4.4 at 4+789), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0019",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_4_5",
+   "sub": "KNDW",
+   "set": {
+    "preset": "PC",
+    "ch0": 4970,
+    "ch1": 4970,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 4.5 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (4.5 at 4+970), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0020",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_5_1",
+   "sub": "KNDW",
+   "set": {
+    "preset": "PC",
+    "ch0": 5038,
+    "ch1": 5038,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 5.1 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (5.1 at 5+038), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0021",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_5_A",
+   "sub": "KNDW",
+   "set": {
+    "preset": "PC",
+    "ch0": 5435,
+    "ch1": 5435,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 5.A (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (5.A at 5+435), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0022",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_5_2",
+   "sub": "KNDW",
+   "set": {
+    "preset": "PC",
+    "ch0": 5576,
+    "ch1": 5576,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 5.2 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (5.2 at 5+576), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0023",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_5_3",
+   "sub": "KNDW",
+   "set": {
+    "preset": "PC",
+    "ch0": 5643,
+    "ch1": 5643,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 5.3 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (5.3 at 5+643), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0024",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_5_4",
+   "sub": "KNDW",
+   "set": {
+    "preset": "BC",
+    "ch0": 5735,
+    "ch1": 5735,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Single box culvert 1×(3.0×3.0 m)",
+    "fullName": "Single box culvert 1×(3.0×3.0 m) — 5.4 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (5.4 at 5+735), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0025",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_CC6",
+   "sub": "KNDW",
+   "set": {
+    "preset": "CC",
+    "ch0": 6225,
+    "ch1": 6225,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC6 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (CC6 at 6+225), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0026",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_6_1",
+   "sub": "KNDW",
+   "set": {
+    "preset": "BC",
+    "ch0": 6835,
+    "ch1": 6835,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Single box culvert 1×(3.0×3.0 m)",
+    "fullName": "Single box culvert 1×(3.0×3.0 m) — 6.1 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (6.1 at 6+835), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0027",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_7_1",
+   "sub": "KNDW",
+   "set": {
+    "preset": "BC",
+    "ch0": 7060,
+    "ch1": 7060,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 7.1 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (7.1 at 7+060), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0028",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_7_2",
+   "sub": "KNDW",
+   "set": {
+    "preset": "PC",
+    "ch0": 7371,
+    "ch1": 7371,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 7.2 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (7.2 at 7+371), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0029",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_CC7",
+   "sub": "KNDW",
+   "set": {
+    "preset": "CC",
+    "ch0": 7400,
+    "ch1": 7400,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC7 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (CC7 at 7+400), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0030",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_7_3",
+   "sub": "KNDW",
+   "set": {
+    "preset": "BC",
+    "ch0": 7488,
+    "ch1": 7488,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Single box culvert 1×(2.5×2.5 m)",
+    "fullName": "Single box culvert 1×(2.5×2.5 m) — 7.3 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (7.3 at 7+488), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0031",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_8_1",
+   "sub": "KNDW",
+   "set": {
+    "preset": "PC",
+    "ch0": 8113,
+    "ch1": 8113,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 8.1 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (8.1 at 8+113), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0032",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_8_2",
+   "sub": "KNDW",
+   "set": {
+    "preset": "BC",
+    "ch0": 8394,
+    "ch1": 8394,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 8.2 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (8.2 at 8+394), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0033",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_8_3",
+   "sub": "KNDW",
+   "set": {
+    "preset": "PC",
+    "ch0": 8594,
+    "ch1": 8594,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 8.3 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (8.3 at 8+594), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0034",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_8_4",
+   "sub": "KNDW",
+   "set": {
+    "preset": "PC",
+    "ch0": 8811,
+    "ch1": 8811,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 8.4 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (8.4 at 8+811), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0035",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_9_1",
+   "sub": "KNDW",
+   "set": {
+    "preset": "BC",
+    "ch0": 9326,
+    "ch1": 9326,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 9.1 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (9.1 at 9+326), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0036",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_9_2",
+   "sub": "KNDW",
+   "set": {
+    "preset": "PC",
+    "ch0": 9416,
+    "ch1": 9416,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 9.2 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (9.2 at 9+416), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0037",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_9_3",
+   "sub": "KNDW",
+   "set": {
+    "preset": "BC",
+    "ch0": 9685,
+    "ch1": 9685,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Triple box culvert 3×(2.5×2.5 m)",
+    "fullName": "Triple box culvert 3×(2.5×2.5 m) — 9.3 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (9.3 at 9+685), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0038",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_10_1",
+   "sub": "KNDW",
+   "set": {
+    "preset": "BC",
+    "ch0": 10336,
+    "ch1": 10336,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Triple box culvert 3×(2.5×2.5 m)",
+    "fullName": "Triple box culvert 3×(2.5×2.5 m) — 10.1 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (10.1 at 10+336), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0039",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_10_2",
+   "sub": "KNDW",
+   "set": {
+    "preset": "PC",
+    "ch0": 10710,
+    "ch1": 10710,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 10.2 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (10.2 at 10+710), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0040",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_11_1",
+   "sub": "KNDW",
+   "set": {
+    "preset": "BC",
+    "ch0": 11020,
+    "ch1": 11020,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Triple box culvert 3×(2.0×2.0 m)",
+    "fullName": "Triple box culvert 3×(2.0×2.0 m) — 11.1 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (11.1 at 11+020), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0041",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_11_2",
+   "sub": "KNDW",
+   "set": {
+    "preset": "PC",
+    "ch0": 11613,
+    "ch1": 11613,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 11.2 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (11.2 at 11+613), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0042",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_11_3",
+   "sub": "KNDW",
+   "set": {
+    "preset": "BC",
+    "ch0": 11921,
+    "ch1": 11921,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 11.3 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (11.3 at 11+921), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0043",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_12_1",
+   "sub": "KNDW",
+   "set": {
+    "preset": "BC",
+    "ch0": 12200,
+    "ch1": 12200,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 12.1 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (12.1 at 12+200), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0044",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_12_2",
+   "sub": "KNDW",
+   "set": {
+    "preset": "BC",
+    "ch0": 12752,
+    "ch1": 12752,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 12.2 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (12.2 at 12+752), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0045",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_13_1",
+   "sub": "KNDW",
+   "set": {
+    "preset": "PC",
+    "ch0": 13364,
+    "ch1": 13364,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 13.1 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (13.1 at 13+364), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0046",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_13_2",
+   "sub": "KNDW",
+   "set": {
+    "preset": "BC",
+    "ch0": 13610,
+    "ch1": 13610,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 13.2 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (13.2 at 13+610), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0047",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_14_1",
+   "sub": "KNDW",
+   "set": {
+    "preset": "PC",
+    "ch0": 14323,
+    "ch1": 14323,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 14.1 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (14.1 at 14+323), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0048",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_14_2",
+   "sub": "KNDW",
+   "set": {
+    "preset": "PC",
+    "ch0": 14494,
+    "ch1": 14494,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 14.2 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (14.2 at 14+494), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0049",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_14_3",
+   "sub": "KNDW",
+   "set": {
+    "preset": "BC",
+    "ch0": 14856,
+    "ch1": 14856,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 14.3 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (14.3 at 14+856), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0050",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_15_1",
+   "sub": "KNDW",
+   "set": {
+    "preset": "PC",
+    "ch0": 15041,
+    "ch1": 15041,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 15.1 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (15.1 at 15+041), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0051",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_15_2",
+   "sub": "KNDW",
+   "set": {
+    "preset": "BC",
+    "ch0": 15285,
+    "ch1": 15285,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Triple box culvert 3×(2.5×2.5 m)",
+    "fullName": "Triple box culvert 3×(2.5×2.5 m) — 15.2 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (15.2 at 15+285), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0052",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_15_3",
+   "sub": "KNDW",
+   "set": {
+    "preset": "BC",
+    "ch0": 15341,
+    "ch1": 15341,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 15.3 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (15.3 at 15+341), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0053",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_15_4",
+   "sub": "KNDW",
+   "set": {
+    "preset": "BC",
+    "ch0": 15500,
+    "ch1": 15500,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Single box culvert 1×(2.5×2.5 m)",
+    "fullName": "Single box culvert 1×(2.5×2.5 m) — 15.4 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (15.4 at 15+500), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0054",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_16_1",
+   "sub": "KNDW",
+   "set": {
+    "preset": "BC",
+    "ch0": 16223,
+    "ch1": 16223,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 16.1 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (16.1 at 16+223), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0055",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_16_2",
+   "sub": "KNDW",
+   "set": {
+    "preset": "BC",
+    "ch0": 16637,
+    "ch1": 16637,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Triple box culvert 3×(2.5×2.5 m)",
+    "fullName": "Triple box culvert 3×(2.5×2.5 m) — 16.2 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (16.2 at 16+637), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0056",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_17_1",
+   "sub": "KNDW",
+   "set": {
+    "preset": "PC",
+    "ch0": 17490,
+    "ch1": 17490,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 17.1 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (17.1 at 17+490), not in the drawings data"
+  },
+  {
+   "id": "xc-KNDW-0057",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KNDW_18_1",
+   "sub": "KNDW",
+   "set": {
+    "preset": "BC",
+    "ch0": 18080,
+    "ch1": 18080,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S01 25/09/26",
+    "name": "Triple box culvert 3×(2.5×2.5 m)",
+    "fullName": "Triple box culvert 3×(2.5×2.5 m) — 18.1 (execution chart S01)"
+   },
+   "note": "In the S01 execution chart (18.1 at 18+080), not in the drawings data"
+  },
+  {
+   "id": "xc-DWKZ-0058",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_DWKZ_CC_78",
+   "sub": "DWKZ",
+   "set": {
+    "preset": "CC",
+    "ch0": 78825,
+    "ch1": 78825,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S02 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 78 (execution chart S02)"
+   },
+   "note": "In the S02 execution chart (CC 78 at 78+825), not in the drawings data"
+  },
+  {
+   "id": "xc-DWKZ-0059",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_DWKZ_CC_74",
+   "sub": "DWKZ",
+   "set": {
+    "preset": "CC",
+    "ch0": 74725,
+    "ch1": 74725,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S02 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 74 (execution chart S02)"
+   },
+   "note": "In the S02 execution chart (CC 74 at 74+725), not in the drawings data"
+  },
+  {
+   "id": "xc-DWKZ-0060",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_DWKZ_CC_73",
+   "sub": "DWKZ",
+   "set": {
+    "preset": "CC",
+    "ch0": 73125,
+    "ch1": 73125,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S02 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 73 (execution chart S02)"
+   },
+   "note": "In the S02 execution chart (CC 73 at 73+125), not in the drawings data"
+  },
+  {
+   "id": "xc-DWKZ-0061",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_DWKZ_CC_69",
+   "sub": "DWKZ",
+   "set": {
+    "preset": "CC",
+    "ch0": 69175,
+    "ch1": 69175,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S02 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 69 (execution chart S02)"
+   },
+   "note": "In the S02 execution chart (CC 69 at 69+175), not in the drawings data"
+  },
+  {
+   "id": "xc-DWKZ-0062",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_DWKZ_CC_65",
+   "sub": "DWKZ",
+   "set": {
+    "preset": "CC",
+    "ch0": 65725,
+    "ch1": 65725,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S02 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 65 (execution chart S02)"
+   },
+   "note": "In the S02 execution chart (CC 65 at 65+725), not in the drawings data"
+  },
+  {
+   "id": "xc-DWKZ-0063",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_DWKZ_CC_64",
+   "sub": "DWKZ",
+   "set": {
+    "preset": "CC",
+    "ch0": 64875,
+    "ch1": 64875,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S02 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 64 (execution chart S02)"
+   },
+   "note": "In the S02 execution chart (CC 64 at 64+875), not in the drawings data"
+  },
+  {
+   "id": "xc-DWKZ-0064",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_DWKZ_CC_60",
+   "sub": "DWKZ",
+   "set": {
+    "preset": "CC",
+    "ch0": 60550,
+    "ch1": 60550,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S02 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 60 (execution chart S02)"
+   },
+   "note": "In the S02 execution chart (CC 60 at 60+550), not in the drawings data"
+  },
+  {
+   "id": "xc-DWKZ-0065",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_DWKZ_CC_57",
+   "sub": "DWKZ",
+   "set": {
+    "preset": "CC",
+    "ch0": 57425,
+    "ch1": 57425,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S02 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 57 (execution chart S02)"
+   },
+   "note": "In the S02 execution chart (CC 57 at 57+425), not in the drawings data"
+  },
+  {
+   "id": "xc-DWKZ-0066",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_DWKZ_CC_54",
+   "sub": "DWKZ",
+   "set": {
+    "preset": "CC",
+    "ch0": 54450,
+    "ch1": 54450,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S02 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 54 (execution chart S02)"
+   },
+   "note": "In the S02 execution chart (CC 54 at 54+450), not in the drawings data"
+  },
+  {
+   "id": "xc-DWKZ-0067",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_DWKZ_CC_53",
+   "sub": "DWKZ",
+   "set": {
+    "preset": "CC",
+    "ch0": 53225,
+    "ch1": 53225,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S02 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 53 (execution chart S02)"
+   },
+   "note": "In the S02 execution chart (CC 53 at 53+225), not in the drawings data"
+  },
+  {
+   "id": "xc-DWKZ-0068",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_DWKZ_48_2",
+   "sub": "DWKZ",
+   "set": {
+    "preset": "BC",
+    "ch0": 48477,
+    "ch1": 48477,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S02 25/09/26",
+    "name": "Triple box culvert 3×(2.0×2.0 m)",
+    "fullName": "Triple box culvert 3×(2.0×2.0 m) — 48.2 (execution chart S02)"
+   },
+   "note": "In the S02 execution chart (48.2 at 48+477), not in the drawings data"
+  },
+  {
+   "id": "xc-DWKZ-0069",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_DWKZ_CC46",
+   "sub": "DWKZ",
+   "set": {
+    "preset": "CC",
+    "ch0": 46750,
+    "ch1": 46750,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S02 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC46 (execution chart S02)"
+   },
+   "note": "In the S02 execution chart (CC46 at 46+750), not in the drawings data"
+  },
+  {
+   "id": "xc-DWKZ-0070",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_DWKZ_CC_43",
+   "sub": "DWKZ",
+   "set": {
+    "preset": "CC",
+    "ch0": 43100,
+    "ch1": 43100,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S02 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 43 (execution chart S02)"
+   },
+   "note": "In the S02 execution chart (CC 43 at 43+100), not in the drawings data"
+  },
+  {
+   "id": "xc-DWKZ-0071",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_DWKZ_CC_37",
+   "sub": "DWKZ",
+   "set": {
+    "preset": "CC",
+    "ch0": 37750,
+    "ch1": 37750,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S02 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 37 (execution chart S02)"
+   },
+   "note": "In the S02 execution chart (CC 37 at 37+750), not in the drawings data"
+  },
+  {
+   "id": "xc-DWKZ-0072",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_DWKZ_CC27",
+   "sub": "DWKZ",
+   "set": {
+    "preset": "CC",
+    "ch0": 27650,
+    "ch1": 27650,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S02 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC27 (execution chart S02)"
+   },
+   "note": "In the S02 execution chart (CC27 at 27+650), not in the drawings data"
+  },
+  {
+   "id": "xc-DWKZ-0073",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_DWKZ_CC24",
+   "sub": "DWKZ",
+   "set": {
+    "preset": "CC",
+    "ch0": 24650,
+    "ch1": 24650,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S02 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC24 (execution chart S02)"
+   },
+   "note": "In the S02 execution chart (CC24 at 24+650), not in the drawings data"
+  },
+  {
+   "id": "xc-KZDR-0074",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KZDR_CC_86",
+   "sub": "KZDR",
+   "set": {
+    "preset": "CC",
+    "ch0": 86525,
+    "ch1": 86525,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S03 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 86 (execution chart S03)"
+   },
+   "note": "In the S03 execution chart (CC 86 at 86+525), not in the drawings data"
+  },
+  {
+   "id": "xc-KZDR-0075",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KZDR_88_2",
+   "sub": "KZDR",
+   "set": {
+    "preset": "BC",
+    "ch0": 88495,
+    "ch1": 88495,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S03 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 88.2 (execution chart S03)"
+   },
+   "note": "In the S03 execution chart (88.2 at 88+495), not in the drawings data"
+  },
+  {
+   "id": "xc-KZDR-0076",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KZDR_CC_90",
+   "sub": "KZDR",
+   "set": {
+    "preset": "CC",
+    "ch0": 90350,
+    "ch1": 90350,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S03 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 90 (execution chart S03)"
+   },
+   "note": "In the S03 execution chart (CC 90 at 90+350), not in the drawings data"
+  },
+  {
+   "id": "xc-KZDR-0077",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KZDR_CC_92",
+   "sub": "KZDR",
+   "set": {
+    "preset": "CC",
+    "ch0": 92215,
+    "ch1": 92215,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S03 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 92 (execution chart S03)"
+   },
+   "note": "In the S03 execution chart (CC 92 at 92+215), not in the drawings data"
+  },
+  {
+   "id": "xc-KZDR-0078",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KZDR_CC_93",
+   "sub": "KZDR",
+   "set": {
+    "preset": "CC",
+    "ch0": 93525,
+    "ch1": 93525,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S03 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 93 (execution chart S03)"
+   },
+   "note": "In the S03 execution chart (CC 93 at 93+525), not in the drawings data"
+  },
+  {
+   "id": "xc-KZDR-0079",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KZDR_CC_98",
+   "sub": "KZDR",
+   "set": {
+    "preset": "CC",
+    "ch0": 98775,
+    "ch1": 98775,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S03 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 98 (execution chart S03)"
+   },
+   "note": "In the S03 execution chart (CC 98 at 98+775), not in the drawings data"
+  },
+  {
+   "id": "xc-KZDR-0080",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KZDR_CC_100",
+   "sub": "KZDR",
+   "set": {
+    "preset": "CC",
+    "ch0": 100875,
+    "ch1": 100875,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S03 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 100 (execution chart S03)"
+   },
+   "note": "In the S03 execution chart (CC 100 at 100+875), not in the drawings data"
+  },
+  {
+   "id": "xc-KZDR-0081",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KZDR_CC_103",
+   "sub": "KZDR",
+   "set": {
+    "preset": "CC",
+    "ch0": 103725,
+    "ch1": 103725,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S03 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 103 (execution chart S03)"
+   },
+   "note": "In the S03 execution chart (CC 103 at 103+725), not in the drawings data"
+  },
+  {
+   "id": "xc-KZDR-0082",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KZDR_107_A",
+   "sub": "KZDR",
+   "set": {
+    "preset": "BC",
+    "ch0": 107450,
+    "ch1": 107450,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S03 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 107.A (execution chart S03)"
+   },
+   "note": "In the S03 execution chart (107.A at 107+450), not in the drawings data"
+  },
+  {
+   "id": "xc-KZDR-0083",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KZDR_CC_109",
+   "sub": "KZDR",
+   "set": {
+    "preset": "CC",
+    "ch0": 109200,
+    "ch1": 109200,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S03 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 109 (execution chart S03)"
+   },
+   "note": "In the S03 execution chart (CC 109 at 109+200), not in the drawings data"
+  },
+  {
+   "id": "xc-KZDR-0084",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KZDR_CC_110",
+   "sub": "KZDR",
+   "set": {
+    "preset": "CC",
+    "ch0": 110275,
+    "ch1": 110275,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S03 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 110 (execution chart S03)"
+   },
+   "note": "In the S03 execution chart (CC 110 at 110+275), not in the drawings data"
+  },
+  {
+   "id": "xc-KZDR-0085",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KZDR_CC_112",
+   "sub": "KZDR",
+   "set": {
+    "preset": "CC",
+    "ch0": 112000,
+    "ch1": 112000,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S03 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 112 (execution chart S03)"
+   },
+   "note": "In the S03 execution chart (CC 112 at 112+000), not in the drawings data"
+  },
+  {
+   "id": "xc-KZDR-0086",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KZDR_113_A",
+   "sub": "KZDR",
+   "set": {
+    "preset": "PC",
+    "ch0": 113792,
+    "ch1": 113792,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S03 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 113.A (execution chart S03)"
+   },
+   "note": "In the S03 execution chart (113.A at 113+792), not in the drawings data"
+  },
+  {
+   "id": "xc-KZDR-0087",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KZDR_CC_116",
+   "sub": "KZDR",
+   "set": {
+    "preset": "CC",
+    "ch0": 116300,
+    "ch1": 116300,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S03 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 116 (execution chart S03)"
+   },
+   "note": "In the S03 execution chart (CC 116 at 116+300), not in the drawings data"
+  },
+  {
+   "id": "xc-KZDR-0088",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_KZDR_CC_118",
+   "sub": "KZDR",
+   "set": {
+    "preset": "CC",
+    "ch0": 118550,
+    "ch1": 118550,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S03 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 118 (execution chart S03)"
+   },
+   "note": "In the S03 execution chart (CC 118 at 118+550), not in the drawings data"
+  }
+ ]
+}

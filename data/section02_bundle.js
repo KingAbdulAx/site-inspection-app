@@ -31564,4386 +31564,13 @@ window.SECTION02_ASSETS = {
   "metadata": {
     "title": "Section 02 Verified Drainage Assets (Dawanau to Kazaure)",
     "section": "Section 02 (DWKZ)",
-    "count": 1311,
+    "count": 1327,
     "nominal_extent": "PK 19+800 to PK 82+902.439",
     "total_span_m": 63102.439,
     "generated_at": "September 2026",
-    "base_corrections_applied": 2273,
-    "removed_as_extraction_errors": [
-      {
-        "id": "s02_asset_001",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_002",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_003",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_005",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_006",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_008",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_009",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_010",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_011",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_012",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_013",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_014",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_015",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_016",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_017",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_018",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_019",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_020",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_021",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_022",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_023",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_024",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_025",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_026",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_027",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_028",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_029",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_030",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_031",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_032",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_033",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_034",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_035",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_036",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_037",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_038",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_039",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_040",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_041",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_042",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_043",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_044",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_045",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_047",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_048",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_053",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_058",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_059",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_062",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_063",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_064",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_066",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_067",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_071",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_075",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_076",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_078",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_079",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_084",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_087",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_089",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_090",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_094",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_095",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_098",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_101",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_102",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_103",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_106",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_107",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_115",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_116",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_117",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_119",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_126",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_127",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_129",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_130",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_131",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_133",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_134",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_137",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_138",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_140",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_144",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_145",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_146",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_147",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_148",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_150",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_151",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_152",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_156",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_157",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_158",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_159",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_161",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_162",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_164",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_165",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_166",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_167",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_168",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_169",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_170",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_172",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_173",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_176",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_179",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_180",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_183",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_184",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_186",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_187",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_188",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_191",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_193",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_195",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_198",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_199",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_203",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_204",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_205",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_207",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_211",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_222",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_223",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_224",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_226",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_227",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_232",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_234",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_235",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_237",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_238",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_239",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_240",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_241",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_249",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_250",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_253",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_258",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_259",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_260",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_262",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_263",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_264",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_266",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_267",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_268",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_271",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_272",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_273",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_274",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_275",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_276",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_277",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_278",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_279",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_280",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_281",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_284",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_285",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_286",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_288",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_290",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_292",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_296",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_305",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_306",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_308",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_311",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_312",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_313",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_314",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_315",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_316",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_317",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_318",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_319",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_320",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_321",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_324",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_325",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_329",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_330",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_333",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_334",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_335",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_337",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_342",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_343",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_345",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_346",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_348",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_349",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_350",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_351",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_352",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_356",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_357",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_358",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_362",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_368",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_370",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_372",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_375",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_380",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_382",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_383",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_384",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_386",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_387",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_389",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_391",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_394",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_396",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_397",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_398",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_399",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_404",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_405",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_407",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_408",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_411",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_413",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_414",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_415",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_416",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_418",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_419",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_420",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_421",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_422",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_425",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_428",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_429",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_431",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_433",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_435",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_436",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_437",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_438",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_444",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_445",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_446",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_447",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_448",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_449",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_450",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_453",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_454",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_455",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_460",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_461",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_464",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_467",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_468",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_472",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_474",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_475",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_477",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_480",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_481",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_483",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_484",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_485",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_486",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_487",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_488",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_489",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_492",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_494",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_495",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_496",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_497",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_498",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_499",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_500",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_502",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_503",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_505",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_506",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_509",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_511",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_512",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_515",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_516",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_517",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_520",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_522",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_525",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_526",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_530",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_531",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_532",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_534",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_535",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_543",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_546",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_547",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_549",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_550",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_551",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_552",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_553",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_554",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_555",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_556",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_557",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_558",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_559",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_560",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_561",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_562",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_564",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_565",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_566",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_568",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_570",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_571",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_572",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_573",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_574",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_575",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_579",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_580",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_581",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_582",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_586",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_587",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_589",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_592",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_593",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_595",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_596",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_597",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_601",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_602",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_603",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_604",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_605",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_606",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_608",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_609",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_611",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_614",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_617",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_618",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_620",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_621",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_622",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_623",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_624",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_625",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_626",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_627",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_629",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_632",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_633",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_635",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_636",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_637",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_639",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_643",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_644",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_645",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_647",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_650",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_651",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_653",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_654",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_656",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_657",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_659",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_662",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_663",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_664",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_665",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_666",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_667",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_670",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_671",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_673",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_674",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_676",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_677",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_678",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_680",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_682",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_683",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_685",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_687",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_688",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_689",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_690",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_691",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_692",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_695",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_697",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_698",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_699",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_701",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_702",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_703",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_704",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_705",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_708",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_710",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_711",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_712",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_714",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_715",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_717",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_718",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_719",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_722",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_724",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_725",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_726",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_727",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_728",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_729",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_731",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_732",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_736",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_737",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_738",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_740",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_741",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_742",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_744",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_745",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_747",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_749",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_750",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_752",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_754",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_755",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_758",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_759",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_762",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_763",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_766",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_767",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_768",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_770",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_772",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_774",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_775",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_777",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_778",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_781",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_782",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_783",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_784",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_785",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_786",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_787",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_790",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_791",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_792",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_794",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_796",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_797",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_799",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_800",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_802",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_803",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_805",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_806",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_807",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_809",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_812",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_813",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_816",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_818",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_819",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_822",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_823",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_824",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_827",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_829",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_831",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_832",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_834",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_835",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_836",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_837",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_840",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_841",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_843",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_844",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_846",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_848",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_849",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_850",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_851",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_855",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_856",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_857",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_858",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_859",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_860",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_861",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_862",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_863",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_865",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_867",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_868",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_870",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_871",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_872",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_873",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_874",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_876",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_878",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_882",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_883",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_884",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_885",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_886",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_887",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_888",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_889",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_890",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_891",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_892",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_893",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_894",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_895",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_896",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_897",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_898",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_899",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_900",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_901",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_902",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_903",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_904",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_905",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_906",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_907",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_908",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_909",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_910",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_911",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_912",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_913",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_914",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_915",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_916",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_917",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_918",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_919",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_920",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_921",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_922",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_923",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_924",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_925",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_926",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_927",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_928",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_929",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_930",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_931",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_932",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_933",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_934",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_935",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_936",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_937",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_938",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_939",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_940",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_941",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_942",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_943",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_944",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_945",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_946",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_947",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_948",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_949",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_950",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_951",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_952",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_953",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_954",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_955",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_956",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_957",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_958",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_959",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_960",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_961",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_962",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_963",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_964",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_965",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_966",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_967",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_968",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_969",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_970",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_971",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_972",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_973",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_974",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_975",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_976",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_977",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_978",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_979",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_980",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_981",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_982",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_983",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_984",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_985",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_986",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_987",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_988",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_989",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_990",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_991",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_992",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_993",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_994",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_995",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_996",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_997",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_998",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_999",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1000",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1001",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1002",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1003",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1004",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1005",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1006",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1007",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1008",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1009",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1010",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1011",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1012",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1013",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1014",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1015",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1016",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1017",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1018",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1019",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1020",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1021",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1022",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1023",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1024",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1025",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1026",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1027",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1028",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1029",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1030",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1031",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1032",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1033",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1034",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1035",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1036",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1037",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1038",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1039",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1040",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1041",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1042",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1043",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1044",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1045",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1046",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1047",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1048",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1049",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1050",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1051",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1052",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1053",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1054",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1055",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1056",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1057",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1058",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1059",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1060",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1061",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1062",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1063",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1064",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1065",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1066",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1067",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1068",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1069",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1070",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1071",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1072",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1073",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1074",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1075",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1076",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1077",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1078",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1079",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1080",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1081",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1082",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1083",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1084",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1085",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1086",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1087",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1088",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1089",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1090",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1091",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1092",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1093",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1094",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1095",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1096",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1097",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1098",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1099",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1100",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1101",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1102",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1103",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1104",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1105",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1106",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1107",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1108",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1109",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1110",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1111",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1113",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1114",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1115",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1116",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1117",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1118",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1119",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1120",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1121",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1122",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1123",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1124",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1125",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1126",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1127",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1128",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1129",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1130",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1131",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1132",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1133",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1134",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1135",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1136",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1137",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1138",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1139",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1140",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1141",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1142",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1143",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1144",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1145",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1146",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1147",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1148",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1149",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1150",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1151",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1152",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1154",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1155",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1156",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1158",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1159",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1160",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1162",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1164",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1165",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1166",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1170",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1171",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1172",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1173",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1174",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1175",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1178",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1179",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1180",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1181",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1183",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1184",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1187",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1188",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1189",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1191",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1192",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1197",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1199",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1200",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1201",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1202",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1206",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1208",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1209",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1210",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1211",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1214",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1215",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1216",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1219",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1220",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1221",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1225",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1227",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1229",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1230",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1231",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1235",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1236",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1238",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1239",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1240",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1242",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1247",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1248",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1250",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1251",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1252",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1255",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1256",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1257",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1259",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1263",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1265",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1266",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1267",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1270",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1273",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1274",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1275",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1276",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1279",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1283",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1284",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1286",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1290",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1291",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1294",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1295",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1298",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1303",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1304",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1305",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1308",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1310",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1311",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1312",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1314",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1315",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1317",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1319",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1320",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1321",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1323",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1324",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1326",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1328",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1330",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1331",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1332",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1333",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1334",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1336",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1337",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1340",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1341",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1343",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1345",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1346",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1347",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1348",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1349",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1351",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1352",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1354",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1355",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1357",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1359",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1361",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1362",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1363",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1368",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1369",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1371",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1372",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1373",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1375",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1376",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1378",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1379",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1381",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1382",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1383",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1384",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1386",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1388",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1390",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1391",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1393",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1396",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1398",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1399",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1400",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1401",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1402",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1407",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1409",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1410",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1411",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1413",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1414",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1415",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1416",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1419",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1421",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1422",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1423",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1426",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1427",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1430",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1432",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1433",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1436",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1439",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1440",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1445",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1447",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1448",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1449",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1450",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1451",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1452",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1456",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1458",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1459",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1460",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1463",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1464",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1471",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1474",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1475",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1476",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1478",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1479",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1480",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1482",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1483",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1484",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1486",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1488",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1489",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1495",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1496",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1497",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1498",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1499",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1501",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1505",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1507",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1508",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1509",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1510",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1511",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1512",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1514",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1516",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1517",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1518",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1519",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1520",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1522",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1528",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1529",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1530",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1531",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1532",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1535",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1537",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1538",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1540",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1541",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1544",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1545",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1546",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1547",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1549",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1550",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1554",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1556",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1557",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1559",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1561",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1562",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1564",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1565",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1567",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1568",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1569",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1572",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1573",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1576",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1577",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1578",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1579",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1581",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1583",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1584",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1587",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1588",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1590",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1591",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1592",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1596",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1601",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1602",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1603",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1606",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1609",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1610",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1615",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1617",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1618",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1620",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1626",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1628",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1633",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1634",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1636",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1638",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1640",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1642",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1643",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1644",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1645",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1647",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1649",
-        "note": "No riprap callout in the CAD within 50 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1650",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1652",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1653",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1657",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1661",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1662",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1663",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1664",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1665",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1668",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1669",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1677",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1678",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1681",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1685",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1689",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1690",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1694",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1695",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1697",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1699",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1700",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1701",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1702",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1704",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1705",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1706",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1707",
-        "note": "No water descent in the CAD within 15 m (CAD S02-DRN-LONG)"
-      },
-      {
-        "id": "s02_asset_1708",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S02-DRN-LONG)"
-      }
-    ],
-    "corrected_at": "2026-09-29T17:38:44.716Z"
+    "base_corrections_applied": 16,
+    "removed_as_extraction_errors": [],
+    "corrected_at": "2026-09-30T09:32:31.320Z"
   },
   "features": [
     {
@@ -36246,6 +31873,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "ON-HOLD",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 20.69,
         "di_set": {
           "ch0": 21333.5,
           "ch1": 21333.5,
@@ -36254,8 +31882,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03003-05",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 20.69
+        }
       },
       "geometry": {
         "type": "Point",
@@ -36289,6 +31916,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "ON-HOLD",
         "derivation_method": "Plan sheet vector marker glyph clustering (589 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 22.39,
         "di_set": {
           "ch0": 21506.11,
           "ch1": 22346.16,
@@ -36297,8 +31925,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03003-05",
           "preset": "T12"
-        },
-        "offset_m": 22.39
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -36578,6 +32205,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "ON-HOLD",
         "derivation_method": "Plan sheet vector marker glyph clustering (730 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 21.85,
         "di_set": {
           "ch0": 21343.23,
           "ch1": 21450.92,
@@ -36585,8 +32213,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 21.85,
           "cert": "exact",
           "sheet": "DW-03003-05"
-        },
-        "offset_m": 21.85
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -36711,6 +32338,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "ON-HOLD",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 19.67,
         "di_set": {
           "ch0": 21357.17,
           "ch1": 21357.17,
@@ -36719,8 +32347,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03003-05",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 19.67
+        }
       },
       "geometry": {
         "type": "Point",
@@ -36754,6 +32381,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "ON-HOLD",
         "derivation_method": "Plan sheet vector marker glyph clustering (89 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 21.9,
         "di_set": {
           "ch0": 21298.05,
           "ch1": 21337.72,
@@ -36762,8 +32390,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03003-05",
           "preset": "T7"
-        },
-        "offset_m": 21.9
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -36948,6 +32575,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "ON-HOLD",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
+        "offset_m": 12.8,
         "di_set": {
           "ch0": 21288.49,
           "ch1": 21400,
@@ -36955,8 +32583,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.8,
           "cert": "exact",
           "sheet": "DW-03003-05"
-        },
-        "offset_m": 12.8
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -37084,6 +32711,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "ON-HOLD",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
+        "offset_m": 12.85,
         "di_set": {
           "ch0": 21276.17,
           "ch1": 21485.98,
@@ -37091,8 +32719,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.85,
           "cert": "exact",
           "sheet": "DW-03003-05"
-        },
-        "offset_m": 12.85
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -37297,6 +32924,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "ON-HOLD",
         "derivation_method": "CAD vector stepped cascade block (RGB 0.0, 0.647, 0.867) matching DW-10003-04-A",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 17.51,
         "di_set": {
           "ch0": 21485.95,
           "ch1": 21485.95,
@@ -37304,8 +32932,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 17.51,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "offset_m": 17.51
+        }
       },
       "geometry": {
         "type": "Point",
@@ -37340,6 +32967,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "ON-HOLD",
         "derivation_method": "CAD vector stepped cascade block (RGB 0.0, 0.647, 0.867) matching DW-10003-04-A",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 17.34,
         "di_set": {
           "ch0": 21486.04,
           "ch1": 21486.04,
@@ -37347,8 +32975,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 17.34,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "offset_m": 17.34
+        }
       },
       "geometry": {
         "type": "Point",
@@ -37382,6 +33009,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "ON-HOLD",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
+        "offset_m": 12.85,
         "di_set": {
           "ch0": 21502.79,
           "ch1": 22425,
@@ -37389,8 +33017,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.85,
           "cert": "exact",
           "sheet": "DW-03003-05"
-        },
-        "offset_m": 12.85
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -37666,6 +33293,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "ON-HOLD",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
+        "offset_m": 12.85,
         "di_set": {
           "ch0": 21502,
           "ch1": 22430,
@@ -37673,8 +33301,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.85,
           "cert": "exact",
           "sheet": "DW-03003-05"
-        },
-        "offset_m": 12.85
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -37951,6 +33578,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "ON-HOLD",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 21400,
           "ch1": 22825,
@@ -37958,8 +33586,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03003-05"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -38236,6 +33863,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "ON-HOLD",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 19.59,
         "di_set": {
           "ch0": 22176.34,
           "ch1": 22176.34,
@@ -38244,8 +33872,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03003-05",
           "cert": "label",
           "stated": 771
-        },
-        "offset_m": 19.59
+        }
       },
       "geometry": {
         "type": "Point",
@@ -38352,6 +33979,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "ON-HOLD",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
+        "offset_m": 13.15,
         "di_set": {
           "ch0": 22450,
           "ch1": 22519.84,
@@ -38359,8 +33987,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 13.15,
           "cert": "exact",
           "sheet": "DW-03003-05"
-        },
-        "offset_m": 13.15
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -38452,6 +34079,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "ON-HOLD",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
+        "offset_m": 13.6,
         "di_set": {
           "ch0": 22445,
           "ch1": 22529.12,
@@ -38459,8 +34087,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 13.6,
           "cert": "exact",
           "sheet": "DW-03003-05"
-        },
-        "offset_m": 13.6
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -38730,6 +34357,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "ON-HOLD",
         "derivation_method": "Plan sheet vector marker glyph clustering (394 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 16.4,
         "di_set": {
           "ch0": 22548.64,
           "ch1": 22740.25,
@@ -38737,8 +34365,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 16.4,
           "cert": "exact",
           "sheet": "DW-03004-04"
-        },
-        "offset_m": 16.4
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -38931,6 +34558,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "ON-HOLD",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 15.23,
         "di_set": {
           "ch0": 22566.4,
           "ch1": 22566.4,
@@ -38939,8 +34567,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03003-05",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 15.23
+        }
       },
       "geometry": {
         "type": "Point",
@@ -38975,6 +34602,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 17.17,
         "di_set": {
           "ch0": 22722.29,
           "ch1": 22722.29,
@@ -38983,8 +34611,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03004-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 17.17
+        }
       },
       "geometry": {
         "type": "Point",
@@ -39018,6 +34645,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
+        "offset_m": 12.8,
         "di_set": {
           "ch0": 22706,
           "ch1": 22784.84,
@@ -39025,8 +34653,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.8,
           "cert": "exact",
           "sheet": "DW-03004-04"
-        },
-        "offset_m": 12.8
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -39126,6 +34753,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (47 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 13.12,
         "di_set": {
           "ch0": 22777.31,
           "ch1": 22874.93,
@@ -39134,8 +34762,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03004-04",
           "preset": "T4"
-        },
-        "offset_m": 13.12
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -39291,6 +34918,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (80 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 20.54,
         "di_set": {
           "ch0": 22744.2,
           "ch1": 22778.69,
@@ -39299,8 +34927,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03004-04",
           "preset": "T12"
-        },
-        "offset_m": 20.54
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -39365,6 +34992,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 17.1,
         "di_set": {
           "ch0": 22762,
           "ch1": 22762,
@@ -39373,8 +35001,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03004-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 17.1
+        }
       },
       "geometry": {
         "type": "Point",
@@ -39408,6 +35035,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (964 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.93,
         "di_set": {
           "ch0": 23123.39,
           "ch1": 23349.93,
@@ -39415,8 +35043,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.93,
           "cert": "exact",
           "sheet": "DW-03004-04"
-        },
-        "offset_m": 9.93
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -39636,6 +35263,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
+        "offset_m": 12.8,
         "di_set": {
           "ch0": 22775,
           "ch1": 22814.42,
@@ -39643,8 +35271,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.8,
           "cert": "exact",
           "sheet": "DW-03004-04"
-        },
-        "offset_m": 12.8
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -39713,6 +35340,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 11.59,
         "di_set": {
           "ch0": 22909.59,
           "ch1": 22909.59,
@@ -39721,8 +35349,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03004-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 11.59
+        }
       },
       "geometry": {
         "type": "Point",
@@ -39757,6 +35384,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 22825,
           "ch1": 22925,
@@ -39764,8 +35392,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03004-04"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -39922,6 +35549,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 11.93,
         "di_set": {
           "ch0": 22941.58,
           "ch1": 22941.58,
@@ -39930,8 +35558,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03004-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 11.93
+        }
       },
       "geometry": {
         "type": "Point",
@@ -39965,6 +35592,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (4 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 13.17,
         "di_set": {
           "ch0": 22975.21,
           "ch1": 23007.95,
@@ -39973,8 +35601,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03004-04",
           "preset": "T4"
-        },
-        "offset_m": 13.17
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -40079,6 +35706,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 22925,
           "ch1": 23100,
@@ -40086,8 +35714,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03004-04"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -40264,6 +35891,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 10.99,
         "di_set": {
           "ch0": 23024.23,
           "ch1": 23024.23,
@@ -40272,8 +35900,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03004-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 10.99
+        }
       },
       "geometry": {
         "type": "Point",
@@ -40308,6 +35935,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 9.01,
         "di_set": {
           "ch0": 23101.4,
           "ch1": 23101.4,
@@ -40316,8 +35944,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03004-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 9.01
+        }
       },
       "geometry": {
         "type": "Point",
@@ -40392,6 +36019,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 9.35,
         "di_set": {
           "ch0": 23133.39,
           "ch1": 23133.39,
@@ -40400,8 +36028,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03004-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 9.35
+        }
       },
       "geometry": {
         "type": "Point",
@@ -40435,6 +36062,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (34 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 8.01,
         "di_set": {
           "ch0": 23350.09,
           "ch1": 23575.38,
@@ -40443,8 +36071,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03004-04",
           "preset": "T4"
-        },
-        "offset_m": 8.01
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -40664,6 +36291,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (26 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.46,
         "di_set": {
           "ch0": 23575.38,
           "ch1": 23696.71,
@@ -40671,8 +36299,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.46,
           "cert": "exact",
           "sheet": "DW-03004-04"
-        },
-        "offset_m": 9.46
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -40809,6 +36436,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 7.34,
         "di_set": {
           "ch0": 23682.04,
           "ch1": 23682.04,
@@ -40817,8 +36445,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03004-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.34
+        }
       },
       "geometry": {
         "type": "Point",
@@ -40892,6 +36519,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (6 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.26,
         "di_set": {
           "ch0": 23703.6,
           "ch1": 23750.21,
@@ -40899,8 +36527,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.26,
           "cert": "exact",
           "sheet": "DW-03004-04"
-        },
-        "offset_m": 9.26
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -40977,6 +36604,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 7.17,
         "di_set": {
           "ch0": 23711.77,
           "ch1": 23711.77,
@@ -40985,8 +36613,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03004-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.17
+        }
       },
       "geometry": {
         "type": "Point",
@@ -41020,6 +36647,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (2232 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 12.04,
         "di_set": {
           "ch0": 24042.14,
           "ch1": 24349.94,
@@ -41027,8 +36655,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.04,
           "cert": "exact",
           "sheet": "DW-03005-04"
-        },
-        "offset_m": 12.04
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -41305,6 +36932,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 10.87,
         "di_set": {
           "ch0": 24017.91,
           "ch1": 24017.91,
@@ -41313,8 +36941,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03005-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 10.87
+        }
       },
       "geometry": {
         "type": "Point",
@@ -41348,6 +36975,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (29 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.33,
         "di_set": {
           "ch0": 23750,
           "ch1": 24029.14,
@@ -41356,8 +36984,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03004-04",
           "preset": "T4"
-        },
-        "offset_m": 10.33
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -41658,6 +37285,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 10.7,
         "di_set": {
           "ch0": 24047.64,
           "ch1": 24047.64,
@@ -41666,8 +37294,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03005-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 10.7
+        }
       },
       "geometry": {
         "type": "Point",
@@ -41742,6 +37369,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.55,
         "di_set": {
           "ch0": 24381.24,
           "ch1": 24381.24,
@@ -41750,8 +37378,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03005-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.55
+        }
       },
       "geometry": {
         "type": "Point",
@@ -41785,6 +37412,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (39 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.85,
         "di_set": {
           "ch0": 24375.85,
           "ch1": 24674.95,
@@ -41792,8 +37420,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.85,
           "cert": "exact",
           "sheet": "DW-03005-04"
-        },
-        "offset_m": 11.85
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -42070,6 +37697,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 17.05,
         "di_set": {
           "ch0": 24025,
           "ch1": 24824.99,
@@ -42077,8 +37705,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 17.05,
           "cert": "exact",
           "sheet": "DW-03005-04"
-        },
-        "offset_m": 17.05
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -42354,6 +37981,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (36 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.46,
         "di_set": {
           "ch0": 24674.95,
           "ch1": 24949.67,
@@ -42362,8 +37990,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03005-04",
           "preset": "T4"
-        },
-        "offset_m": 11.46
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -42660,6 +38287,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 7.9,
         "di_set": {
           "ch0": 25024.59,
           "ch1": 25024.59,
@@ -42668,8 +38296,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03005-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.9
+        }
       },
       "geometry": {
         "type": "Point",
@@ -42703,6 +38330,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (912 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 8.89,
         "di_set": {
           "ch0": 25200.04,
           "ch1": 25640.87,
@@ -42710,8 +38338,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.89,
           "cert": "exact",
           "sheet": "DW-03006-04"
-        },
-        "offset_m": 8.89
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -43031,6 +38658,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (1413 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.94,
         "di_set": {
           "ch0": 25875,
           "ch1": 26710.75,
@@ -43038,8 +38666,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.94,
           "cert": "exact",
           "sheet": "DW-03006-04"
-        },
-        "offset_m": 10.94
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -43320,6 +38947,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 26425,
           "ch1": 26800,
@@ -43327,8 +38955,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03006-04"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -43605,6 +39232,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 11.46,
         "di_set": {
           "ch0": 26706.24,
           "ch1": 26706.24,
@@ -43613,8 +39241,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03006-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 11.46
+        }
       },
       "geometry": {
         "type": "Point",
@@ -43648,6 +39275,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (514 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.81,
         "di_set": {
           "ch0": 26721.84,
           "ch1": 26878.75,
@@ -43655,8 +39283,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.81,
           "cert": "exact",
           "sheet": "DW-03007-04"
-        },
-        "offset_m": 10.81
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -43820,6 +39447,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (151 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.55,
         "di_set": {
           "ch0": 26722.28,
           "ch1": 26899.94,
@@ -43828,8 +39456,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03007-04",
           "preset": "T7"
-        },
-        "offset_m": 10.55
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -44049,6 +39676,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (786 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.49,
         "di_set": {
           "ch0": 26925.54,
           "ch1": 27380.59,
@@ -44056,8 +39684,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.49,
           "cert": "exact",
           "sheet": "DW-03007-04"
-        },
-        "offset_m": 9.49
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -44333,6 +39960,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (300 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.71,
         "di_set": {
           "ch0": 27125.37,
           "ch1": 27379.52,
@@ -44340,8 +39968,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.71,
           "cert": "exact",
           "sheet": "DW-03007-04"
-        },
-        "offset_m": 9.71
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -44622,6 +40249,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 27575,
           "ch1": 27775,
@@ -44629,8 +40257,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03007-04"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -44826,6 +40453,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (5 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.58,
         "di_set": {
           "ch0": 27385,
           "ch1": 27622.76,
@@ -44834,8 +40462,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03007-04",
           "preset": "T4"
-        },
-        "offset_m": 11.58
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -45063,6 +40690,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (47 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 12.46,
         "di_set": {
           "ch0": 27622.76,
           "ch1": 27725.69,
@@ -45070,8 +40698,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.46,
           "cert": "exact",
           "sheet": "DW-03007-04"
-        },
-        "offset_m": 12.46
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -45231,6 +40858,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (11 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 12.16,
         "di_set": {
           "ch0": 27731.38,
           "ch1": 27800,
@@ -45238,8 +40866,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.16,
           "cert": "exact",
           "sheet": "DW-03007-04"
-        },
-        "offset_m": 12.16
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -45331,6 +40958,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (182 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.99,
         "di_set": {
           "ch0": 27800.01,
           "ch1": 28000,
@@ -45338,8 +40966,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.99,
           "cert": "exact",
           "sheet": "DW-03007-04"
-        },
-        "offset_m": 11.99
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -45535,6 +41162,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (125 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 12,
         "di_set": {
           "ch0": 27950.24,
           "ch1": 28042.5,
@@ -45542,8 +41170,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12,
           "cert": "exact",
           "sheet": "DW-03007-04"
-        },
-        "offset_m": 12
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -45656,6 +41283,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.85,
         "di_set": {
           "ch0": 28035.65,
           "ch1": 28035.65,
@@ -45664,8 +41292,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03007-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.85
+        }
       },
       "geometry": {
         "type": "Point",
@@ -45699,6 +41326,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (5 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 12.31,
         "di_set": {
           "ch0": 28000,
           "ch1": 28042.6,
@@ -45706,8 +41334,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.31,
           "cert": "exact",
           "sheet": "DW-03007-04"
-        },
-        "offset_m": 12.31
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -45819,6 +41446,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (4 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 12.66,
         "di_set": {
           "ch0": 28047.61,
           "ch1": 28088.36,
@@ -45826,8 +41454,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.66,
           "cert": "exact",
           "sheet": "DW-03007-04"
-        },
-        "offset_m": 12.66
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -45900,6 +41527,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.71,
         "di_set": {
           "ch0": 28054.17,
           "ch1": 28054.17,
@@ -45908,8 +41536,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03007-04",
           "cert": "label",
           "stated": 53
-        },
-        "offset_m": 8.71
+        }
       },
       "geometry": {
         "type": "Point",
@@ -45943,6 +41570,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (412 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.9,
         "di_set": {
           "ch0": 28115.05,
           "ch1": 28400,
@@ -45950,8 +41578,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.9,
           "cert": "exact",
           "sheet": "DW-03008-04"
-        },
-        "offset_m": 11.9
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -46215,6 +41842,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (232 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.92,
         "di_set": {
           "ch0": 28224.66,
           "ch1": 28425,
@@ -46222,8 +41850,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.92,
           "cert": "exact",
           "sheet": "DW-03008-04"
-        },
-        "offset_m": 11.92
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -46423,6 +42050,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (23 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 12.76,
         "di_set": {
           "ch0": 28400,
           "ch1": 28528.2,
@@ -46430,8 +42058,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.76,
           "cert": "exact",
           "sheet": "DW-03008-04"
-        },
-        "offset_m": 12.76
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -46572,6 +42199,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 28400,
           "ch1": 28675,
@@ -46579,8 +42207,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03008-04"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -46836,6 +42463,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (401 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.69,
         "di_set": {
           "ch0": 28533.47,
           "ch1": 28841.35,
@@ -46843,8 +42471,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.69,
           "cert": "exact",
           "sheet": "DW-03008-04"
-        },
-        "offset_m": 11.69
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -47121,6 +42748,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 10.25,
         "di_set": {
           "ch0": 28519.71,
           "ch1": 28519.71,
@@ -47129,8 +42757,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03008-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 10.25
+        }
       },
       "geometry": {
         "type": "Point",
@@ -47164,6 +42791,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (73 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 12.36,
         "di_set": {
           "ch0": 28425.74,
           "ch1": 28529.78,
@@ -47172,8 +42800,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03008-04",
           "preset": "T12"
-        },
-        "offset_m": 12.36
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -47333,6 +42960,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (42 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 12.77,
         "di_set": {
           "ch0": 28535.63,
           "ch1": 28550,
@@ -47341,8 +42969,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03008-04",
           "preset": "T12"
-        },
-        "offset_m": 12.77
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -47391,6 +43018,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 10.1,
         "di_set": {
           "ch0": 28538.22,
           "ch1": 28538.22,
@@ -47399,8 +43027,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03008-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 10.1
+        }
       },
       "geometry": {
         "type": "Point",
@@ -47434,6 +43061,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (61 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.79,
         "di_set": {
           "ch0": 28550,
           "ch1": 28826.37,
@@ -47441,8 +43069,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.79,
           "cert": "exact",
           "sheet": "DW-03008-04"
-        },
-        "offset_m": 11.79
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -47742,6 +43369,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (42 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.53,
         "di_set": {
           "ch0": 28847.68,
           "ch1": 28982.85,
@@ -47749,8 +43377,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.53,
           "cert": "exact",
           "sheet": "DW-03008-04"
-        },
-        "offset_m": 11.53
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -47899,6 +43526,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 7.83,
         "di_set": {
           "ch0": 28851.6,
           "ch1": 28851.6,
@@ -47907,8 +43535,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03008-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.83
+        }
       },
       "geometry": {
         "type": "Point",
@@ -47942,6 +43569,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (9 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.5,
         "di_set": {
           "ch0": 28847.51,
           "ch1": 29009.28,
@@ -47950,8 +43578,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03008-04",
           "preset": "T12"
-        },
-        "offset_m": 11.5
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -48120,6 +43747,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 9.85,
         "di_set": {
           "ch0": 29004,
           "ch1": 29004,
@@ -48128,8 +43756,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03008-04",
           "cert": "label",
           "stated": 33
-        },
-        "offset_m": 9.85
+        }
       },
       "geometry": {
         "type": "Point",
@@ -48164,6 +43791,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.76,
         "di_set": {
           "ch0": 29032.65,
           "ch1": 29032.65,
@@ -48172,8 +43800,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03008-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.76
+        }
       },
       "geometry": {
         "type": "Point",
@@ -48247,6 +43874,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (14 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.32,
         "di_set": {
           "ch0": 29094.01,
           "ch1": 29108.99,
@@ -48255,8 +43883,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03008-04",
           "preset": "T12"
-        },
-        "offset_m": 11.32
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -48305,6 +43932,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.05,
         "di_set": {
           "ch0": 29123.32,
           "ch1": 29123.32,
@@ -48313,8 +43941,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03008-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.05
+        }
       },
       "geometry": {
         "type": "Point",
@@ -48389,6 +44016,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 9.06,
         "di_set": {
           "ch0": 29102,
           "ch1": 29102,
@@ -48397,8 +44025,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03008-04",
           "cert": "label",
           "stated": 20
-        },
-        "offset_m": 9.06
+        }
       },
       "geometry": {
         "type": "Point",
@@ -48432,6 +44059,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (52 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.21,
         "di_set": {
           "ch0": 29116.34,
           "ch1": 29325.08,
@@ -48439,8 +44067,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.21,
           "cert": "exact",
           "sheet": "DW-03008-04"
-        },
-        "offset_m": 9.21
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -48644,6 +44271,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (623 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 7.99,
         "di_set": {
           "ch0": 29374.95,
           "ch1": 29866.12,
@@ -48651,8 +44279,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.99,
           "cert": "exact",
           "sheet": "DW-03009-04"
-        },
-        "offset_m": 7.99
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -48932,6 +44559,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (485 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 7.57,
         "di_set": {
           "ch0": 29426.65,
           "ch1": 29824.96,
@@ -48939,8 +44567,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.57,
           "cert": "exact",
           "sheet": "DW-03009-04"
-        },
-        "offset_m": 7.57
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -49217,6 +44844,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.02,
         "di_set": {
           "ch0": 29855,
           "ch1": 29855,
@@ -49225,8 +44853,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03009-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.02
+        }
       },
       "geometry": {
         "type": "Point",
@@ -49300,6 +44927,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (1442 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 7.34,
         "di_set": {
           "ch0": 30100.9,
           "ch1": 31000.22,
@@ -49307,8 +44935,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.34,
           "cert": "exact",
           "sheet": "DW-03009-04"
-        },
-        "offset_m": 7.34
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -49584,6 +45211,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (10 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.43,
         "di_set": {
           "ch0": 29872.3,
           "ch1": 30084.53,
@@ -49592,8 +45220,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03009-04",
           "preset": "T7"
-        },
-        "offset_m": 11.43
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -49801,6 +45428,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (295 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.63,
         "di_set": {
           "ch0": 29947.47,
           "ch1": 30084.62,
@@ -49808,8 +45436,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.63,
           "cert": "exact",
           "sheet": "DW-03009-04"
-        },
-        "offset_m": 11.63
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -49958,6 +45585,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 9.45,
         "di_set": {
           "ch0": 30081.9,
           "ch1": 30081.9,
@@ -49966,8 +45594,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03009-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 9.45
+        }
       },
       "geometry": {
         "type": "Point",
@@ -50041,6 +45668,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (381 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 7.97,
         "di_set": {
           "ch0": 31000.22,
           "ch1": 31349.23,
@@ -50048,8 +45676,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.97,
           "cert": "exact",
           "sheet": "DW-03010-04"
-        },
-        "offset_m": 7.97
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -50325,6 +45952,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (736 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 8.14,
         "di_set": {
           "ch0": 31349.23,
           "ch1": 31859.36,
@@ -50332,8 +45960,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.14,
           "cert": "exact",
           "sheet": "DW-03010-04"
-        },
-        "offset_m": 8.14
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -50613,6 +46240,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (114 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 7.76,
         "di_set": {
           "ch0": 31475.74,
           "ch1": 31834.17,
@@ -50620,8 +46248,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.76,
           "cert": "exact",
           "sheet": "DW-03010-04"
-        },
-        "offset_m": 7.76
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -51026,6 +46653,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (134 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.45,
         "di_set": {
           "ch0": 31920.1,
           "ch1": 32444.25,
@@ -51033,8 +46661,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.45,
           "cert": "exact",
           "sheet": "DW-03010-04"
-        },
-        "offset_m": 10.45
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -51315,6 +46942,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 13.08,
         "di_set": {
           "ch0": 32436.05,
           "ch1": 32436.05,
@@ -51323,8 +46951,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03011-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 13.08
+        }
       },
       "geometry": {
         "type": "Point",
@@ -51358,6 +46985,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (3 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 15.24,
         "di_set": {
           "ch0": 32457.8,
           "ch1": 32499.46,
@@ -51366,8 +46994,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03011-04",
           "preset": "T12"
-        },
-        "offset_m": 15.24
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -51479,6 +47106,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (21 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 14.73,
         "di_set": {
           "ch0": 32499.97,
           "ch1": 32577.3,
@@ -51486,8 +47114,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 14.73,
           "cert": "exact",
           "sheet": "DW-03011-04"
-        },
-        "offset_m": 14.73
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -51588,6 +47215,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 13.89,
         "di_set": {
           "ch0": 32466.14,
           "ch1": 32466.14,
@@ -51596,8 +47224,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03011-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 13.89
+        }
       },
       "geometry": {
         "type": "Point",
@@ -51632,6 +47259,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 12.82,
         "di_set": {
           "ch0": 32562.5,
           "ch1": 32562.5,
@@ -51640,8 +47268,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03011-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 12.82
+        }
       },
       "geometry": {
         "type": "Point",
@@ -51716,6 +47343,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 14.05,
         "di_set": {
           "ch0": 32603.86,
           "ch1": 32603.86,
@@ -51724,8 +47352,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03011-04",
           "cert": "label",
           "stated": 38
-        },
-        "offset_m": 14.05
+        }
       },
       "geometry": {
         "type": "Point",
@@ -51759,6 +47386,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (3 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 15.55,
         "di_set": {
           "ch0": 32582.44,
           "ch1": 32617.93,
@@ -51767,8 +47395,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03011-04",
           "preset": "T12"
-        },
-        "offset_m": 15.55
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -51876,6 +47503,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (10 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 14.66,
         "di_set": {
           "ch0": 32625.33,
           "ch1": 32649.74,
@@ -51884,8 +47512,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03011-04",
           "preset": "T12"
-        },
-        "offset_m": 14.66
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -51942,6 +47569,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 12.62,
         "di_set": {
           "ch0": 32637.5,
           "ch1": 32637.5,
@@ -51950,8 +47578,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03011-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 12.62
+        }
       },
       "geometry": {
         "type": "Point",
@@ -51986,6 +47613,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 10.71,
         "di_set": {
           "ch0": 32696.77,
           "ch1": 32696.77,
@@ -51994,8 +47622,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03011-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 10.71
+        }
       },
       "geometry": {
         "type": "Point",
@@ -52029,6 +47656,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (20 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 15.49,
         "di_set": {
           "ch0": 32649.74,
           "ch1": 32702.46,
@@ -52036,8 +47664,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 15.49,
           "cert": "exact",
           "sheet": "DW-03011-04"
-        },
-        "offset_m": 15.49
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -52157,6 +47784,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (951 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 19.3,
         "di_set": {
           "ch0": 32704.78,
           "ch1": 33426.16,
@@ -52164,8 +47792,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 19.3,
           "cert": "exact",
           "sheet": "DW-03011-04"
-        },
-        "offset_m": 19.3
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -52442,6 +48069,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 32300,
           "ch1": 33100,
@@ -52449,8 +48077,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03011-04"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -52727,6 +48354,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 13.77,
         "di_set": {
           "ch0": 33605.06,
           "ch1": 33605.06,
@@ -52735,8 +48363,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03011-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 13.77
+        }
       },
       "geometry": {
         "type": "Point",
@@ -52810,6 +48437,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (8 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 15.87,
         "di_set": {
           "ch0": 33621.45,
           "ch1": 33674.99,
@@ -52817,8 +48445,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 15.87,
           "cert": "exact",
           "sheet": "DW-03011-04"
-        },
-        "offset_m": 15.87
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -52899,6 +48526,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 13.99,
         "di_set": {
           "ch0": 33627.07,
           "ch1": 33627.07,
@@ -52907,8 +48535,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03011-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 13.99
+        }
       },
       "geometry": {
         "type": "Point",
@@ -52942,6 +48569,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (355 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 16.4,
         "di_set": {
           "ch0": 33674.99,
           "ch1": 33899.67,
@@ -52949,8 +48577,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 16.4,
           "cert": "exact",
           "sheet": "DW-03011-04"
-        },
-        "offset_m": 16.4
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -53167,6 +48794,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.2,
         "di_set": {
           "ch0": 33850,
           "ch1": 33955,
@@ -53174,8 +48802,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.2,
           "cert": "exact",
           "sheet": "DW-03012-04"
-        },
-        "offset_m": 3.2
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -53295,6 +48922,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (16 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 13.36,
         "di_set": {
           "ch0": 33902.1,
           "ch1": 33964.97,
@@ -53302,8 +48930,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 13.36,
           "cert": "exact",
           "sheet": "DW-03012-04"
-        },
-        "offset_m": 13.36
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -53392,6 +49019,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "CAD vector stepped cascade block (RGB 0.0, 0.647, 0.867) matching DW-10003-04-A",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.27,
         "di_set": {
           "ch0": 33954.94,
           "ch1": 33954.94,
@@ -53399,8 +49027,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.27,
           "sheet": "DW-03012-04",
           "cert": "exact"
-        },
-        "offset_m": 8.27
+        }
       },
       "geometry": {
         "type": "Point",
@@ -53435,6 +49062,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 33975,
           "ch1": 34100,
@@ -53442,8 +49070,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03012-04"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -53579,6 +49206,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (230 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 16.85,
         "di_set": {
           "ch0": 33967.25,
           "ch1": 34000.82,
@@ -53587,8 +49215,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03012-04",
           "preset": "T12"
-        },
-        "offset_m": 16.85
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -53809,6 +49436,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (32 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 13.04,
         "di_set": {
           "ch0": 34004.97,
           "ch1": 34425.08,
@@ -53816,8 +49444,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 13.04,
           "cert": "exact",
           "sheet": "DW-03012-04"
-        },
-        "offset_m": 13.04
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -54094,6 +49721,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 34100,
           "ch1": 34500.02,
@@ -54101,8 +49729,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03012-04"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -54378,6 +50005,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (48 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.48,
         "di_set": {
           "ch0": 34425.08,
           "ch1": 34729.89,
@@ -54385,8 +50013,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.48,
           "cert": "exact",
           "sheet": "DW-03012-04"
-        },
-        "offset_m": 11.48
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -54702,6 +50329,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (229 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.59,
         "di_set": {
           "ch0": 34743.88,
           "ch1": 34950,
@@ -54709,8 +50337,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.59,
           "cert": "exact",
           "sheet": "DW-03012-04"
-        },
-        "offset_m": 9.59
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -54915,6 +50542,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 7.64,
         "di_set": {
           "ch0": 34750,
           "ch1": 34750,
@@ -54923,8 +50551,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03012-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.64
+        }
       },
       "geometry": {
         "type": "Point",
@@ -54958,6 +50585,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (28 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.04,
         "di_set": {
           "ch0": 34950,
           "ch1": 34992.68,
@@ -54966,8 +50594,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03012-04",
           "preset": "T13"
-        },
-        "offset_m": 10.04
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -55040,6 +50667,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 7.86,
         "di_set": {
           "ch0": 35049.36,
           "ch1": 35049.36,
@@ -55048,8 +50676,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03012-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.86
+        }
       },
       "geometry": {
         "type": "Point",
@@ -55083,6 +50710,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (80 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.34,
         "di_set": {
           "ch0": 34992.68,
           "ch1": 35058,
@@ -55090,8 +50718,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.34,
           "cert": "exact",
           "sheet": "DW-03012-04"
-        },
-        "offset_m": 10.34
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -55183,6 +50810,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (1995 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.09,
         "di_set": {
           "ch0": 35560.44,
           "ch1": 35924.85,
@@ -55190,8 +50818,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.09,
           "cert": "exact",
           "sheet": "DW-03013-04"
-        },
-        "offset_m": 9.09
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -55512,6 +51139,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.22,
         "di_set": {
           "ch0": 35074.05,
           "ch1": 35074.05,
@@ -55520,8 +51148,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03012-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.22
+        }
       },
       "geometry": {
         "type": "Point",
@@ -55556,6 +51183,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.46,
         "di_set": {
           "ch0": 35183.86,
           "ch1": 35183.86,
@@ -55564,8 +51192,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03012-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.46
+        }
       },
       "geometry": {
         "type": "Point",
@@ -55600,6 +51227,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.2,
         "di_set": {
           "ch0": 35207.98,
           "ch1": 35207.98,
@@ -55608,8 +51236,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03013-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.2
+        }
       },
       "geometry": {
         "type": "Point",
@@ -55643,6 +51270,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (12 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.51,
         "di_set": {
           "ch0": 35061.55,
           "ch1": 35190.87,
@@ -55651,8 +51279,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03012-04",
           "preset": "T4"
-        },
-        "offset_m": 10.51
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -55833,6 +51460,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 7.88,
         "di_set": {
           "ch0": 35370.74,
           "ch1": 35370.74,
@@ -55841,8 +51469,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03013-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.88
+        }
       },
       "geometry": {
         "type": "Point",
@@ -55876,6 +51503,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (4 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.29,
         "di_set": {
           "ch0": 35202.62,
           "ch1": 35379.07,
@@ -55884,8 +51512,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03013-04",
           "preset": "T4"
-        },
-        "offset_m": 9.29
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -56106,6 +51733,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 6,
         "di_set": {
           "ch0": 35548.62,
           "ch1": 35548.62,
@@ -56114,8 +51742,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03013-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 6
+        }
       },
       "geometry": {
         "type": "Point",
@@ -56149,6 +51776,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (4 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.07,
         "di_set": {
           "ch0": 35386.21,
           "ch1": 35554.2,
@@ -56157,8 +51785,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03013-04",
           "preset": "T4"
-        },
-        "offset_m": 9.07
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -56371,6 +51998,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 7.44,
         "di_set": {
           "ch0": 35573.9,
           "ch1": 35573.9,
@@ -56379,8 +52007,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03013-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.44
+        }
       },
       "geometry": {
         "type": "Point",
@@ -56414,6 +52041,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (97 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 8.31,
         "di_set": {
           "ch0": 35824.93,
           "ch1": 35924.87,
@@ -56421,8 +52049,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.31,
           "cert": "exact",
           "sheet": "DW-03013-04"
-        },
-        "offset_m": 8.31
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -56538,6 +52165,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (244 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 12,
         "di_set": {
           "ch0": 35925.64,
           "ch1": 36081.74,
@@ -56545,8 +52173,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12,
           "cert": "exact",
           "sheet": "DW-03013-04"
-        },
-        "offset_m": 12
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -56710,6 +52337,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (324 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 13.25,
         "di_set": {
           "ch0": 35925,
           "ch1": 36080.31,
@@ -56717,8 +52345,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 13.25,
           "cert": "exact",
           "sheet": "DW-03013-04"
-        },
-        "offset_m": 13.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -56883,6 +52510,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 35974.99,
           "ch1": 36073,
@@ -56890,8 +52518,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03013-04"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -57008,6 +52635,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 12,
         "di_set": {
           "ch0": 36036,
           "ch1": 36036,
@@ -57016,8 +52644,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03013-04",
           "cert": "label",
           "stated": 104
-        },
-        "offset_m": 12
+        }
       },
       "geometry": {
         "type": "Point",
@@ -57052,6 +52679,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 10.7,
         "di_set": {
           "ch0": 36047.81,
           "ch1": 36047.81,
@@ -57060,8 +52688,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03013-04",
           "cert": "label",
           "stated": 73
-        },
-        "offset_m": 10.7
+        }
       },
       "geometry": {
         "type": "Point",
@@ -57096,6 +52723,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 36630,
           "ch1": 36725,
@@ -57103,8 +52731,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03014-04"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -57217,6 +52844,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 10.93,
         "di_set": {
           "ch0": 36781.44,
           "ch1": 36781.44,
@@ -57225,8 +52853,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03014-04",
           "cert": "label",
           "stated": 361
-        },
-        "offset_m": 10.93
+        }
       },
       "geometry": {
         "type": "Point",
@@ -57261,6 +52888,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 36725,
           "ch1": 36850,
@@ -57268,8 +52896,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03014-04"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -57405,6 +53032,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet vector marker glyph clustering (191 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 14.87,
         "di_set": {
           "ch0": 36824.11,
           "ch1": 36973.6,
@@ -57412,8 +53040,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 14.87,
           "cert": "exact",
           "sheet": "DW-03014-04"
-        },
-        "offset_m": 14.87
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -57570,6 +53197,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 11.6,
         "di_set": {
           "ch0": 36872.23,
           "ch1": 36872.23,
@@ -57578,8 +53206,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03014-04",
           "cert": "label",
           "stated": 361
-        },
-        "offset_m": 11.6
+        }
       },
       "geometry": {
         "type": "Point",
@@ -57722,6 +53349,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet vector marker glyph clustering (785 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 13.16,
         "di_set": {
           "ch0": 37192.56,
           "ch1": 37664.84,
@@ -57729,8 +53357,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 13.16,
           "cert": "exact",
           "sheet": "DW-03014-04"
-        },
-        "offset_m": 13.16
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -58007,6 +53634,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 36850,
           "ch1": 37550,
@@ -58014,8 +53642,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03014-04"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -58296,6 +53923,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 9.02,
         "di_set": {
           "ch0": 37652.13,
           "ch1": 37652.13,
@@ -58304,8 +53932,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03014-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 9.02
+        }
       },
       "geometry": {
         "type": "Point",
@@ -58339,6 +53966,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet vector marker glyph clustering (45 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 12.06,
         "di_set": {
           "ch0": 37671.12,
           "ch1": 37775,
@@ -58346,8 +53974,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.06,
           "cert": "exact",
           "sheet": "DW-03014-04"
-        },
-        "offset_m": 12.06
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -58468,6 +54095,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 37675,
           "ch1": 37825,
@@ -58475,8 +54103,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03014-04"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -58672,6 +54299,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet vector marker glyph clustering (18 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 12.25,
         "di_set": {
           "ch0": 37671.17,
           "ch1": 37776.89,
@@ -58679,8 +54307,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.25,
           "cert": "exact",
           "sheet": "DW-03014-04"
-        },
-        "offset_m": 12.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -58804,6 +54431,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet vector marker glyph clustering (369 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.35,
         "di_set": {
           "ch0": 37770.99,
           "ch1": 37951.66,
@@ -58811,8 +54439,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.35,
           "cert": "exact",
           "sheet": "DW-03014-04"
-        },
-        "offset_m": 11.35
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -58996,6 +54623,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet vector marker glyph clustering (305 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.69,
         "di_set": {
           "ch0": 37776.89,
           "ch1": 38097.63,
@@ -59003,8 +54631,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.69,
           "cert": "exact",
           "sheet": "DW-03014-04"
-        },
-        "offset_m": 9.69
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -59281,6 +54908,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 6.34,
         "di_set": {
           "ch0": 38115.81,
           "ch1": 38115.81,
@@ -59289,8 +54917,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03015-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 6.34
+        }
       },
       "geometry": {
         "type": "Point",
@@ -59365,6 +54992,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 7.59,
         "di_set": {
           "ch0": 38089.89,
           "ch1": 38089.89,
@@ -59373,8 +55001,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03015-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.59
+        }
       },
       "geometry": {
         "type": "Point",
@@ -59408,6 +55035,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (3 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.48,
         "di_set": {
           "ch0": 38107.94,
           "ch1": 38200,
@@ -59415,8 +55043,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.48,
           "cert": "exact",
           "sheet": "DW-03015-04"
-        },
-        "offset_m": 9.48
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -59528,6 +55155,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (377 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.58,
         "di_set": {
           "ch0": 38199.98,
           "ch1": 38549.49,
@@ -59535,8 +55163,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.58,
           "cert": "exact",
           "sheet": "DW-03015-04"
-        },
-        "offset_m": 9.58
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -59812,6 +55439,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (765 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.58,
         "di_set": {
           "ch0": 39308.17,
           "ch1": 39503.42,
@@ -59819,8 +55447,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.58,
           "cert": "exact",
           "sheet": "DW-03016-04"
-        },
-        "offset_m": 10.58
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -60016,6 +55643,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (521 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.03,
         "di_set": {
           "ch0": 39303.32,
           "ch1": 39524.76,
@@ -60023,8 +55651,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.03,
           "cert": "exact",
           "sheet": "DW-03016-04"
-        },
-        "offset_m": 11.03
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -60241,6 +55868,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 39450,
           "ch1": 39550,
@@ -60248,8 +55876,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03016-04"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -60365,6 +55992,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet vector marker glyph clustering (1069 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 12.6,
         "di_set": {
           "ch0": 39536.97,
           "ch1": 39750.03,
@@ -60372,8 +56000,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.6,
           "cert": "exact",
           "sheet": "DW-03016-04"
-        },
-        "offset_m": 12.6
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -60582,6 +56209,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 12.63,
         "di_set": {
           "ch0": 39518.3,
           "ch1": 39518.3,
@@ -60590,8 +56218,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03016-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 12.63
+        }
       },
       "geometry": {
         "type": "Point",
@@ -60626,6 +56253,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 12.62,
         "di_set": {
           "ch0": 39520,
           "ch1": 39520,
@@ -60634,8 +56262,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03016-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 12.62
+        }
       },
       "geometry": {
         "type": "Point",
@@ -60710,6 +56337,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 11.06,
         "di_set": {
           "ch0": 39542.61,
           "ch1": 39542.61,
@@ -60718,8 +56346,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03016-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 11.06
+        }
       },
       "geometry": {
         "type": "Point",
@@ -60754,6 +56381,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 39550,
           "ch1": 39675,
@@ -60761,8 +56389,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03016-04"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -60899,6 +56526,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 6.75,
         "di_set": {
           "ch0": 39740.9,
           "ch1": 39740.9,
@@ -60907,8 +56535,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03016-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 6.75
+        }
       },
       "geometry": {
         "type": "Point",
@@ -60982,6 +56609,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet vector marker glyph clustering (1020 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.56,
         "di_set": {
           "ch0": 39755.22,
           "ch1": 40222.52,
@@ -60989,8 +56617,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.56,
           "cert": "exact",
           "sheet": "DW-03016-04"
-        },
-        "offset_m": 9.56
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -61271,6 +56898,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.44,
         "di_set": {
           "ch0": 39760.01,
           "ch1": 39760.01,
@@ -61279,8 +56907,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03016-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.44
+        }
       },
       "geometry": {
         "type": "Point",
@@ -61314,6 +56941,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet vector marker glyph clustering (354 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.03,
         "di_set": {
           "ch0": 39756.22,
           "ch1": 40225.45,
@@ -61321,8 +56949,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.03,
           "cert": "exact",
           "sheet": "DW-03016-04"
-        },
-        "offset_m": 10.03
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -61599,6 +57226,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 5.87,
         "di_set": {
           "ch0": 40212.95,
           "ch1": 40212.95,
@@ -61607,8 +57235,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03016-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 5.87
+        }
       },
       "geometry": {
         "type": "Point",
@@ -61642,6 +57269,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet vector marker glyph clustering (5 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 7.78,
         "di_set": {
           "ch0": 40229.19,
           "ch1": 40650.23,
@@ -61650,8 +57278,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03016-04",
           "preset": "T4"
-        },
-        "offset_m": 7.78
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -61967,6 +57594,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet vector marker glyph clustering (1098 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 8.81,
         "di_set": {
           "ch0": 40228.77,
           "ch1": 40444.72,
@@ -61975,8 +57603,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03016-04",
           "preset": "T7"
-        },
-        "offset_m": 8.81
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -62188,6 +57815,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (306 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.28,
         "di_set": {
           "ch0": 40949.58,
           "ch1": 41474.9,
@@ -62195,8 +57823,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.28,
           "cert": "exact",
           "sheet": "DW-03017-04"
-        },
-        "offset_m": 9.28
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -62472,6 +58099,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (20 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.85,
         "di_set": {
           "ch0": 41350,
           "ch1": 41475,
@@ -62479,8 +58107,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.85,
           "cert": "exact",
           "sheet": "DW-03017-04"
-        },
-        "offset_m": 9.85
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -62616,6 +58243,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (109 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.42,
         "di_set": {
           "ch0": 41473.71,
           "ch1": 41563.5,
@@ -62624,8 +58252,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03017-04",
           "preset": "T13"
-        },
-        "offset_m": 9.42
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -62902,6 +58529,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (537 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 8.9,
         "di_set": {
           "ch0": 41925,
           "ch1": 42324.9,
@@ -62909,8 +58537,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.9,
           "cert": "exact",
           "sheet": "DW-03017-04"
-        },
-        "offset_m": 8.9
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -63187,6 +58814,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.22,
         "di_set": {
           "ch0": 42358.74,
           "ch1": 42358.74,
@@ -63195,8 +58823,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03018-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.22
+        }
       },
       "geometry": {
         "type": "Point",
@@ -63230,6 +58857,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (57 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.18,
         "di_set": {
           "ch0": 42324.9,
           "ch1": 42372.77,
@@ -63237,8 +58865,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.18,
           "cert": "exact",
           "sheet": "DW-03018-04"
-        },
-        "offset_m": 9.18
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -63355,6 +58982,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 7.09,
         "di_set": {
           "ch0": 42384,
           "ch1": 42384,
@@ -63363,8 +58991,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03018-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.09
+        }
       },
       "geometry": {
         "type": "Point",
@@ -63398,6 +59025,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (250 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.67,
         "di_set": {
           "ch0": 42399.72,
           "ch1": 42624.88,
@@ -63405,8 +59033,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.67,
           "cert": "exact",
           "sheet": "DW-03018-04"
-        },
-        "offset_m": 9.67
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -63627,6 +59254,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 42625,
           "ch1": 42733,
@@ -63634,8 +59262,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03018-04"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -63759,6 +59386,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (171 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 14.65,
         "di_set": {
           "ch0": 42600.46,
           "ch1": 42740.74,
@@ -63766,8 +59394,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 14.65,
           "cert": "exact",
           "sheet": "DW-03018-04"
-        },
-        "offset_m": 14.65
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -63919,6 +59546,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (110 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 14.61,
         "di_set": {
           "ch0": 42625.33,
           "ch1": 42703.94,
@@ -63926,8 +59554,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 14.61,
           "cert": "exact",
           "sheet": "DW-03018-04"
-        },
-        "offset_m": 14.61
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -64028,6 +59655,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 14.96,
         "di_set": {
           "ch0": 42710,
           "ch1": 42710,
@@ -64036,8 +59664,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03018-04",
           "cert": "label",
           "stated": 82
-        },
-        "offset_m": 14.96
+        }
       },
       "geometry": {
         "type": "Point",
@@ -64072,6 +59699,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 14.84,
         "di_set": {
           "ch0": 42702,
           "ch1": 42702,
@@ -64080,8 +59708,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03018-04",
           "cert": "label",
           "stated": 85
-        },
-        "offset_m": 14.84
+        }
       },
       "geometry": {
         "type": "Point",
@@ -64116,6 +59743,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 14.45,
         "di_set": {
           "ch0": 42840.55,
           "ch1": 42840.55,
@@ -64124,8 +59752,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03018-04",
           "cert": "label",
           "stated": 53
-        },
-        "offset_m": 14.45
+        }
       },
       "geometry": {
         "type": "Point",
@@ -64159,6 +59786,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (110 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 12.99,
         "di_set": {
           "ch0": 42834.09,
           "ch1": 43197.71,
@@ -64166,8 +59794,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.99,
           "cert": "exact",
           "sheet": "DW-03018-04"
-        },
-        "offset_m": 12.99
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -64443,6 +60070,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (188 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 12.97,
         "di_set": {
           "ch0": 42843.04,
           "ch1": 43189.26,
@@ -64450,8 +60078,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.97,
           "cert": "exact",
           "sheet": "DW-03018-04"
-        },
-        "offset_m": 12.97
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -64728,6 +60355,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 42837,
           "ch1": 43125,
@@ -64735,8 +60363,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03018-04"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -65005,6 +60632,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 9.83,
         "di_set": {
           "ch0": 43186.11,
           "ch1": 43186.11,
@@ -65013,8 +60641,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03018-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 9.83
+        }
       },
       "geometry": {
         "type": "Point",
@@ -65048,6 +60675,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (8 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.51,
         "di_set": {
           "ch0": 43196.49,
           "ch1": 43635.03,
@@ -65056,8 +60684,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03018-04",
           "preset": "T4"
-        },
-        "offset_m": 10.51
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -65333,6 +60960,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (1451 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 8.53,
         "di_set": {
           "ch0": 43638.42,
           "ch1": 44321.65,
@@ -65340,8 +60968,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.53,
           "cert": "exact",
           "sheet": "DW-03019-04"
-        },
-        "offset_m": 8.53
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -65657,6 +61284,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (1118 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.8,
         "di_set": {
           "ch0": 43204.9,
           "ch1": 43638.51,
@@ -65664,8 +61292,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.8,
           "cert": "exact",
           "sheet": "DW-03018-04"
-        },
-        "offset_m": 10.8
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -65942,6 +61569,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 7.46,
         "di_set": {
           "ch0": 43211.87,
           "ch1": 43211.87,
@@ -65950,8 +61578,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03018-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.46
+        }
       },
       "geometry": {
         "type": "Point",
@@ -65986,6 +61613,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.43,
         "di_set": {
           "ch0": 43632.1,
           "ch1": 43632.1,
@@ -65994,8 +61622,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03019-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.43
+        }
       },
       "geometry": {
         "type": "Point",
@@ -66029,6 +61656,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (16 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.8,
         "di_set": {
           "ch0": 43204.9,
           "ch1": 43638.51,
@@ -66037,8 +61665,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03018-04",
           "preset": "T4"
-        },
-        "offset_m": 10.8
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -66314,6 +61941,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (722 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.02,
         "di_set": {
           "ch0": 43645.02,
           "ch1": 44589.48,
@@ -66321,8 +61949,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.02,
           "cert": "exact",
           "sheet": "DW-03019-04"
-        },
-        "offset_m": 9.02
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -66638,6 +62265,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (76 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 7.34,
         "di_set": {
           "ch0": 44650,
           "ch1": 45419.43,
@@ -66645,8 +62273,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.34,
           "cert": "exact",
           "sheet": "DW-03020-04"
-        },
-        "offset_m": 7.34
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -66922,6 +62549,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (633 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 8.78,
         "di_set": {
           "ch0": 45800.03,
           "ch1": 46190.11,
@@ -66929,8 +62557,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.78,
           "cert": "exact",
           "sheet": "DW-03020-04"
-        },
-        "offset_m": 8.78
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -67206,6 +62833,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (639 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.66,
         "di_set": {
           "ch0": 45752.11,
           "ch1": 46188.87,
@@ -67213,8 +62841,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.66,
           "cert": "exact",
           "sheet": "DW-03020-04"
-        },
-        "offset_m": 9.66
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -67534,6 +63161,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (14 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11,
         "di_set": {
           "ch0": 46202.85,
           "ch1": 46325.06,
@@ -67542,8 +63170,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03020-04",
           "preset": "T7"
-        },
-        "offset_m": 11
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -67680,6 +63307,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.59,
         "di_set": {
           "ch0": 46124.99,
           "ch1": 46250.02,
@@ -67687,8 +63315,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.59,
           "cert": "exact",
           "sheet": "DW-03020-04"
-        },
-        "offset_m": 3.59
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -67829,6 +63456,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 7.68,
         "di_set": {
           "ch0": 46415.5,
           "ch1": 46415.5,
@@ -67837,8 +63465,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03021-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.68
+        }
       },
       "geometry": {
         "type": "Point",
@@ -67873,6 +63500,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 7.97,
         "di_set": {
           "ch0": 46432.49,
           "ch1": 46432.49,
@@ -67881,8 +63509,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03021-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.97
+        }
       },
       "geometry": {
         "type": "Point",
@@ -67916,6 +63543,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (4 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.32,
         "di_set": {
           "ch0": 46325.06,
           "ch1": 46420.95,
@@ -67924,8 +63552,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03020-04",
           "preset": "T4"
-        },
-        "offset_m": 9.32
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -68081,6 +63708,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (4 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.74,
         "di_set": {
           "ch0": 46426.48,
           "ch1": 46474.04,
@@ -68088,8 +63716,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.74,
           "cert": "exact",
           "sheet": "DW-03021-04"
-        },
-        "offset_m": 9.74
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -68165,6 +63792,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (235 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.23,
         "di_set": {
           "ch0": 46474.04,
           "ch1": 46644.45,
@@ -68172,8 +63800,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.23,
           "cert": "exact",
           "sheet": "DW-03021-04"
-        },
-        "offset_m": 11.23
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -68350,6 +63977,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 4.18,
         "di_set": {
           "ch0": 46574.99,
           "ch1": 46774.99,
@@ -68357,8 +63985,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 4.18,
           "cert": "exact",
           "sheet": "DW-03021-04"
-        },
-        "offset_m": 4.18
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -68594,6 +64221,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (64 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.11,
         "di_set": {
           "ch0": 46724.92,
           "ch1": 46982.36,
@@ -68601,8 +64229,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.11,
           "cert": "exact",
           "sheet": "DW-03021-04"
-        },
-        "offset_m": 11.11
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -68847,6 +64474,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 10.38,
         "di_set": {
           "ch0": 46653.98,
           "ch1": 46653.98,
@@ -68855,8 +64483,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03021-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 10.38
+        }
       },
       "geometry": {
         "type": "Point",
@@ -68891,6 +64518,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 10.16,
         "di_set": {
           "ch0": 46987.6,
           "ch1": 46987.6,
@@ -68899,8 +64527,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03021-04",
           "cert": "label",
           "stated": 22
-        },
-        "offset_m": 10.16
+        }
       },
       "geometry": {
         "type": "Point",
@@ -68935,6 +64562,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 10.78,
         "di_set": {
           "ch0": 46986.46,
           "ch1": 46986.46,
@@ -68943,8 +64571,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03021-04",
           "cert": "label",
           "stated": 29
-        },
-        "offset_m": 10.78
+        }
       },
       "geometry": {
         "type": "Point",
@@ -68979,6 +64606,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 47108.5,
           "ch1": 47175,
@@ -68986,8 +64614,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03021-04"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -69080,6 +64707,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 11.04,
         "di_set": {
           "ch0": 47103.98,
           "ch1": 47103.98,
@@ -69088,8 +64716,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03021-04",
           "cert": "label",
           "stated": 85
-        },
-        "offset_m": 11.04
+        }
       },
       "geometry": {
         "type": "Point",
@@ -69123,6 +64750,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (472 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.76,
         "di_set": {
           "ch0": 47108.29,
           "ch1": 47374.03,
@@ -69130,8 +64758,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.76,
           "cert": "exact",
           "sheet": "DW-03021-04"
-        },
-        "offset_m": 9.76
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -69383,6 +65010,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (527 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.28,
         "di_set": {
           "ch0": 47108.37,
           "ch1": 47366.85,
@@ -69390,8 +65018,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.28,
           "cert": "exact",
           "sheet": "DW-03021-04"
-        },
-        "offset_m": 10.28
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -69636,6 +65263,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 10.8,
         "di_set": {
           "ch0": 47147.5,
           "ch1": 47147.5,
@@ -69644,8 +65272,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03021-04",
           "cert": "label",
           "stated": 72
-        },
-        "offset_m": 10.8
+        }
       },
       "geometry": {
         "type": "Point",
@@ -69680,6 +65307,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 6.6,
         "di_set": {
           "ch0": 48118.58,
           "ch1": 48118.58,
@@ -69688,8 +65316,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03022-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 6.6
+        }
       },
       "geometry": {
         "type": "Point",
@@ -69723,6 +65350,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (236 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 8.25,
         "di_set": {
           "ch0": 48127.83,
           "ch1": 48348.92,
@@ -69730,8 +65358,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.25,
           "cert": "exact",
           "sheet": "DW-03022-04"
-        },
-        "offset_m": 8.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -69987,6 +65614,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (67 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.55,
         "di_set": {
           "ch0": 48348.92,
           "ch1": 48552.93,
@@ -69994,8 +65622,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.55,
           "cert": "exact",
           "sheet": "DW-03022-04"
-        },
-        "offset_m": 11.55
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -70235,6 +65862,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (568 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 12.32,
         "di_set": {
           "ch0": 48563.29,
           "ch1": 49025.21,
@@ -70242,8 +65870,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.32,
           "cert": "exact",
           "sheet": "DW-03022-04"
-        },
-        "offset_m": 12.32
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -70523,6 +66150,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (596 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 12.91,
         "di_set": {
           "ch0": 48563.12,
           "ch1": 49174.73,
@@ -70530,8 +66158,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.91,
           "cert": "exact",
           "sheet": "DW-03022-04"
-        },
-        "offset_m": 12.91
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -70808,6 +66435,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 10.35,
         "di_set": {
           "ch0": 48570,
           "ch1": 48570,
@@ -70816,8 +66444,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03022-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 10.35
+        }
       },
       "geometry": {
         "type": "Point",
@@ -70852,6 +66479,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 48550,
           "ch1": 48850.08,
@@ -70859,8 +66487,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03022-04"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -71137,6 +66764,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 48850.08,
           "ch1": 49025,
@@ -71144,8 +66772,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03022-04"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -71321,6 +66948,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (528 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.91,
         "di_set": {
           "ch0": 49174.73,
           "ch1": 49667.84,
@@ -71328,8 +66956,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.91,
           "cert": "exact",
           "sheet": "DW-03023-04"
-        },
-        "offset_m": 9.91
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -71605,6 +67232,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (318 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.42,
         "di_set": {
           "ch0": 49318.97,
           "ch1": 49675.01,
@@ -71612,8 +67240,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.42,
           "cert": "exact",
           "sheet": "DW-03023-04"
-        },
-        "offset_m": 9.42
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -71889,6 +67516,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (207 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 8.38,
         "di_set": {
           "ch0": 49725,
           "ch1": 49875.01,
@@ -71896,8 +67524,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.38,
           "cert": "exact",
           "sheet": "DW-03023-04"
-        },
-        "offset_m": 8.38
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -72057,6 +67684,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (14 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 8.95,
         "di_set": {
           "ch0": 49675.01,
           "ch1": 49725,
@@ -72065,8 +67693,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03023-04",
           "preset": "T13"
-        },
-        "offset_m": 8.95
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -72142,6 +67769,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (176 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.3,
         "di_set": {
           "ch0": 50076.06,
           "ch1": 50506.12,
@@ -72149,8 +67777,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.3,
           "cert": "exact",
           "sheet": "DW-03023-04"
-        },
-        "offset_m": 11.3
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -72426,6 +68053,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (3 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.3,
         "di_set": {
           "ch0": 49728.49,
           "ch1": 50074.98,
@@ -72434,8 +68062,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03023-04",
           "preset": "T12"
-        },
-        "offset_m": 9.3
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -72712,6 +68339,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 7.97,
         "di_set": {
           "ch0": 50498.32,
           "ch1": 50498.32,
@@ -72720,8 +68348,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03023-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.97
+        }
       },
       "geometry": {
         "type": "Point",
@@ -72795,6 +68422,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (111 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.75,
         "di_set": {
           "ch0": 50514.07,
           "ch1": 50964.83,
@@ -72802,8 +68430,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.75,
           "cert": "exact",
           "sheet": "DW-03024-04"
-        },
-        "offset_m": 11.75
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -73080,6 +68707,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 50925,
           "ch1": 51175,
@@ -73087,8 +68715,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03024-04"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -73325,6 +68952,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 7.52,
         "di_set": {
           "ch0": 51106,
           "ch1": 51106,
@@ -73333,8 +68961,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03024-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.52
+        }
       },
       "geometry": {
         "type": "Point",
@@ -73409,6 +69036,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 7.4,
         "di_set": {
           "ch0": 51132,
           "ch1": 51132,
@@ -73417,8 +69045,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03024-04",
           "cert": "label",
           "stated": 170
-        },
-        "offset_m": 7.4
+        }
       },
       "geometry": {
         "type": "Point",
@@ -73452,6 +69079,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (66 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.93,
         "di_set": {
           "ch0": 51287.32,
           "ch1": 51546.88,
@@ -73459,8 +69087,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.93,
           "cert": "exact",
           "sheet": "DW-03024-04"
-        },
-        "offset_m": 9.93
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -73705,6 +69332,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 6.74,
         "di_set": {
           "ch0": 51596.22,
           "ch1": 51596.22,
@@ -73713,8 +69341,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03024-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 6.74
+        }
       },
       "geometry": {
         "type": "Point",
@@ -73788,6 +69415,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (223 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.42,
         "di_set": {
           "ch0": 51592.84,
           "ch1": 51824.99,
@@ -73795,8 +69423,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.42,
           "cert": "exact",
           "sheet": "DW-03024-04"
-        },
-        "offset_m": 9.42
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -74020,6 +69647,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (575 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.24,
         "di_set": {
           "ch0": 51824.99,
           "ch1": 52325.46,
@@ -74027,8 +69655,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.24,
           "cert": "exact",
           "sheet": "DW-03025-04"
-        },
-        "offset_m": 11.24
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -74309,6 +69936,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.02,
         "di_set": {
           "ch0": 52351.69,
           "ch1": 52351.69,
@@ -74317,8 +69945,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03025-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.02
+        }
       },
       "geometry": {
         "type": "Point",
@@ -74352,6 +69979,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (32 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.15,
         "di_set": {
           "ch0": 52365.84,
           "ch1": 52500.04,
@@ -74359,8 +69987,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.15,
           "cert": "exact",
           "sheet": "DW-03025-04"
-        },
-        "offset_m": 11.15
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -74544,6 +70171,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (332 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.75,
         "di_set": {
           "ch0": 52500.04,
           "ch1": 52752.09,
@@ -74551,8 +70179,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.75,
           "cert": "exact",
           "sheet": "DW-03025-04"
-        },
-        "offset_m": 9.75
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -74792,6 +70419,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (21 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.44,
         "di_set": {
           "ch0": 52752.89,
           "ch1": 52873.78,
@@ -74799,8 +70427,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.44,
           "cert": "exact",
           "sheet": "DW-03025-04"
-        },
-        "offset_m": 9.44
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -74976,6 +70603,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (9 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.65,
         "di_set": {
           "ch0": 52881.66,
           "ch1": 52950.01,
@@ -74984,8 +70612,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03025-04",
           "preset": "T12"
-        },
-        "offset_m": 10.65
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -75077,6 +70704,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (87 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 12.38,
         "di_set": {
           "ch0": 52950.01,
           "ch1": 53352.08,
@@ -75084,8 +70712,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.38,
           "cert": "exact",
           "sheet": "DW-03025-04"
-        },
-        "offset_m": 12.38
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -75405,6 +71032,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (94 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 13.26,
         "di_set": {
           "ch0": 53362.9,
           "ch1": 53762.54,
@@ -75412,8 +71040,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 13.26,
           "cert": "exact",
           "sheet": "DW-03026-04"
-        },
-        "offset_m": 13.26
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -75694,6 +71321,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 9.71,
         "di_set": {
           "ch0": 53365.77,
           "ch1": 53365.77,
@@ -75702,8 +71330,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03025-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 9.71
+        }
       },
       "geometry": {
         "type": "Point",
@@ -75738,6 +71365,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 53175,
           "ch1": 53492,
@@ -75745,8 +71373,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03025-04"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -76027,6 +71654,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 53492,
           "ch1": 53625,
@@ -76034,8 +71662,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03026-04"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -76179,6 +71806,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (844 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.1,
         "di_set": {
           "ch0": 53925.01,
           "ch1": 54243.14,
@@ -76186,8 +71814,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.1,
           "cert": "exact",
           "sheet": "DW-03026-04"
-        },
-        "offset_m": 10.1
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -76464,6 +72091,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 9.63,
         "di_set": {
           "ch0": 54239.17,
           "ch1": 54239.17,
@@ -76472,8 +72100,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03026-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 9.63
+        }
       },
       "geometry": {
         "type": "Point",
@@ -76547,6 +72174,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (22 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 12.91,
         "di_set": {
           "ch0": 54424.98,
           "ch1": 54541.9,
@@ -76554,8 +72182,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.91,
           "cert": "exact",
           "sheet": "DW-03026-04"
-        },
-        "offset_m": 12.91
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -76688,6 +72315,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 10.07,
         "di_set": {
           "ch0": 54538,
           "ch1": 54538,
@@ -76696,8 +72324,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03026-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 10.07
+        }
       },
       "geometry": {
         "type": "Point",
@@ -76771,6 +72398,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (193 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 12.95,
         "di_set": {
           "ch0": 54548.07,
           "ch1": 54697.98,
@@ -76778,8 +72406,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.95,
           "cert": "exact",
           "sheet": "DW-03026-04"
-        },
-        "offset_m": 12.95
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -76935,6 +72562,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (72 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 14.27,
         "di_set": {
           "ch0": 54699.29,
           "ch1": 54899.1,
@@ -76942,8 +72570,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 14.27,
           "cert": "exact",
           "sheet": "DW-03026-04"
-        },
-        "offset_m": 14.27
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -77140,6 +72767,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 54425,
           "ch1": 55100,
@@ -77147,8 +72775,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03026-04"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -77425,6 +73052,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.7,
         "di_set": {
           "ch0": 54897.88,
           "ch1": 54897.88,
@@ -77433,8 +73061,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03027-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.7
+        }
       },
       "geometry": {
         "type": "Point",
@@ -77508,6 +73135,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (22 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 13.53,
         "di_set": {
           "ch0": 54905.83,
           "ch1": 55025.52,
@@ -77515,8 +73143,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 13.53,
           "cert": "exact",
           "sheet": "DW-03027-04"
-        },
-        "offset_m": 13.53
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -77648,6 +73275,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (221 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 12.55,
         "di_set": {
           "ch0": 55025.68,
           "ch1": 55163.77,
@@ -77655,8 +73283,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.55,
           "cert": "exact",
           "sheet": "DW-03027-04"
-        },
-        "offset_m": 12.55
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -77805,6 +73432,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.92,
         "di_set": {
           "ch0": 55165.73,
           "ch1": 55165.73,
@@ -77813,8 +73441,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03027-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.92
+        }
       },
       "geometry": {
         "type": "Point",
@@ -77888,6 +73515,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (57 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 12.43,
         "di_set": {
           "ch0": 55179.82,
           "ch1": 55224.48,
@@ -77895,8 +73523,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.43,
           "cert": "exact",
           "sheet": "DW-03027-04"
-        },
-        "offset_m": 12.43
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -77968,6 +73595,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (189 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.51,
         "di_set": {
           "ch0": 55224.48,
           "ch1": 55418.78,
@@ -77975,8 +73603,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.51,
           "cert": "exact",
           "sheet": "DW-03027-04"
-        },
-        "offset_m": 10.51
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -78169,6 +73796,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 7.18,
         "di_set": {
           "ch0": 55514.21,
           "ch1": 55514.21,
@@ -78177,8 +73805,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03027-04",
           "cert": "label",
           "stated": 22
-        },
-        "offset_m": 7.18
+        }
       },
       "geometry": {
         "type": "Point",
@@ -78213,6 +73840,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 7.8,
         "di_set": {
           "ch0": 55549.11,
           "ch1": 55549.11,
@@ -78221,8 +73849,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03027-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.8
+        }
       },
       "geometry": {
         "type": "Point",
@@ -78296,6 +73923,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (59 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.07,
         "di_set": {
           "ch0": 55530.12,
           "ch1": 55650.05,
@@ -78303,8 +73931,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.07,
           "cert": "exact",
           "sheet": "DW-03027-04"
-        },
-        "offset_m": 9.07
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -78436,6 +74063,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (409 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 8.7,
         "di_set": {
           "ch0": 55649.79,
           "ch1": 55975.13,
@@ -78443,8 +74071,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.7,
           "cert": "exact",
           "sheet": "DW-03027-04"
-        },
-        "offset_m": 8.7
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -78889,6 +74516,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (75 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.17,
         "di_set": {
           "ch0": 56374.54,
           "ch1": 56768.76,
@@ -78896,8 +74524,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.17,
           "cert": "exact",
           "sheet": "DW-03028-04"
-        },
-        "offset_m": 10.17
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -79213,6 +74840,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (308 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.62,
         "di_set": {
           "ch0": 56778.82,
           "ch1": 57033.26,
@@ -79220,8 +74848,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.62,
           "cert": "exact",
           "sheet": "DW-03028-04"
-        },
-        "offset_m": 11.62
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -79461,6 +75088,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (57 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.29,
         "di_set": {
           "ch0": 56782.52,
           "ch1": 57005.12,
@@ -79468,8 +75096,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.29,
           "cert": "exact",
           "sheet": "DW-03028-04"
-        },
-        "offset_m": 11.29
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -79686,6 +75313,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 7.85,
         "di_set": {
           "ch0": 57039.85,
           "ch1": 57039.85,
@@ -79694,8 +75322,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03028-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.85
+        }
       },
       "geometry": {
         "type": "Point",
@@ -79730,6 +75357,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.29,
         "di_set": {
           "ch0": 57025.01,
           "ch1": 57074.91,
@@ -79737,8 +75365,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.29,
           "cert": "exact",
           "sheet": "DW-03028-04"
-        },
-        "offset_m": 3.29
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -79855,6 +75482,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.2,
         "di_set": {
           "ch0": 57064.69,
           "ch1": 57064.69,
@@ -79863,8 +75491,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03028-04",
           "cert": "label",
           "stated": 350
-        },
-        "offset_m": 8.2
+        }
       },
       "geometry": {
         "type": "Point",
@@ -79899,6 +75526,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 10.18,
         "di_set": {
           "ch0": 57074.91,
           "ch1": 57599.99,
@@ -79906,8 +75534,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.18,
           "cert": "exact",
           "sheet": "DW-03028-04"
-        },
-        "offset_m": 10.18
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -80183,6 +75810,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (23 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 12.07,
         "di_set": {
           "ch0": 57398.48,
           "ch1": 57602.86,
@@ -80190,8 +75818,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.07,
           "cert": "exact",
           "sheet": "DW-03028-04"
-        },
-        "offset_m": 12.07
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -80392,6 +76019,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 9.79,
         "di_set": {
           "ch0": 57594.98,
           "ch1": 57594.98,
@@ -80400,8 +76028,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03028-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 9.79
+        }
       },
       "geometry": {
         "type": "Point",
@@ -80435,6 +76062,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (184 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.34,
         "di_set": {
           "ch0": 57609.09,
           "ch1": 57749.49,
@@ -80442,8 +76070,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.34,
           "cert": "exact",
           "sheet": "DW-03029-04"
-        },
-        "offset_m": 11.34
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -80636,6 +76263,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.35,
         "di_set": {
           "ch0": 57608.63,
           "ch1": 57608.63,
@@ -80644,8 +76272,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03029-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.35
+        }
       },
       "geometry": {
         "type": "Point",
@@ -80719,6 +76346,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (334 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.26,
         "di_set": {
           "ch0": 57823.51,
           "ch1": 57949.98,
@@ -80726,8 +76354,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.26,
           "cert": "exact",
           "sheet": "DW-03029-04"
-        },
-        "offset_m": 11.26
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -80908,6 +76535,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 6.87,
         "di_set": {
           "ch0": 58087,
           "ch1": 58087,
@@ -80916,8 +76544,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03029-04",
           "cert": "label",
           "stated": 71
-        },
-        "offset_m": 6.87
+        }
       },
       "geometry": {
         "type": "Point",
@@ -80951,6 +76578,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (235 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 8.79,
         "di_set": {
           "ch0": 58149.67,
           "ch1": 58386.89,
@@ -80958,8 +76586,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.79,
           "cert": "exact",
           "sheet": "DW-03029-04"
-        },
-        "offset_m": 8.79
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -81188,6 +76815,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 5.92,
         "di_set": {
           "ch0": 58381.01,
           "ch1": 58381.01,
@@ -81196,8 +76824,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03029-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 5.92
+        }
       },
       "geometry": {
         "type": "Point",
@@ -81232,6 +76859,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 6.63,
         "di_set": {
           "ch0": 58393.47,
           "ch1": 58393.47,
@@ -81240,8 +76868,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03029-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 6.63
+        }
       },
       "geometry": {
         "type": "Point",
@@ -81316,6 +76943,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 7.88,
         "di_set": {
           "ch0": 58785,
           "ch1": 58785,
@@ -81324,8 +76952,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03029-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.88
+        }
       },
       "geometry": {
         "type": "Point",
@@ -81399,6 +77026,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (44 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.75,
         "di_set": {
           "ch0": 58796.38,
           "ch1": 58950.09,
@@ -81406,8 +77034,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.75,
           "cert": "exact",
           "sheet": "DW-03029-04"
-        },
-        "offset_m": 11.75
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -81567,6 +77194,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (13 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.64,
         "di_set": {
           "ch0": 58950.09,
           "ch1": 59031.88,
@@ -81575,8 +77203,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03029-04",
           "preset": "T12"
-        },
-        "offset_m": 11.64
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -81720,6 +77347,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (223 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.54,
         "di_set": {
           "ch0": 59041.49,
           "ch1": 59500,
@@ -81727,8 +77355,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.54,
           "cert": "exact",
           "sheet": "DW-03030-05"
-        },
-        "offset_m": 11.54
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -82004,6 +77631,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet vector marker glyph clustering (26 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.96,
         "di_set": {
           "ch0": 59039.83,
           "ch1": 59175,
@@ -82011,8 +77639,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.96,
           "cert": "exact",
           "sheet": "DW-03030-05"
-        },
-        "offset_m": 11.96
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -82160,6 +77787,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet vector marker glyph clustering (125 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.45,
         "di_set": {
           "ch0": 59175,
           "ch1": 59299.04,
@@ -82167,8 +77795,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.45,
           "cert": "exact",
           "sheet": "DW-03030-05"
-        },
-        "offset_m": 10.45
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -82305,6 +77932,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 26.73,
         "di_set": {
           "ch0": 60124.34,
           "ch1": 60124.34,
@@ -82313,8 +77941,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03030-05",
           "cert": "label",
           "stated": 350
-        },
-        "offset_m": 26.73
+        }
       },
       "geometry": {
         "type": "Point",
@@ -82389,6 +78016,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 16.03,
         "di_set": {
           "ch0": 60391.02,
           "ch1": 60391.02,
@@ -82397,8 +78025,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03030-05",
           "cert": "label",
           "stated": 295
-        },
-        "offset_m": 16.03
+        }
       },
       "geometry": {
         "type": "Point",
@@ -82433,6 +78060,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 60424.95,
           "ch1": 60600,
@@ -82440,8 +78068,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03031-05"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -82622,6 +78249,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8,
         "di_set": {
           "ch0": 60744.73,
           "ch1": 60744.73,
@@ -82630,8 +78258,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03031-05",
           "cert": "label",
           "stated": 434
-        },
-        "offset_m": 8
+        }
       },
       "geometry": {
         "type": "Point",
@@ -82705,6 +78332,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet vector marker glyph clustering (783 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 8.85,
         "di_set": {
           "ch0": 60988.74,
           "ch1": 61676.49,
@@ -82712,8 +78340,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.85,
           "cert": "exact",
           "sheet": "DW-03031-05"
-        },
-        "offset_m": 8.85
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -82990,6 +78617,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 6.57,
         "di_set": {
           "ch0": 61000.92,
           "ch1": 61000.92,
@@ -82998,8 +78626,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03031-05",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 6.57
+        }
       },
       "geometry": {
         "type": "Point",
@@ -83033,6 +78660,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet vector marker glyph clustering (20 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.94,
         "di_set": {
           "ch0": 61677.42,
           "ch1": 61776.06,
@@ -83040,8 +78668,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.94,
           "cert": "exact",
           "sheet": "DW-03031-05"
-        },
-        "offset_m": 10.94
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -83158,6 +78785,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 6.79,
         "di_set": {
           "ch0": 61790.46,
           "ch1": 61790.46,
@@ -83166,8 +78794,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03031-05",
           "cert": "label",
           "stated": 38
-        },
-        "offset_m": 6.79
+        }
       },
       "geometry": {
         "type": "Point",
@@ -83242,6 +78869,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.96,
         "di_set": {
           "ch0": 61876.54,
           "ch1": 61876.54,
@@ -83250,8 +78878,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03032-04",
           "cert": "label",
           "stated": 122
-        },
-        "offset_m": 8.96
+        }
       },
       "geometry": {
         "type": "Point",
@@ -83326,6 +78953,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 7.37,
         "di_set": {
           "ch0": 62078.33,
           "ch1": 62078.33,
@@ -83334,8 +78962,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03032-04",
           "cert": "label",
           "stated": 259
-        },
-        "offset_m": 7.37
+        }
       },
       "geometry": {
         "type": "Point",
@@ -83369,6 +78996,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (16 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.52,
         "di_set": {
           "ch0": 62200.23,
           "ch1": 62298.08,
@@ -83376,8 +79004,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.52,
           "cert": "exact",
           "sheet": "DW-03032-04"
-        },
-        "offset_m": 9.52
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -83494,6 +79121,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 7.29,
         "di_set": {
           "ch0": 62285.24,
           "ch1": 62285.24,
@@ -83502,8 +79130,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03032-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.29
+        }
       },
       "geometry": {
         "type": "Point",
@@ -83577,6 +79204,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (198 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 8.25,
         "di_set": {
           "ch0": 62400.17,
           "ch1": 62474.96,
@@ -83584,8 +79212,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.25,
           "cert": "exact",
           "sheet": "DW-03032-04"
-        },
-        "offset_m": 8.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -83682,6 +79309,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 6.74,
         "di_set": {
           "ch0": 62309.01,
           "ch1": 62309.01,
@@ -83690,8 +79318,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03032-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 6.74
+        }
       },
       "geometry": {
         "type": "Point",
@@ -83725,6 +79352,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (35 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.08,
         "di_set": {
           "ch0": 62474.96,
           "ch1": 62554.95,
@@ -83732,8 +79360,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.08,
           "cert": "exact",
           "sheet": "DW-03032-04"
-        },
-        "offset_m": 9.08
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -83833,6 +79460,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (12 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.23,
         "di_set": {
           "ch0": 62560.29,
           "ch1": 62600.85,
@@ -83841,8 +79469,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03032-04",
           "preset": "T12"
-        },
-        "offset_m": 10.23
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -83954,6 +79581,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (100 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.12,
         "di_set": {
           "ch0": 62601,
           "ch1": 62699.96,
@@ -83961,8 +79589,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.12,
           "cert": "exact",
           "sheet": "DW-03032-04"
-        },
-        "offset_m": 9.12
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -84078,6 +79705,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (8 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.89,
         "di_set": {
           "ch0": 62699.96,
           "ch1": 62747.23,
@@ -84085,8 +79713,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.89,
           "cert": "exact",
           "sheet": "DW-03032-04"
-        },
-        "offset_m": 9.89
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -84202,6 +79829,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (10 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.77,
         "di_set": {
           "ch0": 62752.77,
           "ch1": 62825.12,
@@ -84209,8 +79837,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.77,
           "cert": "exact",
           "sheet": "DW-03032-04"
-        },
-        "offset_m": 10.77
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -84306,6 +79933,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (17 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.88,
         "di_set": {
           "ch0": 62827.05,
           "ch1": 62927.66,
@@ -84313,8 +79941,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.88,
           "cert": "exact",
           "sheet": "DW-03032-04"
-        },
-        "offset_m": 10.88
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -84474,6 +80101,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (117 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.82,
         "di_set": {
           "ch0": 62932.27,
           "ch1": 63227.49,
@@ -84481,8 +80109,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.82,
           "cert": "exact",
           "sheet": "DW-03032-04"
-        },
-        "offset_m": 10.82
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -84759,6 +80386,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.75,
         "di_set": {
           "ch0": 62934,
           "ch1": 62934,
@@ -84767,8 +80395,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03032-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.75
+        }
       },
       "geometry": {
         "type": "Point",
@@ -84803,6 +80430,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 7.27,
         "di_set": {
           "ch0": 63384.87,
           "ch1": 63384.87,
@@ -84811,8 +80439,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03033-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.27
+        }
       },
       "geometry": {
         "type": "Point",
@@ -84887,6 +80514,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.34,
         "di_set": {
           "ch0": 63406,
           "ch1": 63406,
@@ -84895,8 +80523,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03033-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.34
+        }
       },
       "geometry": {
         "type": "Point",
@@ -84930,6 +80557,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (8 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.85,
         "di_set": {
           "ch0": 63400.75,
           "ch1": 63475.92,
@@ -84937,8 +80565,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.85,
           "cert": "exact",
           "sheet": "DW-03033-04"
-        },
-        "offset_m": 9.85
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -85038,6 +80665,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (932 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.59,
         "di_set": {
           "ch0": 63475.92,
           "ch1": 64349.84,
@@ -85045,8 +80673,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.59,
           "cert": "exact",
           "sheet": "DW-03033-04"
-        },
-        "offset_m": 10.59
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -85326,6 +80953,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (567 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.45,
         "di_set": {
           "ch0": 63670.88,
           "ch1": 64174.93,
@@ -85333,8 +80961,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.45,
           "cert": "exact",
           "sheet": "DW-03033-04"
-        },
-        "offset_m": 10.45
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -85614,6 +81241,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (157 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.68,
         "di_set": {
           "ch0": 64175.73,
           "ch1": 64350,
@@ -85621,8 +81249,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.68,
           "cert": "exact",
           "sheet": "DW-03033-04"
-        },
-        "offset_m": 11.68
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -85798,6 +81425,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (129 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 12.11,
         "di_set": {
           "ch0": 64349.95,
           "ch1": 64488.24,
@@ -85805,8 +81433,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.11,
           "cert": "exact",
           "sheet": "DW-03033-04"
-        },
-        "offset_m": 12.11
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -85954,6 +81581,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (23 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 12.22,
         "di_set": {
           "ch0": 64349.84,
           "ch1": 64488.66,
@@ -85961,8 +81589,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.22,
           "cert": "exact",
           "sheet": "DW-03033-04"
-        },
-        "offset_m": 12.22
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -86111,6 +81738,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 7.5,
         "di_set": {
           "ch0": 64482.87,
           "ch1": 64482.87,
@@ -86119,8 +81747,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03033-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.5
+        }
       },
       "geometry": {
         "type": "Point",
@@ -86194,6 +81821,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (105 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 12.37,
         "di_set": {
           "ch0": 64500,
           "ch1": 64835.86,
@@ -86201,8 +81829,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.37,
           "cert": "exact",
           "sheet": "DW-03034-04"
-        },
-        "offset_m": 12.37
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -86479,6 +82106,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.2,
         "di_set": {
           "ch0": 64475,
           "ch1": 64950,
@@ -86486,8 +82114,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.2,
           "cert": "exact",
           "sheet": "DW-03034-04"
-        },
-        "offset_m": 3.2
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -86768,6 +82395,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 7.19,
         "di_set": {
           "ch0": 64849,
           "ch1": 64849,
@@ -86776,8 +82404,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03034-04",
           "cert": "label",
           "stated": 44
-        },
-        "offset_m": 7.19
+        }
       },
       "geometry": {
         "type": "Point",
@@ -86851,6 +82478,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (55 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.5,
         "di_set": {
           "ch0": 64896.97,
           "ch1": 65186.93,
@@ -86858,8 +82486,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.5,
           "cert": "exact",
           "sheet": "DW-03034-04"
-        },
-        "offset_m": 11.5
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -87128,6 +82755,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.78,
         "di_set": {
           "ch0": 64904.82,
           "ch1": 64904.82,
@@ -87136,8 +82764,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03034-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.78
+        }
       },
       "geometry": {
         "type": "Point",
@@ -87172,6 +82799,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.33,
         "di_set": {
           "ch0": 65182.55,
           "ch1": 65182.55,
@@ -87180,8 +82808,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03034-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.33
+        }
       },
       "geometry": {
         "type": "Point",
@@ -87256,6 +82883,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.64,
         "di_set": {
           "ch0": 65204,
           "ch1": 65204,
@@ -87264,8 +82892,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03034-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.64
+        }
       },
       "geometry": {
         "type": "Point",
@@ -87299,6 +82926,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (55 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.85,
         "di_set": {
           "ch0": 65198.14,
           "ch1": 65325.06,
@@ -87306,8 +82934,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.85,
           "cert": "exact",
           "sheet": "DW-03034-04"
-        },
-        "offset_m": 10.85
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -87447,6 +83074,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (123 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.25,
         "di_set": {
           "ch0": 65325.06,
           "ch1": 65400.34,
@@ -87454,8 +83082,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.25,
           "cert": "exact",
           "sheet": "DW-03034-04"
-        },
-        "offset_m": 9.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -87555,6 +83182,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (29 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.99,
         "di_set": {
           "ch0": 65400.34,
           "ch1": 65557.18,
@@ -87562,8 +83190,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.99,
           "cert": "exact",
           "sheet": "DW-03034-04"
-        },
-        "offset_m": 11.99
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -87728,6 +83355,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.51,
         "di_set": {
           "ch0": 65546.45,
           "ch1": 65546.45,
@@ -87736,8 +83364,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03034-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.51
+        }
       },
       "geometry": {
         "type": "Point",
@@ -87811,6 +83438,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (60 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 12.65,
         "di_set": {
           "ch0": 65562.8,
           "ch1": 65774.92,
@@ -87818,8 +83446,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.65,
           "cert": "exact",
           "sheet": "DW-03034-04"
-        },
-        "offset_m": 12.65
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -88028,6 +83655,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.82,
         "di_set": {
           "ch0": 65567.9,
           "ch1": 65567.9,
@@ -88036,8 +83664,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03034-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.82
+        }
       },
       "geometry": {
         "type": "Point",
@@ -88072,6 +83699,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 65475,
           "ch1": 65825,
@@ -88079,8 +83707,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03034-04"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -88361,6 +83988,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 10.06,
         "di_set": {
           "ch0": 65844.12,
           "ch1": 65844.12,
@@ -88369,8 +83997,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03034-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 10.06
+        }
       },
       "geometry": {
         "type": "Point",
@@ -88445,6 +84072,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 65825,
           "ch1": 65900,
@@ -88452,8 +84080,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03034-04"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -88549,6 +84176,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (71 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.99,
         "di_set": {
           "ch0": 65950.08,
           "ch1": 66067.34,
@@ -88556,8 +84184,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.99,
           "cert": "exact",
           "sheet": "DW-03035-04"
-        },
-        "offset_m": 11.99
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -88690,6 +84317,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 9.14,
         "di_set": {
           "ch0": 66053.14,
           "ch1": 66053.14,
@@ -88698,8 +84326,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03035-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 9.14
+        }
       },
       "geometry": {
         "type": "Point",
@@ -88773,6 +84400,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (16 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.66,
         "di_set": {
           "ch0": 66074.78,
           "ch1": 66175.16,
@@ -88780,8 +84408,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.66,
           "cert": "exact",
           "sheet": "DW-03035-04"
-        },
-        "offset_m": 11.66
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -88902,6 +84529,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.58,
         "di_set": {
           "ch0": 66081.47,
           "ch1": 66081.47,
@@ -88910,8 +84538,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03035-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -88946,6 +84573,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 9.02,
         "di_set": {
           "ch0": 66332.69,
           "ch1": 66332.69,
@@ -88954,8 +84582,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03035-04",
           "cert": "label",
           "stated": 289
-        },
-        "offset_m": 9.02
+        }
       },
       "geometry": {
         "type": "Point",
@@ -88989,6 +84616,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (19 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.32,
         "di_set": {
           "ch0": 66456.03,
           "ch1": 66567.32,
@@ -88996,8 +84624,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.32,
           "cert": "exact",
           "sheet": "DW-03035-04"
-        },
-        "offset_m": 11.32
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -89126,6 +84753,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 6.74,
         "di_set": {
           "ch0": 66558.23,
           "ch1": 66558.23,
@@ -89134,8 +84762,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03035-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 6.74
+        }
       },
       "geometry": {
         "type": "Point",
@@ -89209,6 +84836,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (72 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.57,
         "di_set": {
           "ch0": 66573.07,
           "ch1": 66775,
@@ -89216,8 +84844,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.57,
           "cert": "exact",
           "sheet": "DW-03035-04"
-        },
-        "offset_m": 10.57
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -89418,6 +85045,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 7.04,
         "di_set": {
           "ch0": 66579.68,
           "ch1": 66579.68,
@@ -89426,8 +85054,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03035-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.04
+        }
       },
       "geometry": {
         "type": "Point",
@@ -89462,6 +85089,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.19,
         "di_set": {
           "ch0": 66838.24,
           "ch1": 66838.24,
@@ -89470,8 +85098,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03035-04",
           "cert": "label",
           "stated": 102
-        },
-        "offset_m": 8.19
+        }
       },
       "geometry": {
         "type": "Point",
@@ -89545,6 +85172,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (80 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.97,
         "di_set": {
           "ch0": 67000.29,
           "ch1": 67394.99,
@@ -89552,8 +85180,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.97,
           "cert": "exact",
           "sheet": "DW-03035-04"
-        },
-        "offset_m": 10.97
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -89830,6 +85457,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 7.26,
         "di_set": {
           "ch0": 67385.66,
           "ch1": 67385.66,
@@ -89838,8 +85466,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03035-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.26
+        }
       },
       "geometry": {
         "type": "Point",
@@ -89913,6 +85540,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (56 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.22,
         "di_set": {
           "ch0": 67400.02,
           "ch1": 67574.87,
@@ -89920,8 +85548,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.22,
           "cert": "exact",
           "sheet": "DW-03036-04"
-        },
-        "offset_m": 10.22
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -90097,6 +85724,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (188 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.21,
         "di_set": {
           "ch0": 67574.87,
           "ch1": 67724.97,
@@ -90104,8 +85732,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.21,
           "cert": "exact",
           "sheet": "DW-03036-04"
-        },
-        "offset_m": 9.21
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -90265,6 +85892,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (7 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.45,
         "di_set": {
           "ch0": 67650.21,
           "ch1": 67705.4,
@@ -90272,8 +85900,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.45,
           "cert": "exact",
           "sheet": "DW-03036-04"
-        },
-        "offset_m": 9.45
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -90357,6 +85984,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (24 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.64,
         "di_set": {
           "ch0": 67774.97,
           "ch1": 67907.49,
@@ -90364,8 +85992,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.64,
           "cert": "exact",
           "sheet": "DW-03036-04"
-        },
-        "offset_m": 9.64
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -90549,6 +86176,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (31 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 8.87,
         "di_set": {
           "ch0": 67912.26,
           "ch1": 68050.16,
@@ -90557,8 +86185,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03036-04",
           "preset": "T12"
-        },
-        "offset_m": 8.87
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -90706,6 +86333,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (98 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.02,
         "di_set": {
           "ch0": 68050.16,
           "ch1": 68291,
@@ -90713,8 +86341,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.02,
           "cert": "exact",
           "sheet": "DW-03036-04"
-        },
-        "offset_m": 10.02
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -90947,6 +86574,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 6.55,
         "di_set": {
           "ch0": 67920.59,
           "ch1": 67920.59,
@@ -90955,8 +86583,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03036-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 6.55
+        }
       },
       "geometry": {
         "type": "Point",
@@ -91030,6 +86657,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (45 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.73,
         "di_set": {
           "ch0": 68301.34,
           "ch1": 68549.95,
@@ -91037,8 +86665,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.73,
           "cert": "exact",
           "sheet": "DW-03036-04"
-        },
-        "offset_m": 10.73
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -91275,6 +86902,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 68600,
           "ch1": 68700,
@@ -91282,8 +86910,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03036-04"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -91440,6 +87067,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 10.49,
         "di_set": {
           "ch0": 68844,
           "ch1": 68844,
@@ -91448,8 +87076,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03037-04",
           "cert": "label",
           "stated": 200
-        },
-        "offset_m": 10.49
+        }
       },
       "geometry": {
         "type": "Point",
@@ -91524,6 +87151,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 10.37,
         "di_set": {
           "ch0": 69009.53,
           "ch1": 69009.53,
@@ -91532,8 +87160,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03037-04",
           "cert": "label",
           "stated": 126
-        },
-        "offset_m": 10.37
+        }
       },
       "geometry": {
         "type": "Point",
@@ -91568,6 +87195,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 68750,
           "ch1": 69075,
@@ -91575,8 +87203,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03037-04"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -91853,6 +87480,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.74,
         "di_set": {
           "ch0": 69137.5,
           "ch1": 69137.5,
@@ -91861,8 +87489,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03037-04",
           "cert": "label",
           "stated": 75
-        },
-        "offset_m": 8.74
+        }
       },
       "geometry": {
         "type": "Point",
@@ -91897,6 +87524,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 10.11,
         "di_set": {
           "ch0": 69215.33,
           "ch1": 69215.33,
@@ -91905,8 +87533,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03037-04",
           "cert": "label",
           "stated": 69
-        },
-        "offset_m": 10.11
+        }
       },
       "geometry": {
         "type": "Point",
@@ -91981,6 +87608,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.38,
         "di_set": {
           "ch0": 69398.93,
           "ch1": 69398.93,
@@ -91989,8 +87617,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03037-04",
           "cert": "label",
           "stated": 263
-        },
-        "offset_m": 8.38
+        }
       },
       "geometry": {
         "type": "Point",
@@ -92025,6 +87652,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.37,
         "di_set": {
           "ch0": 69449.99,
           "ch1": 69524.99,
@@ -92032,8 +87660,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.37,
           "cert": "exact",
           "sheet": "DW-03037-04"
-        },
-        "offset_m": 3.37
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -92170,6 +87797,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.5,
         "di_set": {
           "ch0": 69596.3,
           "ch1": 69596.3,
@@ -92178,8 +87806,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03037-04",
           "cert": "label",
           "stated": 120
-        },
-        "offset_m": 8.5
+        }
       },
       "geometry": {
         "type": "Point",
@@ -92294,6 +87921,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 6.26,
         "di_set": {
           "ch0": 70012,
           "ch1": 70012,
@@ -92302,8 +87930,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03037-04",
           "cert": "label",
           "stated": 245
-        },
-        "offset_m": 6.26
+        }
       },
       "geometry": {
         "type": "Point",
@@ -92378,6 +88005,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 6.59,
         "di_set": {
           "ch0": 70165.99,
           "ch1": 70165.99,
@@ -92386,8 +88014,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03037-04",
           "cert": "label",
           "stated": 75
-        },
-        "offset_m": 6.59
+        }
       },
       "geometry": {
         "type": "Point",
@@ -92422,6 +88049,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 6.15,
         "di_set": {
           "ch0": 70414.39,
           "ch1": 70414.39,
@@ -92430,8 +88058,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03038-05",
           "cert": "label",
           "stated": 158
-        },
-        "offset_m": 6.15
+        }
       },
       "geometry": {
         "type": "Point",
@@ -92465,6 +88092,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (55 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 7.41,
         "di_set": {
           "ch0": 70349.56,
           "ch1": 70399.92,
@@ -92472,8 +88100,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.41,
           "cert": "exact",
           "sheet": "DW-03038-05"
-        },
-        "offset_m": 7.41
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -92553,6 +88180,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (7 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 8.23,
         "di_set": {
           "ch0": 70399.92,
           "ch1": 70457.49,
@@ -92560,8 +88188,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.23,
           "cert": "exact",
           "sheet": "DW-03038-05"
-        },
-        "offset_m": 8.23
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -92685,6 +88312,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (259 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 8.11,
         "di_set": {
           "ch0": 70953.47,
           "ch1": 71124.9,
@@ -92692,8 +88320,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.11,
           "cert": "exact",
           "sheet": "DW-03038-05"
-        },
-        "offset_m": 8.11
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -92869,6 +88496,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (239 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 8.45,
         "di_set": {
           "ch0": 70925.58,
           "ch1": 71101.01,
@@ -92876,8 +88504,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.45,
           "cert": "exact",
           "sheet": "DW-03038-05"
-        },
-        "offset_m": 8.45
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -93057,6 +88684,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (14 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.93,
         "di_set": {
           "ch0": 71099.92,
           "ch1": 71197.6,
@@ -93064,8 +88692,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.93,
           "cert": "exact",
           "sheet": "DW-03038-05"
-        },
-        "offset_m": 10.93
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -93181,6 +88808,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (54 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.79,
         "di_set": {
           "ch0": 71124.9,
           "ch1": 71197.24,
@@ -93188,8 +88816,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.79,
           "cert": "exact",
           "sheet": "DW-03038-05"
-        },
-        "offset_m": 10.79
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -93325,6 +88952,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (22 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.28,
         "di_set": {
           "ch0": 71203.77,
           "ch1": 71324.97,
@@ -93332,8 +88960,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.28,
           "cert": "exact",
           "sheet": "DW-03038-05"
-        },
-        "offset_m": 10.28
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -93469,6 +89096,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (50 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.15,
         "di_set": {
           "ch0": 71324.97,
           "ch1": 71375.24,
@@ -93477,8 +89105,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03038-05",
           "preset": "T13"
-        },
-        "offset_m": 10.15
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -93558,6 +89185,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (90 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.92,
         "di_set": {
           "ch0": 71375.26,
           "ch1": 71740.1,
@@ -93565,8 +89193,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.92,
           "cert": "exact",
           "sheet": "DW-03038-05"
-        },
-        "offset_m": 10.92
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -93846,6 +89473,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (114 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.29,
         "di_set": {
           "ch0": 71524,
           "ch1": 71739.37,
@@ -93853,8 +89481,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.29,
           "cert": "exact",
           "sheet": "DW-03039-04"
-        },
-        "offset_m": 11.29
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -94106,6 +89733,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (45 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.6,
         "di_set": {
           "ch0": 71746.39,
           "ch1": 71825.13,
@@ -94114,8 +89742,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03039-04",
           "preset": "T12"
-        },
-        "offset_m": 10.6
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -94215,6 +89842,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (8 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.42,
         "di_set": {
           "ch0": 71745.45,
           "ch1": 71799.98,
@@ -94222,8 +89850,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.42,
           "cert": "exact",
           "sheet": "DW-03039-04"
-        },
-        "offset_m": 11.42
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -94303,6 +89930,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (243 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.46,
         "di_set": {
           "ch0": 71873.08,
           "ch1": 72024.85,
@@ -94310,8 +89938,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.46,
           "cert": "exact",
           "sheet": "DW-03039-04"
-        },
-        "offset_m": 9.46
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -94511,6 +90138,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (34 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 8.69,
         "di_set": {
           "ch0": 72020.03,
           "ch1": 72180.73,
@@ -94518,8 +90146,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.69,
           "cert": "exact",
           "sheet": "DW-03039-04"
-        },
-        "offset_m": 8.69
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -94688,6 +90315,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 6.86,
         "di_set": {
           "ch0": 72199.6,
           "ch1": 72199.6,
@@ -94696,8 +90324,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03039-04",
           "cert": "label",
           "stated": 42
-        },
-        "offset_m": 6.86
+        }
       },
       "geometry": {
         "type": "Point",
@@ -94732,6 +90359,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 6.18,
         "di_set": {
           "ch0": 72238.14,
           "ch1": 72238.14,
@@ -94740,8 +90368,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03039-04",
           "cert": "label",
           "stated": 31
-        },
-        "offset_m": 6.18
+        }
       },
       "geometry": {
         "type": "Point",
@@ -94815,6 +90442,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (27 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 7.87,
         "di_set": {
           "ch0": 72248.23,
           "ch1": 72326.34,
@@ -94822,8 +90450,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.87,
           "cert": "exact",
           "sheet": "DW-03039-04"
-        },
-        "offset_m": 7.87
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -94923,6 +90550,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (401 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 8.83,
         "di_set": {
           "ch0": 72685.2,
           "ch1": 72999.58,
@@ -94930,8 +90558,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.83,
           "cert": "exact",
           "sheet": "DW-03039-04"
-        },
-        "offset_m": 8.83
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -95211,6 +90838,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (443 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 8.55,
         "di_set": {
           "ch0": 72683.98,
           "ch1": 72999.01,
@@ -95218,8 +90846,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.55,
           "cert": "exact",
           "sheet": "DW-03039-04"
-        },
-        "offset_m": 8.55
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -95500,6 +91127,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8,
         "di_set": {
           "ch0": 72990.91,
           "ch1": 72990.91,
@@ -95508,8 +91136,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03039-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8
+        }
       },
       "geometry": {
         "type": "Point",
@@ -95584,6 +91211,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 9.72,
         "di_set": {
           "ch0": 73081.69,
           "ch1": 73081.69,
@@ -95592,8 +91220,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03040-04",
           "cert": "label",
           "stated": 118
-        },
-        "offset_m": 9.72
+        }
       },
       "geometry": {
         "type": "Point",
@@ -95628,6 +91255,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.16,
         "di_set": {
           "ch0": 73073.06,
           "ch1": 73073.06,
@@ -95636,8 +91264,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03040-04",
           "cert": "label",
           "stated": 118
-        },
-        "offset_m": 8.16
+        }
       },
       "geometry": {
         "type": "Point",
@@ -95712,6 +91339,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 9.37,
         "di_set": {
           "ch0": 73160.76,
           "ch1": 73160.76,
@@ -95720,8 +91348,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03040-04",
           "cert": "label",
           "stated": 41
-        },
-        "offset_m": 9.37
+        }
       },
       "geometry": {
         "type": "Point",
@@ -95756,6 +91383,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 9.61,
         "di_set": {
           "ch0": 73215.05,
           "ch1": 73215.05,
@@ -95764,8 +91392,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03040-04",
           "cert": "label",
           "stated": 70
-        },
-        "offset_m": 9.61
+        }
       },
       "geometry": {
         "type": "Point",
@@ -95800,6 +91427,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.92,
         "di_set": {
           "ch0": 73267.02,
           "ch1": 73267.02,
@@ -95808,8 +91436,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03040-04",
           "cert": "label",
           "stated": 185
-        },
-        "offset_m": 8.92
+        }
       },
       "geometry": {
         "type": "Point",
@@ -95884,6 +91511,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 7.72,
         "di_set": {
           "ch0": 73392.37,
           "ch1": 73392.37,
@@ -95892,8 +91520,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03040-04",
           "cert": "label",
           "stated": 66
-        },
-        "offset_m": 7.72
+        }
       },
       "geometry": {
         "type": "Point",
@@ -95928,6 +91555,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 7.68,
         "di_set": {
           "ch0": 73704.66,
           "ch1": 73704.66,
@@ -95936,8 +91564,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03040-04",
           "cert": "label",
           "stated": 136
-        },
-        "offset_m": 7.68
+        }
       },
       "geometry": {
         "type": "Point",
@@ -95972,6 +91599,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 7.96,
         "di_set": {
           "ch0": 73703.54,
           "ch1": 73703.54,
@@ -95980,8 +91608,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03040-04",
           "cert": "label",
           "stated": 201
-        },
-        "offset_m": 7.96
+        }
       },
       "geometry": {
         "type": "Point",
@@ -96056,6 +91683,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 7.27,
         "di_set": {
           "ch0": 73854.97,
           "ch1": 73854.97,
@@ -96064,8 +91692,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03040-04",
           "cert": "label",
           "stated": 193
-        },
-        "offset_m": 7.27
+        }
       },
       "geometry": {
         "type": "Point",
@@ -96139,6 +91766,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (377 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 7.67,
         "di_set": {
           "ch0": 74149.6,
           "ch1": 74368.51,
@@ -96146,8 +91774,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.67,
           "cert": "exact",
           "sheet": "DW-03040-04"
-        },
-        "offset_m": 7.67
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -96359,6 +91986,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (53 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 8.56,
         "di_set": {
           "ch0": 74373.06,
           "ch1": 74450,
@@ -96366,8 +91994,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.56,
           "cert": "exact",
           "sheet": "DW-03041-05"
-        },
-        "offset_m": 8.56
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -96467,6 +92094,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (36 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 7.46,
         "di_set": {
           "ch0": 74174.54,
           "ch1": 74366.2,
@@ -96474,8 +92102,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.46,
           "cert": "exact",
           "sheet": "DW-03040-04"
-        },
-        "offset_m": 7.46
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -96668,6 +92295,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 7.66,
         "di_set": {
           "ch0": 74377.49,
           "ch1": 74377.49,
@@ -96676,8 +92304,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03040-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.66
+        }
       },
       "geometry": {
         "type": "Point",
@@ -96712,6 +92339,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 7.59,
         "di_set": {
           "ch0": 74351.96,
           "ch1": 74351.96,
@@ -96720,8 +92348,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03040-04",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.59
+        }
       },
       "geometry": {
         "type": "Point",
@@ -96795,6 +92422,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (377 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.98,
         "di_set": {
           "ch0": 74449.97,
           "ch1": 74675.01,
@@ -96802,8 +92430,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.98,
           "cert": "exact",
           "sheet": "DW-03041-05"
-        },
-        "offset_m": 10.98
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -97024,6 +92651,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 74624.63,
           "ch1": 74780,
@@ -97031,8 +92659,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03041-05"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -97196,6 +92823,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (27 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 13.03,
         "di_set": {
           "ch0": 74675,
           "ch1": 74786.35,
@@ -97203,8 +92831,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 13.03,
           "cert": "exact",
           "sheet": "DW-03041-05"
-        },
-        "offset_m": 13.03
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -97333,6 +92960,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 11.48,
         "di_set": {
           "ch0": 74764.4,
           "ch1": 74764.4,
@@ -97341,8 +92969,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03041-05",
           "cert": "label",
           "stated": 66
-        },
-        "offset_m": 11.48
+        }
       },
       "geometry": {
         "type": "Point",
@@ -97377,6 +93004,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 10.81,
         "di_set": {
           "ch0": 74762.76,
           "ch1": 74762.76,
@@ -97385,8 +93013,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03041-05",
           "cert": "label",
           "stated": 66
-        },
-        "offset_m": 10.81
+        }
       },
       "geometry": {
         "type": "Point",
@@ -97421,6 +93048,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.6,
         "di_set": {
           "ch0": 75762.17,
           "ch1": 75762.17,
@@ -97429,8 +93057,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03041-05",
           "cert": "label",
           "stated": 69
-        },
-        "offset_m": 8.6
+        }
       },
       "geometry": {
         "type": "Point",
@@ -97465,6 +93092,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 9.12,
         "di_set": {
           "ch0": 75752.66,
           "ch1": 75752.66,
@@ -97473,8 +93101,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03041-05",
           "cert": "label",
           "stated": 69
-        },
-        "offset_m": 9.12
+        }
       },
       "geometry": {
         "type": "Point",
@@ -97508,6 +93135,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (24 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.01,
         "di_set": {
           "ch0": 76226.66,
           "ch1": 76370.38,
@@ -97515,8 +93143,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.01,
           "cert": "exact",
           "sheet": "DW-03042-05"
-        },
-        "offset_m": 10.01
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -97709,6 +93336,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.93,
         "di_set": {
           "ch0": 76379.62,
           "ch1": 76379.62,
@@ -97717,8 +93345,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03042-05",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.93
+        }
       },
       "geometry": {
         "type": "Point",
@@ -97752,6 +93379,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (19 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.33,
         "di_set": {
           "ch0": 76375.61,
           "ch1": 76462.58,
@@ -97759,8 +93387,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.33,
           "cert": "exact",
           "sheet": "DW-03042-05"
-        },
-        "offset_m": 9.33
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -97868,6 +93495,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (10 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 9.77,
         "di_set": {
           "ch0": 76374.61,
           "ch1": 76450.25,
@@ -97875,8 +93503,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.77,
           "cert": "exact",
           "sheet": "DW-03042-05"
-        },
-        "offset_m": 9.77
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -97976,6 +93603,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (227 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 6.38,
         "di_set": {
           "ch0": 76500.05,
           "ch1": 76550.19,
@@ -97983,8 +93611,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 6.38,
           "cert": "exact",
           "sheet": "DW-03042-05"
-        },
-        "offset_m": 6.38
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -98065,6 +93692,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 6.21,
         "di_set": {
           "ch0": 76648.79,
           "ch1": 76648.79,
@@ -98073,8 +93701,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03042-05",
           "cert": "label",
           "stated": 87
-        },
-        "offset_m": 6.21
+        }
       },
       "geometry": {
         "type": "Point",
@@ -98108,6 +93735,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (7 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 8.58,
         "di_set": {
           "ch0": 76599.87,
           "ch1": 76653.55,
@@ -98115,8 +93743,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.58,
           "cert": "exact",
           "sheet": "DW-03042-05"
-        },
-        "offset_m": 8.58
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -98197,6 +93824,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 6.76,
         "di_set": {
           "ch0": 76679.36,
           "ch1": 76679.36,
@@ -98205,8 +93833,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03042-05",
           "cert": "label",
           "stated": 47
-        },
-        "offset_m": 6.76
+        }
       },
       "geometry": {
         "type": "Point",
@@ -98281,6 +93908,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 6.9,
         "di_set": {
           "ch0": 76754,
           "ch1": 76754,
@@ -98289,8 +93917,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03042-05",
           "cert": "label",
           "stated": 280
-        },
-        "offset_m": 6.9
+        }
       },
       "geometry": {
         "type": "Point",
@@ -98324,6 +93951,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (11 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 7.34,
         "di_set": {
           "ch0": 76810.51,
           "ch1": 76952.5,
@@ -98331,8 +93959,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.34,
           "cert": "exact",
           "sheet": "DW-03042-05"
-        },
-        "offset_m": 7.34
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -98484,6 +94111,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (104 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 8.46,
         "di_set": {
           "ch0": 77250.47,
           "ch1": 77488.75,
@@ -98491,8 +94119,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.46,
           "cert": "exact",
           "sheet": "DW-03043-05"
-        },
-        "offset_m": 8.46
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -98721,6 +94348,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.41,
         "di_set": {
           "ch0": 77479.07,
           "ch1": 77479.07,
@@ -98729,8 +94357,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03043-05",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.41
+        }
       },
       "geometry": {
         "type": "Point",
@@ -98804,6 +94431,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet vector marker glyph clustering (9 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.51,
         "di_set": {
           "ch0": 77491.4,
           "ch1": 77701.57,
@@ -98812,8 +94440,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03043-05",
           "preset": "T12"
-        },
-        "offset_m": 11.51
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -99022,6 +94649,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.97,
         "di_set": {
           "ch0": 77496.11,
           "ch1": 77496.11,
@@ -99030,8 +94658,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03043-05",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.97
+        }
       },
       "geometry": {
         "type": "Point",
@@ -99066,6 +94693,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 11.01,
         "di_set": {
           "ch0": 77815.89,
           "ch1": 77815.89,
@@ -99074,8 +94702,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03043-05",
           "cert": "label",
           "stated": 151
-        },
-        "offset_m": 11.01
+        }
       },
       "geometry": {
         "type": "Point",
@@ -99150,6 +94777,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 10.24,
         "di_set": {
           "ch0": 77944.62,
           "ch1": 77944.62,
@@ -99158,8 +94786,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03043-05",
           "cert": "label",
           "stated": 159
-        },
-        "offset_m": 10.24
+        }
       },
       "geometry": {
         "type": "Point",
@@ -99234,6 +94861,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 11.05,
         "di_set": {
           "ch0": 78022.5,
           "ch1": 78022.5,
@@ -99242,8 +94870,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03043-05",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 11.05
+        }
       },
       "geometry": {
         "type": "Point",
@@ -99278,6 +94905,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.2,
         "di_set": {
           "ch0": 77800,
           "ch1": 78200,
@@ -99285,8 +94913,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.2,
           "cert": "exact",
           "sheet": "DW-03043-05"
-        },
-        "offset_m": 3.2
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -99562,6 +95189,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet vector marker glyph clustering (4 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 13.01,
         "di_set": {
           "ch0": 78072.55,
           "ch1": 78100.16,
@@ -99569,8 +95197,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 13.01,
           "cert": "exact",
           "sheet": "DW-03043-05"
-        },
-        "offset_m": 13.01
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -99630,6 +95257,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet vector marker glyph clustering (161 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 12.73,
         "di_set": {
           "ch0": 78100.16,
           "ch1": 78250.46,
@@ -99637,8 +95265,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.73,
           "cert": "exact",
           "sheet": "DW-03043-05"
-        },
-        "offset_m": 12.73
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -99799,6 +95426,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 9.96,
         "di_set": {
           "ch0": 78504.71,
           "ch1": 78504.71,
@@ -99807,8 +95435,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03043-05",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 9.96
+        }
       },
       "geometry": {
         "type": "Point",
@@ -99883,6 +95510,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL C",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 11.15,
         "di_set": {
           "ch0": 78588.45,
           "ch1": 78588.45,
@@ -99891,8 +95519,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03043-05",
           "cert": "label",
           "stated": 133
-        },
-        "offset_m": 11.15
+        }
       },
       "geometry": {
         "type": "Point",
@@ -99927,6 +95554,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 11.36,
         "di_set": {
           "ch0": 78594.34,
           "ch1": 78594.34,
@@ -99935,8 +95563,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03043-05",
           "cert": "label",
           "stated": 110
-        },
-        "offset_m": 11.36
+        }
       },
       "geometry": {
         "type": "Point",
@@ -99971,6 +95598,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 78375,
           "ch1": 78727.35,
@@ -99978,8 +95606,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03043-05"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -100260,6 +95887,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 10.2,
         "di_set": {
           "ch0": 78715,
           "ch1": 78715,
@@ -100268,8 +95896,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03044-05",
           "cert": "label",
           "stated": 38
-        },
-        "offset_m": 10.2
+        }
       },
       "geometry": {
         "type": "Point",
@@ -100304,6 +95931,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 10.07,
         "di_set": {
           "ch0": 78714.76,
           "ch1": 78714.76,
@@ -100312,8 +95940,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03044-05",
           "cert": "label",
           "stated": 41
-        },
-        "offset_m": 10.07
+        }
       },
       "geometry": {
         "type": "Point",
@@ -100347,6 +95974,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (11 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 12.32,
         "di_set": {
           "ch0": 78675.1,
           "ch1": 78734.18,
@@ -100354,8 +95982,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.32,
           "cert": "exact",
           "sheet": "DW-03044-05"
-        },
-        "offset_m": 12.32
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -100440,6 +96067,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 7.29,
         "di_set": {
           "ch0": 78799.14,
           "ch1": 78799.14,
@@ -100448,8 +96076,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03044-05",
           "cert": "label",
           "stated": 31
-        },
-        "offset_m": 7.29
+        }
       },
       "geometry": {
         "type": "Point",
@@ -100484,6 +96111,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 78805,
           "ch1": 78850,
@@ -100491,8 +96119,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03044-05"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -100565,6 +96192,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 10.99,
         "di_set": {
           "ch0": 78806.38,
           "ch1": 78806.38,
@@ -100573,8 +96201,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03044-05",
           "cert": "label",
           "stated": 34
-        },
-        "offset_m": 10.99
+        }
       },
       "geometry": {
         "type": "Point",
@@ -100608,6 +96235,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (7 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.83,
         "di_set": {
           "ch0": 78797.66,
           "ch1": 79025.12,
@@ -100615,8 +96243,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.83,
           "cert": "exact",
           "sheet": "DW-03044-05"
-        },
-        "offset_m": 11.83
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -100837,6 +96464,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 7.78,
         "di_set": {
           "ch0": 79072.28,
           "ch1": 79072.28,
@@ -100845,8 +96473,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03044-05",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.78
+        }
       },
       "geometry": {
         "type": "Point",
@@ -100921,6 +96548,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 10.59,
         "di_set": {
           "ch0": 79219.37,
           "ch1": 79219.37,
@@ -100929,8 +96557,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03044-05",
           "cert": "label",
           "stated": 124
-        },
-        "offset_m": 10.59
+        }
       },
       "geometry": {
         "type": "Point",
@@ -100965,6 +96592,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 11.74,
         "di_set": {
           "ch0": 79234.99,
           "ch1": 79234.99,
@@ -100973,8 +96601,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03044-05",
           "cert": "label",
           "stated": 103
-        },
-        "offset_m": 11.74
+        }
       },
       "geometry": {
         "type": "Point",
@@ -101008,6 +96635,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (457 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 12.04,
         "di_set": {
           "ch0": 79576.65,
           "ch1": 79774.8,
@@ -101015,8 +96643,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.04,
           "cert": "exact",
           "sheet": "DW-03044-05"
-        },
-        "offset_m": 12.04
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -101252,6 +96879,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (144 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 12.83,
         "di_set": {
           "ch0": 79347.03,
           "ch1": 79450.55,
@@ -101259,8 +96887,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.83,
           "cert": "exact",
           "sheet": "DW-03044-05"
-        },
-        "offset_m": 12.83
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -101380,6 +97007,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (63 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 13.25,
         "di_set": {
           "ch0": 79277.96,
           "ch1": 79499.79,
@@ -101387,8 +97015,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 13.25,
           "cert": "exact",
           "sheet": "DW-03044-05"
-        },
-        "offset_m": 13.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -101605,6 +97232,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 11.3,
         "di_set": {
           "ch0": 79324.19,
           "ch1": 79324.19,
@@ -101613,8 +97241,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03044-05",
           "cert": "label",
           "stated": 65
-        },
-        "offset_m": 11.3
+        }
       },
       "geometry": {
         "type": "Point",
@@ -101649,6 +97276,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.63,
         "di_set": {
           "ch0": 79199.99,
           "ch1": 79625,
@@ -101656,8 +97284,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.63,
           "cert": "exact",
           "sheet": "DW-03044-05"
-        },
-        "offset_m": 3.63
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -101938,6 +97565,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 10.44,
         "di_set": {
           "ch0": 79497.9,
           "ch1": 79497.9,
@@ -101946,8 +97574,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03044-05",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 10.44
+        }
       },
       "geometry": {
         "type": "Point",
@@ -101981,6 +97608,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (203 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 13.14,
         "di_set": {
           "ch0": 79505.96,
           "ch1": 79525.23,
@@ -101988,8 +97616,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 13.14,
           "cert": "exact",
           "sheet": "DW-03044-05"
-        },
-        "offset_m": 13.14
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -102041,6 +97668,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (553 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 12.59,
         "di_set": {
           "ch0": 79525.23,
           "ch1": 80018.03,
@@ -102048,8 +97676,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.59,
           "cert": "exact",
           "sheet": "DW-03044-05"
-        },
-        "offset_m": 12.59
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -102329,6 +97956,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (649 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 12.67,
         "di_set": {
           "ch0": 79506.22,
           "ch1": 79576.65,
@@ -102337,8 +97965,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03044-05",
           "preset": "T12"
-        },
-        "offset_m": 12.67
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -102475,6 +98102,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 10.24,
         "di_set": {
           "ch0": 79507.5,
           "ch1": 79507.5,
@@ -102483,8 +98111,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03044-05",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 10.24
+        }
       },
       "geometry": {
         "type": "Point",
@@ -102518,6 +98145,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (790 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 33.56,
         "di_set": {
           "ch0": 81217.59,
           "ch1": 81423.88,
@@ -102526,8 +98154,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03045-05",
           "preset": "T12"
-        },
-        "offset_m": 33.56
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -102731,6 +98358,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (1587 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 15.61,
         "di_set": {
           "ch0": 80048.57,
           "ch1": 80124.99,
@@ -102739,8 +98367,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03045-05",
           "preset": "T12"
-        },
-        "offset_m": 15.61
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -102840,6 +98467,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (753 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 21.8,
         "di_set": {
           "ch0": 81190.62,
           "ch1": 81249.77,
@@ -102847,8 +98475,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 21.8,
           "cert": "exact",
           "sheet": "DW-03045-05"
-        },
-        "offset_m": 21.8
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -102973,6 +98600,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 79800,
           "ch1": 80675,
@@ -102980,8 +98608,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03045-05"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -103261,6 +98888,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (98 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 17.13,
         "di_set": {
           "ch0": 80124.99,
           "ch1": 80186.65,
@@ -103268,8 +98896,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 17.13,
           "cert": "exact",
           "sheet": "DW-03045-05"
-        },
-        "offset_m": 17.13
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -103397,6 +99024,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
+        "offset_m": 12.85,
         "di_set": {
           "ch0": 80225.21,
           "ch1": 80675,
@@ -103404,8 +99032,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.85,
           "cert": "exact",
           "sheet": "DW-03045-05"
-        },
-        "offset_m": 12.85
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -103686,6 +99313,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 20.25,
         "di_set": {
           "ch0": 80899.99,
           "ch1": 81575.23,
@@ -103693,8 +99321,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 20.25,
           "cert": "exact",
           "sheet": "DW-03045-05"
-        },
-        "offset_m": 20.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -103970,6 +99597,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
+        "offset_m": 29.85,
         "di_set": {
           "ch0": 80900,
           "ch1": 81297.12,
@@ -103977,8 +99605,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 29.85,
           "cert": "exact",
           "sheet": "DW-03045-05"
-        },
-        "offset_m": 29.85
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -104259,6 +99886,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 80825,
           "ch1": 81550,
@@ -104266,8 +99894,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03045-05"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -104548,6 +100175,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 20.53,
         "di_set": {
           "ch0": 81182.92,
           "ch1": 81182.92,
@@ -104556,8 +100184,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03045-05",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 20.53
+        }
       },
       "geometry": {
         "type": "Point",
@@ -104591,6 +100218,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (55 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 22.51,
         "di_set": {
           "ch0": 81162.75,
           "ch1": 81187.23,
@@ -104599,8 +100227,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03045-05",
           "preset": "T12"
-        },
-        "offset_m": 22.51
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -104697,6 +100324,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 19.39,
         "di_set": {
           "ch0": 81197.8,
           "ch1": 81197.8,
@@ -104705,8 +100333,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03045-05",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 19.39
+        }
       },
       "geometry": {
         "type": "Point",
@@ -104741,6 +100368,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 37.34,
         "di_set": {
           "ch0": 81199.21,
           "ch1": 81199.21,
@@ -104749,8 +100377,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03045-05",
           "cert": "label",
           "stated": 43
-        },
-        "offset_m": 37.34
+        }
       },
       "geometry": {
         "type": "Point",
@@ -104784,6 +100411,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (436 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 15.02,
         "di_set": {
           "ch0": 81249.77,
           "ch1": 81477.1,
@@ -104791,8 +100419,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 15.02,
           "cert": "exact",
           "sheet": "DW-03045-05"
-        },
-        "offset_m": 15.02
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -105012,6 +100639,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (635 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 20.09,
         "di_set": {
           "ch0": 81951.37,
           "ch1": 82175.85,
@@ -105019,8 +100647,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 20.09,
           "cert": "exact",
           "sheet": "DW-03046-05"
-        },
-        "offset_m": 20.09
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -105236,6 +100863,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (10 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 28.85,
         "di_set": {
           "ch0": 81701.95,
           "ch1": 81823.47,
@@ -105244,8 +100872,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03046-05",
           "preset": "T4"
-        },
-        "offset_m": 28.85
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -105382,6 +101009,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 28.76,
         "di_set": {
           "ch0": 81817.68,
           "ch1": 81817.68,
@@ -105390,8 +101018,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03046-05",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 28.76
+        }
       },
       "geometry": {
         "type": "Point",
@@ -105466,6 +101093,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 28.58,
         "di_set": {
           "ch0": 81829.19,
           "ch1": 81829.19,
@@ -105474,8 +101102,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03046-05",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 28.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -105510,6 +101137,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 81750,
           "ch1": 82075,
@@ -105517,8 +101145,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03046-05"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -105794,6 +101421,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (13 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 30.16,
         "di_set": {
           "ch0": 81869.49,
           "ch1": 81948.44,
@@ -105801,8 +101429,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 30.16,
           "cert": "exact",
           "sheet": "DW-03046-05"
-        },
-        "offset_m": 30.16
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -105903,6 +101530,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 27.96,
         "di_set": {
           "ch0": 81940.28,
           "ch1": 81940.28,
@@ -105911,8 +101539,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03046-05",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 27.96
+        }
       },
       "geometry": {
         "type": "Point",
@@ -105987,6 +101614,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.8,
         "di_set": {
           "ch0": 82216.84,
           "ch1": 82216.84,
@@ -105995,8 +101623,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03046-05",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.8
+        }
       },
       "geometry": {
         "type": "Point",
@@ -106030,6 +101657,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (10 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.28,
         "di_set": {
           "ch0": 82177.11,
           "ch1": 82222.45,
@@ -106038,8 +101666,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03046-05",
           "preset": "T12"
-        },
-        "offset_m": 11.28
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -106155,6 +101782,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (63 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 10.74,
         "di_set": {
           "ch0": 82227.13,
           "ch1": 82299.79,
@@ -106162,8 +101790,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.74,
           "cert": "exact",
           "sheet": "DW-03046-05"
-        },
-        "offset_m": 10.74
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -106260,6 +101887,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.3,
         "di_set": {
           "ch0": 82231.57,
           "ch1": 82231.57,
@@ -106268,8 +101896,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03046-05",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.3
+        }
       },
       "geometry": {
         "type": "Point",
@@ -106304,6 +101931,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.96,
         "di_set": {
           "ch0": 82366.62,
           "ch1": 82366.62,
@@ -106312,8 +101940,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03046-05",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.96
+        }
       },
       "geometry": {
         "type": "Point",
@@ -106347,6 +101974,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (3 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 11.17,
         "di_set": {
           "ch0": 82299.98,
           "ch1": 82371.85,
@@ -106355,8 +101983,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03046-05",
           "preset": "T12"
-        },
-        "offset_m": 11.17
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -106493,6 +102120,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 82400,
           "ch1": 82500,
@@ -106500,8 +102128,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03046-05"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -106618,6 +102245,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 8.46,
         "di_set": {
           "ch0": 82381.34,
           "ch1": 82381.34,
@@ -106626,8 +102254,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03046-05",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.46
+        }
       },
       "geometry": {
         "type": "Point",
@@ -106661,6 +102288,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (30 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 12.66,
         "di_set": {
           "ch0": 82378.29,
           "ch1": 82501.38,
@@ -106668,8 +102296,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.66,
           "cert": "exact",
           "sheet": "DW-03046-05"
-        },
-        "offset_m": 12.66
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -106805,6 +102432,7 @@ window.SECTION02_ASSETS = {
         "confidence": "PROBABLE",
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet vector marker glyph clustering (304 markers, affine station band scale 2.835 pt/m)",
+        "offset_m": 12.14,
         "di_set": {
           "ch0": 82503.1,
           "ch1": 82765.01,
@@ -106812,8 +102440,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.14,
           "cert": "exact",
           "sheet": "DW-03046-05"
-        },
-        "offset_m": 12.14
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -107062,6 +102689,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 82600,
           "ch1": 82700,
@@ -107069,8 +102697,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03046-05"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -107187,6 +102814,7 @@ window.SECTION02_ASSETS = {
         "effective_status": "LEVEL B",
         "derivation_method": "Plan sheet text callout coordinates projected to alignment",
         "typology_code": "RIPRAP",
+        "offset_m": 10.79,
         "di_set": {
           "ch0": 82842.5,
           "ch1": 82842.5,
@@ -107195,8 +102823,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03047-05",
           "cert": "label",
           "stated": 20
-        },
-        "offset_m": 10.79
+        }
       },
       "geometry": {
         "type": "Point",
@@ -107295,6 +102922,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 6 collector drain",
         "chainage_str": "PK 19+925 – PK 20+025",
         "status": "Not Started",
+        "short_code": "T6",
+        "drawing_ref": "DW-03002-05",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 19925,
           "ch1": 20025,
@@ -107303,10 +102933,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03002-05",
           "preset": "T6"
-        },
-        "short_code": "T6",
-        "drawing_ref": "DW-03002-05",
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -107411,6 +103038,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 6 collector drain",
         "chainage_str": "PK 20+025 – PK 21+025",
         "status": "Not Started",
+        "short_code": "T6",
+        "drawing_ref": "DW-03002-05",
+        "offset_m": 22.25,
         "di_set": {
           "ch0": 20025,
           "ch1": 21025,
@@ -107419,10 +103049,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03002-05",
           "preset": "T6"
-        },
-        "short_code": "T6",
-        "drawing_ref": "DW-03002-05",
-        "offset_m": 22.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -107687,6 +103314,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 6 collector drain",
         "chainage_str": "PK 20+175 – PK 21+225",
         "status": "Not Started",
+        "short_code": "T6",
+        "drawing_ref": "DW-03002-05",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 20175,
           "ch1": 21225,
@@ -107695,10 +103325,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03002-05",
           "preset": "T6"
-        },
-        "short_code": "T6",
-        "drawing_ref": "DW-03002-05",
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -107963,6 +103590,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 21+225 – PK 21+400",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 21225,
           "ch1": 21400,
@@ -107971,10 +103601,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03003-05",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -108139,6 +103766,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 21+244",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 10.68,
         "di_set": {
           "preset": "WD",
           "ch0": 21243.89,
@@ -108147,10 +103777,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.68,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 10.68
+        }
       },
       "geometry": {
         "type": "Point",
@@ -108173,6 +103800,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 21+263",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 10.96,
         "di_set": {
           "preset": "WD",
           "ch0": 21262.85,
@@ -108181,10 +103811,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.96,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 10.96
+        }
       },
       "geometry": {
         "type": "Point",
@@ -108207,6 +103834,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 21+282",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 11.99,
         "di_set": {
           "preset": "WD",
           "ch0": 21281.92,
@@ -108215,10 +103845,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.99,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 11.99
+        }
       },
       "geometry": {
         "type": "Point",
@@ -108241,6 +103868,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 21+301",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 10.63,
         "di_set": {
           "preset": "WD",
           "ch0": 21300.97,
@@ -108249,10 +103879,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.63,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 10.63
+        }
       },
       "geometry": {
         "type": "Point",
@@ -108275,6 +103902,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 21+307",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 16.18,
         "di_set": {
           "preset": "WD",
           "ch0": 21307.43,
@@ -108283,10 +103913,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 16.18,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 16.18
+        }
       },
       "geometry": {
         "type": "Point",
@@ -108309,6 +103936,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 21+320",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 10.89,
         "di_set": {
           "preset": "WD",
           "ch0": 21319.79,
@@ -108317,10 +103947,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.89,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 10.89
+        }
       },
       "geometry": {
         "type": "Point",
@@ -108343,6 +103970,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 21+326",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 17.09,
         "di_set": {
           "preset": "WD",
           "ch0": 21326.42,
@@ -108351,10 +103981,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 17.09,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 17.09
+        }
       },
       "geometry": {
         "type": "Point",
@@ -108377,6 +104004,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 21+335",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 11.22,
         "di_set": {
           "preset": "WD",
           "ch0": 21334.95,
@@ -108385,10 +104015,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.22,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 11.22
+        }
       },
       "geometry": {
         "type": "Point",
@@ -108411,6 +104038,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 21+345",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 17.52,
         "di_set": {
           "preset": "WD",
           "ch0": 21345.41,
@@ -108419,10 +104049,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 17.52,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 17.52
+        }
       },
       "geometry": {
         "type": "Point",
@@ -108445,6 +104072,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 21+354",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 11.72,
         "di_set": {
           "preset": "WD",
           "ch0": 21354.07,
@@ -108453,10 +104083,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.72,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 11.72
+        }
       },
       "geometry": {
         "type": "Point",
@@ -108479,6 +104106,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 21+364",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 17.52,
         "di_set": {
           "preset": "WD",
           "ch0": 21364.41,
@@ -108487,10 +104117,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 17.52,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 17.52
+        }
       },
       "geometry": {
         "type": "Point",
@@ -108513,6 +104140,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 21+383",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 17.51,
         "di_set": {
           "preset": "WD",
           "ch0": 21383.41,
@@ -108521,10 +104151,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 17.51,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 17.51
+        }
       },
       "geometry": {
         "type": "Point",
@@ -108547,6 +104174,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 8 bench ditch",
         "chainage_str": "PK 21+400 – PK 21+486",
         "status": "Not Started",
+        "short_code": "T8",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 12.81,
         "di_set": {
           "ch0": 21400,
           "ch1": 21486.07,
@@ -108555,10 +104185,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03003-05",
           "preset": "T8"
-        },
-        "short_code": "T8",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 12.81
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -108655,6 +104282,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 21+400",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 17.52,
         "di_set": {
           "preset": "WD",
           "ch0": 21400,
@@ -108663,10 +104293,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 17.52,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 17.52
+        }
       },
       "geometry": {
         "type": "Point",
@@ -108689,6 +104316,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 21+400",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 12.81,
         "di_set": {
           "preset": "WD",
           "ch0": 21400.01,
@@ -108697,10 +104327,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.81,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 12.81
+        }
       },
       "geometry": {
         "type": "Point",
@@ -108723,6 +104350,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 21+443",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 17.34,
         "di_set": {
           "preset": "WD",
           "ch0": 21443.04,
@@ -108731,10 +104361,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 17.34,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 17.34
+        }
       },
       "geometry": {
         "type": "Point",
@@ -108757,6 +104384,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 21+465",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 12.51,
         "di_set": {
           "preset": "WD",
           "ch0": 21464.94,
@@ -108765,10 +104395,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.51,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 12.51
+        }
       },
       "geometry": {
         "type": "Point",
@@ -108791,6 +104418,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 21+530",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 12.62,
         "di_set": {
           "preset": "WD",
           "ch0": 21530.05,
@@ -108799,10 +104429,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.62,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 12.62
+        }
       },
       "geometry": {
         "type": "Point",
@@ -108825,6 +104452,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 21+567",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 17.69,
         "di_set": {
           "preset": "WD",
           "ch0": 21566.95,
@@ -108833,10 +104463,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 17.69,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 17.69
+        }
       },
       "geometry": {
         "type": "Point",
@@ -108859,6 +104486,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 21+595",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 12.64,
         "di_set": {
           "preset": "WD",
           "ch0": 21595.04,
@@ -108867,10 +104497,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.64,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 12.64
+        }
       },
       "geometry": {
         "type": "Point",
@@ -108893,6 +104520,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 21+632",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 17.69,
         "di_set": {
           "preset": "WD",
           "ch0": 21631.95,
@@ -108901,10 +104531,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 17.69,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 17.69
+        }
       },
       "geometry": {
         "type": "Point",
@@ -108927,6 +104554,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 21+660",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 12.78,
         "di_set": {
           "preset": "WD",
           "ch0": 21659.99,
@@ -108935,10 +104565,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.78,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 12.78
+        }
       },
       "geometry": {
         "type": "Point",
@@ -108961,6 +104588,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 21+697",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 17.69,
         "di_set": {
           "preset": "WD",
           "ch0": 21696.95,
@@ -108969,10 +104599,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 17.69,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 17.69
+        }
       },
       "geometry": {
         "type": "Point",
@@ -108995,6 +104622,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 21+725",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 12.86,
         "di_set": {
           "preset": "WD",
           "ch0": 21725.03,
@@ -109003,10 +104633,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.86,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 12.86
+        }
       },
       "geometry": {
         "type": "Point",
@@ -109029,6 +104656,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 21+762",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 17.69,
         "di_set": {
           "preset": "WD",
           "ch0": 21761.95,
@@ -109037,10 +104667,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 17.69,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 17.69
+        }
       },
       "geometry": {
         "type": "Point",
@@ -109063,6 +104690,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 21+790",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 12.62,
         "di_set": {
           "preset": "WD",
           "ch0": 21790.02,
@@ -109071,10 +104701,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.62,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 12.62
+        }
       },
       "geometry": {
         "type": "Point",
@@ -109097,6 +104724,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 21+827",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 17.69,
         "di_set": {
           "preset": "WD",
           "ch0": 21826.95,
@@ -109105,10 +104735,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 17.69,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 17.69
+        }
       },
       "geometry": {
         "type": "Point",
@@ -109131,6 +104758,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 21+855",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 12.85,
         "di_set": {
           "preset": "WD",
           "ch0": 21855.1,
@@ -109139,10 +104769,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.85,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 12.85
+        }
       },
       "geometry": {
         "type": "Point",
@@ -109165,6 +104792,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 21+892",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 17.69,
         "di_set": {
           "preset": "WD",
           "ch0": 21891.95,
@@ -109173,10 +104803,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 17.69,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 17.69
+        }
       },
       "geometry": {
         "type": "Point",
@@ -109199,6 +104826,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 21+920",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 12.79,
         "di_set": {
           "preset": "WD",
           "ch0": 21920,
@@ -109207,10 +104837,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.79,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 12.79
+        }
       },
       "geometry": {
         "type": "Point",
@@ -109233,6 +104860,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 21+957",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 17.69,
         "di_set": {
           "preset": "WD",
           "ch0": 21956.94,
@@ -109241,10 +104871,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 17.69,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 17.69
+        }
       },
       "geometry": {
         "type": "Point",
@@ -109267,6 +104894,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 21+985",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 12.66,
         "di_set": {
           "preset": "WD",
           "ch0": 21985.04,
@@ -109275,10 +104905,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.66,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 12.66
+        }
       },
       "geometry": {
         "type": "Point",
@@ -109301,6 +104928,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 22+022",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 17.69,
         "di_set": {
           "preset": "WD",
           "ch0": 22021.94,
@@ -109309,10 +104939,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 17.69,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 17.69
+        }
       },
       "geometry": {
         "type": "Point",
@@ -109335,6 +104962,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 22+050",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 12.21,
         "di_set": {
           "preset": "WD",
           "ch0": 22050.01,
@@ -109343,10 +104973,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.21,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 12.21
+        }
       },
       "geometry": {
         "type": "Point",
@@ -109369,6 +104996,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 22+087",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 17.25,
         "di_set": {
           "preset": "WD",
           "ch0": 22086.94,
@@ -109377,10 +105007,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 17.25,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 17.25
+        }
       },
       "geometry": {
         "type": "Point",
@@ -109403,6 +105030,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 22+115",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 12.09,
         "di_set": {
           "preset": "WD",
           "ch0": 22114.97,
@@ -109411,10 +105041,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.09,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 12.09
+        }
       },
       "geometry": {
         "type": "Point",
@@ -109437,6 +105064,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 22+152",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 17.22,
         "di_set": {
           "preset": "WD",
           "ch0": 22151.94,
@@ -109445,10 +105075,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 17.22,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 17.22
+        }
       },
       "geometry": {
         "type": "Point",
@@ -109471,6 +105098,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 22+180",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 12.17,
         "di_set": {
           "preset": "WD",
           "ch0": 22179.97,
@@ -109479,10 +105109,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.17,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 12.17
+        }
       },
       "geometry": {
         "type": "Point",
@@ -109505,6 +105132,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 22+217",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 17.22,
         "di_set": {
           "preset": "WD",
           "ch0": 22216.94,
@@ -109513,10 +105143,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 17.22,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 17.22
+        }
       },
       "geometry": {
         "type": "Point",
@@ -109539,6 +105166,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 22+245",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 12.05,
         "di_set": {
           "preset": "WD",
           "ch0": 22244.95,
@@ -109547,10 +105177,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.05,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 12.05
+        }
       },
       "geometry": {
         "type": "Point",
@@ -109573,6 +105200,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 22+282",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 17.1,
         "di_set": {
           "preset": "WD",
           "ch0": 22281.95,
@@ -109581,10 +105211,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 17.1,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 17.1
+        }
       },
       "geometry": {
         "type": "Point",
@@ -109607,6 +105234,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 22+310",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 12.06,
         "di_set": {
           "preset": "WD",
           "ch0": 22309.96,
@@ -109615,10 +105245,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.06,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 12.06
+        }
       },
       "geometry": {
         "type": "Point",
@@ -109641,6 +105268,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 22+347",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 16.87,
         "di_set": {
           "preset": "WD",
           "ch0": 22346.95,
@@ -109649,10 +105279,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 16.87,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 16.87
+        }
       },
       "geometry": {
         "type": "Point",
@@ -109675,6 +105302,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 22+375",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 12.07,
         "di_set": {
           "preset": "WD",
           "ch0": 22375.09,
@@ -109683,10 +105313,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.07,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 12.07
+        }
       },
       "geometry": {
         "type": "Point",
@@ -109709,6 +105336,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 22+412",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 17,
         "di_set": {
           "preset": "WD",
           "ch0": 22411.73,
@@ -109717,10 +105347,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 17,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 17
+        }
       },
       "geometry": {
         "type": "Point",
@@ -109743,6 +105370,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 22+440",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 10.01,
         "di_set": {
           "preset": "WD",
           "ch0": 22439.99,
@@ -109751,10 +105381,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.01,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 10.01
+        }
       },
       "geometry": {
         "type": "Point",
@@ -109777,6 +105404,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 22+505",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 11.72,
         "di_set": {
           "preset": "WD",
           "ch0": 22505.05,
@@ -109785,10 +105415,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.72,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 11.72
+        }
       },
       "geometry": {
         "type": "Point",
@@ -109811,6 +105438,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 22+510",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 16.88,
         "di_set": {
           "preset": "WD",
           "ch0": 22509.62,
@@ -109819,10 +105449,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 16.88,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 16.88
+        }
       },
       "geometry": {
         "type": "Point",
@@ -109845,6 +105472,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 22+570",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-05",
+        "offset_m": 9.38,
         "di_set": {
           "preset": "WD",
           "ch0": 22569.97,
@@ -109853,10 +105483,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.38,
           "sheet": "DW-03003-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-05",
-        "offset_m": 9.38
+        }
       },
       "geometry": {
         "type": "Point",
@@ -109879,6 +105506,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 22+635",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-04",
+        "offset_m": 9.18,
         "di_set": {
           "preset": "WD",
           "ch0": 22634.96,
@@ -109887,10 +105517,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.18,
           "sheet": "DW-03004-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-04",
-        "offset_m": 9.18
+        }
       },
       "geometry": {
         "type": "Point",
@@ -109913,6 +105540,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 22+700",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-04",
+        "offset_m": 9.29,
         "di_set": {
           "preset": "WD",
           "ch0": 22699.99,
@@ -109921,10 +105551,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.29,
           "sheet": "DW-03004-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-04",
-        "offset_m": 9.29
+        }
       },
       "geometry": {
         "type": "Point",
@@ -109947,6 +105574,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 22+748",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-04",
+        "offset_m": 17.25,
         "di_set": {
           "preset": "WD",
           "ch0": 22747.95,
@@ -109955,10 +105585,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 17.25,
           "sheet": "DW-03004-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-04",
-        "offset_m": 17.25
+        }
       },
       "geometry": {
         "type": "Point",
@@ -109981,6 +105608,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 22+765",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-04",
+        "offset_m": 8.4,
         "di_set": {
           "preset": "WD",
           "ch0": 22765.09,
@@ -109989,10 +105619,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.4,
           "sheet": "DW-03004-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-04",
-        "offset_m": 8.4
+        }
       },
       "geometry": {
         "type": "Point",
@@ -110015,6 +105642,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 22+825",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-04",
+        "offset_m": 8.36,
         "di_set": {
           "preset": "WD",
           "ch0": 22825.09,
@@ -110023,10 +105653,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.36,
           "sheet": "DW-03004-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-04",
-        "offset_m": 8.36
+        }
       },
       "geometry": {
         "type": "Point",
@@ -110049,6 +105676,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 22+875",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-04",
+        "offset_m": 8.14,
         "di_set": {
           "preset": "WD",
           "ch0": 22874.85,
@@ -110057,10 +105687,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.14,
           "sheet": "DW-03004-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-04",
-        "offset_m": 8.14
+        }
       },
       "geometry": {
         "type": "Point",
@@ -110083,6 +105710,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 4 toe ditch, unlined",
         "chainage_str": "PK 22+875 – PK 22+932",
         "status": "Not Started",
+        "short_code": "T4",
+        "drawing_ref": "DW-03004-04",
+        "offset_m": 13.06,
         "di_set": {
           "ch0": 22874.93,
           "ch1": 22932.27,
@@ -110091,10 +105721,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03004-04",
           "preset": "T4"
-        },
-        "short_code": "T4",
-        "drawing_ref": "DW-03004-04",
-        "offset_m": 13.06
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -110167,6 +105794,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 22+925",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-04",
+        "offset_m": 8.38,
         "di_set": {
           "preset": "WD",
           "ch0": 22924.84,
@@ -110175,10 +105805,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.38,
           "sheet": "DW-03004-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-04",
-        "offset_m": 8.38
+        }
       },
       "geometry": {
         "type": "Point",
@@ -110201,6 +105828,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 4 toe ditch, unlined",
         "chainage_str": "PK 22+938 – PK 22+975",
         "status": "Not Started",
+        "short_code": "T4",
+        "drawing_ref": "DW-03004-04",
+        "offset_m": 13.03,
         "di_set": {
           "ch0": 22938.46,
           "ch1": 22974.94,
@@ -110209,10 +105839,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03004-04",
           "preset": "T4"
-        },
-        "short_code": "T4",
-        "drawing_ref": "DW-03004-04",
-        "offset_m": 13.03
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -110269,6 +105896,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 22+957",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-04",
+        "offset_m": 8.25,
         "di_set": {
           "preset": "WD",
           "ch0": 22957.03,
@@ -110277,10 +105907,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.25,
           "sheet": "DW-03004-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-04",
-        "offset_m": 8.25
+        }
       },
       "geometry": {
         "type": "Point",
@@ -110303,6 +105930,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 22+989",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-04",
+        "offset_m": 8.18,
         "di_set": {
           "preset": "WD",
           "ch0": 22988.9,
@@ -110311,10 +105941,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.18,
           "sheet": "DW-03004-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-04",
-        "offset_m": 8.18
+        }
       },
       "geometry": {
         "type": "Point",
@@ -110337,6 +105964,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 22+992",
         "status": "Not Started",
+        "drawing_ref": "DW-03004-04",
+        "offset_m": 10.65,
         "di_set": {
           "preset": "RIP",
           "ch0": 22992.25,
@@ -110346,9 +105975,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03004-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03004-04",
-        "offset_m": 10.65
+        }
       },
       "geometry": {
         "type": "Point",
@@ -110371,6 +105998,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 4 toe ditch, unlined",
         "chainage_str": "PK 23+015 – PK 23+100",
         "status": "Not Started",
+        "short_code": "T4",
+        "drawing_ref": "DW-03004-04",
+        "offset_m": 12.15,
         "di_set": {
           "ch0": 23014.62,
           "ch1": 23100,
@@ -110379,10 +106009,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03004-04",
           "preset": "T4"
-        },
-        "short_code": "T4",
-        "drawing_ref": "DW-03004-04",
-        "offset_m": 12.15
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -110479,6 +106106,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 23+021",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-04",
+        "offset_m": 7.99,
         "di_set": {
           "preset": "WD",
           "ch0": 23021.05,
@@ -110487,10 +106117,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.99,
           "sheet": "DW-03004-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-04",
-        "offset_m": 7.99
+        }
       },
       "geometry": {
         "type": "Point",
@@ -110513,6 +106140,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 23+053",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-04",
+        "offset_m": 7.48,
         "di_set": {
           "preset": "WD",
           "ch0": 23053.02,
@@ -110521,10 +106151,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.48,
           "sheet": "DW-03004-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-04",
-        "offset_m": 7.48
+        }
       },
       "geometry": {
         "type": "Point",
@@ -110547,6 +106174,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 23+078",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-04",
+        "offset_m": 7.32,
         "di_set": {
           "preset": "WD",
           "ch0": 23078,
@@ -110555,10 +106185,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.32,
           "sheet": "DW-03004-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-04",
-        "offset_m": 7.32
+        }
       },
       "geometry": {
         "type": "Point",
@@ -110581,6 +106208,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 4 toe ditch, unlined",
         "chainage_str": "PK 23+100 – PK 23+119",
         "status": "Not Started",
+        "short_code": "T4",
+        "drawing_ref": "DW-03004-04",
+        "offset_m": 11.92,
         "di_set": {
           "ch0": 23100,
           "ch1": 23119.38,
@@ -110589,10 +106219,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03004-04",
           "preset": "T4"
-        },
-        "short_code": "T4",
-        "drawing_ref": "DW-03004-04",
-        "offset_m": 11.92
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -110633,6 +106260,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 23+100",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-04",
+        "offset_m": 7.27,
         "di_set": {
           "preset": "WD",
           "ch0": 23100.02,
@@ -110641,10 +106271,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.27,
           "sheet": "DW-03004-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-04",
-        "offset_m": 7.27
+        }
       },
       "geometry": {
         "type": "Point",
@@ -110667,6 +106294,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 23+950 – PK 24+025",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03004-04",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 23950,
           "ch1": 24025,
@@ -110675,10 +106305,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03004-04",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03004-04",
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -110763,6 +106390,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 23+950",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-04",
+        "offset_m": 7.56,
         "di_set": {
           "preset": "WD",
           "ch0": 23950,
@@ -110771,10 +106401,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.56,
           "sheet": "DW-03004-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-04",
-        "offset_m": 7.56
+        }
       },
       "geometry": {
         "type": "Point",
@@ -110797,6 +106424,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 23+990",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-04",
+        "offset_m": 8.51,
         "di_set": {
           "preset": "WD",
           "ch0": 23990.02,
@@ -110805,10 +106435,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.51,
           "sheet": "DW-03004-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-04",
-        "offset_m": 8.51
+        }
       },
       "geometry": {
         "type": "Point",
@@ -110831,6 +106458,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 24+025",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-04",
+        "offset_m": 9.26,
         "di_set": {
           "preset": "WD",
           "ch0": 24024.66,
@@ -110839,10 +106469,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.26,
           "sheet": "DW-03005-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-04",
-        "offset_m": 9.26
+        }
       },
       "geometry": {
         "type": "Point",
@@ -110865,6 +106492,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 24+064",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-04",
+        "offset_m": 7.62,
         "di_set": {
           "preset": "WD",
           "ch0": 24063.94,
@@ -110873,10 +106503,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.62,
           "sheet": "DW-03005-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-04",
-        "offset_m": 7.62
+        }
       },
       "geometry": {
         "type": "Point",
@@ -110899,6 +106526,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 24+102",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-04",
+        "offset_m": 7.57,
         "di_set": {
           "preset": "WD",
           "ch0": 24102.24,
@@ -110907,10 +106537,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.57,
           "sheet": "DW-03005-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-04",
-        "offset_m": 7.57
+        }
       },
       "geometry": {
         "type": "Point",
@@ -110933,6 +106560,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 24+140",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-04",
+        "offset_m": 7.67,
         "di_set": {
           "preset": "WD",
           "ch0": 24140.21,
@@ -110941,10 +106571,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.67,
           "sheet": "DW-03005-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-04",
-        "offset_m": 7.67
+        }
       },
       "geometry": {
         "type": "Point",
@@ -110967,6 +106594,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 24+178",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-04",
+        "offset_m": 7.72,
         "di_set": {
           "preset": "WD",
           "ch0": 24178.36,
@@ -110975,10 +106605,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.72,
           "sheet": "DW-03005-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-04",
-        "offset_m": 7.72
+        }
       },
       "geometry": {
         "type": "Point",
@@ -111001,6 +106628,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 24+216",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-04",
+        "offset_m": 7.67,
         "di_set": {
           "preset": "WD",
           "ch0": 24216.3,
@@ -111009,10 +106639,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.67,
           "sheet": "DW-03005-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-04",
-        "offset_m": 7.67
+        }
       },
       "geometry": {
         "type": "Point",
@@ -111035,6 +106662,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 24+254",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-04",
+        "offset_m": 7.61,
         "di_set": {
           "preset": "WD",
           "ch0": 24254.4,
@@ -111043,10 +106673,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.61,
           "sheet": "DW-03005-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-04",
-        "offset_m": 7.61
+        }
       },
       "geometry": {
         "type": "Point",
@@ -111069,6 +106696,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 24+292",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-04",
+        "offset_m": 7.62,
         "di_set": {
           "preset": "WD",
           "ch0": 24292.4,
@@ -111077,10 +106707,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.62,
           "sheet": "DW-03005-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-04",
-        "offset_m": 7.62
+        }
       },
       "geometry": {
         "type": "Point",
@@ -111103,6 +106730,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 24+330",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-04",
+        "offset_m": 7.58,
         "di_set": {
           "preset": "WD",
           "ch0": 24330.46,
@@ -111111,10 +106741,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.58,
           "sheet": "DW-03005-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-04",
-        "offset_m": 7.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -111137,6 +106764,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 4 toe ditch, unlined",
         "chainage_str": "PK 24+350 – PK 24+369",
         "status": "Not Started",
+        "short_code": "T4",
+        "drawing_ref": "DW-03005-04",
+        "offset_m": 12.04,
         "di_set": {
           "ch0": 24349.94,
           "ch1": 24368.71,
@@ -111145,10 +106775,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03005-04",
           "preset": "T4"
-        },
-        "short_code": "T4",
-        "drawing_ref": "DW-03005-04",
-        "offset_m": 12.04
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -111189,6 +106816,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 24+356",
         "status": "Not Started",
+        "drawing_ref": "DW-03005-04",
+        "offset_m": 9.44,
         "di_set": {
           "preset": "RIP",
           "ch0": 24355.57,
@@ -111198,9 +106827,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03005-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03005-04",
-        "offset_m": 9.44
+        }
       },
       "geometry": {
         "type": "Point",
@@ -111223,6 +106850,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 24+365",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-04",
+        "offset_m": 8.15,
         "di_set": {
           "preset": "WD",
           "ch0": 24365.15,
@@ -111231,10 +106861,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.15,
           "sheet": "DW-03005-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-04",
-        "offset_m": 8.15
+        }
       },
       "geometry": {
         "type": "Point",
@@ -111257,6 +106884,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 24+407",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-04",
+        "offset_m": 7.56,
         "di_set": {
           "preset": "WD",
           "ch0": 24406.59,
@@ -111265,10 +106895,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.56,
           "sheet": "DW-03005-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-04",
-        "offset_m": 7.56
+        }
       },
       "geometry": {
         "type": "Point",
@@ -111291,6 +106918,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 24+445",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-04",
+        "offset_m": 7.36,
         "di_set": {
           "preset": "WD",
           "ch0": 24444.57,
@@ -111299,10 +106929,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.36,
           "sheet": "DW-03005-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-04",
-        "offset_m": 7.36
+        }
       },
       "geometry": {
         "type": "Point",
@@ -111325,6 +106952,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 24+483",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-04",
+        "offset_m": 7.29,
         "di_set": {
           "preset": "WD",
           "ch0": 24482.6,
@@ -111333,10 +106963,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.29,
           "sheet": "DW-03005-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-04",
-        "offset_m": 7.29
+        }
       },
       "geometry": {
         "type": "Point",
@@ -111359,6 +106986,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 24+521",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-04",
+        "offset_m": 7.5,
         "di_set": {
           "preset": "WD",
           "ch0": 24520.6,
@@ -111367,10 +106997,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.5,
           "sheet": "DW-03005-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-04",
-        "offset_m": 7.5
+        }
       },
       "geometry": {
         "type": "Point",
@@ -111393,6 +107020,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 24+559",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-04",
+        "offset_m": 7.65,
         "di_set": {
           "preset": "WD",
           "ch0": 24558.73,
@@ -111401,10 +107031,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.65,
           "sheet": "DW-03005-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-04",
-        "offset_m": 7.65
+        }
       },
       "geometry": {
         "type": "Point",
@@ -111427,6 +107054,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 24+597",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-04",
+        "offset_m": 7.63,
         "di_set": {
           "preset": "WD",
           "ch0": 24596.72,
@@ -111435,10 +107065,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.63,
           "sheet": "DW-03005-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-04",
-        "offset_m": 7.63
+        }
       },
       "geometry": {
         "type": "Point",
@@ -111461,6 +107088,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 24+635",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-04",
+        "offset_m": 7.53,
         "di_set": {
           "preset": "WD",
           "ch0": 24634.82,
@@ -111469,10 +107099,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.53,
           "sheet": "DW-03005-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-04",
-        "offset_m": 7.53
+        }
       },
       "geometry": {
         "type": "Point",
@@ -111495,6 +107122,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 24+673",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-04",
+        "offset_m": 7.37,
         "di_set": {
           "preset": "WD",
           "ch0": 24672.85,
@@ -111503,10 +107133,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.37,
           "sheet": "DW-03005-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-04",
-        "offset_m": 7.37
+        }
       },
       "geometry": {
         "type": "Point",
@@ -111529,6 +107156,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 24+711",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-04",
+        "offset_m": 7.42,
         "di_set": {
           "preset": "WD",
           "ch0": 24710.86,
@@ -111537,10 +107167,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.42,
           "sheet": "DW-03005-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-04",
-        "offset_m": 7.42
+        }
       },
       "geometry": {
         "type": "Point",
@@ -111563,6 +107190,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 24+749",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-04",
+        "offset_m": 7.58,
         "di_set": {
           "preset": "WD",
           "ch0": 24748.84,
@@ -111571,10 +107201,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.58,
           "sheet": "DW-03005-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-04",
-        "offset_m": 7.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -111597,6 +107224,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 24+787",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-04",
+        "offset_m": 7.58,
         "di_set": {
           "preset": "WD",
           "ch0": 24787.02,
@@ -111605,10 +107235,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.58,
           "sheet": "DW-03005-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-04",
-        "offset_m": 7.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -111631,6 +107258,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 4 toe ditch, unlined",
         "chainage_str": "PK 24+950 – PK 25+016",
         "status": "Not Started",
+        "short_code": "T4",
+        "drawing_ref": "DW-03005-04",
+        "offset_m": 9.68,
         "di_set": {
           "ch0": 24949.74,
           "ch1": 25015.64,
@@ -111639,10 +107269,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03005-04",
           "preset": "T4"
-        },
-        "short_code": "T4",
-        "drawing_ref": "DW-03005-04",
-        "offset_m": 9.68
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -111723,6 +107350,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 25+006",
         "status": "Not Started",
+        "drawing_ref": "DW-03005-04",
+        "offset_m": 8.19,
         "di_set": {
           "preset": "RIP",
           "ch0": 25006.02,
@@ -111732,9 +107361,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03005-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03005-04",
-        "offset_m": 8.19
+        }
       },
       "geometry": {
         "type": "Point",
@@ -111757,6 +107384,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 4 toe ditch, unlined",
         "chainage_str": "PK 25+021 – PK 25+200",
         "status": "Not Started",
+        "short_code": "T4",
+        "drawing_ref": "DW-03005-04",
+        "offset_m": 8.78,
         "di_set": {
           "ch0": 25020.96,
           "ch1": 25200.03,
@@ -111765,10 +107395,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03005-04",
           "preset": "T4"
-        },
-        "short_code": "T4",
-        "drawing_ref": "DW-03005-04",
-        "offset_m": 8.78
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -111937,6 +107564,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 25+634",
         "status": "Not Started",
+        "drawing_ref": "DW-03006-04",
+        "offset_m": 8.86,
         "di_set": {
           "preset": "RIP",
           "ch0": 25633.99,
@@ -111946,9 +107575,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03006-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03006-04",
-        "offset_m": 8.86
+        }
       },
       "geometry": {
         "type": "Point",
@@ -111971,6 +107598,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 4 toe ditch, unlined",
         "chainage_str": "PK 25+647 – PK 25+825",
         "status": "Not Started",
+        "short_code": "T4",
+        "drawing_ref": "DW-03006-04",
+        "offset_m": 9.76,
         "di_set": {
           "ch0": 25646.68,
           "ch1": 25825,
@@ -111979,10 +107609,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03006-04",
           "preset": "T4"
-        },
-        "short_code": "T4",
-        "drawing_ref": "DW-03006-04",
-        "offset_m": 9.76
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -112151,6 +107778,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 25+653",
         "status": "Not Started",
+        "drawing_ref": "DW-03006-04",
+        "offset_m": 8.71,
         "di_set": {
           "preset": "RIP",
           "ch0": 25652.5,
@@ -112160,9 +107789,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03006-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03006-04",
-        "offset_m": 8.71
+        }
       },
       "geometry": {
         "type": "Point",
@@ -112185,6 +107812,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 13 rectangular toe ditch",
         "chainage_str": "PK 25+825 – PK 25+875",
         "status": "Not Started",
+        "short_code": "T13",
+        "drawing_ref": "DW-03006-04",
+        "offset_m": 9.4,
         "di_set": {
           "ch0": 25825,
           "ch1": 25875,
@@ -112193,10 +107823,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03006-04",
           "preset": "T13"
-        },
-        "short_code": "T13",
-        "drawing_ref": "DW-03006-04",
-        "offset_m": 9.4
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -112261,6 +107888,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 26+479",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03006-04",
+        "offset_m": 7.61,
         "di_set": {
           "preset": "WD",
           "ch0": 26478.98,
@@ -112269,10 +107899,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.61,
           "sheet": "DW-03006-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03006-04",
-        "offset_m": 7.61
+        }
       },
       "geometry": {
         "type": "Point",
@@ -112295,6 +107922,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 26+533",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03006-04",
+        "offset_m": 7.6,
         "di_set": {
           "preset": "WD",
           "ch0": 26533.01,
@@ -112303,10 +107933,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.6,
           "sheet": "DW-03006-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03006-04",
-        "offset_m": 7.6
+        }
       },
       "geometry": {
         "type": "Point",
@@ -112329,6 +107956,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 26+587",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03006-04",
+        "offset_m": 7.63,
         "di_set": {
           "preset": "WD",
           "ch0": 26586.98,
@@ -112337,10 +107967,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.63,
           "sheet": "DW-03006-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03006-04",
-        "offset_m": 7.63
+        }
       },
       "geometry": {
         "type": "Point",
@@ -112363,6 +107990,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 26+641",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03006-04",
+        "offset_m": 8.2,
         "di_set": {
           "preset": "WD",
           "ch0": 26641,
@@ -112371,10 +108001,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.2,
           "sheet": "DW-03006-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03006-04",
-        "offset_m": 8.2
+        }
       },
       "geometry": {
         "type": "Point",
@@ -112397,6 +108024,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 26+695",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03006-04",
+        "offset_m": 8.24,
         "di_set": {
           "preset": "WD",
           "ch0": 26694.77,
@@ -112405,10 +108035,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.24,
           "sheet": "DW-03006-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03006-04",
-        "offset_m": 8.24
+        }
       },
       "geometry": {
         "type": "Point",
@@ -112431,6 +108058,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 26+725",
         "status": "Not Started",
+        "drawing_ref": "DW-03006-04",
+        "offset_m": 11.31,
         "di_set": {
           "preset": "RIP",
           "ch0": 26724.75,
@@ -112440,9 +108069,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03006-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03006-04",
-        "offset_m": 11.31
+        }
       },
       "geometry": {
         "type": "Point",
@@ -112465,6 +108092,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 26+749",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03006-04",
+        "offset_m": 8.37,
         "di_set": {
           "preset": "WD",
           "ch0": 26748.79,
@@ -112473,10 +108103,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.37,
           "sheet": "DW-03006-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03006-04",
-        "offset_m": 8.37
+        }
       },
       "geometry": {
         "type": "Point",
@@ -112499,6 +108126,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 26+800",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03007-04",
+        "offset_m": 7.02,
         "di_set": {
           "preset": "WD",
           "ch0": 26800.19,
@@ -112507,10 +108137,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.02,
           "sheet": "DW-03007-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03007-04",
-        "offset_m": 7.02
+        }
       },
       "geometry": {
         "type": "Point",
@@ -112533,6 +108160,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 27+372",
         "status": "Not Started",
+        "drawing_ref": "DW-03007-04",
+        "offset_m": 8.22,
         "di_set": {
           "preset": "RIP",
           "ch0": 27372.24,
@@ -112542,9 +108171,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03007-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03007-04",
-        "offset_m": 8.22
+        }
       },
       "geometry": {
         "type": "Point",
@@ -112567,6 +108194,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 27+391",
         "status": "Not Started",
+        "drawing_ref": "DW-03007-04",
+        "offset_m": 8.07,
         "di_set": {
           "preset": "RIP",
           "ch0": 27390.75,
@@ -112576,9 +108205,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03007-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03007-04",
-        "offset_m": 8.07
+        }
       },
       "geometry": {
         "type": "Point",
@@ -112601,6 +108228,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 27+603",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03007-04",
+        "offset_m": 7.59,
         "di_set": {
           "preset": "WD",
           "ch0": 27603.27,
@@ -112609,10 +108239,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.59,
           "sheet": "DW-03007-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03007-04",
-        "offset_m": 7.59
+        }
       },
       "geometry": {
         "type": "Point",
@@ -112635,6 +108262,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 27+632",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03007-04",
+        "offset_m": 7.8,
         "di_set": {
           "preset": "WD",
           "ch0": 27631.77,
@@ -112643,10 +108273,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.8,
           "sheet": "DW-03007-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03007-04",
-        "offset_m": 7.8
+        }
       },
       "geometry": {
         "type": "Point",
@@ -112669,6 +108296,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 27+660",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03007-04",
+        "offset_m": 7.81,
         "di_set": {
           "preset": "WD",
           "ch0": 27660.26,
@@ -112677,10 +108307,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.81,
           "sheet": "DW-03007-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03007-04",
-        "offset_m": 7.81
+        }
       },
       "geometry": {
         "type": "Point",
@@ -112703,6 +108330,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 27+689",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03007-04",
+        "offset_m": 7.82,
         "di_set": {
           "preset": "WD",
           "ch0": 27688.95,
@@ -112711,10 +108341,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.82,
           "sheet": "DW-03007-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03007-04",
-        "offset_m": 7.82
+        }
       },
       "geometry": {
         "type": "Point",
@@ -112737,6 +108364,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 27+717",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03007-04",
+        "offset_m": 7.82,
         "di_set": {
           "preset": "WD",
           "ch0": 27717.45,
@@ -112745,10 +108375,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.82,
           "sheet": "DW-03007-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03007-04",
-        "offset_m": 7.82
+        }
       },
       "geometry": {
         "type": "Point",
@@ -112771,6 +108398,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 27+720",
         "status": "Not Started",
+        "drawing_ref": "DW-03007-04",
+        "offset_m": 9.7,
         "di_set": {
           "preset": "RIP",
           "ch0": 27720.24,
@@ -112780,9 +108409,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03007-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03007-04",
-        "offset_m": 9.7
+        }
       },
       "geometry": {
         "type": "Point",
@@ -112805,6 +108432,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 27+739",
         "status": "Not Started",
+        "drawing_ref": "DW-03007-04",
+        "offset_m": 9.55,
         "di_set": {
           "preset": "RIP",
           "ch0": 27738.75,
@@ -112814,9 +108443,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03007-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03007-04",
-        "offset_m": 9.55
+        }
       },
       "geometry": {
         "type": "Point",
@@ -112839,6 +108466,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 27+746",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03007-04",
+        "offset_m": 7.49,
         "di_set": {
           "preset": "WD",
           "ch0": 27745.75,
@@ -112847,10 +108477,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.49,
           "sheet": "DW-03007-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03007-04",
-        "offset_m": 7.49
+        }
       },
       "geometry": {
         "type": "Point",
@@ -112873,6 +108500,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 27+775",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03007-04",
+        "offset_m": 7.32,
         "di_set": {
           "preset": "WD",
           "ch0": 27775.08,
@@ -112881,10 +108511,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.32,
           "sheet": "DW-03007-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03007-04",
-        "offset_m": 7.32
+        }
       },
       "geometry": {
         "type": "Point",
@@ -112907,6 +108534,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 28+446",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03008-04",
+        "offset_m": 7.83,
         "di_set": {
           "preset": "WD",
           "ch0": 28445.71,
@@ -112915,10 +108545,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.83,
           "sheet": "DW-03008-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03008-04",
-        "offset_m": 7.83
+        }
       },
       "geometry": {
         "type": "Point",
@@ -112941,6 +108568,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 28+492",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03008-04",
+        "offset_m": 7.74,
         "di_set": {
           "preset": "WD",
           "ch0": 28491.75,
@@ -112949,10 +108579,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.74,
           "sheet": "DW-03008-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03008-04",
-        "offset_m": 7.74
+        }
       },
       "geometry": {
         "type": "Point",
@@ -112975,6 +108602,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 28+538",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03008-04",
+        "offset_m": 7.81,
         "di_set": {
           "preset": "WD",
           "ch0": 28537.86,
@@ -112983,10 +108613,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.81,
           "sheet": "DW-03008-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03008-04",
-        "offset_m": 7.81
+        }
       },
       "geometry": {
         "type": "Point",
@@ -113009,6 +108636,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 28+584",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03008-04",
+        "offset_m": 7.77,
         "di_set": {
           "preset": "WD",
           "ch0": 28583.78,
@@ -113017,10 +108647,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.77,
           "sheet": "DW-03008-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03008-04",
-        "offset_m": 7.77
+        }
       },
       "geometry": {
         "type": "Point",
@@ -113043,6 +108670,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 28+630",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03008-04",
+        "offset_m": 7.77,
         "di_set": {
           "preset": "WD",
           "ch0": 28629.78,
@@ -113051,10 +108681,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.77,
           "sheet": "DW-03008-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03008-04",
-        "offset_m": 7.77
+        }
       },
       "geometry": {
         "type": "Point",
@@ -113077,6 +108704,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 28+675",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03008-04",
+        "offset_m": 7.77,
         "di_set": {
           "preset": "WD",
           "ch0": 28674.78,
@@ -113085,10 +108715,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.77,
           "sheet": "DW-03008-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03008-04",
-        "offset_m": 7.77
+        }
       },
       "geometry": {
         "type": "Point",
@@ -113111,6 +108738,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 28+804",
         "status": "Not Started",
+        "drawing_ref": "DW-03008-04",
+        "offset_m": 10.03,
         "di_set": {
           "preset": "RIP",
           "ch0": 28804.41,
@@ -113120,9 +108749,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03008-04",
           "cert": "label",
           "stated": 101
-        },
-        "drawing_ref": "DW-03008-04",
-        "offset_m": 10.03
+        }
       },
       "geometry": {
         "type": "Point",
@@ -113145,6 +108772,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 28+824",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03008-04",
+        "offset_m": 12.01,
         "di_set": {
           "preset": "D-SD",
           "ch0": 28823.99,
@@ -113153,10 +108783,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.01,
           "sheet": "DW-03008-04",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03008-04",
-        "offset_m": 12.01
+        }
       },
       "geometry": {
         "type": "Point",
@@ -113179,6 +108806,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 28+985",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03008-04",
+        "offset_m": 15.79,
         "di_set": {
           "preset": "D-SD",
           "ch0": 28984.73,
@@ -113187,10 +108817,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 15.79,
           "sheet": "DW-03008-04",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03008-04",
-        "offset_m": 15.79
+        }
       },
       "geometry": {
         "type": "Point",
@@ -113213,6 +108840,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 29+825 – PK 29+866",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03009-04",
+        "offset_m": 10.53,
         "di_set": {
           "ch0": 29824.96,
           "ch1": 29866.34,
@@ -113221,10 +108851,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03009-04",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03009-04",
-        "offset_m": 10.53
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -113285,6 +108912,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 29+875",
         "status": "Not Started",
+        "drawing_ref": "DW-03009-04",
+        "offset_m": 7.45,
         "di_set": {
           "preset": "RIP",
           "ch0": 29875.28,
@@ -113294,9 +108923,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03009-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03009-04",
-        "offset_m": 7.45
+        }
       },
       "geometry": {
         "type": "Point",
@@ -113319,6 +108946,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 30+102",
         "status": "Not Started",
+        "drawing_ref": "DW-03009-04",
+        "offset_m": 8.88,
         "di_set": {
           "preset": "RIP",
           "ch0": 30102.18,
@@ -113328,9 +108957,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03009-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03009-04",
-        "offset_m": 8.88
+        }
       },
       "geometry": {
         "type": "Point",
@@ -113353,6 +108980,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+318",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03010-04",
+        "offset_m": 7.87,
         "di_set": {
           "preset": "WD",
           "ch0": 32317.97,
@@ -113361,10 +108991,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.87,
           "sheet": "DW-03010-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03010-04",
-        "offset_m": 7.87
+        }
       },
       "geometry": {
         "type": "Point",
@@ -113387,6 +109014,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+336",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03010-04",
+        "offset_m": 7.87,
         "di_set": {
           "preset": "WD",
           "ch0": 32335.97,
@@ -113395,10 +109025,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.87,
           "sheet": "DW-03010-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03010-04",
-        "offset_m": 7.87
+        }
       },
       "geometry": {
         "type": "Point",
@@ -113421,6 +109048,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+354",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03010-04",
+        "offset_m": 8.03,
         "di_set": {
           "preset": "WD",
           "ch0": 32353.97,
@@ -113429,10 +109059,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.03,
           "sheet": "DW-03010-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03010-04",
-        "offset_m": 8.03
+        }
       },
       "geometry": {
         "type": "Point",
@@ -113455,6 +109082,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+372",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03010-04",
+        "offset_m": 8.33,
         "di_set": {
           "preset": "WD",
           "ch0": 32371.95,
@@ -113463,10 +109093,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.33,
           "sheet": "DW-03010-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03010-04",
-        "offset_m": 8.33
+        }
       },
       "geometry": {
         "type": "Point",
@@ -113489,6 +109116,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+390",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03010-04",
+        "offset_m": 8.47,
         "di_set": {
           "preset": "WD",
           "ch0": 32389.95,
@@ -113497,10 +109127,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.47,
           "sheet": "DW-03010-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03010-04",
-        "offset_m": 8.47
+        }
       },
       "geometry": {
         "type": "Point",
@@ -113523,6 +109150,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+408",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 8.55,
         "di_set": {
           "preset": "WD",
           "ch0": 32407.96,
@@ -113531,10 +109161,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.55,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 8.55
+        }
       },
       "geometry": {
         "type": "Point",
@@ -113557,6 +109184,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+426",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 8.71,
         "di_set": {
           "preset": "WD",
           "ch0": 32425.9,
@@ -113565,10 +109195,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.71,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 8.71
+        }
       },
       "geometry": {
         "type": "Point",
@@ -113591,6 +109218,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+444",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 8.89,
         "di_set": {
           "preset": "WD",
           "ch0": 32443.89,
@@ -113599,10 +109229,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.89,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 8.89
+        }
       },
       "geometry": {
         "type": "Point",
@@ -113625,6 +109252,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+453",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 8.9,
         "di_set": {
           "preset": "WD",
           "ch0": 32452.56,
@@ -113633,10 +109263,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.9,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 8.9
+        }
       },
       "geometry": {
         "type": "Point",
@@ -113659,6 +109286,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+472",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 8.91,
         "di_set": {
           "preset": "WD",
           "ch0": 32472.09,
@@ -113667,10 +109297,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.91,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 8.91
+        }
       },
       "geometry": {
         "type": "Point",
@@ -113693,6 +109320,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+489",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 9.3,
         "di_set": {
           "preset": "WD",
           "ch0": 32488.66,
@@ -113701,10 +109331,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.3,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 9.3
+        }
       },
       "geometry": {
         "type": "Point",
@@ -113727,6 +109354,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+507",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 8.67,
         "di_set": {
           "preset": "WD",
           "ch0": 32506.83,
@@ -113735,10 +109365,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.67,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 8.67
+        }
       },
       "geometry": {
         "type": "Point",
@@ -113761,6 +109388,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+524",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 8.29,
         "di_set": {
           "preset": "WD",
           "ch0": 32524.43,
@@ -113769,10 +109399,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.29,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 8.29
+        }
       },
       "geometry": {
         "type": "Point",
@@ -113795,6 +109422,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+543",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 8.49,
         "di_set": {
           "preset": "WD",
           "ch0": 32542.56,
@@ -113803,10 +109433,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.49,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 8.49
+        }
       },
       "geometry": {
         "type": "Point",
@@ -113829,6 +109456,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+561",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 8.76,
         "di_set": {
           "preset": "WD",
           "ch0": 32560.55,
@@ -113837,10 +109467,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.76,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 8.76
+        }
       },
       "geometry": {
         "type": "Point",
@@ -113863,6 +109490,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+576",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 8.55,
         "di_set": {
           "preset": "WD",
           "ch0": 32575.82,
@@ -113871,10 +109501,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.55,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 8.55
+        }
       },
       "geometry": {
         "type": "Point",
@@ -113897,6 +109524,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+597",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 8.77,
         "di_set": {
           "preset": "WD",
           "ch0": 32596.57,
@@ -113905,10 +109535,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.77,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 8.77
+        }
       },
       "geometry": {
         "type": "Point",
@@ -113931,6 +109558,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+615",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 8.89,
         "di_set": {
           "preset": "WD",
           "ch0": 32614.5,
@@ -113939,10 +109569,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.89,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 8.89
+        }
       },
       "geometry": {
         "type": "Point",
@@ -113965,6 +109592,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+633",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 8.76,
         "di_set": {
           "preset": "WD",
           "ch0": 32632.63,
@@ -113973,10 +109603,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.76,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 8.76
+        }
       },
       "geometry": {
         "type": "Point",
@@ -113999,6 +109626,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+651",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 8.74,
         "di_set": {
           "preset": "WD",
           "ch0": 32650.58,
@@ -114007,10 +109637,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.74,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 8.74
+        }
       },
       "geometry": {
         "type": "Point",
@@ -114033,6 +109660,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+668",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 8.9,
         "di_set": {
           "preset": "WD",
           "ch0": 32668.48,
@@ -114041,10 +109671,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.9,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 8.9
+        }
       },
       "geometry": {
         "type": "Point",
@@ -114067,6 +109694,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+686",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 9.03,
         "di_set": {
           "preset": "WD",
           "ch0": 32686.47,
@@ -114075,10 +109705,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.03,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 9.03
+        }
       },
       "geometry": {
         "type": "Point",
@@ -114101,6 +109728,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+703",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 9.25,
         "di_set": {
           "preset": "WD",
           "ch0": 32702.52,
@@ -114109,10 +109739,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.25,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 9.25
+        }
       },
       "geometry": {
         "type": "Point",
@@ -114135,6 +109762,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 32+719",
         "status": "Not Started",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 14.43,
         "di_set": {
           "preset": "RIP",
           "ch0": 32719.11,
@@ -114144,9 +109773,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03011-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 14.43
+        }
       },
       "geometry": {
         "type": "Point",
@@ -114169,6 +109796,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+723",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 8.93,
         "di_set": {
           "preset": "WD",
           "ch0": 32722.57,
@@ -114177,10 +109807,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.93,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 8.93
+        }
       },
       "geometry": {
         "type": "Point",
@@ -114203,6 +109830,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+741",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 8.72,
         "di_set": {
           "preset": "WD",
           "ch0": 32740.55,
@@ -114211,10 +109841,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.72,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 8.72
+        }
       },
       "geometry": {
         "type": "Point",
@@ -114237,6 +109864,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+759",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 8.44,
         "di_set": {
           "preset": "WD",
           "ch0": 32758.56,
@@ -114245,10 +109875,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.44,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 8.44
+        }
       },
       "geometry": {
         "type": "Point",
@@ -114271,6 +109898,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+777",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 8.41,
         "di_set": {
           "preset": "WD",
           "ch0": 32776.56,
@@ -114279,10 +109909,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.41,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 8.41
+        }
       },
       "geometry": {
         "type": "Point",
@@ -114305,6 +109932,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+795",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 8.35,
         "di_set": {
           "preset": "WD",
           "ch0": 32794.56,
@@ -114313,10 +109943,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.35,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 8.35
+        }
       },
       "geometry": {
         "type": "Point",
@@ -114339,6 +109966,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+813",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 8.22,
         "di_set": {
           "preset": "WD",
           "ch0": 32812.55,
@@ -114347,10 +109977,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.22,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 8.22
+        }
       },
       "geometry": {
         "type": "Point",
@@ -114373,6 +110000,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+831",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 8.31,
         "di_set": {
           "preset": "WD",
           "ch0": 32830.54,
@@ -114381,10 +110011,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.31,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 8.31
+        }
       },
       "geometry": {
         "type": "Point",
@@ -114407,6 +110034,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+849",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 8.27,
         "di_set": {
           "preset": "WD",
           "ch0": 32848.56,
@@ -114415,10 +110045,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.27,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 8.27
+        }
       },
       "geometry": {
         "type": "Point",
@@ -114441,6 +110068,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+867",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 8.26,
         "di_set": {
           "preset": "WD",
           "ch0": 32866.56,
@@ -114449,10 +110079,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.26,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 8.26
+        }
       },
       "geometry": {
         "type": "Point",
@@ -114475,6 +110102,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+885",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 8.31,
         "di_set": {
           "preset": "WD",
           "ch0": 32884.57,
@@ -114483,10 +110113,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.31,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 8.31
+        }
       },
       "geometry": {
         "type": "Point",
@@ -114509,6 +110136,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+903",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 8,
         "di_set": {
           "preset": "WD",
           "ch0": 32902.56,
@@ -114517,10 +110147,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 8
+        }
       },
       "geometry": {
         "type": "Point",
@@ -114543,6 +110170,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+921",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 7.93,
         "di_set": {
           "preset": "WD",
           "ch0": 32920.61,
@@ -114551,10 +110181,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.93,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 7.93
+        }
       },
       "geometry": {
         "type": "Point",
@@ -114577,6 +110204,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+939",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 7.79,
         "di_set": {
           "preset": "WD",
           "ch0": 32938.56,
@@ -114585,10 +110215,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.79,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 7.79
+        }
       },
       "geometry": {
         "type": "Point",
@@ -114611,6 +110238,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+957",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 7.82,
         "di_set": {
           "preset": "WD",
           "ch0": 32956.56,
@@ -114619,10 +110249,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.82,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 7.82
+        }
       },
       "geometry": {
         "type": "Point",
@@ -114645,6 +110272,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+975",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 7.78,
         "di_set": {
           "preset": "WD",
           "ch0": 32974.56,
@@ -114653,10 +110283,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.78,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 7.78
+        }
       },
       "geometry": {
         "type": "Point",
@@ -114679,6 +110306,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 32+993",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 7.77,
         "di_set": {
           "preset": "WD",
           "ch0": 32992.56,
@@ -114687,10 +110317,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.77,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 7.77
+        }
       },
       "geometry": {
         "type": "Point",
@@ -114713,6 +110340,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 33+011",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 7.76,
         "di_set": {
           "preset": "WD",
           "ch0": 33010.57,
@@ -114721,10 +110351,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.76,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 7.76
+        }
       },
       "geometry": {
         "type": "Point",
@@ -114747,6 +110374,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 33+029",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 7.67,
         "di_set": {
           "preset": "WD",
           "ch0": 33028.56,
@@ -114755,10 +110385,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.67,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 7.67
+        }
       },
       "geometry": {
         "type": "Point",
@@ -114781,6 +110408,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 33+047",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 7.69,
         "di_set": {
           "preset": "WD",
           "ch0": 33046.58,
@@ -114789,10 +110419,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.69,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 7.69
+        }
       },
       "geometry": {
         "type": "Point",
@@ -114815,6 +110442,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 33+065",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 7.67,
         "di_set": {
           "preset": "WD",
           "ch0": 33064.56,
@@ -114823,10 +110453,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.67,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 7.67
+        }
       },
       "geometry": {
         "type": "Point",
@@ -114849,6 +110476,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 33+083",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 7.57,
         "di_set": {
           "preset": "WD",
           "ch0": 33082.56,
@@ -114857,10 +110487,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.57,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 7.57
+        }
       },
       "geometry": {
         "type": "Point",
@@ -114883,6 +110510,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 33+100",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-04",
+        "offset_m": 7.57,
         "di_set": {
           "preset": "WD",
           "ch0": 33099.97,
@@ -114891,10 +110521,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.57,
           "sheet": "DW-03011-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-04",
-        "offset_m": 7.57
+        }
       },
       "geometry": {
         "type": "Point",
@@ -114917,6 +110544,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 33+867",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03012-04",
+        "offset_m": 8.27,
         "di_set": {
           "preset": "WD",
           "ch0": 33867.44,
@@ -114925,10 +110555,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.27,
           "sheet": "DW-03012-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03012-04",
-        "offset_m": 8.27
+        }
       },
       "geometry": {
         "type": "Point",
@@ -114951,6 +110578,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 33+885",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03012-04",
+        "offset_m": 8.27,
         "di_set": {
           "preset": "WD",
           "ch0": 33884.94,
@@ -114959,10 +110589,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.27,
           "sheet": "DW-03012-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03012-04",
-        "offset_m": 8.27
+        }
       },
       "geometry": {
         "type": "Point",
@@ -114985,6 +110612,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 33+902",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03012-04",
+        "offset_m": 8.27,
         "di_set": {
           "preset": "WD",
           "ch0": 33902.44,
@@ -114993,10 +110623,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.27,
           "sheet": "DW-03012-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03012-04",
-        "offset_m": 8.27
+        }
       },
       "geometry": {
         "type": "Point",
@@ -115019,6 +110646,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 33+920",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03012-04",
+        "offset_m": 8.27,
         "di_set": {
           "preset": "WD",
           "ch0": 33919.94,
@@ -115027,10 +110657,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.27,
           "sheet": "DW-03012-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03012-04",
-        "offset_m": 8.27
+        }
       },
       "geometry": {
         "type": "Point",
@@ -115053,6 +110680,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 33+937",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03012-04",
+        "offset_m": 8.27,
         "di_set": {
           "preset": "WD",
           "ch0": 33937.44,
@@ -115061,10 +110691,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.27,
           "sheet": "DW-03012-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03012-04",
-        "offset_m": 8.27
+        }
       },
       "geometry": {
         "type": "Point",
@@ -115087,6 +110714,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 34+005",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03012-04",
+        "offset_m": 8.32,
         "di_set": {
           "preset": "WD",
           "ch0": 34004.94,
@@ -115095,10 +110725,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.32,
           "sheet": "DW-03012-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03012-04",
-        "offset_m": 8.32
+        }
       },
       "geometry": {
         "type": "Point",
@@ -115121,6 +110748,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 34+035",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03012-04",
+        "offset_m": 8.39,
         "di_set": {
           "preset": "WD",
           "ch0": 34034.94,
@@ -115129,10 +110759,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.39,
           "sheet": "DW-03012-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03012-04",
-        "offset_m": 8.39
+        }
       },
       "geometry": {
         "type": "Point",
@@ -115155,6 +110782,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 34+065",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03012-04",
+        "offset_m": 8.44,
         "di_set": {
           "preset": "WD",
           "ch0": 34064.93,
@@ -115163,10 +110793,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.44,
           "sheet": "DW-03012-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03012-04",
-        "offset_m": 8.44
+        }
       },
       "geometry": {
         "type": "Point",
@@ -115189,6 +110816,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 34+100",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03012-04",
+        "offset_m": 8.44,
         "di_set": {
           "preset": "WD",
           "ch0": 34099.92,
@@ -115197,10 +110827,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.44,
           "sheet": "DW-03012-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03012-04",
-        "offset_m": 8.44
+        }
       },
       "geometry": {
         "type": "Point",
@@ -115223,6 +110850,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 34+150",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03012-04",
+        "offset_m": 8.26,
         "di_set": {
           "preset": "WD",
           "ch0": 34149.89,
@@ -115231,10 +110861,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.26,
           "sheet": "DW-03012-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03012-04",
-        "offset_m": 8.26
+        }
       },
       "geometry": {
         "type": "Point",
@@ -115257,6 +110884,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 34+200",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03012-04",
+        "offset_m": 8.19,
         "di_set": {
           "preset": "WD",
           "ch0": 34199.92,
@@ -115265,10 +110895,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.19,
           "sheet": "DW-03012-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03012-04",
-        "offset_m": 8.19
+        }
       },
       "geometry": {
         "type": "Point",
@@ -115291,6 +110918,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 34+250",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03012-04",
+        "offset_m": 8.07,
         "di_set": {
           "preset": "WD",
           "ch0": 34250.03,
@@ -115299,10 +110929,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.07,
           "sheet": "DW-03012-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03012-04",
-        "offset_m": 8.07
+        }
       },
       "geometry": {
         "type": "Point",
@@ -115325,6 +110952,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 34+300",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03012-04",
+        "offset_m": 7.99,
         "di_set": {
           "preset": "WD",
           "ch0": 34300.19,
@@ -115333,10 +110963,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.99,
           "sheet": "DW-03012-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03012-04",
-        "offset_m": 7.99
+        }
       },
       "geometry": {
         "type": "Point",
@@ -115359,6 +110986,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 34+350",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03012-04",
+        "offset_m": 7.79,
         "di_set": {
           "preset": "WD",
           "ch0": 34350.36,
@@ -115367,10 +110997,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.79,
           "sheet": "DW-03012-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03012-04",
-        "offset_m": 7.79
+        }
       },
       "geometry": {
         "type": "Point",
@@ -115393,6 +111020,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 34+400",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03012-04",
+        "offset_m": 7.71,
         "di_set": {
           "preset": "WD",
           "ch0": 34400.31,
@@ -115401,10 +111031,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.71,
           "sheet": "DW-03012-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03012-04",
-        "offset_m": 7.71
+        }
       },
       "geometry": {
         "type": "Point",
@@ -115427,6 +111054,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 34+450",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03012-04",
+        "offset_m": 7.54,
         "di_set": {
           "preset": "WD",
           "ch0": 34450.4,
@@ -115435,10 +111065,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.54,
           "sheet": "DW-03012-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03012-04",
-        "offset_m": 7.54
+        }
       },
       "geometry": {
         "type": "Point",
@@ -115461,6 +111088,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 34+500",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03012-04",
+        "offset_m": 7.51,
         "di_set": {
           "preset": "WD",
           "ch0": 34499.95,
@@ -115469,10 +111099,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.51,
           "sheet": "DW-03012-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03012-04",
-        "offset_m": 7.51
+        }
       },
       "geometry": {
         "type": "Point",
@@ -115495,6 +111122,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 34+725",
         "status": "Not Started",
+        "drawing_ref": "DW-03012-04",
+        "offset_m": 7.53,
         "di_set": {
           "preset": "RIP",
           "ch0": 34724.55,
@@ -115504,9 +111133,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03012-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03012-04",
-        "offset_m": 7.53
+        }
       },
       "geometry": {
         "type": "Point",
@@ -115529,6 +111156,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 35+396",
         "status": "Not Started",
+        "drawing_ref": "DW-03013-04",
+        "offset_m": 7.06,
         "di_set": {
           "preset": "RIP",
           "ch0": 35396.03,
@@ -115538,9 +111167,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03013-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03013-04",
-        "offset_m": 7.06
+        }
       },
       "geometry": {
         "type": "Point",
@@ -115563,6 +111190,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 35+998",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03013-04",
+        "offset_m": 7.57,
         "di_set": {
           "preset": "WD",
           "ch0": 35997.84,
@@ -115571,10 +111201,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.57,
           "sheet": "DW-03013-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03013-04",
-        "offset_m": 7.57
+        }
       },
       "geometry": {
         "type": "Point",
@@ -115597,6 +111224,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 36+023",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03013-04",
+        "offset_m": 7.9,
         "di_set": {
           "preset": "WD",
           "ch0": 36022.85,
@@ -115605,10 +111235,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.9,
           "sheet": "DW-03013-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03013-04",
-        "offset_m": 7.9
+        }
       },
       "geometry": {
         "type": "Point",
@@ -115631,6 +111258,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 36+048",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03013-04",
+        "offset_m": 8.26,
         "di_set": {
           "preset": "WD",
           "ch0": 36047.8,
@@ -115639,10 +111269,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.26,
           "sheet": "DW-03013-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03013-04",
-        "offset_m": 8.26
+        }
       },
       "geometry": {
         "type": "Point",
@@ -115665,6 +111292,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 36+073",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03013-04",
+        "offset_m": 8.72,
         "di_set": {
           "preset": "WD",
           "ch0": 36072.82,
@@ -115673,10 +111303,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.72,
           "sheet": "DW-03013-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03013-04",
-        "offset_m": 8.72
+        }
       },
       "geometry": {
         "type": "Point",
@@ -115699,6 +111326,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 36+083",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03013-04",
+        "offset_m": 18.67,
         "di_set": {
           "preset": "D-SD",
           "ch0": 36082.51,
@@ -115707,10 +111337,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 18.67,
           "sheet": "DW-03013-04",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03013-04",
-        "offset_m": 18.67
+        }
       },
       "geometry": {
         "type": "Point",
@@ -115733,6 +111360,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 36+084",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03013-04",
+        "offset_m": 17.15,
         "di_set": {
           "preset": "D-SD",
           "ch0": 36084.28,
@@ -115741,10 +111371,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 17.15,
           "sheet": "DW-03013-04",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03013-04",
-        "offset_m": 17.15
+        }
       },
       "geometry": {
         "type": "Point",
@@ -115767,6 +111394,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 36+655",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03014-04",
+        "offset_m": 8.61,
         "di_set": {
           "preset": "WD",
           "ch0": 36654.99,
@@ -115775,10 +111405,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.61,
           "sheet": "DW-03014-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03014-04",
-        "offset_m": 8.61
+        }
       },
       "geometry": {
         "type": "Point",
@@ -115801,6 +111428,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 36+680",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03014-04",
+        "offset_m": 8.62,
         "di_set": {
           "preset": "WD",
           "ch0": 36680.06,
@@ -115809,10 +111439,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.62,
           "sheet": "DW-03014-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03014-04",
-        "offset_m": 8.62
+        }
       },
       "geometry": {
         "type": "Point",
@@ -115835,6 +111462,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 36+705",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03014-04",
+        "offset_m": 8.48,
         "di_set": {
           "preset": "WD",
           "ch0": 36705.02,
@@ -115843,10 +111473,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.48,
           "sheet": "DW-03014-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03014-04",
-        "offset_m": 8.48
+        }
       },
       "geometry": {
         "type": "Point",
@@ -115869,6 +111496,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 36+725",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03014-04",
+        "offset_m": 8.34,
         "di_set": {
           "preset": "WD",
           "ch0": 36725.06,
@@ -115877,10 +111507,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.34,
           "sheet": "DW-03014-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03014-04",
-        "offset_m": 8.34
+        }
       },
       "geometry": {
         "type": "Point",
@@ -115903,6 +111530,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 36+745",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03014-04",
+        "offset_m": 8.23,
         "di_set": {
           "preset": "WD",
           "ch0": 36745.02,
@@ -115911,10 +111541,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.23,
           "sheet": "DW-03014-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03014-04",
-        "offset_m": 8.23
+        }
       },
       "geometry": {
         "type": "Point",
@@ -115937,6 +111564,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 36+780",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03014-04",
+        "offset_m": 8.29,
         "di_set": {
           "preset": "WD",
           "ch0": 36779.96,
@@ -115945,10 +111575,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.29,
           "sheet": "DW-03014-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03014-04",
-        "offset_m": 8.29
+        }
       },
       "geometry": {
         "type": "Point",
@@ -115971,6 +111598,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 36+815",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03014-04",
+        "offset_m": 8.4,
         "di_set": {
           "preset": "WD",
           "ch0": 36814.83,
@@ -115979,10 +111609,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.4,
           "sheet": "DW-03014-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03014-04",
-        "offset_m": 8.4
+        }
       },
       "geometry": {
         "type": "Point",
@@ -116005,6 +111632,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 36+850",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03014-04",
+        "offset_m": 8.33,
         "di_set": {
           "preset": "WD",
           "ch0": 36849.94,
@@ -116013,10 +111643,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.33,
           "sheet": "DW-03014-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03014-04",
-        "offset_m": 8.33
+        }
       },
       "geometry": {
         "type": "Point",
@@ -116039,6 +111666,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 36+900",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03014-04",
+        "offset_m": 8.68,
         "di_set": {
           "preset": "WD",
           "ch0": 36899.98,
@@ -116047,10 +111677,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.68,
           "sheet": "DW-03014-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03014-04",
-        "offset_m": 8.68
+        }
       },
       "geometry": {
         "type": "Point",
@@ -116073,6 +111700,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 36+967",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03014-04",
+        "offset_m": 9.53,
         "di_set": {
           "preset": "WD",
           "ch0": 36966.96,
@@ -116081,10 +111711,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.53,
           "sheet": "DW-03014-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03014-04",
-        "offset_m": 9.53
+        }
       },
       "geometry": {
         "type": "Point",
@@ -116107,6 +111734,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 37+030",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03014-04",
+        "offset_m": 9.91,
         "di_set": {
           "preset": "WD",
           "ch0": 37030.02,
@@ -116115,10 +111745,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.91,
           "sheet": "DW-03014-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03014-04",
-        "offset_m": 9.91
+        }
       },
       "geometry": {
         "type": "Point",
@@ -116141,6 +111768,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 37+090",
         "status": "Not Started",
+        "drawing_ref": "DW-03014-04",
+        "offset_m": 15.12,
         "di_set": {
           "preset": "RIP",
           "ch0": 37090.13,
@@ -116150,9 +111779,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03014-04",
           "cert": "label",
           "stated": 195
-        },
-        "drawing_ref": "DW-03014-04",
-        "offset_m": 15.12
+        }
       },
       "geometry": {
         "type": "Point",
@@ -116175,6 +111802,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 37+095",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03014-04",
+        "offset_m": 10.43,
         "di_set": {
           "preset": "WD",
           "ch0": 37095.04,
@@ -116183,10 +111813,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.43,
           "sheet": "DW-03014-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03014-04",
-        "offset_m": 10.43
+        }
       },
       "geometry": {
         "type": "Point",
@@ -116209,6 +111836,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 37+160",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03014-04",
+        "offset_m": 10.04,
         "di_set": {
           "preset": "WD",
           "ch0": 37160.02,
@@ -116217,10 +111847,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.04,
           "sheet": "DW-03014-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03014-04",
-        "offset_m": 10.04
+        }
       },
       "geometry": {
         "type": "Point",
@@ -116243,6 +111870,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 37+225",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03014-04",
+        "offset_m": 9.69,
         "di_set": {
           "preset": "WD",
           "ch0": 37225.07,
@@ -116251,10 +111881,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.69,
           "sheet": "DW-03014-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03014-04",
-        "offset_m": 9.69
+        }
       },
       "geometry": {
         "type": "Point",
@@ -116277,6 +111904,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 37+290",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03014-04",
+        "offset_m": 9.82,
         "di_set": {
           "preset": "WD",
           "ch0": 37290,
@@ -116285,10 +111915,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.82,
           "sheet": "DW-03014-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03014-04",
-        "offset_m": 9.82
+        }
       },
       "geometry": {
         "type": "Point",
@@ -116311,6 +111938,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 37+355",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03014-04",
+        "offset_m": 8.64,
         "di_set": {
           "preset": "WD",
           "ch0": 37354.99,
@@ -116319,10 +111949,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.64,
           "sheet": "DW-03014-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03014-04",
-        "offset_m": 8.64
+        }
       },
       "geometry": {
         "type": "Point",
@@ -116345,6 +111972,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 37+420",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03014-04",
+        "offset_m": 8.27,
         "di_set": {
           "preset": "WD",
           "ch0": 37420.1,
@@ -116353,10 +111983,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.27,
           "sheet": "DW-03014-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03014-04",
-        "offset_m": 8.27
+        }
       },
       "geometry": {
         "type": "Point",
@@ -116379,6 +112006,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 37+485",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03014-04",
+        "offset_m": 8.09,
         "di_set": {
           "preset": "WD",
           "ch0": 37485.01,
@@ -116387,10 +112017,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.09,
           "sheet": "DW-03014-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03014-04",
-        "offset_m": 8.09
+        }
       },
       "geometry": {
         "type": "Point",
@@ -116413,6 +112040,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 37+675",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03014-04",
+        "offset_m": 7.71,
         "di_set": {
           "preset": "WD",
           "ch0": 37675.09,
@@ -116421,10 +112051,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.71,
           "sheet": "DW-03014-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03014-04",
-        "offset_m": 7.71
+        }
       },
       "geometry": {
         "type": "Point",
@@ -116447,6 +112074,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 37+679",
         "status": "Not Started",
+        "drawing_ref": "DW-03014-04",
+        "offset_m": 8.09,
         "di_set": {
           "preset": "RIP",
           "ch0": 37679.2,
@@ -116456,9 +112085,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03014-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03014-04",
-        "offset_m": 8.09
+        }
       },
       "geometry": {
         "type": "Point",
@@ -116481,6 +112108,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 37+725",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03014-04",
+        "offset_m": 7.6,
         "di_set": {
           "preset": "WD",
           "ch0": 37725.03,
@@ -116489,10 +112119,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.6,
           "sheet": "DW-03014-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03014-04",
-        "offset_m": 7.6
+        }
       },
       "geometry": {
         "type": "Point",
@@ -116515,6 +112142,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 37+775",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03014-04",
+        "offset_m": 7.6,
         "di_set": {
           "preset": "WD",
           "ch0": 37775.03,
@@ -116523,10 +112153,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.6,
           "sheet": "DW-03014-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03014-04",
-        "offset_m": 7.6
+        }
       },
       "geometry": {
         "type": "Point",
@@ -116549,6 +112176,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 1 side ditch",
         "chainage_str": "PK 38+550 – PK 38+907",
         "status": "Not Started",
+        "short_code": "T1",
+        "drawing_ref": "DW-03015-04",
+        "offset_m": 4.1,
         "di_set": {
           "ch0": 38550.1,
           "ch1": 38906.52,
@@ -116557,10 +112187,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03015-04",
           "preset": "T1"
-        },
-        "short_code": "T1",
-        "drawing_ref": "DW-03015-04",
-        "offset_m": 4.1
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -116829,6 +112456,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 1 side ditch",
         "chainage_str": "PK 38+567 – PK 38+876",
         "status": "Not Started",
+        "short_code": "T1",
+        "drawing_ref": "DW-03015-04",
+        "offset_m": 4.1,
         "di_set": {
           "ch0": 38566.8,
           "ch1": 38876.2,
@@ -116837,10 +112467,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03015-04",
           "preset": "T1"
-        },
-        "short_code": "T1",
-        "drawing_ref": "DW-03015-04",
-        "offset_m": 4.1
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -117105,6 +112732,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 11 crest ditch",
         "chainage_str": "PK 38+583 – PK 38+675",
         "status": "Not Started",
+        "short_code": "T11",
+        "drawing_ref": "DW-03015-04",
+        "offset_m": 9.01,
         "di_set": {
           "ch0": 38583.23,
           "ch1": 38675.02,
@@ -117113,10 +112743,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03015-04",
           "preset": "T11"
-        },
-        "short_code": "T11",
-        "drawing_ref": "DW-03015-04",
-        "offset_m": 9.01
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -117217,6 +112844,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 11 crest ditch",
         "chainage_str": "PK 38+675 – PK 39+301",
         "status": "Not Started",
+        "short_code": "T11",
+        "drawing_ref": "DW-03015-04",
+        "offset_m": 10.23,
         "di_set": {
           "ch0": 38675.14,
           "ch1": 39301.42,
@@ -117225,10 +112855,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03015-04",
           "preset": "T11"
-        },
-        "short_code": "T11",
-        "drawing_ref": "DW-03015-04",
-        "offset_m": 10.23
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -117493,6 +113120,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 11 crest ditch",
         "chainage_str": "PK 38+677 – PK 39+297",
         "status": "Not Started",
+        "short_code": "T11",
+        "drawing_ref": "DW-03015-04",
+        "offset_m": 9.85,
         "di_set": {
           "ch0": 38677.11,
           "ch1": 39296.6,
@@ -117501,10 +113131,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03015-04",
           "preset": "T11"
-        },
-        "short_code": "T11",
-        "drawing_ref": "DW-03015-04",
-        "offset_m": 9.85
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -117773,6 +113400,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 1 side ditch",
         "chainage_str": "PK 38+876 – PK 39+301",
         "status": "Not Started",
+        "short_code": "T1",
+        "drawing_ref": "DW-03015-04",
+        "offset_m": 4.63,
         "di_set": {
           "ch0": 38876.47,
           "ch1": 39301.42,
@@ -117781,10 +113411,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03015-04",
           "preset": "T1"
-        },
-        "short_code": "T1",
-        "drawing_ref": "DW-03015-04",
-        "offset_m": 4.63
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -118053,6 +113680,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 1 side ditch",
         "chainage_str": "PK 38+907 – PK 39+297",
         "status": "Not Started",
+        "short_code": "T1",
+        "drawing_ref": "DW-03015-04",
+        "offset_m": 4.63,
         "di_set": {
           "ch0": 38906.52,
           "ch1": 39296.6,
@@ -118061,10 +113691,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03015-04",
           "preset": "T1"
-        },
-        "short_code": "T1",
-        "drawing_ref": "DW-03015-04",
-        "offset_m": 4.63
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -118329,6 +113956,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 39+450",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03016-04",
+        "offset_m": 7.92,
         "di_set": {
           "preset": "WD",
           "ch0": 39449.98,
@@ -118337,10 +113967,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.92,
           "sheet": "DW-03016-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03016-04",
-        "offset_m": 7.92
+        }
       },
       "geometry": {
         "type": "Point",
@@ -118363,6 +113990,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 39+500",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03016-04",
+        "offset_m": 8.58,
         "di_set": {
           "preset": "WD",
           "ch0": 39499.87,
@@ -118371,10 +114001,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.58,
           "sheet": "DW-03016-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03016-04",
-        "offset_m": 8.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -118397,6 +114024,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 39+506",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03016-04",
+        "offset_m": 17.38,
         "di_set": {
           "preset": "D-SD",
           "ch0": 39505.53,
@@ -118405,10 +114035,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 17.38,
           "sheet": "DW-03016-04",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03016-04",
-        "offset_m": 17.38
+        }
       },
       "geometry": {
         "type": "Point",
@@ -118431,6 +114058,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 39+550",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03016-04",
+        "offset_m": 8.54,
         "di_set": {
           "preset": "WD",
           "ch0": 39549.96,
@@ -118439,10 +114069,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.54,
           "sheet": "DW-03016-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03016-04",
-        "offset_m": 8.54
+        }
       },
       "geometry": {
         "type": "Point",
@@ -118465,6 +114092,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 39+610",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03016-04",
+        "offset_m": 8.26,
         "di_set": {
           "preset": "WD",
           "ch0": 39610.01,
@@ -118473,10 +114103,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.26,
           "sheet": "DW-03016-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03016-04",
-        "offset_m": 8.26
+        }
       },
       "geometry": {
         "type": "Point",
@@ -118499,6 +114126,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 40+239",
         "status": "Not Started",
+        "drawing_ref": "DW-03016-04",
+        "offset_m": 7.81,
         "di_set": {
           "preset": "RIP",
           "ch0": 40238.74,
@@ -118508,9 +114137,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03016-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03016-04",
-        "offset_m": 7.81
+        }
       },
       "geometry": {
         "type": "Point",
@@ -118533,6 +114160,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 1 side ditch",
         "chainage_str": "PK 40+445 – PK 40+635",
         "status": "Not Started",
+        "short_code": "T1",
+        "drawing_ref": "DW-03016-04",
+        "offset_m": 8.13,
         "di_set": {
           "ch0": 40444.72,
           "ch1": 40634.9,
@@ -118541,10 +114171,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03016-04",
           "preset": "T1"
-        },
-        "short_code": "T1",
-        "drawing_ref": "DW-03016-04",
-        "offset_m": 8.13
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -118725,6 +114352,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 40+445",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03016-04",
+        "offset_m": 5.84,
         "di_set": {
           "preset": "D-SD",
           "ch0": 40444.72,
@@ -118733,10 +114363,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 5.84,
           "sheet": "DW-03016-04",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03016-04",
-        "offset_m": 5.84
+        }
       },
       "geometry": {
         "type": "Point",
@@ -118759,6 +114386,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 1 side ditch",
         "chainage_str": "PK 40+635 – PK 40+945",
         "status": "Not Started",
+        "short_code": "T1",
+        "drawing_ref": "DW-03016-04",
+        "offset_m": 4.63,
         "di_set": {
           "ch0": 40634.9,
           "ch1": 40944.86,
@@ -118767,10 +114397,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03016-04",
           "preset": "T1"
-        },
-        "short_code": "T1",
-        "drawing_ref": "DW-03016-04",
-        "offset_m": 4.63
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -119039,6 +114666,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 1 side ditch",
         "chainage_str": "PK 40+650 – PK 40+950",
         "status": "Not Started",
+        "short_code": "T1",
+        "drawing_ref": "DW-03016-04",
+        "offset_m": 4.7,
         "di_set": {
           "ch0": 40650.23,
           "ch1": 40949.58,
@@ -119047,10 +114677,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03016-04",
           "preset": "T1"
-        },
-        "short_code": "T1",
-        "drawing_ref": "DW-03016-04",
-        "offset_m": 4.7
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -119315,6 +114942,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 40+650",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03016-04",
+        "offset_m": 6.01,
         "di_set": {
           "preset": "D-SD",
           "ch0": 40650.23,
@@ -119323,10 +114953,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 6.01,
           "sheet": "DW-03016-04",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03016-04",
-        "offset_m": 6.01
+        }
       },
       "geometry": {
         "type": "Point",
@@ -119349,6 +114976,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 1 side ditch",
         "chainage_str": "PK 40+946 – PK 40+950",
         "status": "Not Started",
+        "short_code": "T1",
+        "drawing_ref": "DW-03017-04",
+        "offset_m": 4.63,
         "di_set": {
           "ch0": 40946.29,
           "ch1": 40949.97,
@@ -119357,10 +114987,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03017-04",
           "preset": "T1"
-        },
-        "short_code": "T1",
-        "drawing_ref": "DW-03017-04",
-        "offset_m": 4.63
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -119389,6 +115016,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 42+679",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03018-04",
+        "offset_m": 9.64,
         "di_set": {
           "preset": "WD",
           "ch0": 42679,
@@ -119397,10 +115027,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.64,
           "sheet": "DW-03018-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03018-04",
-        "offset_m": 9.64
+        }
       },
       "geometry": {
         "type": "Point",
@@ -119423,6 +115050,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 42+702",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03018-04",
+        "offset_m": 18.32,
         "di_set": {
           "preset": "D-SD",
           "ch0": 42701.88,
@@ -119431,10 +115061,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 18.32,
           "sheet": "DW-03018-04",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03018-04",
-        "offset_m": 18.32
+        }
       },
       "geometry": {
         "type": "Point",
@@ -119457,6 +115084,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 42+733",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03018-04",
+        "offset_m": 9.64,
         "di_set": {
           "preset": "WD",
           "ch0": 42733,
@@ -119465,10 +115095,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.64,
           "sheet": "DW-03018-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03018-04",
-        "offset_m": 9.64
+        }
       },
       "geometry": {
         "type": "Point",
@@ -119491,6 +115118,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 42+743",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03018-04",
+        "offset_m": 20.9,
         "di_set": {
           "preset": "D-SD",
           "ch0": 42743.24,
@@ -119499,10 +115129,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 20.9,
           "sheet": "DW-03018-04",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03018-04",
-        "offset_m": 20.9
+        }
       },
       "geometry": {
         "type": "Point",
@@ -119525,6 +115152,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 42+832",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03018-04",
+        "offset_m": 19.27,
         "di_set": {
           "preset": "D-SD",
           "ch0": 42832.03,
@@ -119533,10 +115163,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 19.27,
           "sheet": "DW-03018-04",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03018-04",
-        "offset_m": 19.27
+        }
       },
       "geometry": {
         "type": "Point",
@@ -119559,6 +115186,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 42+837",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03018-04",
+        "offset_m": 9.93,
         "di_set": {
           "preset": "WD",
           "ch0": 42836.92,
@@ -119567,10 +115197,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.93,
           "sheet": "DW-03018-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03018-04",
-        "offset_m": 9.93
+        }
       },
       "geometry": {
         "type": "Point",
@@ -119593,6 +115220,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 42+839",
         "status": "Not Started",
+        "drawing_ref": "DW-03018-04",
+        "offset_m": 15.13,
         "di_set": {
           "preset": "RIP",
           "ch0": 42839.27,
@@ -119602,9 +115231,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03018-04",
           "cert": "label",
           "stated": 61
-        },
-        "drawing_ref": "DW-03018-04",
-        "offset_m": 15.13
+        }
       },
       "geometry": {
         "type": "Point",
@@ -119627,6 +115254,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 42+841",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03018-04",
+        "offset_m": 19.33,
         "di_set": {
           "preset": "D-SD",
           "ch0": 42840.52,
@@ -119635,10 +115265,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 19.33,
           "sheet": "DW-03018-04",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03018-04",
-        "offset_m": 19.33
+        }
       },
       "geometry": {
         "type": "Point",
@@ -119661,6 +115288,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 42+865",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03018-04",
+        "offset_m": 9.46,
         "di_set": {
           "preset": "WD",
           "ch0": 42864.98,
@@ -119669,10 +115299,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.46,
           "sheet": "DW-03018-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03018-04",
-        "offset_m": 9.46
+        }
       },
       "geometry": {
         "type": "Point",
@@ -119695,6 +115322,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 42+930",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03018-04",
+        "offset_m": 8.52,
         "di_set": {
           "preset": "WD",
           "ch0": 42929.94,
@@ -119703,10 +115333,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.52,
           "sheet": "DW-03018-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03018-04",
-        "offset_m": 8.52
+        }
       },
       "geometry": {
         "type": "Point",
@@ -119729,6 +115356,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 42+995",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03018-04",
+        "offset_m": 7.78,
         "di_set": {
           "preset": "WD",
           "ch0": 42994.94,
@@ -119737,10 +115367,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.78,
           "sheet": "DW-03018-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03018-04",
-        "offset_m": 7.78
+        }
       },
       "geometry": {
         "type": "Point",
@@ -119763,6 +115390,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 43+060",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03018-04",
+        "offset_m": 8.45,
         "di_set": {
           "preset": "WD",
           "ch0": 43059.94,
@@ -119771,10 +115401,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.45,
           "sheet": "DW-03018-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03018-04",
-        "offset_m": 8.45
+        }
       },
       "geometry": {
         "type": "Point",
@@ -119797,6 +115424,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 43+658",
         "status": "Not Started",
+        "drawing_ref": "DW-03019-04",
+        "offset_m": 6.06,
         "di_set": {
           "preset": "RIP",
           "ch0": 43657.85,
@@ -119806,9 +115435,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03019-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03019-04",
-        "offset_m": 6.06
+        }
       },
       "geometry": {
         "type": "Point",
@@ -119831,6 +115458,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 1 side ditch",
         "chainage_str": "PK 45+375 – PK 45+666",
         "status": "Not Started",
+        "short_code": "T1",
+        "drawing_ref": "DW-03020-04",
+        "offset_m": 4.12,
         "di_set": {
           "ch0": 45374.68,
           "ch1": 45666,
@@ -119839,10 +115469,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03020-04",
           "preset": "T1"
-        },
-        "short_code": "T1",
-        "drawing_ref": "DW-03020-04",
-        "offset_m": 4.12
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -120103,6 +115730,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 45+419",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03020-04",
+        "offset_m": 15.64,
         "di_set": {
           "preset": "D-SD",
           "ch0": 45419.43,
@@ -120111,10 +115741,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 15.64,
           "sheet": "DW-03020-04",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03020-04",
-        "offset_m": 15.64
+        }
       },
       "geometry": {
         "type": "Point",
@@ -120137,6 +115764,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 1 side ditch",
         "chainage_str": "PK 45+475 – PK 45+745",
         "status": "Not Started",
+        "short_code": "T1",
+        "drawing_ref": "DW-03020-04",
+        "offset_m": 4.09,
         "di_set": {
           "ch0": 45475,
           "ch1": 45745.42,
@@ -120145,10 +115775,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03020-04",
           "preset": "T1"
-        },
-        "short_code": "T1",
-        "drawing_ref": "DW-03020-04",
-        "offset_m": 4.09
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -120393,6 +116020,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 5 crest ditch, unlined",
         "chainage_str": "PK 45+580 – PK 45+745",
         "status": "Not Started",
+        "short_code": "T5",
+        "drawing_ref": "DW-03020-04",
+        "offset_m": 9.14,
         "di_set": {
           "ch0": 45580.22,
           "ch1": 45745.45,
@@ -120401,10 +116031,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03020-04",
           "preset": "T5"
-        },
-        "short_code": "T5",
-        "drawing_ref": "DW-03020-04",
-        "offset_m": 9.14
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -120565,6 +116192,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 5 crest ditch, unlined",
         "chainage_str": "PK 45+600 – PK 45+800",
         "status": "Not Started",
+        "short_code": "T5",
+        "drawing_ref": "DW-03020-04",
+        "offset_m": 9.63,
         "di_set": {
           "ch0": 45599.63,
           "ch1": 45800.03,
@@ -120573,10 +116203,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03020-04",
           "preset": "T5"
-        },
-        "short_code": "T5",
-        "drawing_ref": "DW-03020-04",
-        "offset_m": 9.63
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -120765,6 +116392,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 1 side ditch",
         "chainage_str": "PK 45+666 – PK 45+800",
         "status": "Not Started",
+        "short_code": "T1",
+        "drawing_ref": "DW-03020-04",
+        "offset_m": 4.61,
         "di_set": {
           "ch0": 45666,
           "ch1": 45800.1,
@@ -120773,10 +116403,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03020-04",
           "preset": "T1"
-        },
-        "short_code": "T1",
-        "drawing_ref": "DW-03020-04",
-        "offset_m": 4.61
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -120909,6 +116536,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 46+155",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03020-04",
+        "offset_m": 7.97,
         "di_set": {
           "preset": "WD",
           "ch0": 46154.96,
@@ -120917,10 +116547,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.97,
           "sheet": "DW-03020-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03020-04",
-        "offset_m": 7.97
+        }
       },
       "geometry": {
         "type": "Point",
@@ -120943,6 +116570,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 46+185",
         "status": "Not Started",
+        "drawing_ref": "DW-03020-04",
+        "offset_m": 10.19,
         "di_set": {
           "preset": "RIP",
           "ch0": 46184.68,
@@ -120952,9 +116581,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03020-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03020-04",
-        "offset_m": 10.19
+        }
       },
       "geometry": {
         "type": "Point",
@@ -120977,6 +116604,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 46+185",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03020-04",
+        "offset_m": 8.52,
         "di_set": {
           "preset": "WD",
           "ch0": 46185.03,
@@ -120985,10 +116615,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.52,
           "sheet": "DW-03020-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03020-04",
-        "offset_m": 8.52
+        }
       },
       "geometry": {
         "type": "Point",
@@ -121011,6 +116638,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 46+207",
         "status": "Not Started",
+        "drawing_ref": "DW-03020-04",
+        "offset_m": 11,
         "di_set": {
           "preset": "RIP",
           "ch0": 46207.18,
@@ -121020,9 +116649,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03020-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03020-04",
-        "offset_m": 11
+        }
       },
       "geometry": {
         "type": "Point",
@@ -121045,6 +116672,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 46+217",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03020-04",
+        "offset_m": 8.6,
         "di_set": {
           "preset": "WD",
           "ch0": 46217.02,
@@ -121053,10 +116683,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.6,
           "sheet": "DW-03020-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03020-04",
-        "offset_m": 8.6
+        }
       },
       "geometry": {
         "type": "Point",
@@ -121079,6 +116706,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 46+250",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03020-04",
+        "offset_m": 7.65,
         "di_set": {
           "preset": "WD",
           "ch0": 46249.99,
@@ -121087,10 +116717,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.65,
           "sheet": "DW-03020-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03020-04",
-        "offset_m": 7.65
+        }
       },
       "geometry": {
         "type": "Point",
@@ -121113,6 +116740,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 46+609",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03021-04",
+        "offset_m": 8.38,
         "di_set": {
           "preset": "WD",
           "ch0": 46608.56,
@@ -121121,10 +116751,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.38,
           "sheet": "DW-03021-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03021-04",
-        "offset_m": 8.38
+        }
       },
       "geometry": {
         "type": "Point",
@@ -121147,6 +116774,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 46+638",
         "status": "Not Started",
+        "drawing_ref": "DW-03021-04",
+        "offset_m": 10.24,
         "di_set": {
           "preset": "RIP",
           "ch0": 46637.9,
@@ -121156,9 +116785,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03021-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03021-04",
-        "offset_m": 10.24
+        }
       },
       "geometry": {
         "type": "Point",
@@ -121181,6 +116808,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 46+642",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03021-04",
+        "offset_m": 8.39,
         "di_set": {
           "preset": "WD",
           "ch0": 46642.11,
@@ -121189,10 +116819,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.39,
           "sheet": "DW-03021-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03021-04",
-        "offset_m": 8.39
+        }
       },
       "geometry": {
         "type": "Point",
@@ -121215,6 +116842,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 46+650 – PK 46+725",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03021-04",
+        "offset_m": 12.02,
         "di_set": {
           "ch0": 46650.46,
           "ch1": 46724.92,
@@ -121223,10 +116853,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03021-04",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03021-04",
-        "offset_m": 12.02
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -121311,6 +116938,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 46+676",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03021-04",
+        "offset_m": 8.16,
         "di_set": {
           "preset": "WD",
           "ch0": 46675.68,
@@ -121319,10 +116949,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.16,
           "sheet": "DW-03021-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03021-04",
-        "offset_m": 8.16
+        }
       },
       "geometry": {
         "type": "Point",
@@ -121345,6 +116972,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 46+709",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03021-04",
+        "offset_m": 7.92,
         "di_set": {
           "preset": "WD",
           "ch0": 46709.15,
@@ -121353,10 +116983,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.92,
           "sheet": "DW-03021-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03021-04",
-        "offset_m": 7.92
+        }
       },
       "geometry": {
         "type": "Point",
@@ -121379,6 +117006,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 46+743",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03021-04",
+        "offset_m": 7.93,
         "di_set": {
           "preset": "WD",
           "ch0": 46742.7,
@@ -121387,10 +117017,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.93,
           "sheet": "DW-03021-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03021-04",
-        "offset_m": 7.93
+        }
       },
       "geometry": {
         "type": "Point",
@@ -121413,6 +117040,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 46+775",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03021-04",
+        "offset_m": 7.94,
         "di_set": {
           "preset": "WD",
           "ch0": 46775.12,
@@ -121421,10 +117051,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.94,
           "sheet": "DW-03021-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03021-04",
-        "offset_m": 7.94
+        }
       },
       "geometry": {
         "type": "Point",
@@ -121447,6 +117074,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 46+980",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03021-04",
+        "offset_m": 14.19,
         "di_set": {
           "preset": "D-SD",
           "ch0": 46979.84,
@@ -121455,10 +117085,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 14.19,
           "sheet": "DW-03021-04",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03021-04",
-        "offset_m": 14.19
+        }
       },
       "geometry": {
         "type": "Point",
@@ -121481,6 +117108,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 47+106",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03021-04",
+        "offset_m": 14.96,
         "di_set": {
           "preset": "D-SD",
           "ch0": 47105.76,
@@ -121489,10 +117119,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 14.96,
           "sheet": "DW-03021-04",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03021-04",
-        "offset_m": 14.96
+        }
       },
       "geometry": {
         "type": "Point",
@@ -121515,6 +117142,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 47+106",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03021-04",
+        "offset_m": 15.4,
         "di_set": {
           "preset": "D-SD",
           "ch0": 47105.91,
@@ -121523,10 +117153,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 15.4,
           "sheet": "DW-03021-04",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03021-04",
-        "offset_m": 15.4
+        }
       },
       "geometry": {
         "type": "Point",
@@ -121549,6 +117176,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 47+144",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03021-04",
+        "offset_m": 8.13,
         "di_set": {
           "preset": "WD",
           "ch0": 47143.55,
@@ -121557,10 +117187,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.13,
           "sheet": "DW-03021-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03021-04",
-        "offset_m": 8.13
+        }
       },
       "geometry": {
         "type": "Point",
@@ -121583,6 +117210,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 47+175",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03021-04",
+        "offset_m": 7.13,
         "di_set": {
           "preset": "WD",
           "ch0": 47174.99,
@@ -121591,10 +117221,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.13,
           "sheet": "DW-03021-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03021-04",
-        "offset_m": 7.13
+        }
       },
       "geometry": {
         "type": "Point",
@@ -121617,6 +117244,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 11 crest ditch",
         "chainage_str": "PK 47+374 – PK 48+050",
         "status": "Not Started",
+        "short_code": "T11",
+        "drawing_ref": "DW-03021-04",
+        "offset_m": 11.75,
         "di_set": {
           "ch0": 47373.53,
           "ch1": 48050.03,
@@ -121625,10 +117255,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03021-04",
           "preset": "T11"
-        },
-        "short_code": "T11",
-        "drawing_ref": "DW-03021-04",
-        "offset_m": 11.75
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -121893,6 +117520,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 1 side ditch",
         "chainage_str": "PK 47+374 – PK 47+771",
         "status": "Not Started",
+        "short_code": "T1",
+        "drawing_ref": "DW-03021-04",
+        "offset_m": 4.63,
         "di_set": {
           "ch0": 47373.53,
           "ch1": 47770.73,
@@ -121901,10 +117531,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03021-04",
           "preset": "T1"
-        },
-        "short_code": "T1",
-        "drawing_ref": "DW-03021-04",
-        "offset_m": 4.63
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -122169,6 +117796,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 1 side ditch",
         "chainage_str": "PK 47+374 – PK 47+774",
         "status": "Not Started",
+        "short_code": "T1",
+        "drawing_ref": "DW-03021-04",
+        "offset_m": 4.82,
         "di_set": {
           "ch0": 47374.03,
           "ch1": 47773.89,
@@ -122177,10 +117807,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03021-04",
           "preset": "T1"
-        },
-        "short_code": "T1",
-        "drawing_ref": "DW-03021-04",
-        "offset_m": 4.82
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -122445,6 +118072,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 47+374",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03021-04",
+        "offset_m": 6.76,
         "di_set": {
           "preset": "D-SD",
           "ch0": 47374.03,
@@ -122453,10 +118083,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 6.76,
           "sheet": "DW-03021-04",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03021-04",
-        "offset_m": 6.76
+        }
       },
       "geometry": {
         "type": "Point",
@@ -122479,6 +118106,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 1 side ditch",
         "chainage_str": "PK 47+771 – PK 48+075",
         "status": "Not Started",
+        "short_code": "T1",
+        "drawing_ref": "DW-03022-04",
+        "offset_m": 4.1,
         "di_set": {
           "ch0": 47770.73,
           "ch1": 48074.87,
@@ -122487,10 +118117,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03022-04",
           "preset": "T1"
-        },
-        "short_code": "T1",
-        "drawing_ref": "DW-03022-04",
-        "offset_m": 4.1
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -122755,6 +118382,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 1 side ditch",
         "chainage_str": "PK 47+774 – PK 48+100",
         "status": "Not Started",
+        "short_code": "T1",
+        "drawing_ref": "DW-03022-04",
+        "offset_m": 4.1,
         "di_set": {
           "ch0": 47773.89,
           "ch1": 48100.47,
@@ -122763,10 +118393,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03022-04",
           "preset": "T1"
-        },
-        "short_code": "T1",
-        "drawing_ref": "DW-03022-04",
-        "offset_m": 4.1
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -123035,6 +118662,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 4 toe ditch, unlined",
         "chainage_str": "PK 48+098 – PK 48+123",
         "status": "Not Started",
+        "short_code": "T4",
+        "drawing_ref": "DW-03022-04",
+        "offset_m": 7.7,
         "di_set": {
           "ch0": 48097.65,
           "ch1": 48123.07,
@@ -123043,10 +118673,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03022-04",
           "preset": "T4"
-        },
-        "short_code": "T4",
-        "drawing_ref": "DW-03022-04",
-        "offset_m": 7.7
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -123095,6 +118722,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 48+132",
         "status": "Not Started",
+        "drawing_ref": "DW-03022-04",
+        "offset_m": 5.89,
         "di_set": {
           "preset": "RIP",
           "ch0": 48131.53,
@@ -123104,9 +118733,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03022-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03022-04",
-        "offset_m": 5.89
+        }
       },
       "geometry": {
         "type": "Point",
@@ -123129,6 +118756,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 48+548",
         "status": "Not Started",
+        "drawing_ref": "DW-03022-04",
+        "offset_m": 10.14,
         "di_set": {
           "preset": "RIP",
           "ch0": 48547.5,
@@ -123138,9 +118767,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03022-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03022-04",
-        "offset_m": 10.14
+        }
       },
       "geometry": {
         "type": "Point",
@@ -123163,6 +118790,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 48+600",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03022-04",
+        "offset_m": 7.83,
         "di_set": {
           "preset": "WD",
           "ch0": 48600.01,
@@ -123171,10 +118801,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.83,
           "sheet": "DW-03022-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03022-04",
-        "offset_m": 7.83
+        }
       },
       "geometry": {
         "type": "Point",
@@ -123197,6 +118824,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 48+650",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03022-04",
+        "offset_m": 7.83,
         "di_set": {
           "preset": "WD",
           "ch0": 48650.01,
@@ -123205,10 +118835,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.83,
           "sheet": "DW-03022-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03022-04",
-        "offset_m": 7.83
+        }
       },
       "geometry": {
         "type": "Point",
@@ -123231,6 +118858,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 48+700",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03022-04",
+        "offset_m": 7.87,
         "di_set": {
           "preset": "WD",
           "ch0": 48700.01,
@@ -123239,10 +118869,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.87,
           "sheet": "DW-03022-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03022-04",
-        "offset_m": 7.87
+        }
       },
       "geometry": {
         "type": "Point",
@@ -123265,6 +118892,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 48+750",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03022-04",
+        "offset_m": 7.77,
         "di_set": {
           "preset": "WD",
           "ch0": 48750,
@@ -123273,10 +118903,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.77,
           "sheet": "DW-03022-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03022-04",
-        "offset_m": 7.77
+        }
       },
       "geometry": {
         "type": "Point",
@@ -123299,6 +118926,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 48+800",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03022-04",
+        "offset_m": 7.83,
         "di_set": {
           "preset": "WD",
           "ch0": 48800.01,
@@ -123307,10 +118937,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.83,
           "sheet": "DW-03022-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03022-04",
-        "offset_m": 7.83
+        }
       },
       "geometry": {
         "type": "Point",
@@ -123333,6 +118960,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 48+850",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03022-04",
+        "offset_m": 7.83,
         "di_set": {
           "preset": "WD",
           "ch0": 48850.01,
@@ -123341,10 +118971,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.83,
           "sheet": "DW-03022-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03022-04",
-        "offset_m": 7.83
+        }
       },
       "geometry": {
         "type": "Point",
@@ -123367,6 +118994,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 48+890",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03022-04",
+        "offset_m": 7.83,
         "di_set": {
           "preset": "WD",
           "ch0": 48890.01,
@@ -123375,10 +119005,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.83,
           "sheet": "DW-03022-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03022-04",
-        "offset_m": 7.83
+        }
       },
       "geometry": {
         "type": "Point",
@@ -123401,6 +119028,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 48+935",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03022-04",
+        "offset_m": 7.64,
         "di_set": {
           "preset": "WD",
           "ch0": 48935.01,
@@ -123409,10 +119039,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.64,
           "sheet": "DW-03022-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03022-04",
-        "offset_m": 7.64
+        }
       },
       "geometry": {
         "type": "Point",
@@ -123435,6 +119062,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 48+980",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03022-04",
+        "offset_m": 7.64,
         "di_set": {
           "preset": "WD",
           "ch0": 48980.01,
@@ -123443,10 +119073,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.64,
           "sheet": "DW-03022-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03022-04",
-        "offset_m": 7.64
+        }
       },
       "geometry": {
         "type": "Point",
@@ -123469,6 +119096,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 49+025",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03022-04",
+        "offset_m": 7.01,
         "di_set": {
           "preset": "WD",
           "ch0": 49025.08,
@@ -123477,10 +119107,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.01,
           "sheet": "DW-03022-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03022-04",
-        "offset_m": 7.01
+        }
       },
       "geometry": {
         "type": "Point",
@@ -123503,6 +119130,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 49+319",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03023-04",
+        "offset_m": 11.57,
         "di_set": {
           "preset": "D-SD",
           "ch0": 49318.97,
@@ -123511,10 +119141,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.57,
           "sheet": "DW-03023-04",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03023-04",
-        "offset_m": 11.57
+        }
       },
       "geometry": {
         "type": "Point",
@@ -123537,6 +119164,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 49+728",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03023-04",
+        "offset_m": 28.77,
         "di_set": {
           "preset": "D-SD",
           "ch0": 49728.38,
@@ -123545,10 +119175,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 28.77,
           "sheet": "DW-03023-04",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03023-04",
-        "offset_m": 28.77
+        }
       },
       "geometry": {
         "type": "Point",
@@ -123571,6 +119198,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 50+521",
         "status": "Not Started",
+        "drawing_ref": "DW-03023-04",
+        "offset_m": 8.18,
         "di_set": {
           "preset": "RIP",
           "ch0": 50520.82,
@@ -123580,9 +119209,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03023-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03023-04",
-        "offset_m": 8.18
+        }
       },
       "geometry": {
         "type": "Point",
@@ -123605,6 +119232,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 50+961",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03024-04",
+        "offset_m": 7.8,
         "di_set": {
           "preset": "WD",
           "ch0": 50961.02,
@@ -123613,10 +119243,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.8,
           "sheet": "DW-03024-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03024-04",
-        "offset_m": 7.8
+        }
       },
       "geometry": {
         "type": "Point",
@@ -123639,6 +119266,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 50+968",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03024-04",
+        "offset_m": 12.53,
         "di_set": {
           "preset": "D-SD",
           "ch0": 50967.82,
@@ -123647,10 +119277,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.53,
           "sheet": "DW-03024-04",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03024-04",
-        "offset_m": 12.53
+        }
       },
       "geometry": {
         "type": "Point",
@@ -123673,6 +119300,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 50+997",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03024-04",
+        "offset_m": 7.8,
         "di_set": {
           "preset": "WD",
           "ch0": 50997.02,
@@ -123681,10 +119311,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.8,
           "sheet": "DW-03024-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03024-04",
-        "offset_m": 7.8
+        }
       },
       "geometry": {
         "type": "Point",
@@ -123707,6 +119334,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 51+033",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03024-04",
+        "offset_m": 7.88,
         "di_set": {
           "preset": "WD",
           "ch0": 51033,
@@ -123715,10 +119345,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.88,
           "sheet": "DW-03024-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03024-04",
-        "offset_m": 7.88
+        }
       },
       "geometry": {
         "type": "Point",
@@ -123741,6 +119368,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 51+069",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03024-04",
+        "offset_m": 7.79,
         "di_set": {
           "preset": "WD",
           "ch0": 51069,
@@ -123749,10 +119379,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.79,
           "sheet": "DW-03024-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03024-04",
-        "offset_m": 7.79
+        }
       },
       "geometry": {
         "type": "Point",
@@ -123775,6 +119402,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 51+105",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03024-04",
+        "offset_m": 7.8,
         "di_set": {
           "preset": "WD",
           "ch0": 51105.02,
@@ -123783,10 +119413,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.8,
           "sheet": "DW-03024-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03024-04",
-        "offset_m": 7.8
+        }
       },
       "geometry": {
         "type": "Point",
@@ -123809,6 +119436,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 51+141",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03024-04",
+        "offset_m": 7.8,
         "di_set": {
           "preset": "WD",
           "ch0": 51141.02,
@@ -123817,10 +119447,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.8,
           "sheet": "DW-03024-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03024-04",
-        "offset_m": 7.8
+        }
       },
       "geometry": {
         "type": "Point",
@@ -123843,6 +119470,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 51+175",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03024-04",
+        "offset_m": 7.8,
         "di_set": {
           "preset": "WD",
           "ch0": 51175.02,
@@ -123851,10 +119481,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.8,
           "sheet": "DW-03024-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03024-04",
-        "offset_m": 7.8
+        }
       },
       "geometry": {
         "type": "Point",
@@ -123877,6 +119504,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 51+284",
         "status": "Not Started",
+        "drawing_ref": "DW-03024-04",
+        "offset_m": 8.45,
         "di_set": {
           "preset": "RIP",
           "ch0": 51284.45,
@@ -123885,9 +119514,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.45,
           "sheet": "DW-03024-04",
           "cert": "label"
-        },
-        "drawing_ref": "DW-03024-04",
-        "offset_m": 8.45
+        }
       },
       "geometry": {
         "type": "Point",
@@ -123910,6 +119537,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 51+290",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03024-04",
+        "offset_m": 11.75,
         "di_set": {
           "preset": "D-SD",
           "ch0": 51289.62,
@@ -123918,10 +119548,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.75,
           "sheet": "DW-03024-04",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03024-04",
-        "offset_m": 11.75
+        }
       },
       "geometry": {
         "type": "Point",
@@ -123944,6 +119571,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 51+580",
         "status": "Not Started",
+        "drawing_ref": "DW-03024-04",
+        "offset_m": 7.14,
         "di_set": {
           "preset": "RIP",
           "ch0": 51580.28,
@@ -123953,9 +119582,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03024-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03024-04",
-        "offset_m": 7.14
+        }
       },
       "geometry": {
         "type": "Point",
@@ -123978,6 +119605,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 52+326 – PK 52+358",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03025-04",
+        "offset_m": 11.65,
         "di_set": {
           "ch0": 52325.5,
           "ch1": 52357.87,
@@ -123986,10 +119616,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03025-04",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03025-04",
-        "offset_m": 11.65
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -124042,6 +119669,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 52+368",
         "status": "Not Started",
+        "drawing_ref": "DW-03025-04",
+        "offset_m": 7.62,
         "di_set": {
           "preset": "RIP",
           "ch0": 52367.63,
@@ -124051,9 +119680,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03025-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03025-04",
-        "offset_m": 7.62
+        }
       },
       "geometry": {
         "type": "Point",
@@ -124076,6 +119703,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 52+872",
         "status": "Not Started",
+        "drawing_ref": "DW-03025-04",
+        "offset_m": 7.08,
         "di_set": {
           "preset": "RIP",
           "ch0": 52872.29,
@@ -124085,9 +119714,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03025-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03025-04",
-        "offset_m": 7.08
+        }
       },
       "geometry": {
         "type": "Point",
@@ -124110,6 +119737,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 52+887",
         "status": "Not Started",
+        "drawing_ref": "DW-03025-04",
+        "offset_m": 7.38,
         "di_set": {
           "preset": "RIP",
           "ch0": 52886.89,
@@ -124119,9 +119748,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03025-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03025-04",
-        "offset_m": 7.38
+        }
       },
       "geometry": {
         "type": "Point",
@@ -124144,6 +119771,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 53+175",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03025-04",
+        "offset_m": 7.54,
         "di_set": {
           "preset": "WD",
           "ch0": 53174.96,
@@ -124152,10 +119782,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.54,
           "sheet": "DW-03025-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03025-04",
-        "offset_m": 7.54
+        }
       },
       "geometry": {
         "type": "Point",
@@ -124178,6 +119805,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 53+202",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03025-04",
+        "offset_m": 7.6,
         "di_set": {
           "preset": "WD",
           "ch0": 53201.99,
@@ -124186,10 +119816,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.6,
           "sheet": "DW-03025-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03025-04",
-        "offset_m": 7.6
+        }
       },
       "geometry": {
         "type": "Point",
@@ -124212,6 +119839,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 53+231",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03025-04",
+        "offset_m": 7.72,
         "di_set": {
           "preset": "WD",
           "ch0": 53230.97,
@@ -124220,10 +119850,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.72,
           "sheet": "DW-03025-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03025-04",
-        "offset_m": 7.72
+        }
       },
       "geometry": {
         "type": "Point",
@@ -124246,6 +119873,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 53+260",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03025-04",
+        "offset_m": 7.84,
         "di_set": {
           "preset": "WD",
           "ch0": 53260.1,
@@ -124254,10 +119884,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.84,
           "sheet": "DW-03025-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03025-04",
-        "offset_m": 7.84
+        }
       },
       "geometry": {
         "type": "Point",
@@ -124280,6 +119907,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 53+289",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03025-04",
+        "offset_m": 8.02,
         "di_set": {
           "preset": "WD",
           "ch0": 53289.1,
@@ -124288,10 +119918,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.02,
           "sheet": "DW-03025-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03025-04",
-        "offset_m": 8.02
+        }
       },
       "geometry": {
         "type": "Point",
@@ -124314,6 +119941,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 53+318",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03025-04",
+        "offset_m": 8.22,
         "di_set": {
           "preset": "WD",
           "ch0": 53317.92,
@@ -124322,10 +119952,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.22,
           "sheet": "DW-03025-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03025-04",
-        "offset_m": 8.22
+        }
       },
       "geometry": {
         "type": "Point",
@@ -124348,6 +119975,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 53+347",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03025-04",
+        "offset_m": 8.43,
         "di_set": {
           "preset": "WD",
           "ch0": 53346.96,
@@ -124356,10 +119986,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.43,
           "sheet": "DW-03025-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03025-04",
-        "offset_m": 8.43
+        }
       },
       "geometry": {
         "type": "Point",
@@ -124382,6 +120009,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 53+350",
         "status": "Not Started",
+        "drawing_ref": "DW-03025-04",
+        "offset_m": 10.11,
         "di_set": {
           "preset": "RIP",
           "ch0": 53349.83,
@@ -124391,9 +120020,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03025-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03025-04",
-        "offset_m": 10.11
+        }
       },
       "geometry": {
         "type": "Point",
@@ -124416,6 +120043,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 53+376",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03025-04",
+        "offset_m": 8.48,
         "di_set": {
           "preset": "WD",
           "ch0": 53376.1,
@@ -124424,10 +120054,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.48,
           "sheet": "DW-03025-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03025-04",
-        "offset_m": 8.48
+        }
       },
       "geometry": {
         "type": "Point",
@@ -124450,6 +120077,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 53+405",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03026-04",
+        "offset_m": 8.45,
         "di_set": {
           "preset": "WD",
           "ch0": 53405.11,
@@ -124458,10 +120088,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.45,
           "sheet": "DW-03026-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03026-04",
-        "offset_m": 8.45
+        }
       },
       "geometry": {
         "type": "Point",
@@ -124484,6 +120111,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 53+434",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03026-04",
+        "offset_m": 8.44,
         "di_set": {
           "preset": "WD",
           "ch0": 53433.97,
@@ -124492,10 +120122,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.44,
           "sheet": "DW-03026-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03026-04",
-        "offset_m": 8.44
+        }
       },
       "geometry": {
         "type": "Point",
@@ -124518,6 +120145,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 53+463",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03026-04",
+        "offset_m": 8.44,
         "di_set": {
           "preset": "WD",
           "ch0": 53463.03,
@@ -124526,10 +120156,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.44,
           "sheet": "DW-03026-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03026-04",
-        "offset_m": 8.44
+        }
       },
       "geometry": {
         "type": "Point",
@@ -124552,6 +120179,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 53+527",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03026-04",
+        "offset_m": 8.17,
         "di_set": {
           "preset": "WD",
           "ch0": 53527.11,
@@ -124560,10 +120190,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.17,
           "sheet": "DW-03026-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03026-04",
-        "offset_m": 8.17
+        }
       },
       "geometry": {
         "type": "Point",
@@ -124586,6 +120213,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 53+562",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03026-04",
+        "offset_m": 7.93,
         "di_set": {
           "preset": "WD",
           "ch0": 53562.08,
@@ -124594,10 +120224,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.93,
           "sheet": "DW-03026-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03026-04",
-        "offset_m": 7.93
+        }
       },
       "geometry": {
         "type": "Point",
@@ -124620,6 +120247,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 53+597",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03026-04",
+        "offset_m": 7.81,
         "di_set": {
           "preset": "WD",
           "ch0": 53597.08,
@@ -124628,10 +120258,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.81,
           "sheet": "DW-03026-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03026-04",
-        "offset_m": 7.81
+        }
       },
       "geometry": {
         "type": "Point",
@@ -124654,6 +120281,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 53+625",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03026-04",
+        "offset_m": 7.56,
         "di_set": {
           "preset": "WD",
           "ch0": 53625.1,
@@ -124662,10 +120292,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.56,
           "sheet": "DW-03026-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03026-04",
-        "offset_m": 7.56
+        }
       },
       "geometry": {
         "type": "Point",
@@ -124688,6 +120315,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 4 toe ditch, unlined",
         "chainage_str": "PK 53+764 – PK 53+925",
         "status": "Not Started",
+        "short_code": "T4",
+        "drawing_ref": "DW-03026-04",
+        "offset_m": 9.07,
         "di_set": {
           "ch0": 53763.86,
           "ch1": 53925.01,
@@ -124696,10 +120326,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03026-04",
           "preset": "T4"
-        },
-        "short_code": "T4",
-        "drawing_ref": "DW-03026-04",
-        "offset_m": 9.07
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -124856,6 +120483,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 4 toe ditch, unlined",
         "chainage_str": "PK 54+250 – PK 54+425",
         "status": "Not Started",
+        "short_code": "T4",
+        "drawing_ref": "DW-03026-04",
+        "offset_m": 12.16,
         "di_set": {
           "ch0": 54250,
           "ch1": 54424.98,
@@ -124864,10 +120494,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03026-04",
           "preset": "T4"
-        },
-        "short_code": "T4",
-        "drawing_ref": "DW-03026-04",
-        "offset_m": 12.16
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -125032,6 +120659,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 54+255",
         "status": "Not Started",
+        "drawing_ref": "DW-03026-04",
+        "offset_m": 9.23,
         "di_set": {
           "preset": "RIP",
           "ch0": 54255.11,
@@ -125041,9 +120670,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03026-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03026-04",
-        "offset_m": 9.23
+        }
       },
       "geometry": {
         "type": "Point",
@@ -125066,6 +120693,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 54+459",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03026-04",
+        "offset_m": 7.7,
         "di_set": {
           "preset": "WD",
           "ch0": 54458.96,
@@ -125074,10 +120704,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.7,
           "sheet": "DW-03026-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03026-04",
-        "offset_m": 7.7
+        }
       },
       "geometry": {
         "type": "Point",
@@ -125100,6 +120727,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 54+493",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03026-04",
+        "offset_m": 7.7,
         "di_set": {
           "preset": "WD",
           "ch0": 54492.96,
@@ -125108,10 +120738,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.7,
           "sheet": "DW-03026-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03026-04",
-        "offset_m": 7.7
+        }
       },
       "geometry": {
         "type": "Point",
@@ -125134,6 +120761,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 54+527",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03026-04",
+        "offset_m": 7.7,
         "di_set": {
           "preset": "WD",
           "ch0": 54526.96,
@@ -125142,10 +120772,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.7,
           "sheet": "DW-03026-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03026-04",
-        "offset_m": 7.7
+        }
       },
       "geometry": {
         "type": "Point",
@@ -125168,6 +120795,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 54+553",
         "status": "Not Started",
+        "drawing_ref": "DW-03026-04",
+        "offset_m": 10.52,
         "di_set": {
           "preset": "RIP",
           "ch0": 54552.5,
@@ -125177,9 +120806,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03026-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03026-04",
-        "offset_m": 10.52
+        }
       },
       "geometry": {
         "type": "Point",
@@ -125202,6 +120829,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 54+561",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03026-04",
+        "offset_m": 7.95,
         "di_set": {
           "preset": "WD",
           "ch0": 54560.96,
@@ -125210,10 +120840,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.95,
           "sheet": "DW-03026-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03026-04",
-        "offset_m": 7.95
+        }
       },
       "geometry": {
         "type": "Point",
@@ -125236,6 +120863,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 54+595",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03026-04",
+        "offset_m": 7.87,
         "di_set": {
           "preset": "WD",
           "ch0": 54594.96,
@@ -125244,10 +120874,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.87,
           "sheet": "DW-03026-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03026-04",
-        "offset_m": 7.87
+        }
       },
       "geometry": {
         "type": "Point",
@@ -125270,6 +120897,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 54+629",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03026-04",
+        "offset_m": 7.85,
         "di_set": {
           "preset": "WD",
           "ch0": 54628.96,
@@ -125278,10 +120908,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.85,
           "sheet": "DW-03026-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03026-04",
-        "offset_m": 7.85
+        }
       },
       "geometry": {
         "type": "Point",
@@ -125304,6 +120931,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 54+663",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03026-04",
+        "offset_m": 8.01,
         "di_set": {
           "preset": "WD",
           "ch0": 54662.96,
@@ -125312,10 +120942,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.01,
           "sheet": "DW-03026-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03026-04",
-        "offset_m": 8.01
+        }
       },
       "geometry": {
         "type": "Point",
@@ -125338,6 +120965,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 54+697",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03026-04",
+        "offset_m": 8.35,
         "di_set": {
           "preset": "WD",
           "ch0": 54696.96,
@@ -125346,10 +120976,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.35,
           "sheet": "DW-03026-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03026-04",
-        "offset_m": 8.35
+        }
       },
       "geometry": {
         "type": "Point",
@@ -125372,6 +120999,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 54+731",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03026-04",
+        "offset_m": 8.51,
         "di_set": {
           "preset": "WD",
           "ch0": 54731.06,
@@ -125380,10 +121010,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.51,
           "sheet": "DW-03026-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03026-04",
-        "offset_m": 8.51
+        }
       },
       "geometry": {
         "type": "Point",
@@ -125406,6 +121033,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 54+765",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03026-04",
+        "offset_m": 8.57,
         "di_set": {
           "preset": "WD",
           "ch0": 54764.96,
@@ -125414,10 +121044,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.57,
           "sheet": "DW-03026-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03026-04",
-        "offset_m": 8.57
+        }
       },
       "geometry": {
         "type": "Point",
@@ -125440,6 +121067,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 54+799",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03026-04",
+        "offset_m": 8.64,
         "di_set": {
           "preset": "WD",
           "ch0": 54798.77,
@@ -125448,10 +121078,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.64,
           "sheet": "DW-03026-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03026-04",
-        "offset_m": 8.64
+        }
       },
       "geometry": {
         "type": "Point",
@@ -125474,6 +121101,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 54+833",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03027-04",
+        "offset_m": 8.5,
         "di_set": {
           "preset": "WD",
           "ch0": 54833,
@@ -125482,10 +121112,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.5,
           "sheet": "DW-03027-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03027-04",
-        "offset_m": 8.5
+        }
       },
       "geometry": {
         "type": "Point",
@@ -125508,6 +121135,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 54+867",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03027-04",
+        "offset_m": 8.44,
         "di_set": {
           "preset": "WD",
           "ch0": 54867.04,
@@ -125516,10 +121146,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.44,
           "sheet": "DW-03027-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03027-04",
-        "offset_m": 8.44
+        }
       },
       "geometry": {
         "type": "Point",
@@ -125542,6 +121169,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 54+897",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03027-04",
+        "offset_m": 8.32,
         "di_set": {
           "preset": "WD",
           "ch0": 54897.16,
@@ -125550,10 +121180,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.32,
           "sheet": "DW-03027-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03027-04",
-        "offset_m": 8.32
+        }
       },
       "geometry": {
         "type": "Point",
@@ -125576,6 +121203,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 54+912",
         "status": "Not Started",
+        "drawing_ref": "DW-03027-04",
+        "offset_m": 9.14,
         "di_set": {
           "preset": "RIP",
           "ch0": 54912.38,
@@ -125585,9 +121214,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03027-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03027-04",
-        "offset_m": 9.14
+        }
       },
       "geometry": {
         "type": "Point",
@@ -125610,6 +121237,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 54+931",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03027-04",
+        "offset_m": 8.31,
         "di_set": {
           "preset": "WD",
           "ch0": 54931.17,
@@ -125618,10 +121248,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.31,
           "sheet": "DW-03027-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03027-04",
-        "offset_m": 8.31
+        }
       },
       "geometry": {
         "type": "Point",
@@ -125644,6 +121271,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 54+965",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03027-04",
+        "offset_m": 8.15,
         "di_set": {
           "preset": "WD",
           "ch0": 54965.21,
@@ -125652,10 +121282,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.15,
           "sheet": "DW-03027-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03027-04",
-        "offset_m": 8.15
+        }
       },
       "geometry": {
         "type": "Point",
@@ -125678,6 +121305,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 54+999",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03027-04",
+        "offset_m": 7.94,
         "di_set": {
           "preset": "WD",
           "ch0": 54999.16,
@@ -125686,10 +121316,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.94,
           "sheet": "DW-03027-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03027-04",
-        "offset_m": 7.94
+        }
       },
       "geometry": {
         "type": "Point",
@@ -125712,6 +121339,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 55+033",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03027-04",
+        "offset_m": 7.71,
         "di_set": {
           "preset": "WD",
           "ch0": 55033.16,
@@ -125720,10 +121350,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.71,
           "sheet": "DW-03027-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03027-04",
-        "offset_m": 7.71
+        }
       },
       "geometry": {
         "type": "Point",
@@ -125746,6 +121373,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 55+067",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03027-04",
+        "offset_m": 7.79,
         "di_set": {
           "preset": "WD",
           "ch0": 55067.16,
@@ -125754,10 +121384,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.79,
           "sheet": "DW-03027-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03027-04",
-        "offset_m": 7.79
+        }
       },
       "geometry": {
         "type": "Point",
@@ -125780,6 +121407,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 55+100",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03027-04",
+        "offset_m": 7.63,
         "di_set": {
           "preset": "WD",
           "ch0": 55100.05,
@@ -125788,10 +121418,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.63,
           "sheet": "DW-03027-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03027-04",
-        "offset_m": 7.63
+        }
       },
       "geometry": {
         "type": "Point",
@@ -125814,6 +121441,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 55+180",
         "status": "Not Started",
+        "drawing_ref": "DW-03027-04",
+        "offset_m": 9.37,
         "di_set": {
           "preset": "RIP",
           "ch0": 55180.23,
@@ -125823,9 +121452,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03027-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03027-04",
-        "offset_m": 9.37
+        }
       },
       "geometry": {
         "type": "Point",
@@ -125848,6 +121475,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 4 toe ditch, unlined",
         "chainage_str": "PK 55+422",
         "status": "Not Started",
+        "short_code": "T4",
+        "drawing_ref": "DW-03027-04",
+        "offset_m": 8.75,
         "di_set": {
           "ch0": 55421.58,
           "ch1": 55421.62,
@@ -125856,10 +121486,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03027-04",
           "preset": "T4"
-        },
-        "short_code": "T4",
-        "drawing_ref": "DW-03027-04",
-        "offset_m": 8.75
+        }
       },
       "geometry": {
         "type": "Point",
@@ -125882,6 +121509,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 56+764",
         "status": "Not Started",
+        "drawing_ref": "DW-03028-04",
+        "offset_m": 6.6,
         "di_set": {
           "preset": "RIP",
           "ch0": 56764,
@@ -125891,9 +121520,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03028-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03028-04",
-        "offset_m": 6.6
+        }
       },
       "geometry": {
         "type": "Point",
@@ -125916,6 +121543,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 56+790",
         "status": "Not Started",
+        "drawing_ref": "DW-03028-04",
+        "offset_m": 6.64,
         "di_set": {
           "preset": "RIP",
           "ch0": 56790,
@@ -125925,9 +121554,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03028-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03028-04",
-        "offset_m": 6.64
+        }
       },
       "geometry": {
         "type": "Point",
@@ -125950,6 +121577,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 57+006",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03028-04",
+        "offset_m": 14.29,
         "di_set": {
           "preset": "D-SD",
           "ch0": 57006.22,
@@ -125958,10 +121588,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 14.29,
           "sheet": "DW-03028-04",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03028-04",
-        "offset_m": 14.29
+        }
       },
       "geometry": {
         "type": "Point",
@@ -125984,6 +121611,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 57+035",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03028-04",
+        "offset_m": 17.01,
         "di_set": {
           "preset": "D-SD",
           "ch0": 57035.45,
@@ -125992,10 +121622,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 17.01,
           "sheet": "DW-03028-04",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03028-04",
-        "offset_m": 17.01
+        }
       },
       "geometry": {
         "type": "Point",
@@ -126018,6 +121645,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 57+039",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03028-04",
+        "offset_m": 7.53,
         "di_set": {
           "preset": "WD",
           "ch0": 57038.65,
@@ -126026,10 +121656,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.53,
           "sheet": "DW-03028-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03028-04",
-        "offset_m": 7.53
+        }
       },
       "geometry": {
         "type": "Point",
@@ -126052,6 +121679,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 57+057",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03028-04",
+        "offset_m": 7.61,
         "di_set": {
           "preset": "WD",
           "ch0": 57056.87,
@@ -126060,10 +121690,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.61,
           "sheet": "DW-03028-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03028-04",
-        "offset_m": 7.61
+        }
       },
       "geometry": {
         "type": "Point",
@@ -126086,6 +121713,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 57+075",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03028-04",
+        "offset_m": 7.63,
         "di_set": {
           "preset": "WD",
           "ch0": 57074.87,
@@ -126094,10 +121724,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.63,
           "sheet": "DW-03028-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03028-04",
-        "offset_m": 7.63
+        }
       },
       "geometry": {
         "type": "Point",
@@ -126120,6 +121747,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 57+088",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03028-04",
+        "offset_m": 7.58,
         "di_set": {
           "preset": "WD",
           "ch0": 57087.54,
@@ -126128,10 +121758,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.58,
           "sheet": "DW-03028-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03028-04",
-        "offset_m": 7.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -126154,6 +121781,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 57+120",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03028-04",
+        "offset_m": 7.74,
         "di_set": {
           "preset": "WD",
           "ch0": 57119.53,
@@ -126162,10 +121792,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.74,
           "sheet": "DW-03028-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03028-04",
-        "offset_m": 7.74
+        }
       },
       "geometry": {
         "type": "Point",
@@ -126188,6 +121815,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 57+152",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03028-04",
+        "offset_m": 7.73,
         "di_set": {
           "preset": "WD",
           "ch0": 57151.66,
@@ -126196,10 +121826,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.73,
           "sheet": "DW-03028-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03028-04",
-        "offset_m": 7.73
+        }
       },
       "geometry": {
         "type": "Point",
@@ -126222,6 +121849,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 57+184",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03028-04",
+        "offset_m": 7.6,
         "di_set": {
           "preset": "WD",
           "ch0": 57183.55,
@@ -126230,10 +121860,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.6,
           "sheet": "DW-03028-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03028-04",
-        "offset_m": 7.6
+        }
       },
       "geometry": {
         "type": "Point",
@@ -126256,6 +121883,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 57+216",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03028-04",
+        "offset_m": 7.67,
         "di_set": {
           "preset": "WD",
           "ch0": 57215.65,
@@ -126264,10 +121894,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.67,
           "sheet": "DW-03028-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03028-04",
-        "offset_m": 7.67
+        }
       },
       "geometry": {
         "type": "Point",
@@ -126290,6 +121917,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 57+248",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03028-04",
+        "offset_m": 7.63,
         "di_set": {
           "preset": "WD",
           "ch0": 57247.65,
@@ -126298,10 +121928,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.63,
           "sheet": "DW-03028-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03028-04",
-        "offset_m": 7.63
+        }
       },
       "geometry": {
         "type": "Point",
@@ -126324,6 +121951,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 57+280",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03028-04",
+        "offset_m": 7.64,
         "di_set": {
           "preset": "WD",
           "ch0": 57279.68,
@@ -126332,10 +121962,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.64,
           "sheet": "DW-03028-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03028-04",
-        "offset_m": 7.64
+        }
       },
       "geometry": {
         "type": "Point",
@@ -126358,6 +121985,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 57+312",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03028-04",
+        "offset_m": 7.62,
         "di_set": {
           "preset": "WD",
           "ch0": 57311.77,
@@ -126366,10 +121996,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.62,
           "sheet": "DW-03028-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03028-04",
-        "offset_m": 7.62
+        }
       },
       "geometry": {
         "type": "Point",
@@ -126392,6 +122019,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 57+344",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03028-04",
+        "offset_m": 7.74,
         "di_set": {
           "preset": "WD",
           "ch0": 57343.74,
@@ -126400,10 +122030,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.74,
           "sheet": "DW-03028-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03028-04",
-        "offset_m": 7.74
+        }
       },
       "geometry": {
         "type": "Point",
@@ -126426,6 +122053,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 57+376",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03028-04",
+        "offset_m": 7.73,
         "di_set": {
           "preset": "WD",
           "ch0": 57375.81,
@@ -126434,10 +122064,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.73,
           "sheet": "DW-03028-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03028-04",
-        "offset_m": 7.73
+        }
       },
       "geometry": {
         "type": "Point",
@@ -126460,6 +122087,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 57+408",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03028-04",
+        "offset_m": 7.8,
         "di_set": {
           "preset": "WD",
           "ch0": 57407.73,
@@ -126468,10 +122098,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.8,
           "sheet": "DW-03028-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03028-04",
-        "offset_m": 7.8
+        }
       },
       "geometry": {
         "type": "Point",
@@ -126494,6 +122121,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 57+440",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03028-04",
+        "offset_m": 7.8,
         "di_set": {
           "preset": "WD",
           "ch0": 57440,
@@ -126502,10 +122132,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.8,
           "sheet": "DW-03028-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03028-04",
-        "offset_m": 7.8
+        }
       },
       "geometry": {
         "type": "Point",
@@ -126528,6 +122155,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 57+472",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03028-04",
+        "offset_m": 7.63,
         "di_set": {
           "preset": "WD",
           "ch0": 57471.84,
@@ -126536,10 +122166,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.63,
           "sheet": "DW-03028-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03028-04",
-        "offset_m": 7.63
+        }
       },
       "geometry": {
         "type": "Point",
@@ -126562,6 +122189,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 57+504",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03028-04",
+        "offset_m": 7.65,
         "di_set": {
           "preset": "WD",
           "ch0": 57503.96,
@@ -126570,10 +122200,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.65,
           "sheet": "DW-03028-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03028-04",
-        "offset_m": 7.65
+        }
       },
       "geometry": {
         "type": "Point",
@@ -126596,6 +122223,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 57+536",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03028-04",
+        "offset_m": 7.49,
         "di_set": {
           "preset": "WD",
           "ch0": 57535.91,
@@ -126604,10 +122234,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.49,
           "sheet": "DW-03028-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03028-04",
-        "offset_m": 7.49
+        }
       },
       "geometry": {
         "type": "Point",
@@ -126630,6 +122257,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 57+568",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03028-04",
+        "offset_m": 7.57,
         "di_set": {
           "preset": "WD",
           "ch0": 57567.9,
@@ -126638,10 +122268,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.57,
           "sheet": "DW-03028-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03028-04",
-        "offset_m": 7.57
+        }
       },
       "geometry": {
         "type": "Point",
@@ -126664,6 +122291,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 7 toe ditch",
         "chainage_str": "PK 57+749 – PK 57+818",
         "status": "Not Started",
+        "short_code": "T7",
+        "drawing_ref": "DW-03029-04",
+        "offset_m": 11.05,
         "di_set": {
           "ch0": 57749.49,
           "ch1": 57817.63,
@@ -126672,10 +122302,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03029-04",
           "preset": "T7"
-        },
-        "short_code": "T7",
-        "drawing_ref": "DW-03029-04",
-        "offset_m": 11.05
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -126756,6 +122383,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 57+813",
         "status": "Not Started",
+        "drawing_ref": "DW-03029-04",
+        "offset_m": 8.94,
         "di_set": {
           "preset": "RIP",
           "ch0": 57812.5,
@@ -126765,9 +122394,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03029-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03029-04",
-        "offset_m": 8.94
+        }
       },
       "geometry": {
         "type": "Point",
@@ -126790,6 +122417,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 4 toe ditch, unlined",
         "chainage_str": "PK 57+822 – PK 57+949",
         "status": "Not Started",
+        "short_code": "T4",
+        "drawing_ref": "DW-03029-04",
+        "offset_m": 11.05,
         "di_set": {
           "ch0": 57822.34,
           "ch1": 57949.47,
@@ -126798,10 +122428,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03029-04",
           "preset": "T4"
-        },
-        "short_code": "T4",
-        "drawing_ref": "DW-03029-04",
-        "offset_m": 11.05
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -126930,6 +122557,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 57+826",
         "status": "Not Started",
+        "drawing_ref": "DW-03029-04",
+        "offset_m": 8.73,
         "di_set": {
           "preset": "RIP",
           "ch0": 57825.68,
@@ -126939,9 +122568,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03029-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03029-04",
-        "offset_m": 8.73
+        }
       },
       "geometry": {
         "type": "Point",
@@ -126964,6 +122591,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 58+059",
         "status": "Not Started",
+        "drawing_ref": "DW-03029-04",
+        "offset_m": 8.32,
         "di_set": {
           "preset": "RIP",
           "ch0": 58058.66,
@@ -126973,9 +122602,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03029-04",
           "cert": "label",
           "stated": 119
-        },
-        "drawing_ref": "DW-03029-04",
-        "offset_m": 8.32
+        }
       },
       "geometry": {
         "type": "Point",
@@ -126998,6 +122625,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 4 toe ditch, unlined",
         "chainage_str": "PK 58+450 – PK 58+600",
         "status": "Not Started",
+        "short_code": "T4",
+        "drawing_ref": "DW-03029-04",
+        "offset_m": 8.69,
         "di_set": {
           "ch0": 58449.88,
           "ch1": 58600.32,
@@ -127006,10 +122636,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03029-04",
           "preset": "T4"
-        },
-        "short_code": "T4",
-        "drawing_ref": "DW-03029-04",
-        "offset_m": 8.69
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -127158,6 +122785,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 58+600 – PK 58+789",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03029-04",
+        "offset_m": 11.22,
         "di_set": {
           "ch0": 58600.32,
           "ch1": 58789.28,
@@ -127166,10 +122796,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03029-04",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03029-04",
-        "offset_m": 11.22
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -127346,6 +122973,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 58+797",
         "status": "Not Started",
+        "drawing_ref": "DW-03029-04",
+        "offset_m": 7.24,
         "di_set": {
           "preset": "RIP",
           "ch0": 58797.46,
@@ -127355,9 +122984,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03029-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03029-04",
-        "offset_m": 7.24
+        }
       },
       "geometry": {
         "type": "Point",
@@ -127380,6 +123007,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 59+030",
         "status": "Not Started",
+        "drawing_ref": "DW-03030-05",
+        "offset_m": 8.88,
         "di_set": {
           "preset": "RIP",
           "ch0": 59029.56,
@@ -127389,9 +123018,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03030-05",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03030-05",
-        "offset_m": 8.88
+        }
       },
       "geometry": {
         "type": "Point",
@@ -127414,6 +123041,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 59+055",
         "status": "Not Started",
+        "drawing_ref": "DW-03030-05",
+        "offset_m": 9.62,
         "di_set": {
           "preset": "RIP",
           "ch0": 59055.26,
@@ -127423,9 +123052,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03030-05",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03030-05",
-        "offset_m": 9.62
+        }
       },
       "geometry": {
         "type": "Point",
@@ -127448,6 +123075,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 6 collector drain",
         "chainage_str": "PK 59+375 – PK 60+425",
         "status": "Not Started",
+        "short_code": "T6",
+        "drawing_ref": "DW-03030-05",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 59375,
           "ch1": 60425,
@@ -127456,10 +123086,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03030-05",
           "preset": "T6"
-        },
-        "short_code": "T6",
-        "drawing_ref": "DW-03030-05",
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -127724,6 +123351,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 60+425",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03031-05",
+        "offset_m": 12.26,
         "di_set": {
           "preset": "WD",
           "ch0": 60424.95,
@@ -127732,10 +123362,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.26,
           "sheet": "DW-03031-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03031-05",
-        "offset_m": 12.26
+        }
       },
       "geometry": {
         "type": "Point",
@@ -127758,6 +123385,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 60+437",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03031-05",
+        "offset_m": 12.44,
         "di_set": {
           "preset": "WD",
           "ch0": 60436.8,
@@ -127766,10 +123396,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.44,
           "sheet": "DW-03031-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03031-05",
-        "offset_m": 12.44
+        }
       },
       "geometry": {
         "type": "Point",
@@ -127792,6 +123419,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 60+449",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03031-05",
+        "offset_m": 12.44,
         "di_set": {
           "preset": "WD",
           "ch0": 60448.58,
@@ -127800,10 +123430,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.44,
           "sheet": "DW-03031-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03031-05",
-        "offset_m": 12.44
+        }
       },
       "geometry": {
         "type": "Point",
@@ -127826,6 +123453,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 60+467",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03031-05",
+        "offset_m": 11.63,
         "di_set": {
           "preset": "WD",
           "ch0": 60467.07,
@@ -127834,10 +123464,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.63,
           "sheet": "DW-03031-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03031-05",
-        "offset_m": 11.63
+        }
       },
       "geometry": {
         "type": "Point",
@@ -127860,6 +123487,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 60+486",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03031-05",
+        "offset_m": 7.78,
         "di_set": {
           "preset": "WD",
           "ch0": 60486.09,
@@ -127868,10 +123498,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.78,
           "sheet": "DW-03031-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03031-05",
-        "offset_m": 7.78
+        }
       },
       "geometry": {
         "type": "Point",
@@ -127894,6 +123521,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 60+505",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03031-05",
+        "offset_m": 7.37,
         "di_set": {
           "preset": "WD",
           "ch0": 60505,
@@ -127902,10 +123532,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.37,
           "sheet": "DW-03031-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03031-05",
-        "offset_m": 7.37
+        }
       },
       "geometry": {
         "type": "Point",
@@ -127928,6 +123555,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 60+524",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03031-05",
+        "offset_m": 7.37,
         "di_set": {
           "preset": "WD",
           "ch0": 60523.95,
@@ -127936,10 +123566,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.37,
           "sheet": "DW-03031-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03031-05",
-        "offset_m": 7.37
+        }
       },
       "geometry": {
         "type": "Point",
@@ -127962,6 +123589,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 60+543",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03031-05",
+        "offset_m": 7.37,
         "di_set": {
           "preset": "WD",
           "ch0": 60542.95,
@@ -127970,10 +123600,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.37,
           "sheet": "DW-03031-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03031-05",
-        "offset_m": 7.37
+        }
       },
       "geometry": {
         "type": "Point",
@@ -127996,6 +123623,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 60+562",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03031-05",
+        "offset_m": 7.37,
         "di_set": {
           "preset": "WD",
           "ch0": 60561.95,
@@ -128004,10 +123634,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.37,
           "sheet": "DW-03031-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03031-05",
-        "offset_m": 7.37
+        }
       },
       "geometry": {
         "type": "Point",
@@ -128030,6 +123657,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 60+581",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03031-05",
+        "offset_m": 7.37,
         "di_set": {
           "preset": "WD",
           "ch0": 60580.95,
@@ -128038,10 +123668,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.37,
           "sheet": "DW-03031-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03031-05",
-        "offset_m": 7.37
+        }
       },
       "geometry": {
         "type": "Point",
@@ -128064,6 +123691,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 61+780",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03031-05",
+        "offset_m": 11.11,
         "di_set": {
           "preset": "D-SD",
           "ch0": 61779.72,
@@ -128072,10 +123702,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.11,
           "sheet": "DW-03031-05",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03031-05",
-        "offset_m": 11.11
+        }
       },
       "geometry": {
         "type": "Point",
@@ -128098,6 +123725,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 61+780",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03031-05",
+        "offset_m": 11.11,
         "di_set": {
           "preset": "D-SD",
           "ch0": 61779.72,
@@ -128106,10 +123736,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.11,
           "sheet": "DW-03031-05",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03031-05",
-        "offset_m": 11.11
+        }
       },
       "geometry": {
         "type": "Point",
@@ -128132,6 +123759,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 4 toe ditch, unlined",
         "chainage_str": "PK 62+302 – PK 62+350",
         "status": "Not Started",
+        "short_code": "T4",
+        "drawing_ref": "DW-03032-04",
+        "offset_m": 9.55,
         "di_set": {
           "ch0": 62302.16,
           "ch1": 62350.01,
@@ -128140,10 +123770,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03032-04",
           "preset": "T4"
-        },
-        "short_code": "T4",
-        "drawing_ref": "DW-03032-04",
-        "offset_m": 9.55
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -128208,6 +123835,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 13 rectangular toe ditch",
         "chainage_str": "PK 62+350 – PK 62+400",
         "status": "Not Started",
+        "short_code": "T13",
+        "drawing_ref": "DW-03032-04",
+        "offset_m": 9.08,
         "di_set": {
           "ch0": 62350.01,
           "ch1": 62400.03,
@@ -128216,10 +123846,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03032-04",
           "preset": "T13"
-        },
-        "short_code": "T13",
-        "drawing_ref": "DW-03032-04",
-        "offset_m": 9.08
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -128288,6 +123915,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 62+542",
         "status": "Not Started",
+        "drawing_ref": "DW-03032-04",
+        "offset_m": 7.4,
         "di_set": {
           "preset": "RIP",
           "ch0": 62541.8,
@@ -128297,9 +123926,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03032-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03032-04",
-        "offset_m": 7.4
+        }
       },
       "geometry": {
         "type": "Point",
@@ -128322,6 +123949,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 62+562",
         "status": "Not Started",
+        "drawing_ref": "DW-03032-04",
+        "offset_m": 6.81,
         "di_set": {
           "preset": "RIP",
           "ch0": 62561.85,
@@ -128331,9 +123960,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03032-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03032-04",
-        "offset_m": 6.81
+        }
       },
       "geometry": {
         "type": "Point",
@@ -128356,6 +123983,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 62+743",
         "status": "Not Started",
+        "drawing_ref": "DW-03032-04",
+        "offset_m": 6.3,
         "di_set": {
           "preset": "RIP",
           "ch0": 62743,
@@ -128365,9 +123994,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03032-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03032-04",
-        "offset_m": 6.3
+        }
       },
       "geometry": {
         "type": "Point",
@@ -128390,6 +124017,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 62+756",
         "status": "Not Started",
+        "drawing_ref": "DW-03032-04",
+        "offset_m": 6.59,
         "di_set": {
           "preset": "RIP",
           "ch0": 62756.03,
@@ -128399,9 +124028,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03032-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03032-04",
-        "offset_m": 6.59
+        }
       },
       "geometry": {
         "type": "Point",
@@ -128424,6 +124051,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 62+925",
         "status": "Not Started",
+        "drawing_ref": "DW-03032-04",
+        "offset_m": 8.83,
         "di_set": {
           "preset": "RIP",
           "ch0": 62925,
@@ -128433,9 +124062,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03032-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03032-04",
-        "offset_m": 8.83
+        }
       },
       "geometry": {
         "type": "Point",
@@ -128458,6 +124085,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 63+227 – PK 63+389",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03033-04",
+        "offset_m": 10.84,
         "di_set": {
           "ch0": 63227.48,
           "ch1": 63389.32,
@@ -128466,10 +124096,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03033-04",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03033-04",
-        "offset_m": 10.84
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -128626,6 +124253,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 64+504",
         "status": "Not Started",
+        "drawing_ref": "DW-03033-04",
+        "offset_m": 8.57,
         "di_set": {
           "preset": "RIP",
           "ch0": 64503.99,
@@ -128635,9 +124264,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03033-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03033-04",
-        "offset_m": 8.57
+        }
       },
       "geometry": {
         "type": "Point",
@@ -128660,6 +124287,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 64+516",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03033-04",
+        "offset_m": 7.58,
         "di_set": {
           "preset": "WD",
           "ch0": 64515.99,
@@ -128668,10 +124298,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.58,
           "sheet": "DW-03033-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03033-04",
-        "offset_m": 7.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -128694,6 +124321,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 64+557",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03033-04",
+        "offset_m": 7.58,
         "di_set": {
           "preset": "WD",
           "ch0": 64556.99,
@@ -128702,10 +124332,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.58,
           "sheet": "DW-03033-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03033-04",
-        "offset_m": 7.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -128728,6 +124355,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 64+598",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03033-04",
+        "offset_m": 7.58,
         "di_set": {
           "preset": "WD",
           "ch0": 64597.99,
@@ -128736,10 +124366,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.58,
           "sheet": "DW-03033-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03033-04",
-        "offset_m": 7.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -128762,6 +124389,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 64+639",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03034-04",
+        "offset_m": 7.58,
         "di_set": {
           "preset": "WD",
           "ch0": 64638.99,
@@ -128770,10 +124400,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.58,
           "sheet": "DW-03034-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03034-04",
-        "offset_m": 7.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -128796,6 +124423,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 64+680",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03034-04",
+        "offset_m": 7.58,
         "di_set": {
           "preset": "WD",
           "ch0": 64679.99,
@@ -128804,10 +124434,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.58,
           "sheet": "DW-03034-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03034-04",
-        "offset_m": 7.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -128830,6 +124457,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 64+721",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03034-04",
+        "offset_m": 7.58,
         "di_set": {
           "preset": "WD",
           "ch0": 64720.99,
@@ -128838,10 +124468,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.58,
           "sheet": "DW-03034-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03034-04",
-        "offset_m": 7.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -128864,6 +124491,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 64+762",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03034-04",
+        "offset_m": 7.58,
         "di_set": {
           "preset": "WD",
           "ch0": 64761.99,
@@ -128872,10 +124502,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.58,
           "sheet": "DW-03034-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03034-04",
-        "offset_m": 7.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -128898,6 +124525,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 64+803",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03034-04",
+        "offset_m": 7.58,
         "di_set": {
           "preset": "WD",
           "ch0": 64802.99,
@@ -128906,10 +124536,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.58,
           "sheet": "DW-03034-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03034-04",
-        "offset_m": 7.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -128932,6 +124559,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 64+833",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03034-04",
+        "offset_m": 14.69,
         "di_set": {
           "preset": "D-SD",
           "ch0": 64833.41,
@@ -128940,10 +124570,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 14.69,
           "sheet": "DW-03034-04",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03034-04",
-        "offset_m": 14.69
+        }
       },
       "geometry": {
         "type": "Point",
@@ -128966,6 +124593,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 64+844",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03034-04",
+        "offset_m": 7.58,
         "di_set": {
           "preset": "WD",
           "ch0": 64843.99,
@@ -128974,10 +124604,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.58,
           "sheet": "DW-03034-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03034-04",
-        "offset_m": 7.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -129000,6 +124627,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 64+884",
         "status": "Not Started",
+        "drawing_ref": "DW-03034-04",
+        "offset_m": 7.71,
         "di_set": {
           "preset": "RIP",
           "ch0": 64883.7,
@@ -129009,9 +124638,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03034-04",
           "cert": "label",
           "stated": 13
-        },
-        "drawing_ref": "DW-03034-04",
-        "offset_m": 7.71
+        }
       },
       "geometry": {
         "type": "Point",
@@ -129034,6 +124661,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 64+885",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03034-04",
+        "offset_m": 7.63,
         "di_set": {
           "preset": "WD",
           "ch0": 64885,
@@ -129042,10 +124672,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.63,
           "sheet": "DW-03034-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03034-04",
-        "offset_m": 7.63
+        }
       },
       "geometry": {
         "type": "Point",
@@ -129068,6 +124695,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 64+926",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03034-04",
+        "offset_m": 7.58,
         "di_set": {
           "preset": "WD",
           "ch0": 64925.99,
@@ -129076,10 +124706,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.58,
           "sheet": "DW-03034-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03034-04",
-        "offset_m": 7.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -129102,6 +124729,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 64+950",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03034-04",
+        "offset_m": 7.58,
         "di_set": {
           "preset": "WD",
           "ch0": 64949.99,
@@ -129110,10 +124740,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.58,
           "sheet": "DW-03034-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03034-04",
-        "offset_m": 7.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -129136,6 +124763,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 65+475",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03034-04",
+        "offset_m": 7.6,
         "di_set": {
           "preset": "WD",
           "ch0": 65474.91,
@@ -129144,10 +124774,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.6,
           "sheet": "DW-03034-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03034-04",
-        "offset_m": 7.6
+        }
       },
       "geometry": {
         "type": "Point",
@@ -129170,6 +124797,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 65+505",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03034-04",
+        "offset_m": 7.75,
         "di_set": {
           "preset": "WD",
           "ch0": 65504.97,
@@ -129178,10 +124808,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.75,
           "sheet": "DW-03034-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03034-04",
-        "offset_m": 7.75
+        }
       },
       "geometry": {
         "type": "Point",
@@ -129204,6 +124831,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 65+537",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03034-04",
+        "offset_m": 7.78,
         "di_set": {
           "preset": "WD",
           "ch0": 65536.96,
@@ -129212,10 +124842,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.78,
           "sheet": "DW-03034-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03034-04",
-        "offset_m": 7.78
+        }
       },
       "geometry": {
         "type": "Point",
@@ -129238,6 +124865,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 65+569",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03034-04",
+        "offset_m": 7.73,
         "di_set": {
           "preset": "WD",
           "ch0": 65568.98,
@@ -129246,10 +124876,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.73,
           "sheet": "DW-03034-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03034-04",
-        "offset_m": 7.73
+        }
       },
       "geometry": {
         "type": "Point",
@@ -129272,6 +124899,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 65+601",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03034-04",
+        "offset_m": 7.54,
         "di_set": {
           "preset": "WD",
           "ch0": 65600.89,
@@ -129280,10 +124910,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.54,
           "sheet": "DW-03034-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03034-04",
-        "offset_m": 7.54
+        }
       },
       "geometry": {
         "type": "Point",
@@ -129306,6 +124933,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 65+633",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03034-04",
+        "offset_m": 7.71,
         "di_set": {
           "preset": "WD",
           "ch0": 65633.05,
@@ -129314,10 +124944,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.71,
           "sheet": "DW-03034-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03034-04",
-        "offset_m": 7.71
+        }
       },
       "geometry": {
         "type": "Point",
@@ -129340,6 +124967,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 65+665",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03034-04",
+        "offset_m": 7.59,
         "di_set": {
           "preset": "WD",
           "ch0": 65665.03,
@@ -129348,10 +124978,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.59,
           "sheet": "DW-03034-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03034-04",
-        "offset_m": 7.59
+        }
       },
       "geometry": {
         "type": "Point",
@@ -129374,6 +125001,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 65+697",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03034-04",
+        "offset_m": 7.83,
         "di_set": {
           "preset": "WD",
           "ch0": 65696.89,
@@ -129382,10 +125012,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.83,
           "sheet": "DW-03034-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03034-04",
-        "offset_m": 7.83
+        }
       },
       "geometry": {
         "type": "Point",
@@ -129408,6 +125035,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 65+729",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03034-04",
+        "offset_m": 7.53,
         "di_set": {
           "preset": "WD",
           "ch0": 65729.01,
@@ -129416,10 +125046,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.53,
           "sheet": "DW-03034-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03034-04",
-        "offset_m": 7.53
+        }
       },
       "geometry": {
         "type": "Point",
@@ -129442,6 +125069,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 65+761",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03034-04",
+        "offset_m": 7.79,
         "di_set": {
           "preset": "WD",
           "ch0": 65761.02,
@@ -129450,10 +125080,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.79,
           "sheet": "DW-03034-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03034-04",
-        "offset_m": 7.79
+        }
       },
       "geometry": {
         "type": "Point",
@@ -129476,6 +125103,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 65+775 – PK 65+855",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03034-04",
+        "offset_m": 12.97,
         "di_set": {
           "ch0": 65774.92,
           "ch1": 65854.65,
@@ -129484,10 +125114,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03034-04",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03034-04",
-        "offset_m": 12.97
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -129576,6 +125203,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 65+793",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03034-04",
+        "offset_m": 7.92,
         "di_set": {
           "preset": "WD",
           "ch0": 65792.98,
@@ -129584,10 +125214,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.92,
           "sheet": "DW-03034-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03034-04",
-        "offset_m": 7.92
+        }
       },
       "geometry": {
         "type": "Point",
@@ -129610,6 +125237,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 65+850",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03034-04",
+        "offset_m": 7.75,
         "di_set": {
           "preset": "WD",
           "ch0": 65850.08,
@@ -129618,10 +125248,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.75,
           "sheet": "DW-03034-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03034-04",
-        "offset_m": 7.75
+        }
       },
       "geometry": {
         "type": "Point",
@@ -129644,6 +125271,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 65+859 – PK 65+950",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03034-04",
+        "offset_m": 12.35,
         "di_set": {
           "ch0": 65859.41,
           "ch1": 65950.01,
@@ -129652,10 +125282,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03034-04",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03034-04",
-        "offset_m": 12.35
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -129756,6 +125383,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 65+866",
         "status": "Not Started",
+        "drawing_ref": "DW-03034-04",
+        "offset_m": 10.37,
         "di_set": {
           "preset": "RIP",
           "ch0": 65865.57,
@@ -129765,9 +125394,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03034-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03034-04",
-        "offset_m": 10.37
+        }
       },
       "geometry": {
         "type": "Point",
@@ -129790,6 +125417,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 65+875",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03034-04",
+        "offset_m": 7.75,
         "di_set": {
           "preset": "WD",
           "ch0": 65875.11,
@@ -129798,10 +125428,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.75,
           "sheet": "DW-03034-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03034-04",
-        "offset_m": 7.75
+        }
       },
       "geometry": {
         "type": "Point",
@@ -129824,6 +125451,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 65+900",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03034-04",
+        "offset_m": 7.75,
         "di_set": {
           "preset": "WD",
           "ch0": 65900.08,
@@ -129832,10 +125462,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.75,
           "sheet": "DW-03034-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03034-04",
-        "offset_m": 7.75
+        }
       },
       "geometry": {
         "type": "Point",
@@ -129858,6 +125485,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 66+928",
         "status": "Not Started",
+        "drawing_ref": "DW-03035-04",
+        "offset_m": 8.47,
         "di_set": {
           "preset": "RIP",
           "ch0": 66928,
@@ -129867,9 +125496,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03035-04",
           "cert": "label",
           "stated": 122
-        },
-        "drawing_ref": "DW-03035-04",
-        "offset_m": 8.47
+        }
       },
       "geometry": {
         "type": "Point",
@@ -129892,6 +125519,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 67+407",
         "status": "Not Started",
+        "drawing_ref": "DW-03036-04",
+        "offset_m": 7.56,
         "di_set": {
           "preset": "RIP",
           "ch0": 67407.11,
@@ -129901,9 +125530,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03036-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03036-04",
-        "offset_m": 7.56
+        }
       },
       "geometry": {
         "type": "Point",
@@ -129926,6 +125553,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 13 rectangular toe ditch",
         "chainage_str": "PK 67+725 – PK 67+775",
         "status": "Not Started",
+        "short_code": "T13",
+        "drawing_ref": "DW-03036-04",
+        "offset_m": 9.6,
         "di_set": {
           "ch0": 67724.97,
           "ch1": 67774.99,
@@ -129934,10 +125564,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03036-04",
           "preset": "T13"
-        },
-        "short_code": "T13",
-        "drawing_ref": "DW-03036-04",
-        "offset_m": 9.6
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -130006,6 +125633,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 67+899",
         "status": "Not Started",
+        "drawing_ref": "DW-03036-04",
+        "offset_m": 6.25,
         "di_set": {
           "preset": "RIP",
           "ch0": 67899.14,
@@ -130015,9 +125644,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03036-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03036-04",
-        "offset_m": 6.25
+        }
       },
       "geometry": {
         "type": "Point",
@@ -130040,6 +125667,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 68+284",
         "status": "Not Started",
+        "drawing_ref": "DW-03036-04",
+        "offset_m": 6.62,
         "di_set": {
           "preset": "RIP",
           "ch0": 68284,
@@ -130049,9 +125678,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03036-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03036-04",
-        "offset_m": 6.62
+        }
       },
       "geometry": {
         "type": "Point",
@@ -130074,6 +125701,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 68+306",
         "status": "Not Started",
+        "drawing_ref": "DW-03036-04",
+        "offset_m": 6.64,
         "di_set": {
           "preset": "RIP",
           "ch0": 68306,
@@ -130083,9 +125712,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03036-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03036-04",
-        "offset_m": 6.64
+        }
       },
       "geometry": {
         "type": "Point",
@@ -130108,6 +125735,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 68+600",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03036-04",
+        "offset_m": 7.56,
         "di_set": {
           "preset": "WD",
           "ch0": 68599.96,
@@ -130116,10 +125746,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.56,
           "sheet": "DW-03036-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03036-04",
-        "offset_m": 7.56
+        }
       },
       "geometry": {
         "type": "Point",
@@ -130142,6 +125769,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 68+625",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03036-04",
+        "offset_m": 7.56,
         "di_set": {
           "preset": "WD",
           "ch0": 68624.96,
@@ -130150,10 +125780,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.56,
           "sheet": "DW-03036-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03036-04",
-        "offset_m": 7.56
+        }
       },
       "geometry": {
         "type": "Point",
@@ -130176,6 +125803,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 68+650",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03036-04",
+        "offset_m": 7.6,
         "di_set": {
           "preset": "WD",
           "ch0": 68650.01,
@@ -130184,10 +125814,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.6,
           "sheet": "DW-03036-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03036-04",
-        "offset_m": 7.6
+        }
       },
       "geometry": {
         "type": "Point",
@@ -130210,6 +125837,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 68+675",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03036-04",
+        "offset_m": 7.73,
         "di_set": {
           "preset": "WD",
           "ch0": 68674.96,
@@ -130218,10 +125848,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.73,
           "sheet": "DW-03036-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03036-04",
-        "offset_m": 7.73
+        }
       },
       "geometry": {
         "type": "Point",
@@ -130244,6 +125871,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 68+700 – PK 68+750",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03036-04",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 68700,
           "ch1": 68750,
@@ -130252,10 +125882,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03036-04",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03036-04",
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -130320,6 +125947,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 68+718",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03036-04",
+        "offset_m": 8.15,
         "di_set": {
           "preset": "WD",
           "ch0": 68717.94,
@@ -130328,10 +125958,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.15,
           "sheet": "DW-03036-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03036-04",
-        "offset_m": 8.15
+        }
       },
       "geometry": {
         "type": "Point",
@@ -130354,6 +125981,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 68+723",
         "status": "Not Started",
+        "drawing_ref": "DW-03036-04",
+        "offset_m": 10.48,
         "di_set": {
           "preset": "RIP",
           "ch0": 68722.58,
@@ -130363,9 +125992,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03036-04",
           "cert": "label",
           "stated": 44
-        },
-        "drawing_ref": "DW-03036-04",
-        "offset_m": 10.48
+        }
       },
       "geometry": {
         "type": "Point",
@@ -130388,6 +126015,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 68+735",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03036-04",
+        "offset_m": 8.15,
         "di_set": {
           "preset": "WD",
           "ch0": 68734.94,
@@ -130396,10 +126026,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.15,
           "sheet": "DW-03036-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03036-04",
-        "offset_m": 8.15
+        }
       },
       "geometry": {
         "type": "Point",
@@ -130422,6 +126049,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 68+751",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03036-04",
+        "offset_m": 8.33,
         "di_set": {
           "preset": "WD",
           "ch0": 68750.95,
@@ -130430,10 +126060,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.33,
           "sheet": "DW-03036-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03036-04",
-        "offset_m": 8.33
+        }
       },
       "geometry": {
         "type": "Point",
@@ -130456,6 +126083,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 68+780",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03036-04",
+        "offset_m": 8.14,
         "di_set": {
           "preset": "WD",
           "ch0": 68779.99,
@@ -130464,10 +126094,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.14,
           "sheet": "DW-03036-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03036-04",
-        "offset_m": 8.14
+        }
       },
       "geometry": {
         "type": "Point",
@@ -130490,6 +126117,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 68+810",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03037-04",
+        "offset_m": 7.77,
         "di_set": {
           "preset": "WD",
           "ch0": 68809.98,
@@ -130498,10 +126128,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.77,
           "sheet": "DW-03037-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03037-04",
-        "offset_m": 7.77
+        }
       },
       "geometry": {
         "type": "Point",
@@ -130524,6 +126151,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 68+840",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03037-04",
+        "offset_m": 7.39,
         "di_set": {
           "preset": "WD",
           "ch0": 68839.96,
@@ -130532,10 +126162,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.39,
           "sheet": "DW-03037-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03037-04",
-        "offset_m": 7.39
+        }
       },
       "geometry": {
         "type": "Point",
@@ -130558,6 +126185,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 68+870",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03037-04",
+        "offset_m": 7.49,
         "di_set": {
           "preset": "WD",
           "ch0": 68870.03,
@@ -130566,10 +126196,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.49,
           "sheet": "DW-03037-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03037-04",
-        "offset_m": 7.49
+        }
       },
       "geometry": {
         "type": "Point",
@@ -130592,6 +126219,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 68+900",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03037-04",
+        "offset_m": 8.27,
         "di_set": {
           "preset": "WD",
           "ch0": 68899.98,
@@ -130600,10 +126230,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.27,
           "sheet": "DW-03037-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03037-04",
-        "offset_m": 8.27
+        }
       },
       "geometry": {
         "type": "Point",
@@ -130626,6 +126253,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 68+930",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03037-04",
+        "offset_m": 8.34,
         "di_set": {
           "preset": "WD",
           "ch0": 68929.99,
@@ -130634,10 +126264,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.34,
           "sheet": "DW-03037-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03037-04",
-        "offset_m": 8.34
+        }
       },
       "geometry": {
         "type": "Point",
@@ -130660,6 +126287,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 68+960",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03037-04",
+        "offset_m": 8.19,
         "di_set": {
           "preset": "WD",
           "ch0": 68959.99,
@@ -130668,10 +126298,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.19,
           "sheet": "DW-03037-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03037-04",
-        "offset_m": 8.19
+        }
       },
       "geometry": {
         "type": "Point",
@@ -130694,6 +126321,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 68+990",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03037-04",
+        "offset_m": 7.76,
         "di_set": {
           "preset": "WD",
           "ch0": 68989.89,
@@ -130702,10 +126332,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.76,
           "sheet": "DW-03037-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03037-04",
-        "offset_m": 7.76
+        }
       },
       "geometry": {
         "type": "Point",
@@ -130728,6 +126355,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 69+020",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03037-04",
+        "offset_m": 7.64,
         "di_set": {
           "preset": "WD",
           "ch0": 69019.99,
@@ -130736,10 +126366,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.64,
           "sheet": "DW-03037-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03037-04",
-        "offset_m": 7.64
+        }
       },
       "geometry": {
         "type": "Point",
@@ -130762,6 +126389,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 69+050",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03037-04",
+        "offset_m": 7.64,
         "di_set": {
           "preset": "WD",
           "ch0": 69049.99,
@@ -130770,10 +126400,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.64,
           "sheet": "DW-03037-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03037-04",
-        "offset_m": 7.64
+        }
       },
       "geometry": {
         "type": "Point",
@@ -130796,6 +126423,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 69+075",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03037-04",
+        "offset_m": 7.54,
         "di_set": {
           "preset": "WD",
           "ch0": 69074.99,
@@ -130804,10 +126434,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.54,
           "sheet": "DW-03037-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03037-04",
-        "offset_m": 7.54
+        }
       },
       "geometry": {
         "type": "Point",
@@ -130830,6 +126457,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 69+175 – PK 69+300",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03037-04",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 69175,
           "ch1": 69300.01,
@@ -130838,10 +126468,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03037-04",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03037-04",
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -130970,6 +126597,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 69+210",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03037-04",
+        "offset_m": 7.65,
         "di_set": {
           "preset": "WD",
           "ch0": 69210.01,
@@ -130978,10 +126608,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.65,
           "sheet": "DW-03037-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03037-04",
-        "offset_m": 7.65
+        }
       },
       "geometry": {
         "type": "Point",
@@ -131004,6 +126631,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 69+245",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03037-04",
+        "offset_m": 7.67,
         "di_set": {
           "preset": "WD",
           "ch0": 69245,
@@ -131012,10 +126642,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.67,
           "sheet": "DW-03037-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03037-04",
-        "offset_m": 7.67
+        }
       },
       "geometry": {
         "type": "Point",
@@ -131038,6 +126665,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 69+280",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03037-04",
+        "offset_m": 7.51,
         "di_set": {
           "preset": "WD",
           "ch0": 69279.97,
@@ -131046,10 +126676,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.51,
           "sheet": "DW-03037-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03037-04",
-        "offset_m": 7.51
+        }
       },
       "geometry": {
         "type": "Point",
@@ -131072,6 +126699,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 69+300",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03037-04",
+        "offset_m": 7.38,
         "di_set": {
           "preset": "WD",
           "ch0": 69300.05,
@@ -131080,10 +126710,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.38,
           "sheet": "DW-03037-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03037-04",
-        "offset_m": 7.38
+        }
       },
       "geometry": {
         "type": "Point",
@@ -131106,6 +126733,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 69+489",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03037-04",
+        "offset_m": 7.52,
         "di_set": {
           "preset": "WD",
           "ch0": 69488.74,
@@ -131114,10 +126744,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.52,
           "sheet": "DW-03037-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03037-04",
-        "offset_m": 7.52
+        }
       },
       "geometry": {
         "type": "Point",
@@ -131140,6 +126767,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 69+525",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03037-04",
+        "offset_m": 7.33,
         "di_set": {
           "preset": "WD",
           "ch0": 69525.02,
@@ -131148,10 +126778,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.33,
           "sheet": "DW-03037-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03037-04",
-        "offset_m": 7.33
+        }
       },
       "geometry": {
         "type": "Point",
@@ -131174,6 +126801,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 1 side ditch",
         "chainage_str": "PK 70+217 – PK 70+349",
         "status": "Not Started",
+        "short_code": "T1",
+        "drawing_ref": "DW-03038-05",
+        "offset_m": 4.09,
         "di_set": {
           "ch0": 70216.83,
           "ch1": 70349.47,
@@ -131182,10 +126812,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03038-05",
           "preset": "T1"
-        },
-        "short_code": "T1",
-        "drawing_ref": "DW-03038-05",
-        "offset_m": 4.09
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -131318,6 +126945,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 1 side ditch",
         "chainage_str": "PK 70+223 – PK 70+320",
         "status": "Not Started",
+        "short_code": "T1",
+        "drawing_ref": "DW-03038-05",
+        "offset_m": 4.11,
         "di_set": {
           "ch0": 70223.12,
           "ch1": 70319.99,
@@ -131326,10 +126956,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03038-05",
           "preset": "T1"
-        },
-        "short_code": "T1",
-        "drawing_ref": "DW-03038-05",
-        "offset_m": 4.11
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -131434,6 +127061,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 70+317",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03038-05",
+        "offset_m": 7.46,
         "di_set": {
           "preset": "D-SD",
           "ch0": 70317.49,
@@ -131442,10 +127072,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.46,
           "sheet": "DW-03038-05",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03038-05",
-        "offset_m": 7.46
+        }
       },
       "geometry": {
         "type": "Point",
@@ -131468,6 +127095,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 70+349",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03038-05",
+        "offset_m": 5.45,
         "di_set": {
           "preset": "D-SD",
           "ch0": 70349.47,
@@ -131476,10 +127106,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 5.45,
           "sheet": "DW-03038-05",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03038-05",
-        "offset_m": 5.45
+        }
       },
       "geometry": {
         "type": "Point",
@@ -131502,6 +127129,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 70+455",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03038-05",
+        "offset_m": 9.84,
         "di_set": {
           "preset": "D-SD",
           "ch0": 70455.19,
@@ -131510,10 +127140,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.84,
           "sheet": "DW-03038-05",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03038-05",
-        "offset_m": 9.84
+        }
       },
       "geometry": {
         "type": "Point",
@@ -131536,6 +127163,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 70+534",
         "status": "Not Started",
+        "drawing_ref": "DW-03038-05",
+        "offset_m": 6.11,
         "di_set": {
           "preset": "RIP",
           "ch0": 70534.18,
@@ -131545,9 +127174,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03038-05",
           "cert": "label",
           "stated": 84
-        },
-        "drawing_ref": "DW-03038-05",
-        "offset_m": 6.11
+        }
       },
       "geometry": {
         "type": "Point",
@@ -131570,6 +127197,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 1 side ditch",
         "chainage_str": "PK 70+570 – PK 70+950",
         "status": "Not Started",
+        "short_code": "T1",
+        "drawing_ref": "DW-03038-05",
+        "offset_m": 4.63,
         "di_set": {
           "ch0": 70570.27,
           "ch1": 70950.18,
@@ -131578,10 +127208,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03038-05",
           "preset": "T1"
-        },
-        "short_code": "T1",
-        "drawing_ref": "DW-03038-05",
-        "offset_m": 4.63
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -131850,6 +127477,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 1 side ditch",
         "chainage_str": "PK 70+595 – PK 70+926",
         "status": "Not Started",
+        "short_code": "T1",
+        "drawing_ref": "DW-03038-05",
+        "offset_m": 4.15,
         "di_set": {
           "ch0": 70595.01,
           "ch1": 70925.58,
@@ -131858,10 +127488,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03038-05",
           "preset": "T1"
-        },
-        "short_code": "T1",
-        "drawing_ref": "DW-03038-05",
-        "offset_m": 4.15
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -132126,6 +127753,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 70+926",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03038-05",
+        "offset_m": 4.75,
         "di_set": {
           "preset": "D-SD",
           "ch0": 70925.58,
@@ -132134,10 +127764,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 4.75,
           "sheet": "DW-03038-05",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03038-05",
-        "offset_m": 4.75
+        }
       },
       "geometry": {
         "type": "Point",
@@ -132160,6 +127787,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 70+950",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03038-05",
+        "offset_m": 5.42,
         "di_set": {
           "preset": "D-SD",
           "ch0": 70950.18,
@@ -132168,10 +127798,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 5.42,
           "sheet": "DW-03038-05",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03038-05",
-        "offset_m": 5.42
+        }
       },
       "geometry": {
         "type": "Point",
@@ -132194,6 +127821,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 71+190",
         "status": "Not Started",
+        "drawing_ref": "DW-03038-05",
+        "offset_m": 7.75,
         "di_set": {
           "preset": "RIP",
           "ch0": 71190.06,
@@ -132203,9 +127832,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03038-05",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03038-05",
-        "offset_m": 7.75
+        }
       },
       "geometry": {
         "type": "Point",
@@ -132228,6 +127855,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 71+205",
         "status": "Not Started",
+        "drawing_ref": "DW-03038-05",
+        "offset_m": 8.67,
         "di_set": {
           "preset": "RIP",
           "ch0": 71205,
@@ -132237,9 +127866,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03038-05",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03038-05",
-        "offset_m": 8.67
+        }
       },
       "geometry": {
         "type": "Point",
@@ -132262,6 +127889,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 71+738",
         "status": "Not Started",
+        "drawing_ref": "DW-03039-04",
+        "offset_m": 8.22,
         "di_set": {
           "preset": "RIP",
           "ch0": 71737.77,
@@ -132271,9 +127900,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03039-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03039-04",
-        "offset_m": 8.22
+        }
       },
       "geometry": {
         "type": "Point",
@@ -132296,6 +127923,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 71+753",
         "status": "Not Started",
+        "drawing_ref": "DW-03039-04",
+        "offset_m": 9.13,
         "di_set": {
           "preset": "RIP",
           "ch0": 71752.71,
@@ -132305,9 +127934,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03039-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03039-04",
-        "offset_m": 9.13
+        }
       },
       "geometry": {
         "type": "Point",
@@ -132330,6 +127957,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 4 toe ditch, unlined",
         "chainage_str": "PK 71+800 – PK 71+867",
         "status": "Not Started",
+        "short_code": "T4",
+        "drawing_ref": "DW-03039-04",
+        "offset_m": 10.41,
         "di_set": {
           "ch0": 71799.98,
           "ch1": 71867.32,
@@ -132338,10 +127968,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03039-04",
           "preset": "T4"
-        },
-        "short_code": "T4",
-        "drawing_ref": "DW-03039-04",
-        "offset_m": 10.41
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -132422,6 +128049,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 71+863",
         "status": "Not Started",
+        "drawing_ref": "DW-03039-04",
+        "offset_m": 7.26,
         "di_set": {
           "preset": "RIP",
           "ch0": 71863.27,
@@ -132431,9 +128060,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03039-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03039-04",
-        "offset_m": 7.26
+        }
       },
       "geometry": {
         "type": "Point",
@@ -132456,6 +128083,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 71+878",
         "status": "Not Started",
+        "drawing_ref": "DW-03039-04",
+        "offset_m": 8.18,
         "di_set": {
           "preset": "RIP",
           "ch0": 71878.21,
@@ -132465,9 +128094,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03039-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03039-04",
-        "offset_m": 8.18
+        }
       },
       "geometry": {
         "type": "Point",
@@ -132490,6 +128117,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 72+183",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03039-04",
+        "offset_m": 12.71,
         "di_set": {
           "preset": "D-SD",
           "ch0": 72182.94,
@@ -132498,10 +128128,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.71,
           "sheet": "DW-03039-04",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03039-04",
-        "offset_m": 12.71
+        }
       },
       "geometry": {
         "type": "Point",
@@ -132524,6 +128151,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 72+246",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03039-04",
+        "offset_m": 10.04,
         "di_set": {
           "preset": "D-SD",
           "ch0": 72245.75,
@@ -132532,10 +128162,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 10.04,
           "sheet": "DW-03039-04",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03039-04",
-        "offset_m": 10.04
+        }
       },
       "geometry": {
         "type": "Point",
@@ -132558,6 +128185,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 5 crest ditch, unlined",
         "chainage_str": "PK 72+325 – PK 72+414",
         "status": "Not Started",
+        "short_code": "T5",
+        "drawing_ref": "DW-03039-04",
+        "offset_m": 8.01,
         "di_set": {
           "ch0": 72324.96,
           "ch1": 72413.67,
@@ -132566,10 +128196,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03039-04",
           "preset": "T5"
-        },
-        "short_code": "T5",
-        "drawing_ref": "DW-03039-04",
-        "offset_m": 8.01
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -132666,6 +128293,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 1 side ditch",
         "chainage_str": "PK 72+347 – PK 72+684",
         "status": "Not Started",
+        "short_code": "T1",
+        "drawing_ref": "DW-03039-04",
+        "offset_m": 4.17,
         "di_set": {
           "ch0": 72346.84,
           "ch1": 72683.98,
@@ -132674,10 +128304,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03039-04",
           "preset": "T1"
-        },
-        "short_code": "T1",
-        "drawing_ref": "DW-03039-04",
-        "offset_m": 4.17
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -132942,6 +128569,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 1 side ditch",
         "chainage_str": "PK 72+355 – PK 72+677",
         "status": "Not Started",
+        "short_code": "T1",
+        "drawing_ref": "DW-03039-04",
+        "offset_m": 4.1,
         "di_set": {
           "ch0": 72354.79,
           "ch1": 72677.01,
@@ -132950,10 +128580,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03039-04",
           "preset": "T1"
-        },
-        "short_code": "T1",
-        "drawing_ref": "DW-03039-04",
-        "offset_m": 4.1
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -133218,6 +128845,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 1 side ditch",
         "chainage_str": "PK 72+355 – PK 72+677",
         "status": "Not Started",
+        "short_code": "T1",
+        "drawing_ref": "DW-03039-04",
+        "offset_m": 4.1,
         "di_set": {
           "ch0": 72354.79,
           "ch1": 72677.01,
@@ -133226,10 +128856,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03039-04",
           "preset": "T1"
-        },
-        "short_code": "T1",
-        "drawing_ref": "DW-03039-04",
-        "offset_m": 4.1
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -133494,6 +129121,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 5 crest ditch, unlined",
         "chainage_str": "PK 72+414 – PK 72+679",
         "status": "Not Started",
+        "short_code": "T5",
+        "drawing_ref": "DW-03039-04",
+        "offset_m": 9.68,
         "di_set": {
           "ch0": 72413.67,
           "ch1": 72678.5,
@@ -133502,10 +129132,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03039-04",
           "preset": "T5"
-        },
-        "short_code": "T5",
-        "drawing_ref": "DW-03039-04",
-        "offset_m": 9.68
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -133742,6 +129369,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 72+442",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03039-04",
+        "offset_m": 7.02,
         "di_set": {
           "preset": "WD",
           "ch0": 72442.44,
@@ -133750,10 +129380,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.02,
           "sheet": "DW-03039-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03039-04",
-        "offset_m": 7.02
+        }
       },
       "geometry": {
         "type": "Point",
@@ -133776,6 +129403,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 5 crest ditch, unlined",
         "chainage_str": "PK 72+442 – PK 72+534",
         "status": "Not Started",
+        "short_code": "T5",
+        "drawing_ref": "DW-03039-04",
+        "offset_m": 10.3,
         "di_set": {
           "ch0": 72442.45,
           "ch1": 72534.12,
@@ -133784,10 +129414,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03039-04",
           "preset": "T5"
-        },
-        "short_code": "T5",
-        "drawing_ref": "DW-03039-04",
-        "offset_m": 10.3
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -133888,6 +129515,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 72+546",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03039-04",
+        "offset_m": 6.59,
         "di_set": {
           "preset": "WD",
           "ch0": 72546.1,
@@ -133896,10 +129526,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 6.59,
           "sheet": "DW-03039-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03039-04",
-        "offset_m": 6.59
+        }
       },
       "geometry": {
         "type": "Point",
@@ -133922,6 +129549,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 72+684",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03039-04",
+        "offset_m": 6.36,
         "di_set": {
           "preset": "D-SD",
           "ch0": 72683.98,
@@ -133930,10 +129560,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 6.36,
           "sheet": "DW-03039-04",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03039-04",
-        "offset_m": 6.36
+        }
       },
       "geometry": {
         "type": "Point",
@@ -133956,6 +129583,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 73+100 – PK 73+225",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03040-04",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 73100,
           "ch1": 73225,
@@ -133964,10 +129594,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03040-04",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03040-04",
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -134092,6 +129719,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 73+132",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03040-04",
+        "offset_m": 7.83,
         "di_set": {
           "preset": "WD",
           "ch0": 73131.96,
@@ -134100,10 +129730,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.83,
           "sheet": "DW-03040-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03040-04",
-        "offset_m": 7.83
+        }
       },
       "geometry": {
         "type": "Point",
@@ -134126,6 +129753,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 73+164",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03040-04",
+        "offset_m": 7.82,
         "di_set": {
           "preset": "WD",
           "ch0": 73164.01,
@@ -134134,10 +129764,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.82,
           "sheet": "DW-03040-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03040-04",
-        "offset_m": 7.82
+        }
       },
       "geometry": {
         "type": "Point",
@@ -134160,6 +129787,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 73+168",
         "status": "Not Started",
+        "drawing_ref": "DW-03040-04",
+        "offset_m": 9.94,
         "di_set": {
           "preset": "RIP",
           "ch0": 73168.09,
@@ -134169,9 +129798,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03040-04",
           "cert": "label",
           "stated": 50
-        },
-        "drawing_ref": "DW-03040-04",
-        "offset_m": 9.94
+        }
       },
       "geometry": {
         "type": "Point",
@@ -134194,6 +129821,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 73+196",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03040-04",
+        "offset_m": 7.73,
         "di_set": {
           "preset": "WD",
           "ch0": 73195.97,
@@ -134202,10 +129832,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.73,
           "sheet": "DW-03040-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03040-04",
-        "offset_m": 7.73
+        }
       },
       "geometry": {
         "type": "Point",
@@ -134228,6 +129855,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 73+225",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03040-04",
+        "offset_m": 7.56,
         "di_set": {
           "preset": "WD",
           "ch0": 73225.03,
@@ -134236,10 +129866,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.56,
           "sheet": "DW-03040-04",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03040-04",
-        "offset_m": 7.56
+        }
       },
       "geometry": {
         "type": "Point",
@@ -134262,6 +129889,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 73+948",
         "status": "Not Started",
+        "drawing_ref": "DW-03040-04",
+        "offset_m": 6.76,
         "di_set": {
           "preset": "RIP",
           "ch0": 73947.85,
@@ -134271,9 +129900,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03040-04",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03040-04",
-        "offset_m": 6.76
+        }
       },
       "geometry": {
         "type": "Point",
@@ -134296,6 +129923,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 74+021",
         "status": "Not Started",
+        "drawing_ref": "DW-03040-04",
+        "offset_m": 6.65,
         "di_set": {
           "preset": "RIP",
           "ch0": 74020.88,
@@ -134305,9 +129934,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03040-04",
           "cert": "label",
           "stated": 104
-        },
-        "drawing_ref": "DW-03040-04",
-        "offset_m": 6.65
+        }
       },
       "geometry": {
         "type": "Point",
@@ -134330,6 +129957,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 1 side ditch",
         "chainage_str": "PK 74+087 – PK 74+175",
         "status": "Not Started",
+        "short_code": "T1",
+        "drawing_ref": "DW-03040-04",
+        "offset_m": 4.35,
         "di_set": {
           "ch0": 74086.7,
           "ch1": 74174.54,
@@ -134338,10 +129968,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03040-04",
           "preset": "T1"
-        },
-        "short_code": "T1",
-        "drawing_ref": "DW-03040-04",
-        "offset_m": 4.35
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -134438,6 +130065,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 74+175",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03040-04",
+        "offset_m": 6.79,
         "di_set": {
           "preset": "D-SD",
           "ch0": 74174.54,
@@ -134446,10 +130076,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 6.79,
           "sheet": "DW-03040-04",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03040-04",
-        "offset_m": 6.79
+        }
       },
       "geometry": {
         "type": "Point",
@@ -134472,6 +130099,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 74+656",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03041-05",
+        "offset_m": 7.41,
         "di_set": {
           "preset": "WD",
           "ch0": 74655.69,
@@ -134480,10 +130110,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.41,
           "sheet": "DW-03041-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03041-05",
-        "offset_m": 7.41
+        }
       },
       "geometry": {
         "type": "Point",
@@ -134506,6 +130133,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 74+687",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03041-05",
+        "offset_m": 7.37,
         "di_set": {
           "preset": "WD",
           "ch0": 74686.72,
@@ -134514,10 +130144,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.37,
           "sheet": "DW-03041-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03041-05",
-        "offset_m": 7.37
+        }
       },
       "geometry": {
         "type": "Point",
@@ -134540,6 +130167,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 74+718",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03041-05",
+        "offset_m": 7.79,
         "di_set": {
           "preset": "WD",
           "ch0": 74717.68,
@@ -134548,10 +130178,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.79,
           "sheet": "DW-03041-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03041-05",
-        "offset_m": 7.79
+        }
       },
       "geometry": {
         "type": "Point",
@@ -134574,6 +130201,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 74+749",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03041-05",
+        "offset_m": 8.02,
         "di_set": {
           "preset": "WD",
           "ch0": 74748.67,
@@ -134582,10 +130212,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.02,
           "sheet": "DW-03041-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03041-05",
-        "offset_m": 8.02
+        }
       },
       "geometry": {
         "type": "Point",
@@ -134608,6 +130235,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 74+780",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03041-05",
+        "offset_m": 8.2,
         "di_set": {
           "preset": "WD",
           "ch0": 74779.78,
@@ -134616,10 +130246,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.2,
           "sheet": "DW-03041-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03041-05",
-        "offset_m": 8.2
+        }
       },
       "geometry": {
         "type": "Point",
@@ -134642,6 +130269,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 74+788",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03041-05",
+        "offset_m": 17.9,
         "di_set": {
           "preset": "D-SD",
           "ch0": 74788.41,
@@ -134650,10 +130280,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 17.9,
           "sheet": "DW-03041-05",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03041-05",
-        "offset_m": 17.9
+        }
       },
       "geometry": {
         "type": "Point",
@@ -134676,6 +130303,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 76+360",
         "status": "Not Started",
+        "drawing_ref": "DW-03042-05",
+        "offset_m": 8.73,
         "di_set": {
           "preset": "RIP",
           "ch0": 76359.68,
@@ -134685,9 +130314,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03042-05",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03042-05",
-        "offset_m": 8.73
+        }
       },
       "geometry": {
         "type": "Point",
@@ -134710,6 +130337,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 13 rectangular toe ditch",
         "chainage_str": "PK 76+450 – PK 76+500",
         "status": "Not Started",
+        "short_code": "T13",
+        "drawing_ref": "DW-03042-05",
+        "offset_m": 8.31,
         "di_set": {
           "ch0": 76450.25,
           "ch1": 76499.79,
@@ -134718,10 +130348,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03042-05",
           "preset": "T13"
-        },
-        "short_code": "T13",
-        "drawing_ref": "DW-03042-05",
-        "offset_m": 8.31
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -134786,6 +130413,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 1 side ditch",
         "chainage_str": "PK 76+540 – PK 76+600",
         "status": "Not Started",
+        "short_code": "T1",
+        "drawing_ref": "DW-03042-05",
+        "offset_m": 4.1,
         "di_set": {
           "ch0": 76539.75,
           "ch1": 76600.38,
@@ -134794,10 +130424,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03042-05",
           "preset": "T1"
-        },
-        "short_code": "T1",
-        "drawing_ref": "DW-03042-05",
-        "offset_m": 4.1
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -134874,6 +130501,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 1 side ditch",
         "chainage_str": "PK 76+550 – PK 76+600",
         "status": "Not Started",
+        "short_code": "T1",
+        "drawing_ref": "DW-03042-05",
+        "offset_m": 4.1,
         "di_set": {
           "ch0": 76550.19,
           "ch1": 76599.87,
@@ -134882,10 +130512,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03042-05",
           "preset": "T1"
-        },
-        "short_code": "T1",
-        "drawing_ref": "DW-03042-05",
-        "offset_m": 4.1
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -134950,6 +130577,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 76+599",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03042-05",
+        "offset_m": 6.69,
         "di_set": {
           "preset": "D-SD",
           "ch0": 76599.06,
@@ -134958,10 +130588,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 6.69,
           "sheet": "DW-03042-05",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03042-05",
-        "offset_m": 6.69
+        }
       },
       "geometry": {
         "type": "Point",
@@ -134984,6 +130611,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 76+600",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03042-05",
+        "offset_m": 8.53,
         "di_set": {
           "preset": "D-SD",
           "ch0": 76600.38,
@@ -134992,10 +130622,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.53,
           "sheet": "DW-03042-05",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03042-05",
-        "offset_m": 8.53
+        }
       },
       "geometry": {
         "type": "Point",
@@ -135018,6 +130645,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 76+656",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03042-05",
+        "offset_m": 17.13,
         "di_set": {
           "preset": "D-SD",
           "ch0": 76655.82,
@@ -135026,10 +130656,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 17.13,
           "sheet": "DW-03042-05",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03042-05",
-        "offset_m": 17.13
+        }
       },
       "geometry": {
         "type": "Point",
@@ -135052,6 +130679,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 76+767",
         "status": "Not Started",
+        "drawing_ref": "DW-03042-05",
+        "offset_m": 6.44,
         "di_set": {
           "preset": "RIP",
           "ch0": 76767.05,
@@ -135061,9 +130690,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03042-05",
           "cert": "label",
           "stated": 131
-        },
-        "drawing_ref": "DW-03042-05",
-        "offset_m": 6.44
+        }
       },
       "geometry": {
         "type": "Point",
@@ -135086,6 +130713,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 76+812",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03042-05",
+        "offset_m": 16.05,
         "di_set": {
           "preset": "D-SD",
           "ch0": 76812.49,
@@ -135094,10 +130724,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 16.05,
           "sheet": "DW-03042-05",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03042-05",
-        "offset_m": 16.05
+        }
       },
       "geometry": {
         "type": "Point",
@@ -135120,6 +130747,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 1 side ditch",
         "chainage_str": "PK 76+953 – PK 77+050",
         "status": "Not Started",
+        "short_code": "T1",
+        "drawing_ref": "DW-03042-05",
+        "offset_m": 4.6,
         "di_set": {
           "ch0": 76952.5,
           "ch1": 77050.04,
@@ -135128,10 +130758,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03042-05",
           "preset": "T1"
-        },
-        "short_code": "T1",
-        "drawing_ref": "DW-03042-05",
-        "offset_m": 4.6
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -135236,6 +130863,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 76+953",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03042-05",
+        "offset_m": 6.38,
         "di_set": {
           "preset": "D-SD",
           "ch0": 76952.5,
@@ -135244,10 +130874,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 6.38,
           "sheet": "DW-03042-05",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03042-05",
-        "offset_m": 6.38
+        }
       },
       "geometry": {
         "type": "Point",
@@ -135270,6 +130897,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 1 side ditch",
         "chainage_str": "PK 76+973 – PK 77+202",
         "status": "Not Started",
+        "short_code": "T1",
+        "drawing_ref": "DW-03042-05",
+        "offset_m": 4.49,
         "di_set": {
           "ch0": 76972.89,
           "ch1": 77201.93,
@@ -135278,10 +130908,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03042-05",
           "preset": "T1"
-        },
-        "short_code": "T1",
-        "drawing_ref": "DW-03042-05",
-        "offset_m": 4.49
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -135490,6 +131117,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 76+973",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03042-05",
+        "offset_m": 9,
         "di_set": {
           "preset": "D-SD",
           "ch0": 76972.89,
@@ -135498,10 +131128,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9,
           "sheet": "DW-03042-05",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03042-05",
-        "offset_m": 9
+        }
       },
       "geometry": {
         "type": "Point",
@@ -135524,6 +131151,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 1 side ditch",
         "chainage_str": "PK 77+050 – PK 77+225",
         "status": "Not Started",
+        "short_code": "T1",
+        "drawing_ref": "DW-03042-05",
+        "offset_m": 4.1,
         "di_set": {
           "ch0": 77050.04,
           "ch1": 77225,
@@ -135532,10 +131162,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03042-05",
           "preset": "T1"
-        },
-        "short_code": "T1",
-        "drawing_ref": "DW-03042-05",
-        "offset_m": 4.1
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -135700,6 +131327,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 77+800",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03043-05",
+        "offset_m": 7.11,
         "di_set": {
           "preset": "WD",
           "ch0": 77800,
@@ -135708,10 +131338,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.11,
           "sheet": "DW-03043-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03043-05",
-        "offset_m": 7.11
+        }
       },
       "geometry": {
         "type": "Point",
@@ -135734,6 +131361,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 77+848",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03043-05",
+        "offset_m": 7.68,
         "di_set": {
           "preset": "WD",
           "ch0": 77847.8,
@@ -135742,10 +131372,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.68,
           "sheet": "DW-03043-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03043-05",
-        "offset_m": 7.68
+        }
       },
       "geometry": {
         "type": "Point",
@@ -135768,6 +131395,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 77+900",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03043-05",
+        "offset_m": 7.24,
         "di_set": {
           "preset": "WD",
           "ch0": 77899.96,
@@ -135776,10 +131406,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.24,
           "sheet": "DW-03043-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03043-05",
-        "offset_m": 7.24
+        }
       },
       "geometry": {
         "type": "Point",
@@ -135802,6 +131429,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 77+950",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03043-05",
+        "offset_m": 7.2,
         "di_set": {
           "preset": "WD",
           "ch0": 77949.83,
@@ -135810,10 +131440,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.2,
           "sheet": "DW-03043-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03043-05",
-        "offset_m": 7.2
+        }
       },
       "geometry": {
         "type": "Point",
@@ -135836,6 +131463,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 78+000",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03043-05",
+        "offset_m": 7.71,
         "di_set": {
           "preset": "WD",
           "ch0": 77999.86,
@@ -135844,10 +131474,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.71,
           "sheet": "DW-03043-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03043-05",
-        "offset_m": 7.71
+        }
       },
       "geometry": {
         "type": "Point",
@@ -135870,6 +131497,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 78+050",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03043-05",
+        "offset_m": 7.75,
         "di_set": {
           "preset": "WD",
           "ch0": 78050.02,
@@ -135878,10 +131508,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.75,
           "sheet": "DW-03043-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03043-05",
-        "offset_m": 7.75
+        }
       },
       "geometry": {
         "type": "Point",
@@ -135904,6 +131531,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 78+070",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03043-05",
+        "offset_m": 14.31,
         "di_set": {
           "preset": "D-SD",
           "ch0": 78070.34,
@@ -135912,10 +131542,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 14.31,
           "sheet": "DW-03043-05",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03043-05",
-        "offset_m": 14.31
+        }
       },
       "geometry": {
         "type": "Point",
@@ -135938,6 +131565,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 78+100",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03043-05",
+        "offset_m": 7.38,
         "di_set": {
           "preset": "WD",
           "ch0": 78100.04,
@@ -135946,10 +131576,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.38,
           "sheet": "DW-03043-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03043-05",
-        "offset_m": 7.38
+        }
       },
       "geometry": {
         "type": "Point",
@@ -135972,6 +131599,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 78+150",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03043-05",
+        "offset_m": 7.25,
         "di_set": {
           "preset": "WD",
           "ch0": 78150,
@@ -135980,10 +131610,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.25,
           "sheet": "DW-03043-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03043-05",
-        "offset_m": 7.25
+        }
       },
       "geometry": {
         "type": "Point",
@@ -136006,6 +131633,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 78+375",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03043-05",
+        "offset_m": 7.16,
         "di_set": {
           "preset": "WD",
           "ch0": 78374.87,
@@ -136014,10 +131644,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.16,
           "sheet": "DW-03043-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03043-05",
-        "offset_m": 7.16
+        }
       },
       "geometry": {
         "type": "Point",
@@ -136040,6 +131667,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 78+389",
         "status": "Not Started",
+        "drawing_ref": "DW-03043-05",
+        "offset_m": 7.14,
         "di_set": {
           "preset": "RIP",
           "ch0": 78389.45,
@@ -136049,9 +131678,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03043-05",
           "cert": "label",
           "stated": 272
-        },
-        "drawing_ref": "DW-03043-05",
-        "offset_m": 7.14
+        }
       },
       "geometry": {
         "type": "Point",
@@ -136074,6 +131701,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 78+425",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03043-05",
+        "offset_m": 7.16,
         "di_set": {
           "preset": "WD",
           "ch0": 78424.87,
@@ -136082,10 +131712,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.16,
           "sheet": "DW-03043-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03043-05",
-        "offset_m": 7.16
+        }
       },
       "geometry": {
         "type": "Point",
@@ -136108,6 +131735,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 78+475",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03043-05",
+        "offset_m": 7.16,
         "di_set": {
           "preset": "WD",
           "ch0": 78474.87,
@@ -136116,10 +131746,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.16,
           "sheet": "DW-03043-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03043-05",
-        "offset_m": 7.16
+        }
       },
       "geometry": {
         "type": "Point",
@@ -136142,6 +131769,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 78+526",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03043-05",
+        "offset_m": 7.87,
         "di_set": {
           "preset": "WD",
           "ch0": 78526.1,
@@ -136150,10 +131780,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.87,
           "sheet": "DW-03043-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03043-05",
-        "offset_m": 7.87
+        }
       },
       "geometry": {
         "type": "Point",
@@ -136176,6 +131803,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 78+575",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03043-05",
+        "offset_m": 7.57,
         "di_set": {
           "preset": "WD",
           "ch0": 78574.93,
@@ -136184,10 +131814,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.57,
           "sheet": "DW-03043-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03043-05",
-        "offset_m": 7.57
+        }
       },
       "geometry": {
         "type": "Point",
@@ -136210,6 +131837,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 78+625",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03044-05",
+        "offset_m": 7.91,
         "di_set": {
           "preset": "WD",
           "ch0": 78625.19,
@@ -136218,10 +131848,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.91,
           "sheet": "DW-03044-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03044-05",
-        "offset_m": 7.91
+        }
       },
       "geometry": {
         "type": "Point",
@@ -136244,6 +131871,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 78+675",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03044-05",
+        "offset_m": 6.37,
         "di_set": {
           "preset": "WD",
           "ch0": 78675.03,
@@ -136252,10 +131882,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 6.37,
           "sheet": "DW-03044-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03044-05",
-        "offset_m": 6.37
+        }
       },
       "geometry": {
         "type": "Point",
@@ -136278,6 +131905,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 78+732",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03044-05",
+        "offset_m": 16.4,
         "di_set": {
           "preset": "D-SD",
           "ch0": 78731.71,
@@ -136286,10 +131916,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 16.4,
           "sheet": "DW-03044-05",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03044-05",
-        "offset_m": 16.4
+        }
       },
       "geometry": {
         "type": "Point",
@@ -136312,6 +131939,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 78+795",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03044-05",
+        "offset_m": 16.71,
         "di_set": {
           "preset": "D-SD",
           "ch0": 78795.19,
@@ -136320,10 +131950,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 16.71,
           "sheet": "DW-03044-05",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03044-05",
-        "offset_m": 16.71
+        }
       },
       "geometry": {
         "type": "Point",
@@ -136346,6 +131973,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 78+805",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03044-05",
+        "offset_m": 7.96,
         "di_set": {
           "preset": "WD",
           "ch0": 78805.37,
@@ -136354,10 +131984,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.96,
           "sheet": "DW-03044-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03044-05",
-        "offset_m": 7.96
+        }
       },
       "geometry": {
         "type": "Point",
@@ -136380,6 +132007,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 79+025 – PK 79+075",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03044-05",
+        "offset_m": 9.01,
         "di_set": {
           "ch0": 79025.12,
           "ch1": 79075.04,
@@ -136388,10 +132018,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03044-05",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03044-05",
-        "offset_m": 9.01
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -136456,6 +132083,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 79+079 – PK 79+150",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03044-05",
+        "offset_m": 8.81,
         "di_set": {
           "ch0": 79079.17,
           "ch1": 79149.93,
@@ -136464,10 +132094,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03044-05",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03044-05",
-        "offset_m": 8.81
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -136552,6 +132179,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 79+088",
         "status": "Not Started",
+        "drawing_ref": "DW-03044-05",
+        "offset_m": 7.86,
         "di_set": {
           "preset": "RIP",
           "ch0": 79087.92,
@@ -136561,9 +132190,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03044-05",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03044-05",
-        "offset_m": 7.86
+        }
       },
       "geometry": {
         "type": "Point",
@@ -136586,6 +132213,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 79+200",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03044-05",
+        "offset_m": 7.12,
         "di_set": {
           "preset": "WD",
           "ch0": 79199.62,
@@ -136594,10 +132224,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.12,
           "sheet": "DW-03044-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03044-05",
-        "offset_m": 7.12
+        }
       },
       "geometry": {
         "type": "Point",
@@ -136620,6 +132247,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 79+254",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03044-05",
+        "offset_m": 8.12,
         "di_set": {
           "preset": "WD",
           "ch0": 79253.64,
@@ -136628,10 +132258,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.12,
           "sheet": "DW-03044-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03044-05",
-        "offset_m": 8.12
+        }
       },
       "geometry": {
         "type": "Point",
@@ -136654,6 +132281,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 79+307",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03044-05",
+        "offset_m": 8.19,
         "di_set": {
           "preset": "WD",
           "ch0": 79306.99,
@@ -136662,10 +132292,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.19,
           "sheet": "DW-03044-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03044-05",
-        "offset_m": 8.19
+        }
       },
       "geometry": {
         "type": "Point",
@@ -136688,6 +132315,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 79+344",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03044-05",
+        "offset_m": 13.24,
         "di_set": {
           "preset": "D-SD",
           "ch0": 79344.04,
@@ -136696,10 +132326,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 13.24,
           "sheet": "DW-03044-05",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03044-05",
-        "offset_m": 13.24
+        }
       },
       "geometry": {
         "type": "Point",
@@ -136722,6 +132349,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 79+360",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03044-05",
+        "offset_m": 7.59,
         "di_set": {
           "preset": "WD",
           "ch0": 79360.01,
@@ -136730,10 +132360,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.59,
           "sheet": "DW-03044-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03044-05",
-        "offset_m": 7.59
+        }
       },
       "geometry": {
         "type": "Point",
@@ -136756,6 +132383,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 79+413",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03044-05",
+        "offset_m": 7.63,
         "di_set": {
           "preset": "WD",
           "ch0": 79412.93,
@@ -136764,10 +132394,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.63,
           "sheet": "DW-03044-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03044-05",
-        "offset_m": 7.63
+        }
       },
       "geometry": {
         "type": "Point",
@@ -136790,6 +132417,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 79+451 – PK 79+500",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03044-05",
+        "offset_m": 12.03,
         "di_set": {
           "ch0": 79450.55,
           "ch1": 79500.17,
@@ -136798,10 +132428,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03044-05",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03044-05",
-        "offset_m": 12.03
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -136866,6 +132493,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 79+466",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03044-05",
+        "offset_m": 6.85,
         "di_set": {
           "preset": "WD",
           "ch0": 79465.99,
@@ -136874,10 +132504,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 6.85,
           "sheet": "DW-03044-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03044-05",
-        "offset_m": 6.85
+        }
       },
       "geometry": {
         "type": "Point",
@@ -136900,6 +132527,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 79+519",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03044-05",
+        "offset_m": 7.36,
         "di_set": {
           "preset": "WD",
           "ch0": 79519.08,
@@ -136908,10 +132538,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.36,
           "sheet": "DW-03044-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03044-05",
-        "offset_m": 7.36
+        }
       },
       "geometry": {
         "type": "Point",
@@ -136934,6 +132561,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 79+572",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03044-05",
+        "offset_m": 7.36,
         "di_set": {
           "preset": "WD",
           "ch0": 79572.08,
@@ -136942,10 +132572,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.36,
           "sheet": "DW-03044-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03044-05",
-        "offset_m": 7.36
+        }
       },
       "geometry": {
         "type": "Point",
@@ -136968,6 +132595,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 79+800",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03044-05",
+        "offset_m": 7.25,
         "di_set": {
           "preset": "WD",
           "ch0": 79800.04,
@@ -136976,10 +132606,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.25,
           "sheet": "DW-03044-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03044-05",
-        "offset_m": 7.25
+        }
       },
       "geometry": {
         "type": "Point",
@@ -137002,6 +132629,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 79+875",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03044-05",
+        "offset_m": 7.31,
         "di_set": {
           "preset": "WD",
           "ch0": 79875.04,
@@ -137010,10 +132640,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.31,
           "sheet": "DW-03044-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03044-05",
-        "offset_m": 7.31
+        }
       },
       "geometry": {
         "type": "Point",
@@ -137036,6 +132663,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 79+955",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03044-05",
+        "offset_m": 7.82,
         "di_set": {
           "preset": "WD",
           "ch0": 79955.05,
@@ -137044,10 +132674,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.82,
           "sheet": "DW-03044-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03044-05",
-        "offset_m": 7.82
+        }
       },
       "geometry": {
         "type": "Point",
@@ -137070,6 +132697,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 80+031 – PK 80+044",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 14.63,
         "di_set": {
           "ch0": 80031.06,
           "ch1": 80044.4,
@@ -137078,10 +132708,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03045-05",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 14.63
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -137118,6 +132745,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 80+035",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 8.86,
         "di_set": {
           "preset": "WD",
           "ch0": 80035.06,
@@ -137126,10 +132756,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.86,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 8.86
+        }
       },
       "geometry": {
         "type": "Point",
@@ -137152,6 +132779,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 80+039",
         "status": "Not Started",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 11.71,
         "di_set": {
           "preset": "RIP",
           "ch0": 80038.81,
@@ -137161,9 +132790,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03045-05",
           "cert": "label",
           "stated": 20
-        },
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 11.71
+        }
       },
       "geometry": {
         "type": "Point",
@@ -137186,6 +132813,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 80+054",
         "status": "Not Started",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 12.84,
         "di_set": {
           "preset": "RIP",
           "ch0": 80053.69,
@@ -137195,9 +132824,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03045-05",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 12.84
+        }
       },
       "geometry": {
         "type": "Point",
@@ -137220,6 +132847,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 80+115",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 8.86,
         "di_set": {
           "preset": "WD",
           "ch0": 80115.06,
@@ -137228,10 +132858,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.86,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 8.86
+        }
       },
       "geometry": {
         "type": "Point",
@@ -137254,6 +132881,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 80+181",
         "status": "Not Started",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 15.57,
         "di_set": {
           "preset": "RIP",
           "ch0": 80181.05,
@@ -137263,9 +132892,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03045-05",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 15.57
+        }
       },
       "geometry": {
         "type": "Point",
@@ -137288,6 +132915,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 80+192 – PK 80+221",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 17.74,
         "di_set": {
           "ch0": 80192.38,
           "ch1": 80220.94,
@@ -137296,10 +132926,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03045-05",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 17.74
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -137348,6 +132975,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 80+195",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 9.91,
         "di_set": {
           "preset": "WD",
           "ch0": 80195.02,
@@ -137356,10 +132986,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.91,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 9.91
+        }
       },
       "geometry": {
         "type": "Point",
@@ -137382,6 +133009,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 80+196",
         "status": "Not Started",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 16.71,
         "di_set": {
           "preset": "RIP",
           "ch0": 80195.93,
@@ -137391,9 +133020,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03045-05",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 16.71
+        }
       },
       "geometry": {
         "type": "Point",
@@ -137416,6 +133043,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 1 side ditch",
         "chainage_str": "PK 80+242 – PK 80+401",
         "status": "Not Started",
+        "short_code": "T1",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 3.31,
         "di_set": {
           "ch0": 80241.82,
           "ch1": 80400.67,
@@ -137424,10 +133054,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03045-05",
           "preset": "T1"
-        },
-        "short_code": "T1",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 3.31
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -137580,6 +133207,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 80+275",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 11.92,
         "di_set": {
           "preset": "WD",
           "ch0": 80275.01,
@@ -137588,10 +133218,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.92,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 11.92
+        }
       },
       "geometry": {
         "type": "Point",
@@ -137614,6 +133241,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 80+355",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 13.11,
         "di_set": {
           "preset": "WD",
           "ch0": 80355.01,
@@ -137622,10 +133252,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 13.11,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 13.11
+        }
       },
       "geometry": {
         "type": "Point",
@@ -137648,6 +133275,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 80+435",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 13.11,
         "di_set": {
           "preset": "WD",
           "ch0": 80435.01,
@@ -137656,10 +133286,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 13.11,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 13.11
+        }
       },
       "geometry": {
         "type": "Point",
@@ -137682,6 +133309,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 80+515",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 14.22,
         "di_set": {
           "preset": "WD",
           "ch0": 80515.02,
@@ -137690,10 +133320,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 14.22,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 14.22
+        }
       },
       "geometry": {
         "type": "Point",
@@ -137716,6 +133343,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 80+595",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 14.22,
         "di_set": {
           "preset": "WD",
           "ch0": 80595.02,
@@ -137724,10 +133354,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 14.22,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 14.22
+        }
       },
       "geometry": {
         "type": "Point",
@@ -137750,6 +133377,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 8 bench ditch",
         "chainage_str": "PK 80+675 – PK 81+275",
         "status": "Not Started",
+        "short_code": "T8",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 12.85,
         "di_set": {
           "ch0": 80675,
           "ch1": 81274.96,
@@ -137758,10 +133388,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03045-05",
           "preset": "T8"
-        },
-        "short_code": "T8",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 12.85
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -138026,6 +133653,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 80+675 – PK 80+825",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 80675,
           "ch1": 80825,
@@ -138034,10 +133664,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03045-05",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -138182,6 +133809,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 80+675",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 14.17,
         "di_set": {
           "preset": "WD",
           "ch0": 80675.01,
@@ -138190,10 +133820,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 14.17,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 14.17
+        }
       },
       "geometry": {
         "type": "Point",
@@ -138216,6 +133843,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 80+725",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 14.37,
         "di_set": {
           "preset": "WD",
           "ch0": 80725.09,
@@ -138224,10 +133854,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 14.37,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 14.37
+        }
       },
       "geometry": {
         "type": "Point",
@@ -138250,6 +133877,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 80+775",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 14.28,
         "di_set": {
           "preset": "WD",
           "ch0": 80775,
@@ -138258,10 +133888,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 14.28,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 14.28
+        }
       },
       "geometry": {
         "type": "Point",
@@ -138284,6 +133911,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 80+830",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 13.5,
         "di_set": {
           "preset": "WD",
           "ch0": 80830.13,
@@ -138292,10 +133922,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 13.5,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 13.5
+        }
       },
       "geometry": {
         "type": "Point",
@@ -138318,6 +133945,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 80+854",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 13.5,
         "di_set": {
           "preset": "WD",
           "ch0": 80854,
@@ -138326,10 +133956,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 13.5,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 13.5
+        }
       },
       "geometry": {
         "type": "Point",
@@ -138352,6 +133979,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 80+878",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 12.91,
         "di_set": {
           "preset": "WD",
           "ch0": 80878,
@@ -138360,10 +133990,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.91,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 12.91
+        }
       },
       "geometry": {
         "type": "Point",
@@ -138386,6 +134013,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 80+902",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 13.32,
         "di_set": {
           "preset": "WD",
           "ch0": 80902.05,
@@ -138394,10 +134024,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 13.32,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 13.32
+        }
       },
       "geometry": {
         "type": "Point",
@@ -138420,6 +134047,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 80+903",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 29.14,
         "di_set": {
           "preset": "WD",
           "ch0": 80903.27,
@@ -138428,10 +134058,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 29.14,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 29.14
+        }
       },
       "geometry": {
         "type": "Point",
@@ -138454,6 +134081,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 80+926",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 12.77,
         "di_set": {
           "preset": "WD",
           "ch0": 80925.9,
@@ -138462,10 +134092,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.77,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 12.77
+        }
       },
       "geometry": {
         "type": "Point",
@@ -138488,6 +134115,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 80+927",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 28.89,
         "di_set": {
           "preset": "WD",
           "ch0": 80927.27,
@@ -138496,10 +134126,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 28.89,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 28.89
+        }
       },
       "geometry": {
         "type": "Point",
@@ -138522,6 +134149,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 80+950",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 12.78,
         "di_set": {
           "preset": "WD",
           "ch0": 80950.13,
@@ -138530,10 +134160,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.78,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 12.78
+        }
       },
       "geometry": {
         "type": "Point",
@@ -138556,6 +134183,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 80+951",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 28.75,
         "di_set": {
           "preset": "WD",
           "ch0": 80951.48,
@@ -138564,10 +134194,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 28.75,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 28.75
+        }
       },
       "geometry": {
         "type": "Point",
@@ -138590,6 +134217,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 80+974",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 12.98,
         "di_set": {
           "preset": "WD",
           "ch0": 80974.03,
@@ -138598,10 +134228,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.98,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 12.98
+        }
       },
       "geometry": {
         "type": "Point",
@@ -138624,6 +134251,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 6 collector drain",
         "chainage_str": "PK 80+975 – PK 81+950",
         "status": "Not Started",
+        "short_code": "T6",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 9.46,
         "di_set": {
           "ch0": 80975,
           "ch1": 81950,
@@ -138632,10 +134262,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03046-05",
           "preset": "T6"
-        },
-        "short_code": "T6",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 9.46
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -138900,6 +134527,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 80+976",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 28.79,
         "di_set": {
           "preset": "WD",
           "ch0": 80976.44,
@@ -138908,10 +134538,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 28.79,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 28.79
+        }
       },
       "geometry": {
         "type": "Point",
@@ -138934,6 +134561,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 80+998",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 13.12,
         "di_set": {
           "preset": "WD",
           "ch0": 80998.01,
@@ -138942,10 +134572,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 13.12,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 13.12
+        }
       },
       "geometry": {
         "type": "Point",
@@ -138968,6 +134595,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 80+999",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 29.22,
         "di_set": {
           "preset": "WD",
           "ch0": 80999.19,
@@ -138976,10 +134606,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 29.22,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 29.22
+        }
       },
       "geometry": {
         "type": "Point",
@@ -139002,6 +134629,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+022",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 12.86,
         "di_set": {
           "preset": "WD",
           "ch0": 81021.93,
@@ -139010,10 +134640,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.86,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 12.86
+        }
       },
       "geometry": {
         "type": "Point",
@@ -139036,6 +134663,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+023",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 29.43,
         "di_set": {
           "preset": "WD",
           "ch0": 81023.33,
@@ -139044,10 +134674,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 29.43,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 29.43
+        }
       },
       "geometry": {
         "type": "Point",
@@ -139070,6 +134697,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+046",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 12.33,
         "di_set": {
           "preset": "WD",
           "ch0": 81046.01,
@@ -139078,10 +134708,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.33,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 12.33
+        }
       },
       "geometry": {
         "type": "Point",
@@ -139104,6 +134731,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+047",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 29.51,
         "di_set": {
           "preset": "WD",
           "ch0": 81047.29,
@@ -139112,10 +134742,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 29.51,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 29.51
+        }
       },
       "geometry": {
         "type": "Point",
@@ -139138,6 +134765,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+070",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 12.53,
         "di_set": {
           "preset": "WD",
           "ch0": 81070.04,
@@ -139146,10 +134776,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.53,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 12.53
+        }
       },
       "geometry": {
         "type": "Point",
@@ -139172,6 +134799,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+071",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 29.57,
         "di_set": {
           "preset": "WD",
           "ch0": 81071.43,
@@ -139180,10 +134810,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 29.57,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 29.57
+        }
       },
       "geometry": {
         "type": "Point",
@@ -139206,6 +134833,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+084",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 29.58,
         "di_set": {
           "preset": "WD",
           "ch0": 81083.74,
@@ -139214,10 +134844,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 29.58,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 29.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -139240,6 +134867,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+094",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 13.11,
         "di_set": {
           "preset": "WD",
           "ch0": 81094.15,
@@ -139248,10 +134878,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 13.11,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 13.11
+        }
       },
       "geometry": {
         "type": "Point",
@@ -139274,6 +134901,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+108",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 29.61,
         "di_set": {
           "preset": "WD",
           "ch0": 81107.74,
@@ -139282,10 +134912,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 29.61,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 29.61
+        }
       },
       "geometry": {
         "type": "Point",
@@ -139308,6 +134935,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+118",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 13.39,
         "di_set": {
           "preset": "WD",
           "ch0": 81118.2,
@@ -139316,10 +134946,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 13.39,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 13.39
+        }
       },
       "geometry": {
         "type": "Point",
@@ -139342,6 +134969,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+120",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 30.2,
         "di_set": {
           "preset": "WD",
           "ch0": 81119.84,
@@ -139350,10 +134980,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 30.2,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 30.2
+        }
       },
       "geometry": {
         "type": "Point",
@@ -139376,6 +135003,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+142",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 13.12,
         "di_set": {
           "preset": "WD",
           "ch0": 81142.11,
@@ -139384,10 +135014,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 13.12,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 13.12
+        }
       },
       "geometry": {
         "type": "Point",
@@ -139410,6 +135037,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+144",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 30.15,
         "di_set": {
           "preset": "WD",
           "ch0": 81143.91,
@@ -139418,10 +135048,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 30.15,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 30.15
+        }
       },
       "geometry": {
         "type": "Point",
@@ -139444,6 +135071,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+166",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 12.86,
         "di_set": {
           "preset": "WD",
           "ch0": 81166.14,
@@ -139452,10 +135082,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.86,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 12.86
+        }
       },
       "geometry": {
         "type": "Point",
@@ -139478,6 +135105,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+168",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 30.11,
         "di_set": {
           "preset": "WD",
           "ch0": 81167.64,
@@ -139486,10 +135116,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 30.11,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 30.11
+        }
       },
       "geometry": {
         "type": "Point",
@@ -139512,6 +135139,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 81+178",
         "status": "Not Started",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 37.53,
         "di_set": {
           "preset": "RIP",
           "ch0": 81177.82,
@@ -139521,9 +135150,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03045-05",
           "cert": "label",
           "stated": 40
-        },
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 37.53
+        }
       },
       "geometry": {
         "type": "Point",
@@ -139546,6 +135173,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+193",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 12.51,
         "di_set": {
           "preset": "WD",
           "ch0": 81192.88,
@@ -139554,10 +135184,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.51,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 12.51
+        }
       },
       "geometry": {
         "type": "Point",
@@ -139580,6 +135207,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+193",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 30.51,
         "di_set": {
           "preset": "WD",
           "ch0": 81192.98,
@@ -139588,10 +135218,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 30.51,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 30.51
+        }
       },
       "geometry": {
         "type": "Point",
@@ -139614,6 +135241,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+214",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 12.35,
         "di_set": {
           "preset": "WD",
           "ch0": 81213.95,
@@ -139622,10 +135252,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.35,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 12.35
+        }
       },
       "geometry": {
         "type": "Point",
@@ -139648,6 +135275,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+215",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 30.09,
         "di_set": {
           "preset": "WD",
           "ch0": 81215.2,
@@ -139656,10 +135286,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 30.09,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 30.09
+        }
       },
       "geometry": {
         "type": "Point",
@@ -139682,6 +135309,9 @@ window.SECTION02_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 81+220",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 46.17,
         "di_set": {
           "preset": "D-SD",
           "ch0": 81220.06,
@@ -139690,10 +135320,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 46.17,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 46.17
+        }
       },
       "geometry": {
         "type": "Point",
@@ -139716,6 +135343,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+238",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 12.16,
         "di_set": {
           "preset": "WD",
           "ch0": 81238.05,
@@ -139724,10 +135354,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 12.16,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 12.16
+        }
       },
       "geometry": {
         "type": "Point",
@@ -139750,6 +135377,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+239",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 29.5,
         "di_set": {
           "preset": "WD",
           "ch0": 81239.4,
@@ -139758,10 +135388,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 29.5,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 29.5
+        }
       },
       "geometry": {
         "type": "Point",
@@ -139784,6 +135411,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+262",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 11.85,
         "di_set": {
           "preset": "WD",
           "ch0": 81262.04,
@@ -139792,10 +135422,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 11.85,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 11.85
+        }
       },
       "geometry": {
         "type": "Point",
@@ -139818,6 +135445,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+264",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 28.92,
         "di_set": {
           "preset": "WD",
           "ch0": 81263.5,
@@ -139826,10 +135456,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 28.92,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 28.92
+        }
       },
       "geometry": {
         "type": "Point",
@@ -139852,6 +135479,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+286",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 8.92,
         "di_set": {
           "preset": "WD",
           "ch0": 81286.02,
@@ -139860,10 +135490,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.92,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 8.92
+        }
       },
       "geometry": {
         "type": "Point",
@@ -139886,6 +135513,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+288",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 28.59,
         "di_set": {
           "preset": "WD",
           "ch0": 81287.75,
@@ -139894,10 +135524,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 28.59,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 28.59
+        }
       },
       "geometry": {
         "type": "Point",
@@ -139920,6 +135547,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+310",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 8.51,
         "di_set": {
           "preset": "WD",
           "ch0": 81310.1,
@@ -139928,10 +135558,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.51,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 8.51
+        }
       },
       "geometry": {
         "type": "Point",
@@ -139954,6 +135581,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+311",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 26.7,
         "di_set": {
           "preset": "WD",
           "ch0": 81311.37,
@@ -139962,10 +135592,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 26.7,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 26.7
+        }
       },
       "geometry": {
         "type": "Point",
@@ -139988,6 +135615,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+334",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 8.1,
         "di_set": {
           "preset": "WD",
           "ch0": 81334.02,
@@ -139996,10 +135626,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.1,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 8.1
+        }
       },
       "geometry": {
         "type": "Point",
@@ -140022,6 +135649,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+335",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 26.02,
         "di_set": {
           "preset": "WD",
           "ch0": 81335.4,
@@ -140030,10 +135660,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 26.02,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 26.02
+        }
       },
       "geometry": {
         "type": "Point",
@@ -140056,6 +135683,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+358",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 7.74,
         "di_set": {
           "preset": "WD",
           "ch0": 81358.06,
@@ -140064,10 +135694,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.74,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 7.74
+        }
       },
       "geometry": {
         "type": "Point",
@@ -140090,6 +135717,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+359",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 25.85,
         "di_set": {
           "preset": "WD",
           "ch0": 81359.24,
@@ -140098,10 +135728,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 25.85,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 25.85
+        }
       },
       "geometry": {
         "type": "Point",
@@ -140124,6 +135751,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+382",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 7.74,
         "di_set": {
           "preset": "WD",
           "ch0": 81382.02,
@@ -140132,10 +135762,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.74,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 7.74
+        }
       },
       "geometry": {
         "type": "Point",
@@ -140158,6 +135785,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+383",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03045-05",
+        "offset_m": 26.28,
         "di_set": {
           "preset": "WD",
           "ch0": 81383.36,
@@ -140166,10 +135796,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 26.28,
           "sheet": "DW-03045-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03045-05",
-        "offset_m": 26.28
+        }
       },
       "geometry": {
         "type": "Point",
@@ -140192,6 +135819,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+406",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 8.63,
         "di_set": {
           "preset": "WD",
           "ch0": 81406.03,
@@ -140200,10 +135830,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.63,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 8.63
+        }
       },
       "geometry": {
         "type": "Point",
@@ -140226,6 +135853,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+407",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 26.88,
         "di_set": {
           "preset": "WD",
           "ch0": 81407.44,
@@ -140234,10 +135864,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 26.88,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 26.88
+        }
       },
       "geometry": {
         "type": "Point",
@@ -140260,6 +135887,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+430",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 9.05,
         "di_set": {
           "preset": "WD",
           "ch0": 81430.06,
@@ -140268,10 +135898,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 9.05,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 9.05
+        }
       },
       "geometry": {
         "type": "Point",
@@ -140294,6 +135921,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+431",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 26.4,
         "di_set": {
           "preset": "WD",
           "ch0": 81431.45,
@@ -140302,10 +135932,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 26.4,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 26.4
+        }
       },
       "geometry": {
         "type": "Point",
@@ -140328,6 +135955,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+454",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 8.38,
         "di_set": {
           "preset": "WD",
           "ch0": 81454.02,
@@ -140336,10 +135966,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.38,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 8.38
+        }
       },
       "geometry": {
         "type": "Point",
@@ -140362,6 +135989,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+455",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 26.03,
         "di_set": {
           "preset": "WD",
           "ch0": 81455.35,
@@ -140370,10 +136000,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 26.03,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 26.03
+        }
       },
       "geometry": {
         "type": "Point",
@@ -140396,6 +136023,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+478",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 7.61,
         "di_set": {
           "preset": "WD",
           "ch0": 81478.02,
@@ -140404,10 +136034,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.61,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 7.61
+        }
       },
       "geometry": {
         "type": "Point",
@@ -140430,6 +136057,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+479",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 25.66,
         "di_set": {
           "preset": "WD",
           "ch0": 81479.27,
@@ -140438,10 +136068,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 25.66,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 25.66
+        }
       },
       "geometry": {
         "type": "Point",
@@ -140464,6 +136091,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+502",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 7.61,
         "di_set": {
           "preset": "WD",
           "ch0": 81501.87,
@@ -140472,10 +136102,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.61,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 7.61
+        }
       },
       "geometry": {
         "type": "Point",
@@ -140498,6 +136125,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+503",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 25.32,
         "di_set": {
           "preset": "WD",
           "ch0": 81503.37,
@@ -140506,10 +136136,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 25.32,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 25.32
+        }
       },
       "geometry": {
         "type": "Point",
@@ -140532,6 +136159,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+526",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 7.72,
         "di_set": {
           "preset": "WD",
           "ch0": 81526.12,
@@ -140540,10 +136170,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.72,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 7.72
+        }
       },
       "geometry": {
         "type": "Point",
@@ -140566,6 +136193,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+527",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 24.85,
         "di_set": {
           "preset": "WD",
           "ch0": 81527.15,
@@ -140574,10 +136204,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 24.85,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 24.85
+        }
       },
       "geometry": {
         "type": "Point",
@@ -140600,6 +136227,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+551",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 24.37,
         "di_set": {
           "preset": "WD",
           "ch0": 81551.3,
@@ -140608,10 +136238,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 24.37,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 24.37
+        }
       },
       "geometry": {
         "type": "Point",
@@ -140634,6 +136261,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+750",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 8.01,
         "di_set": {
           "preset": "WD",
           "ch0": 81750.14,
@@ -140642,10 +136272,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.01,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 8.01
+        }
       },
       "geometry": {
         "type": "Point",
@@ -140668,6 +136295,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+770",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 8.3,
         "di_set": {
           "preset": "WD",
           "ch0": 81770.15,
@@ -140676,10 +136306,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.3,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 8.3
+        }
       },
       "geometry": {
         "type": "Point",
@@ -140702,6 +136329,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 81+776 – PK 82+025",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 20.25,
         "di_set": {
           "ch0": 81775.94,
           "ch1": 82025.48,
@@ -140710,10 +136340,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03046-05",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 20.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -140938,6 +136565,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+776",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 24.37,
         "di_set": {
           "preset": "WD",
           "ch0": 81776,
@@ -140946,10 +136576,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 24.37,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 24.37
+        }
       },
       "geometry": {
         "type": "Point",
@@ -140972,6 +136599,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+790",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 8.3,
         "di_set": {
           "preset": "WD",
           "ch0": 81790.15,
@@ -140980,10 +136610,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.3,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 8.3
+        }
       },
       "geometry": {
         "type": "Point",
@@ -141006,6 +136633,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+793",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 24.37,
         "di_set": {
           "preset": "WD",
           "ch0": 81792.87,
@@ -141014,10 +136644,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 24.37,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 24.37
+        }
       },
       "geometry": {
         "type": "Point",
@@ -141040,6 +136667,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+810",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 24.37,
         "di_set": {
           "preset": "WD",
           "ch0": 81809.73,
@@ -141048,10 +136678,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 24.37,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 24.37
+        }
       },
       "geometry": {
         "type": "Point",
@@ -141074,6 +136701,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+810",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 8.3,
         "di_set": {
           "preset": "WD",
           "ch0": 81810.15,
@@ -141082,10 +136712,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.3,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 8.3
+        }
       },
       "geometry": {
         "type": "Point",
@@ -141108,6 +136735,9 @@ window.SECTION02_ASSETS = {
         "typology": "Type 4 toe ditch, unlined",
         "chainage_str": "PK 81+826 – PK 81+869",
         "status": "Not Started",
+        "short_code": "T4",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 29.71,
         "di_set": {
           "ch0": 81826.33,
           "ch1": 81869.49,
@@ -141116,10 +136746,7 @@ window.SECTION02_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03046-05",
           "preset": "T4"
-        },
-        "short_code": "T4",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 29.71
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -141180,6 +136807,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+830",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 8.3,
         "di_set": {
           "preset": "WD",
           "ch0": 81830.15,
@@ -141188,10 +136818,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.3,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 8.3
+        }
       },
       "geometry": {
         "type": "Point",
@@ -141214,6 +136841,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+834",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 24.37,
         "di_set": {
           "preset": "WD",
           "ch0": 81833.73,
@@ -141222,10 +136852,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 24.37,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 24.37
+        }
       },
       "geometry": {
         "type": "Point",
@@ -141248,6 +136875,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+850",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 7.87,
         "di_set": {
           "preset": "WD",
           "ch0": 81850.17,
@@ -141256,10 +136886,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.87,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 7.87
+        }
       },
       "geometry": {
         "type": "Point",
@@ -141282,6 +136909,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+858",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 24.37,
         "di_set": {
           "preset": "WD",
           "ch0": 81857.73,
@@ -141290,10 +136920,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 24.37,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 24.37
+        }
       },
       "geometry": {
         "type": "Point",
@@ -141316,6 +136943,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+875",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 7.7,
         "di_set": {
           "preset": "WD",
           "ch0": 81874.97,
@@ -141324,10 +136954,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.7,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 7.7
+        }
       },
       "geometry": {
         "type": "Point",
@@ -141350,6 +136977,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+882",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 24.37,
         "di_set": {
           "preset": "WD",
           "ch0": 81881.73,
@@ -141358,10 +136988,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 24.37,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 24.37
+        }
       },
       "geometry": {
         "type": "Point",
@@ -141384,6 +137011,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+900",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 8.06,
         "di_set": {
           "preset": "WD",
           "ch0": 81900.14,
@@ -141392,10 +137022,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.06,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 8.06
+        }
       },
       "geometry": {
         "type": "Point",
@@ -141418,6 +137045,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+906",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 24.64,
         "di_set": {
           "preset": "WD",
           "ch0": 81905.73,
@@ -141426,10 +137056,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 24.64,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 24.64
+        }
       },
       "geometry": {
         "type": "Point",
@@ -141452,6 +137079,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+925",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 8.32,
         "di_set": {
           "preset": "WD",
           "ch0": 81925.15,
@@ -141460,10 +137090,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.32,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 8.32
+        }
       },
       "geometry": {
         "type": "Point",
@@ -141486,6 +137113,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+930",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 24.37,
         "di_set": {
           "preset": "WD",
           "ch0": 81929.73,
@@ -141494,10 +137124,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 24.37,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 24.37
+        }
       },
       "geometry": {
         "type": "Point",
@@ -141520,6 +137147,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+950",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 8.14,
         "di_set": {
           "preset": "WD",
           "ch0": 81950.05,
@@ -141528,10 +137158,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.14,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 8.14
+        }
       },
       "geometry": {
         "type": "Point",
@@ -141554,6 +137181,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+954",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 24.62,
         "di_set": {
           "preset": "WD",
           "ch0": 81953.92,
@@ -141562,10 +137192,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 24.62,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 24.62
+        }
       },
       "geometry": {
         "type": "Point",
@@ -141588,6 +137215,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 81+961",
         "status": "Not Started",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 27.5,
         "di_set": {
           "preset": "RIP",
           "ch0": 81961.48,
@@ -141597,9 +137226,7 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03046-05",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 27.5
+        }
       },
       "geometry": {
         "type": "Point",
@@ -141622,6 +137249,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+975",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 8.1,
         "di_set": {
           "preset": "WD",
           "ch0": 81975.13,
@@ -141630,10 +137260,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.1,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 8.1
+        }
       },
       "geometry": {
         "type": "Point",
@@ -141656,6 +137283,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 81+978",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 24.37,
         "di_set": {
           "preset": "WD",
           "ch0": 81977.73,
@@ -141664,10 +137294,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 24.37,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 24.37
+        }
       },
       "geometry": {
         "type": "Point",
@@ -141690,6 +137317,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 82+000",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 8.26,
         "di_set": {
           "preset": "WD",
           "ch0": 82000.14,
@@ -141698,10 +137328,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.26,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 8.26
+        }
       },
       "geometry": {
         "type": "Point",
@@ -141724,6 +137351,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 82+002",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 24.17,
         "di_set": {
           "preset": "WD",
           "ch0": 82001.72,
@@ -141732,10 +137362,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 24.17,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 24.17
+        }
       },
       "geometry": {
         "type": "Point",
@@ -141758,6 +137385,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 82+025",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 8.15,
         "di_set": {
           "preset": "WD",
           "ch0": 82025.13,
@@ -141766,10 +137396,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.15,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 8.15
+        }
       },
       "geometry": {
         "type": "Point",
@@ -141792,6 +137419,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 82+050",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 8.15,
         "di_set": {
           "preset": "WD",
           "ch0": 82050.14,
@@ -141800,10 +137430,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 8.15,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 8.15
+        }
       },
       "geometry": {
         "type": "Point",
@@ -141826,6 +137453,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 82+400",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 7.24,
         "di_set": {
           "preset": "WD",
           "ch0": 82400.13,
@@ -141834,10 +137464,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.24,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 7.24
+        }
       },
       "geometry": {
         "type": "Point",
@@ -141860,6 +137487,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 82+450",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 7.53,
         "di_set": {
           "preset": "WD",
           "ch0": 82450.13,
@@ -141868,10 +137498,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.53,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 7.53
+        }
       },
       "geometry": {
         "type": "Point",
@@ -141894,6 +137521,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 82+600",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 6.86,
         "di_set": {
           "preset": "WD",
           "ch0": 82599.98,
@@ -141902,10 +137532,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 6.86,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 6.86
+        }
       },
       "geometry": {
         "type": "Point",
@@ -141928,6 +137555,9 @@ window.SECTION02_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 82+650",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03046-05",
+        "offset_m": 7.57,
         "di_set": {
           "preset": "WD",
           "ch0": 82650.13,
@@ -141936,10 +137566,7 @@ window.SECTION02_ASSETS = {
           "offsetM": 7.57,
           "sheet": "DW-03046-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03046-05",
-        "offset_m": 7.57
+        }
       },
       "geometry": {
         "type": "Point",
@@ -141962,6 +137589,8 @@ window.SECTION02_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 82+857",
         "status": "Not Started",
+        "drawing_ref": "DW-03047-05",
+        "offset_m": 10.29,
         "di_set": {
           "preset": "RIP",
           "ch0": 82857.22,
@@ -141971,15 +137600,557 @@ window.SECTION02_ASSETS = {
           "sheet": "DW-03047-05",
           "cert": "label",
           "stated": 51
-        },
-        "drawing_ref": "DW-03047-05",
-        "offset_m": 10.29
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
           8.4044763,
           12.6247442
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "xc_DWKZ_CC24",
+        "start_pk": 24650,
+        "end_pk": 24650,
+        "length_m": 0,
+        "is_point": true,
+        "side": "Center",
+        "category": "Cross Drainage",
+        "typology": "Cattle crossing 1×(3.0×3.0 m) — CC24 (execution chart S02)",
+        "chainage_str": "PK 24+650",
+        "status": "Not Started",
+        "di_set": {
+          "preset": "CC",
+          "ch0": 24650,
+          "ch1": 24650,
+          "side": "C",
+          "cert": "derived",
+          "sheet": "Execution chart S02 25/09/26",
+          "name": "Cattle crossing 1×(3.0×3.0 m)",
+          "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC24 (execution chart S02)"
+        },
+        "short_code": "CC",
+        "drawing_ref": "Execution chart S02 25/09/26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.4453333,
+          12.1439196
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "xc_DWKZ_CC27",
+        "start_pk": 27650,
+        "end_pk": 27650,
+        "length_m": 0,
+        "is_point": true,
+        "side": "Center",
+        "category": "Cross Drainage",
+        "typology": "Cattle crossing 1×(3.0×3.0 m) — CC27 (execution chart S02)",
+        "chainage_str": "PK 27+650",
+        "status": "Not Started",
+        "di_set": {
+          "preset": "CC",
+          "ch0": 27650,
+          "ch1": 27650,
+          "side": "C",
+          "cert": "derived",
+          "sheet": "Execution chart S02 25/09/26",
+          "name": "Cattle crossing 1×(3.0×3.0 m)",
+          "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC27 (execution chart S02)"
+        },
+        "short_code": "CC",
+        "drawing_ref": "Execution chart S02 25/09/26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.4600781,
+          12.1667923
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "xc_DWKZ_CC_37",
+        "start_pk": 37750,
+        "end_pk": 37750,
+        "length_m": 0,
+        "is_point": true,
+        "side": "Center",
+        "category": "Cross Drainage",
+        "typology": "Cattle crossing 1×(3.0×3.0 m) — CC 37 (execution chart S02)",
+        "chainage_str": "PK 37+750",
+        "status": "Not Started",
+        "di_set": {
+          "preset": "CC",
+          "ch0": 37750,
+          "ch1": 37750,
+          "side": "C",
+          "cert": "derived",
+          "sheet": "Execution chart S02 25/09/26",
+          "name": "Cattle crossing 1×(3.0×3.0 m)",
+          "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 37 (execution chart S02)"
+        },
+        "short_code": "CC",
+        "drawing_ref": "Execution chart S02 25/09/26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.4919762,
+          12.246732
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "xc_DWKZ_CC_43",
+        "start_pk": 43100,
+        "end_pk": 43100,
+        "length_m": 0,
+        "is_point": true,
+        "side": "Center",
+        "category": "Cross Drainage",
+        "typology": "Cattle crossing 1×(3.0×3.0 m) — CC 43 (execution chart S02)",
+        "chainage_str": "PK 43+100",
+        "status": "Not Started",
+        "di_set": {
+          "preset": "CC",
+          "ch0": 43100,
+          "ch1": 43100,
+          "side": "C",
+          "cert": "derived",
+          "sheet": "Execution chart S02 25/09/26",
+          "name": "Cattle crossing 1×(3.0×3.0 m)",
+          "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 43 (execution chart S02)"
+        },
+        "short_code": "CC",
+        "drawing_ref": "Execution chart S02 25/09/26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.4764721,
+          12.292642
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "xc_DWKZ_CC46",
+        "start_pk": 46750,
+        "end_pk": 46750,
+        "length_m": 0,
+        "is_point": true,
+        "side": "Center",
+        "category": "Cross Drainage",
+        "typology": "Cattle crossing 1×(3.0×3.0 m) — CC46 (execution chart S02)",
+        "chainage_str": "PK 46+750",
+        "status": "Not Started",
+        "di_set": {
+          "preset": "CC",
+          "ch0": 46750,
+          "ch1": 46750,
+          "side": "C",
+          "cert": "derived",
+          "sheet": "Execution chart S02 25/09/26",
+          "name": "Cattle crossing 1×(3.0×3.0 m)",
+          "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC46 (execution chart S02)"
+        },
+        "short_code": "CC",
+        "drawing_ref": "Execution chart S02 25/09/26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.471004,
+          12.3246311
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "xc_DWKZ_48_2",
+        "start_pk": 48477,
+        "end_pk": 48477,
+        "length_m": 0,
+        "is_point": true,
+        "side": "Center",
+        "category": "Cross Drainage",
+        "typology": "Triple box culvert 3×(2.0×2.0 m) — 48.2 (execution chart S02)",
+        "chainage_str": "PK 48+477",
+        "status": "Not Started",
+        "di_set": {
+          "preset": "BC",
+          "ch0": 48477,
+          "ch1": 48477,
+          "side": "C",
+          "cert": "derived",
+          "sheet": "Execution chart S02 25/09/26",
+          "name": "Triple box culvert 3×(2.0×2.0 m)",
+          "fullName": "Triple box culvert 3×(2.0×2.0 m) — 48.2 (execution chart S02)"
+        },
+        "short_code": "BC",
+        "drawing_ref": "Execution chart S02 25/09/26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.474735,
+          12.3398107
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "xc_DWKZ_CC_53",
+        "start_pk": 53225,
+        "end_pk": 53225,
+        "length_m": 0,
+        "is_point": true,
+        "side": "Center",
+        "category": "Cross Drainage",
+        "typology": "Cattle crossing 1×(3.0×3.0 m) — CC 53 (execution chart S02)",
+        "chainage_str": "PK 53+225",
+        "status": "Not Started",
+        "di_set": {
+          "preset": "CC",
+          "ch0": 53225,
+          "ch1": 53225,
+          "side": "C",
+          "cert": "derived",
+          "sheet": "Execution chart S02 25/09/26",
+          "name": "Cattle crossing 1×(3.0×3.0 m)",
+          "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 53 (execution chart S02)"
+        },
+        "short_code": "CC",
+        "drawing_ref": "Execution chart S02 25/09/26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.485021,
+          12.3815373
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "xc_DWKZ_CC_54",
+        "start_pk": 54450,
+        "end_pk": 54450,
+        "length_m": 0,
+        "is_point": true,
+        "side": "Center",
+        "category": "Cross Drainage",
+        "typology": "Cattle crossing 1×(3.0×3.0 m) — CC 54 (execution chart S02)",
+        "chainage_str": "PK 54+450",
+        "status": "Not Started",
+        "di_set": {
+          "preset": "CC",
+          "ch0": 54450,
+          "ch1": 54450,
+          "side": "C",
+          "cert": "derived",
+          "sheet": "Execution chart S02 25/09/26",
+          "name": "Cattle crossing 1×(3.0×3.0 m)",
+          "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 54 (execution chart S02)"
+        },
+        "short_code": "CC",
+        "drawing_ref": "Execution chart S02 25/09/26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.4876748,
+          12.3923029
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "xc_DWKZ_CC_57",
+        "start_pk": 57425,
+        "end_pk": 57425,
+        "length_m": 0,
+        "is_point": true,
+        "side": "Center",
+        "category": "Cross Drainage",
+        "typology": "Cattle crossing 1×(3.0×3.0 m) — CC 57 (execution chart S02)",
+        "chainage_str": "PK 57+425",
+        "status": "Not Started",
+        "di_set": {
+          "preset": "CC",
+          "ch0": 57425,
+          "ch1": 57425,
+          "side": "C",
+          "cert": "derived",
+          "sheet": "Execution chart S02 25/09/26",
+          "name": "Cattle crossing 1×(3.0×3.0 m)",
+          "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 57 (execution chart S02)"
+        },
+        "short_code": "CC",
+        "drawing_ref": "Execution chart S02 25/09/26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.4934985,
+          12.4185548
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "xc_DWKZ_CC_60",
+        "start_pk": 60550,
+        "end_pk": 60550,
+        "length_m": 0,
+        "is_point": true,
+        "side": "Center",
+        "category": "Cross Drainage",
+        "typology": "Cattle crossing 1×(3.0×3.0 m) — CC 60 (execution chart S02)",
+        "chainage_str": "PK 60+550",
+        "status": "Not Started",
+        "di_set": {
+          "preset": "CC",
+          "ch0": 60550,
+          "ch1": 60550,
+          "side": "C",
+          "cert": "derived",
+          "sheet": "Execution chart S02 25/09/26",
+          "name": "Cattle crossing 1×(3.0×3.0 m)",
+          "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 60 (execution chart S02)"
+        },
+        "short_code": "CC",
+        "drawing_ref": "Execution chart S02 25/09/26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.485886,
+          12.4455308
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "xc_DWKZ_CC_64",
+        "start_pk": 64875,
+        "end_pk": 64875,
+        "length_m": 0,
+        "is_point": true,
+        "side": "Center",
+        "category": "Cross Drainage",
+        "typology": "Cattle crossing 1×(3.0×3.0 m) — CC 64 (execution chart S02)",
+        "chainage_str": "PK 64+875",
+        "status": "Not Started",
+        "di_set": {
+          "preset": "CC",
+          "ch0": 64875,
+          "ch1": 64875,
+          "side": "C",
+          "cert": "derived",
+          "sheet": "Execution chart S02 25/09/26",
+          "name": "Cattle crossing 1×(3.0×3.0 m)",
+          "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 64 (execution chart S02)"
+        },
+        "short_code": "CC",
+        "drawing_ref": "Execution chart S02 25/09/26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.4712588,
+          12.4819026
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "xc_DWKZ_CC_65",
+        "start_pk": 65725,
+        "end_pk": 65725,
+        "length_m": 0,
+        "is_point": true,
+        "side": "Center",
+        "category": "Cross Drainage",
+        "typology": "Cattle crossing 1×(3.0×3.0 m) — CC 65 (execution chart S02)",
+        "chainage_str": "PK 65+725",
+        "status": "Not Started",
+        "di_set": {
+          "preset": "CC",
+          "ch0": 65725,
+          "ch1": 65725,
+          "side": "C",
+          "cert": "derived",
+          "sheet": "Execution chart S02 25/09/26",
+          "name": "Cattle crossing 1×(3.0×3.0 m)",
+          "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 65 (execution chart S02)"
+        },
+        "short_code": "CC",
+        "drawing_ref": "Execution chart S02 25/09/26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.4683841,
+          12.4890509
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "xc_DWKZ_CC_69",
+        "start_pk": 69175,
+        "end_pk": 69175,
+        "length_m": 0,
+        "is_point": true,
+        "side": "Center",
+        "category": "Cross Drainage",
+        "typology": "Cattle crossing 1×(3.0×3.0 m) — CC 69 (execution chart S02)",
+        "chainage_str": "PK 69+175",
+        "status": "Not Started",
+        "di_set": {
+          "preset": "CC",
+          "ch0": 69175,
+          "ch1": 69175,
+          "side": "C",
+          "cert": "derived",
+          "sheet": "Execution chart S02 25/09/26",
+          "name": "Cattle crossing 1×(3.0×3.0 m)",
+          "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 69 (execution chart S02)"
+        },
+        "short_code": "CC",
+        "drawing_ref": "Execution chart S02 25/09/26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.4567161,
+          12.5180642
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "xc_DWKZ_CC_73",
+        "start_pk": 73125,
+        "end_pk": 73125,
+        "length_m": 0,
+        "is_point": true,
+        "side": "Center",
+        "category": "Cross Drainage",
+        "typology": "Cattle crossing 1×(3.0×3.0 m) — CC 73 (execution chart S02)",
+        "chainage_str": "PK 73+125",
+        "status": "Not Started",
+        "di_set": {
+          "preset": "CC",
+          "ch0": 73125,
+          "ch1": 73125,
+          "side": "C",
+          "cert": "derived",
+          "sheet": "Execution chart S02 25/09/26",
+          "name": "Cattle crossing 1×(3.0×3.0 m)",
+          "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 73 (execution chart S02)"
+        },
+        "short_code": "CC",
+        "drawing_ref": "Execution chart S02 25/09/26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.4544418,
+          12.5535098
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "xc_DWKZ_CC_74",
+        "start_pk": 74725,
+        "end_pk": 74725,
+        "length_m": 0,
+        "is_point": true,
+        "side": "Center",
+        "category": "Cross Drainage",
+        "typology": "Cattle crossing 1×(3.0×3.0 m) — CC 74 (execution chart S02)",
+        "chainage_str": "PK 74+725",
+        "status": "Not Started",
+        "di_set": {
+          "preset": "CC",
+          "ch0": 74725,
+          "ch1": 74725,
+          "side": "C",
+          "cert": "derived",
+          "sheet": "Execution chart S02 25/09/26",
+          "name": "Cattle crossing 1×(3.0×3.0 m)",
+          "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 74 (execution chart S02)"
+        },
+        "short_code": "CC",
+        "drawing_ref": "Execution chart S02 25/09/26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.4508292,
+          12.5672268
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "xc_DWKZ_CC_78",
+        "start_pk": 78825,
+        "end_pk": 78825,
+        "length_m": 0,
+        "is_point": true,
+        "side": "Center",
+        "category": "Cross Drainage",
+        "typology": "Cattle crossing 1×(3.0×3.0 m) — CC 78 (execution chart S02)",
+        "chainage_str": "PK 78+825",
+        "status": "Not Started",
+        "di_set": {
+          "preset": "CC",
+          "ch0": 78825,
+          "ch1": 78825,
+          "side": "C",
+          "cert": "derived",
+          "sheet": "Execution chart S02 25/09/26",
+          "name": "Cattle crossing 1×(3.0×3.0 m)",
+          "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 78 (execution chart S02)"
+        },
+        "short_code": "CC",
+        "drawing_ref": "Execution chart S02 25/09/26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.4293842,
+          12.5977355
         ]
       }
     }

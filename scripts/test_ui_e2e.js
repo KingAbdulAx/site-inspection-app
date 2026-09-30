@@ -52,7 +52,8 @@ const assert = (c, m) => { if (!c) { console.log('FAIL: ' + m); process.exitCode
   seen = await p.evaluate(id => DI.seenOf(id), fid);
   assert(seen && seen.stage === 4, 'other stage from the full ladder');
   const legacy = await p.evaluate(id => JSON.parse(localStorage.getItem('KMD_DRAINAGE_INSPECTIONS_SEC03_V1'))[id], fid);
-  assert(legacy && legacy.status === 'Rebar / Shuttering', 'mirrored to the sync store: ' + (legacy && legacy.status));
+  const stageName = await p.evaluate(id => DI.data.byId[id].ladder[4], fid);
+  assert(legacy && legacy.status === stageName, 'mirrored to the sync store by name: ' + (legacy && legacy.status));
   // defect with photo
   await p.evaluate(id => DA.openDefect(id), fid); await p.waitForTimeout(200);
   await p.click('[data-act=df-type][data-v=Cracking]');
@@ -84,6 +85,18 @@ const assert = (c, m) => { if (!c) { console.log('FAIL: ' + m); process.exitCode
   assert(await p.isVisible('#recentre'), 'dragging the strip shows Back to me');
   await p.click('#recentre'); await p.waitForTimeout(200);
   assert(!(await p.isVisible('#recentre')), 'Back to me recentres');
+  // zoom: fixed steps, wider span, faster pan, kept across reloads
+  const z0 = await p.evaluate(() => ({ z: DA.strip.zoom, span: DA.strip.span(), lbl: document.querySelector('#zoomLbl').textContent }));
+  await p.click('#zoomCtl [data-d="1"]'); await p.waitForTimeout(200);
+  await p.click('#zoomCtl [data-d="1"]'); await p.waitForTimeout(200);
+  const z2 = await p.evaluate(() => ({ z: DA.strip.zoom, span: DA.strip.span(), lbl: document.querySelector('#zoomLbl').textContent, out: document.querySelector('#zoomCtl').classList.contains('out') }));
+  assert(z0.z === 0 && z2.z === 2 && z2.span > z0.span * 8 && z2.out, 'zoom out two steps: ' + z0.lbl + ' → ' + z2.lbl);
+  const pan0 = await p.evaluate(() => { DA.strip.pan(100); const v = DA.strip.viewCh; DA.strip.recentre(); return Math.abs(v - DA.S.pos.ch); });
+  assert(pan0 > 400, 'the same drag moves ' + Math.round(pan0) + ' m zoomed out (53 m at walking scale)');
+  await p.reload(); await p.waitForTimeout(1200);
+  assert(await p.evaluate(() => DA.strip.zoom === 2), 'zoom kept across a reload');
+  await p.keyboard.press('+'); await p.keyboard.press('+'); await p.keyboard.press('+'); await p.waitForTimeout(200);
+  assert(await p.evaluate(() => DA.strip.zoom === 0 && document.querySelector('#zoomCtl [data-d="-1"]').disabled), '+ zooms back in, and stops at the walking scale');
   // tap a mark opens the drawer
   // design change: remove, then strip marks it
   await p.goto(BASE + '?sim=KZDR:111020:14:4'); await p.waitForTimeout(1500);
