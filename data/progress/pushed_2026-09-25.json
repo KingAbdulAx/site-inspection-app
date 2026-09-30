@@ -1,0 +1,1436 @@
+{
+ "kind": "kmd-progress-pushed",
+ "asof": "2026-09-25",
+ "pushed_at": "2026-09-30T09:33:09.795Z",
+ "table_before": 209,
+ "written": [
+  {
+   "asset_id": "xc_KNDW_CC12",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_4_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_4_2",
+   "status": "Wing walls",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_4_3",
+   "status": "Wing walls",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_4_4",
+   "status": "Apron",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_4_5",
+   "status": "Haunched",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_5_1",
+   "status": "Apron",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_5_A",
+   "status": "Installed",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_5_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_5_3",
+   "status": "Apron",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_5_4",
+   "status": "Installed",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_CC6",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_6_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_7_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_7_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_CC7",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_7_3",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_8_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_8_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_8_3",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_8_4",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_9_1",
+   "status": "Wing walls",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_9_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_9_3",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_10_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_10_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_11_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_11_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_11_3",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_12_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_12_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_13_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_13_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_14_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_14_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_14_3",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_15_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_15_2",
+   "status": "Bedding",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_15_3",
+   "status": "Installed",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_15_4",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_16_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_16_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_17_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KNDW_18_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1709",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1688",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1682",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1676",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1671",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1656",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1639",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1632",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1625",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1612",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1605",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1582",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1566",
+   "status": "Wing walls",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DWKZ_CC_78",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1560",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1552",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1539",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1523",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DWKZ_CC_74",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1494",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1485",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1477",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1469",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1465",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DWKZ_CC_73",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1457",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1444",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1438",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1431",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1420",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1406",
+   "status": "Completed & Approved",
+   "replaced": {
+    "asset_id": "s02_asset_1406",
+    "status": "Not Started",
+    "notes": "",
+    "has_defect": false,
+    "inspection_date": "2026-09-10 18:52",
+    "inspected_by": "Engr. Abdulaziz A. A.",
+    "device_id": "dev_d0ex3zhxc_mtvvwzox",
+    "updated_at": "2026-09-10T18:52:35.454+00:00"
+   }
+  },
+  {
+   "asset_id": "s02_asset_1395",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DWKZ_CC_69",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1392",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1389",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1385",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1374",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1364",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1358",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1350",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1338",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1322",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1313",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1302",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1293",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1287",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DWKZ_CC_65",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1278",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1264",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1258",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DWKZ_CC_64",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1246",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1228",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1222",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1213",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1205",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1195",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1186",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1182",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1167",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DWKZ_CC_60",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_877",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_866",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_854",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_842",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_838",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_830",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DWKZ_CC_57",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_817",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_808",
+   "status": "Completed & Approved",
+   "replaced": {
+    "asset_id": "s02_asset_808",
+    "status": "Not Started",
+    "notes": "",
+    "has_defect": false,
+    "inspection_date": "",
+    "inspected_by": "",
+    "device_id": "dev_0bmmdl1co_mtub6gnh",
+    "updated_at": "2026-09-09T16:28:34.49+00:00"
+   }
+  },
+  {
+   "asset_id": "s02_asset_793",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_776",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_765",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_756",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DWKZ_CC_54",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_748",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_730",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DWKZ_CC_53",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_720",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_709",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_694",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_681",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_669",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DWKZ_48_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_631",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DWKZ_CC46",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_598",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_588",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_576",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_548",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DWKZ_CC_43",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_539",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_510",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_479",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_469",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_462",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_440",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DWKZ_CC_37",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_427",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_409",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_379",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_376",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_371",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_364",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_353",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_300",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_297",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_291",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_261",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_252",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_244",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_236",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_225",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_218",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_206",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_194",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DWKZ_CC27",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_185",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_178",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_160",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_153",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DWKZ_CC24",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_139",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_135",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_122",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_113",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_109",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_104",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_091",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_081",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KZDR_CC_86",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KZDR_88_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KZDR_CC_90",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KZDR_CC_92",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KZDR_CC_93",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KZDR_CC_98",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KZDR_CC_100",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KZDR_CC_103",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KZDR_107_A",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KZDR_CC_109",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KZDR_CC_110",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KZDR_CC_112",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KZDR_113_A",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KZDR_CC_116",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_KZDR_CC_118",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_171",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_189",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_214",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_331",
+   "status": "Concreted",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_338",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_344",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_392",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_400",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_402",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_426",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_456",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_465",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_DWKZ_1C51D",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_DWKZ_1C3B8",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_DWKZ_1C51C",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_518",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_533",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_DWKZ_1C556",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_DWKZ_1C558",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_DWKZ_1C557",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_578",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_594",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_612",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_DWKZ_1C597",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_DWKZ_1C518",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_DWKZ_1D3BA",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_DWKZ_1D3B9",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_646",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_648",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_675",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_735",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_739",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_761",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_815",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_821",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1253",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1282",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1288",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1356",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_DWKZ_1C50E",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1366",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_DWKZ_1C50C",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1380",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_DWKZ_1C50B",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_DWKZ_1C614",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_DWKZ_1D3BB",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_DWKZ_1D3BC",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_DWKZ_1C613",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_DWKZ_1D3BE",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_DWKZ_1D3C0",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_DWKZ_1C612",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_DWKZ_1C611",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1502",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_DWKZ_44E60",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_DWKZ_44E61",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_DWKZ_44E58",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_DWKZ_44E56",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_DWKZ_44E57",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1571",
+   "status": "Concreted",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1589",
+   "status": "Concreted",
+   "replaced": null
+  },
+  {
+   "asset_id": "s02_asset_1619",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_KZDR_165218",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "asset_228",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_KZDR_165217",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_KZDR_165215",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_KZDR_1CA067",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_KZDR_1CA068",
+   "status": "Concreted",
+   "replaced": null
+  },
+  {
+   "asset_id": "asset_072",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_KZDR_1CA06A",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_KZDR_1CA058",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_KZDR_1CA059",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "asset_091",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_KZDR_1CA05F",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_KZDR_1CA05B",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_KZDR_1CA05C",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_KZDR_1CA064",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_KZDR_1CA063",
+   "status": "Concreted",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_KZDR_1CA05D",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_KZDR_1CA061",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_KZDR_1CA3DA",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_KZDR_1CA3DD",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_KZDR_1CA3DC",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_KZDR_1CA3DB",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_KZDR_1CA3DF",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_KZDR_1CA3E0",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_KZDR_1CA6C1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_KZDR_1CA6C0",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_KZDR_1CA6C2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_KZDR_1CA6C3",
+   "status": "Concreted",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_KZDR_1CA6BE",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_KZDR_1CA6BD",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_KZDR_1CA6BF",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "cad_KZDR_1CA6C4",
+   "status": "Completed & Approved",
+   "replaced": null
+  }
+ ]
+}

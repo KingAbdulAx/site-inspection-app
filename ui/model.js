@@ -11,14 +11,14 @@
   const RECORDS_KEY = 'KMD_WALK_RECORDS_V1';
   const DRAFTS_KEY = 'KMD_WALK_DRAFTS_V1';
   const POS_KEY = 'KMD_WALK_LAST_POSITION_V1';
-  const LEGACY_KEYS = { DWKZ: 'KMD_DRAINAGE_INSPECTIONS_SEC02_V1', KZDR: 'KMD_DRAINAGE_INSPECTIONS_SEC03_V1' };
+  const LEGACY_KEYS = { KNDW: 'KMD_DRAINAGE_INSPECTIONS_SEC01_V1', DWKZ: 'KMD_DRAINAGE_INSPECTIONS_SEC02_V1', KZDR: 'KMD_DRAINAGE_INSPECTIONS_SEC03_V1' };
 
   // ---------------------------------------------------------------- lines
   const LINES = [
     {
       id: 'KM', name: 'Kano–Maradi', short: 'KANO–MARADI', kind: 'main line',
       subs: [
-        { id: 'KNDW', name: 'Kano – Dawanau' },
+        { id: 'KNDW', name: 'Kano – Dawanau', from: -2675, to: 19800 },
         { id: 'DWKZ', name: 'Dawanau – Kazaure', from: 19800, to: 82902.439, sheets: 47 },
         { id: 'KZDR', name: 'Kazaure – Daura', from: 82902.439, to: 124521 },
         { id: 'DRMR', name: 'Daura – Muduru' },
@@ -43,6 +43,21 @@
   const LADDER_UNLINED = ['Not started', 'Excavated', 'Completed'];
   const LADDER_PRECAST = ['Not started', 'Excavation', 'Bedding', 'Placed', 'Completed'];
   const LADDER_RIPRAP = ['Not started', 'Geotextile laid', 'Completed'];
+  // Culverts are precast units, staged as on the site execution charts. A box
+  // culvert is complete once its bituminous paint is on; a pipe culvert gets
+  // no paint, so it is complete once its joints are done. Backfill is not a stage.
+  const LADDER_BOX = ['Not started', 'Excavation', 'Bedding', 'Installed', 'Apron', 'Wing walls', 'Joints', 'Completed'];
+  const LADDER_PIPE = ['Not started', 'Excavation', 'Bedding', 'Installed', 'Haunched', 'Apron', 'Wing walls', 'Completed'];
+  const isCulvertLadder = l => l === LADDER_BOX || l === LADDER_PIPE;
+  // A stage on the old cast-in-place ladder, said on a culvert ladder.
+  function fromConcrete(f, i) {
+    if (i == null || !isCulvertLadder(f.ladder)) return i;
+    const name = LADDER_CONCRETE[Math.max(0, Math.min(LADDER_CONCRETE.length - 1, i))];
+    if (name === 'Completed') return f.ladder.length - 1;
+    if (name === 'Rebar' || name === 'Shuttered' || name === 'Concreted') return f.ladder.indexOf('Installed');
+    if (name === 'Blinding') return f.ladder.indexOf('Bedding');
+    return f.ladder.indexOf(name) < 0 ? 0 : f.ladder.indexOf(name);
+  }
 
   // Lane geometry: typical offsets, used for ranking and for the written metres.
   const LANE_OFFSET = { cl: 0, plat: 3.5, face: 8, toe: 13.5, crest: 24, off: 50 };
@@ -53,6 +68,8 @@
     if (m == null || isNaN(m)) return '—';
     const d = decimals == null ? 0 : decimals;
     const p = Math.pow(10, d);
+    // Before Kano's zero (S01 starts at -2+675) chainage reads '-1+107', not '-2+893'.
+    if (m < 0) return '-' + fmtCh(-m, decimals);
     const r = Math.round(m * p) / p;
     const km = Math.floor(r / 1000 + 1e-9);
     const rest = r - km * 1000;
@@ -69,8 +86,8 @@
   function parseCh(str) {
     if (str == null) return NaN;
     const s = String(str).replace(/PK|DK|\s/gi, '').replace(',', '.');
-    const m = s.match(/^(\d+)\+(\d+(?:\.\d+)?)$/);
-    if (m) return parseInt(m[1], 10) * 1000 + parseFloat(m[2]);
+    const m = s.match(/^(-?)(\d+)\+(\d+(?:\.\d+)?)$/);
+    if (m) return (m[1] ? -1 : 1) * (parseInt(m[2], 10) * 1000 + parseFloat(m[3]));
     const n = parseFloat(s);
     return isNaN(n) ? NaN : n;
   }
@@ -207,6 +224,7 @@
         if (/Transition/i.test(t)) name = 'Road ditch transition';
         code = /pipe/i.test(t) ? 'PC' : 'BC';
         icon = /pipe/i.test(t) ? 'pipe' : 'box';
+        ladder = code === 'PC' ? LADDER_PIPE : LADDER_BOX;
         break;
       case 'underpass':
         code = 'T16'; typeKey = '16'; name = /Cattle/i.test(t) ? 'Underpass / cattle crossing' : 'Underpass water passage'; icon = 'arch';
@@ -287,8 +305,8 @@
     T6: P('track', 'T6', 'Type 6 collector drain', 'cl', 'buried', 'collector', null, '6'),
     WD: P('descent', 'WD', 'Water descent, precast', 'face', 'point', 'descent', LADDER_PRECAST),
     RIP: P('riprap', '', 'Riprap protection', 'face', 'label', 'riprap', LADDER_RIPRAP),
-    BC: P('cross', 'BC', 'Box culvert', 'across', 'cross', 'box'),
-    PC: P('cross', 'PC', 'Pipe culvert', 'across', 'cross', 'pipe'),
+    BC: P('cross', 'BC', 'Box culvert', 'across', 'cross', 'box', LADDER_BOX),
+    PC: P('cross', 'PC', 'Pipe culvert', 'across', 'cross', 'pipe', LADDER_PIPE),
     T16: P('underpass', 'T16', 'Underpass water passage', 'across', 'cross', 'arch', null, '16'),
     'CH-A': P('diversion', 'CH-A', 'Diversion channel, earth', 'off', 'linear', 'divert', LADDER_UNLINED),
     'CH-B': P('diversion', 'CH-B', 'Diversion channel, concrete', 'off', 'linear', 'divert'),
@@ -302,7 +320,7 @@
     BRG: P('bridge', 'BRG', 'Railway bridge', 'across', 'cross', 'bridge'),
     OP: P('bridge', 'OP', 'Road overbridge', 'across', 'cross', 'bridge'),
     UP: P('underpass', 'UP', 'Road underpass', 'across', 'cross', 'arch'),
-    CC: P('cross', 'CC', 'Cattle crossing', 'across', 'cross', 'box'),
+    CC: P('cross', 'CC', 'Cattle crossing', 'across', 'cross', 'box', LADDER_BOX),
     MD: P('misc', 'MD', 'Culvert approach ditch', 'toe', 'linear', 'trap', LADDER_UNLINED)
   };
   const CAT_LABEL = {};
@@ -365,11 +383,15 @@
       data.meta[sub] = geo.metadata || {};
       data.source[sub] = geo;
     };
+    add('KNDW', window.SECTION01_ASSETS);
     add('DWKZ', window.SECTION02_ASSETS);
     add('KZDR', window.SECTION03_ASSETS);
     applyBase();
+    loadCentre('KNDW', window.SECTION01_CENTERLINE);
     loadCentre('DWKZ', window.SECTION02_CENTERLINE);
     loadCentre('KZDR', window.SECTION03_CENTERLINE);
+    SUBS.KNDW.count = (data.bySub.KNDW || []).length;
+    migrateCulvertStages();
     SUBS.DWKZ.count = (data.bySub.DWKZ || []).length;
     SUBS.KZDR.count = (data.bySub.KZDR || []).length;
     loadLegacy();
@@ -418,7 +440,8 @@
     list.forEach(h => { if (h.status !== 'rejected' && (!best || h.stage >= best.stage)) best = h; });
     if (!best) return null;
     const f = data.byId[fid];
-    return Object.assign({}, best, { stage: Math.min(best.stage, f.ladder.length - 1) });
+    const stage = isCulvertLadder(f.ladder) ? fromConcrete(f, best.stage) : best.stage;
+    return Object.assign({}, best, { stage: Math.min(stage, f.ladder.length - 1) });
   }
 
   // ------------------------------------------------------- record store
@@ -433,6 +456,22 @@
   function setInspector(n) { try { localStorage.setItem(INSPECTOR_KEY, n); } catch (e) { /* ignore */ } }
   function loadRecords() {
     try { records = JSON.parse(localStorage.getItem(RECORDS_KEY) || '[]'); } catch (e) { records = []; }
+  }
+  // Culvert stage records made before culverts had their own ladder carry an
+  // index on the cast-in-place one. Say them on the new ladder, by name, once.
+  function migrateCulvertStages() {
+    let n = 0;
+    records.forEach(r => {
+      if (r.kind !== 'stage' || r.stageName) return;
+      const f = data.byId[r.featureId];
+      if (!f || !isCulvertLadder(f.ladder)) return;
+      r.stage = fromConcrete(f, r.stage);
+      if (r.claimStage != null) r.claimStage = fromConcrete(f, r.claimStage);
+      r.stageName = f.ladder[r.stage];
+      n++;
+    });
+    if (n) saveRecords();
+    return n;
   }
   function saveRecords() {
     try { localStorage.setItem(RECORDS_KEY, JSON.stringify(records)); return true; }
@@ -454,6 +493,7 @@
   }
   function addRecord(rec) {
     const r = Object.assign({ id: uid(), at: new Date().toISOString(), by: inspector() }, rec);
+    if (r.kind === 'stage' && r.stageName == null) { const f = data.byId[r.featureId]; if (f) r.stageName = f.ladder[r.stage]; }
     records.push(r);
     saveRecords();
     if (r.kind === 'stage' || r.kind === 'defect') mirrorLegacy(r.featureId);
@@ -507,6 +547,7 @@
       data.bySub[sub] = all.filter(f => !f.deleted).sort((a, b) => a.ch0 - b.ch0);
       data.features = data.features.concat(data.bySub[sub]);
     });
+    if (SUBS.KNDW) SUBS.KNDW.count = (data.bySub.KNDW || []).length;
     if (SUBS.DWKZ) SUBS.DWKZ.count = (data.bySub.DWKZ || []).length;
     if (SUBS.KZDR) SUBS.KZDR.count = (data.bySub.KZDR || []).length;
   }
@@ -594,6 +635,7 @@
     const name = f.ladder[s];
     if (s === 0) return 'Not Started';
     if (s === f.ladder.length - 1) return 'Completed & Approved';
+    if (isCulvertLadder(f.ladder)) return name;
     if (name === 'Concreted') return 'Concreted';
     if (name === 'Rebar' || name === 'Shuttered' || name === 'Placed') return 'Rebar / Shuttering';
     if (name === 'Blinding' || name === 'Bedding' || name === 'Geotextile laid') return 'Blinding';
@@ -639,11 +681,18 @@
   function seenOf(fid) {
     const own = ownSeen(fid);
     const lg = legacy[fid];
+    const fl = data.byId[fid];
+    // An office row can name a stage of this feature's own ladder exactly ('Installed', 'Wing walls').
+    if (lg && lg.source !== 'walk' && lg.status && fl && LEGACY_STAGE[lg.status] == null && fl.ladder.indexOf(lg.status) > 0) {
+      const at = lg.updated_at || (lg.date ? lg.date.replace(' ', 'T') : null);
+      if (!own || (at && at > own.at)) return { stage: fl.ladder.indexOf(lg.status), at, by: lg.inspected_by || 'office', office: true, note: lg.notes || '' };
+    }
     if (lg && lg.source !== 'walk' && lg.status && LEGACY_STAGE[lg.status] != null && lg.status !== 'Not Started') {
       const at = lg.updated_at || (lg.date ? lg.date.replace(' ', 'T') : null);
       if (!own || (at && at > own.at)) {
         const f = data.byId[fid];
         let s = LEGACY_STAGE[lg.status];
+        if (f && isCulvertLadder(f.ladder)) s = fromConcrete(f, s);
         if (f && s >= f.ladder.length) s = f.ladder.length - 1;
         if (f && lg.status === 'Completed & Approved') s = f.ladder.length - 1;
         return { stage: s, at, by: lg.inspected_by || 'office', office: true };
@@ -790,7 +839,7 @@
 
   window.DI = {
     LINES, SUBS, LANES, LANE_OFFSET, CAT_ORDER, data,
-    init, hasData, subAt, featuresNear, loadIRs, claimOf,
+    init, hasData, subAt, featuresNear, loadIRs, claimOf, migrateCulvertStages,
     fmtCh, fmtPlus, parseCh, fmtDate, fmtTime, monthsBetween, esc, DAYS, MONTHS,
     inspector, setInspector, addRecord, voidRecord, live, recordsFor, seenOf, ownSeen, openDefects,
     designChanges, statusOf, drafts, saveDraft, putPhoto, getPhoto, uid, loadLegacy,

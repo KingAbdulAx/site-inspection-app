@@ -314,6 +314,7 @@
     $('#laneHead').classList.toggle('hidden', mode !== 'strip');
     $('#cutHead').classList.toggle('hidden', second !== 'section');
     $('#stripHost').classList.toggle('hidden', mode !== 'strip');
+    $('#zoomCtl').classList.toggle('hidden', mode !== 'strip');
     $('#mapHost').classList.toggle('hidden', second !== 'map');
     $('#cutHost').classList.toggle('hidden', second !== 'section');
     if (mode === 'strip') {
@@ -329,7 +330,8 @@
     if (!DA.strip) {
       DA.strip = new window.DStrip.Strip($('#stripHost'), {
         onTap: f => openDrawer(f.ch0, f.id),
-        onPan: () => { $('#recentre').classList.remove('hidden'); }
+        onPan: () => { $('#recentre').classList.remove('hidden'); },
+        onZoom: () => render()
       });
     }
     const p = S.pos;
@@ -339,6 +341,11 @@
       unlisted: DI.live(r => r.kind === 'unlisted' && r.line === p.line)
     });
     $('#recentre').classList.toggle('hidden', DA.strip.viewCh == null);
+    const z = DA.strip.zoom, m = DA.strip.span();
+    $('#zoomLbl').textContent = m < 950 ? Math.round(m / 10) * 10 + ' m' : (m < 9500 ? (m / 1000).toFixed(1) : Math.round(m / 1000)) + ' km';
+    $('#zoomCtl').querySelector('[data-d="-1"]').disabled = z === 0;
+    $('#zoomCtl').querySelector('[data-d="1"]').disabled = z === window.DStrip.SCALES.length - 1;
+    $('#zoomCtl').classList.toggle('out', z > 0);
   }
   function renderCut() {
     const p = S.pos;
@@ -463,8 +470,11 @@
     const rel = relText(f, S.pos.ch, S.pos.facing);
     let h = '<div class="fhead">' + sideBadge(f.side, 'xl') + '<div style="min-width:0"><button class="t1" data-act="feature" data-id="' + esc(f.id) + '" style="text-align:left">' + I.typeIcon(f.icon) + '<span>' + esc(f.name) + '</span></button>' +
       '<div class="t2">' + chText(f) + ' ' + certChip(f) + ' <span class="rel">' + esc(rel) + '</span></div></div></div>';
-    h += '<div class="pair mt16"><div class="built"><div class="part"><span class="chip seen">Seen by you</span>' + meter(f, { s: st.s == null ? 0 : st.s, c: -1 }, '') +
-      '<div class="stage"><b>' + (st.seen ? esc(f.ladder[st.s]) + ' · ' + DI.fmtDate(st.seen.at) : 'Not yet') + '</b></div></div></div>';
+    // A record from the office (the cloud database) says whose it is: a colleague, or a progress chart.
+    const office = st.seen && st.seen.office;
+    h += '<div class="pair mt16"><div class="built"><div class="part"><span class="chip seen">' + (office ? 'Office' : 'Seen by you') + '</span>' + meter(f, { s: st.s == null ? 0 : st.s, c: -1 }, '') +
+      '<div class="stage"><b>' + (st.seen ? esc(f.ladder[st.s]) + ' · ' + DI.fmtDate(st.seen.at) : 'Not yet') + '</b>' +
+      (office && st.seen.by ? '<div style="flex-basis:100%;font:500 14px/1.3 var(--f-sans);color:var(--ink-3);margin-top:3px">' + esc(st.seen.by) + '</div>' : '') + '</div></div></div>';
     h += '<div class="built"><div class="part"><span class="chip claim">Contractor</span>' + (st.claim ? meter(f, { s: -1, c: st.c }, '') : meter(f, { s: -1, c: -1 }, '')) +
       '<div class="stage"><b>' + (st.claim ? esc(f.ladder[st.c]) + ' <span class="mono" style="font-size:14px;color:var(--ink-3);font-weight:500">IR ' + esc(st.claim.ir) + ' · ' + DI.fmtDate(st.claim.date) + '</span>' : '<span class="muted" style="font-weight:600">No IR</span>') + '</b></div></div></div></div>';
     h += '<div style="font:700 21px/1.2 var(--f-sans);margin:18px 0 10px;color:var(--ink-2)">What stage is it at now?</div>';
@@ -700,6 +710,7 @@
       case 'recentre': if (DA.strip) DA.strip.recentre(); S.sideCh = null; S.sideHl = null; render(); break;
       case 'side-me': S.sideCh = null; S.sideHl = null; render(); break;
       case 'pane': S.pane = b.dataset.v; render(); break;
+      case 'zoom': if (DA.strip) DA.strip.setZoom(DA.strip.zoom + Number(b.dataset.d)); break;
       case 'theme-toggle': setTheme(document.documentElement.getAttribute('data-theme') === 'office' ? 'sun' : 'office'); render(); break;
       case 'goto-next': if (DA.strip) { DA.strip.viewCh = Number(b.dataset.ch); render(); } break;
       case 'note': openNote(id); break;
@@ -746,8 +757,13 @@
     }
     if (top) return;
     const step = { ArrowUp: 40, ArrowDown: -40, PageUp: 300, PageDown: -300 }[e.key];
-    if (step && S.tab === 'walk' && DA.strip && (S.mode === 'strip' || DA.layout === 'wide')) {
+    const onStrip = S.tab === 'walk' && DA.strip && (S.mode === 'strip' || DA.layout === 'wide');
+    const zk = { '+': -1, '=': -1, '-': 1, '_': 1 }[e.key];
+    if (step && onStrip) {
       DA.strip.pan(step);
+      e.preventDefault();
+    } else if (zk && onStrip) {
+      DA.strip.setZoom(DA.strip.zoom + zk);
       e.preventDefault();
     } else if (e.key === 'g' || e.key === 'G') {
       openKeypad();

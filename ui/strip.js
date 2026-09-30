@@ -9,8 +9,15 @@
   const DI = window.DI;
   const ORDER_L = ['off', 'crest', 'toe', 'face', 'plat'];
   const SPINE = 60;
-  const PX_PER_M = 1.9;
+  // A few fixed scales rather than a continuous zoom: each one is honest about
+  // what it can show. ×1 is the walking scale; the others are for looking ahead
+  // and moving along the line quickly.
+  const SCALES = [1.9, 0.63, 0.19, 0.063];
+  const PX_PER_M = SCALES[0];
   const TOL = 4; // derived tolerance, metres
+  const ZOOM_KEY = 'KMD_STRIP_ZOOM_V1';
+  // Smallest step from `steps` that puts at least `minPx` pixels between marks.
+  const stepFor = (px, minPx, steps) => steps.find(s => s * px >= minPx) || steps[steps.length - 1];
 
   function geom(W, facing) {
     const lw = (W - SPINE) / 10;
@@ -70,14 +77,58 @@
       this.hits = [];
       this.viewCh = null;
       this.drag = null;
+      this.ptrs = new Map();
+      this.pinch = null;
+      this.zoom = 0;
+      try { this.zoom = Math.max(0, Math.min(SCALES.length - 1, Number(localStorage.getItem(ZOOM_KEY)) || 0)); } catch (x) { /* ignore */ }
       el.addEventListener('pointerdown', e => this.down(e));
       el.addEventListener('pointermove', e => this.move(e));
       el.addEventListener('pointerup', e => this.up(e));
-      el.addEventListener('pointercancel', () => { this.drag = null; });
-      el.addEventListener('wheel', e => { e.preventDefault(); this.pan(-e.deltaY); }, { passive: false });
+      el.addEventListener('pointercancel', e => { this.ptrs.delete(e.pointerId); this.drag = null; this.pinch = null; });
+      // Wheel pans; Ctrl + wheel (and a trackpad pinch, which arrives as one) zooms.
+      el.addEventListener('wheel', e => {
+        e.preventDefault();
+        if (e.ctrlKey) {
+          this.wheelZoom = (this.wheelZoom || 0) + e.deltaY;
+          if (Math.abs(this.wheelZoom) > 40) { this.setZoom(this.zoom + (this.wheelZoom > 0 ? 1 : -1)); this.wheelZoom = 0; }
+          return;
+        }
+        this.pan(-e.deltaY);
+      }, { passive: false });
     }
-    down(e) { this.drag = { y: e.clientY, x: e.clientX, y0: e.clientY, moved: false }; try { this.el.setPointerCapture(e.pointerId); } catch (x) { /* ignore */ } }
+    get px() { return SCALES[this.zoom]; }
+    // Metres of line the strip shows at the current scale.
+    span() { return (this.el.clientHeight || 500) / this.px; }
+    setZoom(i) {
+      const z = Math.max(0, Math.min(SCALES.length - 1, i));
+      if (z === this.zoom) return;
+      this.zoom = z;
+      try { localStorage.setItem(ZOOM_KEY, String(z)); } catch (x) { /* ignore */ }
+      if (this.state) this.render(this.state);
+      if (this.opts.onZoom) this.opts.onZoom(z);
+    }
+    down(e) {
+      this.ptrs.set(e.pointerId, e.clientY);
+      try { this.el.setPointerCapture(e.pointerId); } catch (x) { /* ignore */ }
+      if (this.ptrs.size === 2) {
+        // Two fingers: pinch to change scale, never pan or tap.
+        const ys = [...this.ptrs.values()];
+        this.pinch = { d0: Math.abs(ys[0] - ys[1]) || 1 };
+        this.drag = null;
+        return;
+      }
+      this.drag = { y: e.clientY, x: e.clientX, y0: e.clientY, moved: false };
+    }
     move(e) {
+      if (this.ptrs.has(e.pointerId)) this.ptrs.set(e.pointerId, e.clientY);
+      if (this.pinch && this.ptrs.size === 2) {
+        const ys = [...this.ptrs.values()];
+        const d = Math.abs(ys[0] - ys[1]) || 1;
+        // Fingers apart: closer in. Together: further out. One step per 1.6×.
+        if (d / this.pinch.d0 > 1.6) { this.setZoom(this.zoom - 1); this.pinch.d0 = d; }
+        else if (this.pinch.d0 / d > 1.6) { this.setZoom(this.zoom + 1); this.pinch.d0 = d; }
+        return;
+      }
       if (!this.drag) {
         // Mouse: show a hand over anything a tap would open.
         if (e.pointerType === 'mouse') { const r = this.el.getBoundingClientRect(); this.el.style.cursor = this.hitAt(e.clientX - r.left, e.clientY - r.top) ? 'pointer' : ''; }
@@ -88,6 +139,8 @@
       if (this.drag.moved) { this.pan(dy); this.drag.y = e.clientY; }
     }
     up(e) {
+      this.ptrs.delete(e.pointerId);
+      if (this.pinch) { if (this.ptrs.size < 2) this.pinch = null; this.drag = null; return; }
       const d = this.drag; this.drag = null;
       if (!d || d.moved) return;
       const r = this.el.getBoundingClientRect();
@@ -97,7 +150,7 @@
       if (!this.state) return;
       const dir = this.state.facing === 'decreasing' ? -1 : 1;
       const base = this.viewCh == null ? this.state.ch : this.viewCh;
-      this.viewCh = base + (dy / PX_PER_M) * dir;
+      this.viewCh = base + (dy / this.px) * dir;
       if (this.opts.onPan) this.opts.onPan(this.viewCh);
       this.render(this.state);
     }
@@ -124,9 +177,11 @@
       const dir = state.facing === 'decreasing' ? -1 : 1;
       const viewCh = this.viewCh == null ? state.ch : this.viewCh;
       const readY = Math.round(H * 0.78);
-      const Y = ch => readY - (ch - viewCh) * PX_PER_M * dir;
-      const chTop = viewCh + (readY / PX_PER_M) * dir;
-      const chBot = viewCh - ((H - readY) / PX_PER_M) * dir;
+      const px = this.px;
+      const close = px >= PX_PER_M; // the walking scale: every detail and label
+      const Y = ch => readY - (ch - viewCh) * px * dir;
+      const chTop = viewCh + (readY / px) * dir;
+      const chBot = viewCh - ((H - readY) / px) * dir;
       const lo = Math.min(chTop, chBot) - 30, hi = Math.max(chTop, chBot) + 30;
       const hits = [];
       let s = '<svg viewBox="0 0 ' + W + ' ' + H + '" width="' + W + '" height="' + H + '">' + defs();
@@ -175,8 +230,9 @@
 
       // spine: ticks, track, labels
       const sx0 = g.cx - SPINE / 2, sx1 = g.cx + SPINE / 2;
-      const t0 = Math.floor(lo / 10) * 10;
-      for (let c = t0; c <= hi; c += 10) {
+      const tick = stepFor(px, 12, [10, 25, 50, 100, 250, 500, 1000]);
+      const t0 = Math.floor(lo / tick) * tick;
+      for (let c = t0; c <= hi; c += tick) {
         const y = Y(c);
         if (y < -10 || y > H + 10) continue;
         s += '<line x1="' + (sx0 + 3) + '" y1="' + y + '" x2="' + (sx0 + 10) + '" y2="' + y + '" style="stroke:var(--ink);stroke-width:1.6"/>';
@@ -189,6 +245,7 @@
       const tags = [];
       const late = [];
       const points = [];
+      const crossChips = [];
       feats.forEach(f => {
         const st = DI.statusOf(f);
         const faded = st.removed ? ';opacity:0.45' : '';
@@ -200,8 +257,14 @@
           if (Math.abs(y1 - y0) < hh) { const m = (y0 + y1) / 2; y0 = m - hh / 2; y1 = m + hh / 2; }
           const ya = Math.min(y0, y1), yb = Math.max(y0, y1);
           s += '<rect x="' + xa + '" y="' + ya + '" width="' + (xb - xa) + '" height="' + (yb - ya) + '" style="' + fillStyle(st.fill) + ';stroke-width:2' + faded + '"' + (st.fill === 'never' ? ' stroke-dasharray="5 3"' : '') + '/>';
-          const lbl = f.cert === 'exact' ? DI.fmtPlus(f.ch0, 3) : '≈' + DI.fmtPlus(f.ch0, 0);
-          late.push(chip(W - 2, (ya + yb) / 2, lbl, { anchor: 'end', mono: true, fs: 14, weight: 600, bg: f.cert === 'exact' ? '#121311' : 'var(--surface)', fg: f.cert === 'exact' ? '#fff' : 'var(--ink)' }));
+          // Zoomed out the kilometre changes on screen, so the chip carries it.
+          const lbl = !close ? (f.cert === 'exact' ? '' : '≈') + DI.fmtCh(f.ch0) : f.cert === 'exact' ? DI.fmtPlus(f.ch0, 3) : '≈' + DI.fmtPlus(f.ch0, 0);
+          // Zoomed out, crossings can crowd: keep a chainage chip only where it has room.
+          const ym = (ya + yb) / 2;
+          if (close || !crossChips.some(y => Math.abs(y - ym) < 24)) {
+            crossChips.push(ym);
+            late.push(chip(W - 2, ym, lbl, { anchor: 'end', mono: true, fs: 14, weight: 600, bg: f.cert === 'exact' ? '#121311' : 'var(--surface)', fg: f.cert === 'exact' ? '#fff' : 'var(--ink)' }));
+          }
           hits.push({ f, x0: xa, x1: W, y0: ya - 4, y1: yb + 4 });
           if (st.defects.length) s += warnMark(xb + 4, ya - 16);
           if (st.changes.length) s += revMark(g.cx, ya - 14, st.changes[0], W);
@@ -219,7 +282,7 @@
         if (f.kind === 'label') {
           const y = Y(f.ch0);
           s += '<circle cx="' + x + '" cy="' + y + '" r="10" style="fill:var(--surface);stroke:var(--ink);stroke-width:1.8' + faded + '" stroke-dasharray="4 3"/>';
-          s += '<text x="' + x + '" y="' + (y + 25) + '" text-anchor="middle" style="fill:var(--ink);font:italic 700 12.5px var(--f-cond)">L=' + Math.round(f.stated || 0) + 'm</text>';
+          if (close && f.stated) s += '<text x="' + x + '" y="' + (y + 25) + '" text-anchor="middle" style="fill:var(--ink);font:italic 700 12.5px var(--f-cond)">L=' + Math.round(f.stated) + 'm</text>';
           hits.push({ f, x0: x - 12, x1: x + 12, y0: y - 12, y1: y + 12 });
           if (st.defects.length) s += warnMark(x + 10, y - 22);
           return;
@@ -236,7 +299,7 @@
           s += '<rect x="' + (x - bw / 2) + '" y="' + y0 + '" width="' + bw + '" height="' + (y1 - y0) + '" style="' + fillStyle(st.fill) + ';stroke-width:2' + faded + '"' + (st.fill === 'never' ? ' stroke-dasharray="4 3"' : '') + '/>';
         }
         if (derived) {
-          const capPx = Math.max(12, TOL * PX_PER_M);
+          const capPx = Math.max(12, TOL * px);
           [[a, f.ch0], [b, f.ch1]].forEach(([inner]) => {
             const yi = Y(inner);
             const outward = (inner === a ? -1 : 1) * dir; // toward the true end, in chainage
@@ -251,7 +314,8 @@
         if (st.changes.length) s += revMark(x, Math.max(14, Math.min(ya, yb) + 20), st.changes[0], W);
       });
 
-      // points: fold those in the same lane within 10 m into a count
+      // points: fold those in the same lane within 10 m (or a box height, zoomed out) into a count
+      const foldM = close ? 10 : 30 / px;
       const groups = {};
       points.forEach(p => { const k = p.f.side + p.f.lane; (groups[k] = groups[k] || []).push(p); });
       Object.values(groups).forEach(list => {
@@ -276,7 +340,7 @@
           run = [];
         };
         list.forEach(p => {
-          if (run.length && Math.abs(p.f.ch0 - run[0].f.ch0) > 10) flush();
+          if (run.length && Math.abs(p.f.ch0 - run[0].f.ch0) > foldM) flush();
           run.push(p);
         });
         flush();
@@ -290,8 +354,9 @@
         s += '<text x="' + x + '" y="' + (y + 6) + '" text-anchor="middle" style="fill:#121311;font:700 16px var(--f-cond)">?</text>';
       });
 
-      // spine labels on top of the track
-      for (let c = Math.floor(lo / 50) * 50; c <= hi; c += 50) {
+      // spine labels on top of the track: every 50 m walking, sparser zoomed out
+      const lstep = stepFor(px, 60, [50, 100, 200, 500, 1000, 2000, 5000]);
+      for (let c = Math.floor(lo / lstep) * lstep; c <= hi; c += lstep) {
         const y = Y(c);
         if (y < 8 || y > H - 8) continue;
         const major = c % 100 === 0;
@@ -315,8 +380,8 @@
         s += chip(t.x, y, t.code, { fs: 14, dash: t.dashed });
       });
 
-      // near band labels
-      if (state.tier !== 'poor') {
+      // near band labels (zoomed out the band is a few pixels: the line says where you are)
+      if (state.tier !== 'poor' && close) {
         const ya = Y(state.userCh + 20), yb = Y(state.userCh - 20);
         s += chip(W - 3, ya, (dir > 0 ? '+' : '−') + '20 m', { anchor: 'end', fs: 13 });
         s += chip(W - 3, yb, (dir > 0 ? '−' : '+') + '20 m', { anchor: 'end', fs: 13 });
@@ -492,5 +557,5 @@
     return s + '</svg>';
   }
 
-  window.DStrip = { Strip, sectionCut, realCut, geom, SPINE };
+  window.DStrip = { Strip, sectionCut, realCut, geom, SPINE, SCALES };
 })();

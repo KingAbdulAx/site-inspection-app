@@ -24,8 +24,9 @@ from pyproj import Geod, Transformer
 
 
 def fmt(m):
+    sign, m = ('-', -m) if m < 0 else ('', m)
     km = int(m // 1000)
-    return f'{km}+{m - km * 1000:03.0f}'
+    return f'{sign}{km}+{m - km * 1000:03.0f}'
 
 
 def main():
@@ -82,8 +83,7 @@ def main():
     dense = [{'pk': round(float(c), 3), 'lon': round(float(o), 7), 'lat': round(float(t), 7), 'bearing': b} for c, o, t, b in zip(want, lon, lat, brg)]
 
     def tick(p, major):
-        km = int(p['pk'] // 1000)
-        lab = f"{km}+{int(round(p['pk'] - km * 1000)):03d}"
+        lab = fmt(p['pk'])
         return dict(pk=p['pk'], label=lab, full_label='PK ' + lab, lon=p['lon'], lat=p['lat'], bearing=p['bearing'], is_major=major)
     t100 = [tick(p, False) for p in dense if abs(p['pk'] / 100 - round(p['pk'] / 100)) < 1e-6]
     t1k = [tick(p, True) for p in dense if abs(p['pk'] / 1000 - round(p['pk'] / 1000)) < 1e-6]

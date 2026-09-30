@@ -20872,596 +20872,11 @@ window.SECTION03_ASSETS = {
   "type": "FeatureCollection",
   "metadata": {
     "title": "Section 03 Verified Drainage Assets",
-    "count": 1132,
+    "count": 1147,
     "generated_at": "September 2026",
-    "base_corrections_applied": 1130,
-    "removed_as_extraction_errors": [
-      {
-        "id": "asset_005",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_007",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_010",
-        "note": "No dissipator in the CAD within 25 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_011",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_015",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_018",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_020",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_027",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_032",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_043",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_066",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_071",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_073",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_082",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_084",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_085",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_088",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_090",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_092",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_096",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_102",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_104",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_109",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_111",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_114",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_116",
-        "note": "Duplicate piece of a CAD run already carried by another feature (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_120",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_124",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_125",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_126",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_127",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_135",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_137",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_141",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_149",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_159",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_161",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_172",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_173",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_175",
-        "note": "Not in the CAD drainage on this side, lane and chainage (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_267",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_273",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_277",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_289",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_291",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_292",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_293",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_296",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_298",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_300",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_306",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_310",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_315",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_316",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_319",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_320",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_324",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_326",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_328",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_331",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_332",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_335",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_344",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_345",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_349",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_353",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_355",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_358",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_360",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_362",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_365",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_367",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_368",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_371",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_373",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_379",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_381",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_384",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_389",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_391",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_394",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_397",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_400",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_407",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_408",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_410",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_429",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_431",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_433",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_434",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_435",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_439",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_443",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_444",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_445",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_447",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_449",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_450",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_452",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_460",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_463",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_468",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_471",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_473",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_474",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_476",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_479",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_488",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_490",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_492",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_496",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_498",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_501",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_504",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_505",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_507",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_511",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_514",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_516",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_518",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_521",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_522",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_526",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_527",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_530",
-        "note": "No riprap callout in the CAD within 50 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_551",
-        "note": "No water descent in the CAD within 15 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_552",
-        "note": "No water descent in the CAD within 15 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_557",
-        "note": "No water descent in the CAD within 15 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_585",
-        "note": "No water descent in the CAD within 15 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_594",
-        "note": "No water descent in the CAD within 15 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_596",
-        "note": "No water descent in the CAD within 15 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_617",
-        "note": "No water descent in the CAD within 15 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_625",
-        "note": "No water descent in the CAD within 15 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_635",
-        "note": "No water descent in the CAD within 15 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_695",
-        "note": "No water descent in the CAD within 15 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_768",
-        "note": "No water descent in the CAD within 15 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_770",
-        "note": "No water descent in the CAD within 15 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_772",
-        "note": "No water descent in the CAD within 15 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_773",
-        "note": "No water descent in the CAD within 15 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_793",
-        "note": "No water descent in the CAD within 15 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_795",
-        "note": "No water descent in the CAD within 15 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_816",
-        "note": "No water descent in the CAD within 15 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_838",
-        "note": "No water descent in the CAD within 15 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_841",
-        "note": "No water descent in the CAD within 15 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_842",
-        "note": "No water descent in the CAD within 15 m (CAD S03-DRN-LONG)"
-      },
-      {
-        "id": "asset_265",
-        "note": "No water descent in the CAD within 15 m (CAD S03-DRN-LONG)"
-      }
-    ],
-    "corrected_at": "2026-09-29T16:35:18.383Z"
+    "base_corrections_applied": 15,
+    "removed_as_extraction_errors": [],
+    "corrected_at": "2026-09-30T09:32:31.214Z"
   },
   "features": [
     {
@@ -22039,6 +21454,7 @@ window.SECTION03_ASSETS = {
         "inspection_date": "",
         "dimensions": "b=0.75m / h=0.75m / 1:1",
         "flow_direction": "Decreasing chainage (towards PK 83+725 manhole exit)",
+        "offset_m": 4.65,
         "di_set": {
           "ch0": 83724.87,
           "ch1": 84424.9,
@@ -22047,8 +21463,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03001",
           "preset": "T1"
-        },
-        "offset_m": 4.65
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -22327,6 +21742,7 @@ window.SECTION03_ASSETS = {
         "inspection_date": "",
         "dimensions": "b=0.50m / h=0.50m / 1:1",
         "flow_direction": "Decreasing chainage (towards PK 83+725 trapezoidal channel)",
+        "offset_m": 9.4,
         "di_set": {
           "ch0": 83737.39,
           "ch1": 84763.1,
@@ -22335,8 +21751,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03002-07",
           "preset": "T1"
-        },
-        "offset_m": 9.4
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -22613,6 +22028,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 9.52,
         "di_set": {
           "ch0": 84427.1,
           "ch1": 84499.94,
@@ -22620,8 +22036,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.52,
           "cert": "exact",
           "sheet": "DW-03002-07"
-        },
-        "offset_m": 9.52
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -22971,6 +22386,7 @@ window.SECTION03_ASSETS = {
         "inspection_date": "",
         "typology_code": "TYPE_9",
         "dimensions": "L=138.0m / i=0.30%",
+        "offset_m": 4.11,
         "di_set": {
           "ch0": 85424.92,
           "ch1": 85563.52,
@@ -22978,8 +22394,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 4.11,
           "cert": "exact",
           "sheet": "DW-03002-07"
-        },
-        "offset_m": 4.11
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -23209,6 +22624,7 @@ window.SECTION03_ASSETS = {
         "notes": "Verified on DW-03003: Right shoulder half-round ditch continuation to PK 85+650.",
         "inspection_date": "",
         "typology_code": "TYPE_9",
+        "offset_m": 3.6,
         "di_set": {
           "ch0": 85563.52,
           "ch1": 85655,
@@ -23216,8 +22632,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 3.6,
           "cert": "exact",
           "sheet": "DW-03003-06"
-        },
-        "offset_m": 3.6
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -23418,6 +22833,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "Verified on DW-03003: Type 12 from BC 85+635 to ~85+800, then Type 1 standard cut ditch to 86+100.",
         "inspection_date": "",
+        "offset_m": 9.88,
         "di_set": {
           "ch0": 85638.64,
           "ch1": 85774.83,
@@ -23425,8 +22841,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.88,
           "cert": "exact",
           "sheet": "DW-03003-06"
-        },
-        "offset_m": 9.88
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -23571,6 +22986,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "Verified on DW-03003: Deep cutting left ditch; terminates with energy dissipator into spread-out zone before BC 86+344.",
         "inspection_date": "",
+        "offset_m": 4.62,
         "di_set": {
           "ch0": 86100.02,
           "ch1": 86300.23,
@@ -23579,8 +22995,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03003-06",
           "preset": "T1"
-        },
-        "offset_m": 4.62
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -23874,6 +23289,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "Verified on DW-03003: Type 7 from BC 86+344, transitioning to Type 12 entering cattle crossing / underpass at 86+525.",
         "inspection_date": "",
+        "offset_m": 13.02,
         "di_set": {
           "ch0": 86358.94,
           "ch1": 86474.91,
@@ -23881,8 +23297,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 13.02,
           "cert": "exact",
           "sheet": "DW-03003-06"
-        },
-        "offset_m": 13.02
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -24013,6 +23428,7 @@ window.SECTION03_ASSETS = {
         "inspection_date": "",
         "typology_code": "TYPE_9",
         "dimensions": "L=500.0m / i=0.60%",
+        "offset_m": 3.27,
         "di_set": {
           "ch0": 86349.94,
           "ch1": 86850.01,
@@ -24020,8 +23436,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 3.27,
           "cert": "exact",
           "sheet": "DW-03003-06"
-        },
-        "offset_m": 3.27
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -24500,6 +23915,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "Verified on DW-03003: Left toe ditch Type 7 continuing to sheet match line at PK 86+900.",
         "inspection_date": "",
+        "offset_m": 11.67,
         "di_set": {
           "ch0": 86706.79,
           "ch1": 86997.45,
@@ -24507,8 +23923,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 11.67,
           "cert": "exact",
           "sheet": "DW-03003-06"
-        },
-        "offset_m": 11.67
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -24777,6 +24192,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 11.47,
         "di_set": {
           "ch0": 87121.58,
           "ch1": 87425.15,
@@ -24784,8 +24200,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 11.47,
           "cert": "exact",
           "sheet": "DW-03004-06"
-        },
-        "offset_m": 11.47
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -25059,6 +24474,7 @@ window.SECTION03_ASSETS = {
         "notes": "",
         "inspection_date": "",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 87300,
           "ch1": 87492.62,
@@ -25066,8 +24482,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03004-06"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -25318,6 +24733,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 12.93,
         "di_set": {
           "ch0": 87666.83,
           "ch1": 87946.45,
@@ -25325,8 +24741,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 12.93,
           "cert": "exact",
           "sheet": "DW-03004-06"
-        },
-        "offset_m": 12.93
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -25583,6 +24998,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 12.93,
         "di_set": {
           "ch0": 87665.7,
           "ch1": 87947.3,
@@ -25590,8 +25006,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 12.93,
           "cert": "exact",
           "sheet": "DW-03004-06"
-        },
-        "offset_m": 12.93
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -25853,6 +25268,7 @@ window.SECTION03_ASSETS = {
         "notes": "",
         "inspection_date": "",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 87667,
           "ch1": 88000.02,
@@ -25860,8 +25276,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03004-06"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -26299,6 +25714,7 @@ window.SECTION03_ASSETS = {
         "notes": "",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 16.64,
         "di_set": {
           "ch0": 87991.45,
           "ch1": 87991.45,
@@ -26307,8 +25723,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03004-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 16.64
+        }
       },
       "geometry": {
         "type": "Point",
@@ -26381,6 +25796,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 15.86,
         "di_set": {
           "ch0": 87998.73,
           "ch1": 88204.01,
@@ -26388,8 +25804,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 15.86,
           "cert": "exact",
           "sheet": "DW-03004-06"
-        },
-        "offset_m": 15.86
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -26628,6 +26043,7 @@ window.SECTION03_ASSETS = {
         "notes": "",
         "inspection_date": "",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 88000.02,
           "ch1": 88349.91,
@@ -26635,8 +26051,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03004-06"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -26909,6 +26324,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 12.96,
         "di_set": {
           "ch0": 88204.01,
           "ch1": 88271.17,
@@ -26916,8 +26332,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 12.96,
           "cert": "exact",
           "sheet": "DW-03004-06"
-        },
-        "offset_m": 12.96
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -27096,6 +26511,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 12.41,
         "di_set": {
           "ch0": 88349.7,
           "ch1": 88447.03,
@@ -27103,8 +26519,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 12.41,
           "cert": "exact",
           "sheet": "DW-03005-06"
-        },
-        "offset_m": 12.41
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -27217,6 +26632,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 13.47,
         "di_set": {
           "ch0": 88447.03,
           "ch1": 88504.82,
@@ -27224,8 +26640,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 13.47,
           "cert": "exact",
           "sheet": "DW-03005-06"
-        },
-        "offset_m": 13.47
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -27380,6 +26795,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "[RETYPE NOTE] Drawing DW-03005-06 shows Type 12 trapezoidal lined ditch at foot of slope [Ref: FS-087].",
         "inspection_date": "",
+        "offset_m": 10.13,
         "di_set": {
           "ch0": 88800.07,
           "ch1": 88974.03,
@@ -27387,8 +26803,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 10.13,
           "cert": "exact",
           "sheet": "DW-03005-06"
-        },
-        "offset_m": 10.13
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -27769,6 +27184,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 10.59,
         "di_set": {
           "ch0": 89400,
           "ch1": 89550,
@@ -27776,8 +27192,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 10.59,
           "cert": "exact",
           "sheet": "DW-03005-06"
-        },
-        "offset_m": 10.59
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -27930,6 +27345,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "[FLAG] No drawing symbology found on DW-03005-06 / DW-03006-05 supporting this run. Retained pending site verification. [RETYPE NOTE] Drawing DW-03005-06 / DW-03006-05 shows Type 12 trapezoidal toe ditch at foot of slope (B=1.50m, H=0.50m) rather than platform Type 1 [Ref: FS-008].",
         "inspection_date": "",
+        "offset_m": 14.66,
         "di_set": {
           "ch0": 89575.03,
           "ch1": 90137.73,
@@ -27938,8 +27354,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03006",
           "preset": "T9"
-        },
-        "offset_m": 14.66
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -28684,6 +28099,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 9.61,
         "di_set": {
           "ch0": 90850,
           "ch1": 91100.7,
@@ -28691,8 +28107,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.61,
           "cert": "exact",
           "sheet": "DW-03006"
-        },
-        "offset_m": 9.61
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -28966,6 +28381,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "[FLAG] No drawing symbology found on DW-03007-06 supporting this run. Retained pending site verification.",
         "inspection_date": "",
+        "offset_m": 10.35,
         "di_set": {
           "ch0": 91799.97,
           "ch1": 92255.83,
@@ -28974,8 +28390,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03007-06",
           "preset": "T12"
-        },
-        "offset_m": 10.35
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -29285,6 +28700,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "[FLAG] No drawing symbology found on DW-03008-06; alignment intersects railway bridge BRG-2602 at CH 93+678–93+731 where continuous platform side ditch is structurally precluded. Marked for Senior Engineer review.",
         "inspection_date": "",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 93734,
           "ch1": 93943.83,
@@ -29293,8 +28709,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03008-06",
           "preset": "T9"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -29650,6 +29065,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "[FLAG] No drawing symbology found on DW-03009-06 / DW-03010-07 supporting this run. Retained pending site verification.",
         "inspection_date": "",
+        "offset_m": 10.96,
         "di_set": {
           "ch0": 95824.74,
           "ch1": 96000,
@@ -29658,8 +29074,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03010-07",
           "preset": "T12"
-        },
-        "offset_m": 10.96
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -30088,6 +29503,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "[FLAG] No drawing symbology found on DW-03011-06 / DW-03012-07 supporting this run. Retained pending site verification. [FLAG] No drawing symbology found on DW-03012-07 supporting this run. Retained pending site verification. [RECONCILED - FLIP SIDE] Drawing DW-03011-06 places this ditch on the LEFT side (successor asset_240). Retained on original side pending final engineer sign-off.",
         "inspection_date": "",
+        "offset_m": 9.92,
         "di_set": {
           "ch0": 98375.43,
           "ch1": 98429.36,
@@ -30096,8 +29512,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03012-07",
           "preset": "T12"
-        },
-        "offset_m": 9.92
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -30174,6 +29589,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "[FLAG] No drawing symbology found on DW-03013-06 supporting this run. Retained pending site verification.",
         "inspection_date": "",
+        "offset_m": 9.48,
         "di_set": {
           "ch0": 100325,
           "ch1": 100553.39,
@@ -30182,8 +29598,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03013-06",
           "preset": "T7"
-        },
-        "offset_m": 9.48
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -30438,6 +29853,7 @@ window.SECTION03_ASSETS = {
         "notes": "",
         "inspection_date": "",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 100799.99,
           "ch1": 101124.98,
@@ -30445,8 +29861,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03014-06"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -30757,6 +30172,7 @@ window.SECTION03_ASSETS = {
         "notes": "",
         "inspection_date": "",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 103350.04,
           "ch1": 103750,
@@ -30764,8 +30180,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03015-06"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -31080,6 +30495,7 @@ window.SECTION03_ASSETS = {
         "notes": "",
         "inspection_date": "",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 103750,
           "ch1": 104024.97,
@@ -31087,8 +30503,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03016-06"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -31378,6 +30793,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 10.8,
         "di_set": {
           "ch0": 104024.92,
           "ch1": 105225.08,
@@ -31385,8 +30801,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 10.8,
           "cert": "exact",
           "sheet": "DW-03016-06"
-        },
-        "offset_m": 10.8
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -31659,6 +31074,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 11.86,
         "di_set": {
           "ch0": 105566.05,
           "ch1": 105650,
@@ -31666,8 +31082,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 11.86,
           "cert": "exact",
           "sheet": "DW-03017-06"
-        },
-        "offset_m": 11.86
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -31895,6 +31310,7 @@ window.SECTION03_ASSETS = {
         "notes": "",
         "inspection_date": "",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 105948.67,
           "ch1": 106654,
@@ -31902,8 +31318,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03017-06"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -32180,6 +31595,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 12.93,
         "di_set": {
           "ch0": 107670.83,
           "ch1": 107888.03,
@@ -32187,8 +31603,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 12.93,
           "cert": "exact",
           "sheet": "DW-03018-06"
-        },
-        "offset_m": 12.93
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -32397,6 +31812,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 12.93,
         "di_set": {
           "ch0": 107670.97,
           "ch1": 107888,
@@ -32404,8 +31820,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 12.93,
           "cert": "exact",
           "sheet": "DW-03018-06"
-        },
-        "offset_m": 12.93
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -33727,6 +33142,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 10.71,
         "di_set": {
           "ch0": 116797.86,
           "ch1": 118498.67,
@@ -33734,8 +33150,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 10.71,
           "cert": "exact",
           "sheet": "DW-03025-06"
-        },
-        "offset_m": 10.71
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -34147,6 +33562,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "[FLAG] No drawing symbology found on DW-03027-06 supporting this run. Retained pending site verification. [RECONCILED - FLIP SIDE] Drawing DW-03027-06 places this ditch on the LEFT side (successor asset_259). Retained on original side pending final engineer sign-off. [RETYPE NOTE] At CH 120+280, drawing DW-03027-06 indicates transition to Type 12 / Type 4 toe ditch [Ref: FS-034].",
         "inspection_date": "",
+        "offset_m": 7.81,
         "di_set": {
           "ch0": 119773.52,
           "ch1": 120231.87,
@@ -34154,8 +33570,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.81,
           "cert": "exact",
           "sheet": "DW-03027-06"
-        },
-        "offset_m": 7.81
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -34539,6 +33954,7 @@ window.SECTION03_ASSETS = {
         "notes": "",
         "inspection_date": "",
         "typology_code": "TYPE_9",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 121125.01,
           "ch1": 121300,
@@ -34546,8 +33962,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 3.25,
           "cert": "exact",
           "sheet": "DW-03028-05"
-        },
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -37530,6 +36945,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "Verified on DW-03002: Type 12 from BC 84+891 to connection box (~85+050), then Type 7 to culvert slope protection (~85+134).",
         "inspection_date": "",
+        "offset_m": 10.73,
         "di_set": {
           "ch0": 84896.84,
           "ch1": 85050,
@@ -37537,8 +36953,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 10.73,
           "cert": "exact",
           "sheet": "DW-03002-07"
-        },
-        "offset_m": 10.73
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -37695,6 +37110,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "Verified on DW-03003: Right cut ditch Type 1 standard from 85+800 to 86+100.",
         "inspection_date": "",
+        "offset_m": 4.1,
         "di_set": {
           "ch0": 85781.01,
           "ch1": 86224.81,
@@ -37702,8 +37118,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 4.1,
           "cert": "exact",
           "sheet": "DW-03003-06"
-        },
-        "offset_m": 4.1
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -37976,6 +37391,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "Verified on DW-03003: Left toe ditch sequence between BC 86+570 and BC 86+704.",
         "inspection_date": "",
+        "offset_m": 14.24,
         "di_set": {
           "ch0": 86573.17,
           "ch1": 86625.02,
@@ -37983,8 +37399,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 14.24,
           "cert": "exact",
           "sheet": "DW-03003-06"
-        },
-        "offset_m": 14.24
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -38061,6 +37476,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 15.56,
         "di_set": {
           "ch0": 87324.56,
           "ch1": 87507.51,
@@ -38068,8 +37484,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 15.56,
           "cert": "exact",
           "sheet": "DW-03004-06"
-        },
-        "offset_m": 15.56
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -38250,6 +37665,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 21.79,
         "di_set": {
           "ch0": 87700,
           "ch1": 87840.04,
@@ -38257,8 +37673,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 21.79,
           "cert": "exact",
           "sheet": "DW-03004-06"
-        },
-        "offset_m": 21.79
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -38407,6 +37822,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 11.27,
         "di_set": {
           "ch0": 88572.27,
           "ch1": 88707.45,
@@ -38414,8 +37830,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 11.27,
           "cert": "exact",
           "sheet": "DW-03005-06"
-        },
-        "offset_m": 11.27
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -38560,6 +37975,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 11.21,
         "di_set": {
           "ch0": 89139.79,
           "ch1": 89275.02,
@@ -38568,8 +37984,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03005-06",
           "preset": "T7"
-        },
-        "offset_m": 11.21
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -38714,6 +38129,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 9.54,
         "di_set": {
           "ch0": 90550.01,
           "ch1": 90709.75,
@@ -38721,8 +38137,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.54,
           "cert": "exact",
           "sheet": "DW-03006"
-        },
-        "offset_m": 9.54
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -38883,6 +38298,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 9.6,
         "di_set": {
           "ch0": 90716.9,
           "ch1": 90850,
@@ -38890,8 +38306,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.6,
           "cert": "exact",
           "sheet": "DW-03006"
-        },
-        "offset_m": 9.6
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -39032,6 +38447,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 10.16,
         "di_set": {
           "ch0": 90875,
           "ch1": 91325.02,
@@ -39040,8 +38456,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03007-06",
           "preset": "T7"
-        },
-        "offset_m": 10.16
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -39318,6 +38733,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 10.62,
         "di_set": {
           "ch0": 96225,
           "ch1": 96574.22,
@@ -39325,8 +38741,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 10.62,
           "cert": "exact",
           "sheet": "DW-03010-07"
-        },
-        "offset_m": 10.62
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -39599,6 +39014,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 10.48,
         "di_set": {
           "ch0": 97250.05,
           "ch1": 97324.57,
@@ -39607,8 +39023,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03011-06",
           "preset": "T7"
-        },
-        "offset_m": 10.48
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -39701,6 +39116,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 10.1,
         "di_set": {
           "ch0": 97575.39,
           "ch1": 97750,
@@ -39709,8 +39125,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03011-06",
           "preset": "T7"
-        },
-        "offset_m": 10.1
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -39883,6 +39298,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 10.4,
         "di_set": {
           "ch0": 98147,
           "ch1": 98377.7,
@@ -39890,8 +39306,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 10.4,
           "cert": "exact",
           "sheet": "DW-03012-07"
-        },
-        "offset_m": 10.4
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -40112,6 +39527,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 9.79,
         "di_set": {
           "ch0": 101100.07,
           "ch1": 101866,
@@ -40120,8 +39536,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03014-06",
           "preset": "T7"
-        },
-        "offset_m": 9.79
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -40398,6 +39813,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 8.78,
         "di_set": {
           "ch0": 102325,
           "ch1": 102750,
@@ -40406,8 +39822,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03015-06",
           "preset": "T7"
-        },
-        "offset_m": 8.78
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -40684,6 +40099,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 10.03,
         "di_set": {
           "ch0": 102775.02,
           "ch1": 102878.22,
@@ -40691,8 +40107,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 10.03,
           "cert": "exact",
           "sheet": "DW-03015-06"
-        },
-        "offset_m": 10.03
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -40809,6 +40224,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 9.91,
         "di_set": {
           "ch0": 102925,
           "ch1": 103324.98,
@@ -40817,8 +40233,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03015-06",
           "preset": "T7"
-        },
-        "offset_m": 9.91
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -41095,6 +40510,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 11.24,
         "di_set": {
           "ch0": 104524.77,
           "ch1": 105200.02,
@@ -41103,8 +40519,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03016-06",
           "preset": "T7"
-        },
-        "offset_m": 11.24
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -41381,6 +40796,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 12.08,
         "di_set": {
           "ch0": 105340.04,
           "ch1": 105475,
@@ -41389,8 +40805,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03017-06",
           "preset": "T7"
-        },
-        "offset_m": 12.08
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -41531,6 +40946,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 22.46,
         "di_set": {
           "ch0": 107825,
           "ch1": 108232.16,
@@ -41539,8 +40955,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03019-06",
           "preset": "T7"
-        },
-        "offset_m": 22.46
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -41817,6 +41232,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 30.6,
         "di_set": {
           "ch0": 108414.33,
           "ch1": 108775.01,
@@ -41824,8 +41240,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 30.6,
           "cert": "exact",
           "sheet": "DW-03019-06"
-        },
-        "offset_m": 30.6
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -42102,6 +41517,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 9.14,
         "di_set": {
           "ch0": 111374.94,
           "ch1": 111724.28,
@@ -42110,8 +41526,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03021-06",
           "preset": "T7"
-        },
-        "offset_m": 9.14
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -42388,6 +41803,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 11.2,
         "di_set": {
           "ch0": 112125,
           "ch1": 112400.2,
@@ -42396,8 +41812,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03022-06",
           "preset": "T7"
-        },
-        "offset_m": 11.2
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -42654,6 +42069,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 8.98,
         "di_set": {
           "ch0": 112974.79,
           "ch1": 113115.29,
@@ -42661,8 +42077,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.98,
           "cert": "exact",
           "sheet": "DW-03022-06"
-        },
-        "offset_m": 8.98
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -42811,6 +42226,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 10.02,
         "di_set": {
           "ch0": 113449.2,
           "ch1": 113687.15,
@@ -42818,8 +42234,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 10.02,
           "cert": "exact",
           "sheet": "DW-03023-06"
-        },
-        "offset_m": 10.02
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -43044,6 +42459,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 9.47,
         "di_set": {
           "ch0": 114078.31,
           "ch1": 114274.56,
@@ -43051,8 +42467,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.47,
           "cert": "exact",
           "sheet": "DW-03023-06"
-        },
-        "offset_m": 9.47
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -43245,6 +42660,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 15.05,
         "di_set": {
           "ch0": 114453.86,
           "ch1": 114575,
@@ -43252,8 +42668,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 15.05,
           "cert": "exact",
           "sheet": "DW-03023-06"
-        },
-        "offset_m": 15.05
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -43386,6 +42801,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 11.33,
         "di_set": {
           "ch0": 114503.24,
           "ch1": 114799.6,
@@ -43393,8 +42809,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 11.33,
           "cert": "exact",
           "sheet": "DW-03023-06"
-        },
-        "offset_m": 11.33
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -43667,6 +43082,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 8.03,
         "di_set": {
           "ch0": 115549.97,
           "ch1": 115924.9,
@@ -43675,8 +43091,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03024-07",
           "preset": "T7"
-        },
-        "offset_m": 8.03
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -43953,6 +43368,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 14.29,
         "di_set": {
           "ch0": 116431.18,
           "ch1": 116625,
@@ -43960,8 +43376,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 14.29,
           "cert": "exact",
           "sheet": "DW-03025-06"
-        },
-        "offset_m": 14.29
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -44150,6 +43565,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 11.73,
         "di_set": {
           "ch0": 118597.32,
           "ch1": 119275,
@@ -44157,8 +43573,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 11.73,
           "cert": "exact",
           "sheet": "DW-03026-07"
-        },
-        "offset_m": 11.73
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -44431,6 +43846,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 9.42,
         "di_set": {
           "ch0": 119338.22,
           "ch1": 119600.03,
@@ -44438,8 +43854,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.42,
           "cert": "exact",
           "sheet": "DW-03027-06"
-        },
-        "offset_m": 9.42
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -44684,6 +44099,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 7.58,
         "di_set": {
           "ch0": 119900,
           "ch1": 120224.1,
@@ -44691,8 +44107,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.58,
           "cert": "exact",
           "sheet": "DW-03027-06"
-        },
-        "offset_m": 7.58
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -44965,6 +44380,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 9.65,
         "di_set": {
           "ch0": 120524.8,
           "ch1": 121174.97,
@@ -44973,8 +44389,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03028-05",
           "preset": "T7"
-        },
-        "offset_m": 9.65
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -45251,6 +44666,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 66.83,
         "di_set": {
           "ch0": 121408.57,
           "ch1": 121850.2,
@@ -45259,8 +44675,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03028-05",
           "preset": "T7"
-        },
-        "offset_m": 66.83
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -45537,6 +44952,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 19.09,
         "di_set": {
           "ch0": 122823.57,
           "ch1": 123899.97,
@@ -45544,8 +44960,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 19.09,
           "cert": "exact",
           "sheet": "DW-03030-05"
-        },
-        "offset_m": 19.09
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -45818,6 +45233,7 @@ window.SECTION03_ASSETS = {
         "status": "Not Started",
         "notes": "",
         "inspection_date": "",
+        "offset_m": 19.73,
         "di_set": {
           "ch0": 123251.21,
           "ch1": 123600.07,
@@ -45825,8 +45241,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 19.73,
           "cert": "exact",
           "sheet": "DW-03030-05"
-        },
-        "offset_m": 19.73
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -46105,6 +45520,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 15.4,
         "di_set": {
           "ch0": 82963.28,
           "ch1": 82963.28,
@@ -46113,8 +45529,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03001",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 15.4
+        }
       },
       "geometry": {
         "type": "Point",
@@ -46147,6 +45562,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.53,
         "di_set": {
           "ch0": 84882.16,
           "ch1": 84882.16,
@@ -46155,8 +45571,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03002-07",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.53
+        }
       },
       "geometry": {
         "type": "Point",
@@ -46189,6 +45604,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.27,
         "di_set": {
           "ch0": 84910.84,
           "ch1": 84910.84,
@@ -46197,8 +45613,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03002-07",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.27
+        }
       },
       "geometry": {
         "type": "Point",
@@ -46231,6 +45646,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 9.22,
         "di_set": {
           "ch0": 85153.92,
           "ch1": 85153.92,
@@ -46239,8 +45655,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03002-07",
           "cert": "label",
           "stated": 36
-        },
-        "offset_m": 9.22
+        }
       },
       "geometry": {
         "type": "Point",
@@ -46273,6 +45688,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 9.14,
         "di_set": {
           "ch0": 85182.98,
           "ch1": 85182.98,
@@ -46281,8 +45697,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03002-07",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 9.14
+        }
       },
       "geometry": {
         "type": "Point",
@@ -46315,6 +45730,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.44,
         "di_set": {
           "ch0": 85307.48,
           "ch1": 85307.48,
@@ -46323,8 +45739,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03002-07",
           "cert": "label",
           "stated": 129
-        },
-        "offset_m": 8.44
+        }
       },
       "geometry": {
         "type": "Point",
@@ -46357,6 +45772,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.91,
         "di_set": {
           "ch0": 85435.23,
           "ch1": 85435.23,
@@ -46365,8 +45781,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03002-07",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.91
+        }
       },
       "geometry": {
         "type": "Point",
@@ -46399,6 +45814,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.99,
         "di_set": {
           "ch0": 85647.66,
           "ch1": 85647.66,
@@ -46407,8 +45823,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03003-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.99
+        }
       },
       "geometry": {
         "type": "Point",
@@ -46441,6 +45856,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 6.7,
         "di_set": {
           "ch0": 85626.33,
           "ch1": 85626.33,
@@ -46449,8 +45865,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03003-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 6.7
+        }
       },
       "geometry": {
         "type": "Point",
@@ -46483,6 +45898,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 6.11,
         "di_set": {
           "ch0": 86335.28,
           "ch1": 86335.28,
@@ -46491,8 +45907,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03003-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 6.11
+        }
       },
       "geometry": {
         "type": "Point",
@@ -46525,6 +45940,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 5.65,
         "di_set": {
           "ch0": 86359,
           "ch1": 86359,
@@ -46533,8 +45949,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03003-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 5.65
+        }
       },
       "geometry": {
         "type": "Point",
@@ -46567,6 +45982,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 11.84,
         "di_set": {
           "ch0": 86563,
           "ch1": 86563,
@@ -46575,8 +45991,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03003-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 11.84
+        }
       },
       "geometry": {
         "type": "Point",
@@ -46609,6 +46024,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 12.36,
         "di_set": {
           "ch0": 86580.55,
           "ch1": 86580.55,
@@ -46617,8 +46033,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03003-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 12.36
+        }
       },
       "geometry": {
         "type": "Point",
@@ -46651,6 +46066,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 12.5,
         "di_set": {
           "ch0": 86687.62,
           "ch1": 86687.62,
@@ -46659,8 +46075,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03003-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 12.5
+        }
       },
       "geometry": {
         "type": "Point",
@@ -46693,6 +46108,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 12.04,
         "di_set": {
           "ch0": 86711.34,
           "ch1": 86711.34,
@@ -46701,8 +46117,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03003-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 12.04
+        }
       },
       "geometry": {
         "type": "Point",
@@ -46735,6 +46150,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 16.47,
         "di_set": {
           "ch0": 87500.14,
           "ch1": 87500.14,
@@ -46742,8 +46158,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 16.47,
           "sheet": "DW-03004-06",
           "cert": "label"
-        },
-        "offset_m": 16.47
+        }
       },
       "geometry": {
         "type": "Point",
@@ -46776,6 +46191,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 19.65,
         "di_set": {
           "ch0": 87673.76,
           "ch1": 87673.76,
@@ -46783,8 +46199,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 19.65,
           "sheet": "DW-03004-06",
           "cert": "label"
-        },
-        "offset_m": 19.65
+        }
       },
       "geometry": {
         "type": "Point",
@@ -46817,6 +46232,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 20.87,
         "di_set": {
           "ch0": 87815.87,
           "ch1": 87815.87,
@@ -46825,8 +46241,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03004-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 20.87
+        }
       },
       "geometry": {
         "type": "Point",
@@ -46859,6 +46274,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 19.77,
         "di_set": {
           "ch0": 87848.87,
           "ch1": 87848.87,
@@ -46867,8 +46283,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03004-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 19.77
+        }
       },
       "geometry": {
         "type": "Point",
@@ -46901,6 +46316,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 15.46,
         "di_set": {
           "ch0": 88008.23,
           "ch1": 88008.23,
@@ -46909,8 +46325,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03004-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 15.46
+        }
       },
       "geometry": {
         "type": "Point",
@@ -46943,6 +46358,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 13.4,
         "di_set": {
           "ch0": 88286.28,
           "ch1": 88286.28,
@@ -46951,8 +46367,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03004-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 13.4
+        }
       },
       "geometry": {
         "type": "Point",
@@ -46985,6 +46400,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 12.6,
         "di_set": {
           "ch0": 88498.93,
           "ch1": 88498.93,
@@ -46993,8 +46409,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03005-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 12.6
+        }
       },
       "geometry": {
         "type": "Point",
@@ -47027,6 +46442,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 9.06,
         "di_set": {
           "ch0": 88555.9,
           "ch1": 88555.9,
@@ -47035,8 +46451,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03005-06",
           "cert": "label",
           "stated": 33
-        },
-        "offset_m": 9.06
+        }
       },
       "geometry": {
         "type": "Point",
@@ -47069,6 +46484,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.35,
         "di_set": {
           "ch0": 88719.55,
           "ch1": 88719.55,
@@ -47077,8 +46493,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03005-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.35
+        }
       },
       "geometry": {
         "type": "Point",
@@ -47111,6 +46526,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.98,
         "di_set": {
           "ch0": 89148.14,
           "ch1": 89148.14,
@@ -47119,8 +46535,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03005-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.98
+        }
       },
       "geometry": {
         "type": "Point",
@@ -47153,6 +46568,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 9.13,
         "di_set": {
           "ch0": 89339,
           "ch1": 89339,
@@ -47161,8 +46577,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03005-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 9.13
+        }
       },
       "geometry": {
         "type": "Point",
@@ -47195,6 +46610,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.39,
         "di_set": {
           "ch0": 89356.81,
           "ch1": 89356.81,
@@ -47203,8 +46619,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03005-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.39
+        }
       },
       "geometry": {
         "type": "Point",
@@ -47237,6 +46652,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 9.64,
         "di_set": {
           "ch0": 89592.02,
           "ch1": 89592.02,
@@ -47245,8 +46661,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03005-06",
           "cert": "label",
           "stated": 77
-        },
-        "offset_m": 9.64
+        }
       },
       "geometry": {
         "type": "Point",
@@ -47279,6 +46694,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.25,
         "di_set": {
           "ch0": 89673.4,
           "ch1": 89673.4,
@@ -47287,8 +46703,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03005-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.25
+        }
       },
       "geometry": {
         "type": "Point",
@@ -47321,6 +46736,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 11.54,
         "di_set": {
           "ch0": 89747.43,
           "ch1": 89747.43,
@@ -47329,8 +46745,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03006",
           "cert": "label",
           "stated": 77
-        },
-        "offset_m": 11.54
+        }
       },
       "geometry": {
         "type": "Point",
@@ -47363,6 +46778,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 10.26,
         "di_set": {
           "ch0": 90231.13,
           "ch1": 90231.13,
@@ -47371,8 +46787,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03006",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 10.26
+        }
       },
       "geometry": {
         "type": "Point",
@@ -47405,6 +46820,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 9.91,
         "di_set": {
           "ch0": 90307.5,
           "ch1": 90307.5,
@@ -47413,8 +46829,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03006",
           "cert": "label",
           "stated": 70
-        },
-        "offset_m": 9.91
+        }
       },
       "geometry": {
         "type": "Point",
@@ -47447,6 +46862,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 9.69,
         "di_set": {
           "ch0": 90422.5,
           "ch1": 90422.5,
@@ -47455,8 +46871,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03006",
           "cert": "label",
           "stated": 200
-        },
-        "offset_m": 9.69
+        }
       },
       "geometry": {
         "type": "Point",
@@ -47489,6 +46904,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.18,
         "di_set": {
           "ch0": 90699.86,
           "ch1": 90699.86,
@@ -47497,8 +46913,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03006",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.18
+        }
       },
       "geometry": {
         "type": "Point",
@@ -47531,6 +46946,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.3,
         "di_set": {
           "ch0": 90725.55,
           "ch1": 90725.55,
@@ -47539,8 +46955,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03006",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.3
+        }
       },
       "geometry": {
         "type": "Point",
@@ -47573,6 +46988,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 11.28,
         "di_set": {
           "ch0": 92493.89,
           "ch1": 92493.89,
@@ -47581,8 +46997,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03007-06",
           "cert": "label",
           "stated": 270
-        },
-        "offset_m": 11.28
+        }
       },
       "geometry": {
         "type": "Point",
@@ -47615,6 +47030,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 9.92,
         "di_set": {
           "ch0": 92322.99,
           "ch1": 92322.99,
@@ -47623,8 +47039,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03007-06",
           "cert": "label",
           "stated": 258
-        },
-        "offset_m": 9.92
+        }
       },
       "geometry": {
         "type": "Point",
@@ -47657,6 +47072,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.33,
         "di_set": {
           "ch0": 92514,
           "ch1": 92514,
@@ -47665,8 +47081,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03008-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.33
+        }
       },
       "geometry": {
         "type": "Point",
@@ -47699,6 +47114,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 9.32,
         "di_set": {
           "ch0": 92532.03,
           "ch1": 92532.03,
@@ -47707,8 +47123,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03008-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 9.32
+        }
       },
       "geometry": {
         "type": "Point",
@@ -47741,6 +47156,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 9.23,
         "di_set": {
           "ch0": 92680,
           "ch1": 92680,
@@ -47749,8 +47165,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03008-06",
           "cert": "label",
           "stated": 544
-        },
-        "offset_m": 9.23
+        }
       },
       "geometry": {
         "type": "Point",
@@ -47783,6 +47198,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.97,
         "di_set": {
           "ch0": 92610,
           "ch1": 92610,
@@ -47791,8 +47207,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03008-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.97
+        }
       },
       "geometry": {
         "type": "Point",
@@ -47825,6 +47240,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.26,
         "di_set": {
           "ch0": 92639.03,
           "ch1": 92639.03,
@@ -47833,8 +47249,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03008-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.26
+        }
       },
       "geometry": {
         "type": "Point",
@@ -47867,6 +47282,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.26,
         "di_set": {
           "ch0": 92701,
           "ch1": 92701,
@@ -47875,8 +47291,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03008-06",
           "cert": "label",
           "stated": 119
-        },
-        "offset_m": 8.26
+        }
       },
       "geometry": {
         "type": "Point",
@@ -47909,6 +47324,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.02,
         "di_set": {
           "ch0": 92840,
           "ch1": 92840,
@@ -47917,8 +47333,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03008-06",
           "cert": "label",
           "stated": 544
-        },
-        "offset_m": 8.02
+        }
       },
       "geometry": {
         "type": "Point",
@@ -47951,6 +47366,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.58,
         "di_set": {
           "ch0": 93189.69,
           "ch1": 93189.69,
@@ -47959,8 +47375,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03008-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -47993,6 +47408,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8,
         "di_set": {
           "ch0": 93207.13,
           "ch1": 93207.13,
@@ -48001,8 +47417,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03008-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8
+        }
       },
       "geometry": {
         "type": "Point",
@@ -48035,6 +47450,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 10.28,
         "di_set": {
           "ch0": 93509,
           "ch1": 93509,
@@ -48043,8 +47459,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03008-06",
           "cert": "label",
           "stated": 27
-        },
-        "offset_m": 10.28
+        }
       },
       "geometry": {
         "type": "Point",
@@ -48077,6 +47492,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 10.79,
         "di_set": {
           "ch0": 93565,
           "ch1": 93565,
@@ -48085,8 +47501,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03008-06",
           "cert": "label",
           "stated": 85
-        },
-        "offset_m": 10.79
+        }
       },
       "geometry": {
         "type": "Point",
@@ -48119,6 +47534,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 11.63,
         "di_set": {
           "ch0": 93569,
           "ch1": 93569,
@@ -48127,8 +47543,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03008-06",
           "cert": "label",
           "stated": 113
-        },
-        "offset_m": 11.63
+        }
       },
       "geometry": {
         "type": "Point",
@@ -48161,6 +47576,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 12.99,
         "di_set": {
           "ch0": 93667.48,
           "ch1": 93667.48,
@@ -48168,8 +47584,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 12.99,
           "sheet": "DW-03008-06",
           "cert": "label"
-        },
-        "offset_m": 12.99
+        }
       },
       "geometry": {
         "type": "Point",
@@ -48202,6 +47617,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 13.72,
         "di_set": {
           "ch0": 93772.97,
           "ch1": 93772.97,
@@ -48209,8 +47625,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 13.72,
           "sheet": "DW-03008-06",
           "cert": "label"
-        },
-        "offset_m": 13.72
+        }
       },
       "geometry": {
         "type": "Point",
@@ -48243,6 +47658,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.34,
         "di_set": {
           "ch0": 94743.5,
           "ch1": 94743.5,
@@ -48251,8 +47667,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03009-06",
           "cert": "label",
           "stated": 414
-        },
-        "offset_m": 8.34
+        }
       },
       "geometry": {
         "type": "Point",
@@ -48285,6 +47700,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.93,
         "di_set": {
           "ch0": 94964,
           "ch1": 94964,
@@ -48293,8 +47709,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03009-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.93
+        }
       },
       "geometry": {
         "type": "Point",
@@ -48327,6 +47742,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 10.22,
         "di_set": {
           "ch0": 94931,
           "ch1": 94931,
@@ -48335,8 +47751,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03009-06",
           "cert": "label",
           "stated": 67
-        },
-        "offset_m": 10.22
+        }
       },
       "geometry": {
         "type": "Point",
@@ -48369,6 +47784,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.93,
         "di_set": {
           "ch0": 94935,
           "ch1": 94935,
@@ -48377,8 +47793,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03009-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.93
+        }
       },
       "geometry": {
         "type": "Point",
@@ -48411,6 +47826,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 10.03,
         "di_set": {
           "ch0": 95033.4,
           "ch1": 95033.4,
@@ -48419,8 +47835,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03009-06",
           "cert": "label",
           "stated": 119
-        },
-        "offset_m": 10.03
+        }
       },
       "geometry": {
         "type": "Point",
@@ -48453,6 +47868,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 9.47,
         "di_set": {
           "ch0": 95415,
           "ch1": 95415,
@@ -48461,8 +47877,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03010-07",
           "cert": "label",
           "stated": 18
-        },
-        "offset_m": 9.47
+        }
       },
       "geometry": {
         "type": "Point",
@@ -48495,6 +47910,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 9.1,
         "di_set": {
           "ch0": 95427,
           "ch1": 95427,
@@ -48503,8 +47919,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03010-07",
           "cert": "label",
           "stated": 100
-        },
-        "offset_m": 9.1
+        }
       },
       "geometry": {
         "type": "Point",
@@ -48537,6 +47952,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.84,
         "di_set": {
           "ch0": 95457,
           "ch1": 95457,
@@ -48545,8 +47961,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03010-07",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.84
+        }
       },
       "geometry": {
         "type": "Point",
@@ -48579,6 +47994,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 6.69,
         "di_set": {
           "ch0": 95630.48,
           "ch1": 95630.48,
@@ -48587,8 +48003,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03010-07",
           "cert": "label",
           "stated": 289
-        },
-        "offset_m": 6.69
+        }
       },
       "geometry": {
         "type": "Point",
@@ -48621,6 +48036,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.05,
         "di_set": {
           "ch0": 95783,
           "ch1": 95783,
@@ -48629,8 +48045,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03010-07",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.05
+        }
       },
       "geometry": {
         "type": "Point",
@@ -48663,6 +48078,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.93,
         "di_set": {
           "ch0": 95840,
           "ch1": 95840,
@@ -48671,8 +48087,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03010-07",
           "cert": "label",
           "stated": 27
-        },
-        "offset_m": 8.93
+        }
       },
       "geometry": {
         "type": "Point",
@@ -48705,6 +48120,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 9.78,
         "di_set": {
           "ch0": 96135,
           "ch1": 96135,
@@ -48713,8 +48129,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03010-07",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 9.78
+        }
       },
       "geometry": {
         "type": "Point",
@@ -48747,6 +48162,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.71,
         "di_set": {
           "ch0": 96583.02,
           "ch1": 96583.02,
@@ -48755,8 +48171,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03010-07",
           "cert": "label",
           "stated": 215
-        },
-        "offset_m": 8.71
+        }
       },
       "geometry": {
         "type": "Point",
@@ -48789,6 +48204,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.22,
         "di_set": {
           "ch0": 96597.22,
           "ch1": 96597.22,
@@ -48797,8 +48213,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03010-07",
           "cert": "label",
           "stated": 41
-        },
-        "offset_m": 8.22
+        }
       },
       "geometry": {
         "type": "Point",
@@ -48831,6 +48246,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.51,
         "di_set": {
           "ch0": 96992.78,
           "ch1": 96992.78,
@@ -48839,8 +48255,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03011-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.51
+        }
       },
       "geometry": {
         "type": "Point",
@@ -48873,6 +48288,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.49,
         "di_set": {
           "ch0": 97154.49,
           "ch1": 97154.49,
@@ -48881,8 +48297,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03011-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.49
+        }
       },
       "geometry": {
         "type": "Point",
@@ -48915,6 +48330,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 9.85,
         "di_set": {
           "ch0": 97410,
           "ch1": 97410,
@@ -48923,8 +48339,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03011-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 9.85
+        }
       },
       "geometry": {
         "type": "Point",
@@ -48957,6 +48372,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 9.46,
         "di_set": {
           "ch0": 97448,
           "ch1": 97448,
@@ -48965,8 +48381,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03011-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 9.46
+        }
       },
       "geometry": {
         "type": "Point",
@@ -48999,6 +48414,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.64,
         "di_set": {
           "ch0": 97487.5,
           "ch1": 97487.5,
@@ -49007,8 +48423,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03011-06",
           "cert": "label",
           "stated": 57
-        },
-        "offset_m": 8.64
+        }
       },
       "geometry": {
         "type": "Point",
@@ -49041,6 +48456,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.15,
         "di_set": {
           "ch0": 98135,
           "ch1": 98135,
@@ -49049,8 +48465,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03012-07",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.15
+        }
       },
       "geometry": {
         "type": "Point",
@@ -49083,6 +48498,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.86,
         "di_set": {
           "ch0": 98155,
           "ch1": 98155,
@@ -49091,8 +48507,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03012-07",
           "cert": "label",
           "stated": 58
-        },
-        "offset_m": 8.86
+        }
       },
       "geometry": {
         "type": "Point",
@@ -49125,6 +48540,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.41,
         "di_set": {
           "ch0": 98515.55,
           "ch1": 98515.55,
@@ -49133,8 +48549,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03012-07",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.41
+        }
       },
       "geometry": {
         "type": "Point",
@@ -49167,6 +48582,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 9.51,
         "di_set": {
           "ch0": 98689,
           "ch1": 98689,
@@ -49175,8 +48591,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03012-07",
           "cert": "label",
           "stated": 172
-        },
-        "offset_m": 9.51
+        }
       },
       "geometry": {
         "type": "Point",
@@ -49209,6 +48624,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 9.1,
         "di_set": {
           "ch0": 98701.79,
           "ch1": 98701.79,
@@ -49217,8 +48633,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03012-07",
           "cert": "label",
           "stated": 242
-        },
-        "offset_m": 9.1
+        }
       },
       "geometry": {
         "type": "Point",
@@ -49251,6 +48666,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 10.61,
         "di_set": {
           "ch0": 98787.5,
           "ch1": 98787.5,
@@ -49259,8 +48675,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03012-07",
           "cert": "label",
           "stated": 15
-        },
-        "offset_m": 10.61
+        }
       },
       "geometry": {
         "type": "Point",
@@ -49293,6 +48708,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 9.55,
         "di_set": {
           "ch0": 98783.59,
           "ch1": 98783.59,
@@ -49301,8 +48717,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03012-07",
           "cert": "label",
           "stated": 15
-        },
-        "offset_m": 9.55
+        }
       },
       "geometry": {
         "type": "Point",
@@ -49335,6 +48750,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 10.61,
         "di_set": {
           "ch0": 98807.01,
           "ch1": 98807.01,
@@ -49343,8 +48759,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03012-07",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 10.61
+        }
       },
       "geometry": {
         "type": "Point",
@@ -49377,6 +48792,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.82,
         "di_set": {
           "ch0": 98833.72,
           "ch1": 98833.72,
@@ -49385,8 +48801,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03012-07",
           "cert": "label",
           "stated": 61
-        },
-        "offset_m": 8.82
+        }
       },
       "geometry": {
         "type": "Point",
@@ -49419,6 +48834,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.95,
         "di_set": {
           "ch0": 98927.55,
           "ch1": 98927.55,
@@ -49427,8 +48843,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03012-07",
           "cert": "label",
           "stated": 138
-        },
-        "offset_m": 7.95
+        }
       },
       "geometry": {
         "type": "Point",
@@ -49461,6 +48876,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 6.87,
         "di_set": {
           "ch0": 98989.45,
           "ch1": 98989.45,
@@ -49469,8 +48885,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03012-07",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 6.87
+        }
       },
       "geometry": {
         "type": "Point",
@@ -49503,6 +48918,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.02,
         "di_set": {
           "ch0": 99211,
           "ch1": 99211,
@@ -49511,8 +48927,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03012-07",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.02
+        }
       },
       "geometry": {
         "type": "Point",
@@ -49545,6 +48960,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.51,
         "di_set": {
           "ch0": 99293,
           "ch1": 99293,
@@ -49553,8 +48969,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03012-07",
           "cert": "label",
           "stated": 118
-        },
-        "offset_m": 7.51
+        }
       },
       "geometry": {
         "type": "Point",
@@ -49587,6 +49002,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.02,
         "di_set": {
           "ch0": 99392,
           "ch1": 99392,
@@ -49595,8 +49011,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03012-07",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.02
+        }
       },
       "geometry": {
         "type": "Point",
@@ -49629,6 +49044,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.13,
         "di_set": {
           "ch0": 99411.5,
           "ch1": 99411.5,
@@ -49637,8 +49053,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03012-07",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.13
+        }
       },
       "geometry": {
         "type": "Point",
@@ -49671,6 +49086,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.2,
         "di_set": {
           "ch0": 99533,
           "ch1": 99533,
@@ -49679,8 +49095,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03013-06",
           "cert": "label",
           "stated": 142
-        },
-        "offset_m": 8.2
+        }
       },
       "geometry": {
         "type": "Point",
@@ -49713,6 +49128,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.84,
         "di_set": {
           "ch0": 99593.96,
           "ch1": 99593.96,
@@ -49721,8 +49137,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03013-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.84
+        }
       },
       "geometry": {
         "type": "Point",
@@ -49755,6 +49170,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.38,
         "di_set": {
           "ch0": 99676.39,
           "ch1": 99676.39,
@@ -49763,8 +49179,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03013-06",
           "cert": "label",
           "stated": 92
-        },
-        "offset_m": 8.38
+        }
       },
       "geometry": {
         "type": "Point",
@@ -49797,6 +49212,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.33,
         "di_set": {
           "ch0": 99852.06,
           "ch1": 99852.06,
@@ -49805,8 +49221,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03013-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.33
+        }
       },
       "geometry": {
         "type": "Point",
@@ -49839,6 +49254,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.01,
         "di_set": {
           "ch0": 99920.3,
           "ch1": 99920.3,
@@ -49847,8 +49263,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03013-06",
           "cert": "label",
           "stated": 64
-        },
-        "offset_m": 8.01
+        }
       },
       "geometry": {
         "type": "Point",
@@ -49881,6 +49296,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.59,
         "di_set": {
           "ch0": 100144.08,
           "ch1": 100144.08,
@@ -49889,8 +49305,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03013-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.59
+        }
       },
       "geometry": {
         "type": "Point",
@@ -49923,6 +49338,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.39,
         "di_set": {
           "ch0": 100186.1,
           "ch1": 100186.1,
@@ -49931,8 +49347,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03013-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.39
+        }
       },
       "geometry": {
         "type": "Point",
@@ -49965,6 +49380,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.92,
         "di_set": {
           "ch0": 100247.5,
           "ch1": 100247.5,
@@ -49973,8 +49389,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03013-06",
           "cert": "label",
           "stated": 76
-        },
-        "offset_m": 7.92
+        }
       },
       "geometry": {
         "type": "Point",
@@ -50007,6 +49422,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.33,
         "di_set": {
           "ch0": 100767,
           "ch1": 100767,
@@ -50015,8 +49431,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03013-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.33
+        }
       },
       "geometry": {
         "type": "Point",
@@ -50049,6 +49464,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 9.5,
         "di_set": {
           "ch0": 100837.32,
           "ch1": 100837.32,
@@ -50057,8 +49473,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03013-06",
           "cert": "label",
           "stated": 42
-        },
-        "offset_m": 9.5
+        }
       },
       "geometry": {
         "type": "Point",
@@ -50091,6 +49506,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 9.17,
         "di_set": {
           "ch0": 100787.72,
           "ch1": 100787.72,
@@ -50099,8 +49515,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03013-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 9.17
+        }
       },
       "geometry": {
         "type": "Point",
@@ -50133,6 +49548,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 10.62,
         "di_set": {
           "ch0": 100916,
           "ch1": 100916,
@@ -50141,8 +49557,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03014-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 10.62
+        }
       },
       "geometry": {
         "type": "Point",
@@ -50175,6 +49590,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 10.3,
         "di_set": {
           "ch0": 100901,
           "ch1": 100901,
@@ -50183,8 +49599,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03014-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 10.3
+        }
       },
       "geometry": {
         "type": "Point",
@@ -50217,6 +49632,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 9.67,
         "di_set": {
           "ch0": 101067,
           "ch1": 101067,
@@ -50225,8 +49641,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03014-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 9.67
+        }
       },
       "geometry": {
         "type": "Point",
@@ -50259,6 +49674,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.52,
         "di_set": {
           "ch0": 101856.46,
           "ch1": 101856.46,
@@ -50267,8 +49683,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03014-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.52
+        }
       },
       "geometry": {
         "type": "Point",
@@ -50301,6 +49716,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.95,
         "di_set": {
           "ch0": 101876.66,
           "ch1": 101876.66,
@@ -50309,8 +49725,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03014-06",
           "cert": "label",
           "stated": 33
-        },
-        "offset_m": 7.95
+        }
       },
       "geometry": {
         "type": "Point",
@@ -50343,6 +49758,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 5.85,
         "di_set": {
           "ch0": 101994,
           "ch1": 101994,
@@ -50351,8 +49767,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03014-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 5.85
+        }
       },
       "geometry": {
         "type": "Point",
@@ -50385,6 +49800,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.14,
         "di_set": {
           "ch0": 102019.45,
           "ch1": 102019.45,
@@ -50393,8 +49809,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03014-06",
           "cert": "label",
           "stated": 40
-        },
-        "offset_m": 7.14
+        }
       },
       "geometry": {
         "type": "Point",
@@ -50427,6 +49842,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.92,
         "di_set": {
           "ch0": 102887.5,
           "ch1": 102887.5,
@@ -50435,8 +49851,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03015-06",
           "cert": "label",
           "stated": 58
-        },
-        "offset_m": 7.92
+        }
       },
       "geometry": {
         "type": "Point",
@@ -50469,6 +49884,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.25,
         "di_set": {
           "ch0": 102892.5,
           "ch1": 102892.5,
@@ -50477,8 +49893,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03015-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.25
+        }
       },
       "geometry": {
         "type": "Point",
@@ -50511,6 +49926,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.64,
         "di_set": {
           "ch0": 102914.58,
           "ch1": 102914.58,
@@ -50519,8 +49935,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03015-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.64
+        }
       },
       "geometry": {
         "type": "Point",
@@ -50553,6 +49968,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 9.88,
         "di_set": {
           "ch0": 103437,
           "ch1": 103437,
@@ -50561,8 +49977,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03015-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 9.88
+        }
       },
       "geometry": {
         "type": "Point",
@@ -50595,6 +50010,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 10.06,
         "di_set": {
           "ch0": 103457.51,
           "ch1": 103457.51,
@@ -50603,8 +50019,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03015-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 10.06
+        }
       },
       "geometry": {
         "type": "Point",
@@ -50637,6 +50052,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 9.89,
         "di_set": {
           "ch0": 103882.29,
           "ch1": 103882.29,
@@ -50645,8 +50061,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03016-06",
           "cert": "label",
           "stated": 94
-        },
-        "offset_m": 9.89
+        }
       },
       "geometry": {
         "type": "Point",
@@ -50679,6 +50094,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.43,
         "di_set": {
           "ch0": 103961.69,
           "ch1": 103961.69,
@@ -50687,8 +50103,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03016-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.43
+        }
       },
       "geometry": {
         "type": "Point",
@@ -50721,6 +50136,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 9.14,
         "di_set": {
           "ch0": 103977.57,
           "ch1": 103977.57,
@@ -50729,8 +50145,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03016-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 9.14
+        }
       },
       "geometry": {
         "type": "Point",
@@ -50763,6 +50178,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 9.47,
         "di_set": {
           "ch0": 105321,
           "ch1": 105321,
@@ -50771,8 +50187,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03017-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 9.47
+        }
       },
       "geometry": {
         "type": "Point",
@@ -50805,6 +50220,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.46,
         "di_set": {
           "ch0": 105349,
           "ch1": 105349,
@@ -50813,8 +50229,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03017-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.46
+        }
       },
       "geometry": {
         "type": "Point",
@@ -50847,6 +50262,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 10.43,
         "di_set": {
           "ch0": 105500.91,
           "ch1": 105500.91,
@@ -50855,8 +50271,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03017-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 10.43
+        }
       },
       "geometry": {
         "type": "Point",
@@ -50889,6 +50304,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 10.35,
         "di_set": {
           "ch0": 105534.91,
           "ch1": 105534.91,
@@ -50897,8 +50313,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03017-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 10.35
+        }
       },
       "geometry": {
         "type": "Point",
@@ -50931,6 +50346,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 3.72,
         "di_set": {
           "ch0": 105741.96,
           "ch1": 105741.96,
@@ -50938,8 +50354,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 3.72,
           "sheet": "DW-03017-06",
           "cert": "label"
-        },
-        "offset_m": 3.72
+        }
       },
       "geometry": {
         "type": "Point",
@@ -50972,6 +50387,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 22.72,
         "di_set": {
           "ch0": 105789.19,
           "ch1": 105789.19,
@@ -50980,8 +50396,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03017-06",
           "cert": "label",
           "stated": 24
-        },
-        "offset_m": 22.72
+        }
       },
       "geometry": {
         "type": "Point",
@@ -51014,6 +50429,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 12.19,
         "di_set": {
           "ch0": 105807.53,
           "ch1": 105807.53,
@@ -51021,8 +50437,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 12.19,
           "sheet": "DW-03017-06",
           "cert": "label"
-        },
-        "offset_m": 12.19
+        }
       },
       "geometry": {
         "type": "Point",
@@ -51055,6 +50470,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 23.69,
         "di_set": {
           "ch0": 105941.51,
           "ch1": 105941.51,
@@ -51063,8 +50479,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03017-06",
           "cert": "label",
           "stated": 437
-        },
-        "offset_m": 23.69
+        }
       },
       "geometry": {
         "type": "Point",
@@ -51097,6 +50512,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 11.8,
         "di_set": {
           "ch0": 106510.09,
           "ch1": 106510.09,
@@ -51105,8 +50521,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03018-06",
           "cert": "label",
           "stated": 1346
-        },
-        "offset_m": 11.8
+        }
       },
       "geometry": {
         "type": "Point",
@@ -51139,6 +50554,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 12.25,
         "di_set": {
           "ch0": 106860,
           "ch1": 106860,
@@ -51147,8 +50563,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03018-06",
           "cert": "label",
           "stated": 456
-        },
-        "offset_m": 12.25
+        }
       },
       "geometry": {
         "type": "Point",
@@ -51181,6 +50596,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 16.58,
         "di_set": {
           "ch0": 107586.9,
           "ch1": 107586.9,
@@ -51189,8 +50605,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03018-06",
           "cert": "label",
           "stated": 392
-        },
-        "offset_m": 16.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -51223,6 +50638,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 14.88,
         "di_set": {
           "ch0": 107187,
           "ch1": 107187,
@@ -51231,8 +50647,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03018-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 14.88
+        }
       },
       "geometry": {
         "type": "Point",
@@ -51265,6 +50680,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 14.62,
         "di_set": {
           "ch0": 107206.98,
           "ch1": 107206.98,
@@ -51273,8 +50689,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03018-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 14.62
+        }
       },
       "geometry": {
         "type": "Point",
@@ -51307,6 +50722,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 13.64,
         "di_set": {
           "ch0": 107211.15,
           "ch1": 107211.15,
@@ -51315,8 +50731,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03018-06",
           "cert": "label",
           "stated": 217
-        },
-        "offset_m": 13.64
+        }
       },
       "geometry": {
         "type": "Point",
@@ -51349,6 +50764,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 15.63,
         "di_set": {
           "ch0": 107428.23,
           "ch1": 107428.23,
@@ -51357,8 +50773,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03018-06",
           "cert": "label",
           "stated": 26
-        },
-        "offset_m": 15.63
+        }
       },
       "geometry": {
         "type": "Point",
@@ -51391,6 +50806,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 14.62,
         "di_set": {
           "ch0": 107461.78,
           "ch1": 107461.78,
@@ -51399,8 +50815,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03018-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 14.62
+        }
       },
       "geometry": {
         "type": "Point",
@@ -51433,6 +50848,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 21.63,
         "di_set": {
           "ch0": 107752.5,
           "ch1": 107752.5,
@@ -51441,8 +50857,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03018-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 21.63
+        }
       },
       "geometry": {
         "type": "Point",
@@ -51475,6 +50890,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 16.86,
         "di_set": {
           "ch0": 108872.68,
           "ch1": 108872.68,
@@ -51483,8 +50899,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03019-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 16.86
+        }
       },
       "geometry": {
         "type": "Point",
@@ -51517,6 +50932,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 16.99,
         "di_set": {
           "ch0": 108903.78,
           "ch1": 108903.78,
@@ -51525,8 +50941,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03019-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 16.99
+        }
       },
       "geometry": {
         "type": "Point",
@@ -51559,6 +50974,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 16.39,
         "di_set": {
           "ch0": 109051.67,
           "ch1": 109051.67,
@@ -51567,8 +50983,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03019-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 16.39
+        }
       },
       "geometry": {
         "type": "Point",
@@ -51601,6 +51016,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 17.55,
         "di_set": {
           "ch0": 109072.45,
           "ch1": 109072.45,
@@ -51609,8 +51025,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03019-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 17.55
+        }
       },
       "geometry": {
         "type": "Point",
@@ -51643,6 +51058,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 10.66,
         "di_set": {
           "ch0": 109217,
           "ch1": 109217,
@@ -51651,8 +51067,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03019-06",
           "cert": "label",
           "stated": 25
-        },
-        "offset_m": 10.66
+        }
       },
       "geometry": {
         "type": "Point",
@@ -51685,6 +51100,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 9.79,
         "di_set": {
           "ch0": 109241,
           "ch1": 109241,
@@ -51692,8 +51108,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.79,
           "sheet": "DW-03019-06",
           "cert": "label"
-        },
-        "offset_m": 9.79
+        }
       },
       "geometry": {
         "type": "Point",
@@ -51726,6 +51141,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.06,
         "di_set": {
           "ch0": 109316.5,
           "ch1": 109316.5,
@@ -51733,8 +51149,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.06,
           "sheet": "DW-03020-06",
           "cert": "label"
-        },
-        "offset_m": 8.06
+        }
       },
       "geometry": {
         "type": "Point",
@@ -51767,6 +51182,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 12.07,
         "di_set": {
           "ch0": 109446.84,
           "ch1": 109446.84,
@@ -51775,8 +51191,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03020-06",
           "cert": "label",
           "stated": 230
-        },
-        "offset_m": 12.07
+        }
       },
       "geometry": {
         "type": "Point",
@@ -51809,6 +51224,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 10.96,
         "di_set": {
           "ch0": 109755,
           "ch1": 109755,
@@ -51817,8 +51233,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03020-06",
           "cert": "label",
           "stated": 502
-        },
-        "offset_m": 10.96
+        }
       },
       "geometry": {
         "type": "Point",
@@ -51851,6 +51266,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.34,
         "di_set": {
           "ch0": 110157.18,
           "ch1": 110157.18,
@@ -51859,8 +51275,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03020-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.34
+        }
       },
       "geometry": {
         "type": "Point",
@@ -51893,6 +51308,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.77,
         "di_set": {
           "ch0": 110301,
           "ch1": 110301,
@@ -51901,8 +51317,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03020-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.77
+        }
       },
       "geometry": {
         "type": "Point",
@@ -51935,6 +51350,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 9.81,
         "di_set": {
           "ch0": 110371.92,
           "ch1": 110371.92,
@@ -51943,8 +51359,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03020-06",
           "cert": "label",
           "stated": 58
-        },
-        "offset_m": 9.81
+        }
       },
       "geometry": {
         "type": "Point",
@@ -51977,6 +51392,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.89,
         "di_set": {
           "ch0": 110410.92,
           "ch1": 110410.92,
@@ -51985,8 +51401,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03020-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.89
+        }
       },
       "geometry": {
         "type": "Point",
@@ -52019,6 +51434,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 9.64,
         "di_set": {
           "ch0": 110427.69,
           "ch1": 110427.69,
@@ -52027,8 +51443,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03020-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 9.64
+        }
       },
       "geometry": {
         "type": "Point",
@@ -52061,6 +51476,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 10.74,
         "di_set": {
           "ch0": 110479.22,
           "ch1": 110479.22,
@@ -52069,8 +51485,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03020-06",
           "cert": "label",
           "stated": 51
-        },
-        "offset_m": 10.74
+        }
       },
       "geometry": {
         "type": "Point",
@@ -52103,6 +51518,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 9.87,
         "di_set": {
           "ch0": 110640,
           "ch1": 110640,
@@ -52111,8 +51527,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03020-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 9.87
+        }
       },
       "geometry": {
         "type": "Point",
@@ -52145,6 +51560,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 9.4,
         "di_set": {
           "ch0": 111005.04,
           "ch1": 111005.04,
@@ -52153,8 +51569,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03021-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 9.4
+        }
       },
       "geometry": {
         "type": "Point",
@@ -52187,6 +51602,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.68,
         "di_set": {
           "ch0": 111339.99,
           "ch1": 111339.99,
@@ -52195,8 +51611,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03021-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.68
+        }
       },
       "geometry": {
         "type": "Point",
@@ -52229,6 +51644,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.52,
         "di_set": {
           "ch0": 111355.03,
           "ch1": 111355.03,
@@ -52237,8 +51653,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03021-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.52
+        }
       },
       "geometry": {
         "type": "Point",
@@ -52271,6 +51686,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.93,
         "di_set": {
           "ch0": 111826.35,
           "ch1": 111826.35,
@@ -52279,8 +51695,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03021-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.93
+        }
       },
       "geometry": {
         "type": "Point",
@@ -52313,6 +51728,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.66,
         "di_set": {
           "ch0": 111843.81,
           "ch1": 111843.81,
@@ -52321,8 +51737,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03021-06",
           "cert": "label",
           "stated": 39
-        },
-        "offset_m": 8.66
+        }
       },
       "geometry": {
         "type": "Point",
@@ -52355,6 +51770,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 9.25,
         "di_set": {
           "ch0": 111943,
           "ch1": 111943,
@@ -52363,8 +51779,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03021-06",
           "cert": "label",
           "stated": 40
-        },
-        "offset_m": 9.25
+        }
       },
       "geometry": {
         "type": "Point",
@@ -52397,6 +51812,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 9.89,
         "di_set": {
           "ch0": 111985,
           "ch1": 111985,
@@ -52405,8 +51821,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03021-06",
           "cert": "label",
           "stated": 30
-        },
-        "offset_m": 9.89
+        }
       },
       "geometry": {
         "type": "Point",
@@ -52439,6 +51854,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 10.07,
         "di_set": {
           "ch0": 112019,
           "ch1": 112019,
@@ -52447,8 +51863,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03021-06",
           "cert": "label",
           "stated": 24
-        },
-        "offset_m": 10.07
+        }
       },
       "geometry": {
         "type": "Point",
@@ -52481,6 +51896,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.21,
         "di_set": {
           "ch0": 112435.56,
           "ch1": 112435.56,
@@ -52489,8 +51905,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03022-06",
           "cert": "label",
           "stated": 72
-        },
-        "offset_m": 7.21
+        }
       },
       "geometry": {
         "type": "Point",
@@ -52523,6 +51938,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.21,
         "di_set": {
           "ch0": 112490.56,
           "ch1": 112490.56,
@@ -52531,8 +51947,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03022-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.21
+        }
       },
       "geometry": {
         "type": "Point",
@@ -52565,6 +51980,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.01,
         "di_set": {
           "ch0": 112574,
           "ch1": 112574,
@@ -52573,8 +51989,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03022-06",
           "cert": "label",
           "stated": 72
-        },
-        "offset_m": 7.01
+        }
       },
       "geometry": {
         "type": "Point",
@@ -52607,6 +52022,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.38,
         "di_set": {
           "ch0": 112871.02,
           "ch1": 112871.02,
@@ -52615,8 +52031,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03022-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.38
+        }
       },
       "geometry": {
         "type": "Point",
@@ -52649,6 +52064,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 6.54,
         "di_set": {
           "ch0": 113108.8,
           "ch1": 113108.8,
@@ -52657,8 +52073,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03022-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 6.54
+        }
       },
       "geometry": {
         "type": "Point",
@@ -52691,6 +52106,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.53,
         "di_set": {
           "ch0": 113665.16,
           "ch1": 113665.16,
@@ -52699,8 +52115,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03023-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.53
+        }
       },
       "geometry": {
         "type": "Point",
@@ -52733,6 +52148,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 9.92,
         "di_set": {
           "ch0": 113784.7,
           "ch1": 113784.7,
@@ -52741,8 +52157,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03023-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 9.92
+        }
       },
       "geometry": {
         "type": "Point",
@@ -52775,6 +52190,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 10.18,
         "di_set": {
           "ch0": 113802.16,
           "ch1": 113802.16,
@@ -52783,8 +52199,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03023-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 10.18
+        }
       },
       "geometry": {
         "type": "Point",
@@ -52817,6 +52232,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.15,
         "di_set": {
           "ch0": 114080.5,
           "ch1": 114080.5,
@@ -52825,8 +52241,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03023-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.15
+        }
       },
       "geometry": {
         "type": "Point",
@@ -52859,6 +52274,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 12.09,
         "di_set": {
           "ch0": 114439.83,
           "ch1": 114439.83,
@@ -52867,8 +52283,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03023-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 12.09
+        }
       },
       "geometry": {
         "type": "Point",
@@ -52901,6 +52316,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 14.85,
         "di_set": {
           "ch0": 114506.98,
           "ch1": 114506.98,
@@ -52909,8 +52325,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03023-06",
           "cert": "label",
           "stated": 43
-        },
-        "offset_m": 14.85
+        }
       },
       "geometry": {
         "type": "Point",
@@ -52943,6 +52358,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.42,
         "di_set": {
           "ch0": 114905.7,
           "ch1": 114905.7,
@@ -52951,8 +52367,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03024-07",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.42
+        }
       },
       "geometry": {
         "type": "Point",
@@ -52985,6 +52400,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.68,
         "di_set": {
           "ch0": 114923.15,
           "ch1": 114923.15,
@@ -52993,8 +52409,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03024-07",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.68
+        }
       },
       "geometry": {
         "type": "Point",
@@ -53027,6 +52442,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.53,
         "di_set": {
           "ch0": 115115.46,
           "ch1": 115115.46,
@@ -53035,8 +52451,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03024-07",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.53
+        }
       },
       "geometry": {
         "type": "Point",
@@ -53069,6 +52484,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.55,
         "di_set": {
           "ch0": 115485.62,
           "ch1": 115485.62,
@@ -53077,8 +52493,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03024-07",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.55
+        }
       },
       "geometry": {
         "type": "Point",
@@ -53111,6 +52526,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.81,
         "di_set": {
           "ch0": 115503.08,
           "ch1": 115503.08,
@@ -53119,8 +52535,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03024-07",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.81
+        }
       },
       "geometry": {
         "type": "Point",
@@ -53153,6 +52568,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 10.37,
         "di_set": {
           "ch0": 116435,
           "ch1": 116435,
@@ -53161,8 +52577,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03025-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 10.37
+        }
       },
       "geometry": {
         "type": "Point",
@@ -53195,6 +52610,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 9.49,
         "di_set": {
           "ch0": 118575,
           "ch1": 118575,
@@ -53203,8 +52619,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03026-07",
           "cert": "label",
           "stated": 36
-        },
-        "offset_m": 9.49
+        }
       },
       "geometry": {
         "type": "Point",
@@ -53237,6 +52652,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.98,
         "di_set": {
           "ch0": 118610.94,
           "ch1": 118610.94,
@@ -53245,8 +52661,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03026-07",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.98
+        }
       },
       "geometry": {
         "type": "Point",
@@ -53279,6 +52694,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.05,
         "di_set": {
           "ch0": 119277.04,
           "ch1": 119277.04,
@@ -53287,8 +52703,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03027-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.05
+        }
       },
       "geometry": {
         "type": "Point",
@@ -53321,6 +52736,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 5.4,
         "di_set": {
           "ch0": 119738.75,
           "ch1": 119738.75,
@@ -53329,8 +52745,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03027-06",
           "cert": "label",
           "stated": 275
-        },
-        "offset_m": 5.4
+        }
       },
       "geometry": {
         "type": "Point",
@@ -53363,6 +52778,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 5.82,
         "di_set": {
           "ch0": 120191.56,
           "ch1": 120191.56,
@@ -53371,8 +52787,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03027-06",
           "cert": "label",
           "stated": 95
-        },
-        "offset_m": 5.82
+        }
       },
       "geometry": {
         "type": "Point",
@@ -53405,6 +52820,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.82,
         "di_set": {
           "ch0": 120437.54,
           "ch1": 120437.54,
@@ -53413,8 +52829,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03027-06",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 8.82
+        }
       },
       "geometry": {
         "type": "Point",
@@ -53447,6 +52862,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 9.64,
         "di_set": {
           "ch0": 121429.31,
           "ch1": 121429.31,
@@ -53455,8 +52871,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03028-05",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 9.64
+        }
       },
       "geometry": {
         "type": "Point",
@@ -53489,6 +52904,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.21,
         "di_set": {
           "ch0": 121403,
           "ch1": 121403,
@@ -53497,8 +52913,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03028-05",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.21
+        }
       },
       "geometry": {
         "type": "Point",
@@ -53531,6 +52946,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 8.1,
         "di_set": {
           "ch0": 121536.62,
           "ch1": 121536.62,
@@ -53539,8 +52955,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03028-05",
           "cert": "label",
           "stated": 133
-        },
-        "offset_m": 8.1
+        }
       },
       "geometry": {
         "type": "Point",
@@ -53573,6 +52988,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 30.2,
         "di_set": {
           "ch0": 122735.33,
           "ch1": 122735.33,
@@ -53581,8 +52997,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03029-05",
           "cert": "label",
           "stated": 47
-        },
-        "offset_m": 30.2
+        }
       },
       "geometry": {
         "type": "Point",
@@ -53615,6 +53030,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 29.54,
         "di_set": {
           "ch0": 122827.23,
           "ch1": 122827.23,
@@ -53623,8 +53039,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03029-05",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 29.54
+        }
       },
       "geometry": {
         "type": "Point",
@@ -53657,6 +53072,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 7.1,
         "di_set": {
           "ch0": 124483,
           "ch1": 124483,
@@ -53665,8 +53081,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03030-05",
           "cert": "label",
           "stated": 28
-        },
-        "offset_m": 7.1
+        }
       },
       "geometry": {
         "type": "Point",
@@ -53699,6 +53114,7 @@ window.SECTION03_ASSETS = {
         "notes": "[DESIGN NOTE] Position is the AutoCAD callout label anchor, not the physical start/end extent of the rock armor. Marks stretch where longitudinal ditch is omitted.",
         "inspection_date": "",
         "typology_code": "RIPRAP",
+        "offset_m": 13.78,
         "di_set": {
           "ch0": 124500,
           "ch1": 124500,
@@ -53707,8 +53123,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03030-05",
           "cert": "label",
           "stated": 20
-        },
-        "offset_m": 13.78
+        }
       },
       "geometry": {
         "type": "Point",
@@ -53741,6 +53156,7 @@ window.SECTION03_ASSETS = {
         "notes": "Verified on DW-03002/DW-03003: Precast water descent on Right fill slope connected to Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.14,
         "di_set": {
           "ch0": 85424.79,
           "ch1": 85424.79,
@@ -53748,8 +53164,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.14,
           "sheet": "DW-03002-07",
           "cert": "exact"
-        },
-        "offset_m": 7.14
+        }
       },
       "geometry": {
         "type": "Point",
@@ -53782,6 +53197,7 @@ window.SECTION03_ASSETS = {
         "notes": "Verified on DW-03002/DW-03003: Precast water descent on Right fill slope connected to Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.56,
         "di_set": {
           "ch0": 85464.15,
           "ch1": 85464.15,
@@ -53789,8 +53205,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.56,
           "sheet": "DW-03002-07",
           "cert": "exact"
-        },
-        "offset_m": 7.56
+        }
       },
       "geometry": {
         "type": "Point",
@@ -53823,6 +53238,7 @@ window.SECTION03_ASSETS = {
         "notes": "Verified on DW-03002/DW-03003: Precast water descent on Right fill slope connected to Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.35,
         "di_set": {
           "ch0": 85503.44,
           "ch1": 85503.44,
@@ -53830,8 +53246,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.35,
           "sheet": "DW-03003-06",
           "cert": "exact"
-        },
-        "offset_m": 7.35
+        }
       },
       "geometry": {
         "type": "Point",
@@ -53864,6 +53279,7 @@ window.SECTION03_ASSETS = {
         "notes": "Verified on DW-03002/DW-03003: Precast water descent on Right fill slope connected to Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.35,
         "di_set": {
           "ch0": 85655.03,
           "ch1": 85655.03,
@@ -53871,8 +53287,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.35,
           "sheet": "DW-03003-06",
           "cert": "exact"
-        },
-        "offset_m": 7.35
+        }
       },
       "geometry": {
         "type": "Point",
@@ -53905,6 +53320,7 @@ window.SECTION03_ASSETS = {
         "notes": "Verified on DW-03003: Precast water descent on Right fill slope connected to 500m Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.94,
         "di_set": {
           "ch0": 86434.97,
           "ch1": 86434.97,
@@ -53912,8 +53328,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.94,
           "sheet": "DW-03003-06",
           "cert": "exact"
-        },
-        "offset_m": 7.94
+        }
       },
       "geometry": {
         "type": "Point",
@@ -53946,6 +53361,7 @@ window.SECTION03_ASSETS = {
         "notes": "Verified on DW-03003: Precast water descent on Right fill slope connected to 500m Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.71,
         "di_set": {
           "ch0": 86516.95,
           "ch1": 86516.95,
@@ -53953,8 +53369,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.71,
           "sheet": "DW-03003-06",
           "cert": "exact"
-        },
-        "offset_m": 8.71
+        }
       },
       "geometry": {
         "type": "Point",
@@ -53987,6 +53402,7 @@ window.SECTION03_ASSETS = {
         "notes": "Verified on DW-03003: Precast water descent on Right fill slope connected to 500m Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 9.21,
         "di_set": {
           "ch0": 86604.93,
           "ch1": 86604.93,
@@ -53994,8 +53410,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.21,
           "sheet": "DW-03003-06",
           "cert": "exact"
-        },
-        "offset_m": 9.21
+        }
       },
       "geometry": {
         "type": "Point",
@@ -54028,6 +53443,7 @@ window.SECTION03_ASSETS = {
         "notes": "Verified on DW-03003: Precast water descent on Right fill slope connected to 500m Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 9.37,
         "di_set": {
           "ch0": 86687.81,
           "ch1": 86687.81,
@@ -54035,8 +53451,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.37,
           "sheet": "DW-03003-06",
           "cert": "exact"
-        },
-        "offset_m": 9.37
+        }
       },
       "geometry": {
         "type": "Point",
@@ -54069,6 +53484,7 @@ window.SECTION03_ASSETS = {
         "notes": "Verified on DW-03003: Precast water descent on Right fill slope connected to 500m Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.9,
         "di_set": {
           "ch0": 86774.92,
           "ch1": 86774.92,
@@ -54076,8 +53492,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.9,
           "sheet": "DW-03003-06",
           "cert": "exact"
-        },
-        "offset_m": 8.9
+        }
       },
       "geometry": {
         "type": "Point",
@@ -54110,6 +53525,7 @@ window.SECTION03_ASSETS = {
         "notes": "Verified on DW-03003: Precast water descent on Right fill slope connected to 500m Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.42,
         "di_set": {
           "ch0": 86850.06,
           "ch1": 86850.06,
@@ -54117,8 +53533,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.42,
           "sheet": "DW-03003-06",
           "cert": "exact"
-        },
-        "offset_m": 7.42
+        }
       },
       "geometry": {
         "type": "Point",
@@ -54151,6 +53566,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.75,
         "di_set": {
           "ch0": 87359.77,
           "ch1": 87359.77,
@@ -54158,8 +53574,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.75,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "offset_m": 8.75
+        }
       },
       "geometry": {
         "type": "Point",
@@ -54192,6 +53607,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 9.21,
         "di_set": {
           "ch0": 87419.78,
           "ch1": 87419.78,
@@ -54199,8 +53615,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.21,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "offset_m": 9.21
+        }
       },
       "geometry": {
         "type": "Point",
@@ -54233,6 +53648,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 10.22,
         "di_set": {
           "ch0": 87456,
           "ch1": 87456,
@@ -54240,8 +53656,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 10.22,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "offset_m": 10.22
+        }
       },
       "geometry": {
         "type": "Point",
@@ -54274,6 +53689,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 10.89,
         "di_set": {
           "ch0": 87492.03,
           "ch1": 87492.03,
@@ -54281,8 +53697,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 10.89,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "offset_m": 10.89
+        }
       },
       "geometry": {
         "type": "Point",
@@ -54315,6 +53730,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 12.58,
         "di_set": {
           "ch0": 87667.01,
           "ch1": 87667.01,
@@ -54322,8 +53738,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 12.58,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "offset_m": 12.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -54356,6 +53771,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 17.51,
         "di_set": {
           "ch0": 87695.96,
           "ch1": 87695.96,
@@ -54363,8 +53779,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 17.51,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "offset_m": 17.51
+        }
       },
       "geometry": {
         "type": "Point",
@@ -54397,6 +53812,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 16.96,
         "di_set": {
           "ch0": 87706.66,
           "ch1": 87706.66,
@@ -54404,8 +53820,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 16.96,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "offset_m": 16.96
+        }
       },
       "geometry": {
         "type": "Point",
@@ -54438,6 +53853,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 12.71,
         "di_set": {
           "ch0": 87724.98,
           "ch1": 87724.98,
@@ -54445,8 +53861,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 12.71,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "offset_m": 12.71
+        }
       },
       "geometry": {
         "type": "Point",
@@ -54479,6 +53894,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 17.38,
         "di_set": {
           "ch0": 87754.65,
           "ch1": 87754.65,
@@ -54486,8 +53902,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 17.38,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "offset_m": 17.38
+        }
       },
       "geometry": {
         "type": "Point",
@@ -54520,6 +53935,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 17.58,
         "di_set": {
           "ch0": 87757.46,
           "ch1": 87757.46,
@@ -54527,8 +53943,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 17.58,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "offset_m": 17.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -54561,6 +53976,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 13.5,
         "di_set": {
           "ch0": 87789.98,
           "ch1": 87789.98,
@@ -54568,8 +53984,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 13.5,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "offset_m": 13.5
+        }
       },
       "geometry": {
         "type": "Point",
@@ -54602,6 +54017,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 17.56,
         "di_set": {
           "ch0": 87824.97,
           "ch1": 87824.97,
@@ -54609,8 +54025,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 17.56,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "offset_m": 17.56
+        }
       },
       "geometry": {
         "type": "Point",
@@ -54643,6 +54058,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 12.79,
         "di_set": {
           "ch0": 87859.98,
           "ch1": 87859.98,
@@ -54650,8 +54066,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 12.79,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "offset_m": 12.79
+        }
       },
       "geometry": {
         "type": "Point",
@@ -54684,6 +54099,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 18.06,
         "di_set": {
           "ch0": 87866.63,
           "ch1": 87866.63,
@@ -54691,8 +54107,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 18.06,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "offset_m": 18.06
+        }
       },
       "geometry": {
         "type": "Point",
@@ -54725,6 +54140,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 17.56,
         "di_set": {
           "ch0": 87892.47,
           "ch1": 87892.47,
@@ -54732,8 +54148,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 17.56,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "offset_m": 17.56
+        }
       },
       "geometry": {
         "type": "Point",
@@ -54766,6 +54181,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 18.06,
         "di_set": {
           "ch0": 87906.63,
           "ch1": 87906.63,
@@ -54773,8 +54189,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 18.06,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "offset_m": 18.06
+        }
       },
       "geometry": {
         "type": "Point",
@@ -54807,6 +54222,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 11.73,
         "di_set": {
           "ch0": 87929.97,
           "ch1": 87929.97,
@@ -54814,8 +54230,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 11.73,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "offset_m": 11.73
+        }
       },
       "geometry": {
         "type": "Point",
@@ -54848,6 +54263,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 9.92,
         "di_set": {
           "ch0": 88060.02,
           "ch1": 88060.02,
@@ -54855,8 +54271,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.92,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "offset_m": 9.92
+        }
       },
       "geometry": {
         "type": "Point",
@@ -54889,6 +54304,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 9.34,
         "di_set": {
           "ch0": 88119.99,
           "ch1": 88119.99,
@@ -54896,8 +54312,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.34,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "offset_m": 9.34
+        }
       },
       "geometry": {
         "type": "Point",
@@ -54930,6 +54345,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.78,
         "di_set": {
           "ch0": 88180.12,
           "ch1": 88180.12,
@@ -54937,8 +54353,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.78,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "offset_m": 7.78
+        }
       },
       "geometry": {
         "type": "Point",
@@ -54971,6 +54386,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.73,
         "di_set": {
           "ch0": 88240.16,
           "ch1": 88240.16,
@@ -54978,8 +54394,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.73,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "offset_m": 7.73
+        }
       },
       "geometry": {
         "type": "Point",
@@ -55012,6 +54427,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.66,
         "di_set": {
           "ch0": 88300.41,
           "ch1": 88300.41,
@@ -55019,8 +54435,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.66,
           "sheet": "DW-03005-06",
           "cert": "exact"
-        },
-        "offset_m": 8.66
+        }
       },
       "geometry": {
         "type": "Point",
@@ -55053,6 +54468,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 6.91,
         "di_set": {
           "ch0": 88350.01,
           "ch1": 88350.01,
@@ -55060,8 +54476,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 6.91,
           "sheet": "DW-03005-06",
           "cert": "exact"
-        },
-        "offset_m": 6.91
+        }
       },
       "geometry": {
         "type": "Point",
@@ -55094,6 +54509,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.58,
         "di_set": {
           "ch0": 88394.73,
           "ch1": 88394.73,
@@ -55101,8 +54517,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.58,
           "sheet": "DW-03005-06",
           "cert": "exact"
-        },
-        "offset_m": 7.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -55135,6 +54550,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.17,
         "di_set": {
           "ch0": 88454.8,
           "ch1": 88454.8,
@@ -55142,8 +54558,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.17,
           "sheet": "DW-03005-06",
           "cert": "exact"
-        },
-        "offset_m": 8.17
+        }
       },
       "geometry": {
         "type": "Point",
@@ -55176,6 +54591,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.77,
         "di_set": {
           "ch0": 88515,
           "ch1": 88515,
@@ -55183,8 +54599,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.77,
           "sheet": "DW-03005-06",
           "cert": "exact"
-        },
-        "offset_m": 8.77
+        }
       },
       "geometry": {
         "type": "Point",
@@ -55217,6 +54632,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 6.99,
         "di_set": {
           "ch0": 88675.06,
           "ch1": 88675.06,
@@ -55224,8 +54640,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 6.99,
           "sheet": "DW-03005-06",
           "cert": "exact"
-        },
-        "offset_m": 6.99
+        }
       },
       "geometry": {
         "type": "Point",
@@ -55258,6 +54673,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.42,
         "di_set": {
           "ch0": 88724.11,
           "ch1": 88724.11,
@@ -55265,8 +54681,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.42,
           "sheet": "DW-03005-06",
           "cert": "exact"
-        },
-        "offset_m": 7.42
+        }
       },
       "geometry": {
         "type": "Point",
@@ -55299,6 +54714,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.07,
         "di_set": {
           "ch0": 89574.83,
           "ch1": 89574.83,
@@ -55306,8 +54722,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.07,
           "sheet": "DW-03005-06",
           "cert": "exact"
-        },
-        "offset_m": 7.07
+        }
       },
       "geometry": {
         "type": "Point",
@@ -55340,6 +54755,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.8,
         "di_set": {
           "ch0": 89637,
           "ch1": 89637,
@@ -55347,8 +54763,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.8,
           "sheet": "DW-03005-06",
           "cert": "exact"
-        },
-        "offset_m": 7.8
+        }
       },
       "geometry": {
         "type": "Point",
@@ -55381,6 +54796,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.18,
         "di_set": {
           "ch0": 89711.97,
           "ch1": 89711.97,
@@ -55388,8 +54804,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.18,
           "sheet": "DW-03006",
           "cert": "exact"
-        },
-        "offset_m": 8.18
+        }
       },
       "geometry": {
         "type": "Point",
@@ -55422,6 +54837,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.06,
         "di_set": {
           "ch0": 89797.03,
           "ch1": 89797.03,
@@ -55429,8 +54845,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.06,
           "sheet": "DW-03006",
           "cert": "exact"
-        },
-        "offset_m": 8.06
+        }
       },
       "geometry": {
         "type": "Point",
@@ -55463,6 +54878,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.86,
         "di_set": {
           "ch0": 89882.18,
           "ch1": 89882.18,
@@ -55470,8 +54886,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.86,
           "sheet": "DW-03006",
           "cert": "exact"
-        },
-        "offset_m": 7.86
+        }
       },
       "geometry": {
         "type": "Point",
@@ -55504,6 +54919,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.16,
         "di_set": {
           "ch0": 89967.39,
           "ch1": 89967.39,
@@ -55511,8 +54927,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.16,
           "sheet": "DW-03006",
           "cert": "exact"
-        },
-        "offset_m": 8.16
+        }
       },
       "geometry": {
         "type": "Point",
@@ -55545,6 +54960,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.06,
         "di_set": {
           "ch0": 90052.66,
           "ch1": 90052.66,
@@ -55552,8 +54968,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.06,
           "sheet": "DW-03006",
           "cert": "exact"
-        },
-        "offset_m": 8.06
+        }
       },
       "geometry": {
         "type": "Point",
@@ -55586,6 +55001,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.19,
         "di_set": {
           "ch0": 90197.83,
           "ch1": 90197.83,
@@ -55593,8 +55009,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.19,
           "sheet": "DW-03006",
           "cert": "exact"
-        },
-        "offset_m": 8.19
+        }
       },
       "geometry": {
         "type": "Point",
@@ -55627,6 +55042,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.2,
         "di_set": {
           "ch0": 90258.01,
           "ch1": 90258.01,
@@ -55634,8 +55050,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.2,
           "sheet": "DW-03006",
           "cert": "exact"
-        },
-        "offset_m": 8.2
+        }
       },
       "geometry": {
         "type": "Point",
@@ -55668,6 +55083,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.35,
         "di_set": {
           "ch0": 90317.92,
           "ch1": 90317.92,
@@ -55675,8 +55091,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.35,
           "sheet": "DW-03006",
           "cert": "exact"
-        },
-        "offset_m": 7.35
+        }
       },
       "geometry": {
         "type": "Point",
@@ -55709,6 +55124,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.67,
         "di_set": {
           "ch0": 90374.99,
           "ch1": 90374.99,
@@ -55716,8 +55132,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.67,
           "sheet": "DW-03006",
           "cert": "exact"
-        },
-        "offset_m": 7.67
+        }
       },
       "geometry": {
         "type": "Point",
@@ -55750,6 +55165,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.65,
         "di_set": {
           "ch0": 92239.02,
           "ch1": 92239.02,
@@ -55757,8 +55173,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.65,
           "sheet": "DW-03007-06",
           "cert": "exact"
-        },
-        "offset_m": 7.65
+        }
       },
       "geometry": {
         "type": "Point",
@@ -55791,6 +55206,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.46,
         "di_set": {
           "ch0": 92294.95,
           "ch1": 92294.95,
@@ -55798,8 +55214,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.46,
           "sheet": "DW-03007-06",
           "cert": "exact"
-        },
-        "offset_m": 7.46
+        }
       },
       "geometry": {
         "type": "Point",
@@ -55832,6 +55247,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.49,
         "di_set": {
           "ch0": 92354.9,
           "ch1": 92354.9,
@@ -55839,8 +55255,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.49,
           "sheet": "DW-03007-06",
           "cert": "exact"
-        },
-        "offset_m": 7.49
+        }
       },
       "geometry": {
         "type": "Point",
@@ -55873,6 +55288,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.49,
         "di_set": {
           "ch0": 92414.9,
           "ch1": 92414.9,
@@ -55880,8 +55296,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.49,
           "sheet": "DW-03007-06",
           "cert": "exact"
-        },
-        "offset_m": 7.49
+        }
       },
       "geometry": {
         "type": "Point",
@@ -55914,6 +55329,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.49,
         "di_set": {
           "ch0": 92474.9,
           "ch1": 92474.9,
@@ -55921,8 +55337,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.49,
           "sheet": "DW-03007-06",
           "cert": "exact"
-        },
-        "offset_m": 7.49
+        }
       },
       "geometry": {
         "type": "Point",
@@ -55955,6 +55370,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.49,
         "di_set": {
           "ch0": 92512.4,
           "ch1": 92512.4,
@@ -55962,8 +55378,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.49,
           "sheet": "DW-03008-06",
           "cert": "exact"
-        },
-        "offset_m": 7.49
+        }
       },
       "geometry": {
         "type": "Point",
@@ -55996,6 +55411,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.49,
         "di_set": {
           "ch0": 92549.98,
           "ch1": 92549.98,
@@ -56003,8 +55419,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.49,
           "sheet": "DW-03008-06",
           "cert": "exact"
-        },
-        "offset_m": 7.49
+        }
       },
       "geometry": {
         "type": "Point",
@@ -56037,6 +55452,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.49,
         "di_set": {
           "ch0": 93474.99,
           "ch1": 93474.99,
@@ -56044,8 +55460,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.49,
           "sheet": "DW-03008-06",
           "cert": "exact"
-        },
-        "offset_m": 7.49
+        }
       },
       "geometry": {
         "type": "Point",
@@ -56078,6 +55493,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.89,
         "di_set": {
           "ch0": 93514.52,
           "ch1": 93514.52,
@@ -56085,8 +55501,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.89,
           "sheet": "DW-03008-06",
           "cert": "exact"
-        },
-        "offset_m": 7.89
+        }
       },
       "geometry": {
         "type": "Point",
@@ -56119,6 +55534,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.35,
         "di_set": {
           "ch0": 93554.96,
           "ch1": 93554.96,
@@ -56126,8 +55542,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.35,
           "sheet": "DW-03008-06",
           "cert": "exact"
-        },
-        "offset_m": 8.35
+        }
       },
       "geometry": {
         "type": "Point",
@@ -56160,6 +55575,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 9.66,
         "di_set": {
           "ch0": 93615.01,
           "ch1": 93615.01,
@@ -56167,8 +55583,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.66,
           "sheet": "DW-03008-06",
           "cert": "exact"
-        },
-        "offset_m": 9.66
+        }
       },
       "geometry": {
         "type": "Point",
@@ -56201,6 +55616,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 10.57,
         "di_set": {
           "ch0": 93735.99,
           "ch1": 93735.99,
@@ -56208,8 +55624,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 10.57,
           "sheet": "DW-03008-06",
           "cert": "exact"
-        },
-        "offset_m": 10.57
+        }
       },
       "geometry": {
         "type": "Point",
@@ -56242,6 +55657,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 9.91,
         "di_set": {
           "ch0": 93780.27,
           "ch1": 93780.27,
@@ -56249,8 +55665,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.91,
           "sheet": "DW-03008-06",
           "cert": "exact"
-        },
-        "offset_m": 9.91
+        }
       },
       "geometry": {
         "type": "Point",
@@ -56283,6 +55698,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 10,
         "di_set": {
           "ch0": 93823.77,
           "ch1": 93823.77,
@@ -56290,8 +55706,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 10,
           "sheet": "DW-03008-06",
           "cert": "exact"
-        },
-        "offset_m": 10
+        }
       },
       "geometry": {
         "type": "Point",
@@ -56324,6 +55739,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.7,
         "di_set": {
           "ch0": 93883.73,
           "ch1": 93883.73,
@@ -56331,8 +55747,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.7,
           "sheet": "DW-03008-06",
           "cert": "exact"
-        },
-        "offset_m": 8.7
+        }
       },
       "geometry": {
         "type": "Point",
@@ -56365,6 +55780,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.98,
         "di_set": {
           "ch0": 94003.78,
           "ch1": 94003.78,
@@ -56372,8 +55788,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.98,
           "sheet": "DW-03009-06",
           "cert": "exact"
-        },
-        "offset_m": 7.98
+        }
       },
       "geometry": {
         "type": "Point",
@@ -56406,6 +55821,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.02,
         "di_set": {
           "ch0": 94051.77,
           "ch1": 94051.77,
@@ -56413,8 +55829,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.02,
           "sheet": "DW-03009-06",
           "cert": "exact"
-        },
-        "offset_m": 8.02
+        }
       },
       "geometry": {
         "type": "Point",
@@ -56447,6 +55862,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.45,
         "di_set": {
           "ch0": 94099.99,
           "ch1": 94099.99,
@@ -56454,8 +55870,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.45,
           "sheet": "DW-03009-06",
           "cert": "exact"
-        },
-        "offset_m": 7.45
+        }
       },
       "geometry": {
         "type": "Point",
@@ -56488,6 +55903,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 6.57,
         "di_set": {
           "ch0": 94899.93,
           "ch1": 94899.93,
@@ -56495,8 +55911,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 6.57,
           "sheet": "DW-03009-06",
           "cert": "exact"
-        },
-        "offset_m": 6.57
+        }
       },
       "geometry": {
         "type": "Point",
@@ -56529,6 +55944,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.66,
         "di_set": {
           "ch0": 94958.45,
           "ch1": 94958.45,
@@ -56536,8 +55952,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.66,
           "sheet": "DW-03009-06",
           "cert": "exact"
-        },
-        "offset_m": 7.66
+        }
       },
       "geometry": {
         "type": "Point",
@@ -56570,6 +55985,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.57,
         "di_set": {
           "ch0": 95004.98,
           "ch1": 95004.98,
@@ -56577,8 +55993,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.57,
           "sheet": "DW-03009-06",
           "cert": "exact"
-        },
-        "offset_m": 7.57
+        }
       },
       "geometry": {
         "type": "Point",
@@ -56611,6 +56026,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.18,
         "di_set": {
           "ch0": 95949.95,
           "ch1": 95949.95,
@@ -56618,8 +56034,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.18,
           "sheet": "DW-03010-07",
           "cert": "exact"
-        },
-        "offset_m": 7.18
+        }
       },
       "geometry": {
         "type": "Point",
@@ -56652,6 +56067,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.22,
         "di_set": {
           "ch0": 96010.99,
           "ch1": 96010.99,
@@ -56659,8 +56075,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.22,
           "sheet": "DW-03010-07",
           "cert": "exact"
-        },
-        "offset_m": 8.22
+        }
       },
       "geometry": {
         "type": "Point",
@@ -56693,6 +56108,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.5,
         "di_set": {
           "ch0": 97124.96,
           "ch1": 97124.96,
@@ -56700,8 +56116,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.5,
           "sheet": "DW-03011-06",
           "cert": "exact"
-        },
-        "offset_m": 7.5
+        }
       },
       "geometry": {
         "type": "Point",
@@ -56734,6 +56149,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.5,
         "di_set": {
           "ch0": 97186.84,
           "ch1": 97186.84,
@@ -56741,8 +56157,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.5,
           "sheet": "DW-03011-06",
           "cert": "exact"
-        },
-        "offset_m": 7.5
+        }
       },
       "geometry": {
         "type": "Point",
@@ -56775,6 +56190,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.5,
         "di_set": {
           "ch0": 97399.88,
           "ch1": 97399.88,
@@ -56782,8 +56198,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.5,
           "sheet": "DW-03011-06",
           "cert": "exact"
-        },
-        "offset_m": 7.5
+        }
       },
       "geometry": {
         "type": "Point",
@@ -56816,6 +56231,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.5,
         "di_set": {
           "ch0": 97457.35,
           "ch1": 97457.35,
@@ -56823,8 +56239,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.5,
           "sheet": "DW-03011-06",
           "cert": "exact"
-        },
-        "offset_m": 7.5
+        }
       },
       "geometry": {
         "type": "Point",
@@ -56857,6 +56272,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.5,
         "di_set": {
           "ch0": 97509.85,
           "ch1": 97509.85,
@@ -56864,8 +56280,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.5,
           "sheet": "DW-03011-06",
           "cert": "exact"
-        },
-        "offset_m": 7.5
+        }
       },
       "geometry": {
         "type": "Point",
@@ -56898,6 +56313,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.72,
         "di_set": {
           "ch0": 98760,
           "ch1": 98760,
@@ -56905,8 +56321,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.72,
           "sheet": "DW-03012-07",
           "cert": "exact"
-        },
-        "offset_m": 7.72
+        }
       },
       "geometry": {
         "type": "Point",
@@ -56939,6 +56354,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.49,
         "di_set": {
           "ch0": 98808.01,
           "ch1": 98808.01,
@@ -56946,8 +56362,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.49,
           "sheet": "DW-03012-07",
           "cert": "exact"
-        },
-        "offset_m": 7.49
+        }
       },
       "geometry": {
         "type": "Point",
@@ -56980,6 +56395,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 6.86,
         "di_set": {
           "ch0": 98849.98,
           "ch1": 98849.98,
@@ -56987,8 +56403,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 6.86,
           "sheet": "DW-03012-07",
           "cert": "exact"
-        },
-        "offset_m": 6.86
+        }
       },
       "geometry": {
         "type": "Point",
@@ -57021,6 +56436,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.32,
         "di_set": {
           "ch0": 100799.92,
           "ch1": 100799.92,
@@ -57028,8 +56444,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.32,
           "sheet": "DW-03013-06",
           "cert": "exact"
-        },
-        "offset_m": 7.32
+        }
       },
       "geometry": {
         "type": "Point",
@@ -57062,6 +56477,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.32,
         "di_set": {
           "ch0": 100842.41,
           "ch1": 100842.41,
@@ -57069,8 +56485,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.32,
           "sheet": "DW-03013-06",
           "cert": "exact"
-        },
-        "offset_m": 7.32
+        }
       },
       "geometry": {
         "type": "Point",
@@ -57103,6 +56518,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.66,
         "di_set": {
           "ch0": 100884.94,
           "ch1": 100884.94,
@@ -57110,8 +56526,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.66,
           "sheet": "DW-03013-06",
           "cert": "exact"
-        },
-        "offset_m": 7.66
+        }
       },
       "geometry": {
         "type": "Point",
@@ -57144,6 +56559,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.76,
         "di_set": {
           "ch0": 100944.94,
           "ch1": 100944.94,
@@ -57151,8 +56567,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.76,
           "sheet": "DW-03014-06",
           "cert": "exact"
-        },
-        "offset_m": 7.76
+        }
       },
       "geometry": {
         "type": "Point",
@@ -57185,6 +56600,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.76,
         "di_set": {
           "ch0": 101004.94,
           "ch1": 101004.94,
@@ -57192,8 +56608,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.76,
           "sheet": "DW-03014-06",
           "cert": "exact"
-        },
-        "offset_m": 7.76
+        }
       },
       "geometry": {
         "type": "Point",
@@ -57226,6 +56641,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.76,
         "di_set": {
           "ch0": 101063.94,
           "ch1": 101063.94,
@@ -57233,8 +56649,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.76,
           "sheet": "DW-03014-06",
           "cert": "exact"
-        },
-        "offset_m": 7.76
+        }
       },
       "geometry": {
         "type": "Point",
@@ -57267,6 +56682,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.59,
         "di_set": {
           "ch0": 103439.02,
           "ch1": 103439.02,
@@ -57274,8 +56690,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.59,
           "sheet": "DW-03015-06",
           "cert": "exact"
-        },
-        "offset_m": 7.59
+        }
       },
       "geometry": {
         "type": "Point",
@@ -57308,6 +56723,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.72,
         "di_set": {
           "ch0": 103530.06,
           "ch1": 103530.06,
@@ -57315,8 +56731,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.72,
           "sheet": "DW-03015-06",
           "cert": "exact"
-        },
-        "offset_m": 7.72
+        }
       },
       "geometry": {
         "type": "Point",
@@ -57349,6 +56764,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.69,
         "di_set": {
           "ch0": 103620.13,
           "ch1": 103620.13,
@@ -57356,8 +56772,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.69,
           "sheet": "DW-03015-06",
           "cert": "exact"
-        },
-        "offset_m": 7.69
+        }
       },
       "geometry": {
         "type": "Point",
@@ -57390,6 +56805,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.69,
         "di_set": {
           "ch0": 103710.13,
           "ch1": 103710.13,
@@ -57397,8 +56813,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.69,
           "sheet": "DW-03016-06",
           "cert": "exact"
-        },
-        "offset_m": 7.69
+        }
       },
       "geometry": {
         "type": "Point",
@@ -57431,6 +56846,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.69,
         "di_set": {
           "ch0": 103800.13,
           "ch1": 103800.13,
@@ -57438,8 +56854,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.69,
           "sheet": "DW-03016-06",
           "cert": "exact"
-        },
-        "offset_m": 7.69
+        }
       },
       "geometry": {
         "type": "Point",
@@ -57472,6 +56887,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.69,
         "di_set": {
           "ch0": 103895.13,
           "ch1": 103895.13,
@@ -57479,8 +56895,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.69,
           "sheet": "DW-03016-06",
           "cert": "exact"
-        },
-        "offset_m": 7.69
+        }
       },
       "geometry": {
         "type": "Point",
@@ -57513,6 +56928,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.69,
         "di_set": {
           "ch0": 103958.13,
           "ch1": 103958.13,
@@ -57520,8 +56936,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.69,
           "sheet": "DW-03016-06",
           "cert": "exact"
-        },
-        "offset_m": 7.69
+        }
       },
       "geometry": {
         "type": "Point",
@@ -57554,6 +56969,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.52,
         "di_set": {
           "ch0": 104025.02,
           "ch1": 104025.02,
@@ -57561,8 +56977,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.52,
           "sheet": "DW-03016-06",
           "cert": "exact"
-        },
-        "offset_m": 7.52
+        }
       },
       "geometry": {
         "type": "Point",
@@ -57595,6 +57010,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.58,
         "di_set": {
           "ch0": 105340.02,
           "ch1": 105340.02,
@@ -57602,8 +57018,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.58,
           "sheet": "DW-03017-06",
           "cert": "exact"
-        },
-        "offset_m": 7.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -57636,6 +57051,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.58,
         "di_set": {
           "ch0": 105395.02,
           "ch1": 105395.02,
@@ -57643,8 +57059,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.58,
           "sheet": "DW-03017-06",
           "cert": "exact"
-        },
-        "offset_m": 7.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -57677,6 +57092,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.58,
         "di_set": {
           "ch0": 105455.02,
           "ch1": 105455.02,
@@ -57684,8 +57100,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.58,
           "sheet": "DW-03017-06",
           "cert": "exact"
-        },
-        "offset_m": 7.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -57718,6 +57133,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.14,
         "di_set": {
           "ch0": 105507.96,
           "ch1": 105507.96,
@@ -57725,8 +57141,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.14,
           "sheet": "DW-03017-06",
           "cert": "exact"
-        },
-        "offset_m": 8.14
+        }
       },
       "geometry": {
         "type": "Point",
@@ -57759,6 +57174,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.88,
         "di_set": {
           "ch0": 105574.95,
           "ch1": 105574.95,
@@ -57766,8 +57182,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.88,
           "sheet": "DW-03017-06",
           "cert": "exact"
-        },
-        "offset_m": 7.88
+        }
       },
       "geometry": {
         "type": "Point",
@@ -57800,6 +57215,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.32,
         "di_set": {
           "ch0": 105635.05,
           "ch1": 105635.05,
@@ -57807,8 +57223,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.32,
           "sheet": "DW-03017-06",
           "cert": "exact"
-        },
-        "offset_m": 7.32
+        }
       },
       "geometry": {
         "type": "Point",
@@ -57841,6 +57256,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.32,
         "di_set": {
           "ch0": 105683.05,
           "ch1": 105683.05,
@@ -57848,8 +57264,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.32,
           "sheet": "DW-03017-06",
           "cert": "exact"
-        },
-        "offset_m": 7.32
+        }
       },
       "geometry": {
         "type": "Point",
@@ -57882,6 +57297,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.99,
         "di_set": {
           "ch0": 105730.99,
           "ch1": 105730.99,
@@ -57889,8 +57305,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.99,
           "sheet": "DW-03017-06",
           "cert": "exact"
-        },
-        "offset_m": 7.99
+        }
       },
       "geometry": {
         "type": "Point",
@@ -57923,6 +57338,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.58,
         "di_set": {
           "ch0": 105871.03,
           "ch1": 105871.03,
@@ -57930,8 +57346,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.58,
           "sheet": "DW-03017-06",
           "cert": "exact"
-        },
-        "offset_m": 8.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -57964,6 +57379,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.58,
         "di_set": {
           "ch0": 105910.03,
           "ch1": 105910.03,
@@ -57971,8 +57387,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.58,
           "sheet": "DW-03017-06",
           "cert": "exact"
-        },
-        "offset_m": 8.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -58005,6 +57420,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.62,
         "di_set": {
           "ch0": 105948.69,
           "ch1": 105948.69,
@@ -58012,8 +57428,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.62,
           "sheet": "DW-03017-06",
           "cert": "exact"
-        },
-        "offset_m": 8.62
+        }
       },
       "geometry": {
         "type": "Point",
@@ -58046,6 +57461,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.62,
         "di_set": {
           "ch0": 105993.99,
           "ch1": 105993.99,
@@ -58053,8 +57469,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.62,
           "sheet": "DW-03017-06",
           "cert": "exact"
-        },
-        "offset_m": 8.62
+        }
       },
       "geometry": {
         "type": "Point",
@@ -58087,6 +57502,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.42,
         "di_set": {
           "ch0": 106054.02,
           "ch1": 106054.02,
@@ -58094,8 +57510,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.42,
           "sheet": "DW-03017-06",
           "cert": "exact"
-        },
-        "offset_m": 8.42
+        }
       },
       "geometry": {
         "type": "Point",
@@ -58128,6 +57543,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.31,
         "di_set": {
           "ch0": 106114.02,
           "ch1": 106114.02,
@@ -58135,8 +57551,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.31,
           "sheet": "DW-03017-06",
           "cert": "exact"
-        },
-        "offset_m": 8.31
+        }
       },
       "geometry": {
         "type": "Point",
@@ -58169,6 +57584,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.31,
         "di_set": {
           "ch0": 106174.16,
           "ch1": 106174.16,
@@ -58176,8 +57592,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.31,
           "sheet": "DW-03017-06",
           "cert": "exact"
-        },
-        "offset_m": 8.31
+        }
       },
       "geometry": {
         "type": "Point",
@@ -58210,6 +57625,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.31,
         "di_set": {
           "ch0": 106234.02,
           "ch1": 106234.02,
@@ -58217,8 +57633,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.31,
           "sheet": "DW-03017-06",
           "cert": "exact"
-        },
-        "offset_m": 8.31
+        }
       },
       "geometry": {
         "type": "Point",
@@ -58251,6 +57666,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.31,
         "di_set": {
           "ch0": 106294.02,
           "ch1": 106294.02,
@@ -58258,8 +57674,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.31,
           "sheet": "DW-03017-06",
           "cert": "exact"
-        },
-        "offset_m": 8.31
+        }
       },
       "geometry": {
         "type": "Point",
@@ -58292,6 +57707,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.31,
         "di_set": {
           "ch0": 106354.05,
           "ch1": 106354.05,
@@ -58299,8 +57715,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.31,
           "sheet": "DW-03017-06",
           "cert": "exact"
-        },
-        "offset_m": 8.31
+        }
       },
       "geometry": {
         "type": "Point",
@@ -58333,6 +57748,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.62,
         "di_set": {
           "ch0": 106414.02,
           "ch1": 106414.02,
@@ -58340,8 +57756,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.62,
           "sheet": "DW-03017-06",
           "cert": "exact"
-        },
-        "offset_m": 8.62
+        }
       },
       "geometry": {
         "type": "Point",
@@ -58374,6 +57789,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.31,
         "di_set": {
           "ch0": 106474.02,
           "ch1": 106474.02,
@@ -58381,8 +57797,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.31,
           "sheet": "DW-03017-06",
           "cert": "exact"
-        },
-        "offset_m": 8.31
+        }
       },
       "geometry": {
         "type": "Point",
@@ -58415,6 +57830,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.12,
         "di_set": {
           "ch0": 106534.05,
           "ch1": 106534.05,
@@ -58422,8 +57838,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.12,
           "sheet": "DW-03018-06",
           "cert": "exact"
-        },
-        "offset_m": 8.12
+        }
       },
       "geometry": {
         "type": "Point",
@@ -58456,6 +57871,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.01,
         "di_set": {
           "ch0": 106594.02,
           "ch1": 106594.02,
@@ -58463,8 +57879,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.01,
           "sheet": "DW-03018-06",
           "cert": "exact"
-        },
-        "offset_m": 8.01
+        }
       },
       "geometry": {
         "type": "Point",
@@ -58497,6 +57912,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.71,
         "di_set": {
           "ch0": 106654.03,
           "ch1": 106654.03,
@@ -58504,8 +57920,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.71,
           "sheet": "DW-03018-06",
           "cert": "exact"
-        },
-        "offset_m": 7.71
+        }
       },
       "geometry": {
         "type": "Point",
@@ -58538,6 +57953,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.71,
         "di_set": {
           "ch0": 106728.91,
           "ch1": 106728.91,
@@ -58545,8 +57961,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.71,
           "sheet": "DW-03018-06",
           "cert": "exact"
-        },
-        "offset_m": 7.71
+        }
       },
       "geometry": {
         "type": "Point",
@@ -58579,6 +57994,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.11,
         "di_set": {
           "ch0": 106804.85,
           "ch1": 106804.85,
@@ -58586,8 +58002,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.11,
           "sheet": "DW-03018-06",
           "cert": "exact"
-        },
-        "offset_m": 8.11
+        }
       },
       "geometry": {
         "type": "Point",
@@ -58620,6 +58035,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.28,
         "di_set": {
           "ch0": 106880.88,
           "ch1": 106880.88,
@@ -58627,8 +58043,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.28,
           "sheet": "DW-03018-06",
           "cert": "exact"
-        },
-        "offset_m": 8.28
+        }
       },
       "geometry": {
         "type": "Point",
@@ -58661,6 +58076,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.65,
         "di_set": {
           "ch0": 106956.89,
           "ch1": 106956.89,
@@ -58668,8 +58084,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.65,
           "sheet": "DW-03018-06",
           "cert": "exact"
-        },
-        "offset_m": 8.65
+        }
       },
       "geometry": {
         "type": "Point",
@@ -58702,6 +58117,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.65,
         "di_set": {
           "ch0": 107032.89,
           "ch1": 107032.89,
@@ -58709,8 +58125,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.65,
           "sheet": "DW-03018-06",
           "cert": "exact"
-        },
-        "offset_m": 8.65
+        }
       },
       "geometry": {
         "type": "Point",
@@ -58743,6 +58158,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.85,
         "di_set": {
           "ch0": 107108.87,
           "ch1": 107108.87,
@@ -58750,8 +58166,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.85,
           "sheet": "DW-03018-06",
           "cert": "exact"
-        },
-        "offset_m": 8.85
+        }
       },
       "geometry": {
         "type": "Point",
@@ -58784,6 +58199,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 9,
         "di_set": {
           "ch0": 107177.83,
           "ch1": 107177.83,
@@ -58791,8 +58207,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9,
           "sheet": "DW-03018-06",
           "cert": "exact"
-        },
-        "offset_m": 9
+        }
       },
       "geometry": {
         "type": "Point",
@@ -58825,6 +58240,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 9.32,
         "di_set": {
           "ch0": 107259.01,
           "ch1": 107259.01,
@@ -58832,8 +58248,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.32,
           "sheet": "DW-03018-06",
           "cert": "exact"
-        },
-        "offset_m": 9.32
+        }
       },
       "geometry": {
         "type": "Point",
@@ -58866,6 +58281,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 9.34,
         "di_set": {
           "ch0": 107337.07,
           "ch1": 107337.07,
@@ -58873,8 +58289,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.34,
           "sheet": "DW-03018-06",
           "cert": "exact"
-        },
-        "offset_m": 9.34
+        }
       },
       "geometry": {
         "type": "Point",
@@ -58907,6 +58322,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 9.58,
         "di_set": {
           "ch0": 107445.81,
           "ch1": 107445.81,
@@ -58914,8 +58330,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.58,
           "sheet": "DW-03018-06",
           "cert": "exact"
-        },
-        "offset_m": 9.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -58948,6 +58363,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 10.29,
         "di_set": {
           "ch0": 107557.79,
           "ch1": 107557.79,
@@ -58955,8 +58371,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 10.29,
           "sheet": "DW-03018-06",
           "cert": "exact"
-        },
-        "offset_m": 10.29
+        }
       },
       "geometry": {
         "type": "Point",
@@ -58989,6 +58404,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 11,
         "di_set": {
           "ch0": 107668.06,
           "ch1": 107668.06,
@@ -58996,8 +58412,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 11,
           "sheet": "DW-03018-06",
           "cert": "exact"
-        },
-        "offset_m": 11
+        }
       },
       "geometry": {
         "type": "Point",
@@ -59030,6 +58445,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 17.74,
         "di_set": {
           "ch0": 107734.04,
           "ch1": 107734.04,
@@ -59037,8 +58453,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 17.74,
           "sheet": "DW-03018-06",
           "cert": "exact"
-        },
-        "offset_m": 17.74
+        }
       },
       "geometry": {
         "type": "Point",
@@ -59071,6 +58486,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 18.03,
         "di_set": {
           "ch0": 107744.06,
           "ch1": 107744.06,
@@ -59078,8 +58494,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 18.03,
           "sheet": "DW-03018-06",
           "cert": "exact"
-        },
-        "offset_m": 18.03
+        }
       },
       "geometry": {
         "type": "Point",
@@ -59112,6 +58527,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 13.37,
         "di_set": {
           "ch0": 107778.07,
           "ch1": 107778.07,
@@ -59119,8 +58535,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 13.37,
           "sheet": "DW-03018-06",
           "cert": "exact"
-        },
-        "offset_m": 13.37
+        }
       },
       "geometry": {
         "type": "Point",
@@ -59153,6 +58568,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 17.74,
         "di_set": {
           "ch0": 107816.04,
           "ch1": 107816.04,
@@ -59160,8 +58576,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 17.74,
           "sheet": "DW-03018-06",
           "cert": "exact"
-        },
-        "offset_m": 17.74
+        }
       },
       "geometry": {
         "type": "Point",
@@ -59194,6 +58609,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 17.74,
         "di_set": {
           "ch0": 107904.09,
           "ch1": 107904.09,
@@ -59201,8 +58617,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 17.74,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 17.74
+        }
       },
       "geometry": {
         "type": "Point",
@@ -59235,6 +58650,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 13.41,
         "di_set": {
           "ch0": 107921.63,
           "ch1": 107921.63,
@@ -59242,8 +58658,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 13.41,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 13.41
+        }
       },
       "geometry": {
         "type": "Point",
@@ -59276,6 +58691,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 18.03,
         "di_set": {
           "ch0": 107911.63,
           "ch1": 107911.63,
@@ -59283,8 +58699,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 18.03,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 18.03
+        }
       },
       "geometry": {
         "type": "Point",
@@ -59317,6 +58732,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 17.74,
         "di_set": {
           "ch0": 107938.49,
           "ch1": 107938.49,
@@ -59324,8 +58740,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 17.74,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 17.74
+        }
       },
       "geometry": {
         "type": "Point",
@@ -59358,6 +58773,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 13.27,
         "di_set": {
           "ch0": 107955.58,
           "ch1": 107955.58,
@@ -59365,8 +58781,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 13.27,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 13.27
+        }
       },
       "geometry": {
         "type": "Point",
@@ -59399,6 +58814,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 17.82,
         "di_set": {
           "ch0": 107972.05,
           "ch1": 107972.05,
@@ -59406,8 +58822,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 17.82,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 17.82
+        }
       },
       "geometry": {
         "type": "Point",
@@ -59440,6 +58855,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 13.11,
         "di_set": {
           "ch0": 107989.6,
           "ch1": 107989.6,
@@ -59447,8 +58863,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 13.11,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 13.11
+        }
       },
       "geometry": {
         "type": "Point",
@@ -59481,6 +58896,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 17.74,
         "di_set": {
           "ch0": 108006.49,
           "ch1": 108006.49,
@@ -59488,8 +58904,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 17.74,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 17.74
+        }
       },
       "geometry": {
         "type": "Point",
@@ -59522,6 +58937,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 12.87,
         "di_set": {
           "ch0": 108023.59,
           "ch1": 108023.59,
@@ -59529,8 +58945,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 12.87,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 12.87
+        }
       },
       "geometry": {
         "type": "Point",
@@ -59563,6 +58978,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 18.52,
         "di_set": {
           "ch0": 108037.13,
           "ch1": 108037.13,
@@ -59570,8 +58986,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 18.52,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 18.52
+        }
       },
       "geometry": {
         "type": "Point",
@@ -59604,6 +59019,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 19.24,
         "di_set": {
           "ch0": 108031.16,
           "ch1": 108031.16,
@@ -59611,8 +59027,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 19.24,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 19.24
+        }
       },
       "geometry": {
         "type": "Point",
@@ -59645,6 +59060,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 11.1,
         "di_set": {
           "ch0": 108057.61,
           "ch1": 108057.61,
@@ -59652,8 +59068,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 11.1,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 11.1
+        }
       },
       "geometry": {
         "type": "Point",
@@ -59686,6 +59101,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 11.1,
         "di_set": {
           "ch0": 108091.61,
           "ch1": 108091.61,
@@ -59693,8 +59109,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 11.1,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 11.1
+        }
       },
       "geometry": {
         "type": "Point",
@@ -59727,6 +59142,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 10.89,
         "di_set": {
           "ch0": 108125.74,
           "ch1": 108125.74,
@@ -59734,8 +59150,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 10.89,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 10.89
+        }
       },
       "geometry": {
         "type": "Point",
@@ -59768,6 +59183,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 10.56,
         "di_set": {
           "ch0": 108159.54,
           "ch1": 108159.54,
@@ -59775,8 +59191,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 10.56,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 10.56
+        }
       },
       "geometry": {
         "type": "Point",
@@ -59809,6 +59224,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 10.13,
         "di_set": {
           "ch0": 108193.59,
           "ch1": 108193.59,
@@ -59816,8 +59232,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 10.13,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 10.13
+        }
       },
       "geometry": {
         "type": "Point",
@@ -59850,6 +59265,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 9.98,
         "di_set": {
           "ch0": 108227.56,
           "ch1": 108227.56,
@@ -59857,8 +59273,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.98,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 9.98
+        }
       },
       "geometry": {
         "type": "Point",
@@ -59891,6 +59306,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 9.56,
         "di_set": {
           "ch0": 108261.71,
           "ch1": 108261.71,
@@ -59898,8 +59314,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.56,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 9.56
+        }
       },
       "geometry": {
         "type": "Point",
@@ -59932,6 +59347,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 9.6,
         "di_set": {
           "ch0": 108295.5,
           "ch1": 108295.5,
@@ -59939,8 +59355,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.6,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 9.6
+        }
       },
       "geometry": {
         "type": "Point",
@@ -59973,6 +59388,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 9.41,
         "di_set": {
           "ch0": 108329.62,
           "ch1": 108329.62,
@@ -59980,8 +59396,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.41,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 9.41
+        }
       },
       "geometry": {
         "type": "Point",
@@ -60014,6 +59429,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 9.18,
         "di_set": {
           "ch0": 108363.61,
           "ch1": 108363.61,
@@ -60021,8 +59437,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.18,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 9.18
+        }
       },
       "geometry": {
         "type": "Point",
@@ -60055,6 +59470,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 9.19,
         "di_set": {
           "ch0": 108397.66,
           "ch1": 108397.66,
@@ -60062,8 +59478,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.19,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 9.19
+        }
       },
       "geometry": {
         "type": "Point",
@@ -60096,6 +59511,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.91,
         "di_set": {
           "ch0": 108431.65,
           "ch1": 108431.65,
@@ -60103,8 +59519,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.91,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 8.91
+        }
       },
       "geometry": {
         "type": "Point",
@@ -60137,6 +59552,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.97,
         "di_set": {
           "ch0": 108465.44,
           "ch1": 108465.44,
@@ -60144,8 +59560,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.97,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 8.97
+        }
       },
       "geometry": {
         "type": "Point",
@@ -60178,6 +59593,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 9.16,
         "di_set": {
           "ch0": 108499.48,
           "ch1": 108499.48,
@@ -60185,8 +59601,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.16,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 9.16
+        }
       },
       "geometry": {
         "type": "Point",
@@ -60219,6 +59634,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 9.15,
         "di_set": {
           "ch0": 108533.58,
           "ch1": 108533.58,
@@ -60226,8 +59642,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.15,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 9.15
+        }
       },
       "geometry": {
         "type": "Point",
@@ -60260,6 +59675,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 9.08,
         "di_set": {
           "ch0": 108567.57,
           "ch1": 108567.57,
@@ -60267,8 +59683,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.08,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 9.08
+        }
       },
       "geometry": {
         "type": "Point",
@@ -60301,6 +59716,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.74,
         "di_set": {
           "ch0": 108601.61,
           "ch1": 108601.61,
@@ -60308,8 +59724,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.74,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 8.74
+        }
       },
       "geometry": {
         "type": "Point",
@@ -60342,6 +59757,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.71,
         "di_set": {
           "ch0": 108635.54,
           "ch1": 108635.54,
@@ -60349,8 +59765,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.71,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 8.71
+        }
       },
       "geometry": {
         "type": "Point",
@@ -60383,6 +59798,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.7,
         "di_set": {
           "ch0": 108669.58,
           "ch1": 108669.58,
@@ -60390,8 +59806,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.7,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 8.7
+        }
       },
       "geometry": {
         "type": "Point",
@@ -60424,6 +59839,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.56,
         "di_set": {
           "ch0": 108703.6,
           "ch1": 108703.6,
@@ -60431,8 +59847,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.56,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 8.56
+        }
       },
       "geometry": {
         "type": "Point",
@@ -60465,6 +59880,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.4,
         "di_set": {
           "ch0": 108737.58,
           "ch1": 108737.58,
@@ -60472,8 +59888,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.4,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 8.4
+        }
       },
       "geometry": {
         "type": "Point",
@@ -60506,6 +59921,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.32,
         "di_set": {
           "ch0": 108771.52,
           "ch1": 108771.52,
@@ -60513,8 +59929,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.32,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 8.32
+        }
       },
       "geometry": {
         "type": "Point",
@@ -60547,6 +59962,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.28,
         "di_set": {
           "ch0": 108805.56,
           "ch1": 108805.56,
@@ -60554,8 +59970,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.28,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 8.28
+        }
       },
       "geometry": {
         "type": "Point",
@@ -60588,6 +60003,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.6,
         "di_set": {
           "ch0": 108839.52,
           "ch1": 108839.52,
@@ -60595,8 +60011,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.6,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 8.6
+        }
       },
       "geometry": {
         "type": "Point",
@@ -60629,6 +60044,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.82,
         "di_set": {
           "ch0": 108873.55,
           "ch1": 108873.55,
@@ -60636,8 +60052,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.82,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 8.82
+        }
       },
       "geometry": {
         "type": "Point",
@@ -60670,6 +60085,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.9,
         "di_set": {
           "ch0": 108907.59,
           "ch1": 108907.59,
@@ -60677,8 +60093,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.9,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 8.9
+        }
       },
       "geometry": {
         "type": "Point",
@@ -60711,6 +60126,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.51,
         "di_set": {
           "ch0": 108941.65,
           "ch1": 108941.65,
@@ -60718,8 +60134,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.51,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 8.51
+        }
       },
       "geometry": {
         "type": "Point",
@@ -60752,6 +60167,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.91,
         "di_set": {
           "ch0": 108975.57,
           "ch1": 108975.57,
@@ -60759,8 +60175,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.91,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 7.91
+        }
       },
       "geometry": {
         "type": "Point",
@@ -60793,6 +60208,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.2,
         "di_set": {
           "ch0": 109009.5,
           "ch1": 109009.5,
@@ -60800,8 +60216,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.2,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 8.2
+        }
       },
       "geometry": {
         "type": "Point",
@@ -60834,6 +60249,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.53,
         "di_set": {
           "ch0": 109043.51,
           "ch1": 109043.51,
@@ -60841,8 +60257,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.53,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 8.53
+        }
       },
       "geometry": {
         "type": "Point",
@@ -60875,6 +60290,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.71,
         "di_set": {
           "ch0": 109077.46,
           "ch1": 109077.46,
@@ -60882,8 +60298,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.71,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 8.71
+        }
       },
       "geometry": {
         "type": "Point",
@@ -60916,6 +60331,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.45,
         "di_set": {
           "ch0": 109111.65,
           "ch1": 109111.65,
@@ -60923,8 +60339,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.45,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 8.45
+        }
       },
       "geometry": {
         "type": "Point",
@@ -60957,6 +60372,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.33,
         "di_set": {
           "ch0": 109145.58,
           "ch1": 109145.58,
@@ -60964,8 +60380,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.33,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 8.33
+        }
       },
       "geometry": {
         "type": "Point",
@@ -60998,6 +60413,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.16,
         "di_set": {
           "ch0": 109179.54,
           "ch1": 109179.54,
@@ -61005,8 +60421,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.16,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 8.16
+        }
       },
       "geometry": {
         "type": "Point",
@@ -61039,6 +60454,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.78,
         "di_set": {
           "ch0": 109213.56,
           "ch1": 109213.56,
@@ -61046,8 +60462,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.78,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "offset_m": 7.78
+        }
       },
       "geometry": {
         "type": "Point",
@@ -61080,6 +60495,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.4,
         "di_set": {
           "ch0": 109326.98,
           "ch1": 109326.98,
@@ -61087,8 +60503,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.4,
           "sheet": "DW-03020-06",
           "cert": "exact"
-        },
-        "offset_m": 8.4
+        }
       },
       "geometry": {
         "type": "Point",
@@ -61121,6 +60536,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.4,
         "di_set": {
           "ch0": 109346.98,
           "ch1": 109346.98,
@@ -61128,8 +60544,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.4,
           "sheet": "DW-03020-06",
           "cert": "exact"
-        },
-        "offset_m": 8.4
+        }
       },
       "geometry": {
         "type": "Point",
@@ -61162,6 +60577,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.45,
         "di_set": {
           "ch0": 109380.98,
           "ch1": 109380.98,
@@ -61169,8 +60585,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.45,
           "sheet": "DW-03020-06",
           "cert": "exact"
-        },
-        "offset_m": 8.45
+        }
       },
       "geometry": {
         "type": "Point",
@@ -61203,6 +60618,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.32,
         "di_set": {
           "ch0": 109415.01,
           "ch1": 109415.01,
@@ -61210,8 +60626,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.32,
           "sheet": "DW-03020-06",
           "cert": "exact"
-        },
-        "offset_m": 8.32
+        }
       },
       "geometry": {
         "type": "Point",
@@ -61244,6 +60659,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.28,
         "di_set": {
           "ch0": 109449,
           "ch1": 109449,
@@ -61251,8 +60667,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.28,
           "sheet": "DW-03020-06",
           "cert": "exact"
-        },
-        "offset_m": 8.28
+        }
       },
       "geometry": {
         "type": "Point",
@@ -61285,6 +60700,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.35,
         "di_set": {
           "ch0": 109483,
           "ch1": 109483,
@@ -61292,8 +60708,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.35,
           "sheet": "DW-03020-06",
           "cert": "exact"
-        },
-        "offset_m": 8.35
+        }
       },
       "geometry": {
         "type": "Point",
@@ -61326,6 +60741,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.66,
         "di_set": {
           "ch0": 109517.03,
           "ch1": 109517.03,
@@ -61333,8 +60749,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.66,
           "sheet": "DW-03020-06",
           "cert": "exact"
-        },
-        "offset_m": 8.66
+        }
       },
       "geometry": {
         "type": "Point",
@@ -61367,6 +60782,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.4,
         "di_set": {
           "ch0": 109551,
           "ch1": 109551,
@@ -61374,8 +60790,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.4,
           "sheet": "DW-03020-06",
           "cert": "exact"
-        },
-        "offset_m": 8.4
+        }
       },
       "geometry": {
         "type": "Point",
@@ -61408,6 +60823,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.3,
         "di_set": {
           "ch0": 109585.02,
           "ch1": 109585.02,
@@ -61415,8 +60831,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.3,
           "sheet": "DW-03020-06",
           "cert": "exact"
-        },
-        "offset_m": 8.3
+        }
       },
       "geometry": {
         "type": "Point",
@@ -61449,6 +60864,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.23,
         "di_set": {
           "ch0": 109618.99,
           "ch1": 109618.99,
@@ -61456,8 +60872,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.23,
           "sheet": "DW-03020-06",
           "cert": "exact"
-        },
-        "offset_m": 8.23
+        }
       },
       "geometry": {
         "type": "Point",
@@ -61490,6 +60905,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.17,
         "di_set": {
           "ch0": 109653.05,
           "ch1": 109653.05,
@@ -61497,8 +60913,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.17,
           "sheet": "DW-03020-06",
           "cert": "exact"
-        },
-        "offset_m": 8.17
+        }
       },
       "geometry": {
         "type": "Point",
@@ -61531,6 +60946,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.06,
         "di_set": {
           "ch0": 109687.01,
           "ch1": 109687.01,
@@ -61538,8 +60954,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.06,
           "sheet": "DW-03020-06",
           "cert": "exact"
-        },
-        "offset_m": 8.06
+        }
       },
       "geometry": {
         "type": "Point",
@@ -61572,6 +60987,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.92,
         "di_set": {
           "ch0": 109721.01,
           "ch1": 109721.01,
@@ -61579,8 +60995,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.92,
           "sheet": "DW-03020-06",
           "cert": "exact"
-        },
-        "offset_m": 7.92
+        }
       },
       "geometry": {
         "type": "Point",
@@ -61613,6 +61028,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.73,
         "di_set": {
           "ch0": 109755.01,
           "ch1": 109755.01,
@@ -61620,8 +61036,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.73,
           "sheet": "DW-03020-06",
           "cert": "exact"
-        },
-        "offset_m": 7.73
+        }
       },
       "geometry": {
         "type": "Point",
@@ -61654,6 +61069,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.77,
         "di_set": {
           "ch0": 109789.04,
           "ch1": 109789.04,
@@ -61661,8 +61077,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.77,
           "sheet": "DW-03020-06",
           "cert": "exact"
-        },
-        "offset_m": 7.77
+        }
       },
       "geometry": {
         "type": "Point",
@@ -61695,6 +61110,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.85,
         "di_set": {
           "ch0": 109823.03,
           "ch1": 109823.03,
@@ -61702,8 +61118,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.85,
           "sheet": "DW-03020-06",
           "cert": "exact"
-        },
-        "offset_m": 7.85
+        }
       },
       "geometry": {
         "type": "Point",
@@ -61736,6 +61151,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.72,
         "di_set": {
           "ch0": 109857.03,
           "ch1": 109857.03,
@@ -61743,8 +61159,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.72,
           "sheet": "DW-03020-06",
           "cert": "exact"
-        },
-        "offset_m": 7.72
+        }
       },
       "geometry": {
         "type": "Point",
@@ -61777,6 +61192,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.62,
         "di_set": {
           "ch0": 109891.01,
           "ch1": 109891.01,
@@ -61784,8 +61200,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.62,
           "sheet": "DW-03020-06",
           "cert": "exact"
-        },
-        "offset_m": 7.62
+        }
       },
       "geometry": {
         "type": "Point",
@@ -61818,6 +61233,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.52,
         "di_set": {
           "ch0": 110200.03,
           "ch1": 110200.03,
@@ -61825,8 +61241,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.52,
           "sheet": "DW-03020-06",
           "cert": "exact"
-        },
-        "offset_m": 7.52
+        }
       },
       "geometry": {
         "type": "Point",
@@ -61859,6 +61274,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.64,
         "di_set": {
           "ch0": 110268.42,
           "ch1": 110268.42,
@@ -61866,8 +61282,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.64,
           "sheet": "DW-03020-06",
           "cert": "exact"
-        },
-        "offset_m": 7.64
+        }
       },
       "geometry": {
         "type": "Point",
@@ -61900,6 +61315,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.6,
         "di_set": {
           "ch0": 110352.2,
           "ch1": 110352.2,
@@ -61907,8 +61323,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.6,
           "sheet": "DW-03020-06",
           "cert": "exact"
-        },
-        "offset_m": 7.6
+        }
       },
       "geometry": {
         "type": "Point",
@@ -61941,6 +61356,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.65,
         "di_set": {
           "ch0": 110432.39,
           "ch1": 110432.39,
@@ -61948,8 +61364,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.65,
           "sheet": "DW-03020-06",
           "cert": "exact"
-        },
-        "offset_m": 7.65
+        }
       },
       "geometry": {
         "type": "Point",
@@ -61982,6 +61397,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.68,
         "di_set": {
           "ch0": 110514.28,
           "ch1": 110514.28,
@@ -61989,8 +61405,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.68,
           "sheet": "DW-03020-06",
           "cert": "exact"
-        },
-        "offset_m": 7.68
+        }
       },
       "geometry": {
         "type": "Point",
@@ -62023,6 +61438,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.42,
         "di_set": {
           "ch0": 110594.34,
           "ch1": 110594.34,
@@ -62030,8 +61446,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.42,
           "sheet": "DW-03020-06",
           "cert": "exact"
-        },
-        "offset_m": 7.42
+        }
       },
       "geometry": {
         "type": "Point",
@@ -62064,6 +61479,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.46,
         "di_set": {
           "ch0": 110674.44,
           "ch1": 110674.44,
@@ -62071,8 +61487,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.46,
           "sheet": "DW-03020-06",
           "cert": "exact"
-        },
-        "offset_m": 7.46
+        }
       },
       "geometry": {
         "type": "Point",
@@ -62105,6 +61520,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.78,
         "di_set": {
           "ch0": 110754.71,
           "ch1": 110754.71,
@@ -62112,8 +61528,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.78,
           "sheet": "DW-03021-06",
           "cert": "exact"
-        },
-        "offset_m": 7.78
+        }
       },
       "geometry": {
         "type": "Point",
@@ -62146,6 +61561,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.82,
         "di_set": {
           "ch0": 110834.69,
           "ch1": 110834.69,
@@ -62153,8 +61569,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.82,
           "sheet": "DW-03021-06",
           "cert": "exact"
-        },
-        "offset_m": 7.82
+        }
       },
       "geometry": {
         "type": "Point",
@@ -62187,6 +61602,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.83,
         "di_set": {
           "ch0": 110914.82,
           "ch1": 110914.82,
@@ -62194,8 +61610,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.83,
           "sheet": "DW-03021-06",
           "cert": "exact"
-        },
-        "offset_m": 7.83
+        }
       },
       "geometry": {
         "type": "Point",
@@ -62228,6 +61643,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.24,
         "di_set": {
           "ch0": 110994.9,
           "ch1": 110994.9,
@@ -62235,8 +61651,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.24,
           "sheet": "DW-03021-06",
           "cert": "exact"
-        },
-        "offset_m": 7.24
+        }
       },
       "geometry": {
         "type": "Point",
@@ -62269,6 +61684,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.54,
         "di_set": {
           "ch0": 111951.2,
           "ch1": 111951.2,
@@ -62276,8 +61692,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.54,
           "sheet": "DW-03021-06",
           "cert": "exact"
-        },
-        "offset_m": 7.54
+        }
       },
       "geometry": {
         "type": "Point",
@@ -62310,6 +61725,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.75,
         "di_set": {
           "ch0": 112024.98,
           "ch1": 112024.98,
@@ -62317,8 +61733,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.75,
           "sheet": "DW-03021-06",
           "cert": "exact"
-        },
-        "offset_m": 7.75
+        }
       },
       "geometry": {
         "type": "Point",
@@ -62351,6 +61766,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.75,
         "di_set": {
           "ch0": 112099.99,
           "ch1": 112099.99,
@@ -62358,8 +61774,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.75,
           "sheet": "DW-03021-06",
           "cert": "exact"
-        },
-        "offset_m": 7.75
+        }
       },
       "geometry": {
         "type": "Point",
@@ -62392,6 +61807,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.75,
         "di_set": {
           "ch0": 112149.99,
           "ch1": 112149.99,
@@ -62399,8 +61815,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.75,
           "sheet": "DW-03022-06",
           "cert": "exact"
-        },
-        "offset_m": 7.75
+        }
       },
       "geometry": {
         "type": "Point",
@@ -62433,6 +61848,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.75,
         "di_set": {
           "ch0": 112199.99,
           "ch1": 112199.99,
@@ -62440,8 +61856,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.75,
           "sheet": "DW-03022-06",
           "cert": "exact"
-        },
-        "offset_m": 7.75
+        }
       },
       "geometry": {
         "type": "Point",
@@ -62474,6 +61889,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.03,
         "di_set": {
           "ch0": 113674.97,
           "ch1": 113674.97,
@@ -62481,8 +61897,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.03,
           "sheet": "DW-03023-06",
           "cert": "exact"
-        },
-        "offset_m": 7.03
+        }
       },
       "geometry": {
         "type": "Point",
@@ -62515,6 +61930,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.55,
         "di_set": {
           "ch0": 113735.04,
           "ch1": 113735.04,
@@ -62522,8 +61938,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.55,
           "sheet": "DW-03023-06",
           "cert": "exact"
-        },
-        "offset_m": 7.55
+        }
       },
       "geometry": {
         "type": "Point",
@@ -62556,6 +61971,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.55,
         "di_set": {
           "ch0": 113805.04,
           "ch1": 113805.04,
@@ -62563,8 +61979,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.55,
           "sheet": "DW-03023-06",
           "cert": "exact"
-        },
-        "offset_m": 7.55
+        }
       },
       "geometry": {
         "type": "Point",
@@ -62597,6 +62012,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.41,
         "di_set": {
           "ch0": 114375.18,
           "ch1": 114375.18,
@@ -62604,8 +62020,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.41,
           "sheet": "DW-03023-06",
           "cert": "exact"
-        },
-        "offset_m": 7.41
+        }
       },
       "geometry": {
         "type": "Point",
@@ -62638,6 +62053,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 9.13,
         "di_set": {
           "ch0": 114445.13,
           "ch1": 114445.13,
@@ -62645,8 +62061,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.13,
           "sheet": "DW-03023-06",
           "cert": "exact"
-        },
-        "offset_m": 9.13
+        }
       },
       "geometry": {
         "type": "Point",
@@ -62679,6 +62094,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.2,
         "di_set": {
           "ch0": 114525,
           "ch1": 114525,
@@ -62686,8 +62102,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.2,
           "sheet": "DW-03023-06",
           "cert": "exact"
-        },
-        "offset_m": 8.2
+        }
       },
       "geometry": {
         "type": "Point",
@@ -62720,6 +62135,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.39,
         "di_set": {
           "ch0": 116174.96,
           "ch1": 116174.96,
@@ -62727,8 +62143,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.39,
           "sheet": "DW-03024-07",
           "cert": "exact"
-        },
-        "offset_m": 7.39
+        }
       },
       "geometry": {
         "type": "Point",
@@ -62761,6 +62176,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.83,
         "di_set": {
           "ch0": 116217.21,
           "ch1": 116217.21,
@@ -62768,8 +62184,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.83,
           "sheet": "DW-03024-07",
           "cert": "exact"
-        },
-        "offset_m": 7.83
+        }
       },
       "geometry": {
         "type": "Point",
@@ -62802,6 +62217,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.93,
         "di_set": {
           "ch0": 116267.82,
           "ch1": 116267.82,
@@ -62809,8 +62225,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.93,
           "sheet": "DW-03024-07",
           "cert": "exact"
-        },
-        "offset_m": 7.93
+        }
       },
       "geometry": {
         "type": "Point",
@@ -62843,6 +62258,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.17,
         "di_set": {
           "ch0": 116327.9,
           "ch1": 116327.9,
@@ -62850,8 +62266,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.17,
           "sheet": "DW-03025-06",
           "cert": "exact"
-        },
-        "offset_m": 8.17
+        }
       },
       "geometry": {
         "type": "Point",
@@ -62884,6 +62299,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.56,
         "di_set": {
           "ch0": 116387.82,
           "ch1": 116387.82,
@@ -62891,8 +62307,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.56,
           "sheet": "DW-03025-06",
           "cert": "exact"
-        },
-        "offset_m": 7.56
+        }
       },
       "geometry": {
         "type": "Point",
@@ -62925,6 +62340,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.39,
         "di_set": {
           "ch0": 116448.01,
           "ch1": 116448.01,
@@ -62932,8 +62348,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.39,
           "sheet": "DW-03025-06",
           "cert": "exact"
-        },
-        "offset_m": 8.39
+        }
       },
       "geometry": {
         "type": "Point",
@@ -62966,6 +62381,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.46,
         "di_set": {
           "ch0": 116507.88,
           "ch1": 116507.88,
@@ -62973,8 +62389,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.46,
           "sheet": "DW-03025-06",
           "cert": "exact"
-        },
-        "offset_m": 8.46
+        }
       },
       "geometry": {
         "type": "Point",
@@ -63007,6 +62422,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.45,
         "di_set": {
           "ch0": 116567.86,
           "ch1": 116567.86,
@@ -63014,8 +62430,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.45,
           "sheet": "DW-03025-06",
           "cert": "exact"
-        },
-        "offset_m": 8.45
+        }
       },
       "geometry": {
         "type": "Point",
@@ -63048,6 +62463,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.92,
         "di_set": {
           "ch0": 116627.98,
           "ch1": 116627.98,
@@ -63055,8 +62471,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.92,
           "sheet": "DW-03025-06",
           "cert": "exact"
-        },
-        "offset_m": 7.92
+        }
       },
       "geometry": {
         "type": "Point",
@@ -63089,6 +62504,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.56,
         "di_set": {
           "ch0": 116688.07,
           "ch1": 116688.07,
@@ -63096,8 +62512,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.56,
           "sheet": "DW-03025-06",
           "cert": "exact"
-        },
-        "offset_m": 7.56
+        }
       },
       "geometry": {
         "type": "Point",
@@ -63130,6 +62545,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.56,
         "di_set": {
           "ch0": 116714.07,
           "ch1": 116714.07,
@@ -63137,8 +62553,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.56,
           "sheet": "DW-03025-06",
           "cert": "exact"
-        },
-        "offset_m": 7.56
+        }
       },
       "geometry": {
         "type": "Point",
@@ -63171,6 +62586,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.46,
         "di_set": {
           "ch0": 116775.12,
           "ch1": 116775.12,
@@ -63178,8 +62594,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.46,
           "sheet": "DW-03025-06",
           "cert": "exact"
-        },
-        "offset_m": 7.46
+        }
       },
       "geometry": {
         "type": "Point",
@@ -63212,6 +62627,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.55,
         "di_set": {
           "ch0": 118500.04,
           "ch1": 118500.04,
@@ -63219,8 +62635,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.55,
           "sheet": "DW-03026-07",
           "cert": "exact"
-        },
-        "offset_m": 7.55
+        }
       },
       "geometry": {
         "type": "Point",
@@ -63253,6 +62668,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.55,
         "di_set": {
           "ch0": 118555.03,
           "ch1": 118555.03,
@@ -63260,8 +62676,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.55,
           "sheet": "DW-03026-07",
           "cert": "exact"
-        },
-        "offset_m": 7.55
+        }
       },
       "geometry": {
         "type": "Point",
@@ -63294,6 +62709,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 6.81,
         "di_set": {
           "ch0": 118610,
           "ch1": 118610,
@@ -63301,8 +62717,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 6.81,
           "sheet": "DW-03026-07",
           "cert": "exact"
-        },
-        "offset_m": 6.81
+        }
       },
       "geometry": {
         "type": "Point",
@@ -63335,6 +62750,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 6.81,
         "di_set": {
           "ch0": 118668.03,
           "ch1": 118668.03,
@@ -63342,8 +62758,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 6.81,
           "sheet": "DW-03026-07",
           "cert": "exact"
-        },
-        "offset_m": 6.81
+        }
       },
       "geometry": {
         "type": "Point",
@@ -63376,6 +62791,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.54,
         "di_set": {
           "ch0": 118725.89,
           "ch1": 118725.89,
@@ -63383,8 +62799,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.54,
           "sheet": "DW-03026-07",
           "cert": "exact"
-        },
-        "offset_m": 7.54
+        }
       },
       "geometry": {
         "type": "Point",
@@ -63417,6 +62832,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.54,
         "di_set": {
           "ch0": 118783.89,
           "ch1": 118783.89,
@@ -63424,8 +62840,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.54,
           "sheet": "DW-03026-07",
           "cert": "exact"
-        },
-        "offset_m": 7.54
+        }
       },
       "geometry": {
         "type": "Point",
@@ -63458,6 +62873,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.54,
         "di_set": {
           "ch0": 118842.09,
           "ch1": 118842.09,
@@ -63465,8 +62881,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.54,
           "sheet": "DW-03026-07",
           "cert": "exact"
-        },
-        "offset_m": 7.54
+        }
       },
       "geometry": {
         "type": "Point",
@@ -63499,6 +62914,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.89,
         "di_set": {
           "ch0": 121225.01,
           "ch1": 121225.01,
@@ -63506,8 +62922,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.89,
           "sheet": "DW-03028-05",
           "cert": "exact"
-        },
-        "offset_m": 7.89
+        }
       },
       "geometry": {
         "type": "Point",
@@ -63540,6 +62955,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.89,
         "di_set": {
           "ch0": 121300.01,
           "ch1": 121300.01,
@@ -63547,8 +62963,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.89,
           "sheet": "DW-03028-05",
           "cert": "exact"
-        },
-        "offset_m": 7.89
+        }
       },
       "geometry": {
         "type": "Point",
@@ -63581,6 +62996,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.89,
         "di_set": {
           "ch0": 121350.01,
           "ch1": 121350.01,
@@ -63588,8 +63004,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.89,
           "sheet": "DW-03028-05",
           "cert": "exact"
-        },
-        "offset_m": 7.89
+        }
       },
       "geometry": {
         "type": "Point",
@@ -63622,6 +63037,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.5,
         "di_set": {
           "ch0": 121400,
           "ch1": 121400,
@@ -63629,8 +63045,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.5,
           "sheet": "DW-03028-05",
           "cert": "exact"
-        },
-        "offset_m": 7.5
+        }
       },
       "geometry": {
         "type": "Point",
@@ -63663,6 +63078,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.59,
         "di_set": {
           "ch0": 122324.97,
           "ch1": 122324.97,
@@ -63670,8 +63086,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.59,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "offset_m": 7.59
+        }
       },
       "geometry": {
         "type": "Point",
@@ -63704,6 +63119,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 7.9,
         "di_set": {
           "ch0": 122355.11,
           "ch1": 122355.11,
@@ -63711,8 +63127,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.9,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "offset_m": 7.9
+        }
       },
       "geometry": {
         "type": "Point",
@@ -63745,6 +63160,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.12,
         "di_set": {
           "ch0": 122385.11,
           "ch1": 122385.11,
@@ -63752,8 +63168,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.12,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "offset_m": 8.12
+        }
       },
       "geometry": {
         "type": "Point",
@@ -63786,6 +63201,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 24.67,
         "di_set": {
           "ch0": 122400.02,
           "ch1": 122400.02,
@@ -63793,8 +63209,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 24.67,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "offset_m": 24.67
+        }
       },
       "geometry": {
         "type": "Point",
@@ -63827,6 +63242,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.28,
         "di_set": {
           "ch0": 122420.1,
           "ch1": 122420.1,
@@ -63834,8 +63250,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.28,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "offset_m": 8.28
+        }
       },
       "geometry": {
         "type": "Point",
@@ -63868,6 +63283,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.17,
         "di_set": {
           "ch0": 122455.06,
           "ch1": 122455.06,
@@ -63875,8 +63291,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.17,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "offset_m": 8.17
+        }
       },
       "geometry": {
         "type": "Point",
@@ -63909,6 +63324,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.13,
         "di_set": {
           "ch0": 122490.11,
           "ch1": 122490.11,
@@ -63916,8 +63332,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.13,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "offset_m": 8.13
+        }
       },
       "geometry": {
         "type": "Point",
@@ -63950,6 +63365,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 25.43,
         "di_set": {
           "ch0": 122525.74,
           "ch1": 122525.74,
@@ -63957,8 +63373,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 25.43,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "offset_m": 25.43
+        }
       },
       "geometry": {
         "type": "Point",
@@ -63991,6 +63406,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.69,
         "di_set": {
           "ch0": 122560.1,
           "ch1": 122560.1,
@@ -63998,8 +63414,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.69,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "offset_m": 8.69
+        }
       },
       "geometry": {
         "type": "Point",
@@ -64032,6 +63447,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 25.43,
         "di_set": {
           "ch0": 122595.74,
           "ch1": 122595.74,
@@ -64039,8 +63455,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 25.43,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "offset_m": 25.43
+        }
       },
       "geometry": {
         "type": "Point",
@@ -64073,6 +63488,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 25.43,
         "di_set": {
           "ch0": 122630.79,
           "ch1": 122630.79,
@@ -64080,8 +63496,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 25.43,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "offset_m": 25.43
+        }
       },
       "geometry": {
         "type": "Point",
@@ -64114,6 +63529,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 26.48,
         "di_set": {
           "ch0": 122665.78,
           "ch1": 122665.78,
@@ -64121,8 +63537,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 26.48,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "offset_m": 26.48
+        }
       },
       "geometry": {
         "type": "Point",
@@ -64155,6 +63570,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 9.58,
         "di_set": {
           "ch0": 122696.99,
           "ch1": 122696.99,
@@ -64162,8 +63578,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.58,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "offset_m": 9.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -64196,6 +63611,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 10.03,
         "di_set": {
           "ch0": 122735.11,
           "ch1": 122735.11,
@@ -64203,8 +63619,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 10.03,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "offset_m": 10.03
+        }
       },
       "geometry": {
         "type": "Point",
@@ -64237,6 +63652,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 26.48,
         "di_set": {
           "ch0": 122770.78,
           "ch1": 122770.78,
@@ -64244,8 +63660,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 26.48,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "offset_m": 26.48
+        }
       },
       "geometry": {
         "type": "Point",
@@ -64278,6 +63693,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 26.48,
         "di_set": {
           "ch0": 122805.78,
           "ch1": 122805.78,
@@ -64285,8 +63701,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 26.48,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "offset_m": 26.48
+        }
       },
       "geometry": {
         "type": "Point",
@@ -64319,6 +63734,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 26.48,
         "di_set": {
           "ch0": 122840.78,
           "ch1": 122840.78,
@@ -64326,8 +63742,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 26.48,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "offset_m": 26.48
+        }
       },
       "geometry": {
         "type": "Point",
@@ -64360,6 +63775,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 26.48,
         "di_set": {
           "ch0": 122875.78,
           "ch1": 122875.78,
@@ -64367,8 +63783,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 26.48,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "offset_m": 26.48
+        }
       },
       "geometry": {
         "type": "Point",
@@ -64401,6 +63816,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 25.67,
         "di_set": {
           "ch0": 122910.78,
           "ch1": 122910.78,
@@ -64408,8 +63824,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 25.67,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "offset_m": 25.67
+        }
       },
       "geometry": {
         "type": "Point",
@@ -64442,6 +63857,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 25.68,
         "di_set": {
           "ch0": 122945.79,
           "ch1": 122945.79,
@@ -64449,8 +63865,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 25.68,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "offset_m": 25.68
+        }
       },
       "geometry": {
         "type": "Point",
@@ -64483,6 +63898,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 25.67,
         "di_set": {
           "ch0": 122980.78,
           "ch1": 122980.78,
@@ -64490,8 +63906,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 25.67,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "offset_m": 25.67
+        }
       },
       "geometry": {
         "type": "Point",
@@ -64524,6 +63939,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 25.67,
         "di_set": {
           "ch0": 123015.78,
           "ch1": 123015.78,
@@ -64531,8 +63947,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 25.67,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "offset_m": 25.67
+        }
       },
       "geometry": {
         "type": "Point",
@@ -64565,6 +63980,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 25.05,
         "di_set": {
           "ch0": 123050.77,
           "ch1": 123050.77,
@@ -64572,8 +63988,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 25.05,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "offset_m": 25.05
+        }
       },
       "geometry": {
         "type": "Point",
@@ -64606,6 +64021,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.69,
         "di_set": {
           "ch0": 123085.1,
           "ch1": 123085.1,
@@ -64613,8 +64029,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.69,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "offset_m": 8.69
+        }
       },
       "geometry": {
         "type": "Point",
@@ -64647,6 +64062,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 8.69,
         "di_set": {
           "ch0": 123120.1,
           "ch1": 123120.1,
@@ -64654,8 +64070,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.69,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "offset_m": 8.69
+        }
       },
       "geometry": {
         "type": "Point",
@@ -64688,6 +64103,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 13.75,
         "di_set": {
           "ch0": 123155.02,
           "ch1": 123155.02,
@@ -64695,8 +64111,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 13.75,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "offset_m": 13.75
+        }
       },
       "geometry": {
         "type": "Point",
@@ -64729,6 +64144,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 13.75,
         "di_set": {
           "ch0": 123190.02,
           "ch1": 123190.02,
@@ -64736,8 +64152,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 13.75,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "offset_m": 13.75
+        }
       },
       "geometry": {
         "type": "Point",
@@ -64770,6 +64185,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 13.75,
         "di_set": {
           "ch0": 123260.02,
           "ch1": 123260.02,
@@ -64777,8 +64193,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 13.75,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "offset_m": 13.75
+        }
       },
       "geometry": {
         "type": "Point",
@@ -64811,6 +64226,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 13.75,
         "di_set": {
           "ch0": 123295.02,
           "ch1": 123295.02,
@@ -64818,8 +64234,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 13.75,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "offset_m": 13.75
+        }
       },
       "geometry": {
         "type": "Point",
@@ -64852,6 +64267,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 13.75,
         "di_set": {
           "ch0": 123330.02,
           "ch1": 123330.02,
@@ -64859,8 +64275,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 13.75,
           "sheet": "DW-03030-05",
           "cert": "exact"
-        },
-        "offset_m": 13.75
+        }
       },
       "geometry": {
         "type": "Point",
@@ -64893,6 +64308,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 13.73,
         "di_set": {
           "ch0": 123364.43,
           "ch1": 123364.43,
@@ -64900,8 +64316,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 13.73,
           "sheet": "DW-03030-05",
           "cert": "exact"
-        },
-        "offset_m": 13.73
+        }
       },
       "geometry": {
         "type": "Point",
@@ -64934,6 +64349,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 13.75,
         "di_set": {
           "ch0": 123400.02,
           "ch1": 123400.02,
@@ -64941,8 +64357,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 13.75,
           "sheet": "DW-03030-05",
           "cert": "exact"
-        },
-        "offset_m": 13.75
+        }
       },
       "geometry": {
         "type": "Point",
@@ -64975,6 +64390,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 13.75,
         "di_set": {
           "ch0": 123435.02,
           "ch1": 123435.02,
@@ -64982,8 +64398,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 13.75,
           "sheet": "DW-03030-05",
           "cert": "exact"
-        },
-        "offset_m": 13.75
+        }
       },
       "geometry": {
         "type": "Point",
@@ -65016,6 +64431,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 13.35,
         "di_set": {
           "ch0": 123470.02,
           "ch1": 123470.02,
@@ -65023,8 +64439,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 13.35,
           "sheet": "DW-03030-05",
           "cert": "exact"
-        },
-        "offset_m": 13.35
+        }
       },
       "geometry": {
         "type": "Point",
@@ -65057,6 +64472,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 13.35,
         "di_set": {
           "ch0": 123505.02,
           "ch1": 123505.02,
@@ -65064,8 +64480,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 13.35,
           "sheet": "DW-03030-05",
           "cert": "exact"
-        },
-        "offset_m": 13.35
+        }
       },
       "geometry": {
         "type": "Point",
@@ -65098,6 +64513,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 13.35,
         "di_set": {
           "ch0": 123540.02,
           "ch1": 123540.02,
@@ -65105,8 +64521,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 13.35,
           "sheet": "DW-03030-05",
           "cert": "exact"
-        },
-        "offset_m": 13.35
+        }
       },
       "geometry": {
         "type": "Point",
@@ -65139,6 +64554,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 13.35,
         "di_set": {
           "ch0": 123575.02,
           "ch1": 123575.02,
@@ -65146,8 +64562,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 13.35,
           "sheet": "DW-03030-05",
           "cert": "exact"
-        },
-        "offset_m": 13.35
+        }
       },
       "geometry": {
         "type": "Point",
@@ -65180,6 +64595,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 16.98,
         "di_set": {
           "ch0": 123609.12,
           "ch1": 123609.12,
@@ -65187,8 +64603,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 16.98,
           "sheet": "DW-03030-05",
           "cert": "exact"
-        },
-        "offset_m": 16.98
+        }
       },
       "geometry": {
         "type": "Point",
@@ -65221,6 +64636,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 24.29,
         "di_set": {
           "ch0": 123642.52,
           "ch1": 123642.52,
@@ -65228,8 +64644,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 24.29,
           "sheet": "DW-03030-05",
           "cert": "exact"
-        },
-        "offset_m": 24.29
+        }
       },
       "geometry": {
         "type": "Point",
@@ -65262,6 +64677,7 @@ window.SECTION03_ASSETS = {
         "notes": "[EVIDENCE: PROBABLE] Extracted from solid-blue symbol pair on plan sheet. Median spacing ~44m; resolves hydraulic length limit of Type 9 shoulder ditch.",
         "inspection_date": "",
         "typology_code": "WATER_DESCENT",
+        "offset_m": 24.29,
         "di_set": {
           "ch0": 123675.02,
           "ch1": 123675.02,
@@ -65269,8 +64685,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 24.29,
           "sheet": "DW-03030-05",
           "cert": "exact"
-        },
-        "offset_m": 24.29
+        }
       },
       "geometry": {
         "type": "Point",
@@ -65374,6 +64789,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 82+950",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03001",
+        "offset_m": 30,
         "di_set": {
           "ch0": 82950,
           "ch1": 82950,
@@ -65382,10 +64800,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03001",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03001",
-        "offset_m": 30
+        }
       },
       "geometry": {
         "type": "Point",
@@ -65408,6 +64823,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 82+950",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03001",
+        "offset_m": 47.74,
         "di_set": {
           "preset": "D-SD",
           "ch0": 82950,
@@ -65416,10 +64834,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 47.74,
           "sheet": "DW-03001",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03001",
-        "offset_m": 47.74
+        }
       },
       "geometry": {
         "type": "Point",
@@ -65442,6 +64857,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 82+997",
         "status": "Not Started",
+        "drawing_ref": "DW-03001",
+        "offset_m": 14.36,
         "di_set": {
           "preset": "RIP",
           "ch0": 82996.98,
@@ -65451,9 +64868,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03001",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03001",
-        "offset_m": 14.36
+        }
       },
       "geometry": {
         "type": "Point",
@@ -65476,6 +64891,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 6 collector drain",
         "chainage_str": "PK 83+275 – PK 84+000",
         "status": "Not Started",
+        "short_code": "T6",
+        "drawing_ref": "DW-03001",
+        "offset_m": 2.46,
         "di_set": {
           "ch0": 83275.01,
           "ch1": 84000.01,
@@ -65484,10 +64902,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03001",
           "preset": "T6"
-        },
-        "short_code": "T6",
-        "drawing_ref": "DW-03001",
-        "offset_m": 2.46
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -65756,6 +65171,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 1 side ditch",
         "chainage_str": "PK 84+425 – PK 84+762",
         "status": "Not Started",
+        "short_code": "T1",
+        "drawing_ref": "DW-03002-07",
+        "offset_m": 1.19,
         "di_set": {
           "ch0": 84425.05,
           "ch1": 84762,
@@ -65764,10 +65182,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03002-07",
           "preset": "T1"
-        },
-        "short_code": "T1",
-        "drawing_ref": "DW-03002-07",
-        "offset_m": 1.19
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -66036,6 +65451,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 84+500",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03002-07",
+        "offset_m": 6.27,
         "di_set": {
           "preset": "WD",
           "ch0": 84500.16,
@@ -66044,10 +65462,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 6.27,
           "sheet": "DW-03002-07",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03002-07",
-        "offset_m": 6.27
+        }
       },
       "geometry": {
         "type": "Point",
@@ -66070,6 +65485,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 84+500",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03002-07",
+        "offset_m": 6.27,
         "di_set": {
           "preset": "WD",
           "ch0": 84500.16,
@@ -66078,10 +65496,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 6.27,
           "sheet": "DW-03002-07",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03002-07",
-        "offset_m": 6.27
+        }
       },
       "geometry": {
         "type": "Point",
@@ -66104,6 +65519,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 84+500",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03002-07",
+        "offset_m": 6.27,
         "di_set": {
           "preset": "WD",
           "ch0": 84500.16,
@@ -66112,10 +65530,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 6.27,
           "sheet": "DW-03002-07",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03002-07",
-        "offset_m": 6.27
+        }
       },
       "geometry": {
         "type": "Point",
@@ -66138,6 +65553,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 11 crest ditch",
         "chainage_str": "PK 84+501 – PK 84+560",
         "status": "Not Started",
+        "short_code": "T11",
+        "drawing_ref": "DW-03002-07",
+        "offset_m": 8.66,
         "di_set": {
           "ch0": 84501.35,
           "ch1": 84559.8,
@@ -66146,10 +65564,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03002-07",
           "preset": "T11"
-        },
-        "short_code": "T11",
-        "drawing_ref": "DW-03002-07",
-        "offset_m": 8.66
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -66222,6 +65637,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 7 toe ditch",
         "chainage_str": "PK 85+050 – PK 85+124",
         "status": "Not Started",
+        "short_code": "T7",
+        "drawing_ref": "DW-03002-07",
+        "offset_m": 10.15,
         "di_set": {
           "ch0": 85050,
           "ch1": 85124.11,
@@ -66230,10 +65648,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03002-07",
           "preset": "T7"
-        },
-        "short_code": "T7",
-        "drawing_ref": "DW-03002-07",
-        "offset_m": 10.15
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -66318,6 +65733,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 85+207",
         "status": "Not Started",
+        "drawing_ref": "DW-03002-07",
+        "offset_m": 9.3,
         "di_set": {
           "preset": "RIP",
           "ch0": 85207.48,
@@ -66327,9 +65744,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03002-07",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03002-07",
-        "offset_m": 9.3
+        }
       },
       "geometry": {
         "type": "Point",
@@ -66352,6 +65767,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 85+350 – PK 85+443",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03002-07",
+        "offset_m": 10.87,
         "di_set": {
           "ch0": 85350,
           "ch1": 85443.19,
@@ -66360,10 +65778,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03002-07",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03002-07",
-        "offset_m": 10.87
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -66464,6 +65879,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 85+425",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03002-07",
+        "offset_m": 7.14,
         "di_set": {
           "preset": "WD",
           "ch0": 85424.79,
@@ -66472,10 +65890,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.14,
           "sheet": "DW-03002-07",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03002-07",
-        "offset_m": 7.14
+        }
       },
       "geometry": {
         "type": "Point",
@@ -66498,6 +65913,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 85+425",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03002-07",
+        "offset_m": 7.14,
         "di_set": {
           "preset": "WD",
           "ch0": 85424.79,
@@ -66506,10 +65924,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.14,
           "sheet": "DW-03002-07",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03002-07",
-        "offset_m": 7.14
+        }
       },
       "geometry": {
         "type": "Point",
@@ -66532,6 +65947,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 85+464",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03002-07",
+        "offset_m": 7.56,
         "di_set": {
           "preset": "WD",
           "ch0": 85464.15,
@@ -66540,10 +65958,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.56,
           "sheet": "DW-03002-07",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03002-07",
-        "offset_m": 7.56
+        }
       },
       "geometry": {
         "type": "Point",
@@ -66566,6 +65981,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 85+464",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03002-07",
+        "offset_m": 7.56,
         "di_set": {
           "preset": "WD",
           "ch0": 85464.15,
@@ -66574,10 +65992,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.56,
           "sheet": "DW-03002-07",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03002-07",
-        "offset_m": 7.56
+        }
       },
       "geometry": {
         "type": "Point",
@@ -66600,6 +66015,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 85+468",
         "status": "Not Started",
+        "drawing_ref": "DW-03002-07",
+        "offset_m": 11.05,
         "di_set": {
           "preset": "RIP",
           "ch0": 85467.53,
@@ -66609,9 +66026,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03002-07",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03002-07",
-        "offset_m": 11.05
+        }
       },
       "geometry": {
         "type": "Point",
@@ -66634,6 +66049,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 85+503",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-06",
+        "offset_m": 7.35,
         "di_set": {
           "preset": "WD",
           "ch0": 85503.44,
@@ -66642,10 +66060,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.35,
           "sheet": "DW-03003-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-06",
-        "offset_m": 7.35
+        }
       },
       "geometry": {
         "type": "Point",
@@ -66668,6 +66083,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 85+503",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-06",
+        "offset_m": 7.35,
         "di_set": {
           "preset": "WD",
           "ch0": 85503.44,
@@ -66676,10 +66094,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.35,
           "sheet": "DW-03003-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-06",
-        "offset_m": 7.35
+        }
       },
       "geometry": {
         "type": "Point",
@@ -66702,6 +66117,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 85+562",
         "status": "Not Started",
+        "drawing_ref": "DW-03003-06",
+        "offset_m": 10.65,
         "di_set": {
           "preset": "RIP",
           "ch0": 85561.51,
@@ -66711,9 +66128,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03003-06",
           "cert": "label",
           "stated": 129
-        },
-        "drawing_ref": "DW-03003-06",
-        "offset_m": 10.65
+        }
       },
       "geometry": {
         "type": "Point",
@@ -66736,6 +66151,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 85+655",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-06",
+        "offset_m": 7.35,
         "di_set": {
           "preset": "WD",
           "ch0": 85655.03,
@@ -66744,10 +66162,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.35,
           "sheet": "DW-03003-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-06",
-        "offset_m": 7.35
+        }
       },
       "geometry": {
         "type": "Point",
@@ -66770,6 +66185,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 85+655",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-06",
+        "offset_m": 7.35,
         "di_set": {
           "preset": "WD",
           "ch0": 85655.03,
@@ -66778,10 +66196,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.35,
           "sheet": "DW-03003-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-06",
-        "offset_m": 7.35
+        }
       },
       "geometry": {
         "type": "Point",
@@ -66804,6 +66219,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 1 side ditch",
         "chainage_str": "PK 85+779 – PK 86+100",
         "status": "Not Started",
+        "short_code": "T1",
+        "drawing_ref": "DW-03003-06",
+        "offset_m": 4.1,
         "di_set": {
           "ch0": 85778.93,
           "ch1": 86099.92,
@@ -66812,10 +66230,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03003-06",
           "preset": "T1"
-        },
-        "short_code": "T1",
-        "drawing_ref": "DW-03003-06",
-        "offset_m": 4.1
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -67084,6 +66499,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 11 crest ditch",
         "chainage_str": "PK 85+800 – PK 86+101",
         "status": "Not Started",
+        "short_code": "T11",
+        "drawing_ref": "DW-03003-06",
+        "offset_m": 10.04,
         "di_set": {
           "ch0": 85799.85,
           "ch1": 86100.85,
@@ -67092,10 +66510,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03003-06",
           "preset": "T11"
-        },
-        "short_code": "T11",
-        "drawing_ref": "DW-03003-06",
-        "offset_m": 10.04
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -67364,6 +66779,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 86+225",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03003-06",
+        "offset_m": 6.8,
         "di_set": {
           "preset": "D-SD",
           "ch0": 86225.11,
@@ -67372,10 +66790,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 6.8,
           "sheet": "DW-03003-06",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03003-06",
-        "offset_m": 6.8
+        }
       },
       "geometry": {
         "type": "Point",
@@ -67398,6 +66813,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 7 toe ditch",
         "chainage_str": "PK 86+228 – PK 86+341",
         "status": "Not Started",
+        "short_code": "T7",
+        "drawing_ref": "DW-03003-06",
+        "offset_m": 9.4,
         "di_set": {
           "ch0": 86227.83,
           "ch1": 86340.86,
@@ -67406,10 +66824,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03003-06",
           "preset": "T7"
-        },
-        "short_code": "T7",
-        "drawing_ref": "DW-03003-06",
-        "offset_m": 9.4
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -67526,6 +66941,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 86+300",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03003-06",
+        "offset_m": 5.74,
         "di_set": {
           "preset": "D-SD",
           "ch0": 86300.23,
@@ -67534,10 +66952,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 5.74,
           "sheet": "DW-03003-06",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03003-06",
-        "offset_m": 5.74
+        }
       },
       "geometry": {
         "type": "Point",
@@ -67560,6 +66975,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 7 toe ditch",
         "chainage_str": "PK 86+346 – PK 86+359",
         "status": "Not Started",
+        "short_code": "T7",
+        "drawing_ref": "DW-03003-06",
+        "offset_m": 10.01,
         "di_set": {
           "ch0": 86345.68,
           "ch1": 86358.95,
@@ -67568,10 +66986,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03003-06",
           "preset": "T7"
-        },
-        "short_code": "T7",
-        "drawing_ref": "DW-03003-06",
-        "offset_m": 10.01
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -67608,6 +67023,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 86+435",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-06",
+        "offset_m": 7.94,
         "di_set": {
           "preset": "WD",
           "ch0": 86434.97,
@@ -67616,10 +67034,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.94,
           "sheet": "DW-03003-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-06",
-        "offset_m": 7.94
+        }
       },
       "geometry": {
         "type": "Point",
@@ -67642,6 +67057,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 86+435",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-06",
+        "offset_m": 7.94,
         "di_set": {
           "preset": "WD",
           "ch0": 86434.97,
@@ -67650,10 +67068,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.94,
           "sheet": "DW-03003-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-06",
-        "offset_m": 7.94
+        }
       },
       "geometry": {
         "type": "Point",
@@ -67676,6 +67091,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 86+475 – PK 86+567",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03003-06",
+        "offset_m": 14.07,
         "di_set": {
           "ch0": 86474.91,
           "ch1": 86567.12,
@@ -67684,10 +67102,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03003-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03003-06",
-        "offset_m": 14.07
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -67788,6 +67203,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 86+517",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-06",
+        "offset_m": 8.71,
         "di_set": {
           "preset": "WD",
           "ch0": 86516.95,
@@ -67796,10 +67214,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.71,
           "sheet": "DW-03003-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-06",
-        "offset_m": 8.71
+        }
       },
       "geometry": {
         "type": "Point",
@@ -67822,6 +67237,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 86+517",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-06",
+        "offset_m": 8.71,
         "di_set": {
           "preset": "WD",
           "ch0": 86516.95,
@@ -67830,10 +67248,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.71,
           "sheet": "DW-03003-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-06",
-        "offset_m": 8.71
+        }
       },
       "geometry": {
         "type": "Point",
@@ -67856,6 +67271,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 86+605",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-06",
+        "offset_m": 9.21,
         "di_set": {
           "preset": "WD",
           "ch0": 86604.93,
@@ -67864,10 +67282,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.21,
           "sheet": "DW-03003-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-06",
-        "offset_m": 9.21
+        }
       },
       "geometry": {
         "type": "Point",
@@ -67890,6 +67305,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 86+605",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-06",
+        "offset_m": 9.21,
         "di_set": {
           "preset": "WD",
           "ch0": 86604.93,
@@ -67898,10 +67316,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.21,
           "sheet": "DW-03003-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-06",
-        "offset_m": 9.21
+        }
       },
       "geometry": {
         "type": "Point",
@@ -67924,6 +67339,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 7 toe ditch",
         "chainage_str": "PK 86+625 – PK 86+675",
         "status": "Not Started",
+        "short_code": "T7",
+        "drawing_ref": "DW-03003-06",
+        "offset_m": 14.11,
         "di_set": {
           "ch0": 86625.02,
           "ch1": 86674.91,
@@ -67932,10 +67350,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03003-06",
           "preset": "T7"
-        },
-        "short_code": "T7",
-        "drawing_ref": "DW-03003-06",
-        "offset_m": 14.11
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -68000,6 +67415,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 86+675 – PK 86+701",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03003-06",
+        "offset_m": 15.07,
         "di_set": {
           "ch0": 86674.91,
           "ch1": 86701.14,
@@ -68008,10 +67426,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03003-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03003-06",
-        "offset_m": 15.07
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -68060,6 +67475,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 86+688",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-06",
+        "offset_m": 9.37,
         "di_set": {
           "preset": "WD",
           "ch0": 86687.81,
@@ -68068,10 +67486,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.37,
           "sheet": "DW-03003-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-06",
-        "offset_m": 9.37
+        }
       },
       "geometry": {
         "type": "Point",
@@ -68094,6 +67509,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 86+688",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-06",
+        "offset_m": 9.37,
         "di_set": {
           "preset": "WD",
           "ch0": 86687.81,
@@ -68102,10 +67520,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.37,
           "sheet": "DW-03003-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-06",
-        "offset_m": 9.37
+        }
       },
       "geometry": {
         "type": "Point",
@@ -68128,6 +67543,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 86+775",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-06",
+        "offset_m": 8.9,
         "di_set": {
           "preset": "WD",
           "ch0": 86774.92,
@@ -68136,10 +67554,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.9,
           "sheet": "DW-03003-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-06",
-        "offset_m": 8.9
+        }
       },
       "geometry": {
         "type": "Point",
@@ -68162,6 +67577,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 86+775",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-06",
+        "offset_m": 8.9,
         "di_set": {
           "preset": "WD",
           "ch0": 86774.92,
@@ -68170,10 +67588,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.9,
           "sheet": "DW-03003-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-06",
-        "offset_m": 8.9
+        }
       },
       "geometry": {
         "type": "Point",
@@ -68196,6 +67611,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 86+850",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-06",
+        "offset_m": 7.42,
         "di_set": {
           "preset": "WD",
           "ch0": 86850.06,
@@ -68204,10 +67622,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.42,
           "sheet": "DW-03003-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-06",
-        "offset_m": 7.42
+        }
       },
       "geometry": {
         "type": "Point",
@@ -68230,6 +67645,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 86+850",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03003-06",
+        "offset_m": 7.42,
         "di_set": {
           "preset": "WD",
           "ch0": 86850.06,
@@ -68238,10 +67656,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.42,
           "sheet": "DW-03003-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03003-06",
-        "offset_m": 7.42
+        }
       },
       "geometry": {
         "type": "Point",
@@ -68264,6 +67679,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 11 crest ditch",
         "chainage_str": "PK 86+996 – PK 87+050",
         "status": "Not Started",
+        "short_code": "T11",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 8.17,
         "di_set": {
           "ch0": 86995.98,
           "ch1": 87050,
@@ -68272,10 +67690,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03004-06",
           "preset": "T11"
-        },
-        "short_code": "T11",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 8.17
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -68344,6 +67759,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 86+998",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 6.04,
         "di_set": {
           "preset": "D-SD",
           "ch0": 86997.77,
@@ -68352,10 +67770,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 6.04,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 6.04
+        }
       },
       "geometry": {
         "type": "Point",
@@ -68378,6 +67793,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 1 side ditch",
         "chainage_str": "PK 87+000 – PK 87+120",
         "status": "Not Started",
+        "short_code": "T1",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 4.08,
         "di_set": {
           "ch0": 86999.93,
           "ch1": 87119.92,
@@ -68386,10 +67804,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03004-06",
           "preset": "T1"
-        },
-        "short_code": "T1",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 4.08
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -68510,6 +67925,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 1 side ditch",
         "chainage_str": "PK 87+000 – PK 87+120",
         "status": "Not Started",
+        "short_code": "T1",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 4.05,
         "di_set": {
           "ch0": 87000.03,
           "ch1": 87120.07,
@@ -68518,10 +67936,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03004-06",
           "preset": "T1"
-        },
-        "short_code": "T1",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 4.05
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -68646,6 +68061,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 11 crest ditch",
         "chainage_str": "PK 87+050 – PK 87+113",
         "status": "Not Started",
+        "short_code": "T11",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 8.39,
         "di_set": {
           "ch0": 87050,
           "ch1": 87112.76,
@@ -68654,10 +68072,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03004-06",
           "preset": "T11"
-        },
-        "short_code": "T11",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 8.39
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -68734,6 +68149,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 87+111",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 9.5,
         "di_set": {
           "preset": "D-SD",
           "ch0": 87110.7,
@@ -68742,10 +68160,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.5,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 9.5
+        }
       },
       "geometry": {
         "type": "Point",
@@ -68768,6 +68183,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 87+119",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 6.53,
         "di_set": {
           "preset": "D-SD",
           "ch0": 87119.34,
@@ -68776,10 +68194,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 6.53,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 6.53
+        }
       },
       "geometry": {
         "type": "Point",
@@ -68802,6 +68217,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 87+120",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 5.38,
         "di_set": {
           "preset": "D-SD",
           "ch0": 87120.19,
@@ -68810,10 +68228,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 5.38,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 5.38
+        }
       },
       "geometry": {
         "type": "Point",
@@ -68836,6 +68251,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+360",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 8.75,
         "di_set": {
           "preset": "WD",
           "ch0": 87359.77,
@@ -68844,10 +68262,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.75,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 8.75
+        }
       },
       "geometry": {
         "type": "Point",
@@ -68870,6 +68285,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+360",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 8.75,
         "di_set": {
           "preset": "WD",
           "ch0": 87359.77,
@@ -68878,10 +68296,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.75,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 8.75
+        }
       },
       "geometry": {
         "type": "Point",
@@ -68904,6 +68319,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+420",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 9.21,
         "di_set": {
           "preset": "WD",
           "ch0": 87419.78,
@@ -68912,10 +68330,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.21,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 9.21
+        }
       },
       "geometry": {
         "type": "Point",
@@ -68938,6 +68353,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+420",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 9.21,
         "di_set": {
           "preset": "WD",
           "ch0": 87419.78,
@@ -68946,10 +68364,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.21,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 9.21
+        }
       },
       "geometry": {
         "type": "Point",
@@ -68972,6 +68387,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 7 toe ditch",
         "chainage_str": "PK 87+425 – PK 87+512",
         "status": "Not Started",
+        "short_code": "T7",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 17.28,
         "di_set": {
           "ch0": 87425.15,
           "ch1": 87511.63,
@@ -68980,10 +68398,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03004-06",
           "preset": "T7"
-        },
-        "short_code": "T7",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 17.28
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -69080,6 +68495,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+456",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 10.22,
         "di_set": {
           "preset": "WD",
           "ch0": 87456,
@@ -69088,10 +68506,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 10.22,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 10.22
+        }
       },
       "geometry": {
         "type": "Point",
@@ -69114,6 +68529,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+456",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 10.22,
         "di_set": {
           "preset": "WD",
           "ch0": 87456,
@@ -69122,10 +68540,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 10.22,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 10.22
+        }
       },
       "geometry": {
         "type": "Point",
@@ -69148,6 +68563,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+492",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 10.89,
         "di_set": {
           "preset": "WD",
           "ch0": 87492.03,
@@ -69156,10 +68574,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 10.89,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 10.89
+        }
       },
       "geometry": {
         "type": "Point",
@@ -69182,6 +68597,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+492",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 10.89,
         "di_set": {
           "preset": "WD",
           "ch0": 87492.03,
@@ -69190,10 +68608,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 10.89,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 10.89
+        }
       },
       "geometry": {
         "type": "Point",
@@ -69216,6 +68631,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 87+505",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 23.17,
         "di_set": {
           "preset": "D-SD",
           "ch0": 87505.45,
@@ -69224,10 +68642,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 23.17,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 23.17
+        }
       },
       "geometry": {
         "type": "Point",
@@ -69250,6 +68665,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 87+509",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 20.06,
         "di_set": {
           "preset": "D-SD",
           "ch0": 87509.16,
@@ -69258,10 +68676,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 20.06,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 20.06
+        }
       },
       "geometry": {
         "type": "Point",
@@ -69284,6 +68699,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+667",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 15.81,
         "di_set": {
           "preset": "WD",
           "ch0": 87666.64,
@@ -69292,10 +68710,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 15.81,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 15.81
+        }
       },
       "geometry": {
         "type": "Point",
@@ -69318,6 +68733,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+667",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 12.58,
         "di_set": {
           "preset": "WD",
           "ch0": 87667.01,
@@ -69326,10 +68744,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 12.58,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 12.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -69352,6 +68767,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+667",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 12.58,
         "di_set": {
           "preset": "WD",
           "ch0": 87667.01,
@@ -69360,10 +68778,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 12.58,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 12.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -69386,6 +68801,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+667",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 17.13,
         "di_set": {
           "preset": "WD",
           "ch0": 87667.03,
@@ -69394,10 +68812,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 17.13,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 17.13
+        }
       },
       "geometry": {
         "type": "Point",
@@ -69420,6 +68835,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+667",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 17.13,
         "di_set": {
           "preset": "WD",
           "ch0": 87667.03,
@@ -69428,10 +68846,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 17.13,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 17.13
+        }
       },
       "geometry": {
         "type": "Point",
@@ -69454,6 +68869,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+696",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 17.51,
         "di_set": {
           "preset": "WD",
           "ch0": 87695.96,
@@ -69462,10 +68880,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 17.51,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 17.51
+        }
       },
       "geometry": {
         "type": "Point",
@@ -69488,6 +68903,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+707",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 16.96,
         "di_set": {
           "preset": "WD",
           "ch0": 87706.66,
@@ -69496,10 +68914,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 16.96,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 16.96
+        }
       },
       "geometry": {
         "type": "Point",
@@ -69522,6 +68937,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+707",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 16.96,
         "di_set": {
           "preset": "WD",
           "ch0": 87706.66,
@@ -69530,10 +68948,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 16.96,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 16.96
+        }
       },
       "geometry": {
         "type": "Point",
@@ -69556,6 +68971,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+725",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 12.71,
         "di_set": {
           "preset": "WD",
           "ch0": 87724.98,
@@ -69564,10 +68982,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 12.71,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 12.71
+        }
       },
       "geometry": {
         "type": "Point",
@@ -69590,6 +69005,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+725",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 12.71,
         "di_set": {
           "preset": "WD",
           "ch0": 87724.98,
@@ -69598,10 +69016,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 12.71,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 12.71
+        }
       },
       "geometry": {
         "type": "Point",
@@ -69624,6 +69039,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+747",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 17.38,
         "di_set": {
           "preset": "WD",
           "ch0": 87746.65,
@@ -69632,10 +69050,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 17.38,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 17.38
+        }
       },
       "geometry": {
         "type": "Point",
@@ -69658,6 +69073,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+747",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 17.38,
         "di_set": {
           "preset": "WD",
           "ch0": 87746.65,
@@ -69666,10 +69084,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 17.38,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 17.38
+        }
       },
       "geometry": {
         "type": "Point",
@@ -69692,6 +69107,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+757",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 17.58,
         "di_set": {
           "preset": "WD",
           "ch0": 87757.46,
@@ -69700,10 +69118,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 17.58,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 17.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -69726,6 +69141,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+787",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 17.31,
         "di_set": {
           "preset": "WD",
           "ch0": 87786.64,
@@ -69734,10 +69152,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 17.31,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 17.31
+        }
       },
       "geometry": {
         "type": "Point",
@@ -69760,6 +69175,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+787",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 17.31,
         "di_set": {
           "preset": "WD",
           "ch0": 87786.64,
@@ -69768,10 +69186,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 17.31,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 17.31
+        }
       },
       "geometry": {
         "type": "Point",
@@ -69794,6 +69209,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+790",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 13.5,
         "di_set": {
           "preset": "WD",
           "ch0": 87789.98,
@@ -69802,10 +69220,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 13.5,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 13.5
+        }
       },
       "geometry": {
         "type": "Point",
@@ -69828,6 +69243,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+790",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 13.5,
         "di_set": {
           "preset": "WD",
           "ch0": 87789.98,
@@ -69836,10 +69254,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 13.5,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 13.5
+        }
       },
       "geometry": {
         "type": "Point",
@@ -69862,6 +69277,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+803",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 17.31,
         "di_set": {
           "preset": "WD",
           "ch0": 87802.64,
@@ -69870,10 +69288,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 17.31,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 17.31
+        }
       },
       "geometry": {
         "type": "Point",
@@ -69896,6 +69311,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+825",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 17.56,
         "di_set": {
           "preset": "WD",
           "ch0": 87824.97,
@@ -69904,10 +69322,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 17.56,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 17.56
+        }
       },
       "geometry": {
         "type": "Point",
@@ -69930,6 +69345,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+827",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 17.31,
         "di_set": {
           "preset": "WD",
           "ch0": 87826.64,
@@ -69938,10 +69356,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 17.31,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 17.31
+        }
       },
       "geometry": {
         "type": "Point",
@@ -69964,6 +69379,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+827",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 17.31,
         "di_set": {
           "preset": "WD",
           "ch0": 87826.64,
@@ -69972,10 +69390,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 17.31,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 17.31
+        }
       },
       "geometry": {
         "type": "Point",
@@ -69998,6 +69413,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 87+843 – PK 87+941",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 22,
         "di_set": {
           "ch0": 87843.26,
           "ch1": 87940.62,
@@ -70006,10 +69424,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03004-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 22
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -70114,6 +69529,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+851",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 18.06,
         "di_set": {
           "preset": "WD",
           "ch0": 87850.63,
@@ -70122,10 +69540,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 18.06,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 18.06
+        }
       },
       "geometry": {
         "type": "Point",
@@ -70148,6 +69563,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+860",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 12.79,
         "di_set": {
           "preset": "WD",
           "ch0": 87859.98,
@@ -70156,10 +69574,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 12.79,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 12.79
+        }
       },
       "geometry": {
         "type": "Point",
@@ -70182,6 +69597,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+860",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 12.79,
         "di_set": {
           "preset": "WD",
           "ch0": 87859.98,
@@ -70190,10 +69608,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 12.79,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 12.79
+        }
       },
       "geometry": {
         "type": "Point",
@@ -70216,6 +69631,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+867",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 18.06,
         "di_set": {
           "preset": "WD",
           "ch0": 87866.63,
@@ -70224,10 +69642,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 18.06,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 18.06
+        }
       },
       "geometry": {
         "type": "Point",
@@ -70250,6 +69665,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+892",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 17.56,
         "di_set": {
           "preset": "WD",
           "ch0": 87892.47,
@@ -70258,10 +69676,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 17.56,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 17.56
+        }
       },
       "geometry": {
         "type": "Point",
@@ -70284,6 +69699,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+899",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 18.06,
         "di_set": {
           "preset": "WD",
           "ch0": 87898.63,
@@ -70292,10 +69710,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 18.06,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 18.06
+        }
       },
       "geometry": {
         "type": "Point",
@@ -70318,6 +69733,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+907",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 18.06,
         "di_set": {
           "preset": "WD",
           "ch0": 87906.63,
@@ -70326,10 +69744,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 18.06,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 18.06
+        }
       },
       "geometry": {
         "type": "Point",
@@ -70352,6 +69767,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+930",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 11.73,
         "di_set": {
           "preset": "WD",
           "ch0": 87929.97,
@@ -70360,10 +69778,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 11.73,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 11.73
+        }
       },
       "geometry": {
         "type": "Point",
@@ -70386,6 +69801,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 87+930",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 11.73,
         "di_set": {
           "preset": "WD",
           "ch0": 87929.97,
@@ -70394,10 +69812,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 11.73,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 11.73
+        }
       },
       "geometry": {
         "type": "Point",
@@ -70420,6 +69835,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 7 toe ditch",
         "chainage_str": "PK 87+967 – PK 87+993",
         "status": "Not Started",
+        "short_code": "T7",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 17.98,
         "di_set": {
           "ch0": 87966.56,
           "ch1": 87993.15,
@@ -70428,10 +69846,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03004-06",
           "preset": "T7"
-        },
-        "short_code": "T7",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 17.98
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -70480,6 +69895,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 88+060",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 9.92,
         "di_set": {
           "preset": "WD",
           "ch0": 88060.02,
@@ -70488,10 +69906,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.92,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 9.92
+        }
       },
       "geometry": {
         "type": "Point",
@@ -70514,6 +69929,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 88+060",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 9.92,
         "di_set": {
           "preset": "WD",
           "ch0": 88060.02,
@@ -70522,10 +69940,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.92,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 9.92
+        }
       },
       "geometry": {
         "type": "Point",
@@ -70548,6 +69963,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 88+120",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 9.34,
         "di_set": {
           "preset": "WD",
           "ch0": 88119.99,
@@ -70556,10 +69974,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.34,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 9.34
+        }
       },
       "geometry": {
         "type": "Point",
@@ -70582,6 +69997,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 88+120",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 9.34,
         "di_set": {
           "preset": "WD",
           "ch0": 88119.99,
@@ -70590,10 +70008,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.34,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 9.34
+        }
       },
       "geometry": {
         "type": "Point",
@@ -70616,6 +70031,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 88+180",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 7.78,
         "di_set": {
           "preset": "WD",
           "ch0": 88180.12,
@@ -70624,10 +70042,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.78,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 7.78
+        }
       },
       "geometry": {
         "type": "Point",
@@ -70650,6 +70065,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 88+180",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 7.78,
         "di_set": {
           "preset": "WD",
           "ch0": 88180.12,
@@ -70658,10 +70076,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.78,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 7.78
+        }
       },
       "geometry": {
         "type": "Point",
@@ -70684,6 +70099,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 88+240",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 7.73,
         "di_set": {
           "preset": "WD",
           "ch0": 88240.16,
@@ -70692,10 +70110,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.73,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 7.73
+        }
       },
       "geometry": {
         "type": "Point",
@@ -70718,6 +70133,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 88+240",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 7.73,
         "di_set": {
           "preset": "WD",
           "ch0": 88240.16,
@@ -70726,10 +70144,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.73,
           "sheet": "DW-03004-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 7.73
+        }
       },
       "geometry": {
         "type": "Point",
@@ -70752,6 +70167,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 88+270",
         "status": "Not Started",
+        "drawing_ref": "DW-03004-06",
+        "offset_m": 12.68,
         "di_set": {
           "preset": "RIP",
           "ch0": 88270.03,
@@ -70761,9 +70178,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03004-06",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03004-06",
-        "offset_m": 12.68
+        }
       },
       "geometry": {
         "type": "Point",
@@ -70786,6 +70201,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 7 toe ditch",
         "chainage_str": "PK 88+281 – PK 88+350",
         "status": "Not Started",
+        "short_code": "T7",
+        "drawing_ref": "DW-03005-06",
+        "offset_m": 12.89,
         "di_set": {
           "ch0": 88280.9,
           "ch1": 88349.7,
@@ -70794,10 +70212,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03005-06",
           "preset": "T7"
-        },
-        "short_code": "T7",
-        "drawing_ref": "DW-03005-06",
-        "offset_m": 12.89
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -70878,6 +70293,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 88+300",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-06",
+        "offset_m": 8.66,
         "di_set": {
           "preset": "WD",
           "ch0": 88300.41,
@@ -70886,10 +70304,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.66,
           "sheet": "DW-03005-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-06",
-        "offset_m": 8.66
+        }
       },
       "geometry": {
         "type": "Point",
@@ -70912,6 +70327,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 88+300",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-06",
+        "offset_m": 8.66,
         "di_set": {
           "preset": "WD",
           "ch0": 88300.41,
@@ -70920,10 +70338,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.66,
           "sheet": "DW-03005-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-06",
-        "offset_m": 8.66
+        }
       },
       "geometry": {
         "type": "Point",
@@ -70946,6 +70361,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 88+350",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03005-06",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 88349.91,
           "ch1": 88349.93,
@@ -70954,10 +70372,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03005-06",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03005-06",
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "Point",
@@ -70980,6 +70395,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 88+350 – PK 88+575",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03005-06",
+        "offset_m": 4.1,
         "di_set": {
           "ch0": 88349.93,
           "ch1": 88575.05,
@@ -70988,10 +70406,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03005-06",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03005-06",
-        "offset_m": 4.1
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -71200,6 +70615,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 88+350",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-06",
+        "offset_m": 6.91,
         "di_set": {
           "preset": "WD",
           "ch0": 88350.01,
@@ -71208,10 +70626,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 6.91,
           "sheet": "DW-03005-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-06",
-        "offset_m": 6.91
+        }
       },
       "geometry": {
         "type": "Point",
@@ -71234,6 +70649,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 88+350",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-06",
+        "offset_m": 6.91,
         "di_set": {
           "preset": "WD",
           "ch0": 88350.01,
@@ -71242,10 +70660,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 6.91,
           "sheet": "DW-03005-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-06",
-        "offset_m": 6.91
+        }
       },
       "geometry": {
         "type": "Point",
@@ -71268,6 +70683,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 88+395",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-06",
+        "offset_m": 7.58,
         "di_set": {
           "preset": "WD",
           "ch0": 88394.73,
@@ -71276,10 +70694,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.58,
           "sheet": "DW-03005-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-06",
-        "offset_m": 7.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -71302,6 +70717,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 88+395",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-06",
+        "offset_m": 7.58,
         "di_set": {
           "preset": "WD",
           "ch0": 88394.73,
@@ -71310,10 +70728,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.58,
           "sheet": "DW-03005-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-06",
-        "offset_m": 7.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -71336,6 +70751,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 88+455",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-06",
+        "offset_m": 8.17,
         "di_set": {
           "preset": "WD",
           "ch0": 88454.8,
@@ -71344,10 +70762,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.17,
           "sheet": "DW-03005-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-06",
-        "offset_m": 8.17
+        }
       },
       "geometry": {
         "type": "Point",
@@ -71370,6 +70785,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 88+455",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-06",
+        "offset_m": 8.17,
         "di_set": {
           "preset": "WD",
           "ch0": 88454.8,
@@ -71378,10 +70796,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.17,
           "sheet": "DW-03005-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-06",
-        "offset_m": 8.17
+        }
       },
       "geometry": {
         "type": "Point",
@@ -71404,6 +70819,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 88+515",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-06",
+        "offset_m": 8.77,
         "di_set": {
           "preset": "WD",
           "ch0": 88515,
@@ -71412,10 +70830,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.77,
           "sheet": "DW-03005-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-06",
-        "offset_m": 8.77
+        }
       },
       "geometry": {
         "type": "Point",
@@ -71438,6 +70853,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 88+515",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-06",
+        "offset_m": 8.77,
         "di_set": {
           "preset": "WD",
           "ch0": 88515,
@@ -71446,10 +70864,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.77,
           "sheet": "DW-03005-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-06",
-        "offset_m": 8.77
+        }
       },
       "geometry": {
         "type": "Point",
@@ -71472,6 +70887,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 88+525",
         "status": "Not Started",
+        "drawing_ref": "DW-03005-06",
+        "offset_m": 11.19,
         "di_set": {
           "preset": "RIP",
           "ch0": 88524.93,
@@ -71481,9 +70898,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03005-06",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03005-06",
-        "offset_m": 11.19
+        }
       },
       "geometry": {
         "type": "Point",
@@ -71506,6 +70921,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 88+675",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-06",
+        "offset_m": 6.99,
         "di_set": {
           "preset": "WD",
           "ch0": 88675.06,
@@ -71514,10 +70932,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 6.99,
           "sheet": "DW-03005-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-06",
-        "offset_m": 6.99
+        }
       },
       "geometry": {
         "type": "Point",
@@ -71540,6 +70955,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 88+675",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-06",
+        "offset_m": 6.99,
         "di_set": {
           "preset": "WD",
           "ch0": 88675.06,
@@ -71548,10 +70966,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 6.99,
           "sheet": "DW-03005-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-06",
-        "offset_m": 6.99
+        }
       },
       "geometry": {
         "type": "Point",
@@ -71574,6 +70989,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 88+675 – PK 88+775",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03005-06",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 88675.11,
           "ch1": 88775.06,
@@ -71582,10 +71000,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03005-06",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03005-06",
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -71690,6 +71105,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 88+693",
         "status": "Not Started",
+        "drawing_ref": "DW-03005-06",
+        "offset_m": 8.43,
         "di_set": {
           "preset": "RIP",
           "ch0": 88692.82,
@@ -71699,9 +71116,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03005-06",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03005-06",
-        "offset_m": 8.43
+        }
       },
       "geometry": {
         "type": "Point",
@@ -71724,6 +71139,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 88+717 – PK 88+800",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03005-06",
+        "offset_m": 12.35,
         "di_set": {
           "ch0": 88716.88,
           "ch1": 88800.07,
@@ -71732,10 +71150,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03005-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03005-06",
-        "offset_m": 12.35
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -71828,6 +71243,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 88+724",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-06",
+        "offset_m": 7.42,
         "di_set": {
           "preset": "WD",
           "ch0": 88724.11,
@@ -71836,10 +71254,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.42,
           "sheet": "DW-03005-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-06",
-        "offset_m": 7.42
+        }
       },
       "geometry": {
         "type": "Point",
@@ -71862,6 +71277,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 88+724",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-06",
+        "offset_m": 7.42,
         "di_set": {
           "preset": "WD",
           "ch0": 88724.11,
@@ -71870,10 +71288,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.42,
           "sheet": "DW-03005-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-06",
-        "offset_m": 7.42
+        }
       },
       "geometry": {
         "type": "Point",
@@ -71896,6 +71311,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 7 toe ditch",
         "chainage_str": "PK 89+034 – PK 89+137",
         "status": "Not Started",
+        "short_code": "T7",
+        "drawing_ref": "DW-03005-06",
+        "offset_m": 11,
         "di_set": {
           "ch0": 89033.73,
           "ch1": 89136.71,
@@ -71904,10 +71322,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03005-06",
           "preset": "T7"
-        },
-        "short_code": "T7",
-        "drawing_ref": "DW-03005-06",
-        "offset_m": 11
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -72016,6 +71431,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 89+117",
         "status": "Not Started",
+        "drawing_ref": "DW-03005-06",
+        "offset_m": 8.15,
         "di_set": {
           "preset": "RIP",
           "ch0": 89117.13,
@@ -72025,9 +71442,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03005-06",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03005-06",
-        "offset_m": 8.15
+        }
       },
       "geometry": {
         "type": "Point",
@@ -72050,6 +71465,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 89+276 – PK 89+344",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03005-06",
+        "offset_m": 11.69,
         "di_set": {
           "ch0": 89275.83,
           "ch1": 89344.14,
@@ -72058,10 +71476,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03005-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03005-06",
-        "offset_m": 11.69
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -72142,6 +71557,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 89+351 – PK 89+400",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03005-06",
+        "offset_m": 12.24,
         "di_set": {
           "ch0": 89351.28,
           "ch1": 89400,
@@ -72150,10 +71568,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03005-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03005-06",
-        "offset_m": 12.24
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -72218,6 +71633,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 89+575",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-06",
+        "offset_m": 7.07,
         "di_set": {
           "preset": "WD",
           "ch0": 89574.83,
@@ -72226,10 +71644,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.07,
           "sheet": "DW-03005-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-06",
-        "offset_m": 7.07
+        }
       },
       "geometry": {
         "type": "Point",
@@ -72252,6 +71667,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 89+575",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-06",
+        "offset_m": 7.07,
         "di_set": {
           "preset": "WD",
           "ch0": 89574.83,
@@ -72260,10 +71678,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.07,
           "sheet": "DW-03005-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-06",
-        "offset_m": 7.07
+        }
       },
       "geometry": {
         "type": "Point",
@@ -72286,6 +71701,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 89+637",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-06",
+        "offset_m": 7.8,
         "di_set": {
           "preset": "WD",
           "ch0": 89637,
@@ -72294,10 +71712,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.8,
           "sheet": "DW-03005-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-06",
-        "offset_m": 7.8
+        }
       },
       "geometry": {
         "type": "Point",
@@ -72320,6 +71735,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 89+637",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03005-06",
+        "offset_m": 7.8,
         "di_set": {
           "preset": "WD",
           "ch0": 89637,
@@ -72328,10 +71746,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.8,
           "sheet": "DW-03005-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03005-06",
-        "offset_m": 7.8
+        }
       },
       "geometry": {
         "type": "Point",
@@ -72354,6 +71769,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 89+651",
         "status": "Not Started",
+        "drawing_ref": "DW-03005-06",
+        "offset_m": 7.52,
         "di_set": {
           "preset": "RIP",
           "ch0": 89650.96,
@@ -72363,9 +71780,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03005-06",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03005-06",
-        "offset_m": 7.52
+        }
       },
       "geometry": {
         "type": "Point",
@@ -72388,6 +71803,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 89+712",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03006",
+        "offset_m": 8.18,
         "di_set": {
           "preset": "WD",
           "ch0": 89711.97,
@@ -72396,10 +71814,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.18,
           "sheet": "DW-03006",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03006",
-        "offset_m": 8.18
+        }
       },
       "geometry": {
         "type": "Point",
@@ -72422,6 +71837,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 89+712",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03006",
+        "offset_m": 8.18,
         "di_set": {
           "preset": "WD",
           "ch0": 89711.97,
@@ -72430,10 +71848,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.18,
           "sheet": "DW-03006",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03006",
-        "offset_m": 8.18
+        }
       },
       "geometry": {
         "type": "Point",
@@ -72456,6 +71871,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 89+750 – PK 90+001",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03006",
+        "offset_m": 12.73,
         "di_set": {
           "ch0": 89750,
           "ch1": 90000.97,
@@ -72464,10 +71882,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03006",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03006",
-        "offset_m": 12.73
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -72696,6 +72111,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 89+753",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03006",
+        "offset_m": 13.47,
         "di_set": {
           "preset": "D-SD",
           "ch0": 89752.63,
@@ -72704,10 +72122,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 13.47,
           "sheet": "DW-03006",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03006",
-        "offset_m": 13.47
+        }
       },
       "geometry": {
         "type": "Point",
@@ -72730,6 +72145,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 89+797",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03006",
+        "offset_m": 8.06,
         "di_set": {
           "preset": "WD",
           "ch0": 89797.03,
@@ -72738,10 +72156,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.06,
           "sheet": "DW-03006",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03006",
-        "offset_m": 8.06
+        }
       },
       "geometry": {
         "type": "Point",
@@ -72764,6 +72179,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 89+797",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03006",
+        "offset_m": 8.06,
         "di_set": {
           "preset": "WD",
           "ch0": 89797.03,
@@ -72772,10 +72190,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.06,
           "sheet": "DW-03006",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03006",
-        "offset_m": 8.06
+        }
       },
       "geometry": {
         "type": "Point",
@@ -72798,6 +72213,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 89+882",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03006",
+        "offset_m": 7.86,
         "di_set": {
           "preset": "WD",
           "ch0": 89882.18,
@@ -72806,10 +72224,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.86,
           "sheet": "DW-03006",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03006",
-        "offset_m": 7.86
+        }
       },
       "geometry": {
         "type": "Point",
@@ -72832,6 +72247,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 89+882",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03006",
+        "offset_m": 7.86,
         "di_set": {
           "preset": "WD",
           "ch0": 89882.18,
@@ -72840,10 +72258,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.86,
           "sheet": "DW-03006",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03006",
-        "offset_m": 7.86
+        }
       },
       "geometry": {
         "type": "Point",
@@ -72866,6 +72281,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 89+943 – PK 90+198",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03006",
+        "offset_m": 12.36,
         "di_set": {
           "ch0": 89942.91,
           "ch1": 90197.81,
@@ -72874,10 +72292,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03006",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03006",
-        "offset_m": 12.36
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -73106,6 +72521,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 89+967",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03006",
+        "offset_m": 8.16,
         "di_set": {
           "preset": "WD",
           "ch0": 89967.39,
@@ -73114,10 +72532,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.16,
           "sheet": "DW-03006",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03006",
-        "offset_m": 8.16
+        }
       },
       "geometry": {
         "type": "Point",
@@ -73140,6 +72555,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 89+967",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03006",
+        "offset_m": 8.16,
         "di_set": {
           "preset": "WD",
           "ch0": 89967.39,
@@ -73148,10 +72566,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.16,
           "sheet": "DW-03006",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03006",
-        "offset_m": 8.16
+        }
       },
       "geometry": {
         "type": "Point",
@@ -73174,6 +72589,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 90+053",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03006",
+        "offset_m": 8.06,
         "di_set": {
           "preset": "WD",
           "ch0": 90052.66,
@@ -73182,10 +72600,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.06,
           "sheet": "DW-03006",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03006",
-        "offset_m": 8.06
+        }
       },
       "geometry": {
         "type": "Point",
@@ -73208,6 +72623,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 90+053",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03006",
+        "offset_m": 8.06,
         "di_set": {
           "preset": "WD",
           "ch0": 90052.66,
@@ -73216,10 +72634,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.06,
           "sheet": "DW-03006",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03006",
-        "offset_m": 8.06
+        }
       },
       "geometry": {
         "type": "Point",
@@ -73242,6 +72657,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 90+138 – PK 90+375",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03006",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 90137.73,
           "ch1": 90375.01,
@@ -73250,10 +72668,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03006",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03006",
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -73470,6 +72885,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 90+198",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03006",
+        "offset_m": 8.19,
         "di_set": {
           "preset": "WD",
           "ch0": 90197.83,
@@ -73478,10 +72896,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.19,
           "sheet": "DW-03006",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03006",
-        "offset_m": 8.19
+        }
       },
       "geometry": {
         "type": "Point",
@@ -73504,6 +72919,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 90+198",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03006",
+        "offset_m": 8.19,
         "di_set": {
           "preset": "WD",
           "ch0": 90197.83,
@@ -73512,10 +72930,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.19,
           "sheet": "DW-03006",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03006",
-        "offset_m": 8.19
+        }
       },
       "geometry": {
         "type": "Point",
@@ -73538,6 +72953,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 90+253",
         "status": "Not Started",
+        "drawing_ref": "DW-03006",
+        "offset_m": 9.45,
         "di_set": {
           "preset": "RIP",
           "ch0": 90253.03,
@@ -73547,9 +72964,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03006",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03006",
-        "offset_m": 9.45
+        }
       },
       "geometry": {
         "type": "Point",
@@ -73572,6 +72987,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 90+258",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03006",
+        "offset_m": 8.2,
         "di_set": {
           "preset": "WD",
           "ch0": 90258.01,
@@ -73580,10 +72998,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.2,
           "sheet": "DW-03006",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03006",
-        "offset_m": 8.2
+        }
       },
       "geometry": {
         "type": "Point",
@@ -73606,6 +73021,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 90+258",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03006",
+        "offset_m": 8.2,
         "di_set": {
           "preset": "WD",
           "ch0": 90258.01,
@@ -73614,10 +73032,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.2,
           "sheet": "DW-03006",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03006",
-        "offset_m": 8.2
+        }
       },
       "geometry": {
         "type": "Point",
@@ -73640,6 +73055,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 90+318",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03006",
+        "offset_m": 7.35,
         "di_set": {
           "preset": "WD",
           "ch0": 90317.92,
@@ -73648,10 +73066,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.35,
           "sheet": "DW-03006",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03006",
-        "offset_m": 7.35
+        }
       },
       "geometry": {
         "type": "Point",
@@ -73674,6 +73089,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 90+318",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03006",
+        "offset_m": 7.35,
         "di_set": {
           "preset": "WD",
           "ch0": 90317.92,
@@ -73682,10 +73100,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.35,
           "sheet": "DW-03006",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03006",
-        "offset_m": 7.35
+        }
       },
       "geometry": {
         "type": "Point",
@@ -73708,6 +73123,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 90+375",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03006",
+        "offset_m": 7.67,
         "di_set": {
           "preset": "WD",
           "ch0": 90374.99,
@@ -73716,10 +73134,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.67,
           "sheet": "DW-03006",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03006",
-        "offset_m": 7.67
+        }
       },
       "geometry": {
         "type": "Point",
@@ -73742,6 +73157,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 90+375",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03006",
+        "offset_m": 7.67,
         "di_set": {
           "preset": "WD",
           "ch0": 90374.99,
@@ -73750,10 +73168,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.67,
           "sheet": "DW-03006",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03006",
-        "offset_m": 7.67
+        }
       },
       "geometry": {
         "type": "Point",
@@ -73776,6 +73191,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 90+547",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03006",
+        "offset_m": 11.35,
         "di_set": {
           "preset": "D-SD",
           "ch0": 90547.3,
@@ -73784,10 +73202,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 11.35,
           "sheet": "DW-03006",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03006",
-        "offset_m": 11.35
+        }
       },
       "geometry": {
         "type": "Point",
@@ -73810,6 +73225,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 90+716 – PK 90+875",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03006",
+        "offset_m": 9.97,
         "di_set": {
           "ch0": 90715.88,
           "ch1": 90875,
@@ -73818,10 +73236,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03006",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03006",
-        "offset_m": 9.97
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -73974,6 +73389,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 92+175 – PK 92+550",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03007-06",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 92174.92,
           "ch1": 92550,
@@ -73982,10 +73400,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03007-06",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03007-06",
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -74250,6 +73665,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 92+239",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03007-06",
+        "offset_m": 7.65,
         "di_set": {
           "preset": "WD",
           "ch0": 92239.02,
@@ -74258,10 +73676,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.65,
           "sheet": "DW-03007-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03007-06",
-        "offset_m": 7.65
+        }
       },
       "geometry": {
         "type": "Point",
@@ -74284,6 +73699,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 92+239",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03007-06",
+        "offset_m": 7.65,
         "di_set": {
           "preset": "WD",
           "ch0": 92239.02,
@@ -74292,10 +73710,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.65,
           "sheet": "DW-03007-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03007-06",
-        "offset_m": 7.65
+        }
       },
       "geometry": {
         "type": "Point",
@@ -74318,6 +73733,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 92+253",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03007-06",
+        "offset_m": 13.19,
         "di_set": {
           "preset": "D-SD",
           "ch0": 92253.42,
@@ -74326,10 +73744,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 13.19,
           "sheet": "DW-03007-06",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03007-06",
-        "offset_m": 13.19
+        }
       },
       "geometry": {
         "type": "Point",
@@ -74352,6 +73767,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 92+295",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03007-06",
+        "offset_m": 7.46,
         "di_set": {
           "preset": "WD",
           "ch0": 92294.95,
@@ -74360,10 +73778,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.46,
           "sheet": "DW-03007-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03007-06",
-        "offset_m": 7.46
+        }
       },
       "geometry": {
         "type": "Point",
@@ -74386,6 +73801,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 92+295",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03007-06",
+        "offset_m": 7.46,
         "di_set": {
           "preset": "WD",
           "ch0": 92294.95,
@@ -74394,10 +73812,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.46,
           "sheet": "DW-03007-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03007-06",
-        "offset_m": 7.46
+        }
       },
       "geometry": {
         "type": "Point",
@@ -74420,6 +73835,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 92+349",
         "status": "Not Started",
+        "drawing_ref": "DW-03007-06",
+        "offset_m": 11.57,
         "di_set": {
           "preset": "RIP",
           "ch0": 92349.16,
@@ -74429,9 +73846,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03007-06",
           "cert": "label",
           "stated": 270
-        },
-        "drawing_ref": "DW-03007-06",
-        "offset_m": 11.57
+        }
       },
       "geometry": {
         "type": "Point",
@@ -74454,6 +73869,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 92+355",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03007-06",
+        "offset_m": 7.49,
         "di_set": {
           "preset": "WD",
           "ch0": 92354.9,
@@ -74462,10 +73880,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.49,
           "sheet": "DW-03007-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03007-06",
-        "offset_m": 7.49
+        }
       },
       "geometry": {
         "type": "Point",
@@ -74488,6 +73903,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 92+355",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03007-06",
+        "offset_m": 7.49,
         "di_set": {
           "preset": "WD",
           "ch0": 92354.9,
@@ -74496,10 +73914,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.49,
           "sheet": "DW-03007-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03007-06",
-        "offset_m": 7.49
+        }
       },
       "geometry": {
         "type": "Point",
@@ -74522,6 +73937,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 92+415",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03007-06",
+        "offset_m": 7.49,
         "di_set": {
           "preset": "WD",
           "ch0": 92414.9,
@@ -74530,10 +73948,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.49,
           "sheet": "DW-03007-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03007-06",
-        "offset_m": 7.49
+        }
       },
       "geometry": {
         "type": "Point",
@@ -74556,6 +73971,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 92+415",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03007-06",
+        "offset_m": 7.49,
         "di_set": {
           "preset": "WD",
           "ch0": 92414.9,
@@ -74564,10 +73982,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.49,
           "sheet": "DW-03007-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03007-06",
-        "offset_m": 7.49
+        }
       },
       "geometry": {
         "type": "Point",
@@ -74590,6 +74005,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 92+475",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03007-06",
+        "offset_m": 7.49,
         "di_set": {
           "preset": "WD",
           "ch0": 92474.9,
@@ -74598,10 +74016,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.49,
           "sheet": "DW-03007-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03007-06",
-        "offset_m": 7.49
+        }
       },
       "geometry": {
         "type": "Point",
@@ -74624,6 +74039,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 92+475",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03007-06",
+        "offset_m": 7.49,
         "di_set": {
           "preset": "WD",
           "ch0": 92474.9,
@@ -74632,10 +74050,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.49,
           "sheet": "DW-03007-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03007-06",
-        "offset_m": 7.49
+        }
       },
       "geometry": {
         "type": "Point",
@@ -74658,6 +74073,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 92+512",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03008-06",
+        "offset_m": 7.49,
         "di_set": {
           "preset": "WD",
           "ch0": 92512.4,
@@ -74666,10 +74084,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.49,
           "sheet": "DW-03008-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03008-06",
-        "offset_m": 7.49
+        }
       },
       "geometry": {
         "type": "Point",
@@ -74692,6 +74107,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 92+512",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03008-06",
+        "offset_m": 7.49,
         "di_set": {
           "preset": "WD",
           "ch0": 92512.4,
@@ -74700,10 +74118,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.49,
           "sheet": "DW-03008-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03008-06",
-        "offset_m": 7.49
+        }
       },
       "geometry": {
         "type": "Point",
@@ -74726,6 +74141,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 92+550",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03008-06",
+        "offset_m": 7.49,
         "di_set": {
           "preset": "WD",
           "ch0": 92549.98,
@@ -74734,10 +74152,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.49,
           "sheet": "DW-03008-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03008-06",
-        "offset_m": 7.49
+        }
       },
       "geometry": {
         "type": "Point",
@@ -74760,6 +74175,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 92+550",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03008-06",
+        "offset_m": 7.49,
         "di_set": {
           "preset": "WD",
           "ch0": 92549.98,
@@ -74768,10 +74186,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.49,
           "sheet": "DW-03008-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03008-06",
-        "offset_m": 7.49
+        }
       },
       "geometry": {
         "type": "Point",
@@ -74794,6 +74209,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 92+565",
         "status": "Not Started",
+        "drawing_ref": "DW-03008-06",
+        "offset_m": 10.65,
         "di_set": {
           "preset": "RIP",
           "ch0": 92565.08,
@@ -74803,9 +74220,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03008-06",
           "cert": "label",
           "stated": 92
-        },
-        "drawing_ref": "DW-03008-06",
-        "offset_m": 10.65
+        }
       },
       "geometry": {
         "type": "Point",
@@ -74828,6 +74243,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 92+569",
         "status": "Not Started",
+        "drawing_ref": "DW-03008-06",
+        "offset_m": 9.52,
         "di_set": {
           "preset": "RIP",
           "ch0": 92569.16,
@@ -74837,9 +74254,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03008-06",
           "cert": "label",
           "stated": 38
-        },
-        "drawing_ref": "DW-03008-06",
-        "offset_m": 9.52
+        }
       },
       "geometry": {
         "type": "Point",
@@ -74862,6 +74277,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 93+045",
         "status": "Not Started",
+        "drawing_ref": "DW-03008-06",
+        "offset_m": 6.53,
         "di_set": {
           "preset": "RIP",
           "ch0": 93045,
@@ -74871,9 +74288,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03008-06",
           "cert": "label",
           "stated": 544
-        },
-        "drawing_ref": "DW-03008-06",
-        "offset_m": 6.53
+        }
       },
       "geometry": {
         "type": "Point",
@@ -74896,6 +74311,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 93+475",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03008-06",
+        "offset_m": 7.49,
         "di_set": {
           "preset": "WD",
           "ch0": 93474.99,
@@ -74904,10 +74322,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.49,
           "sheet": "DW-03008-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03008-06",
-        "offset_m": 7.49
+        }
       },
       "geometry": {
         "type": "Point",
@@ -74930,6 +74345,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 93+475",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03008-06",
+        "offset_m": 7.49,
         "di_set": {
           "preset": "WD",
           "ch0": 93474.99,
@@ -74938,10 +74356,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.49,
           "sheet": "DW-03008-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03008-06",
-        "offset_m": 7.49
+        }
       },
       "geometry": {
         "type": "Point",
@@ -74964,6 +74379,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 93+475 – PK 93+675",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03008-06",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 93475.01,
           "ch1": 93675,
@@ -74972,10 +74390,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03008-06",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03008-06",
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -75160,6 +74575,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 93+492",
         "status": "Not Started",
+        "drawing_ref": "DW-03008-06",
+        "offset_m": 8.76,
         "di_set": {
           "preset": "RIP",
           "ch0": 93491.88,
@@ -75169,9 +74586,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03008-06",
           "cert": "label",
           "stated": 59
-        },
-        "drawing_ref": "DW-03008-06",
-        "offset_m": 8.76
+        }
       },
       "geometry": {
         "type": "Point",
@@ -75194,6 +74609,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 93+515",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03008-06",
+        "offset_m": 7.89,
         "di_set": {
           "preset": "WD",
           "ch0": 93514.52,
@@ -75202,10 +74620,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.89,
           "sheet": "DW-03008-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03008-06",
-        "offset_m": 7.89
+        }
       },
       "geometry": {
         "type": "Point",
@@ -75228,6 +74643,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 93+515",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03008-06",
+        "offset_m": 7.89,
         "di_set": {
           "preset": "WD",
           "ch0": 93514.52,
@@ -75236,10 +74654,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.89,
           "sheet": "DW-03008-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03008-06",
-        "offset_m": 7.89
+        }
       },
       "geometry": {
         "type": "Point",
@@ -75262,6 +74677,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 93+555",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03008-06",
+        "offset_m": 8.35,
         "di_set": {
           "preset": "WD",
           "ch0": 93554.96,
@@ -75270,10 +74688,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.35,
           "sheet": "DW-03008-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03008-06",
-        "offset_m": 8.35
+        }
       },
       "geometry": {
         "type": "Point",
@@ -75296,6 +74711,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 93+555",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03008-06",
+        "offset_m": 8.35,
         "di_set": {
           "preset": "WD",
           "ch0": 93554.96,
@@ -75304,10 +74722,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.35,
           "sheet": "DW-03008-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03008-06",
-        "offset_m": 8.35
+        }
       },
       "geometry": {
         "type": "Point",
@@ -75330,6 +74745,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 93+615",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03008-06",
+        "offset_m": 9.66,
         "di_set": {
           "preset": "WD",
           "ch0": 93615.01,
@@ -75338,10 +74756,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.66,
           "sheet": "DW-03008-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03008-06",
-        "offset_m": 9.66
+        }
       },
       "geometry": {
         "type": "Point",
@@ -75364,6 +74779,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 93+615",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03008-06",
+        "offset_m": 9.66,
         "di_set": {
           "preset": "WD",
           "ch0": 93615.01,
@@ -75372,10 +74790,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.66,
           "sheet": "DW-03008-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03008-06",
-        "offset_m": 9.66
+        }
       },
       "geometry": {
         "type": "Point",
@@ -75398,6 +74813,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 93+736",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03008-06",
+        "offset_m": 10.57,
         "di_set": {
           "preset": "WD",
           "ch0": 93735.99,
@@ -75406,10 +74824,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 10.57,
           "sheet": "DW-03008-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03008-06",
-        "offset_m": 10.57
+        }
       },
       "geometry": {
         "type": "Point",
@@ -75432,6 +74847,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 93+736",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03008-06",
+        "offset_m": 10.57,
         "di_set": {
           "preset": "WD",
           "ch0": 93735.99,
@@ -75440,10 +74858,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 10.57,
           "sheet": "DW-03008-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03008-06",
-        "offset_m": 10.57
+        }
       },
       "geometry": {
         "type": "Point",
@@ -75466,6 +74881,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 93+780",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03008-06",
+        "offset_m": 9.91,
         "di_set": {
           "preset": "WD",
           "ch0": 93780.27,
@@ -75474,10 +74892,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.91,
           "sheet": "DW-03008-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03008-06",
-        "offset_m": 9.91
+        }
       },
       "geometry": {
         "type": "Point",
@@ -75500,6 +74915,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 93+780",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03008-06",
+        "offset_m": 9.91,
         "di_set": {
           "preset": "WD",
           "ch0": 93780.27,
@@ -75508,10 +74926,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.91,
           "sheet": "DW-03008-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03008-06",
-        "offset_m": 9.91
+        }
       },
       "geometry": {
         "type": "Point",
@@ -75534,6 +74949,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 93+824",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03008-06",
+        "offset_m": 10,
         "di_set": {
           "preset": "WD",
           "ch0": 93823.77,
@@ -75542,10 +74960,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 10,
           "sheet": "DW-03008-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03008-06",
-        "offset_m": 10
+        }
       },
       "geometry": {
         "type": "Point",
@@ -75568,6 +74983,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 93+824",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03008-06",
+        "offset_m": 10,
         "di_set": {
           "preset": "WD",
           "ch0": 93823.77,
@@ -75576,10 +74994,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 10,
           "sheet": "DW-03008-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03008-06",
-        "offset_m": 10
+        }
       },
       "geometry": {
         "type": "Point",
@@ -75602,6 +75017,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 93+884",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03008-06",
+        "offset_m": 8.7,
         "di_set": {
           "preset": "WD",
           "ch0": 93883.73,
@@ -75610,10 +75028,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.7,
           "sheet": "DW-03008-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03008-06",
-        "offset_m": 8.7
+        }
       },
       "geometry": {
         "type": "Point",
@@ -75636,6 +75051,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 93+884",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03008-06",
+        "offset_m": 8.7,
         "di_set": {
           "preset": "WD",
           "ch0": 93883.73,
@@ -75644,10 +75062,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.7,
           "sheet": "DW-03008-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03008-06",
-        "offset_m": 8.7
+        }
       },
       "geometry": {
         "type": "Point",
@@ -75670,6 +75085,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 93+944 – PK 94+100",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03009-06",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 93943.83,
           "ch1": 94100,
@@ -75678,10 +75096,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03009-06",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03009-06",
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -75834,6 +75249,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 94+004",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03009-06",
+        "offset_m": 7.98,
         "di_set": {
           "preset": "WD",
           "ch0": 94003.78,
@@ -75842,10 +75260,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.98,
           "sheet": "DW-03009-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03009-06",
-        "offset_m": 7.98
+        }
       },
       "geometry": {
         "type": "Point",
@@ -75868,6 +75283,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 94+004",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03009-06",
+        "offset_m": 7.98,
         "di_set": {
           "preset": "WD",
           "ch0": 94003.78,
@@ -75876,10 +75294,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.98,
           "sheet": "DW-03009-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03009-06",
-        "offset_m": 7.98
+        }
       },
       "geometry": {
         "type": "Point",
@@ -75902,6 +75317,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 94+052",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03009-06",
+        "offset_m": 8.02,
         "di_set": {
           "preset": "WD",
           "ch0": 94051.77,
@@ -75910,10 +75328,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.02,
           "sheet": "DW-03009-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03009-06",
-        "offset_m": 8.02
+        }
       },
       "geometry": {
         "type": "Point",
@@ -75936,6 +75351,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 94+052",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03009-06",
+        "offset_m": 8.02,
         "di_set": {
           "preset": "WD",
           "ch0": 94051.77,
@@ -75944,10 +75362,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.02,
           "sheet": "DW-03009-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03009-06",
-        "offset_m": 8.02
+        }
       },
       "geometry": {
         "type": "Point",
@@ -75970,6 +75385,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 94+100",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03009-06",
+        "offset_m": 7.45,
         "di_set": {
           "preset": "WD",
           "ch0": 94099.99,
@@ -75978,10 +75396,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.45,
           "sheet": "DW-03009-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03009-06",
-        "offset_m": 7.45
+        }
       },
       "geometry": {
         "type": "Point",
@@ -76004,6 +75419,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 94+100",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03009-06",
+        "offset_m": 7.45,
         "di_set": {
           "preset": "WD",
           "ch0": 94099.99,
@@ -76012,10 +75430,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.45,
           "sheet": "DW-03009-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03009-06",
-        "offset_m": 7.45
+        }
       },
       "geometry": {
         "type": "Point",
@@ -76038,6 +75453,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 94+541",
         "status": "Not Started",
+        "drawing_ref": "DW-03009-06",
+        "offset_m": 8.05,
         "di_set": {
           "preset": "RIP",
           "ch0": 94541,
@@ -76047,9 +75464,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03009-06",
           "cert": "label",
           "stated": 414
-        },
-        "drawing_ref": "DW-03009-06",
-        "offset_m": 8.05
+        }
       },
       "geometry": {
         "type": "Point",
@@ -76072,6 +75487,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 94+900",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03009-06",
+        "offset_m": 6.57,
         "di_set": {
           "preset": "WD",
           "ch0": 94899.93,
@@ -76080,10 +75498,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 6.57,
           "sheet": "DW-03009-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03009-06",
-        "offset_m": 6.57
+        }
       },
       "geometry": {
         "type": "Point",
@@ -76106,6 +75521,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 94+900",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03009-06",
+        "offset_m": 6.57,
         "di_set": {
           "preset": "WD",
           "ch0": 94899.93,
@@ -76114,10 +75532,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 6.57,
           "sheet": "DW-03009-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03009-06",
-        "offset_m": 6.57
+        }
       },
       "geometry": {
         "type": "Point",
@@ -76140,6 +75555,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 94+900 – PK 95+075",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03009-06",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 94899.97,
           "ch1": 95075,
@@ -76148,10 +75566,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03009-06",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03009-06",
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -76320,6 +75735,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 94+958",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03009-06",
+        "offset_m": 7.66,
         "di_set": {
           "preset": "WD",
           "ch0": 94958.45,
@@ -76328,10 +75746,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.66,
           "sheet": "DW-03009-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03009-06",
-        "offset_m": 7.66
+        }
       },
       "geometry": {
         "type": "Point",
@@ -76354,6 +75769,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 94+958",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03009-06",
+        "offset_m": 7.66,
         "di_set": {
           "preset": "WD",
           "ch0": 94958.45,
@@ -76362,10 +75780,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.66,
           "sheet": "DW-03009-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03009-06",
-        "offset_m": 7.66
+        }
       },
       "geometry": {
         "type": "Point",
@@ -76388,6 +75803,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 94+965",
         "status": "Not Started",
+        "drawing_ref": "DW-03009-06",
+        "offset_m": 10.03,
         "di_set": {
           "preset": "RIP",
           "ch0": 94965,
@@ -76397,9 +75814,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03009-06",
           "cert": "label",
           "stated": 146
-        },
-        "drawing_ref": "DW-03009-06",
-        "offset_m": 10.03
+        }
       },
       "geometry": {
         "type": "Point",
@@ -76422,6 +75837,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 95+005",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03009-06",
+        "offset_m": 7.57,
         "di_set": {
           "preset": "WD",
           "ch0": 95004.98,
@@ -76430,10 +75848,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.57,
           "sheet": "DW-03009-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03009-06",
-        "offset_m": 7.57
+        }
       },
       "geometry": {
         "type": "Point",
@@ -76456,6 +75871,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 95+005",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03009-06",
+        "offset_m": 7.57,
         "di_set": {
           "preset": "WD",
           "ch0": 95004.98,
@@ -76464,10 +75882,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.57,
           "sheet": "DW-03009-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03009-06",
-        "offset_m": 7.57
+        }
       },
       "geometry": {
         "type": "Point",
@@ -76490,6 +75905,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 95+068 – PK 95+199",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03009-06",
+        "offset_m": 9.58,
         "di_set": {
           "ch0": 95068.41,
           "ch1": 95199.18,
@@ -76498,10 +75916,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03009-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03009-06",
-        "offset_m": 9.58
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -76634,6 +76049,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 95+071",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03009-06",
+        "offset_m": 12.26,
         "di_set": {
           "preset": "D-SD",
           "ch0": 95070.91,
@@ -76642,10 +76060,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 12.26,
           "sheet": "DW-03009-06",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03009-06",
-        "offset_m": 12.26
+        }
       },
       "geometry": {
         "type": "Point",
@@ -76668,6 +76083,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 95+434",
         "status": "Not Started",
+        "drawing_ref": "DW-03010-07",
+        "offset_m": 8.66,
         "di_set": {
           "preset": "RIP",
           "ch0": 95434.39,
@@ -76677,9 +76094,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03010-07",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03010-07",
-        "offset_m": 8.66
+        }
       },
       "geometry": {
         "type": "Point",
@@ -76702,6 +76117,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 95+811",
         "status": "Not Started",
+        "drawing_ref": "DW-03010-07",
+        "offset_m": 8.72,
         "di_set": {
           "preset": "RIP",
           "ch0": 95811,
@@ -76711,9 +76128,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03010-07",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03010-07",
-        "offset_m": 8.72
+        }
       },
       "geometry": {
         "type": "Point",
@@ -76736,6 +76151,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 95+822",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03010-07",
+        "offset_m": 12.05,
         "di_set": {
           "preset": "D-SD",
           "ch0": 95822.25,
@@ -76744,10 +76162,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 12.05,
           "sheet": "DW-03010-07",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03010-07",
-        "offset_m": 12.05
+        }
       },
       "geometry": {
         "type": "Point",
@@ -76770,6 +76185,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 95+950",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03010-07",
+        "offset_m": 7.18,
         "di_set": {
           "preset": "WD",
           "ch0": 95949.95,
@@ -76778,10 +76196,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.18,
           "sheet": "DW-03010-07",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03010-07",
-        "offset_m": 7.18
+        }
       },
       "geometry": {
         "type": "Point",
@@ -76804,6 +76219,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 95+950",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03010-07",
+        "offset_m": 7.18,
         "di_set": {
           "preset": "WD",
           "ch0": 95949.95,
@@ -76812,10 +76230,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.18,
           "sheet": "DW-03010-07",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03010-07",
-        "offset_m": 7.18
+        }
       },
       "geometry": {
         "type": "Point",
@@ -76838,6 +76253,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 95+950 – PK 96+050",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03010-07",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 95950.01,
           "ch1": 96050,
@@ -76846,10 +76264,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03010-07",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03010-07",
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -76954,6 +76369,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 96+000 – PK 96+143",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03010-07",
+        "offset_m": 11.22,
         "di_set": {
           "ch0": 96000,
           "ch1": 96143.11,
@@ -76962,10 +76380,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03010-07",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03010-07",
-        "offset_m": 11.22
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -77106,6 +76521,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 96+011",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03010-07",
+        "offset_m": 8.22,
         "di_set": {
           "preset": "WD",
           "ch0": 96010.99,
@@ -77114,10 +76532,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.22,
           "sheet": "DW-03010-07",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03010-07",
-        "offset_m": 8.22
+        }
       },
       "geometry": {
         "type": "Point",
@@ -77140,6 +76555,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 96+011",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03010-07",
+        "offset_m": 8.22,
         "di_set": {
           "preset": "WD",
           "ch0": 96010.99,
@@ -77148,10 +76566,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.22,
           "sheet": "DW-03010-07",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03010-07",
-        "offset_m": 8.22
+        }
       },
       "geometry": {
         "type": "Point",
@@ -77174,6 +76589,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 96+149 – PK 96+225",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03010-07",
+        "offset_m": 11.17,
         "di_set": {
           "ch0": 96148.89,
           "ch1": 96225,
@@ -77182,10 +76600,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03010-07",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03010-07",
-        "offset_m": 11.17
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -77274,6 +76689,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 96+158",
         "status": "Not Started",
+        "drawing_ref": "DW-03010-07",
+        "offset_m": 9.95,
         "di_set": {
           "preset": "RIP",
           "ch0": 96158.42,
@@ -77283,9 +76700,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03010-07",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03010-07",
-        "offset_m": 9.95
+        }
       },
       "geometry": {
         "type": "Point",
@@ -77308,6 +76723,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 96+573",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03010-07",
+        "offset_m": 11.04,
         "di_set": {
           "preset": "D-SD",
           "ch0": 96572.76,
@@ -77316,10 +76734,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 11.04,
           "sheet": "DW-03010-07",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03010-07",
-        "offset_m": 11.04
+        }
       },
       "geometry": {
         "type": "Point",
@@ -77342,6 +76757,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 96+634",
         "status": "Not Started",
+        "drawing_ref": "DW-03010-07",
+        "offset_m": 9.61,
         "di_set": {
           "preset": "RIP",
           "ch0": 96634.41,
@@ -77351,9 +76768,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03010-07",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03010-07",
-        "offset_m": 9.61
+        }
       },
       "geometry": {
         "type": "Point",
@@ -77376,6 +76791,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 96+758",
         "status": "Not Started",
+        "drawing_ref": "DW-03011-06",
+        "offset_m": 8.45,
         "di_set": {
           "preset": "RIP",
           "ch0": 96757.59,
@@ -77385,9 +76802,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03011-06",
           "cert": "label",
           "stated": 152
-        },
-        "drawing_ref": "DW-03011-06",
-        "offset_m": 8.45
+        }
       },
       "geometry": {
         "type": "Point",
@@ -77410,6 +76825,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 97+023",
         "status": "Not Started",
+        "drawing_ref": "DW-03011-06",
+        "offset_m": 9.6,
         "di_set": {
           "preset": "RIP",
           "ch0": 97022.51,
@@ -77419,9 +76836,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03011-06",
           "cert": "label",
           "stated": 65
-        },
-        "drawing_ref": "DW-03011-06",
-        "offset_m": 9.6
+        }
       },
       "geometry": {
         "type": "Point",
@@ -77444,6 +76859,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 97+075 – PK 97+170",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03011-06",
+        "offset_m": 11.24,
         "di_set": {
           "ch0": 97075,
           "ch1": 97170.24,
@@ -77452,10 +76870,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03011-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03011-06",
-        "offset_m": 11.24
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -77560,6 +76975,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 97+125",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-06",
+        "offset_m": 7.5,
         "di_set": {
           "preset": "WD",
           "ch0": 97124.96,
@@ -77568,10 +76986,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.5,
           "sheet": "DW-03011-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-06",
-        "offset_m": 7.5
+        }
       },
       "geometry": {
         "type": "Point",
@@ -77594,6 +77009,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 97+125",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-06",
+        "offset_m": 7.5,
         "di_set": {
           "preset": "WD",
           "ch0": 97124.96,
@@ -77602,10 +77020,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.5,
           "sheet": "DW-03011-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-06",
-        "offset_m": 7.5
+        }
       },
       "geometry": {
         "type": "Point",
@@ -77628,6 +77043,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 97+125 – PK 97+250",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03011-06",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 97125.05,
           "ch1": 97249.94,
@@ -77636,10 +77054,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03011-06",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03011-06",
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -77764,6 +77179,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 97+178 – PK 97+250",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03011-06",
+        "offset_m": 11.73,
         "di_set": {
           "ch0": 97178.34,
           "ch1": 97250.05,
@@ -77772,10 +77190,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03011-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03011-06",
-        "offset_m": 11.73
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -77860,6 +77275,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 97+184",
         "status": "Not Started",
+        "drawing_ref": "DW-03011-06",
+        "offset_m": 9.84,
         "di_set": {
           "preset": "RIP",
           "ch0": 97184.17,
@@ -77869,9 +77286,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03011-06",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03011-06",
-        "offset_m": 9.84
+        }
       },
       "geometry": {
         "type": "Point",
@@ -77894,6 +77309,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 97+187",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-06",
+        "offset_m": 7.5,
         "di_set": {
           "preset": "WD",
           "ch0": 97186.84,
@@ -77902,10 +77320,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.5,
           "sheet": "DW-03011-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-06",
-        "offset_m": 7.5
+        }
       },
       "geometry": {
         "type": "Point",
@@ -77928,6 +77343,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 97+187",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-06",
+        "offset_m": 7.5,
         "di_set": {
           "preset": "WD",
           "ch0": 97186.84,
@@ -77936,10 +77354,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.5,
           "sheet": "DW-03011-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-06",
-        "offset_m": 7.5
+        }
       },
       "geometry": {
         "type": "Point",
@@ -77962,6 +77377,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 97+378",
         "status": "Not Started",
+        "drawing_ref": "DW-03011-06",
+        "offset_m": 9.81,
         "di_set": {
           "preset": "RIP",
           "ch0": 97377.51,
@@ -77971,9 +77388,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03011-06",
           "cert": "label",
           "stated": 27
-        },
-        "drawing_ref": "DW-03011-06",
-        "offset_m": 9.81
+        }
       },
       "geometry": {
         "type": "Point",
@@ -77996,6 +77411,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 97+400",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-06",
+        "offset_m": 7.5,
         "di_set": {
           "preset": "WD",
           "ch0": 97399.88,
@@ -78004,10 +77422,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.5,
           "sheet": "DW-03011-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-06",
-        "offset_m": 7.5
+        }
       },
       "geometry": {
         "type": "Point",
@@ -78030,6 +77445,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 97+400",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-06",
+        "offset_m": 7.5,
         "di_set": {
           "preset": "WD",
           "ch0": 97399.88,
@@ -78038,10 +77456,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.5,
           "sheet": "DW-03011-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-06",
-        "offset_m": 7.5
+        }
       },
       "geometry": {
         "type": "Point",
@@ -78064,6 +77479,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 97+400 – PK 97+575",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03011-06",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 97399.98,
           "ch1": 97574.94,
@@ -78072,10 +77490,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03011-06",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03011-06",
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -78240,6 +77655,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 97+457",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-06",
+        "offset_m": 7.5,
         "di_set": {
           "preset": "WD",
           "ch0": 97457.35,
@@ -78248,10 +77666,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.5,
           "sheet": "DW-03011-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-06",
-        "offset_m": 7.5
+        }
       },
       "geometry": {
         "type": "Point",
@@ -78274,6 +77689,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 97+457",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-06",
+        "offset_m": 7.5,
         "di_set": {
           "preset": "WD",
           "ch0": 97457.35,
@@ -78282,10 +77700,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.5,
           "sheet": "DW-03011-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-06",
-        "offset_m": 7.5
+        }
       },
       "geometry": {
         "type": "Point",
@@ -78308,6 +77723,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 97+510",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-06",
+        "offset_m": 7.5,
         "di_set": {
           "preset": "WD",
           "ch0": 97509.85,
@@ -78316,10 +77734,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.5,
           "sheet": "DW-03011-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-06",
-        "offset_m": 7.5
+        }
       },
       "geometry": {
         "type": "Point",
@@ -78342,6 +77757,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 97+510",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03011-06",
+        "offset_m": 7.5,
         "di_set": {
           "preset": "WD",
           "ch0": 97509.85,
@@ -78350,10 +77768,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.5,
           "sheet": "DW-03011-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03011-06",
-        "offset_m": 7.5
+        }
       },
       "geometry": {
         "type": "Point",
@@ -78376,6 +77791,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 97+527 – PK 97+575",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03011-06",
+        "offset_m": 11.99,
         "di_set": {
           "ch0": 97527,
           "ch1": 97575.09,
@@ -78384,10 +77802,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03011-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03011-06",
-        "offset_m": 11.99
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -78452,6 +77867,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 98+427",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03012-07",
+        "offset_m": 9.93,
         "di_set": {
           "preset": "D-SD",
           "ch0": 98426.9,
@@ -78460,10 +77878,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.93,
           "sheet": "DW-03012-07",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03012-07",
-        "offset_m": 9.93
+        }
       },
       "geometry": {
         "type": "Point",
@@ -78486,6 +77901,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 98+468",
         "status": "Not Started",
+        "drawing_ref": "DW-03012-07",
+        "offset_m": 8.99,
         "di_set": {
           "preset": "RIP",
           "ch0": 98468.03,
@@ -78495,9 +77912,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03012-07",
           "cert": "label",
           "stated": 77
-        },
-        "drawing_ref": "DW-03012-07",
-        "offset_m": 8.99
+        }
       },
       "geometry": {
         "type": "Point",
@@ -78520,6 +77935,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 98+700 – PK 98+850",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03012-07",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 98700.06,
           "ch1": 98850.02,
@@ -78528,10 +77946,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03012-07",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03012-07",
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -78676,6 +78091,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 98+760",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03012-07",
+        "offset_m": 7.72,
         "di_set": {
           "preset": "WD",
           "ch0": 98760,
@@ -78684,10 +78102,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.72,
           "sheet": "DW-03012-07",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03012-07",
-        "offset_m": 7.72
+        }
       },
       "geometry": {
         "type": "Point",
@@ -78710,6 +78125,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 98+760",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03012-07",
+        "offset_m": 7.72,
         "di_set": {
           "preset": "WD",
           "ch0": 98760,
@@ -78718,10 +78136,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.72,
           "sheet": "DW-03012-07",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03012-07",
-        "offset_m": 7.72
+        }
       },
       "geometry": {
         "type": "Point",
@@ -78744,6 +78159,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 98+808",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03012-07",
+        "offset_m": 7.49,
         "di_set": {
           "preset": "WD",
           "ch0": 98808.01,
@@ -78752,10 +78170,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.49,
           "sheet": "DW-03012-07",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03012-07",
-        "offset_m": 7.49
+        }
       },
       "geometry": {
         "type": "Point",
@@ -78778,6 +78193,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 98+808",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03012-07",
+        "offset_m": 7.49,
         "di_set": {
           "preset": "WD",
           "ch0": 98808.01,
@@ -78786,10 +78204,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.49,
           "sheet": "DW-03012-07",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03012-07",
-        "offset_m": 7.49
+        }
       },
       "geometry": {
         "type": "Point",
@@ -78812,6 +78227,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 98+847 – PK 98+950",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03012-07",
+        "offset_m": 9.96,
         "di_set": {
           "ch0": 98846.79,
           "ch1": 98950,
@@ -78820,10 +78238,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03012-07",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03012-07",
-        "offset_m": 9.96
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -78932,6 +78347,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 98+849",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03012-07",
+        "offset_m": 11.72,
         "di_set": {
           "preset": "D-SD",
           "ch0": 98849.31,
@@ -78940,10 +78358,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 11.72,
           "sheet": "DW-03012-07",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03012-07",
-        "offset_m": 11.72
+        }
       },
       "geometry": {
         "type": "Point",
@@ -78966,6 +78381,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 98+850",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03012-07",
+        "offset_m": 6.86,
         "di_set": {
           "preset": "WD",
           "ch0": 98849.98,
@@ -78974,10 +78392,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 6.86,
           "sheet": "DW-03012-07",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03012-07",
-        "offset_m": 6.86
+        }
       },
       "geometry": {
         "type": "Point",
@@ -79000,6 +78415,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 98+850",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03012-07",
+        "offset_m": 6.86,
         "di_set": {
           "preset": "WD",
           "ch0": 98849.98,
@@ -79008,10 +78426,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 6.86,
           "sheet": "DW-03012-07",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03012-07",
-        "offset_m": 6.86
+        }
       },
       "geometry": {
         "type": "Point",
@@ -79034,6 +78449,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 99+009",
         "status": "Not Started",
+        "drawing_ref": "DW-03012-07",
+        "offset_m": 8.48,
         "di_set": {
           "preset": "RIP",
           "ch0": 99009,
@@ -79043,9 +78460,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03012-07",
           "cert": "label",
           "stated": 100
-        },
-        "drawing_ref": "DW-03012-07",
-        "offset_m": 8.48
+        }
       },
       "geometry": {
         "type": "Point",
@@ -79068,6 +78483,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 99+234",
         "status": "Not Started",
+        "drawing_ref": "DW-03012-07",
+        "offset_m": 7.02,
         "di_set": {
           "preset": "RIP",
           "ch0": 99234,
@@ -79077,9 +78494,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03012-07",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03012-07",
-        "offset_m": 7.02
+        }
       },
       "geometry": {
         "type": "Point",
@@ -79102,6 +78517,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 99+613",
         "status": "Not Started",
+        "drawing_ref": "DW-03013-06",
+        "offset_m": 8.94,
         "di_set": {
           "preset": "RIP",
           "ch0": 99613.46,
@@ -79111,9 +78528,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03013-06",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03013-06",
-        "offset_m": 8.94
+        }
       },
       "geometry": {
         "type": "Point",
@@ -79136,6 +78551,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 99+877",
         "status": "Not Started",
+        "drawing_ref": "DW-03013-06",
+        "offset_m": 8.33,
         "di_set": {
           "preset": "RIP",
           "ch0": 99877.06,
@@ -79145,9 +78562,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03013-06",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03013-06",
-        "offset_m": 8.33
+        }
       },
       "geometry": {
         "type": "Point",
@@ -79170,6 +78585,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 100+272",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03013-06",
+        "offset_m": 10.68,
         "di_set": {
           "preset": "D-SD",
           "ch0": 100271.53,
@@ -79178,10 +78596,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 10.68,
           "sheet": "DW-03013-06",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03013-06",
-        "offset_m": 10.68
+        }
       },
       "geometry": {
         "type": "Point",
@@ -79204,6 +78619,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 100+274 – PK 100+325",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03013-06",
+        "offset_m": 9.82,
         "di_set": {
           "ch0": 100274.02,
           "ch1": 100324.98,
@@ -79212,10 +78630,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03013-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03013-06",
-        "offset_m": 9.82
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -79284,6 +78699,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 100+800",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03013-06",
+        "offset_m": 7.32,
         "di_set": {
           "preset": "WD",
           "ch0": 100799.92,
@@ -79292,10 +78710,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.32,
           "sheet": "DW-03013-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03013-06",
-        "offset_m": 7.32
+        }
       },
       "geometry": {
         "type": "Point",
@@ -79318,6 +78733,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 100+800",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03013-06",
+        "offset_m": 7.32,
         "di_set": {
           "preset": "WD",
           "ch0": 100799.92,
@@ -79326,10 +78744,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.32,
           "sheet": "DW-03013-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03013-06",
-        "offset_m": 7.32
+        }
       },
       "geometry": {
         "type": "Point",
@@ -79352,6 +78767,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 100+842",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03013-06",
+        "offset_m": 7.32,
         "di_set": {
           "preset": "WD",
           "ch0": 100842.41,
@@ -79360,10 +78778,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.32,
           "sheet": "DW-03013-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03013-06",
-        "offset_m": 7.32
+        }
       },
       "geometry": {
         "type": "Point",
@@ -79386,6 +78801,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 100+842",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03013-06",
+        "offset_m": 7.32,
         "di_set": {
           "preset": "WD",
           "ch0": 100842.41,
@@ -79394,10 +78812,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.32,
           "sheet": "DW-03013-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03013-06",
-        "offset_m": 7.32
+        }
       },
       "geometry": {
         "type": "Point",
@@ -79420,6 +78835,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 100+852 – PK 100+904",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03013-06",
+        "offset_m": 12.28,
         "di_set": {
           "ch0": 100851.99,
           "ch1": 100904.37,
@@ -79428,10 +78846,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03013-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03013-06",
-        "offset_m": 12.28
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -79500,6 +78915,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 100+885",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03013-06",
+        "offset_m": 7.66,
         "di_set": {
           "preset": "WD",
           "ch0": 100884.94,
@@ -79508,10 +78926,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.66,
           "sheet": "DW-03013-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03013-06",
-        "offset_m": 7.66
+        }
       },
       "geometry": {
         "type": "Point",
@@ -79534,6 +78949,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 100+885",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03013-06",
+        "offset_m": 7.66,
         "di_set": {
           "preset": "WD",
           "ch0": 100884.94,
@@ -79542,10 +78960,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.66,
           "sheet": "DW-03013-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03013-06",
-        "offset_m": 7.66
+        }
       },
       "geometry": {
         "type": "Point",
@@ -79568,6 +78983,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 100+914 – PK 101+079",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03014-06",
+        "offset_m": 12.24,
         "di_set": {
           "ch0": 100913.75,
           "ch1": 101079.33,
@@ -79576,10 +78994,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03014-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03014-06",
-        "offset_m": 12.24
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -79740,6 +79155,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 100+945",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03014-06",
+        "offset_m": 7.76,
         "di_set": {
           "preset": "WD",
           "ch0": 100944.94,
@@ -79748,10 +79166,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.76,
           "sheet": "DW-03014-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03014-06",
-        "offset_m": 7.76
+        }
       },
       "geometry": {
         "type": "Point",
@@ -79774,6 +79189,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 100+945",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03014-06",
+        "offset_m": 7.76,
         "di_set": {
           "preset": "WD",
           "ch0": 100944.94,
@@ -79782,10 +79200,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.76,
           "sheet": "DW-03014-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03014-06",
-        "offset_m": 7.76
+        }
       },
       "geometry": {
         "type": "Point",
@@ -79808,6 +79223,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 101+005",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03014-06",
+        "offset_m": 7.76,
         "di_set": {
           "preset": "WD",
           "ch0": 101004.94,
@@ -79816,10 +79234,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.76,
           "sheet": "DW-03014-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03014-06",
-        "offset_m": 7.76
+        }
       },
       "geometry": {
         "type": "Point",
@@ -79842,6 +79257,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 101+005",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03014-06",
+        "offset_m": 7.76,
         "di_set": {
           "preset": "WD",
           "ch0": 101004.94,
@@ -79850,10 +79268,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.76,
           "sheet": "DW-03014-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03014-06",
-        "offset_m": 7.76
+        }
       },
       "geometry": {
         "type": "Point",
@@ -79876,6 +79291,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 101+064",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03014-06",
+        "offset_m": 7.76,
         "di_set": {
           "preset": "WD",
           "ch0": 101063.94,
@@ -79884,10 +79302,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.76,
           "sheet": "DW-03014-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03014-06",
-        "offset_m": 7.76
+        }
       },
       "geometry": {
         "type": "Point",
@@ -79910,6 +79325,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 101+064",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03014-06",
+        "offset_m": 7.76,
         "di_set": {
           "preset": "WD",
           "ch0": 101063.94,
@@ -79918,10 +79336,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 7.76,
           "sheet": "DW-03014-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03014-06",
-        "offset_m": 7.76
+        }
       },
       "geometry": {
         "type": "Point",
@@ -79944,6 +79359,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 101+085 – PK 101+100",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03014-06",
+        "offset_m": 12.01,
         "di_set": {
           "ch0": 101084.79,
           "ch1": 101100.07,
@@ -79952,10 +79370,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03014-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03014-06",
-        "offset_m": 12.01
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -79996,6 +79411,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 101+087",
         "status": "Not Started",
+        "drawing_ref": "DW-03014-06",
+        "offset_m": 10.09,
         "di_set": {
           "preset": "RIP",
           "ch0": 101087.2,
@@ -80005,9 +79422,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03014-06",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03014-06",
-        "offset_m": 10.09
+        }
       },
       "geometry": {
         "type": "Point",
@@ -80030,6 +79445,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 101+900 – PK 102+010",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03014-06",
+        "offset_m": 9.33,
         "di_set": {
           "ch0": 101900,
           "ch1": 102009.8,
@@ -80038,10 +79456,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03014-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03014-06",
-        "offset_m": 9.33
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -80154,6 +79569,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 101+903",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03014-06",
+        "offset_m": 10.63,
         "di_set": {
           "preset": "D-SD",
           "ch0": 101902.51,
@@ -80162,10 +79580,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 10.63,
           "sheet": "DW-03014-06",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03014-06",
-        "offset_m": 10.63
+        }
       },
       "geometry": {
         "type": "Point",
@@ -80188,6 +79603,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 102+046",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03014-06",
+        "offset_m": 8.78,
         "di_set": {
           "preset": "D-SD",
           "ch0": 102046.31,
@@ -80196,10 +79614,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.78,
           "sheet": "DW-03014-06",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03014-06",
-        "offset_m": 8.78
+        }
       },
       "geometry": {
         "type": "Point",
@@ -80222,6 +79637,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 102+049 – PK 102+125",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03014-06",
+        "offset_m": 8.42,
         "di_set": {
           "ch0": 102048.84,
           "ch1": 102125.04,
@@ -80230,10 +79648,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03014-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03014-06",
-        "offset_m": 8.42
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -80322,6 +79737,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 13 rectangular toe ditch",
         "chainage_str": "PK 102+125 – PK 102+175",
         "status": "Not Started",
+        "short_code": "T13",
+        "drawing_ref": "DW-03014-06",
+        "offset_m": 6.93,
         "di_set": {
           "ch0": 102125.04,
           "ch1": 102174.85,
@@ -80330,10 +79748,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03014-06",
           "preset": "T13"
-        },
-        "short_code": "T13",
-        "drawing_ref": "DW-03014-06",
-        "offset_m": 6.93
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -80398,6 +79813,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 7 toe ditch",
         "chainage_str": "PK 102+175 – PK 102+325",
         "status": "Not Started",
+        "short_code": "T7",
+        "drawing_ref": "DW-03014-06",
+        "offset_m": 6.94,
         "di_set": {
           "ch0": 102174.85,
           "ch1": 102325,
@@ -80406,10 +79824,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03014-06",
           "preset": "T7"
-        },
-        "short_code": "T7",
-        "drawing_ref": "DW-03014-06",
-        "offset_m": 6.94
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -80558,6 +79973,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 7 toe ditch",
         "chainage_str": "PK 102+699 – PK 102+775",
         "status": "Not Started",
+        "short_code": "T7",
+        "drawing_ref": "DW-03015-06",
+        "offset_m": 9.47,
         "di_set": {
           "ch0": 102698.64,
           "ch1": 102775.02,
@@ -80566,10 +79984,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03015-06",
           "preset": "T7"
-        },
-        "short_code": "T7",
-        "drawing_ref": "DW-03015-06",
-        "offset_m": 9.47
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -80658,6 +80073,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 102+750 – PK 102+851",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03015-06",
+        "offset_m": 9.46,
         "di_set": {
           "ch0": 102750,
           "ch1": 102850.92,
@@ -80666,10 +80084,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03015-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03015-06",
-        "offset_m": 9.46
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -80778,6 +80193,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 102+848",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03015-06",
+        "offset_m": 9.24,
         "di_set": {
           "preset": "D-SD",
           "ch0": 102848.42,
@@ -80786,10 +80204,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.24,
           "sheet": "DW-03015-06",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03015-06",
-        "offset_m": 9.24
+        }
       },
       "geometry": {
         "type": "Point",
@@ -80812,6 +80227,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 102+881",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03015-06",
+        "offset_m": 9.59,
         "di_set": {
           "preset": "D-SD",
           "ch0": 102880.72,
@@ -80820,10 +80238,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.59,
           "sheet": "DW-03015-06",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03015-06",
-        "offset_m": 9.59
+        }
       },
       "geometry": {
         "type": "Point",
@@ -80846,6 +80261,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 103+326 – PK 103+427",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03015-06",
+        "offset_m": 11.58,
         "di_set": {
           "ch0": 103325.54,
           "ch1": 103427.09,
@@ -80854,10 +80272,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03015-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03015-06",
-        "offset_m": 11.58
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -80966,6 +80381,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 103+425",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03015-06",
+        "offset_m": 12.31,
         "di_set": {
           "preset": "D-SD",
           "ch0": 103424.55,
@@ -80974,10 +80392,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 12.31,
           "sheet": "DW-03015-06",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03015-06",
-        "offset_m": 12.31
+        }
       },
       "geometry": {
         "type": "Point",
@@ -81000,6 +80415,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 7 toe ditch",
         "chainage_str": "PK 103+460 – PK 103+675",
         "status": "Not Started",
+        "short_code": "T7",
+        "drawing_ref": "DW-03015-06",
+        "offset_m": 12.18,
         "di_set": {
           "ch0": 103460.02,
           "ch1": 103674.9,
@@ -81008,10 +80426,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03015-06",
           "preset": "T7"
-        },
-        "short_code": "T7",
-        "drawing_ref": "DW-03015-06",
-        "offset_m": 12.18
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -81208,6 +80623,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 103+675 – PK 103+852",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03016-06",
+        "offset_m": 12.14,
         "di_set": {
           "ch0": 103675,
           "ch1": 103851.62,
@@ -81216,10 +80634,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03016-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03016-06",
-        "offset_m": 12.14
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -81388,6 +80803,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 103+854",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03016-06",
+        "offset_m": 11.56,
         "di_set": {
           "preset": "D-SD",
           "ch0": 103854.11,
@@ -81396,10 +80814,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 11.56,
           "sheet": "DW-03016-06",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03016-06",
-        "offset_m": 11.56
+        }
       },
       "geometry": {
         "type": "Point",
@@ -81422,6 +80837,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 105+200 – PK 105+330",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03017-06",
+        "offset_m": 12.05,
         "di_set": {
           "ch0": 105200.02,
           "ch1": 105329.78,
@@ -81430,10 +80848,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03017-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03017-06",
-        "offset_m": 12.05
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -81562,6 +80977,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 105+275 – PK 105+731",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03017-06",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 105275.01,
           "ch1": 105731,
@@ -81570,10 +80988,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03017-06",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03017-06",
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -81842,6 +81257,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 105+476 – PK 105+516",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03017-06",
+        "offset_m": 13.01,
         "di_set": {
           "ch0": 105475.7,
           "ch1": 105516.18,
@@ -81850,10 +81268,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03017-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03017-06",
-        "offset_m": 13.01
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -81914,6 +81329,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 105+524 – PK 105+566",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03017-06",
+        "offset_m": 12.74,
         "di_set": {
           "ch0": 105523.7,
           "ch1": 105565.82,
@@ -81922,10 +81340,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03017-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03017-06",
-        "offset_m": 12.74
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -81986,6 +81401,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 7 toe ditch",
         "chainage_str": "PK 105+650 – PK 105+741",
         "status": "Not Started",
+        "short_code": "T7",
+        "drawing_ref": "DW-03017-06",
+        "offset_m": 11.21,
         "di_set": {
           "ch0": 105650,
           "ch1": 105740.71,
@@ -81994,10 +81412,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03017-06",
           "preset": "T7"
-        },
-        "short_code": "T7",
-        "drawing_ref": "DW-03017-06",
-        "offset_m": 11.21
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -82098,6 +81513,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 105+739",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03017-06",
+        "offset_m": 15.32,
         "di_set": {
           "preset": "D-SD",
           "ch0": 105738.72,
@@ -82106,10 +81524,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 15.32,
           "sheet": "DW-03017-06",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03017-06",
-        "offset_m": 15.32
+        }
       },
       "geometry": {
         "type": "Point",
@@ -82132,6 +81547,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 105+811 – PK 105+949",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03017-06",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 105811,
           "ch1": 105948.67,
@@ -82140,10 +81558,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03017-06",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03017-06",
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -82280,6 +81695,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 106+063",
         "status": "Not Started",
+        "drawing_ref": "DW-03017-06",
+        "offset_m": 11.9,
         "di_set": {
           "preset": "RIP",
           "ch0": 106062.5,
@@ -82289,9 +81706,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03017-06",
           "cert": "label",
           "stated": 1346
-        },
-        "drawing_ref": "DW-03017-06",
-        "offset_m": 11.9
+        }
       },
       "geometry": {
         "type": "Point",
@@ -82314,6 +81729,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 106+388",
         "status": "Not Started",
+        "drawing_ref": "DW-03017-06",
+        "offset_m": 12.01,
         "di_set": {
           "preset": "RIP",
           "ch0": 106387.5,
@@ -82323,9 +81740,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03017-06",
           "cert": "label",
           "stated": 213
-        },
-        "drawing_ref": "DW-03017-06",
-        "offset_m": 12.01
+        }
       },
       "geometry": {
         "type": "Point",
@@ -82348,6 +81763,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 106+654 – PK 107+337",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03018-06",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 106654,
           "ch1": 107337,
@@ -82356,10 +81774,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03018-06",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03018-06",
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -82628,6 +82043,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 106+905",
         "status": "Not Started",
+        "drawing_ref": "DW-03018-06",
+        "offset_m": 13.17,
         "di_set": {
           "preset": "RIP",
           "ch0": 106905,
@@ -82637,9 +82054,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03018-06",
           "cert": "label",
           "stated": 1346
-        },
-        "drawing_ref": "DW-03018-06",
-        "offset_m": 13.17
+        }
       },
       "geometry": {
         "type": "Point",
@@ -82662,6 +82077,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 107+094",
         "status": "Not Started",
+        "drawing_ref": "DW-03018-06",
+        "offset_m": 13.27,
         "di_set": {
           "preset": "RIP",
           "ch0": 107093.92,
@@ -82671,9 +82088,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03018-06",
           "cert": "label",
           "stated": 456
-        },
-        "drawing_ref": "DW-03018-06",
-        "offset_m": 13.27
+        }
       },
       "geometry": {
         "type": "Point",
@@ -82696,6 +82111,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 107+299",
         "status": "Not Started",
+        "drawing_ref": "DW-03018-06",
+        "offset_m": 14.32,
         "di_set": {
           "preset": "RIP",
           "ch0": 107298.9,
@@ -82705,9 +82122,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03018-06",
           "cert": "label",
           "stated": 181
-        },
-        "drawing_ref": "DW-03018-06",
-        "offset_m": 14.32
+        }
       },
       "geometry": {
         "type": "Point",
@@ -82730,6 +82145,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 107+337 – PK 107+888",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03018-06",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 107337,
           "ch1": 107888,
@@ -82738,10 +82156,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03018-06",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03018-06",
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -83006,6 +82421,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 107+344",
         "status": "Not Started",
+        "drawing_ref": "DW-03018-06",
+        "offset_m": 13.52,
         "di_set": {
           "preset": "RIP",
           "ch0": 107344.37,
@@ -83015,9 +82432,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03018-06",
           "cert": "label",
           "stated": 217
-        },
-        "drawing_ref": "DW-03018-06",
-        "offset_m": 13.52
+        }
       },
       "geometry": {
         "type": "Point",
@@ -83040,6 +82455,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 107+744 – PK 107+825",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03018-06",
+        "offset_m": 23.34,
         "di_set": {
           "ch0": 107743.56,
           "ch1": 107825,
@@ -83048,10 +82466,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03018-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03018-06",
-        "offset_m": 23.34
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -83144,6 +82559,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 107+770",
         "status": "Not Started",
+        "drawing_ref": "DW-03018-06",
+        "offset_m": 21.1,
         "di_set": {
           "preset": "RIP",
           "ch0": 107770.15,
@@ -83153,9 +82570,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03018-06",
           "cert": "label",
           "stated": 41
-        },
-        "drawing_ref": "DW-03018-06",
-        "offset_m": 21.1
+        }
       },
       "geometry": {
         "type": "Point",
@@ -83178,6 +82593,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 107+816",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03018-06",
+        "offset_m": 18.03,
         "di_set": {
           "preset": "WD",
           "ch0": 107816.06,
@@ -83186,10 +82604,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 18.03,
           "sheet": "DW-03018-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03018-06",
-        "offset_m": 18.03
+        }
       },
       "geometry": {
         "type": "Point",
@@ -83212,6 +82627,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 107+888 – PK 109+248",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03019-06",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 107888,
           "ch1": 109247.56,
@@ -83220,10 +82638,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03019-06",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03019-06",
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -83492,6 +82907,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 8 bench ditch",
         "chainage_str": "PK 107+888 – PK 108+054",
         "status": "Not Started",
+        "short_code": "T8",
+        "drawing_ref": "DW-03019-06",
+        "offset_m": 12.93,
         "di_set": {
           "ch0": 107888,
           "ch1": 108053.84,
@@ -83500,10 +82918,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03019-06",
           "preset": "T8"
-        },
-        "short_code": "T8",
-        "drawing_ref": "DW-03019-06",
-        "offset_m": 12.93
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -83664,6 +83079,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 107+888",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03018-06",
+        "offset_m": 18.03,
         "di_set": {
           "preset": "WD",
           "ch0": 107888.01,
@@ -83672,10 +83090,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 18.03,
           "sheet": "DW-03018-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03018-06",
-        "offset_m": 18.03
+        }
       },
       "geometry": {
         "type": "Point",
@@ -83698,6 +83113,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 8 bench ditch",
         "chainage_str": "PK 107+888 – PK 108+054",
         "status": "Not Started",
+        "short_code": "T8",
+        "drawing_ref": "DW-03019-06",
+        "offset_m": 12.93,
         "di_set": {
           "ch0": 107888.03,
           "ch1": 108054.13,
@@ -83706,10 +83124,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03019-06",
           "preset": "T8"
-        },
-        "short_code": "T8",
-        "drawing_ref": "DW-03019-06",
-        "offset_m": 12.93
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -83870,6 +83285,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 107+888",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03018-06",
+        "offset_m": 13.41,
         "di_set": {
           "preset": "WD",
           "ch0": 107888.1,
@@ -83878,10 +83296,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 13.41,
           "sheet": "DW-03018-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03018-06",
-        "offset_m": 13.41
+        }
       },
       "geometry": {
         "type": "Point",
@@ -83904,6 +83319,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 107+936",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03019-06",
+        "offset_m": 18.03,
         "di_set": {
           "preset": "WD",
           "ch0": 107935.52,
@@ -83912,10 +83330,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 18.03,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03019-06",
-        "offset_m": 18.03
+        }
       },
       "geometry": {
         "type": "Point",
@@ -83938,6 +83353,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 107+960",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03019-06",
+        "offset_m": 18.03,
         "di_set": {
           "preset": "WD",
           "ch0": 107959.63,
@@ -83946,10 +83364,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 18.03,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03019-06",
-        "offset_m": 18.03
+        }
       },
       "geometry": {
         "type": "Point",
@@ -83972,6 +83387,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 107+984",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03019-06",
+        "offset_m": 18.29,
         "di_set": {
           "preset": "WD",
           "ch0": 107983.57,
@@ -83980,10 +83398,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 18.29,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03019-06",
-        "offset_m": 18.29
+        }
       },
       "geometry": {
         "type": "Point",
@@ -84006,6 +83421,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 108+008",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03019-06",
+        "offset_m": 18.29,
         "di_set": {
           "preset": "WD",
           "ch0": 108007.51,
@@ -84014,10 +83432,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 18.29,
           "sheet": "DW-03019-06",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03019-06",
-        "offset_m": 18.29
+        }
       },
       "geometry": {
         "type": "Point",
@@ -84040,6 +83455,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 108+775 – PK 108+886",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03019-06",
+        "offset_m": 19.84,
         "di_set": {
           "ch0": 108775.01,
           "ch1": 108885.72,
@@ -84048,10 +83466,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03019-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03019-06",
-        "offset_m": 19.84
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -84168,6 +83583,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 108+893 – PK 108+975",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03019-06",
+        "offset_m": 18.86,
         "di_set": {
           "ch0": 108892.77,
           "ch1": 108975.26,
@@ -84176,10 +83594,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03019-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03019-06",
-        "offset_m": 18.86
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -84272,6 +83687,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 108+975 – PK 109+062",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03019-06",
+        "offset_m": 18.58,
         "di_set": {
           "ch0": 108975.06,
           "ch1": 109061.54,
@@ -84280,10 +83698,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03019-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03019-06",
-        "offset_m": 18.58
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -84380,6 +83795,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 109+071 – PK 109+197",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03019-06",
+        "offset_m": 18.8,
         "di_set": {
           "ch0": 109070.74,
           "ch1": 109196.56,
@@ -84388,10 +83806,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03019-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03019-06",
-        "offset_m": 18.8
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -84520,6 +83935,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 109+327 – PK 109+925",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03020-06",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 109327,
           "ch1": 109925,
@@ -84528,10 +83946,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03020-06",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03020-06",
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -84800,6 +84215,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 109+460",
         "status": "Not Started",
+        "drawing_ref": "DW-03020-06",
+        "offset_m": 12.07,
         "di_set": {
           "preset": "RIP",
           "ch0": 109460,
@@ -84809,9 +84226,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03020-06",
           "cert": "label",
           "stated": 502
-        },
-        "drawing_ref": "DW-03020-06",
-        "offset_m": 12.07
+        }
       },
       "geometry": {
         "type": "Point",
@@ -84834,6 +84249,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 110+188",
         "status": "Not Started",
+        "drawing_ref": "DW-03020-06",
+        "offset_m": 8.21,
         "di_set": {
           "preset": "RIP",
           "ch0": 110188.28,
@@ -84843,9 +84260,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03020-06",
           "cert": "label",
           "stated": 98
-        },
-        "drawing_ref": "DW-03020-06",
-        "offset_m": 8.21
+        }
       },
       "geometry": {
         "type": "Point",
@@ -84868,6 +84283,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 110+200 – PK 111+075",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03020-06",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 110200,
           "ch1": 111074.98,
@@ -84876,10 +84294,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03020-06",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03020-06",
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -85148,6 +84563,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 110+314",
         "status": "Not Started",
+        "drawing_ref": "DW-03020-06",
+        "offset_m": 9.06,
         "di_set": {
           "preset": "RIP",
           "ch0": 110313.92,
@@ -85157,9 +84574,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03020-06",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03020-06",
-        "offset_m": 9.06
+        }
       },
       "geometry": {
         "type": "Point",
@@ -85182,6 +84597,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 110+494",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03020-06",
+        "offset_m": 13.07,
         "di_set": {
           "preset": "D-SD",
           "ch0": 110494.24,
@@ -85190,10 +84608,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 13.07,
           "sheet": "DW-03020-06",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03020-06",
-        "offset_m": 13.07
+        }
       },
       "geometry": {
         "type": "Point",
@@ -85216,6 +84631,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 110+497 – PK 110+650",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03020-06",
+        "offset_m": 11.88,
         "di_set": {
           "ch0": 110496.73,
           "ch1": 110650.05,
@@ -85224,10 +84642,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03020-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03020-06",
-        "offset_m": 11.88
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -85376,6 +84791,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 110+658 – PK 110+825",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03021-06",
+        "offset_m": 12.32,
         "di_set": {
           "ch0": 110658.32,
           "ch1": 110824.91,
@@ -85384,10 +84802,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03021-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03021-06",
-        "offset_m": 12.32
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -85548,6 +84963,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 110+665",
         "status": "Not Started",
+        "drawing_ref": "DW-03020-06",
+        "offset_m": 10.31,
         "di_set": {
           "preset": "RIP",
           "ch0": 110665.2,
@@ -85557,9 +84974,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03020-06",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03020-06",
-        "offset_m": 10.31
+        }
       },
       "geometry": {
         "type": "Point",
@@ -85582,6 +84997,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 7 toe ditch",
         "chainage_str": "PK 110+825 – PK 111+013",
         "status": "Not Started",
+        "short_code": "T7",
+        "drawing_ref": "DW-03021-06",
+        "offset_m": 12.07,
         "di_set": {
           "ch0": 110824.91,
           "ch1": 111012.85,
@@ -85590,10 +85008,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03021-06",
           "preset": "T7"
-        },
-        "short_code": "T7",
-        "drawing_ref": "DW-03021-06",
-        "offset_m": 12.07
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -85770,6 +85185,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 111+020 – PK 111+075",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03021-06",
+        "offset_m": 11.89,
         "di_set": {
           "ch0": 111020.12,
           "ch1": 111074.93,
@@ -85778,10 +85196,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03021-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03021-06",
-        "offset_m": 11.89
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -85850,6 +85265,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 111+026",
         "status": "Not Started",
+        "drawing_ref": "DW-03021-06",
+        "offset_m": 9.8,
         "di_set": {
           "preset": "RIP",
           "ch0": 111026.09,
@@ -85859,9 +85276,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03021-06",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03021-06",
-        "offset_m": 9.8
+        }
       },
       "geometry": {
         "type": "Point",
@@ -85884,6 +85299,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 7 toe ditch",
         "chainage_str": "PK 111+075 – PK 111+349",
         "status": "Not Started",
+        "short_code": "T7",
+        "drawing_ref": "DW-03021-06",
+        "offset_m": 9.95,
         "di_set": {
           "ch0": 111074.93,
           "ch1": 111349.21,
@@ -85892,10 +85310,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03021-06",
           "preset": "T7"
-        },
-        "short_code": "T7",
-        "drawing_ref": "DW-03021-06",
-        "offset_m": 9.95
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -86140,6 +85555,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 111+352 – PK 111+375",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03021-06",
+        "offset_m": 9.39,
         "di_set": {
           "ch0": 111352.41,
           "ch1": 111374.94,
@@ -86148,10 +85566,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03021-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03021-06",
-        "offset_m": 9.39
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -86196,6 +85611,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 111+851 – PK 111+925",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03021-06",
+        "offset_m": 10.71,
         "di_set": {
           "ch0": 111851.1,
           "ch1": 111925.23,
@@ -86204,10 +85622,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03021-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03021-06",
-        "offset_m": 10.71
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -86292,6 +85707,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 111+854",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03021-06",
+        "offset_m": 10.45,
         "di_set": {
           "preset": "D-SD",
           "ch0": 111853.6,
@@ -86300,10 +85718,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 10.45,
           "sheet": "DW-03021-06",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03021-06",
-        "offset_m": 10.45
+        }
       },
       "geometry": {
         "type": "Point",
@@ -86326,6 +85741,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 111+950 – PK 112+100",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03021-06",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 111949.98,
           "ch1": 112100,
@@ -86334,10 +85752,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03021-06",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03021-06",
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -86486,6 +85901,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 111+976 – PK 112+125",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03021-06",
+        "offset_m": 12.29,
         "di_set": {
           "ch0": 111975.58,
           "ch1": 112125,
@@ -86494,10 +85912,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03021-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03021-06",
-        "offset_m": 12.29
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -86642,6 +86057,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 111+978",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03021-06",
+        "offset_m": 11.67,
         "di_set": {
           "preset": "D-SD",
           "ch0": 111978.08,
@@ -86650,10 +86068,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 11.67,
           "sheet": "DW-03021-06",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03021-06",
-        "offset_m": 11.67
+        }
       },
       "geometry": {
         "type": "Point",
@@ -86676,6 +86091,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 112+100 – PK 112+250",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03022-06",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 112100,
           "ch1": 112250.05,
@@ -86684,10 +86102,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03022-06",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03022-06",
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -86836,6 +86251,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 112+510",
         "status": "Not Started",
+        "drawing_ref": "DW-03022-06",
+        "offset_m": 7.23,
         "di_set": {
           "preset": "RIP",
           "ch0": 112510,
@@ -86845,9 +86262,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03022-06",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03022-06",
-        "offset_m": 7.23
+        }
       },
       "geometry": {
         "type": "Point",
@@ -86870,6 +86285,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 112+854",
         "status": "Not Started",
+        "drawing_ref": "DW-03022-06",
+        "offset_m": 8.12,
         "di_set": {
           "preset": "RIP",
           "ch0": 112853.56,
@@ -86879,9 +86296,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03022-06",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03022-06",
-        "offset_m": 8.12
+        }
       },
       "geometry": {
         "type": "Point",
@@ -86904,6 +86319,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 113+125 – PK 113+200",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03022-06",
+        "offset_m": 8.01,
         "di_set": {
           "ch0": 113124.72,
           "ch1": 113200.02,
@@ -86912,10 +86330,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03022-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03022-06",
-        "offset_m": 8.01
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -87004,6 +86419,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 113+130",
         "status": "Not Started",
+        "drawing_ref": "DW-03022-06",
+        "offset_m": 6.3,
         "di_set": {
           "preset": "RIP",
           "ch0": 113130.17,
@@ -87013,9 +86430,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03022-06",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03022-06",
-        "offset_m": 6.3
+        }
       },
       "geometry": {
         "type": "Point",
@@ -87038,6 +86453,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 113+675 – PK 113+875",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03023-06",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 113675,
           "ch1": 113874.99,
@@ -87046,10 +86464,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03023-06",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03023-06",
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -87234,6 +86649,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 113+695 – PK 113+795",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03023-06",
+        "offset_m": 11.57,
         "di_set": {
           "ch0": 113694.75,
           "ch1": 113794.97,
@@ -87242,10 +86660,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03023-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03023-06",
-        "offset_m": 11.57
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -87354,6 +86769,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 113+709",
         "status": "Not Started",
+        "drawing_ref": "DW-03023-06",
+        "offset_m": 10.29,
         "di_set": {
           "preset": "RIP",
           "ch0": 113708.58,
@@ -87363,9 +86780,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03023-06",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03023-06",
-        "offset_m": 10.29
+        }
       },
       "geometry": {
         "type": "Point",
@@ -87388,6 +86803,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 113+798 – PK 113+828",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03023-06",
+        "offset_m": 11.43,
         "di_set": {
           "ch0": 113798.14,
           "ch1": 113828.49,
@@ -87396,10 +86814,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03023-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03023-06",
-        "offset_m": 11.43
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -87452,6 +86867,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 7 toe ditch",
         "chainage_str": "PK 113+829 – PK 113+999",
         "status": "Not Started",
+        "short_code": "T7",
+        "drawing_ref": "DW-03023-06",
+        "offset_m": 9.96,
         "di_set": {
           "ch0": 113828.98,
           "ch1": 113998.77,
@@ -87460,10 +86878,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03023-06",
           "preset": "T7"
-        },
-        "short_code": "T7",
-        "drawing_ref": "DW-03023-06",
-        "offset_m": 9.96
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -87624,6 +87039,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 114+063",
         "status": "Not Started",
+        "drawing_ref": "DW-03023-06",
+        "offset_m": 6.88,
         "di_set": {
           "preset": "RIP",
           "ch0": 114063.04,
@@ -87633,9 +87050,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03023-06",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03023-06",
-        "offset_m": 6.88
+        }
       },
       "geometry": {
         "type": "Point",
@@ -87658,6 +87073,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 7 toe ditch",
         "chainage_str": "PK 114+275 – PK 114+375",
         "status": "Not Started",
+        "short_code": "T7",
+        "drawing_ref": "DW-03023-06",
+        "offset_m": 10.66,
         "di_set": {
           "ch0": 114274.56,
           "ch1": 114375.15,
@@ -87666,10 +87084,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03023-06",
           "preset": "T7"
-        },
-        "short_code": "T7",
-        "drawing_ref": "DW-03023-06",
-        "offset_m": 10.66
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -87778,6 +87193,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 114+350 – PK 114+449",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03023-06",
+        "offset_m": 14.58,
         "di_set": {
           "ch0": 114350,
           "ch1": 114449.24,
@@ -87786,10 +87204,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03023-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03023-06",
-        "offset_m": 14.58
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -87894,6 +87309,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 114+375 – PK 114+600",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03023-06",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 114375,
           "ch1": 114600.01,
@@ -87902,10 +87320,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03023-06",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03023-06",
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -88114,6 +87529,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 114+375 – PK 114+429",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03023-06",
+        "offset_m": 14.28,
         "di_set": {
           "ch0": 114375.15,
           "ch1": 114429.44,
@@ -88122,10 +87540,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03023-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03023-06",
-        "offset_m": 14.28
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -88194,6 +87609,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 114+432",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03023-06",
+        "offset_m": 15.99,
         "di_set": {
           "preset": "D-SD",
           "ch0": 114431.91,
@@ -88202,10 +87620,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 15.99,
           "sheet": "DW-03023-06",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03023-06",
-        "offset_m": 15.99
+        }
       },
       "geometry": {
         "type": "Point",
@@ -88228,6 +87643,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 114+457",
         "status": "Not Started",
+        "drawing_ref": "DW-03023-06",
+        "offset_m": 13.44,
         "di_set": {
           "preset": "RIP",
           "ch0": 114457,
@@ -88237,9 +87654,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03023-06",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03023-06",
-        "offset_m": 13.44
+        }
       },
       "geometry": {
         "type": "Point",
@@ -88262,6 +87677,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 114+506",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03023-06",
+        "offset_m": 17.27,
         "di_set": {
           "preset": "D-SD",
           "ch0": 114505.76,
@@ -88270,10 +87688,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 17.27,
           "sheet": "DW-03023-06",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03023-06",
-        "offset_m": 17.27
+        }
       },
       "geometry": {
         "type": "Point",
@@ -88296,6 +87711,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 114+970 – PK 115+102",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03024-07",
+        "offset_m": 9.58,
         "di_set": {
           "ch0": 114969.83,
           "ch1": 115101.96,
@@ -88304,10 +87722,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03024-07",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03024-07",
-        "offset_m": 9.58
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -88440,6 +87855,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 115+100",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03024-07",
+        "offset_m": 10.2,
         "di_set": {
           "preset": "D-SD",
           "ch0": 115099.51,
@@ -88448,10 +87866,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 10.2,
           "sheet": "DW-03024-07",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03024-07",
-        "offset_m": 10.2
+        }
       },
       "geometry": {
         "type": "Point",
@@ -88474,6 +87889,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 115+139",
         "status": "Not Started",
+        "drawing_ref": "DW-03024-07",
+        "offset_m": 8.64,
         "di_set": {
           "preset": "RIP",
           "ch0": 115139,
@@ -88483,9 +87900,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03024-07",
           "cert": "label",
           "stated": 47
-        },
-        "drawing_ref": "DW-03024-07",
-        "offset_m": 8.64
+        }
       },
       "geometry": {
         "type": "Point",
@@ -88508,6 +87923,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 115+140",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03024-07",
+        "offset_m": 10.88,
         "di_set": {
           "preset": "D-SD",
           "ch0": 115140.49,
@@ -88516,10 +87934,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 10.88,
           "sheet": "DW-03024-07",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03024-07",
-        "offset_m": 10.88
+        }
       },
       "geometry": {
         "type": "Point",
@@ -88542,6 +87957,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 115+143 – PK 115+300",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03024-07",
+        "offset_m": 8.87,
         "di_set": {
           "ch0": 115143,
           "ch1": 115299.99,
@@ -88550,10 +87968,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03024-07",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03024-07",
-        "offset_m": 8.87
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -88706,6 +88121,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 7 toe ditch",
         "chainage_str": "PK 115+301 – PK 115+425",
         "status": "Not Started",
+        "short_code": "T7",
+        "drawing_ref": "DW-03024-07",
+        "offset_m": 8.47,
         "di_set": {
           "ch0": 115301.06,
           "ch1": 115425.16,
@@ -88714,10 +88132,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03024-07",
           "preset": "T7"
-        },
-        "short_code": "T7",
-        "drawing_ref": "DW-03024-07",
-        "offset_m": 8.47
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -88842,6 +88257,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 115+425 – PK 115+491",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03024-07",
+        "offset_m": 10.84,
         "di_set": {
           "ch0": 115425.2,
           "ch1": 115491.25,
@@ -88850,10 +88268,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03024-07",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03024-07",
-        "offset_m": 10.84
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -88934,6 +88349,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 115+499 – PK 115+550",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03024-07",
+        "offset_m": 11.06,
         "di_set": {
           "ch0": 115498.58,
           "ch1": 115549.97,
@@ -88942,10 +88360,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03024-07",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03024-07",
-        "offset_m": 11.06
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -89014,6 +88429,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 115+925 – PK 116+250",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03024-07",
+        "offset_m": 10.98,
         "di_set": {
           "ch0": 115924.9,
           "ch1": 116249.82,
@@ -89022,10 +88440,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03024-07",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03024-07",
-        "offset_m": 10.98
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -89290,6 +88705,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 116+175 – PK 116+688",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03025-06",
+        "offset_m": 3.9,
         "di_set": {
           "ch0": 116174.99,
           "ch1": 116688,
@@ -89298,10 +88716,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03025-06",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03025-06",
-        "offset_m": 3.9
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -89566,6 +88981,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 116+395",
         "status": "Not Started",
+        "drawing_ref": "DW-03025-06",
+        "offset_m": 11.4,
         "di_set": {
           "preset": "RIP",
           "ch0": 116394.99,
@@ -89575,9 +88992,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03025-06",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03025-06",
-        "offset_m": 11.4
+        }
       },
       "geometry": {
         "type": "Point",
@@ -89600,6 +89015,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 7 toe ditch",
         "chainage_str": "PK 116+625 – PK 116+800",
         "status": "Not Started",
+        "short_code": "T7",
+        "drawing_ref": "DW-03025-06",
+        "offset_m": 12.46,
         "di_set": {
           "ch0": 116625,
           "ch1": 116800.16,
@@ -89608,10 +89026,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03025-06",
           "preset": "T7"
-        },
-        "short_code": "T7",
-        "drawing_ref": "DW-03025-06",
-        "offset_m": 12.46
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -89780,6 +89195,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 116+688 – PK 116+741",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03025-06",
+        "offset_m": 3.28,
         "di_set": {
           "ch0": 116688,
           "ch1": 116741,
@@ -89788,10 +89206,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03025-06",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03025-06",
-        "offset_m": 3.28
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -89860,6 +89275,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 116+741 – PK 116+775",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03025-06",
+        "offset_m": 3.26,
         "di_set": {
           "ch0": 116741,
           "ch1": 116775.01,
@@ -89868,10 +89286,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03025-06",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03025-06",
-        "offset_m": 3.26
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -89924,6 +89339,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 118+453",
         "status": "Not Started",
+        "drawing_ref": "DW-03026-07",
+        "offset_m": 9.14,
         "di_set": {
           "preset": "RIP",
           "ch0": 118453,
@@ -89933,9 +89350,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03026-07",
           "cert": "label",
           "stated": 196
-        },
-        "drawing_ref": "DW-03026-07",
-        "offset_m": 9.14
+        }
       },
       "geometry": {
         "type": "Point",
@@ -89958,6 +89373,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 118+500 – PK 118+900",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03026-07",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 118500.03,
           "ch1": 118900.02,
@@ -89966,10 +89384,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03026-07",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03026-07",
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -90234,6 +89649,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 119+305",
         "status": "Not Started",
+        "drawing_ref": "DW-03027-06",
+        "offset_m": 8.12,
         "di_set": {
           "preset": "RIP",
           "ch0": 119305,
@@ -90243,9 +89660,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03027-06",
           "cert": "label",
           "stated": 56
-        },
-        "drawing_ref": "DW-03027-06",
-        "offset_m": 8.12
+        }
       },
       "geometry": {
         "type": "Point",
@@ -90268,6 +89683,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 119+336",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03027-06",
+        "offset_m": 11.23,
         "di_set": {
           "preset": "D-SD",
           "ch0": 119335.74,
@@ -90276,10 +89694,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 11.23,
           "sheet": "DW-03027-06",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03027-06",
-        "offset_m": 11.23
+        }
       },
       "geometry": {
         "type": "Point",
@@ -90302,6 +89717,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 119+553",
         "status": "Not Started",
+        "drawing_ref": "DW-03027-06",
+        "offset_m": 7.99,
         "di_set": {
           "preset": "RIP",
           "ch0": 119553.15,
@@ -90311,9 +89728,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03027-06",
           "cert": "label",
           "stated": 275
-        },
-        "drawing_ref": "DW-03027-06",
-        "offset_m": 7.99
+        }
       },
       "geometry": {
         "type": "Point",
@@ -90336,6 +89751,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 13 rectangular toe ditch",
         "chainage_str": "PK 120+232 – PK 120+276",
         "status": "Not Started",
+        "short_code": "T13",
+        "drawing_ref": "DW-03027-06",
+        "offset_m": 9.01,
         "di_set": {
           "ch0": 120232.03,
           "ch1": 120275.9,
@@ -90344,10 +89762,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03027-06",
           "preset": "T13"
-        },
-        "short_code": "T13",
-        "drawing_ref": "DW-03027-06",
-        "offset_m": 9.01
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -90408,6 +89823,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 120+275 – PK 120+447",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03027-06",
+        "offset_m": 10.46,
         "di_set": {
           "ch0": 120275,
           "ch1": 120446.82,
@@ -90416,10 +89834,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03027-06",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03027-06",
-        "offset_m": 10.46
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -90584,6 +89999,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 120+465",
         "status": "Not Started",
+        "drawing_ref": "DW-03027-06",
+        "offset_m": 8.08,
         "di_set": {
           "preset": "RIP",
           "ch0": 120465,
@@ -90593,9 +90010,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03027-06",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03027-06",
-        "offset_m": 8.08
+        }
       },
       "geometry": {
         "type": "Point",
@@ -90618,6 +90033,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 121+175 – PK 121+278",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03028-05",
+        "offset_m": 12.69,
         "di_set": {
           "ch0": 121175,
           "ch1": 121277.71,
@@ -90626,10 +90044,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03028-05",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03028-05",
-        "offset_m": 12.69
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -90738,6 +90153,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 121+280",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03028-05",
+        "offset_m": 14.08,
         "di_set": {
           "preset": "D-SD",
           "ch0": 121280.17,
@@ -90746,10 +90164,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 14.08,
           "sheet": "DW-03028-05",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03028-05",
-        "offset_m": 14.08
+        }
       },
       "geometry": {
         "type": "Point",
@@ -90772,6 +90187,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 121+295",
         "status": "Not Started",
+        "drawing_ref": "DW-03028-05",
+        "offset_m": 11.58,
         "di_set": {
           "preset": "RIP",
           "ch0": 121295.15,
@@ -90781,9 +90198,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03028-05",
           "cert": "label",
           "stated": 138
-        },
-        "drawing_ref": "DW-03028-05",
-        "offset_m": 11.58
+        }
       },
       "geometry": {
         "type": "Point",
@@ -90806,6 +90221,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 121+300 – PK 121+400",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03028-05",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 121300,
           "ch1": 121400,
@@ -90814,10 +90232,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03028-05",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03028-05",
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -90922,6 +90337,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 121+565",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03028-05",
+        "offset_m": 10.67,
         "di_set": {
           "preset": "D-SD",
           "ch0": 121564.65,
@@ -90930,10 +90348,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 10.67,
           "sheet": "DW-03028-05",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03028-05",
-        "offset_m": 10.67
+        }
       },
       "geometry": {
         "type": "Point",
@@ -90956,6 +90371,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 121+567 – PK 121+744",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03028-05",
+        "offset_m": 10.09,
         "di_set": {
           "ch0": 121567.14,
           "ch1": 121744.14,
@@ -90964,10 +90382,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03028-05",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03028-05",
-        "offset_m": 10.09
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -91136,6 +90551,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 7 toe ditch",
         "chainage_str": "PK 121+851 – PK 122+193",
         "status": "Not Started",
+        "short_code": "T7",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 26.16,
         "di_set": {
           "ch0": 121851.32,
           "ch1": 122193.04,
@@ -91144,10 +90562,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03029-05",
           "preset": "T7"
-        },
-        "short_code": "T7",
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 26.16
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -91412,6 +90827,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 6 collector drain",
         "chainage_str": "PK 122+150 – PK 122+700",
         "status": "Not Started",
+        "short_code": "T6",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 9.5,
         "di_set": {
           "ch0": 122150,
           "ch1": 122700,
@@ -91420,10 +90838,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03029-05",
           "preset": "T6"
-        },
-        "short_code": "T6",
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 9.5
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -91688,6 +91103,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 122+325 – PK 123+225",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 3.25,
         "di_set": {
           "ch0": 122324.98,
           "ch1": 123225,
@@ -91696,10 +91114,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03029-05",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 3.25
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -91968,6 +91383,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 122+400 – PK 123+225",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 20.55,
         "di_set": {
           "ch0": 122400,
           "ch1": 123225,
@@ -91976,10 +91394,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03029-05",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 20.55
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -92244,6 +91659,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 122+421",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 24.67,
         "di_set": {
           "preset": "WD",
           "ch0": 122420.74,
@@ -92252,10 +91670,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 24.67,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 24.67
+        }
       },
       "geometry": {
         "type": "Point",
@@ -92278,6 +91693,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 122+456",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 24.78,
         "di_set": {
           "preset": "WD",
           "ch0": 122455.74,
@@ -92286,10 +91704,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 24.78,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 24.78
+        }
       },
       "geometry": {
         "type": "Point",
@@ -92312,6 +91727,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 122+491",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 25.43,
         "di_set": {
           "preset": "WD",
           "ch0": 122490.74,
@@ -92320,10 +91738,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 25.43,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 25.43
+        }
       },
       "geometry": {
         "type": "Point",
@@ -92346,6 +91761,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 122+525",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 8.69,
         "di_set": {
           "preset": "WD",
           "ch0": 122525.1,
@@ -92354,10 +91772,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.69,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 8.69
+        }
       },
       "geometry": {
         "type": "Point",
@@ -92380,6 +91795,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 122+561",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 25.44,
         "di_set": {
           "preset": "WD",
           "ch0": 122560.72,
@@ -92388,10 +91806,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 25.44,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 25.44
+        }
       },
       "geometry": {
         "type": "Point",
@@ -92414,6 +91829,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 122+595",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 8.96,
         "di_set": {
           "preset": "WD",
           "ch0": 122595.1,
@@ -92422,10 +91840,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.96,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 8.96
+        }
       },
       "geometry": {
         "type": "Point",
@@ -92448,6 +91863,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 122+630",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 8.96,
         "di_set": {
           "preset": "WD",
           "ch0": 122630.1,
@@ -92456,10 +91874,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.96,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 8.96
+        }
       },
       "geometry": {
         "type": "Point",
@@ -92482,6 +91897,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 122+665",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 9.14,
         "di_set": {
           "preset": "WD",
           "ch0": 122665.1,
@@ -92490,10 +91908,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.14,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 9.14
+        }
       },
       "geometry": {
         "type": "Point",
@@ -92516,6 +91931,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 122+679",
         "status": "Not Started",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 30.04,
         "di_set": {
           "preset": "RIP",
           "ch0": 122678.66,
@@ -92525,9 +91942,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03029-05",
           "cert": "label",
           "stated": 28
-        },
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 30.04
+        }
       },
       "geometry": {
         "type": "Point",
@@ -92550,6 +91965,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 122+696 – PK 122+749",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 33.1,
         "di_set": {
           "ch0": 122696.47,
           "ch1": 122748.6,
@@ -92558,10 +91976,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03029-05",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 33.1
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -92630,6 +92045,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 6 collector drain",
         "chainage_str": "PK 122+700 – PK 122+825",
         "status": "Not Started",
+        "short_code": "T6",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 9.5,
         "di_set": {
           "ch0": 122700,
           "ch1": 122825,
@@ -92638,10 +92056,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03029-05",
           "preset": "T6"
-        },
-        "short_code": "T6",
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 9.5
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -92766,6 +92181,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 122+701",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 26.48,
         "di_set": {
           "preset": "WD",
           "ch0": 122700.78,
@@ -92774,10 +92192,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 26.48,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 26.48
+        }
       },
       "geometry": {
         "type": "Point",
@@ -92800,6 +92215,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 122+725",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 15.64,
         "di_set": {
           "preset": "D-SD",
           "ch0": 122724.91,
@@ -92808,10 +92226,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 15.64,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 15.64
+        }
       },
       "geometry": {
         "type": "Point",
@@ -92834,6 +92249,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 122+736",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 26.48,
         "di_set": {
           "preset": "WD",
           "ch0": 122735.78,
@@ -92842,10 +92260,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 26.48,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 26.48
+        }
       },
       "geometry": {
         "type": "Point",
@@ -92868,6 +92283,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 12 toe ditch",
         "chainage_str": "PK 122+749 – PK 122+818",
         "status": "Not Started",
+        "short_code": "T12",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 33.16,
         "di_set": {
           "ch0": 122748.6,
           "ch1": 122818.49,
@@ -92876,10 +92294,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03029-05",
           "preset": "T12"
-        },
-        "short_code": "T12",
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 33.16
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -92960,6 +92375,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 122+770",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 9.69,
         "di_set": {
           "preset": "WD",
           "ch0": 122770.11,
@@ -92968,10 +92386,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.69,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 9.69
+        }
       },
       "geometry": {
         "type": "Point",
@@ -92994,6 +92409,8 @@ window.SECTION03_ASSETS = {
         "typology": "Riprap protection",
         "chainage_str": "PK 122+785",
         "status": "Not Started",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 31.36,
         "di_set": {
           "preset": "RIP",
           "ch0": 122785.08,
@@ -93003,9 +92420,7 @@ window.SECTION03_ASSETS = {
           "sheet": "DW-03029-05",
           "cert": "label",
           "stated": 67
-        },
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 31.36
+        }
       },
       "geometry": {
         "type": "Point",
@@ -93028,6 +92443,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 122+805",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 9.69,
         "di_set": {
           "preset": "WD",
           "ch0": 122805.11,
@@ -93036,10 +92454,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.69,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 9.69
+        }
       },
       "geometry": {
         "type": "Point",
@@ -93062,6 +92477,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 6 collector drain",
         "chainage_str": "PK 122+825 – PK 123+050",
         "status": "Not Started",
+        "short_code": "T6",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 9.5,
         "di_set": {
           "ch0": 122824.98,
           "ch1": 123049.98,
@@ -93070,10 +92488,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03029-05",
           "preset": "T6"
-        },
-        "short_code": "T6",
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 9.5
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -93278,6 +92693,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 122+840",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 9.69,
         "di_set": {
           "preset": "WD",
           "ch0": 122840.11,
@@ -93286,10 +92704,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.69,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 9.69
+        }
       },
       "geometry": {
         "type": "Point",
@@ -93312,6 +92727,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 122+875",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 9.27,
         "di_set": {
           "preset": "WD",
           "ch0": 122875.07,
@@ -93320,10 +92738,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.27,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 9.27
+        }
       },
       "geometry": {
         "type": "Point",
@@ -93346,6 +92761,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 122+910",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 9.23,
         "di_set": {
           "preset": "WD",
           "ch0": 122910.1,
@@ -93354,10 +92772,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 9.23,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 9.23
+        }
       },
       "geometry": {
         "type": "Point",
@@ -93380,6 +92795,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 122+945",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 8.96,
         "di_set": {
           "preset": "WD",
           "ch0": 122945.1,
@@ -93388,10 +92806,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.96,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 8.96
+        }
       },
       "geometry": {
         "type": "Point",
@@ -93414,6 +92829,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 122+980",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 8.69,
         "di_set": {
           "preset": "WD",
           "ch0": 122980.1,
@@ -93422,10 +92840,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.69,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 8.69
+        }
       },
       "geometry": {
         "type": "Point",
@@ -93448,6 +92863,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 123+015",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 8.69,
         "di_set": {
           "preset": "WD",
           "ch0": 123015.1,
@@ -93456,10 +92874,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.69,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 8.69
+        }
       },
       "geometry": {
         "type": "Point",
@@ -93482,6 +92897,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 123+050",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 8.69,
         "di_set": {
           "preset": "WD",
           "ch0": 123050.1,
@@ -93490,10 +92908,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.69,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 8.69
+        }
       },
       "geometry": {
         "type": "Point",
@@ -93516,6 +92931,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 123+085",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 20.88,
         "di_set": {
           "preset": "WD",
           "ch0": 123085.45,
@@ -93524,10 +92942,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 20.88,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 20.88
+        }
       },
       "geometry": {
         "type": "Point",
@@ -93550,6 +92965,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 123+120",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 16.12,
         "di_set": {
           "preset": "WD",
           "ch0": 123120.12,
@@ -93558,10 +92976,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 16.12,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 16.12
+        }
       },
       "geometry": {
         "type": "Point",
@@ -93584,6 +92999,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 123+155",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 8.69,
         "di_set": {
           "preset": "WD",
           "ch0": 123155.1,
@@ -93592,10 +93010,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.69,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 8.69
+        }
       },
       "geometry": {
         "type": "Point",
@@ -93618,6 +93033,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 123+190",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 8.69,
         "di_set": {
           "preset": "WD",
           "ch0": 123190.1,
@@ -93626,10 +93044,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 8.69,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 8.69
+        }
       },
       "geometry": {
         "type": "Point",
@@ -93652,6 +93067,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 123+225 – PK 123+675",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03030-05",
+        "offset_m": 8.55,
         "di_set": {
           "ch0": 123225,
           "ch1": 123675,
@@ -93660,10 +93078,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03030-05",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03030-05",
-        "offset_m": 8.55
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -93928,6 +93343,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 9 shoulder ditch",
         "chainage_str": "PK 123+225 – PK 123+642",
         "status": "Not Started",
+        "short_code": "T9",
+        "drawing_ref": "DW-03030-05",
+        "offset_m": 8.55,
         "di_set": {
           "ch0": 123225,
           "ch1": 123641.95,
@@ -93936,10 +93354,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03030-05",
           "preset": "T9"
-        },
-        "short_code": "T9",
-        "drawing_ref": "DW-03030-05",
-        "offset_m": 8.55
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -94204,6 +93619,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 123+260",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 13.56,
         "di_set": {
           "preset": "WD",
           "ch0": 123259.52,
@@ -94212,10 +93630,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 13.56,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 13.56
+        }
       },
       "geometry": {
         "type": "Point",
@@ -94238,6 +93653,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 123+295",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03029-05",
+        "offset_m": 13.56,
         "di_set": {
           "preset": "WD",
           "ch0": 123294.52,
@@ -94246,10 +93664,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 13.56,
           "sheet": "DW-03029-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03029-05",
-        "offset_m": 13.56
+        }
       },
       "geometry": {
         "type": "Point",
@@ -94272,6 +93687,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 123+329",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03030-05",
+        "offset_m": 13.73,
         "di_set": {
           "preset": "WD",
           "ch0": 123329.43,
@@ -94280,10 +93698,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 13.73,
           "sheet": "DW-03030-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03030-05",
-        "offset_m": 13.73
+        }
       },
       "geometry": {
         "type": "Point",
@@ -94306,6 +93721,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 123+365",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03030-05",
+        "offset_m": 13.75,
         "di_set": {
           "preset": "WD",
           "ch0": 123365.02,
@@ -94314,10 +93732,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 13.75,
           "sheet": "DW-03030-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03030-05",
-        "offset_m": 13.75
+        }
       },
       "geometry": {
         "type": "Point",
@@ -94340,6 +93755,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 123+399",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03030-05",
+        "offset_m": 13.73,
         "di_set": {
           "preset": "WD",
           "ch0": 123399.43,
@@ -94348,10 +93766,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 13.73,
           "sheet": "DW-03030-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03030-05",
-        "offset_m": 13.73
+        }
       },
       "geometry": {
         "type": "Point",
@@ -94374,6 +93789,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 123+434",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03030-05",
+        "offset_m": 13.73,
         "di_set": {
           "preset": "WD",
           "ch0": 123434.43,
@@ -94382,10 +93800,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 13.73,
           "sheet": "DW-03030-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03030-05",
-        "offset_m": 13.73
+        }
       },
       "geometry": {
         "type": "Point",
@@ -94408,6 +93823,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 123+469",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03030-05",
+        "offset_m": 13.12,
         "di_set": {
           "preset": "WD",
           "ch0": 123469.43,
@@ -94416,10 +93834,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 13.12,
           "sheet": "DW-03030-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03030-05",
-        "offset_m": 13.12
+        }
       },
       "geometry": {
         "type": "Point",
@@ -94442,6 +93857,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 123+504",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03030-05",
+        "offset_m": 13.12,
         "di_set": {
           "preset": "WD",
           "ch0": 123504.43,
@@ -94450,10 +93868,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 13.12,
           "sheet": "DW-03030-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03030-05",
-        "offset_m": 13.12
+        }
       },
       "geometry": {
         "type": "Point",
@@ -94476,6 +93891,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 123+539",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03030-05",
+        "offset_m": 12.67,
         "di_set": {
           "preset": "WD",
           "ch0": 123539.43,
@@ -94484,10 +93902,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 12.67,
           "sheet": "DW-03030-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03030-05",
-        "offset_m": 12.67
+        }
       },
       "geometry": {
         "type": "Point",
@@ -94510,6 +93925,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 123+574",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03030-05",
+        "offset_m": 12.67,
         "di_set": {
           "preset": "WD",
           "ch0": 123574.44,
@@ -94518,10 +93936,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 12.67,
           "sheet": "DW-03030-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03030-05",
-        "offset_m": 12.67
+        }
       },
       "geometry": {
         "type": "Point",
@@ -94544,6 +93959,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 6 collector drain",
         "chainage_str": "PK 123+600 – PK 124+050",
         "status": "Not Started",
+        "short_code": "T6",
+        "drawing_ref": "DW-03030-05",
+        "offset_m": 2.5,
         "di_set": {
           "ch0": 123599.95,
           "ch1": 124050,
@@ -94552,10 +93970,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03030-05",
           "preset": "T6"
-        },
-        "short_code": "T6",
-        "drawing_ref": "DW-03030-05",
-        "offset_m": 2.5
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -94820,6 +94235,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 123+609",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03030-05",
+        "offset_m": 16.61,
         "di_set": {
           "preset": "WD",
           "ch0": 123608.58,
@@ -94828,10 +94246,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 16.61,
           "sheet": "DW-03030-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03030-05",
-        "offset_m": 16.61
+        }
       },
       "geometry": {
         "type": "Point",
@@ -94854,6 +94269,9 @@ window.SECTION03_ASSETS = {
         "typology": "Water descent, precast",
         "chainage_str": "PK 123+642",
         "status": "Not Started",
+        "short_code": "WD",
+        "drawing_ref": "DW-03030-05",
+        "offset_m": 23.61,
         "di_set": {
           "preset": "WD",
           "ch0": 123641.94,
@@ -94862,10 +94280,7 @@ window.SECTION03_ASSETS = {
           "offsetM": 23.61,
           "sheet": "DW-03030-05",
           "cert": "exact"
-        },
-        "short_code": "WD",
-        "drawing_ref": "DW-03030-05",
-        "offset_m": 23.61
+        }
       },
       "geometry": {
         "type": "Point",
@@ -94888,6 +94303,9 @@ window.SECTION03_ASSETS = {
         "typology": "Type 6 collector drain",
         "chainage_str": "PK 124+050 – PK 124+450",
         "status": "Not Started",
+        "short_code": "T6",
+        "drawing_ref": "DW-03030-05",
+        "offset_m": 2.5,
         "di_set": {
           "ch0": 124050,
           "ch1": 124450,
@@ -94896,10 +94314,7 @@ window.SECTION03_ASSETS = {
           "cert": "exact",
           "sheet": "DW-03030-05",
           "preset": "T6"
-        },
-        "short_code": "T6",
-        "drawing_ref": "DW-03030-05",
-        "offset_m": 2.5
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -95164,6 +94579,9 @@ window.SECTION03_ASSETS = {
         "typology": "Slope descent dissipator",
         "chainage_str": "PK 124+450",
         "status": "Not Started",
+        "short_code": "D-SD",
+        "drawing_ref": "DW-03030-05",
+        "offset_m": 29.2,
         "di_set": {
           "preset": "D-SD",
           "ch0": 124449.86,
@@ -95172,16 +94590,523 @@ window.SECTION03_ASSETS = {
           "offsetM": 29.2,
           "sheet": "DW-03030-05",
           "cert": "exact"
-        },
-        "short_code": "D-SD",
-        "drawing_ref": "DW-03030-05",
-        "offset_m": 29.2
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
           8.3319617,
           12.9831898
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "xc_KZDR_CC_86",
+        "start_pk": 86525,
+        "end_pk": 86525,
+        "length_m": 0,
+        "is_point": true,
+        "side": "Center",
+        "category": "Cross Drainage",
+        "typology": "Cattle crossing 1×(3.0×3.0 m) — CC 86 (execution chart S03)",
+        "chainage_str": "PK 86+525",
+        "status": "Not Started",
+        "di_set": {
+          "preset": "CC",
+          "ch0": 86525,
+          "ch1": 86525,
+          "side": "C",
+          "cert": "derived",
+          "sheet": "Execution chart S03 25/09/26",
+          "name": "Cattle crossing 1×(3.0×3.0 m)",
+          "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 86 (execution chart S03)"
+        },
+        "short_code": "CC",
+        "drawing_ref": "Execution chart S03 25/09/26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.3919282,
+          12.6533603
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "xc_KZDR_88_2",
+        "start_pk": 88495,
+        "end_pk": 88495,
+        "length_m": 0,
+        "is_point": true,
+        "side": "Center",
+        "category": "Cross Drainage",
+        "typology": "Single box culvert 1×(2.0×2.0 m) — 88.2 (execution chart S03)",
+        "chainage_str": "PK 88+495",
+        "status": "Not Started",
+        "di_set": {
+          "preset": "BC",
+          "ch0": 88495,
+          "ch1": 88495,
+          "side": "C",
+          "cert": "derived",
+          "sheet": "Execution chart S03 25/09/26",
+          "name": "Single box culvert 1×(2.0×2.0 m)",
+          "fullName": "Single box culvert 1×(2.0×2.0 m) — 88.2 (execution chart S03)"
+        },
+        "short_code": "BC",
+        "drawing_ref": "Execution chart S03 25/09/26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.3942149,
+          12.6710182
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "xc_KZDR_CC_90",
+        "start_pk": 90350,
+        "end_pk": 90350,
+        "length_m": 0,
+        "is_point": true,
+        "side": "Center",
+        "category": "Cross Drainage",
+        "typology": "Cattle crossing 1×(3.0×3.0 m) — CC 90 (execution chart S03)",
+        "chainage_str": "PK 90+350",
+        "status": "Not Started",
+        "di_set": {
+          "preset": "CC",
+          "ch0": 90350,
+          "ch1": 90350,
+          "side": "C",
+          "cert": "derived",
+          "sheet": "Execution chart S03 25/09/26",
+          "name": "Cattle crossing 1×(3.0×3.0 m)",
+          "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 90 (execution chart S03)"
+        },
+        "short_code": "CC",
+        "drawing_ref": "Execution chart S03 25/09/26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.3971916,
+          12.6873017
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "xc_KZDR_CC_92",
+        "start_pk": 92215,
+        "end_pk": 92215,
+        "length_m": 0,
+        "is_point": true,
+        "side": "Center",
+        "category": "Cross Drainage",
+        "typology": "Cattle crossing 1×(3.0×3.0 m) — CC 92 (execution chart S03)",
+        "chainage_str": "PK 92+215",
+        "status": "Not Started",
+        "di_set": {
+          "preset": "CC",
+          "ch0": 92215,
+          "ch1": 92215,
+          "side": "C",
+          "cert": "derived",
+          "sheet": "Execution chart S03 25/09/26",
+          "name": "Cattle crossing 1×(3.0×3.0 m)",
+          "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 92 (execution chart S03)"
+        },
+        "short_code": "CC",
+        "drawing_ref": "Execution chart S03 25/09/26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.3944726,
+          12.7039532
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "xc_KZDR_CC_93",
+        "start_pk": 93525,
+        "end_pk": 93525,
+        "length_m": 0,
+        "is_point": true,
+        "side": "Center",
+        "category": "Cross Drainage",
+        "typology": "Cattle crossing 1×(3.0×3.0 m) — CC 93 (execution chart S03)",
+        "chainage_str": "PK 93+525",
+        "status": "Not Started",
+        "di_set": {
+          "preset": "CC",
+          "ch0": 93525,
+          "ch1": 93525,
+          "side": "C",
+          "cert": "derived",
+          "sheet": "Execution chart S03 25/09/26",
+          "name": "Cattle crossing 1×(3.0×3.0 m)",
+          "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 93 (execution chart S03)"
+        },
+        "short_code": "CC",
+        "drawing_ref": "Execution chart S03 25/09/26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.3925625,
+          12.7156494
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "xc_KZDR_CC_98",
+        "start_pk": 98775,
+        "end_pk": 98775,
+        "length_m": 0,
+        "is_point": true,
+        "side": "Center",
+        "category": "Cross Drainage",
+        "typology": "Cattle crossing 1×(3.0×3.0 m) — CC 98 (execution chart S03)",
+        "chainage_str": "PK 98+775",
+        "status": "Not Started",
+        "di_set": {
+          "preset": "CC",
+          "ch0": 98775,
+          "ch1": 98775,
+          "side": "C",
+          "cert": "derived",
+          "sheet": "Execution chart S03 25/09/26",
+          "name": "Cattle crossing 1×(3.0×3.0 m)",
+          "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 98 (execution chart S03)"
+        },
+        "short_code": "CC",
+        "drawing_ref": "Execution chart S03 25/09/26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.3885572,
+          12.7627636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "xc_KZDR_CC_100",
+        "start_pk": 100875,
+        "end_pk": 100875,
+        "length_m": 0,
+        "is_point": true,
+        "side": "Center",
+        "category": "Cross Drainage",
+        "typology": "Cattle crossing 1×(3.0×3.0 m) — CC 100 (execution chart S03)",
+        "chainage_str": "PK 100+875",
+        "status": "Not Started",
+        "di_set": {
+          "preset": "CC",
+          "ch0": 100875,
+          "ch1": 100875,
+          "side": "C",
+          "cert": "derived",
+          "sheet": "Execution chart S03 25/09/26",
+          "name": "Cattle crossing 1×(3.0×3.0 m)",
+          "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 100 (execution chart S03)"
+        },
+        "short_code": "CC",
+        "drawing_ref": "Execution chart S03 25/09/26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.3891889,
+          12.7817425
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "xc_KZDR_CC_103",
+        "start_pk": 103725,
+        "end_pk": 103725,
+        "length_m": 0,
+        "is_point": true,
+        "side": "Center",
+        "category": "Cross Drainage",
+        "typology": "Cattle crossing 1×(3.0×3.0 m) — CC 103 (execution chart S03)",
+        "chainage_str": "PK 103+725",
+        "status": "Not Started",
+        "di_set": {
+          "preset": "CC",
+          "ch0": 103725,
+          "ch1": 103725,
+          "side": "C",
+          "cert": "derived",
+          "sheet": "Execution chart S03 25/09/26",
+          "name": "Cattle crossing 1×(3.0×3.0 m)",
+          "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 103 (execution chart S03)"
+        },
+        "short_code": "CC",
+        "drawing_ref": "Execution chart S03 25/09/26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.3898658,
+          12.8075017
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "xc_KZDR_107_A",
+        "start_pk": 107450,
+        "end_pk": 107450,
+        "length_m": 0,
+        "is_point": true,
+        "side": "Center",
+        "category": "Cross Drainage",
+        "typology": "Single box culvert 1×(2.0×2.0 m) — 107.A (execution chart S03)",
+        "chainage_str": "PK 107+450",
+        "status": "Not Started",
+        "di_set": {
+          "preset": "BC",
+          "ch0": 107450,
+          "ch1": 107450,
+          "side": "C",
+          "cert": "derived",
+          "sheet": "Execution chart S03 25/09/26",
+          "name": "Single box culvert 1×(2.0×2.0 m)",
+          "fullName": "Single box culvert 1×(2.0×2.0 m) — 107.A (execution chart S03)"
+        },
+        "short_code": "BC",
+        "drawing_ref": "Execution chart S03 25/09/26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.3880007,
+          12.8411289
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "xc_KZDR_CC_109",
+        "start_pk": 109200,
+        "end_pk": 109200,
+        "length_m": 0,
+        "is_point": true,
+        "side": "Center",
+        "category": "Cross Drainage",
+        "typology": "Cattle crossing 1×(3.0×3.0 m) — CC 109 (execution chart S03)",
+        "chainage_str": "PK 109+200",
+        "status": "Not Started",
+        "di_set": {
+          "preset": "CC",
+          "ch0": 109200,
+          "ch1": 109200,
+          "side": "C",
+          "cert": "derived",
+          "sheet": "Execution chart S03 25/09/26",
+          "name": "Cattle crossing 1×(3.0×3.0 m)",
+          "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 109 (execution chart S03)"
+        },
+        "short_code": "CC",
+        "drawing_ref": "Execution chart S03 25/09/26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.3858899,
+          12.8568168
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "xc_KZDR_CC_110",
+        "start_pk": 110275,
+        "end_pk": 110275,
+        "length_m": 0,
+        "is_point": true,
+        "side": "Center",
+        "category": "Cross Drainage",
+        "typology": "Cattle crossing 1×(3.0×3.0 m) — CC 110 (execution chart S03)",
+        "chainage_str": "PK 110+275",
+        "status": "Not Started",
+        "di_set": {
+          "preset": "CC",
+          "ch0": 110275,
+          "ch1": 110275,
+          "side": "C",
+          "cert": "derived",
+          "sheet": "Execution chart S03 25/09/26",
+          "name": "Cattle crossing 1×(3.0×3.0 m)",
+          "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 110 (execution chart S03)"
+        },
+        "short_code": "CC",
+        "drawing_ref": "Execution chart S03 25/09/26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.3845921,
+          12.8664535
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "xc_KZDR_CC_112",
+        "start_pk": 112000,
+        "end_pk": 112000,
+        "length_m": 0,
+        "is_point": true,
+        "side": "Center",
+        "category": "Cross Drainage",
+        "typology": "Cattle crossing 1×(3.0×3.0 m) — CC 112 (execution chart S03)",
+        "chainage_str": "PK 112+000",
+        "status": "Not Started",
+        "di_set": {
+          "preset": "CC",
+          "ch0": 112000,
+          "ch1": 112000,
+          "side": "C",
+          "cert": "derived",
+          "sheet": "Execution chart S03 25/09/26",
+          "name": "Cattle crossing 1×(3.0×3.0 m)",
+          "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 112 (execution chart S03)"
+        },
+        "short_code": "CC",
+        "drawing_ref": "Execution chart S03 25/09/26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.3793279,
+          12.8809514
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "xc_KZDR_113_A",
+        "start_pk": 113792,
+        "end_pk": 113792,
+        "length_m": 0,
+        "is_point": true,
+        "side": "Center",
+        "category": "Cross Drainage",
+        "typology": "Pipe culvert Ø1.2 m — 113.A (execution chart S03)",
+        "chainage_str": "PK 113+792",
+        "status": "Not Started",
+        "di_set": {
+          "preset": "PC",
+          "ch0": 113792,
+          "ch1": 113792,
+          "side": "C",
+          "cert": "derived",
+          "sheet": "Execution chart S03 25/09/26",
+          "name": "Pipe culvert Ø1.2 m",
+          "fullName": "Pipe culvert Ø1.2 m — 113.A (execution chart S03)"
+        },
+        "short_code": "PC",
+        "drawing_ref": "Execution chart S03 25/09/26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.3710447,
+          12.8949702
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "xc_KZDR_CC_116",
+        "start_pk": 116300,
+        "end_pk": 116300,
+        "length_m": 0,
+        "is_point": true,
+        "side": "Center",
+        "category": "Cross Drainage",
+        "typology": "Cattle crossing 1×(3.0×3.0 m) — CC 116 (execution chart S03)",
+        "chainage_str": "PK 116+300",
+        "status": "Not Started",
+        "di_set": {
+          "preset": "CC",
+          "ch0": 116300,
+          "ch1": 116300,
+          "side": "C",
+          "cert": "derived",
+          "sheet": "Execution chart S03 25/09/26",
+          "name": "Cattle crossing 1×(3.0×3.0 m)",
+          "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 116 (execution chart S03)"
+        },
+        "short_code": "CC",
+        "drawing_ref": "Execution chart S03 25/09/26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.3596042,
+          12.9146725
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "xc_KZDR_CC_118",
+        "start_pk": 118550,
+        "end_pk": 118550,
+        "length_m": 0,
+        "is_point": true,
+        "side": "Center",
+        "category": "Cross Drainage",
+        "typology": "Cattle crossing 1×(3.0×3.0 m) — CC 118 (execution chart S03)",
+        "chainage_str": "PK 118+550",
+        "status": "Not Started",
+        "di_set": {
+          "preset": "CC",
+          "ch0": 118550,
+          "ch1": 118550,
+          "side": "C",
+          "cert": "derived",
+          "sheet": "Execution chart S03 25/09/26",
+          "name": "Cattle crossing 1×(3.0×3.0 m)",
+          "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC 118 (execution chart S03)"
+        },
+        "short_code": "CC",
+        "drawing_ref": "Execution chart S03 25/09/26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.3517703,
+          12.9335061
         ]
       }
     }

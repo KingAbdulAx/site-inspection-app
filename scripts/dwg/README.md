@@ -44,7 +44,7 @@ python3 scripts/dwg/centreline_from_cad.py --plan data/dwg/KZDR_plan.json --lead
     --bundle data/bundle.js --var SECTION03_CENTERLINE --start 82800 --section "Section 03: Kazaure to Daura (KZDR)"
 ```
 
-KZDR ran the same way, with `--register data/section03_drawing_register.json`. That register is built from the consultant's review TC 1211/26 (sheet numbers, revisions and approval levels, on the 1.4 km sheet grid).
+KZDR ran the same way, with `--register data/section03_drawing_register.json`. So did KNDW (Section 01, −2+675 to 19+800, a new `data/section01_bundle.js`): its chainage starts before Kano's zero, so the scripts and the app read and write `-1+107`. The S01 drainage plan draws no culverts; they come from the S01 execution chart (`scripts/progress/`). That register is built from the consultant's review TC 1211/26 (sheet numbers, revisions and approval levels, on the 1.4 km sheet grid).
 
 Then either:
 

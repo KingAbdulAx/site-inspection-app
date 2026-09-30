@@ -12,6 +12,7 @@ An offline-first, mobile Progressive Web Application (PWA) engineered for civil 
 | Screen | What it does |
 |---|---|
 | **Walk · Strip** | Chainage runs up the screen, and offset becomes five fixed lanes a side (OFF, CREST, TOE, FACE, PLAT). You get a ±20 m band and a reading line, and the strip turns with you when you face decreasing chainage. Outline = the drawing, hatched = part-built, solid = complete. Exact, ±4 m and LABEL positions are drawn differently. Drag to look ahead; tap a mark for the drawer. |
+| **Walk · zoom** | The − / + pill on the strip (also pinch, Ctrl + wheel, or the + and − keys) steps between four fixed scales: 260 m, 790 m, 2.6 km and 7.9 km of line on a phone screen. A drag moves the line faster at the wider scales. Zoomed out, the scale label turns black, ticks and labels thin out, nearby points fold into counts, and crossings carry their full chainage. The scale is remembered. |
 | **Walk · Map / Section** | The same position on imagery under a wash (Leaflet, bundled in `lib/`), or a cross-section at your chainage with numbered features. |
 | **At-you bar** | Names the structure you are standing at. Tap it to record a stage (two taps, saved instantly, 8 s undo). The right end opens everything within 20 m, left to right as you face. Poor GPS turns the bar yellow and offers "I'm on the culvert" to fix position on an exact structure. |
 | **Feature** | What is built (seen by you vs. contractor claims from the IR register), open defects with photos, the read-only drawing panel, the IR history with gaps, never-overwritten records, and "Copy with provenance". |
@@ -26,6 +27,12 @@ An offline-first, mobile Progressive Web Application (PWA) engineered for civil 
 - **Keyboard:** Esc closes; digits, +, Backspace and Enter work the chainage keypad; G opens Go to; ↑ ↓ PgUp PgDn scroll the strip, like the mouse wheel.
 
 Code: `ui/model.js` (data, append-only records, position/projection), `ui/strip.js` (strip and section-cut renderer), `ui/app.js` (shell, Walk, record sheet, layout switching), `ui/screens.js` (other screens), and `ui/desk.css` (the computer layouts). Records are appended to `KMD_WALK_RECORDS_V1` and never edited; undo appends a void. The latest stage per asset is mirrored into the existing inspection store, so `sync.js` still sends it to the office. Photos go in IndexedDB.
+
+### Site progress (execution charts and ditch sheets)
+
+Culverts are precast, so they follow the site execution charts: box culverts go Excavation → Bedding → Installed → Apron → Wing walls → Joints → Completed (painted); pipe culverts go Excavation → Bedding → Installed → Haunched → Apron → Wing walls → Completed (joints done). Backfill is not a stage. Stages recorded earlier on the old cast-in-place ladder are translated once, by name.
+
+`scripts/progress/` reads the "Culvert Monitoring & Execution Status" PDFs and the Type 1 / Type 9 ditch sheets, matches them to the data, and writes the progress to the cloud database the app syncs from (see `scripts/progress/README.md`). Those rows show on the phone as the office's record, with the chart named as the source; a newer record made on the phone still wins.
 
 ### Correcting the base data (extraction errors)
 
