@@ -8,7 +8,7 @@
  *
  * The table is read again just before writing. A row that is there now is left
  * alone, unless it is the exact older, lower status the progress file expected
- * to replace. Every write is logged to data/progress/pushed_<asof>.json, with
+ * to replace. Every write is logged to data/progress/pushed_<asof>[_tag].json, with
  * the rows it replaced, so --undo can put them back.
  *
  * On the phone these rows show as the office's record for the asset, by
@@ -80,7 +80,8 @@ async function remove(ids) {
   console.log(rows.length + ' rows to write (' + rows.filter(r => r._replaced).length + ' replacing), ' + skipped.length + ' skipped because the database has a row now' + (skipped.length ? ': ' + skipped.slice(0, 8).join('; ') : ''));
   if (!push) { console.log('dry run: add --push to write'); return; }
   const stamp = new Date().toISOString();
-  const log = path.join(path.dirname(file), 'pushed_' + input.asof + '.json');
+  // progress_2026-09-25_S04.json logs to pushed_2026-09-25_S04.json
+  const log = path.join(path.dirname(file), /^progress_/.test(path.basename(file)) ? path.basename(file).replace(/^progress_/, 'pushed_') : 'pushed_' + input.asof + '.json');
   fs.writeFileSync(log, JSON.stringify({ kind: 'kmd-progress-pushed', asof: input.asof, pushed_at: stamp, table_before: now.length, written: rows.map(r => ({ asset_id: r.asset_id, status: r.status, replaced: r._replaced })) }, null, 1));
   for (let i = 0; i < rows.length; i += 100) await upsert(rows.slice(i, i + 100).map(r => { const o = Object.assign({}, r); delete o._replaced; return o; }));
   const after = await current();

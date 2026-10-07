@@ -2,13 +2,13 @@ window.SECTION03_CENTERLINE = {
   "metadata": {
     "section": "Section 03: Kazaure to Daura (KZDR)",
     "start_pk": 82800.0,
-    "end_pk": 124500.0,
-    "total_points": 1669,
+    "end_pk": 124521.0,
+    "total_points": 1670,
     "step_meters": 25.0,
     "interpolation": "CAD track plan 25 m ticks (block S11, layer TRA-H-GTR_km-tick), chained and anchored by the 100 m labels; linear between ticks",
-    "source_model": "S03-TRA-PLAT.dxf (+ lead-in DWKZ_plan.json)",
+    "source_model": "S03-TRA-PLAT.dxf (+ lead-in DWKZ_plan.json) (+ tail DRMR_plan.json)",
     "crs_source": "EPSG:32632 (WGS84 UTM 32N)",
-    "arc_length_m": 41699.973,
+    "arc_length_m": 41720.973,
     "generated_at": "September 2026",
     "datum": "WGS84"
   },
@@ -10026,6 +10026,12 @@ window.SECTION03_CENTERLINE = {
       "lon": 8.3315405,
       "lat": 12.9835149,
       "bearing": 338.36
+    },
+    {
+      "pk": 124521.0,
+      "lon": 8.331469,
+      "lat": 12.9836914,
+      "bearing": 338.36
     }
   ],
   "ticks_100m": [
@@ -14180,7 +14186,7 @@ window.SECTION03_CENTERLINE = {
         "properties": {
           "name": "Kano-Maradi Railway Centerline (Section 03 - CAD axis)",
           "start_pk": 82800.0,
-          "end_pk": 124500.0
+          "end_pk": 124521.0
         },
         "geometry": {
           "type": "LineString",
@@ -20860,6 +20866,10 @@ window.SECTION03_CENTERLINE = {
             [
               8.3315405,
               12.9835149
+            ],
+            [
+              8.331469,
+              12.9836914
             ]
           ]
         }

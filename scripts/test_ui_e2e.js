@@ -112,6 +112,35 @@ const assert = (c, m) => { if (!c) { console.log('FAIL: ' + m); process.exitCode
   const dlPath = await dl.path(); const csv = fs.readFileSync(dlPath, 'utf8');
   assert(/record_id/.test(csv) && csv.split('\n').length > 3, 'day CSV exported (' + (csv.split('\n').length - 1) + ' rows)');
   await p.waitForTimeout(800);
+  // touch: a finger tap on a mark opens that structure, not whatever the follow-up click lands on
+  const tctx = await b.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true, ignoreHTTPSErrors: true });
+  const t = await tctx.newPage();
+  t.on('pageerror', e => errs.push(e.message));
+  await t.goto(BASE + '?sim=DWKZ:21500:8:3'); await t.waitForTimeout(1500);
+  await t.evaluate(() => { localStorage.setItem('KMD_STRIP_ZOOM_V1', '0'); localStorage.removeItem('KMD_WALK_RECORDS_V1'); }); await t.reload(); await t.waitForTimeout(1500);
+  const marks = await t.evaluate(() => {
+    const r = document.querySelector('#stripHost').getBoundingClientRect();
+    return DA.strip.hits.map(h => ({ id: h.f.id, x: r.left + (Math.max(h.x0, 0) + Math.min(h.x1, r.width)) / 2, y: r.top + (h.y0 + h.y1) / 2 }))
+      .filter(h => { const e = document.elementFromPoint(h.x, h.y); return e && e.closest('#stripHost'); });
+  });
+  let right = 0, opened = 0;
+  for (const m of marks) {
+    await t.evaluate(() => DA.closeAll());
+    await t.touchscreen.tap(m.x, m.y); await t.waitForTimeout(400);
+    const got = await t.evaluate(() => { const ov = document.querySelector('.ov:last-child'); if (!ov) return null; const s = ov.querySelector('[data-act=stage]'); const hl = ov.querySelector('.frow.hl'); return s ? s.dataset.id : hl ? hl.dataset.id : '?'; });
+    if (got) opened++;
+    if (got === m.id) right++;
+  }
+  assert(marks.length > 5 && right === marks.length, 'finger taps open the tapped structure (' + right + ' of ' + marks.length + ', ' + opened + ' opened)');
+  // completed in two taps: the mark, then Completed
+  await t.evaluate(() => DA.closeAll());
+  const one = marks.find(m => true);
+  await t.touchscreen.tap(one.x, one.y); await t.waitForTimeout(400);
+  const last = await t.evaluate(id => DI.data.byId[id].ladder.length - 1, one.id);
+  await t.tap('.ov:last-child [data-act=stage][data-stage="' + last + '"]'); await t.waitForTimeout(300);
+  seen = await t.evaluate(id => DI.seenOf(id), one.id);
+  assert(seen && seen.stage === last, 'completed from the record sheet in one tap');
+  await tctx.close();
   console.log(errs.length ? 'PAGE ERRORS:\n' + errs.join('\n') : 'no page errors');
   await b.close();
   server.close();

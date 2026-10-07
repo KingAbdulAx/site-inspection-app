@@ -4,7 +4,7 @@
  *
  *   node scripts/progress/import_progress.js --asof 2026-09-25 \
  *     --chart KNDW=S01.rows.json --chart DWKZ=S02.rows.json --chart KZDR=S03.rows.json \
- *     --ditches ditch_rows.json --ditch-date 2026-09-30 [--existing supabase_rows.json]
+ *     --ditches ditch_rows.json --ditch-date 2026-09-30 [--existing supabase_rows.json] [--tag S04]
  *
  * Writes, in data/progress/:
  *   culverts_from_charts.json   base 'add' records for chart culverts the data lacks
@@ -37,7 +37,10 @@ const charts = many('--chart').map(s => { const [sub, file] = s.split('='); retu
 const ditchFile = opt('--ditches');
 const existing = opt('--existing') ? JSON.parse(fs.readFileSync(opt('--existing'), 'utf8')) : [];
 const OUT = path.join(__dirname, '..', '..', 'data', 'progress');
-const SECTION = { KNDW: 'S01', DWKZ: 'S02', KZDR: 'S03' };
+const SECTION = { KNDW: 'S01', DWKZ: 'S02', KZDR: 'S03', DRMR: 'S04' };
+// --tag S04 names the outputs culverts_from_charts_S04.json, progress_<asof>_S04.json/.md, so a
+// later section's run does not overwrite an earlier one.
+const tag = opt('--tag') ? '_' + opt('--tag') : '';
 const dmy = d => d.slice(8, 10) + '/' + d.slice(5, 7) + '/' + d.slice(2, 4);
 
 // The app's own model, so ladders, chainage and matching are exactly the app's.
@@ -45,7 +48,7 @@ const ROOT = path.join(__dirname, '..', '..');
 global.window = global;
 const store = {};
 global.localStorage = { getItem: k => (k in store ? store[k] : null), setItem: (k, v) => { store[k] = String(v); }, removeItem: k => { delete store[k]; } };
-['data/bundle.js', 'data/section01_bundle.js', 'data/section02_bundle.js', 'ui/model.js'].forEach(f => require(path.join(ROOT, f)));
+['data/bundle.js', 'data/section01_bundle.js', 'data/section02_bundle.js', 'data/section04_bundle.js', 'ui/model.js'].forEach(f => require(path.join(ROOT, f)));
 const DI = window.DI;
 DI.init();
 
@@ -194,8 +197,8 @@ rows.forEach(r => {
 out.forEach(r => { delete r.stage; delete r.ladder; });
 
 fs.mkdirSync(OUT, { recursive: true });
-fs.writeFileSync(path.join(OUT, 'culverts_from_charts.json'), JSON.stringify({ kind: 'kmd-base-corrections', app: 'Drainage Inspector', exported_at: asof + 'T12:00:00.000Z', source: 'Culvert Monitoring & Execution Status charts, ' + dmy(asof), records: adds }, null, 1));
-fs.writeFileSync(path.join(OUT, 'progress_' + asof + '.json'), JSON.stringify({ kind: 'kmd-progress', asof, ditch_date: ditchDate, rows: out, skipped_existing: kept.map(k => ({ asset_id: k.r.asset_id, chart: k.r.status, database: k.e.status, database_by: k.e.inspected_by, database_at: k.e.updated_at })) }, null, 1));
+fs.writeFileSync(path.join(OUT, 'culverts_from_charts' + tag + '.json'), JSON.stringify({ kind: 'kmd-base-corrections', app: 'Drainage Inspector', exported_at: asof + 'T12:00:00.000Z', source: 'Culvert Monitoring & Execution Status charts, ' + dmy(asof), records: adds }, null, 1));
+fs.writeFileSync(path.join(OUT, 'progress_' + asof + tag + '.json'), JSON.stringify({ kind: 'kmd-progress', asof, ditch_date: ditchDate, rows: out, skipped_existing: kept.map(k => ({ asset_id: k.r.asset_id, chart: k.r.status, database: k.e.status, database_by: k.e.inspected_by, database_at: k.e.updated_at })) }, null, 1));
 
 let md = '# Site progress, ' + dmy(asof) + '\n\nFrom the Culvert Monitoring & Execution Status charts (' + dmy(asof) + ') and the ditch progress sheets (' + dmy(ditchDate) + ').\n\n';
 md += 'Completion: a box culvert is Completed once its bituminous paint is on; a pipe culvert, once its joints are done. Backfill is not a stage.\n\n';
@@ -224,7 +227,7 @@ if (kept.length) {
   md += '## Already in the database, left as they are\n\n| asset | chart says | database says | by, on |\n|---|---|---|---|\n' +
     kept.map(k => '| ' + k.r.asset_id + ' | ' + k.r.status + ' | ' + k.e.status + ' | ' + k.e.inspected_by + ', ' + String(k.e.updated_at).slice(0, 10) + ' |').join('\n') + '\n';
 }
-fs.writeFileSync(path.join(OUT, 'progress_' + asof + '.md'), md);
+fs.writeFileSync(path.join(OUT, 'progress_' + asof + tag + '.md'), md);
 console.log('progress rows ' + out.length + ' (+' + kept.length + ' already in the database), culverts to add ' + adds.length);
 Object.entries(report.culvert).forEach(([sub, s]) => console.log(' ' + sub + ': main ' + s.main + ', matched ' + s.matched + ' (' + s.near.length + ' at 20–45 m), added ' + s.added.length + ', data-only ' + s.appNotInChart.length + ', road ' + s.road.length));
 if (report.ditch.rows) console.log(' ditches: completed ' + report.ditch.completed + ', partial ' + report.ditch.partial.length + ', lost ' + report.ditch.lost.length);

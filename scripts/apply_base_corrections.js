@@ -4,7 +4,7 @@
  *   node scripts/apply_base_corrections.js path/to/kmd-base-corrections.json [--dry-run]
  *
  * The JSON comes from the app: Section → Switch → Base data → Export corrections.
- * It rewrites data/section01_bundle.js, data/bundle.js and data/section02_bundle.js (and the matching
+ * It rewrites data/section01_bundle.js, data/bundle.js, data/section02_bundle.js and data/section04_bundle.js (and the matching
  * *_assets.json files) using the same code the app uses to apply corrections,
  * so what you saw on the phone is exactly what gets written. Corrections are
  * absolute values, so baking the same file twice changes nothing.
@@ -25,6 +25,7 @@ const store = { KMD_WALK_RECORDS_V1: JSON.stringify(input.records || []) };
 global.localStorage = { getItem: k => (k in store ? store[k] : null), setItem: (k, v) => { store[k] = String(v); }, removeItem: k => { delete store[k]; } };
 require(path.join(ROOT, 'data/bundle.js'));
 require(path.join(ROOT, 'data/section01_bundle.js'));
+require(path.join(ROOT, 'data/section04_bundle.js'));
 require(path.join(ROOT, 'data/section02_bundle.js'));
 require(path.join(ROOT, 'ui/model.js'));
 const DI = window.DI;
@@ -36,6 +37,7 @@ console.log('Corrections in file: ' + (input.records || []).length + ' records; 
 
 const targets = [
   { sub: 'KNDW', bundle: 'data/section01_bundle.js', centre: 'SECTION01_CENTERLINE', assets: 'SECTION01_ASSETS', json: 'data/section01_assets.json' },
+  { sub: 'DRMR', bundle: 'data/section04_bundle.js', centre: 'SECTION04_CENTERLINE', assets: 'SECTION04_ASSETS', json: 'data/section04_assets.json' },
   { sub: 'KZDR', bundle: 'data/bundle.js', centre: 'SECTION03_CENTERLINE', assets: 'SECTION03_ASSETS', json: 'data/section03_assets.json' },
   { sub: 'DWKZ', bundle: 'data/section02_bundle.js', centre: 'SECTION02_CENTERLINE', assets: 'SECTION02_ASSETS', json: 'data/section02_assets.json' }
 ];

@@ -30,4 +30,10 @@ Rules:
 - **Ditches**: executed runs laid over ditches of the same type and side. 90% covered (or no more than 15 m left) is Completed; less is Concreted, with the metres in the note.
 - A row already in the database is left alone, unless the chart is further on **and** newer.
 
-The report for each run is `data/progress/progress_<date>.md`.
+The report for each run is `data/progress/progress_<date>.md`. A later section's run takes `--tag S04`, so its files (`culverts_from_charts_S04.json`, `progress_<date>_S04.json/.md`, `pushed_<date>_S04.json`) sit beside the first run's instead of replacing them:
+
+```
+node scripts/progress/import_progress.js --asof 2026-09-25 --chart DRMR=S04.rows.json --existing <current rows>.json --tag S04
+node scripts/apply_base_corrections.js data/progress/culverts_from_charts_S04.json
+node scripts/progress/push_progress.js data/progress/progress_2026-09-25_S04.json --push
+```

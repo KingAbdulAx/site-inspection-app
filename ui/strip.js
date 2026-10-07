@@ -79,12 +79,21 @@
       this.drag = null;
       this.ptrs = new Map();
       this.pinch = null;
+      this.noTapAt = -1e9;
       this.zoom = 0;
       try { this.zoom = Math.max(0, Math.min(SCALES.length - 1, Number(localStorage.getItem(ZOOM_KEY)) || 0)); } catch (x) { /* ignore */ }
       el.addEventListener('pointerdown', e => this.down(e));
       el.addEventListener('pointermove', e => this.move(e));
       el.addEventListener('pointerup', e => this.up(e));
       el.addEventListener('pointercancel', e => { this.ptrs.delete(e.pointerId); this.drag = null; this.pinch = null; });
+      // A tap acts on the click, not on pointerup. On a phone the click comes a moment after
+      // the finger lifts; opening a sheet on pointerup let that click land on the sheet instead,
+      // on whichever row was under the finger, so a different structure opened.
+      el.addEventListener('click', e => {
+        if (performance.now() - this.noTapAt < 500) return;
+        const r = this.el.getBoundingClientRect();
+        this.tap(e.clientX - r.left, e.clientY - r.top);
+      });
       // Wheel pans; Ctrl + wheel (and a trackpad pinch, which arrives as one) zooms.
       el.addEventListener('wheel', e => {
         e.preventDefault();
@@ -140,11 +149,10 @@
     }
     up(e) {
       this.ptrs.delete(e.pointerId);
-      if (this.pinch) { if (this.ptrs.size < 2) this.pinch = null; this.drag = null; return; }
+      // A drag or a pinch is not a tap: the click a mouse sends after it is ignored.
+      if (this.pinch) { if (this.ptrs.size < 2) this.pinch = null; this.drag = null; this.noTapAt = performance.now(); return; }
       const d = this.drag; this.drag = null;
-      if (!d || d.moved) return;
-      const r = this.el.getBoundingClientRect();
-      this.tap(e.clientX - r.left, e.clientY - r.top);
+      if (!d || d.moved) this.noTapAt = performance.now();
     }
     pan(dy) {
       if (!this.state) return;
@@ -155,19 +163,27 @@
       this.render(this.state);
     }
     recentre() { this.viewCh = null; if (this.state) this.render(this.state); }
-    hitAt(x, y) {
-      let best = null, bd = 1e9;
+    // Everything within a fingertip (16 px) of the point, nearest first. Where marks overlap
+    // (a ditch running through a culvert's band), the smaller mark is the one on top.
+    hitsAt(x, y) {
+      const byF = new Map();
       this.hits.forEach(h => {
         const dx = x < h.x0 ? h.x0 - x : x > h.x1 ? x - h.x1 : 0;
         const dy = y < h.y0 ? h.y0 - y : y > h.y1 ? y - h.y1 : 0;
-        const d = Math.hypot(dx, dy);
-        if (d < bd) { bd = d; best = h; }
+        const d = Math.hypot(dx, dy), a = (h.x1 - h.x0) * (h.y1 - h.y0);
+        const o = byF.get(h.f.id);
+        if (d < 16 && (!o || d < o.d || (d === o.d && a < o.a))) byF.set(h.f.id, { h, f: h.f, d, a });
       });
-      return best && bd < 16 ? best : null;
+      return [...byF.values()].sort((p, q) => p.d - q.d || p.a - q.a);
     }
+    hitAt(x, y) { const c = this.hitsAt(x, y); return c.length ? c[0].h : null; }
     tap(x, y) {
-      const best = this.hitAt(x, y);
-      if (best && this.opts.onTap) this.opts.onTap(best.f);
+      const c = this.hitsAt(x, y);
+      if (!c.length || !this.opts.onTap) return;
+      // Clear when nothing else is about as close; otherwise say which marks are under the finger.
+      const [a, b] = c;
+      const clear = !b || b.d > a.d + 6 || (a.d === 0 && b.d === 0 && a.a < b.a * 0.5);
+      this.opts.onTap(a.f, clear ? null : c.map(x => x.f), this.yToCh ? this.yToCh(y) : a.f.ch0);
     }
 
     render(state) {
@@ -180,6 +196,7 @@
       const px = this.px;
       const close = px >= PX_PER_M; // the walking scale: every detail and label
       const Y = ch => readY - (ch - viewCh) * px * dir;
+      this.yToCh = y => viewCh + (readY - y) / (px * dir);
       const chTop = viewCh + (readY / px) * dir;
       const chBot = viewCh - ((H - readY) / px) * dir;
       const lo = Math.min(chTop, chBot) - 30, hi = Math.max(chTop, chBot) + 30;

@@ -241,7 +241,7 @@
     recs.forEach(r => { if (c[r.action] != null) c[r.action]++; });
     let h = '<div style="border-top:3px solid var(--ink);margin-top:18px"><div class="section-h"><span class="lbl-caps">Base data</span><span class="muted" style="font:600 15px/1 var(--f-sans)">' + recs.length + ' change' + (recs.length === 1 ? '' : 's') + ' on this phone</span></div>';
     h += '<div class="pad" style="font:500 16px/1.5 var(--f-sans);color:var(--ink-2);margin-bottom:10px">' + c.edit + ' corrected · ' + c.add + ' added · ' + c.delete + ' removed · ' + c.verify + ' checked</div>';
-    ['KNDW', 'DWKZ', 'KZDR'].filter(DI.hasData).forEach(sb => {
+    ['KNDW', 'DWKZ', 'KZDR', 'DRMR'].filter(DI.hasData).forEach(sb => {
       const all = DI.data.bySub[sb], done = all.filter(f => f.verified).length;
       h += '<button class="setrow" data-act="check-sheets" data-sub="' + sb + '"><span><b>Check ' + sb + ' against drawings</b><small>' + done + ' of ' + all.length + ' checked, sheet by sheet</small></span>' + I.icon('chev').replace('<svg', '<svg width="24" height="24"') + '</button>';
     });
@@ -259,7 +259,7 @@
   }
   const stamp = () => new Date().toISOString().slice(0, 16).replace(/[-:T]/g, '');
   A['base-export'] = () => { const x = DI.exportCorrections(); download('kmd-base-corrections-' + stamp() + '.json', JSON.stringify(x, null, 1)); DA.toast({ title: 'Corrections saved to this phone', sub: x.records.length + ' records' }); };
-  A['base-geo'] = () => { ['KNDW', 'DWKZ', 'KZDR'].filter(DI.hasData).forEach(sb => download(sb + '-corrected-' + stamp() + '.geojson', JSON.stringify(DI.exportGeo(sb)), 'application/geo+json')); DA.toast({ title: 'Corrected data saved', sub: 'One GeoJSON per sub-section' }); };
+  A['base-geo'] = () => { ['KNDW', 'DWKZ', 'KZDR', 'DRMR'].filter(DI.hasData).forEach(sb => download(sb + '-corrected-' + stamp() + '.geojson', JSON.stringify(DI.exportGeo(sb)), 'application/geo+json')); DA.toast({ title: 'Corrected data saved', sub: 'One GeoJSON per sub-section' }); };
   A['base-import'] = () => {
     const inp = document.createElement('input'); inp.type = 'file'; inp.accept = '.json,application/json';
     inp.onchange = () => {
