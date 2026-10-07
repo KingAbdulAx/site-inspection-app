@@ -51,6 +51,8 @@ Then either:
 - **Review on the phone:** Project → Base data → Import corrections, then work through *Check against drawings* sheet by sheet. Every record can be undone. Or,
 - **Bake straight into the data:** `node scripts/apply_base_corrections.js data/dwg/DWKZ_corrections.json`.
 
+So did DRMR (Section 04, 124+521 to 181+075, a new `data/section04_bundle.js`). It came from the DW-03003-03 eTransmit (DRN-LONG, TRA-PLAT) and the DW-10194-02 cross sections. All 283 labels agree, and it gave 848 drainage features and 2,263 cross sections. The register is built from TC 1326/26, with the levels from its status table. Like S01, the S04 plan draws no culverts; the 115 main-line culverts come from the S04 execution chart. S03's track plan stops at 124+500, so its centreline was extended to 124+521 with `--tail data/dwg/DRMR_plan.json --end 124521`, and the two now meet.
+
 DWKZ has been baked (1,710 → 1,311 features), and KZDR too (837 → 1,132). Re-applying the file to the baked data changes nothing, so a phone that already imported it can keep or clear those records.
 
 ## Checks built in

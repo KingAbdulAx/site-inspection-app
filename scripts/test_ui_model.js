@@ -15,6 +15,7 @@ global.localStorage = {
 };
 require(path.join(root, 'data/bundle.js'));
 require(path.join(root, 'data/section01_bundle.js'));
+require(path.join(root, 'data/section04_bundle.js'));
 require(path.join(root, 'data/section02_bundle.js'));
 require(path.join(root, 'ui/model.js'));
 const DI = window.DI;
@@ -41,7 +42,9 @@ section('Features load for both sub-sections with lanes and certainty', () => {
   ok(DI.data.bySub.KZDR.length > 800, 'KZDR features: ' + DI.data.bySub.KZDR.length);
   ok(DI.data.bySub.DWKZ.length > 1300, 'DWKZ features: ' + DI.data.bySub.DWKZ.length);
   ok(DI.hasData('KNDW') && DI.data.bySub.KNDW.length > 300, 'KNDW features from the S01 CAD: ' + DI.data.bySub.KNDW.length);
-  ok(!DI.hasData('DRMR') && !DI.hasData('GYDT'), 'unprocessed sub-sections are present and empty');
+  ok(DI.hasData('DRMR') && DI.data.bySub.DRMR.length > 900, 'DRMR features from the S04 CAD and chart: ' + DI.data.bySub.DRMR.length);
+  ok(DI.data.bySub.DRMR.filter(f => f.catKey === 'cross').length === 115, 'DRMR culverts from the S04 execution chart');
+  ok(!DI.hasData('MRJB') && !DI.hasData('GYDT'), 'unprocessed sub-sections are present and empty');
   const all = DI.data.features;
   ok(all.every(f => f.ch0 <= f.ch1), 'start before end');
   ok(all.every(f => ['exact', 'derived', 'label'].includes(f.cert)), 'every feature has a certainty');
@@ -63,7 +66,12 @@ section('Sub-section lookup', () => {
   ok(DI.subAt('KM', 5000).id === 'KNDW', 'KNDW');
   ok(DI.subAt('KM', -1107).id === 'KNDW', 'KNDW before Kano\'s zero');
   ok(DI.fmtCh(-1107) === '-1+107' && DI.parseCh('-1+107') === -1107, 'negative chainage reads -1+107');
-  ok(DI.subAt('KM', 130000) === null, 'past KZDR: no chainage yet');
+  ok(DI.subAt('KM', 130000).id === 'DRMR' && DI.subAt('KM', 181000).id === 'DRMR', 'DRMR');
+  ok(DI.subAt('KM', 185000) === null, 'past DRMR: no chainage yet');
+  // the S03 and S04 centrelines meet where the sub-sections do
+  const a = DI.pointAt('KZDR', 124520, 0), b = DI.pointAt('DRMR', 124522, 0);
+  const gap = Math.hypot((a.lat - b.lat) * 110574, (a.lon - b.lon) * 111320 * Math.cos(a.lat * Math.PI / 180));
+  ok(gap < 3, 'S03/S04 centrelines meet: ' + gap.toFixed(2) + ' m for 2 m of chainage');
   ok(DI.subAt('KD', 111020) === null, 'branch line is separate');
 });
 

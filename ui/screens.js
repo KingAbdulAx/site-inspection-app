@@ -296,11 +296,21 @@
     const chk = list.filter(f => f.verified).length;
     h += '<button data-act="check-sheets" data-sub="' + sub.id + '" style="display:flex;align-items:center;gap:10px;width:100%;margin:0 0 14px;padding:10px 12px;border:2px dashed var(--ink);background:var(--surface);text-align:left"><span style="flex:1;font:600 16px/1.3 var(--f-sans)">' + chk + ' of ' + list.length + ' checked against the drawings</span><span class="lbl-caps">Check ›</span></button>';
     h += '<div class="legend"><div><i style="background:var(--surface)"></i><b>' + b.none + '</b>Not started</div><div><i style="background:var(--part)"></i><b>' + b.moving + '</b>Part-built, moving</div><div><i style="background:var(--hazard)"></i><b>' + b.stalled + '</b>Part-built, stalled &gt; 6 mo</div><div><i style="background:var(--ink)"></i><b>' + b.done + '</b>Completed</div></div>';
-    const names = ['Excavation', 'Blinding', 'Rebar', 'Shuttered', 'Concreted'];
-    const hist = [0, 0, 0, 0, 0];
-    stats.forEach(x => { if (x.st.partBuilt) { const n = x.f.ladder.length - 1; const i = Math.min(4, Math.round((x.st.best - 1) * 4 / Math.max(1, n - 2))); hist[Math.max(0, i)]++; } });
+    // Bars by the structures' own stage names: a precast culvert's Bedding or Joints is not a
+    // ditch's Blinding or Rebar. The in-between stages of every ladder here, in ladder order.
+    const names = [];
+    [...new Set(list.map(f => f.ladder))].sort((a, b2) => list.filter(f => f.ladder === b2).length - list.filter(f => f.ladder === a).length).forEach(l => {
+      let at = -1;
+      l.slice(1, -1).forEach(n => { const k = names.indexOf(n); if (k >= 0) at = k; else names.splice(++at, 0, n); });
+    });
+    const hist = names.map(() => 0);
+    stats.forEach(x => { if (x.st.partBuilt) { const k = names.indexOf(x.f.ladder[x.st.best]); if (k >= 0) hist[k]++; } });
+    // Mixed ladders (All): only the stages something stands at, as rows, so the names stay readable.
+    const bars = names.map((n, i) => ({ n, v: hist[i] })).filter(x => names.length <= 6 || x.v);
     const hm = Math.max(1, ...hist);
-    h += '<div class="lbl-caps mt24">Where the part-built ones stand</div><div class="hist">' + hist.map((v, i) => '<div>' + v + '<i style="height:' + Math.max(4, v / hm * 90) + 'px"></i><small>' + names[i] + '</small></div>').join('') + '</div></div>';
+    h += '<div class="lbl-caps mt24">Where the part-built ones stand</div>';
+    if (bars.length <= 6) h += '<div class="hist" style="grid-template-columns:repeat(' + Math.max(1, bars.length) + ',1fr)">' + bars.map(x => '<div>' + x.v + '<i style="height:' + Math.max(4, x.v / hm * 90) + 'px"></i><small>' + esc(x.n) + '</small></div>').join('') + '</div></div>';
+    else h += '<div style="display:grid;grid-template-columns:auto 1fr auto;gap:6px 10px;align-items:center;margin-top:10px">' + bars.map(x => '<small style="font:600 14px/1.2 var(--f-sans);color:var(--ink-2)">' + esc(x.n) + '</small><i style="display:block;height:18px;width:' + Math.max(2, x.v / hm * 100) + '%;background:var(--part);border:2px solid var(--ink)"></i><b style="font:600 16px/1 var(--f-sans)">' + x.v + '</b>').join('') + '</div></div>';
 
     h += '<div style="border-top:3px solid var(--ink);margin-top:20px;padding:16px 16px 8px;display:flex;justify-content:space-between;align-items:center"><span class="lbl-caps">Every structure, one mark · ▲ up the line</span>' +
       '<div class="segm" style="grid-template-columns:1fr 1fr;width:150px"><button data-act="sec-view" data-v="ribbon" class="' + (S.secView === 'ribbon' ? 'on' : '') + '" style="min-height:40px">Ribbon</button><button data-act="sec-view" data-v="map" class="' + (S.secView === 'map' ? 'on' : '') + '" style="min-height:40px">Map</button></div></div>';

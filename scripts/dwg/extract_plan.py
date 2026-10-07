@@ -293,8 +293,9 @@ def main():
         txt = re.sub(r'\\P', ' ', txt or '').strip()
         ch, off = axis.project([tip])
         # S02 writes 'L:125m / i:0.3%', S03 'L=28M / I:0.10%'.
-        L = re.search(r'\bL\s*[:=]\s*([\d.]+)\s*m', txt, re.I)
-        i = re.search(r'\bi\s*[:=]\s*([\d.]+)\s*%', txt, re.I)
+        # A stray full stop ('L:98.92.m', S04) is not part of the number.
+        L = re.search(r'\bL\s*[:=]\s*(\d+(?:\.\d+)?)\.?\s*m', txt, re.I)
+        i = re.search(r'\bi\s*[:=]\s*(\d+(?:\.\d+)?)\.?\s*%', txt, re.I)
         notes.append({'text': txt, 'ch': round(float(ch[0]), 2), 'offset': round(float(off[0]), 2),
                       'stated_length': float(L.group(1)) if L else None, 'gradient_pct': float(i.group(1)) if i else None})
     # Riprap callouts ("SLOPE PROTECTION L:28m / D50=100mm") become riprap label

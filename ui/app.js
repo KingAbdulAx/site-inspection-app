@@ -329,7 +329,9 @@
   function renderStrip() {
     if (!DA.strip) {
       DA.strip = new window.DStrip.Strip($('#stripHost'), {
-        onTap: f => openDrawer(f.ch0, f.id),
+        // Phone: a clear tap opens that structure's record; marks too close to tell apart open the
+        // list there. Desk: the list is docked beside the strip, so a tap points it at the feature.
+        onTap: (f, several, ch) => { if (DA.layout !== 'phone') openDrawer(f.ch0, f.id); else if (several) openDrawer(ch, f.id); else openRecord(f.id); },
         onPan: () => { $('#recentre').classList.remove('hidden'); },
         onZoom: () => render()
       });
@@ -492,6 +494,8 @@
       opts.push({ stage: 0, sub: 'Nothing built yet' });
       if (c == null || c === 0) opts.push({ stage: 1, sub: 'Work has started' });
     }
+    // Finished is always one tap away, whatever was seen before.
+    if (s !== max && !opts.some(o => o.stage === max)) opts.push({ stage: max, sub: 'Finished · the last stage' });
     opts.forEach((o, i) => {
       h += '<button class="opt' + (i === 0 ? ' primary' : '') + '" data-act="stage" data-id="' + esc(f.id) + '" data-stage="' + o.stage + '"><span><b>' + esc(f.ladder[o.stage]) + '</b><small>' + esc(o.sub) + '</small></span>' + (i === 0 ? I.icon('check') : '') + '</button>';
     });
@@ -697,7 +701,13 @@
       case 'mode': S.mode = b.dataset.mode; render(); break;
       case 'record': closeAll(); openRecord(id); break;
       case 'drawer': openDrawer(); break;
-      case 'ladder': { const l = ov.querySelector('#fullLadder'); l.classList.toggle('hidden'); b.classList.add('hidden'); break; }
+      case 'ladder': {
+        const l = ov.querySelector('#fullLadder'); l.classList.toggle('hidden'); b.classList.add('hidden');
+        // Bring the whole ladder into view, so no stage needs a scroll to find.
+        const body = ov.querySelector('.body'), lr = l.getBoundingClientRect(), br = body.getBoundingClientRect();
+        if (lr.bottom > br.bottom) body.scrollTop += Math.min(lr.bottom - br.bottom + 12, lr.top - br.top - 8);
+        break;
+      }
       case 'stage': recordStage(id, Number(b.dataset.stage)); break;
       case 'undo': if (DA.pendingUndo) { const u = DA.pendingUndo; DA.pendingUndo = null; $('#toastHost').innerHTML = ''; u(); } break;
       case 'keypad': openKeypad(); break;

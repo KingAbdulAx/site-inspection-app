@@ -11,7 +11,9 @@ and are simply drawn in the right place.
         --start 82800 --section "Section 03: Kazaure to Daura (KZDR)"
 
 --lead takes the neighbouring sub-section's axis to fill the chainage before
-this plan's first tick (the two track plans meet between ticks).
+this plan's first tick (the two track plans meet between ticks). --tail and
+--end do the same at the far end: S03's track plan stops at 124+500, and its
+sub-section runs on to 124+521, so the S04 axis fills those 21 m.
 """
 import argparse
 import json
@@ -37,6 +39,8 @@ def main():
     ap.add_argument('--var', required=True)
     ap.add_argument('--start', type=float, required=True, help='first chainage to write')
     ap.add_argument('--section', required=True)
+    ap.add_argument('--tail', help='neighbouring plan extraction whose axis fills the end')
+    ap.add_argument('--end', type=float, help='last chainage to write (with --tail)')
     ap.add_argument('--step', type=float, default=25.0)
     a = ap.parse_args()
     log = lambda s: print(s, file=sys.stderr)
@@ -47,6 +51,11 @@ def main():
         lead = [tuple(p) for p in json.load(open(a.lead))['axis']['points'] if a.start - 1 <= p[0] < pts[0][0]]
         log(f'lead-in from {a.lead}: {len(lead)} ticks ({fmt(lead[0][0])} → {fmt(lead[-1][0])})' if lead else 'no lead-in ticks')
         pts = lead + pts
+    if a.tail and a.end is not None:
+        last = pts[-1][0]
+        tail = [tuple(p) for p in json.load(open(a.tail))['axis']['points'] if last < p[0] <= a.end + 25]
+        log(f'tail from {a.tail}: {len(tail)} ticks ({fmt(tail[0][0])} → {fmt(tail[-1][0])})' if tail else 'no tail ticks')
+        pts = pts + tail
     ch = np.array([p[0] for p in pts])
     xy = np.array([(p[1], p[2]) for p in pts])
     order = np.argsort(ch)
@@ -58,7 +67,7 @@ def main():
     log(f'{len(ch)} ticks {fmt(ch[0])} → {fmt(ch[-1])}; steps of {sorted(set(np.round(dch).astype(int)))} m; '
         f'{len(bad)} where ground and chainage differ by > 0.5 m' + (f', e.g. {[(fmt(ch[i]), round(float(dch[i]), 1), round(float(dxy[i]), 2)) for i in bad[:5]]}' if len(bad) else ''))
 
-    end = float(ch[-1])
+    end = float(ch[-1]) if a.end is None else min(float(ch[-1]), a.end)
     want = np.arange(a.start, end + 0.01, a.step)
     if want[-1] < end - 0.01:
         want = np.append(want, end)
@@ -92,7 +101,7 @@ def main():
         'metadata': {
             'section': a.section, 'start_pk': float(want[0]), 'end_pk': end, 'total_points': len(dense), 'step_meters': a.step,
             'interpolation': 'CAD track plan 25 m ticks (block S11, layer TRA-H-GTR_km-tick), chained and anchored by the 100 m labels; linear between ticks',
-            'source_model': plan['source']['axis'].split('/')[-1] + (' (+ lead-in ' + a.lead.split('/')[-1] + ')' if a.lead else ''),
+            'source_model': plan['source']['axis'].split('/')[-1] + (' (+ lead-in ' + a.lead.split('/')[-1] + ')' if a.lead else '') + (' (+ tail ' + a.tail.split('/')[-1] + ')' if a.tail else ''),
             'crs_source': 'EPSG:32632 (WGS84 UTM 32N)', 'arc_length_m': round(arc, 3),
             'generated_at': 'September 2026', 'datum': 'WGS84',
         },

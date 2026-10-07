@@ -1,0 +1,583 @@
+{
+ "kind": "kmd-progress-pushed",
+ "asof": "2026-09-25",
+ "pushed_at": "2026-10-07T07:55:54.994Z",
+ "table_before": 538,
+ "written": [
+  {
+   "asset_id": "xc_DRMR_124_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_124_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_125_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_125_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_125_3",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_126_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_127_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_127_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_127_3",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_128_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_128_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_128_3",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_128_4",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_129_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_130_A",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_130_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_131_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_131_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_131_3",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_131_4",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_132_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_132_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_133_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_134_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_135_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_136_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_136_A",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_136_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_137_1",
+   "status": "Joints",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_137_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_137_3",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_139_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_140_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_141_A",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_141_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_143_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_143_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_144_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_144_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_144_3",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_146_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_147_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_147_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_147_3",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_148_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_148_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_149_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_149_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_149_3",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_149_4",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_150_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_151_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_151_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_151_3",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_151_4",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_154_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_154_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_154_3",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_154_4",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_155_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_155_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_155_3",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_156_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_156_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_156_3",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_157_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_157_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_157_3",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_158_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_159_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_159_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_159_3",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_160_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_160_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_160_3",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_160_4",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_161_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_161_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_161_3",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_162_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_164_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_164_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_166_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_168_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_169_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_169_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_169_3",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_169_4",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_169_5",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_169_6",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_171_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_171_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_171_3",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_173_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_173_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_173_3",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_173_4",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_174_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_174_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_174_3",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_174_4",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_175_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_175_2",
+   "status": "Wing walls",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_175_3",
+   "status": "Wing walls",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_175_4",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_177_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_177_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_177_3",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_177_4",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_178_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_179_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_179_2",
+   "status": "Joints",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_179_3",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_180_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_DRMR_180_A",
+   "status": "Completed & Approved",
+   "replaced": null
+  }
+ ]
+}

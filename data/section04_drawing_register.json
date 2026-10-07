@@ -1,0 +1,673 @@
+{
+ "section": "Section 04 (DRMR)",
+ "section_extent": {
+  "start_pk": 124521.14,
+  "end_pk": 181080.012
+ },
+ "vetting_comments": {
+  "tc1326_26": {
+   "reference": "KMD TC 1326 26 HYD 30 352 00",
+   "date": "2026-08-05",
+   "status": "Review of the revised Section 04 drainage drawings and report (transmittal 4784, 17 Jul 2026)"
+  }
+ },
+ "note": "Sheet ranges and levels are from the status table in TC 1326/26: DW-03001 = 124+521.14 to 125+575, then 1.4 km sheets to DW-03041 = 180+175 to 181+080.012. DW-03011, 03019, 03033 and 03034 are LEVEL C; the rest LEVEL B.",
+ "documents": [
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03001",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03001-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 124521.14,
+   "end_pk": 125575.0,
+   "title": "Drainage Plan - CH 124+521 - CH 125+575",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03002",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03002-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 125575.0,
+   "end_pk": 126975.0,
+   "title": "Drainage Plan - CH 125+575 - CH 126+975",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03003",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03003-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 126975.0,
+   "end_pk": 128375.0,
+   "title": "Drainage Plan - CH 126+975 - CH 128+375",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03004",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03004-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 128375.0,
+   "end_pk": 129775.0,
+   "title": "Drainage Plan - CH 128+375 - CH 129+775",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03005",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03005-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 129775.0,
+   "end_pk": 131175.0,
+   "title": "Drainage Plan - CH 129+775 - CH 131+175",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03006",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03006-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 131175.0,
+   "end_pk": 132575.0,
+   "title": "Drainage Plan - CH 131+175 - CH 132+575",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03007",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03007-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 132575.0,
+   "end_pk": 133975.0,
+   "title": "Drainage Plan - CH 132+575 - CH 133+975",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03008",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03008-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 133975.0,
+   "end_pk": 135375.0,
+   "title": "Drainage Plan - CH 133+975 - CH 135+375",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03009",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03009-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 135375.0,
+   "end_pk": 136775.0,
+   "title": "Drainage Plan - CH 135+375 - CH 136+775",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03010",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03010-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 136775.0,
+   "end_pk": 138175.0,
+   "title": "Drainage Plan - CH 136+775 - CH 138+175",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03011",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03011-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 138175.0,
+   "end_pk": 139575.0,
+   "title": "Drainage Plan - CH 138+175 - CH 139+575",
+   "tc1326": {
+    "status_level": "LEVEL C",
+    "status_full": "Subject to amendment as noted"
+   },
+   "effective_status": "LEVEL C"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03012",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03012-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 139575.0,
+   "end_pk": 140975.0,
+   "title": "Drainage Plan - CH 139+575 - CH 140+975",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03013",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03013-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 140975.0,
+   "end_pk": 142375.0,
+   "title": "Drainage Plan - CH 140+975 - CH 142+375",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03014",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03014-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 142375.0,
+   "end_pk": 143775.0,
+   "title": "Drainage Plan - CH 142+375 - CH 143+775",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03015",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03015-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 143775.0,
+   "end_pk": 145175.0,
+   "title": "Drainage Plan - CH 143+775 - CH 145+175",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03016",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03016-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 145175.0,
+   "end_pk": 146575.0,
+   "title": "Drainage Plan - CH 145+175 - CH 146+575",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03017",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03017-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 146575.0,
+   "end_pk": 147975.0,
+   "title": "Drainage Plan - CH 146+575 - CH 147+975",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03018",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03018-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 147975.0,
+   "end_pk": 149375.0,
+   "title": "Drainage Plan - CH 147+975 - CH 149+375",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03019",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03019-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 149375.0,
+   "end_pk": 150775.0,
+   "title": "Drainage Plan - CH 149+375 - CH 150+775",
+   "tc1326": {
+    "status_level": "LEVEL C",
+    "status_full": "Subject to amendment as noted"
+   },
+   "effective_status": "LEVEL C"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03020",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03020-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 150775.0,
+   "end_pk": 152175.0,
+   "title": "Drainage Plan - CH 150+775 - CH 152+175",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03021",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03021-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 152175.0,
+   "end_pk": 153575.0,
+   "title": "Drainage Plan - CH 152+175 - CH 153+575",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03022",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03022-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 153575.0,
+   "end_pk": 154975.0,
+   "title": "Drainage Plan - CH 153+575 - CH 154+975",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03023",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03023-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 154975.0,
+   "end_pk": 156375.0,
+   "title": "Drainage Plan - CH 154+975 - CH 156+375",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03024",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03024-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 156375.0,
+   "end_pk": 157775.0,
+   "title": "Drainage Plan - CH 156+375 - CH 157+775",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03025",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03025-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 157775.0,
+   "end_pk": 159175.0,
+   "title": "Drainage Plan - CH 157+775 - CH 159+175",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03026",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03026-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 159175.0,
+   "end_pk": 160575.0,
+   "title": "Drainage Plan - CH 159+175 - CH 160+575",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03027",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03027-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 160575.0,
+   "end_pk": 161975.0,
+   "title": "Drainage Plan - CH 160+575 - CH 161+975",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03028",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03028-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 161975.0,
+   "end_pk": 163375.0,
+   "title": "Drainage Plan - CH 161+975 - CH 163+375",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03029",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03029-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 163375.0,
+   "end_pk": 164775.0,
+   "title": "Drainage Plan - CH 163+375 - CH 164+775",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03030",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03030-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 164775.0,
+   "end_pk": 166175.0,
+   "title": "Drainage Plan - CH 164+775 - CH 166+175",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03031",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03031-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 166175.0,
+   "end_pk": 167575.0,
+   "title": "Drainage Plan - CH 166+175 - CH 167+575",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03032",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03032-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 167575.0,
+   "end_pk": 168975.0,
+   "title": "Drainage Plan - CH 167+575 - CH 168+975",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03033",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03033-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 168975.0,
+   "end_pk": 170375.0,
+   "title": "Drainage Plan - CH 168+975 - CH 170+375",
+   "tc1326": {
+    "status_level": "LEVEL C",
+    "status_full": "Subject to amendment as noted"
+   },
+   "effective_status": "LEVEL C"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03034",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03034-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 170375.0,
+   "end_pk": 171775.0,
+   "title": "Drainage Plan - CH 170+375 - CH 171+775",
+   "tc1326": {
+    "status_level": "LEVEL C",
+    "status_full": "Subject to amendment as noted"
+   },
+   "effective_status": "LEVEL C"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03035",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03035-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 171775.0,
+   "end_pk": 173175.0,
+   "title": "Drainage Plan - CH 171+775 - CH 173+175",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03036",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03036-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 173175.0,
+   "end_pk": 174575.0,
+   "title": "Drainage Plan - CH 173+175 - CH 174+575",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03037",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03037-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 174575.0,
+   "end_pk": 175975.0,
+   "title": "Drainage Plan - CH 174+575 - CH 175+975",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03038",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03038-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 175975.0,
+   "end_pk": 177375.0,
+   "title": "Drainage Plan - CH 175+975 - CH 177+375",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03039",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03039-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 177375.0,
+   "end_pk": 178775.0,
+   "title": "Drainage Plan - CH 177+375 - CH 178+775",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03040",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03040-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 178775.0,
+   "end_pk": 180175.0,
+   "title": "Drainage Plan - CH 178+775 - CH 180+175",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-DRMR-2200-DW-03041",
+   "submitted_revision": "03",
+   "submitted_doc_code": "T2019-323-DD-KM-DRMR-2200-DW-03041-03",
+   "discipline": "DRN",
+   "section": "S04",
+   "category": "Plan Sheet",
+   "start_pk": 180175.0,
+   "end_pk": 181080.012,
+   "title": "Drainage Plan - CH 180+175 - CH 181+080",
+   "tc1326": {
+    "status_level": "LEVEL B",
+    "status_full": "Proceed subject to amendment as noted"
+   },
+   "effective_status": "LEVEL B"
+  }
+ ]
+}
