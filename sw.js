@@ -30,6 +30,7 @@ const PRECACHE_LOCAL_ASSETS = [
   './data/sections_KZDR.json',
   './data/sections_KNDW.json',
   './data/sections_DRMR.json',
+  './data/sections_MRJB.json',
   './legacy.html',
   './styles.css',
   './fonts.css',
