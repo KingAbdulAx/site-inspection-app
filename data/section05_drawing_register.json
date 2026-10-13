@@ -1,0 +1,672 @@
+{
+ "section": "Section 05 (MRJB)",
+ "section_extent": {
+  "start_pk": 181080.035,
+  "end_pk": 243225.0
+ },
+ "vetting_comments": {
+  "tc1171_26": {
+   "reference": "KMD TC 1171 26 HYD 30 192 00",
+   "date": "2026-05-09",
+   "status": "Review of the revised Section 05 drainage drawings (transmittal 4304)"
+  }
+ },
+ "note": "Sheet ranges follow the 1.4 km grid in TC 1171/26 (DW-03001 = 181+080.035 to 182+000, DW-03004 = 184+800 to 186+200, DW-03039 = 233+800 to 235+200). DW-03007, 03008 and 03023 are LEVEL C. DW-03002, 03003, 03006 and 03014 were not in that submission, nor are the sheets past 235+200 (the track plan and the execution chart run on to 243+225).",
+ "documents": [
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03001",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 181080.035,
+   "end_pk": 182000.0,
+   "title": "Drainage Plan - CH 181+080 - CH 182+000",
+   "submitted_revision": "02",
+   "submitted_doc_code": "T2019-323-DD-KM-MRJB-2200-DW-03001-02",
+   "tc1171": {
+    "status_level": "LEVEL B"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03002",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 182000.0,
+   "end_pk": 183400.0,
+   "title": "Drainage Plan - CH 182+000 - CH 183+400",
+   "submitted_revision": "",
+   "submitted_doc_code": null,
+   "tc1171": null,
+   "effective_status": "not in TC 1171/26"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03003",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 183400.0,
+   "end_pk": 184800.0,
+   "title": "Drainage Plan - CH 183+400 - CH 184+800",
+   "submitted_revision": "",
+   "submitted_doc_code": null,
+   "tc1171": null,
+   "effective_status": "not in TC 1171/26"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03004",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 184800.0,
+   "end_pk": 186200.0,
+   "title": "Drainage Plan - CH 184+800 - CH 186+200",
+   "submitted_revision": "02",
+   "submitted_doc_code": "T2019-323-DD-KM-MRJB-2200-DW-03004-02",
+   "tc1171": {
+    "status_level": "LEVEL B"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03005",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 186200.0,
+   "end_pk": 187600.0,
+   "title": "Drainage Plan - CH 186+200 - CH 187+600",
+   "submitted_revision": "02",
+   "submitted_doc_code": "T2019-323-DD-KM-MRJB-2200-DW-03005-02",
+   "tc1171": {
+    "status_level": "LEVEL B"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03006",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 187600.0,
+   "end_pk": 189000.0,
+   "title": "Drainage Plan - CH 187+600 - CH 189+000",
+   "submitted_revision": "",
+   "submitted_doc_code": null,
+   "tc1171": null,
+   "effective_status": "not in TC 1171/26"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03007",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 189000.0,
+   "end_pk": 190400.0,
+   "title": "Drainage Plan - CH 189+000 - CH 190+400",
+   "submitted_revision": "02",
+   "submitted_doc_code": "T2019-323-DD-KM-MRJB-2200-DW-03007-02",
+   "tc1171": {
+    "status_level": "LEVEL C"
+   },
+   "effective_status": "LEVEL C"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03008",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 190400.0,
+   "end_pk": 191800.0,
+   "title": "Drainage Plan - CH 190+400 - CH 191+800",
+   "submitted_revision": "02",
+   "submitted_doc_code": "T2019-323-DD-KM-MRJB-2200-DW-03008-02",
+   "tc1171": {
+    "status_level": "LEVEL C"
+   },
+   "effective_status": "LEVEL C"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03009",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 191800.0,
+   "end_pk": 193200.0,
+   "title": "Drainage Plan - CH 191+800 - CH 193+200",
+   "submitted_revision": "02",
+   "submitted_doc_code": "T2019-323-DD-KM-MRJB-2200-DW-03009-02",
+   "tc1171": {
+    "status_level": "LEVEL B"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03010",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 193200.0,
+   "end_pk": 194600.0,
+   "title": "Drainage Plan - CH 193+200 - CH 194+600",
+   "submitted_revision": "02",
+   "submitted_doc_code": "T2019-323-DD-KM-MRJB-2200-DW-03010-02",
+   "tc1171": {
+    "status_level": "LEVEL B"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03011",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 194600.0,
+   "end_pk": 196000.0,
+   "title": "Drainage Plan - CH 194+600 - CH 196+000",
+   "submitted_revision": "02",
+   "submitted_doc_code": "T2019-323-DD-KM-MRJB-2200-DW-03011-02",
+   "tc1171": {
+    "status_level": "LEVEL B"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03012",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 196000.0,
+   "end_pk": 197400.0,
+   "title": "Drainage Plan - CH 196+000 - CH 197+400",
+   "submitted_revision": "02",
+   "submitted_doc_code": "T2019-323-DD-KM-MRJB-2200-DW-03012-02",
+   "tc1171": {
+    "status_level": "LEVEL B"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03013",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 197400.0,
+   "end_pk": 198800.0,
+   "title": "Drainage Plan - CH 197+400 - CH 198+800",
+   "submitted_revision": "02",
+   "submitted_doc_code": "T2019-323-DD-KM-MRJB-2200-DW-03013-02",
+   "tc1171": {
+    "status_level": "LEVEL B"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03014",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 198800.0,
+   "end_pk": 200200.0,
+   "title": "Drainage Plan - CH 198+800 - CH 200+200",
+   "submitted_revision": "",
+   "submitted_doc_code": null,
+   "tc1171": null,
+   "effective_status": "not in TC 1171/26"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03015",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 200200.0,
+   "end_pk": 201600.0,
+   "title": "Drainage Plan - CH 200+200 - CH 201+600",
+   "submitted_revision": "02",
+   "submitted_doc_code": "T2019-323-DD-KM-MRJB-2200-DW-03015-02",
+   "tc1171": {
+    "status_level": "LEVEL B"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03016",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 201600.0,
+   "end_pk": 203000.0,
+   "title": "Drainage Plan - CH 201+600 - CH 203+000",
+   "submitted_revision": "02",
+   "submitted_doc_code": "T2019-323-DD-KM-MRJB-2200-DW-03016-02",
+   "tc1171": {
+    "status_level": "LEVEL B"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03017",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 203000.0,
+   "end_pk": 204400.0,
+   "title": "Drainage Plan - CH 203+000 - CH 204+400",
+   "submitted_revision": "02",
+   "submitted_doc_code": "T2019-323-DD-KM-MRJB-2200-DW-03017-02",
+   "tc1171": {
+    "status_level": "LEVEL B"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03018",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 204400.0,
+   "end_pk": 205800.0,
+   "title": "Drainage Plan - CH 204+400 - CH 205+800",
+   "submitted_revision": "02",
+   "submitted_doc_code": "T2019-323-DD-KM-MRJB-2200-DW-03018-02",
+   "tc1171": {
+    "status_level": "LEVEL B"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03019",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 205800.0,
+   "end_pk": 207200.0,
+   "title": "Drainage Plan - CH 205+800 - CH 207+200",
+   "submitted_revision": "02",
+   "submitted_doc_code": "T2019-323-DD-KM-MRJB-2200-DW-03019-02",
+   "tc1171": {
+    "status_level": "LEVEL B"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03020",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 207200.0,
+   "end_pk": 208600.0,
+   "title": "Drainage Plan - CH 207+200 - CH 208+600",
+   "submitted_revision": "02",
+   "submitted_doc_code": "T2019-323-DD-KM-MRJB-2200-DW-03020-02",
+   "tc1171": {
+    "status_level": "LEVEL B"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03021",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 208600.0,
+   "end_pk": 210000.0,
+   "title": "Drainage Plan - CH 208+600 - CH 210+000",
+   "submitted_revision": "01",
+   "submitted_doc_code": "T2019-323-DD-KM-MRJB-2200-DW-03021-01",
+   "tc1171": {
+    "status_level": "LEVEL B"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03022",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 210000.0,
+   "end_pk": 211400.0,
+   "title": "Drainage Plan - CH 210+000 - CH 211+400",
+   "submitted_revision": "01",
+   "submitted_doc_code": "T2019-323-DD-KM-MRJB-2200-DW-03022-01",
+   "tc1171": {
+    "status_level": "LEVEL B"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03023",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 211400.0,
+   "end_pk": 212800.0,
+   "title": "Drainage Plan - CH 211+400 - CH 212+800",
+   "submitted_revision": "01",
+   "submitted_doc_code": "T2019-323-DD-KM-MRJB-2200-DW-03023-01",
+   "tc1171": {
+    "status_level": "LEVEL C"
+   },
+   "effective_status": "LEVEL C"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03024",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 212800.0,
+   "end_pk": 214200.0,
+   "title": "Drainage Plan - CH 212+800 - CH 214+200",
+   "submitted_revision": "01",
+   "submitted_doc_code": "T2019-323-DD-KM-MRJB-2200-DW-03024-01",
+   "tc1171": {
+    "status_level": "LEVEL B"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03025",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 214200.0,
+   "end_pk": 215600.0,
+   "title": "Drainage Plan - CH 214+200 - CH 215+600",
+   "submitted_revision": "01",
+   "submitted_doc_code": "T2019-323-DD-KM-MRJB-2200-DW-03025-01",
+   "tc1171": {
+    "status_level": "LEVEL B"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03026",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 215600.0,
+   "end_pk": 217000.0,
+   "title": "Drainage Plan - CH 215+600 - CH 217+000",
+   "submitted_revision": "01",
+   "submitted_doc_code": "T2019-323-DD-KM-MRJB-2200-DW-03026-01",
+   "tc1171": {
+    "status_level": "LEVEL B"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03027",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 217000.0,
+   "end_pk": 218400.0,
+   "title": "Drainage Plan - CH 217+000 - CH 218+400",
+   "submitted_revision": "01",
+   "submitted_doc_code": "T2019-323-DD-KM-MRJB-2200-DW-03027-01",
+   "tc1171": {
+    "status_level": "LEVEL B"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03028",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 218400.0,
+   "end_pk": 219800.0,
+   "title": "Drainage Plan - CH 218+400 - CH 219+800",
+   "submitted_revision": "01",
+   "submitted_doc_code": "T2019-323-DD-KM-MRJB-2200-DW-03028-01",
+   "tc1171": {
+    "status_level": "LEVEL B"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03029",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 219800.0,
+   "end_pk": 221200.0,
+   "title": "Drainage Plan - CH 219+800 - CH 221+200",
+   "submitted_revision": "01",
+   "submitted_doc_code": "T2019-323-DD-KM-MRJB-2200-DW-03029-01",
+   "tc1171": {
+    "status_level": "LEVEL B"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03030",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 221200.0,
+   "end_pk": 222600.0,
+   "title": "Drainage Plan - CH 221+200 - CH 222+600",
+   "submitted_revision": "01",
+   "submitted_doc_code": "T2019-323-DD-KM-MRJB-2200-DW-03030-01",
+   "tc1171": {
+    "status_level": "LEVEL B"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03031",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 222600.0,
+   "end_pk": 224000.0,
+   "title": "Drainage Plan - CH 222+600 - CH 224+000",
+   "submitted_revision": "01",
+   "submitted_doc_code": "T2019-323-DD-KM-MRJB-2200-DW-03031-01",
+   "tc1171": {
+    "status_level": "LEVEL B"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03032",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 224000.0,
+   "end_pk": 225400.0,
+   "title": "Drainage Plan - CH 224+000 - CH 225+400",
+   "submitted_revision": "01",
+   "submitted_doc_code": "T2019-323-DD-KM-MRJB-2200-DW-03032-01",
+   "tc1171": {
+    "status_level": "LEVEL B"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03033",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 225400.0,
+   "end_pk": 226800.0,
+   "title": "Drainage Plan - CH 225+400 - CH 226+800",
+   "submitted_revision": "01",
+   "submitted_doc_code": "T2019-323-DD-KM-MRJB-2200-DW-03033-01",
+   "tc1171": {
+    "status_level": "LEVEL B"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03034",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 226800.0,
+   "end_pk": 228200.0,
+   "title": "Drainage Plan - CH 226+800 - CH 228+200",
+   "submitted_revision": "01",
+   "submitted_doc_code": "T2019-323-DD-KM-MRJB-2200-DW-03034-01",
+   "tc1171": {
+    "status_level": "LEVEL B"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03035",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 228200.0,
+   "end_pk": 229600.0,
+   "title": "Drainage Plan - CH 228+200 - CH 229+600",
+   "submitted_revision": "01",
+   "submitted_doc_code": "T2019-323-DD-KM-MRJB-2200-DW-03035-01",
+   "tc1171": {
+    "status_level": "LEVEL B"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03036",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 229600.0,
+   "end_pk": 231000.0,
+   "title": "Drainage Plan - CH 229+600 - CH 231+000",
+   "submitted_revision": "01",
+   "submitted_doc_code": "T2019-323-DD-KM-MRJB-2200-DW-03036-01",
+   "tc1171": {
+    "status_level": "LEVEL B"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03037",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 231000.0,
+   "end_pk": 232400.0,
+   "title": "Drainage Plan - CH 231+000 - CH 232+400",
+   "submitted_revision": "01",
+   "submitted_doc_code": "T2019-323-DD-KM-MRJB-2200-DW-03037-01",
+   "tc1171": {
+    "status_level": "LEVEL B"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03038",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 232400.0,
+   "end_pk": 233800.0,
+   "title": "Drainage Plan - CH 232+400 - CH 233+800",
+   "submitted_revision": "01",
+   "submitted_doc_code": "T2019-323-DD-KM-MRJB-2200-DW-03038-01",
+   "tc1171": {
+    "status_level": "LEVEL B"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03039",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 233800.0,
+   "end_pk": 235200.0,
+   "title": "Drainage Plan - CH 233+800 - CH 235+200",
+   "submitted_revision": "01",
+   "submitted_doc_code": "T2019-323-DD-KM-MRJB-2200-DW-03039-01",
+   "tc1171": {
+    "status_level": "LEVEL B"
+   },
+   "effective_status": "LEVEL B"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03040",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 235200.0,
+   "end_pk": 236600.0,
+   "title": "Drainage Plan - CH 235+200 - CH 236+600",
+   "submitted_revision": "",
+   "submitted_doc_code": null,
+   "tc1171": null,
+   "effective_status": "not in TC 1171/26"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03041",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 236600.0,
+   "end_pk": 238000.0,
+   "title": "Drainage Plan - CH 236+600 - CH 238+000",
+   "submitted_revision": "",
+   "submitted_doc_code": null,
+   "tc1171": null,
+   "effective_status": "not in TC 1171/26"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03042",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 238000.0,
+   "end_pk": 239400.0,
+   "title": "Drainage Plan - CH 238+000 - CH 239+400",
+   "submitted_revision": "",
+   "submitted_doc_code": null,
+   "tc1171": null,
+   "effective_status": "not in TC 1171/26"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03043",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 239400.0,
+   "end_pk": 240800.0,
+   "title": "Drainage Plan - CH 239+400 - CH 240+800",
+   "submitted_revision": "",
+   "submitted_doc_code": null,
+   "tc1171": null,
+   "effective_status": "not in TC 1171/26"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03044",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 240800.0,
+   "end_pk": 242200.0,
+   "title": "Drainage Plan - CH 240+800 - CH 242+200",
+   "submitted_revision": "",
+   "submitted_doc_code": null,
+   "tc1171": null,
+   "effective_status": "not in TC 1171/26"
+  },
+  {
+   "doc_number": "T2019-323-DD-KM-MRJB-2200-DW-03045",
+   "discipline": "DRN",
+   "section": "S05",
+   "category": "Plan Sheet",
+   "start_pk": 242200.0,
+   "end_pk": 243225.0,
+   "title": "Drainage Plan - CH 242+200 - CH 243+225",
+   "submitted_revision": "",
+   "submitted_doc_code": null,
+   "tc1171": null,
+   "effective_status": "not in TC 1171/26"
+  }
+ ]
+}

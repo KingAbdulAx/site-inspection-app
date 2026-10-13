@@ -1,0 +1,377 @@
+{
+ "kind": "kmd-progress",
+ "asof": "2026-09-25",
+ "ditch_date": "2026-09-25",
+ "rows": [
+  {
+   "asset_id": "xc_MRJB_181_1",
+   "sub": "MRJB",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 181.1 at 181+500 · done: haunch, excavation, bedding, installed, apron, wing walls, joints"
+  },
+  {
+   "asset_id": "xc_MRJB_182_1",
+   "sub": "MRJB",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 182.1 at 182+600 · done: excavation, bedding, installed, apron, wing walls, joints, paint"
+  },
+  {
+   "asset_id": "xc_MRJB_182_2",
+   "sub": "MRJB",
+   "status": "Wing walls",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 182.2 at 182+972 · done: excavation, bedding, installed, apron, wing walls"
+  },
+  {
+   "asset_id": "xc_MRJB_183_1",
+   "sub": "MRJB",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 183.1 at 183+477 · done: excavation, bedding, installed, haunch, apron, wing walls, joints · ongoing: backfill"
+  },
+  {
+   "asset_id": "xc_MRJB_183_2",
+   "sub": "MRJB",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 183.2 at 183+706 · done: excavation, bedding, installed, haunch, apron, wing walls, joints · ongoing: backfill"
+  },
+  {
+   "asset_id": "xc_MRJB_184_1",
+   "sub": "MRJB",
+   "status": "Wing walls",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 184.1 at 184+635 · done: excavation, bedding, installed, haunch, apron, wing walls"
+  },
+  {
+   "asset_id": "xc_MRJB_184_2",
+   "sub": "MRJB",
+   "status": "Wing walls",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 184.2 at 184+879 · done: excavation, bedding, installed, apron, wing walls"
+  },
+  {
+   "asset_id": "xc_MRJB_186_1",
+   "sub": "MRJB",
+   "status": "Wing walls",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 186.1 at 186+244 · done: excavation, bedding, installed, apron, wing walls"
+  },
+  {
+   "asset_id": "xc_MRJB_187_1",
+   "sub": "MRJB",
+   "status": "Wing walls",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 187.1 at 187+001 · done: excavation, bedding, installed, haunch, apron, wing walls"
+  },
+  {
+   "asset_id": "xc_MRJB_187_2",
+   "sub": "MRJB",
+   "status": "Wing walls",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 187.2 at 187+250 · done: excavation, bedding, installed, haunch, apron, wing walls"
+  },
+  {
+   "asset_id": "xc_MRJB_187_3",
+   "sub": "MRJB",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 187.3 at 187+791 · done: excavation, bedding, installed, haunch, apron, wing walls, joints · Ø"
+  },
+  {
+   "asset_id": "xc_MRJB_188_1",
+   "sub": "MRJB",
+   "status": "Wing walls",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 188.1 at 188+000 · done: excavation, bedding, installed, haunch, apron, wing walls"
+  },
+  {
+   "asset_id": "xc_MRJB_188_2",
+   "sub": "MRJB",
+   "status": "Wing walls",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 188.2 at 188+415 · done: excavation, bedding, installed, haunch, apron, wing walls"
+  },
+  {
+   "asset_id": "xc_MRJB_188_3",
+   "sub": "MRJB",
+   "status": "Wing walls",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 188.3 at 188+650 · done: excavation, bedding, installed, haunch, apron, wing walls"
+  },
+  {
+   "asset_id": "xc_MRJB_188_4",
+   "sub": "MRJB",
+   "status": "Wing walls",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 188.4 at 188+883 · done: excavation, bedding, installed, haunch, apron, wing walls"
+  },
+  {
+   "asset_id": "xc_MRJB_189_1",
+   "sub": "MRJB",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 189.1 at 189+710 · done: excavation, bedding, installed, haunch, apron, wing walls, joints · Rebar Complete"
+  },
+  {
+   "asset_id": "xc_MRJB_192_1",
+   "sub": "MRJB",
+   "status": "Wing walls",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 192.1 at 192+690 · done: excavation, bedding, installed, haunch, apron, wing walls"
+  },
+  {
+   "asset_id": "xc_MRJB_193_1",
+   "sub": "MRJB",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 193.1 at 193+067 · done: excavation, bedding, installed, haunch, apron, wing walls, joints"
+  },
+  {
+   "asset_id": "xc_MRJB_193_2",
+   "sub": "MRJB",
+   "status": "Wing walls",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 193.2 at 193+375 · done: excavation, bedding, installed, apron, wing walls"
+  },
+  {
+   "asset_id": "xc_MRJB_193_3",
+   "sub": "MRJB",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 193.3 at 193+545 · done: excavation, bedding, installed, haunch, apron, wing walls, joints"
+  },
+  {
+   "asset_id": "xc_MRJB_193_4",
+   "sub": "MRJB",
+   "status": "Wing walls",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 193.4 at 193+905 · done: excavation, bedding, installed, haunch, apron, wing walls · OE1m R A2-4"
+  },
+  {
+   "asset_id": "xc_MRJB_194_1",
+   "sub": "MRJB",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 194.1 at 194+654 · done: excavation, bedding, installed, apron, wing walls, joints, paint"
+  },
+  {
+   "asset_id": "xc_MRJB_195_1",
+   "sub": "MRJB",
+   "status": "Wing walls",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 195.1 at 195+800 · done: excavation, bedding, installed, apron, wing walls, haunch"
+  },
+  {
+   "asset_id": "xc_MRJB_195_2",
+   "sub": "MRJB",
+   "status": "Wing walls",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 195.2 at 195+931 · done: excavation, bedding, installed, apron, wing walls · OE0.5m, R(A-2-4)"
+  },
+  {
+   "asset_id": "xc_MRJB_196_1",
+   "sub": "MRJB",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 196.1 at 196+050 · done: excavation, bedding, installed, apron, wing walls, joints, paint"
+  },
+  {
+   "asset_id": "xc_MRJB_196_2",
+   "sub": "MRJB",
+   "status": "Wing walls",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 196.2 at 196+692 · done: excavation, bedding, installed, apron, wing walls"
+  },
+  {
+   "asset_id": "xc_MRJB_197_1",
+   "sub": "MRJB",
+   "status": "Wing walls",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 197.1 at 197+120 · done: excavation, bedding, installed, haunch, apron, wing walls"
+  },
+  {
+   "asset_id": "xc_MRJB_197_2",
+   "sub": "MRJB",
+   "status": "Wing walls",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 197.2 at 197+257 · done: excavation, bedding, installed, haunch, apron, wing walls"
+  },
+  {
+   "asset_id": "xc_MRJB_198_1",
+   "sub": "MRJB",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 198.1 at 198+079 · done: excavation, bedding, installed, apron, wing walls, joints, paint"
+  },
+  {
+   "asset_id": "xc_MRJB_198_2",
+   "sub": "MRJB",
+   "status": "Wing walls",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 198.2 at 198+342 · done: excavation, bedding, installed, apron, wing walls"
+  },
+  {
+   "asset_id": "xc_MRJB_198_3",
+   "sub": "MRJB",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 198.3 at 198+662 · done: excavation, bedding, installed, haunch, apron, wing walls, joints · ongoing: paint"
+  },
+  {
+   "asset_id": "xc_MRJB_198_4",
+   "sub": "MRJB",
+   "status": "Wing walls",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 198.4 at 198+846 · done: excavation, bedding, installed, haunch, apron, wing walls · shipped"
+  },
+  {
+   "asset_id": "xc_MRJB_199_2",
+   "sub": "MRJB",
+   "status": "Wing walls",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 199.2 at 199+492 · done: excavation, bedding, installed, apron, wing walls"
+  },
+  {
+   "asset_id": "xc_MRJB_200_1",
+   "sub": "MRJB",
+   "status": "Wing walls",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 200.1 at 200+518 · done: excavation, bedding, installed, apron, wing walls"
+  },
+  {
+   "asset_id": "xc_MRJB_201_1",
+   "sub": "MRJB",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 201.1 at 201+615 · done: excavation, bedding, installed, apron, joints, haunch · ongoing: wing walls"
+  },
+  {
+   "asset_id": "xc_MRJB_201_2",
+   "sub": "MRJB",
+   "status": "Bedding",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 201.2 at 201+953 · done: excavation, bedding · No Precast"
+  },
+  {
+   "asset_id": "xc_MRJB_202_1",
+   "sub": "MRJB",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 202.1 at 202+038 · done: excavation, bedding, installed, apron, wing walls, joints, paint · -04039-01"
+  },
+  {
+   "asset_id": "xc_MRJB_203_1",
+   "sub": "MRJB",
+   "status": "Apron",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 203.1 at 203+239 · done: excavation, bedding, installed, apron · ongoing: haunch, wing walls · Check Yard Drainage Designs"
+  },
+  {
+   "asset_id": "xc_MRJB_204_1",
+   "sub": "MRJB",
+   "status": "Wing walls",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 204.1 at 204+505 · done: excavation, bedding, installed, apron, wing walls · FY"
+  },
+  {
+   "asset_id": "xc_MRJB_204_A",
+   "sub": "MRJB",
+   "status": "Wing walls",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 204.A at 204+505 · done: excavation, bedding, installed, apron, wing walls · ongoing: joints, paint · FY"
+  },
+  {
+   "asset_id": "xc_MRJB_205_1",
+   "sub": "MRJB",
+   "status": "Bedding",
+   "has_defect": false,
+   "inspection_date": "2026-09-25",
+   "inspected_by": "Execution chart 25/09/26",
+   "notes": "Execution chart S05 25/09/26 · 205.1 at 205+214 · done: excavation, bedding · RSS - Inlet/Outlet Chamber"
+  }
+ ],
+ "skipped_existing": []
+}

@@ -2,13 +2,13 @@ window.SECTION04_CENTERLINE = {
   "metadata": {
     "section": "Section 04: Daura to Muduru (DRMR)",
     "start_pk": 124521.0,
-    "end_pk": 181075.0,
+    "end_pk": 181080.0,
     "total_points": 2264,
     "step_meters": 25.0,
     "interpolation": "CAD track plan 25 m ticks (block S11, layer TRA-H-GTR_km-tick), chained and anchored by the 100 m labels; linear between ticks",
-    "source_model": "S04-TRA-PLAT.dxf (+ lead-in KZDR_plan.json)",
+    "source_model": "S04-TRA-PLAT.dxf (+ lead-in KZDR_plan.json) (+ tail MRJB_plan.json)",
     "crs_source": "EPSG:32632 (WGS84 UTM 32N)",
-    "arc_length_m": 56553.875,
+    "arc_length_m": 56558.875,
     "generated_at": "September 2026",
     "datum": "WGS84"
   },
@@ -13592,9 +13592,9 @@ window.SECTION04_CENTERLINE = {
       "bearing": 284.72
     },
     {
-      "pk": 181075.0,
-      "lon": 7.8310513,
-      "lat": 13.023419,
+      "pk": 181080.0,
+      "lon": 7.8310067,
+      "lat": 13.0234305,
       "bearing": 284.72
     }
   ],
@@ -13608,7 +13608,7 @@ window.SECTION04_CENTERLINE = {
         "properties": {
           "name": "Kano-Maradi Railway Centerline (Section 04 - CAD axis)",
           "start_pk": 124521.0,
-          "end_pk": 181075.0
+          "end_pk": 181080.0
         },
         "geometry": {
           "type": "LineString",
@@ -22666,8 +22666,8 @@ window.SECTION04_CENTERLINE = {
               13.0234098
             ],
             [
-              7.8310513,
-              13.023419
+              7.8310067,
+              13.0234305
             ]
           ]
         }

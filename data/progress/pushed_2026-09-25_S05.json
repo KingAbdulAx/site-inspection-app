@@ -1,0 +1,213 @@
+{
+ "kind": "kmd-progress-pushed",
+ "asof": "2026-09-25",
+ "pushed_at": "2026-10-13T09:27:53.878Z",
+ "table_before": 655,
+ "written": [
+  {
+   "asset_id": "xc_MRJB_181_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_182_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_182_2",
+   "status": "Wing walls",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_183_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_183_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_184_1",
+   "status": "Wing walls",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_184_2",
+   "status": "Wing walls",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_186_1",
+   "status": "Wing walls",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_187_1",
+   "status": "Wing walls",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_187_2",
+   "status": "Wing walls",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_187_3",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_188_1",
+   "status": "Wing walls",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_188_2",
+   "status": "Wing walls",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_188_3",
+   "status": "Wing walls",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_188_4",
+   "status": "Wing walls",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_189_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_192_1",
+   "status": "Wing walls",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_193_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_193_2",
+   "status": "Wing walls",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_193_3",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_193_4",
+   "status": "Wing walls",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_194_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_195_1",
+   "status": "Wing walls",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_195_2",
+   "status": "Wing walls",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_196_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_196_2",
+   "status": "Wing walls",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_197_1",
+   "status": "Wing walls",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_197_2",
+   "status": "Wing walls",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_198_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_198_2",
+   "status": "Wing walls",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_198_3",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_198_4",
+   "status": "Wing walls",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_199_2",
+   "status": "Wing walls",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_200_1",
+   "status": "Wing walls",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_201_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_201_2",
+   "status": "Bedding",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_202_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_203_1",
+   "status": "Apron",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_204_1",
+   "status": "Wing walls",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_204_A",
+   "status": "Wing walls",
+   "replaced": null
+  },
+  {
+   "asset_id": "xc_MRJB_205_1",
+   "status": "Bedding",
+   "replaced": null
+  }
+ ]
+}

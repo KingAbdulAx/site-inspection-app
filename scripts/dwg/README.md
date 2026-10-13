@@ -53,6 +53,8 @@ Then either:
 
 So did DRMR (Section 04, 124+521 to 181+075, a new `data/section04_bundle.js`). It came from the DW-03003-03 eTransmit (DRN-LONG, TRA-PLAT) and the DW-10194-02 cross sections. All 283 labels agree, and it gave 848 drainage features and 2,263 cross sections. The register is built from TC 1326/26, with the levels from its status table. Like S01, the S04 plan draws no culverts; the 115 main-line culverts come from the S04 execution chart. S03's track plan stops at 124+500, so its centreline was extended to 124+521 with `--tail data/dwg/DRMR_plan.json --end 124521`, and the two now meet.
 
+So did MRJB (Section 05, 181+080 to 243+225, a new `data/section05_bundle.js`). It came from the DW-03005-02 eTransmit (DRN-LONG, TRA-PLAT); all 622 labels agree, and it gave 1,101 drainage features. The register is built from TC 1171/26 (DW-03007, 03008 and 03023 at LEVEL C). It has the 1.4 km grid to 235+200, and the sheets past that are not in the review. The 111 main-line culverts come from the S05 execution chart. That chart names two culverts '210.1' (210+513 and 210+695), so the second takes its chainage in its id. S04's centreline is extended to 181+080 with `--tail data/dwg/MRJB_plan.json`.
+
 DWKZ has been baked (1,710 → 1,311 features), and KZDR too (837 → 1,132). Re-applying the file to the baked data changes nothing, so a phone that already imported it can keep or clear those records.
 
 ## Checks built in

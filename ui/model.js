@@ -11,7 +11,7 @@
   const RECORDS_KEY = 'KMD_WALK_RECORDS_V1';
   const DRAFTS_KEY = 'KMD_WALK_DRAFTS_V1';
   const POS_KEY = 'KMD_WALK_LAST_POSITION_V1';
-  const LEGACY_KEYS = { KNDW: 'KMD_DRAINAGE_INSPECTIONS_SEC01_V1', DWKZ: 'KMD_DRAINAGE_INSPECTIONS_SEC02_V1', KZDR: 'KMD_DRAINAGE_INSPECTIONS_SEC03_V1', DRMR: 'KMD_DRAINAGE_INSPECTIONS_SEC04_V1' };
+  const LEGACY_KEYS = { KNDW: 'KMD_DRAINAGE_INSPECTIONS_SEC01_V1', DWKZ: 'KMD_DRAINAGE_INSPECTIONS_SEC02_V1', KZDR: 'KMD_DRAINAGE_INSPECTIONS_SEC03_V1', DRMR: 'KMD_DRAINAGE_INSPECTIONS_SEC04_V1', MRJB: 'KMD_DRAINAGE_INSPECTIONS_SEC05_V1' };
 
   // ---------------------------------------------------------------- lines
   const LINES = [
@@ -21,8 +21,8 @@
         { id: 'KNDW', name: 'Kano – Dawanau', from: -2675, to: 19800 },
         { id: 'DWKZ', name: 'Dawanau – Kazaure', from: 19800, to: 82902.439, sheets: 47 },
         { id: 'KZDR', name: 'Kazaure – Daura', from: 82902.439, to: 124521 },
-        { id: 'DRMR', name: 'Daura – Muduru', from: 124521, to: 181075 },
-        { id: 'MRJB', name: 'Muduru – Jibiya' },
+        { id: 'DRMR', name: 'Daura – Muduru', from: 124521, to: 181080 },
+        { id: 'MRJB', name: 'Muduru – Jibiya', from: 181080, to: 243225 },
         { id: 'JBMR', name: 'Jibiya – Maradi' }
       ]
     },
@@ -385,15 +385,18 @@
     };
     add('KNDW', window.SECTION01_ASSETS);
     add('DRMR', window.SECTION04_ASSETS);
+    add('MRJB', window.SECTION05_ASSETS);
     add('DWKZ', window.SECTION02_ASSETS);
     add('KZDR', window.SECTION03_ASSETS);
     applyBase();
     loadCentre('KNDW', window.SECTION01_CENTERLINE);
     loadCentre('DRMR', window.SECTION04_CENTERLINE);
+    loadCentre('MRJB', window.SECTION05_CENTERLINE);
     loadCentre('DWKZ', window.SECTION02_CENTERLINE);
     loadCentre('KZDR', window.SECTION03_CENTERLINE);
     SUBS.KNDW.count = (data.bySub.KNDW || []).length;
     SUBS.DRMR.count = (data.bySub.DRMR || []).length;
+    SUBS.MRJB.count = (data.bySub.MRJB || []).length;
     migrateCulvertStages();
     SUBS.DWKZ.count = (data.bySub.DWKZ || []).length;
     SUBS.KZDR.count = (data.bySub.KZDR || []).length;
@@ -552,6 +555,7 @@
     });
     if (SUBS.KNDW) SUBS.KNDW.count = (data.bySub.KNDW || []).length;
     if (SUBS.DRMR) SUBS.DRMR.count = (data.bySub.DRMR || []).length;
+    if (SUBS.MRJB) SUBS.MRJB.count = (data.bySub.MRJB || []).length;
     if (SUBS.DWKZ) SUBS.DWKZ.count = (data.bySub.DWKZ || []).length;
     if (SUBS.KZDR) SUBS.KZDR.count = (data.bySub.KZDR || []).length;
   }

@@ -37,7 +37,7 @@ const charts = many('--chart').map(s => { const [sub, file] = s.split('='); retu
 const ditchFile = opt('--ditches');
 const existing = opt('--existing') ? JSON.parse(fs.readFileSync(opt('--existing'), 'utf8')) : [];
 const OUT = path.join(__dirname, '..', '..', 'data', 'progress');
-const SECTION = { KNDW: 'S01', DWKZ: 'S02', KZDR: 'S03', DRMR: 'S04' };
+const SECTION = { KNDW: 'S01', DWKZ: 'S02', KZDR: 'S03', DRMR: 'S04', MRJB: 'S05' };
 // --tag S04 names the outputs culverts_from_charts_S04.json, progress_<asof>_S04.json/.md, so a
 // later section's run does not overwrite an earlier one.
 const tag = opt('--tag') ? '_' + opt('--tag') : '';
@@ -48,7 +48,7 @@ const ROOT = path.join(__dirname, '..', '..');
 global.window = global;
 const store = {};
 global.localStorage = { getItem: k => (k in store ? store[k] : null), setItem: (k, v) => { store[k] = String(v); }, removeItem: k => { delete store[k]; } };
-['data/bundle.js', 'data/section01_bundle.js', 'data/section02_bundle.js', 'data/section04_bundle.js', 'ui/model.js'].forEach(f => require(path.join(ROOT, f)));
+['data/bundle.js', 'data/section01_bundle.js', 'data/section02_bundle.js', 'data/section04_bundle.js', 'data/section05_bundle.js', 'ui/model.js'].forEach(f => require(path.join(ROOT, f)));
 const DI = window.DI;
 DI.init();
 
@@ -133,8 +133,10 @@ charts.forEach(({ sub, file }) => {
     } else {
       // Not in the data: add it from the chart (a table position, so ±4 m).
       const sh = shape(r);
-      const id = 'xc_' + sub + '_' + r.name.trim().replace(/[^A-Za-z0-9]+/g, '_');
       const ch = DI.parseCh(r.ch);
+      // The S05 chart names two culverts '210.1' (210+513 and 210+695): a repeat takes its chainage.
+      let id = 'xc_' + sub + '_' + r.name.trim().replace(/[^A-Za-z0-9]+/g, '_');
+      if (adds.some(x => x.featureId === id)) id += '_' + Math.round(ch);
       adds.push({ id: 'xc-' + sub + '-' + String(++addSeq).padStart(4, '0'), kind: 'base', at: asof + 'T12:00:00.000Z', by: 'Execution chart ' + dmy(asof), action: 'add', featureId: id, sub,
         set: { preset: sh.kind, ch0: ch, ch1: ch, side: 'C', cert: 'derived', sheet: 'Execution chart ' + sec + ' ' + dmy(asof), name: sh.name, fullName: sh.name + ' — ' + r.name.trim() + ' (execution chart ' + sec + ')' },
         note: 'In the ' + sec + ' execution chart (' + r.name.trim() + ' at ' + r.ch + '), not in the drawings data' });
