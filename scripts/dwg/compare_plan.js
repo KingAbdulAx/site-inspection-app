@@ -29,6 +29,7 @@ global.localStorage = { getItem: k => (k in store ? store[k] : null), setItem: (
 require(path.join(ROOT, 'data/bundle.js'));
 require(path.join(ROOT, 'data/section01_bundle.js'));
 require(path.join(ROOT, 'data/section04_bundle.js'));
+require(path.join(ROOT, 'data/section05_bundle.js'));
 require(path.join(ROOT, 'data/section02_bundle.js'));
 require(path.join(ROOT, 'ui/model.js'));
 const DI = window.DI;

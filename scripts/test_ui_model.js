@@ -16,6 +16,7 @@ global.localStorage = {
 require(path.join(root, 'data/bundle.js'));
 require(path.join(root, 'data/section01_bundle.js'));
 require(path.join(root, 'data/section04_bundle.js'));
+require(path.join(root, 'data/section05_bundle.js'));
 require(path.join(root, 'data/section02_bundle.js'));
 require(path.join(root, 'ui/model.js'));
 const DI = window.DI;
@@ -44,7 +45,9 @@ section('Features load for both sub-sections with lanes and certainty', () => {
   ok(DI.hasData('KNDW') && DI.data.bySub.KNDW.length > 300, 'KNDW features from the S01 CAD: ' + DI.data.bySub.KNDW.length);
   ok(DI.hasData('DRMR') && DI.data.bySub.DRMR.length > 900, 'DRMR features from the S04 CAD and chart: ' + DI.data.bySub.DRMR.length);
   ok(DI.data.bySub.DRMR.filter(f => f.catKey === 'cross').length === 115, 'DRMR culverts from the S04 execution chart');
-  ok(!DI.hasData('MRJB') && !DI.hasData('GYDT'), 'unprocessed sub-sections are present and empty');
+  ok(DI.hasData('MRJB') && DI.data.bySub.MRJB.length > 1200, 'MRJB features from the S05 CAD and chart: ' + DI.data.bySub.MRJB.length);
+  ok(DI.data.bySub.MRJB.filter(f => f.catKey === 'cross').length === 111, 'MRJB culverts from the S05 execution chart');
+  ok(!DI.hasData('JBMR') && !DI.hasData('GYDT'), 'unprocessed sub-sections are present and empty');
   const all = DI.data.features;
   ok(all.every(f => f.ch0 <= f.ch1), 'start before end');
   ok(all.every(f => ['exact', 'derived', 'label'].includes(f.cert)), 'every feature has a certainty');
@@ -67,7 +70,11 @@ section('Sub-section lookup', () => {
   ok(DI.subAt('KM', -1107).id === 'KNDW', 'KNDW before Kano\'s zero');
   ok(DI.fmtCh(-1107) === '-1+107' && DI.parseCh('-1+107') === -1107, 'negative chainage reads -1+107');
   ok(DI.subAt('KM', 130000).id === 'DRMR' && DI.subAt('KM', 181000).id === 'DRMR', 'DRMR');
-  ok(DI.subAt('KM', 185000) === null, 'past DRMR: no chainage yet');
+  ok(DI.subAt('KM', 200000).id === 'MRJB' && DI.subAt('KM', 243000).id === 'MRJB', 'MRJB');
+  ok(DI.subAt('KM', 250000) === null, 'past MRJB: no chainage yet');
+  const c = DI.pointAt('DRMR', 181079, 0), d = DI.pointAt('MRJB', 181081, 0);
+  const gap2 = Math.hypot((c.lat - d.lat) * 110574, (c.lon - d.lon) * 111320 * Math.cos(c.lat * Math.PI / 180));
+  ok(gap2 < 3, 'S04/S05 centrelines meet: ' + gap2.toFixed(2) + ' m for 2 m of chainage');
   // the S03 and S04 centrelines meet where the sub-sections do
   const a = DI.pointAt('KZDR', 124520, 0), b = DI.pointAt('DRMR', 124522, 0);
   const gap = Math.hypot((a.lat - b.lat) * 110574, (a.lon - b.lon) * 111320 * Math.cos(a.lat * Math.PI / 180));

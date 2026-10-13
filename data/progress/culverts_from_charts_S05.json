@@ -1,0 +1,2228 @@
+{
+ "kind": "kmd-base-corrections",
+ "app": "Drainage Inspector",
+ "exported_at": "2026-09-25T12:00:00.000Z",
+ "source": "Culvert Monitoring & Execution Status charts, 25/09/26",
+ "records": [
+  {
+   "id": "xc-MRJB-0001",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_181_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 181500,
+    "ch1": 181500,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 181.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (181.1 at 181+500), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0002",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_182_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 182600,
+    "ch1": 182600,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 182.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (182.1 at 182+600), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0003",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_182_2",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 182972,
+    "ch1": 182972,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 182.2 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (182.2 at 182+972), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0004",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_183_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 183477,
+    "ch1": 183477,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 183.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (183.1 at 183+477), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0005",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_183_2",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 183706,
+    "ch1": 183706,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 183.2 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (183.2 at 183+706), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0006",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_184_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 184635,
+    "ch1": 184635,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 184.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (184.1 at 184+635), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0007",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_184_2",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 184879,
+    "ch1": 184879,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.5×2.5 m)",
+    "fullName": "Single box culvert 1×(2.5×2.5 m) — 184.2 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (184.2 at 184+879), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0008",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_186_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 186244,
+    "ch1": 186244,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.5×2.5 m)",
+    "fullName": "Single box culvert 1×(2.5×2.5 m) — 186.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (186.1 at 186+244), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0009",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_187_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 187001,
+    "ch1": 187001,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 187.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (187.1 at 187+001), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0010",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_187_2",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 187250,
+    "ch1": 187250,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 187.2 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (187.2 at 187+250), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0011",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_187_3",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 187791,
+    "ch1": 187791,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 187.3 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (187.3 at 187+791), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0012",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_188_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 188000,
+    "ch1": 188000,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 188.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (188.1 at 188+000), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0013",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_188_2",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 188415,
+    "ch1": 188415,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 188.2 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (188.2 at 188+415), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0014",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_188_3",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 188650,
+    "ch1": 188650,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 188.3 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (188.3 at 188+650), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0015",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_188_4",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 188883,
+    "ch1": 188883,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 188.4 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (188.4 at 188+883), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0016",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_189_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 189710,
+    "ch1": 189710,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 189.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (189.1 at 189+710), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0017",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_192_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 192690,
+    "ch1": 192690,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 192.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (192.1 at 192+690), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0018",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_193_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 193067,
+    "ch1": 193067,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 193.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (193.1 at 193+067), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0019",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_193_2",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 193375,
+    "ch1": 193375,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 193.2 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (193.2 at 193+375), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0020",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_193_3",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 193545,
+    "ch1": 193545,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 193.3 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (193.3 at 193+545), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0021",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_193_4",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 193905,
+    "ch1": 193905,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 193.4 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (193.4 at 193+905), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0022",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_194_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 194654,
+    "ch1": 194654,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 194.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (194.1 at 194+654), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0023",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_195_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 195800,
+    "ch1": 195800,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 195.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (195.1 at 195+800), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0024",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_195_2",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 195931,
+    "ch1": 195931,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 195.2 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (195.2 at 195+931), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0025",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_196_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 196050,
+    "ch1": 196050,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 196.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (196.1 at 196+050), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0026",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_196_2",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 196692,
+    "ch1": 196692,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.5×2.5 m)",
+    "fullName": "Single box culvert 1×(2.5×2.5 m) — 196.2 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (196.2 at 196+692), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0027",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_197_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 197120,
+    "ch1": 197120,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 197.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (197.1 at 197+120), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0028",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_197_2",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 197257,
+    "ch1": 197257,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 197.2 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (197.2 at 197+257), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0029",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_198_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 198079,
+    "ch1": 198079,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Triple box culvert 3×(2.5×2.5 m)",
+    "fullName": "Triple box culvert 3×(2.5×2.5 m) — 198.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (198.1 at 198+079), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0030",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_198_2",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 198342,
+    "ch1": 198342,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 198.2 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (198.2 at 198+342), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0031",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_198_3",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 198662,
+    "ch1": 198662,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 198.3 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (198.3 at 198+662), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0032",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_198_4",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 198846,
+    "ch1": 198846,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 198.4 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (198.4 at 198+846), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0033",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_199_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 199073,
+    "ch1": 199073,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 199.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (199.1 at 199+073), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0034",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_199_2",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 199492,
+    "ch1": 199492,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 199.2 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (199.2 at 199+492), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0035",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_200_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 200518,
+    "ch1": 200518,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 200.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (200.1 at 200+518), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0036",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_201_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 201615,
+    "ch1": 201615,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 201.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (201.1 at 201+615), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0037",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_201_2",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 201953,
+    "ch1": 201953,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 201.2 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (201.2 at 201+953), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0038",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_202_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 202038,
+    "ch1": 202038,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.5×2.5 m)",
+    "fullName": "Single box culvert 1×(2.5×2.5 m) — 202.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (202.1 at 202+038), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0039",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_203_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 203239,
+    "ch1": 203239,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Triple box culvert 3×(2.0×2.0 m)",
+    "fullName": "Triple box culvert 3×(2.0×2.0 m) — 203.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (203.1 at 203+239), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0040",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_204_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 204505,
+    "ch1": 204505,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.5×2.5 m)",
+    "fullName": "Single box culvert 1×(2.5×2.5 m) — 204.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (204.1 at 204+505), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0041",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_204_A",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 204505,
+    "ch1": 204505,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.5×2.5 m)",
+    "fullName": "Single box culvert 1×(2.5×2.5 m) — 204.A (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (204.A at 204+505), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0042",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_205_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 205214,
+    "ch1": 205214,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Triple box culvert 3×(2.0×2.0 m)",
+    "fullName": "Triple box culvert 3×(2.0×2.0 m) — 205.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (205.1 at 205+214), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0043",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_205_2",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 205470,
+    "ch1": 205470,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 205.2 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (205.2 at 205+470), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0044",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_207_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 207535,
+    "ch1": 207535,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 207.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (207.1 at 207+535), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0045",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_207_2",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 207801,
+    "ch1": 207801,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 207.2 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (207.2 at 207+801), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0046",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_208_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 208393,
+    "ch1": 208393,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 208.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (208.1 at 208+393), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0047",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_208_2",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 208880,
+    "ch1": 208880,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 208.2 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (208.2 at 208+880), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0048",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_210_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 210695,
+    "ch1": 210695,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 210.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (210.1 at 210+695), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0049",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_211_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 211105,
+    "ch1": 211105,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 211.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (211.1 at 211+105), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0050",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_211_2",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 211657,
+    "ch1": 211657,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.5×2.5 m)",
+    "fullName": "Single box culvert 1×(2.5×2.5 m) — 211.2 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (211.2 at 211+657), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0051",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_CC214",
+   "sub": "MRJB",
+   "set": {
+    "preset": "CC",
+    "ch0": 214250,
+    "ch1": 214250,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC214 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (CC214 at 214+250), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0052",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_209_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 209213,
+    "ch1": 209213,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 209.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (209.1 at 209+213), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0053",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_210_1_210513",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 210513,
+    "ch1": 210513,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Triple box culvert 3×(3.0×3.0 m)",
+    "fullName": "Triple box culvert 3×(3.0×3.0 m) — 210.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (210.1 at 210+513), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0054",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_214_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 214430,
+    "ch1": 214430,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Triple box culvert 3×(3.0×3.0 m)",
+    "fullName": "Triple box culvert 3×(3.0×3.0 m) — 214.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (214.1 at 214+430), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0055",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_214_2",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 214680,
+    "ch1": 214680,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 214.2 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (214.2 at 214+680), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0056",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_215_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 215935,
+    "ch1": 215935,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 215.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (215.1 at 215+935), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0057",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_216_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 216320,
+    "ch1": 216320,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 216.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (216.1 at 216+320), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0058",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_216_2",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 216577,
+    "ch1": 216577,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 216.2 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (216.2 at 216+577), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0059",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_217_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 217170,
+    "ch1": 217170,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 217.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (217.1 at 217+170), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0060",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_217_2",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 217453,
+    "ch1": 217453,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 217.2 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (217.2 at 217+453), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0061",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_CC217",
+   "sub": "MRJB",
+   "set": {
+    "preset": "CC",
+    "ch0": 217825,
+    "ch1": 217825,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC217 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (CC217 at 217+825), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0062",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_217_3",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 217900,
+    "ch1": 217900,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(3.0×3.0 m)",
+    "fullName": "Single box culvert 1×(3.0×3.0 m) — 217.3 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (217.3 at 217+900), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0063",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_218_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 218501,
+    "ch1": 218501,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 218.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (218.1 at 218+501), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0064",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_218_2",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 218867,
+    "ch1": 218867,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.5×2.5 m)",
+    "fullName": "Single box culvert 1×(2.5×2.5 m) — 218.2 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (218.2 at 218+867), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0065",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_219_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 219050,
+    "ch1": 219050,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 219.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (219.1 at 219+050), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0066",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_219_2",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 219497,
+    "ch1": 219497,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 219.2 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (219.2 at 219+497), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0067",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_219_3",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 219829,
+    "ch1": 219829,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 219.3 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (219.3 at 219+829), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0068",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_220_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 220382,
+    "ch1": 220382,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(3.0×3.0 m)",
+    "fullName": "Single box culvert 1×(3.0×3.0 m) — 220.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (220.1 at 220+382), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0069",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_220_2",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 220711,
+    "ch1": 220711,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 220.2 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (220.2 at 220+711), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0070",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_220_3",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 220837,
+    "ch1": 220837,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 220.3 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (220.3 at 220+837), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0071",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_221_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 221423,
+    "ch1": 221423,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 221.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (221.1 at 221+423), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0072",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_222_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 222541,
+    "ch1": 222541,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 222.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (222.1 at 222+541), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0073",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_223_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 223225,
+    "ch1": 223225,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 223.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (223.1 at 223+225), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0074",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_224_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 224075,
+    "ch1": 224075,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 224.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (224.1 at 224+075), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0075",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_CC224",
+   "sub": "MRJB",
+   "set": {
+    "preset": "CC",
+    "ch0": 224400,
+    "ch1": 224400,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC224 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (CC224 at 224+400), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0076",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_225_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 225732,
+    "ch1": 225732,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 225.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (225.1 at 225+732), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0077",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_226_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 226210,
+    "ch1": 226210,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 226.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (226.1 at 226+210), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0078",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_CC226",
+   "sub": "MRJB",
+   "set": {
+    "preset": "CC",
+    "ch0": 226250,
+    "ch1": 226250,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC226 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (CC226 at 226+250), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0079",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_226_2",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 226617,
+    "ch1": 226617,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 226.2 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (226.2 at 226+617), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0080",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_227_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 227014,
+    "ch1": 227014,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 227.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (227.1 at 227+014), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0081",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_227_2",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 227940,
+    "ch1": 227940,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 227.2 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (227.2 at 227+940), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0082",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_228_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 228422,
+    "ch1": 228422,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 228.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (228.1 at 228+422), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0083",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_229_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 229070,
+    "ch1": 229070,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 229.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (229.1 at 229+070), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0084",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_230_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 230055,
+    "ch1": 230055,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 230.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (230.1 at 230+055), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0085",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_230_2",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 230419,
+    "ch1": 230419,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(3.0×3.0 m)",
+    "fullName": "Single box culvert 1×(3.0×3.0 m) — 230.2 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (230.2 at 230+419), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0086",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_CC230",
+   "sub": "MRJB",
+   "set": {
+    "preset": "CC",
+    "ch0": 230525,
+    "ch1": 230525,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC230 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (CC230 at 230+525), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0087",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_230_3",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 230917,
+    "ch1": 230917,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 230.3 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (230.3 at 230+917), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0088",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_231_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 231565,
+    "ch1": 231565,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 231.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (231.1 at 231+565), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0089",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_231_2",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 231955,
+    "ch1": 231955,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 231.2 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (231.2 at 231+955), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0090",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_232_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 232039,
+    "ch1": 232039,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Triple box culvert 3×(2.5×2.5 m)",
+    "fullName": "Triple box culvert 3×(2.5×2.5 m) — 232.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (232.1 at 232+039), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0091",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_232_2",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 232375,
+    "ch1": 232375,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 232.2 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (232.2 at 232+375), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0092",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_232_3",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 232912,
+    "ch1": 232912,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.5×2.5 m)",
+    "fullName": "Single box culvert 1×(2.5×2.5 m) — 232.3 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (232.3 at 232+912), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0093",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_233_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 233175,
+    "ch1": 233175,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.5×2.5 m)",
+    "fullName": "Single box culvert 1×(2.5×2.5 m) — 233.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (233.1 at 233+175), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0094",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_233_2",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 233635,
+    "ch1": 233635,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 233.2 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (233.2 at 233+635), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0095",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_234_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 234243,
+    "ch1": 234243,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 234.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (234.1 at 234+243), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0096",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_234_2",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 234904,
+    "ch1": 234904,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 234.2 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (234.2 at 234+904), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0097",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_235_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 235160,
+    "ch1": 235160,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 235.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (235.1 at 235+160), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0098",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_235_2",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 235390,
+    "ch1": 235390,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 235.2 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (235.2 at 235+390), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0099",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_236_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 236063,
+    "ch1": 236063,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 236.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (236.1 at 236+063), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0100",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_236_2",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 236462,
+    "ch1": 236462,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 236.2 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (236.2 at 236+462), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0101",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_236_3",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 236805,
+    "ch1": 236805,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 236.3 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (236.3 at 236+805), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0102",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_237_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 237811,
+    "ch1": 237811,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.5×2.5 m)",
+    "fullName": "Single box culvert 1×(2.5×2.5 m) — 237.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (237.1 at 237+811), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0103",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_238_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 238154,
+    "ch1": 238154,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 238.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (238.1 at 238+154), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0104",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_238_2",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 238825,
+    "ch1": 238825,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.5×2.5 m)",
+    "fullName": "Single box culvert 1×(2.5×2.5 m) — 238.2 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (238.2 at 238+825), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0105",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_240_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 240133,
+    "ch1": 240133,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 240.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (240.1 at 240+133), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0106",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_240_2",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 240415,
+    "ch1": 240415,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 240.2 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (240.2 at 240+415), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0107",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_240_3",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 240760,
+    "ch1": 240760,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.2 m",
+    "fullName": "Pipe culvert Ø1.2 m — 240.3 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (240.3 at 240+760), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0108",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_241_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "PC",
+    "ch0": 241035,
+    "ch1": 241035,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Pipe culvert Ø1.5 m",
+    "fullName": "Pipe culvert Ø1.5 m — 241.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (241.1 at 241+035), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0109",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_241_4",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 241950,
+    "ch1": 241950,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.5×2.5 m)",
+    "fullName": "Single box culvert 1×(2.5×2.5 m) — 241.4 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (241.4 at 241+950), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0110",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_242_1",
+   "sub": "MRJB",
+   "set": {
+    "preset": "BC",
+    "ch0": 242415,
+    "ch1": 242415,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Single box culvert 1×(2.0×2.0 m)",
+    "fullName": "Single box culvert 1×(2.0×2.0 m) — 242.1 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (242.1 at 242+415), not in the drawings data"
+  },
+  {
+   "id": "xc-MRJB-0111",
+   "kind": "base",
+   "at": "2026-09-25T12:00:00.000Z",
+   "by": "Execution chart 25/09/26",
+   "action": "add",
+   "featureId": "xc_MRJB_CC243",
+   "sub": "MRJB",
+   "set": {
+    "preset": "CC",
+    "ch0": 243220,
+    "ch1": 243220,
+    "side": "C",
+    "cert": "derived",
+    "sheet": "Execution chart S05 25/09/26",
+    "name": "Cattle crossing 1×(3.0×3.0 m)",
+    "fullName": "Cattle crossing 1×(3.0×3.0 m) — CC243 (execution chart S05)"
+   },
+   "note": "In the S05 execution chart (CC243 at 243+220), not in the drawings data"
+  }
+ ]
+}
