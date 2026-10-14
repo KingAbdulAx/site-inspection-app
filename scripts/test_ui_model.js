@@ -18,6 +18,7 @@ require(path.join(root, 'data/bundle.js'));
 require(path.join(root, 'data/section01_bundle.js'));
 require(path.join(root, 'data/section04_bundle.js'));
 require(path.join(root, 'data/section05_bundle.js'));
+require(path.join(root, 'data/structures.js'));
 require(path.join(root, 'data/section02_bundle.js'));
 require(path.join(root, 'ui/model.js'));
 const DI = window.DI;
@@ -77,6 +78,17 @@ section('Embankment height and the Type 9 rule (S02)', () => {
   ok(now.km.missing > 25 && now.runs.every(r => r.ch0 < r.ch1 && (r.side === 'L' || r.side === 'R')), 'the 1.5 m rule finds ' + now.km.missing.toFixed(1) + ' km with no Type 9 drawn');
   ok(DI.t9Rule().h === 1.5, 'the site rule (1.5 m) is the default');
   DI.setT9Rule(1.8); ok(DI.t9Rule().h === 1.8 && /3545/.test(DI.t9Rule().src), 'T.E.A.M. 1.8 m rule cites KMD/MEN/Vol.15/3545'); DI.setT9Rule(1.5);
+});
+
+section('Bridges and road crossings, for reference', () => {
+  const all = DI.refs();
+  ok(all.length > 80 && ['KNDW', 'DWKZ', 'KZDR', 'DRMR', 'MRJB'].every(s => all.some(r => r.sub === s)), 'structures on all five sections: ' + all.length);
+  const b = DI.refsNear('KM', 36300, 36310).find(r => r.kind === 'bridge');
+  ok(b && b.name === 'BRG-2602' && b.ch0 === 36077 && b.ch1 === 36628, 'BRG-2602 spans 36+077 to 36+628, as the drawing says');
+  ok(all.filter(r => r.kind === 'bridge').every(r => r.ch1 - r.ch0 > 20), 'every bridge has its length');
+  const o = DI.refsNear('KM', 25850, 25850)[0];
+  ok(o && o.kind === 'overpass' && o.name === 'OVR-2801', 'OVR-2801 is a road over the railway at 25+850');
+  ok(!DI.data.features.some(f => /^ref_/.test(f.id)), 'reference structures are not drainage features');
 });
 
 section('Sub-section lookup', () => {

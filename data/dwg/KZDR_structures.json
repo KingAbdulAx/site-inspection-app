@@ -1,0 +1,101 @@
+{
+ "sub": "KZDR",
+ "source": "S03-TRA-PLAT.dxf",
+ "structures": [
+  {
+   "kind": "overpass",
+   "name": "OVR-2801",
+   "ch": 84406.0,
+   "ch0": 84400.0,
+   "ch1": 84412.0,
+   "src": "CH attribute",
+   "id": "ref_KZDR_overpass_01"
+  },
+  {
+   "kind": "bridge",
+   "name": "BRG-2601",
+   "ch0": 87496.0,
+   "ch1": 87663.0,
+   "src": "drawing text",
+   "id": "ref_KZDR_bridge_02"
+  },
+  {
+   "kind": "underpass",
+   "name": "UDR-3001",
+   "ch": 87957.0,
+   "ch0": 87951.0,
+   "ch1": 87963.0,
+   "src": "CH attribute",
+   "id": "ref_KZDR_underpass_03"
+  },
+  {
+   "kind": "bridge",
+   "name": "BRG-2602",
+   "ch0": 93678.0,
+   "ch1": 93731.0,
+   "src": "drawing text",
+   "id": "ref_KZDR_bridge_04"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2802",
+   "ch": 97353.0,
+   "ch0": 97347.0,
+   "ch1": 97359.0,
+   "src": "CH attribute",
+   "id": "ref_KZDR_overpass_05"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2803",
+   "ch": 102157.0,
+   "ch0": 102151.0,
+   "ch1": 102163.0,
+   "src": "CH attribute",
+   "id": "ref_KZDR_overpass_06"
+  },
+  {
+   "kind": "bridge",
+   "name": "BRG-2603",
+   "ch0": 105737.0,
+   "ch1": 105808.0,
+   "src": "drawing text",
+   "id": "ref_KZDR_bridge_07"
+  },
+  {
+   "kind": "underpass",
+   "name": "UDR-3002",
+   "ch": 107413.0,
+   "ch0": 107407.0,
+   "ch1": 107419.0,
+   "src": "CH attribute",
+   "id": "ref_KZDR_underpass_08"
+  },
+  {
+   "kind": "bridge",
+   "name": "BRG-2605",
+   "ch0": 109250.0,
+   "ch1": 109321.0,
+   "src": "drawing text",
+   "id": "ref_KZDR_bridge_09"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2804",
+   "ch": 114040.0,
+   "ch0": 114034.0,
+   "ch1": 114046.0,
+   "src": "CH attribute",
+   "id": "ref_KZDR_overpass_10"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2805",
+   "ch": 120251.0,
+   "ch0": 120245.0,
+   "ch1": 120257.0,
+   "src": "CH attribute",
+   "id": "ref_KZDR_overpass_11"
+  }
+ ]
+}

@@ -498,6 +498,30 @@
     return (t9Cache[key] = { thr, runs, km });
   }
 
+  // ---------------------------------------------------------------- reference structures
+  // Bridges, overpasses (road over the railway) and underpasses (road under it) from the track plans
+  // (data/structures.js). For finding your way only: they are not inspected and carry no records.
+  const REF_KIND = {
+    bridge: { label: 'Railway bridge', short: 'BRIDGE' },
+    overpass: { label: 'Overpass · road over the railway', short: 'ROAD OVER' },
+    underpass: { label: 'Underpass · road under the railway', short: 'ROAD UNDER' },
+    crossing: { label: 'Road crossing', short: 'ROAD' }
+  };
+  let refList = null;
+  function refs() {
+    if (refList) return refList;
+    refList = [];
+    const src = window.KMD_STRUCTURES || {};
+    Object.keys(src).forEach(sub => {
+      if (!SUBS[sub]) return;
+      (src[sub].structures || []).forEach(s => refList.push(Object.assign({ sub, line: SUBS[sub].line, source: src[sub].source }, s, REF_KIND[s.kind] || REF_KIND.crossing, { kind: s.kind })));
+    });
+    refList.sort((a, b) => a.ch0 - b.ch0);
+    return refList;
+  }
+  function refsNear(line, a, b) { return refs().filter(r => r.line === line && r.ch1 >= a && r.ch0 <= b); }
+  function refById(id) { return refs().find(r => r.id === id) || null; }
+
   function hasData(sub) { return !!(data.bySub[sub] && data.bySub[sub].length); }
   function subAt(line, ch) {
     const l = LINES.find(x => x.id === line);
@@ -935,7 +959,7 @@
     fmtCh, fmtPlus, parseCh, fmtDate, fmtTime, monthsBetween, esc, DAYS, MONTHS,
     inspector, setInspector, addRecord, voidRecord, live, recordsFor, seenOf, ownSeen, openDefects,
     designChanges, statusOf, drafts, saveDraft, putPhoto, getPhoto, uid, loadLegacy,
-    loadSections, sectionAt, loadHeights, hasHeights, heightAt, T9_RULES, t9Rule, setT9Rule, t9Check,
+    loadSections, sectionAt, refs, refsNear, refById, REF_KIND, loadHeights, hasHeights, heightAt, T9_RULES, t9Rule, setT9Rule, t9Check,
     PRESETS, presetOf, applyBase, baseRecords, correctBase, addBase, deleteBase, verifyBase, unverifyBase, exportGeo, exportCorrections, importRecords,
     project, pointAt, laneOf, savePosition, lastPosition, csvCell,
     get records() { return records; }

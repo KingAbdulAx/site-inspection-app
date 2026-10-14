@@ -120,7 +120,7 @@ const assert = (c, m) => { if (!c) { console.log('FAIL: ' + m); process.exitCode
   await t.evaluate(() => { localStorage.setItem('KMD_STRIP_ZOOM_V1', '0'); localStorage.removeItem('KMD_WALK_RECORDS_V1'); }); await t.reload(); await t.waitForTimeout(1500);
   const marks = await t.evaluate(() => {
     const r = document.querySelector('#stripHost').getBoundingClientRect();
-    return DA.strip.hits.map(h => ({ id: h.f.id, x: r.left + (Math.max(h.x0, 0) + Math.min(h.x1, r.width)) / 2, y: r.top + (h.y0 + h.y1) / 2 }))
+    return DA.strip.hits.filter(h => !h.ref).map(h => ({ id: h.f.id, x: r.left + (Math.max(h.x0, 0) + Math.min(h.x1, r.width)) / 2, y: r.top + (h.y0 + h.y1) / 2 }))
       .filter(h => { const e = document.elementFromPoint(h.x, h.y); return e && e.closest('#stripHost'); });
   });
   let right = 0, opened = 0;
@@ -149,6 +149,15 @@ const assert = (c, m) => { if (!c) { console.log('FAIL: ' + m); process.exitCode
   await t.tap('.ov:last-child .frow'); await t.waitForTimeout(800);
   assert(await t.evaluate(w => DA.S.tab === 'walk' && DA.strip.viewCh === w, want), 'a stretch in the list opens the strip there');
   assert(await t.evaluate(() => /FILL|CUT/.test(document.querySelector('#posHead').textContent)), 'the header shows the fill height');
+  // bridges and road crossings: drawn for reference, a tap says what it is
+  await t.goto(BASE + '?sim=DWKZ:25840:3:3'); await t.waitForTimeout(2000);
+  assert(await t.evaluate(() => /FILL|CUT/.test(document.querySelector('#posHead').textContent)), 'at an overpass the header keeps the fill height');
+  const band = await t.evaluate(() => { const r = document.querySelector('#stripHost').getBoundingClientRect(); const h = DA.strip.hits.find(x => x.ref); return h && { x: r.left + 20, y: r.top + (h.y0 + h.y1) / 2 }; });
+  await t.evaluate(() => DA.closeAll());
+  await t.touchscreen.tap(band.x, band.y); await t.waitForTimeout(400);
+  assert(await t.evaluate(() => { const ov = document.querySelector('.ov:last-child'); return ov && /OVR-2801/.test(ov.textContent) && /road over the railway/.test(ov.textContent) && !ov.querySelector('[data-act=stage]'); }), 'tapping the overpass opens what it is, with nothing to record');
+  await t.goto(BASE + '?sim=DWKZ:36350:3:3'); await t.waitForTimeout(2000);
+  assert(await t.evaluate(() => /ON BRG-2602/.test(document.querySelector('#posHead').textContent)), 'on a bridge the header names it');
   await tctx.close();
   console.log(errs.length ? 'PAGE ERRORS:\n' + errs.join('\n') : 'no page errors');
   await b.close();

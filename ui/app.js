@@ -200,7 +200,7 @@
     else side = p.side + ' ' + Math.round(Math.abs(p.offset)) + ' m';
     if (p.farFromLine) { youLbl = 'GPS ' + (p.farFromLine / 1000).toFixed(1) + ' km off line'; }
     const tri = p.facing === 'decreasing' ? '▼' : '▲';
-    return '<div class="pos-line"><span>' + esc(L.short) + '</span>' + (p.sub ? '<span class="chip-sub">' + p.sub + '</span>' : '<span class="chip-sub">NO DATA</span>') + fillChip() + '</div>' + gps +
+    return '<div class="pos-line"><span>' + esc(L.short) + '</span>' + (p.sub ? '<span class="chip-sub">' + p.sub + '</span>' : '<span class="chip-sub">NO DATA</span>') + (refChip(true) || fillChip() || refChip(false)) + '</div>' + gps +
       '<button class="pos-ch tap' + (p.source === 'hand' ? ' hand' : '') + '" data-act="keypad" aria-label="Chainage">' + chHtml + '</button>' +
       '<button class="pos-you tap" data-act="facing"><div class="lbl">' + esc(youLbl) + '</div><div class="side">' + side + '</div>' +
       '<div class="facing">FACING <span class="tri">' + tri + '</span> <b>' + p.facing + '</b></div></button>';
@@ -230,6 +230,28 @@
     return '<span class="chip-fill' + (miss ? ' t9' : '') + '" title="Formation to ground' + (hh.side === 'C' ? ', centreline' : ', ' + hh.side + ' side') + '">' + (hh.est ? '≈' : '') + (hh.h < 0 ? 'CUT ' : 'FILL ') + v + ' m' + (miss ? ' · T9' : '') + '</span>';
   }
   DA.fillChip = fillChip;
+  // On a bridge (where the fill does not apply), or at a road over or under the line when there is
+  // no fill to show: say so in the header.
+  function refChip(bridge) {
+    const p = S.pos;
+    if (p.tier === 'poor' && p.source !== 'anchor') return '';
+    const r = DI.refsNear(p.line, p.ch - (p.acc || 0) / 2 - 10, p.ch + (p.acc || 0) / 2 + 10).filter(x => (x.kind === 'bridge') === bridge)[0];
+    if (!r) return '';
+    return '<span class="chip-ref" title="' + esc(r.label) + '">' + (r.kind === 'bridge' ? 'ON ' : '') + esc(r.name || r.short) + '</span>';
+  }
+  // What a reference structure is: from the track plan, not something to inspect.
+  function openRef(id) {
+    const r = DI.refById(id);
+    if (!r) return;
+    const len = r.kind === 'bridge' ? ' · ' + Math.round(r.ch1 - r.ch0) + ' m long' : '';
+    let h = '<div class="fhead"><span class="side-badge" style="background:var(--ref);color:var(--on-ink);display:flex;align-items:center;justify-content:center;width:52px;height:52px;font:700 13px/1 var(--f-cond)">REF</span><div style="min-width:0"><div class="t1"><span>' + esc(r.name || r.label) + '</span></div>' +
+      '<div style="font:500 17px/1.3 var(--f-sans);color:var(--ink-2);margin-top:2px">' + esc(r.label) + '</div></div></div>';
+    h += '<div style="font:500 18px/1.4 var(--f-sans);margin:16px 0 6px">' + (r.kind === 'bridge' ? DI.fmtCh(r.ch0) + ' → ' + DI.fmtCh(r.ch1) + len : 'At ' + DI.fmtCh(r.ch != null ? r.ch : (r.ch0 + r.ch1) / 2)) + '</div>';
+    h += '<div class="note">From the track plan (' + esc(r.source || 'TRA-PLAT') + '), for finding your way. It is not a drainage structure: nothing is recorded against it.</div>';
+    h += '<button class="btn mt16" data-act="goto-next" data-ch="' + Math.round((r.ch0 + r.ch1) / 2) + '" style="min-height:52px">Show it on the strip</button>';
+    openOverlay(h, 'sheet');
+  }
+  DA.openRef = openRef;
 
   function laneHeader() {
     const W = $('#vp').clientWidth || 390;
@@ -355,7 +377,7 @@
       DA.strip = new window.DStrip.Strip($('#stripHost'), {
         // Phone: a clear tap opens that structure's record; marks too close to tell apart open the
         // list there. Desk: the list is docked beside the strip, so a tap points it at the feature.
-        onTap: (f, several, ch) => { if (DA.layout !== 'phone') openDrawer(f.ch0, f.id); else if (several) openDrawer(ch, f.id); else openRecord(f.id); },
+        onTap: (f, several, ch) => { if (DI.refById(f.id)) openRef(f.id); else if (DA.layout !== 'phone') openDrawer(f.ch0, f.id); else if (several) openDrawer(ch, f.id); else openRecord(f.id); },
         onPan: () => { $('#recentre').classList.remove('hidden'); },
         onZoom: () => render()
       });
@@ -364,7 +386,7 @@
     const p = S.pos;
     DA.strip.render({
       line: p.line, ch: p.ch, userCh: p.ch, facing: p.facing, tier: p.tier, acc: p.acc || 0,
-      source: p.source, offset: p.offset, features: lineFeatures(), absences: S.absences || [],
+      source: p.source, offset: p.offset, features: lineFeatures(), absences: S.absences || [], refs: DI.refs().filter(r => r.line === p.line),
       unlisted: DI.live(r => r.kind === 'unlisted' && r.line === p.line),
       heights: p.sub && DI.hasHeights(p.sub) ? { rows: DI.data.heights[p.sub], thr: DI.t9Rule().h, runs: DI.t9Check(p.sub, DI.t9Rule().h).runs } : null
     });
@@ -450,6 +472,8 @@
       : mine ? '' : '<button class="btn" data-act="side-me" style="width:auto;flex:none;min-height:44px;padding:0 12px;font-size:15px">Back to me</button>';
     let h = '<div class="drawer-h" style="display:flex;justify-content:space-between;align-items:center;gap:10px;padding:4px 0 14px;border-bottom:3px solid var(--ink);margin:0 -16px;padding-left:16px;padding-right:16px">' +
       '<div><div style="font:700 24px/1.15 var(--f-sans)">Within 20 m of ' + (mine ? 'you' : DI.fmtCh(around)) + ' · ' + list.length + '</div><div style="font:500 16px/1.3 var(--f-sans);color:var(--ink-3)">Left to right, as you face ' + (S.pos.facing === 'decreasing' ? '▼' : '▲') + '</div></div>' + btn + '</div>';
+    const near = DI.refsNear(S.pos.line, around - 20, around + 20);
+    if (near.length) h += '<div style="margin:0 -16px;padding:10px 16px;background:var(--ref-bg);border-bottom:1px solid var(--rule);font:600 16px/1.35 var(--f-sans)">' + near.map(r => '<button data-act="ref" data-id="' + esc(r.id) + '" style="display:block;text-align:left;width:100%;min-height:36px"><span class="chip-ref" style="margin-right:8px">' + esc(r.name || r.short) + '</span>' + esc(r.label) + '</button>').join('') + '</div>';
     h += '<div style="margin:0 -16px">';
     if (!list.length) h += '<div class="empty-state"><b>Nothing drawn here</b>No structure on the drawings within 20 m.</div>';
     list.forEach(f => {
@@ -740,6 +764,7 @@
       case 'tab': setTab(b.dataset.tab); break;
       case 'mode': S.mode = b.dataset.mode; render(); break;
       case 'record': closeAll(); openRecord(id); break;
+      case 'ref': openRef(id); break;
       case 'drawer': openDrawer(); break;
       case 'ladder': {
         const l = ov.querySelector('#fullLadder'); l.classList.toggle('hidden'); b.classList.add('hidden');
@@ -762,7 +787,7 @@
       case 'pane': S.pane = b.dataset.v; render(); break;
       case 'zoom': if (DA.strip) DA.strip.setZoom(DA.strip.zoom + Number(b.dataset.d)); break;
       case 'theme-toggle': setTheme(document.documentElement.getAttribute('data-theme') === 'office' ? 'sun' : 'office'); render(); break;
-      case 'goto-next': if (DA.strip) { DA.strip.viewCh = Number(b.dataset.ch); render(); } break;
+      case 'goto-next': closeAll(); if (DA.strip) { DA.strip.viewCh = Number(b.dataset.ch); render(); } break;
       case 'note': openNote(id); break;
       case 'note-save': {
         const t = ov.querySelector('textarea').value.trim();

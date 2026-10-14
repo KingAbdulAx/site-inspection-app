@@ -30,6 +30,9 @@
   --fill-lo: #E4DAC2;
   --fill-mid: #C29F5C;
   --fill-hi: #74551F;
+  /* reference structures (bridges, road crossings): drawn for finding your way, not inspected */
+  --ref: #4F6272;
+  --ref-bg: rgba(79, 98, 114, 0.13);
   --hatch: repeating-linear-gradient(135deg, var(--ink) 0 2px, transparent 2px 6px);
   --hazard: repeating-linear-gradient(135deg, var(--ink) 0 5px, var(--hivis) 5px 10px);
   --none-design: repeating-linear-gradient(135deg, #9A9C94 0 1.5px, transparent 1.5px 8px);
@@ -67,6 +70,8 @@
   --fill-lo: #3A3428;
   --fill-mid: #8A6E3A;
   --fill-hi: #D9B46A;
+  --ref: #9DB3C6;
+  --ref-bg: rgba(157, 179, 198, 0.14);
   color-scheme: dark;
 }
 
@@ -121,6 +126,7 @@ svg { display: block; }
 .chip-sub { background: var(--ink); color: var(--on-ink); padding: 3px 6px; letter-spacing: 0.06em; }
 .chip-fill { border: 2px solid var(--ink); padding: 1px 5px; letter-spacing: 0.04em; white-space: nowrap; }
 .chip-fill.t9 { border-color: var(--defect); color: var(--defect); }
+.chip-ref { background: var(--ref); color: var(--on-ink); padding: 3px 6px; letter-spacing: 0.04em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 130px; }
 .gps {
   justify-self: end;
   display: inline-flex; align-items: center; gap: 7px;

@@ -57,6 +57,21 @@ So did MRJB (Section 05, 181+080 to 243+225, a new `data/section05_bundle.js`). 
 
 DWKZ has been baked (1,710 → 1,311 features), and KZDR too (837 → 1,132). Re-applying the file to the baked data changes nothing, so a phone that already imported it can keep or clear those records.
 
+## Bridges and road crossings (for reference)
+
+```
+dwg2dxf -y -o S02-TRA-PLAT.dxf T2019-0323-S02-DD-TRA-PLAT.dwg          # LibreDWG master: 0.13.3 drops the bridge outlines
+python3 scripts/dwg/extract_structures.py --plat S02-TRA-PLAT.dxf --sub DWKZ --out data/dwg/DWKZ_structures.json
+node scripts/dwg/bundle_structures.js                                    # all sections -> data/structures.js
+```
+
+The track plans draw them on the same layers:
+
+- `BRIDGES` blocks, named on `BRIDGE-TXT` (BRG-2602) with their limits (36+077 - 36+628). S01 has no limits text, so its bridges take their block's extent; on S02 that extent matches the text within 1-3 m.
+- `OVERPASS_UNDERPASS` blocks with OVR-/UDR- names and a CH= attribute.
+
+The 3x3 m underpasses are the cattle crossings already in the data, so they are left out. In all: S01 17, S02 24, S03 11, S04 17, S05 26.
+
 ## Embankment height (Section 02 for now)
 
 ```

@@ -1,0 +1,152 @@
+{
+ "sub": "DRMR",
+ "source": "S04-TRA-PLAT.dxf",
+ "structures": [
+  {
+   "kind": "overpass",
+   "name": "OVR-2801",
+   "ch": 124925.0,
+   "ch0": 124919.0,
+   "ch1": 124931.0,
+   "src": "CH attribute",
+   "id": "ref_DRMR_overpass_01"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2802",
+   "ch": 128275.0,
+   "ch0": 128269.0,
+   "ch1": 128281.0,
+   "src": "CH attribute",
+   "id": "ref_DRMR_overpass_02"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2803",
+   "ch": 132310.0,
+   "ch0": 132304.0,
+   "ch1": 132316.0,
+   "src": "CH attribute",
+   "id": "ref_DRMR_overpass_03"
+  },
+  {
+   "kind": "bridge",
+   "name": "BRG-2601",
+   "ch0": 133805.0,
+   "ch1": 133925.0,
+   "src": "drawing text",
+   "id": "ref_DRMR_bridge_04"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2804",
+   "ch": 139065.0,
+   "ch0": 139059.0,
+   "ch1": 139071.0,
+   "src": "CH attribute",
+   "id": "ref_DRMR_overpass_05"
+  },
+  {
+   "kind": "bridge",
+   "name": "BRG-2603",
+   "ch0": 139560.0,
+   "ch1": 140352.0,
+   "src": "drawing text",
+   "id": "ref_DRMR_bridge_06"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2805",
+   "ch": 143151.0,
+   "ch0": 143145.0,
+   "ch1": 143157.0,
+   "src": "CH attribute",
+   "id": "ref_DRMR_overpass_07"
+  },
+  {
+   "kind": "bridge",
+   "name": "BRG-2604",
+   "ch0": 148450.0,
+   "ch1": 148546.0,
+   "src": "drawing text",
+   "id": "ref_DRMR_bridge_08"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2806",
+   "ch": 150758.0,
+   "ch0": 150752.0,
+   "ch1": 150764.0,
+   "src": "CH attribute",
+   "id": "ref_DRMR_overpass_09"
+  },
+  {
+   "kind": "bridge",
+   "name": "BRG-2605",
+   "ch0": 152528.0,
+   "ch1": 152648.0,
+   "src": "drawing text",
+   "id": "ref_DRMR_bridge_10"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2807",
+   "ch": 153845.0,
+   "ch0": 153839.0,
+   "ch1": 153851.0,
+   "src": "CH attribute",
+   "id": "ref_DRMR_overpass_11"
+  },
+  {
+   "kind": "bridge",
+   "name": "BRG-2606",
+   "ch0": 154938.0,
+   "ch1": 155058.0,
+   "src": "drawing text",
+   "id": "ref_DRMR_bridge_12"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2808",
+   "ch": 160817.0,
+   "ch0": 160811.0,
+   "ch1": 160823.0,
+   "src": "CH attribute",
+   "id": "ref_DRMR_overpass_13"
+  },
+  {
+   "kind": "bridge",
+   "name": "BRG-2607",
+   "ch0": 167223.0,
+   "ch1": 167631.0,
+   "src": "drawing text",
+   "id": "ref_DRMR_bridge_14"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2809",
+   "ch": 171677.0,
+   "ch0": 171671.0,
+   "ch1": 171683.0,
+   "src": "CH attribute",
+   "id": "ref_DRMR_overpass_15"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2810",
+   "ch": 176298.0,
+   "ch0": 176292.0,
+   "ch1": 176304.0,
+   "src": "CH attribute",
+   "id": "ref_DRMR_overpass_16"
+  },
+  {
+   "kind": "bridge",
+   "name": "BRG-2608",
+   "ch0": 177868.0,
+   "ch1": 177940.0,
+   "src": "drawing text",
+   "id": "ref_DRMR_bridge_17"
+  }
+ ]
+}

@@ -178,7 +178,9 @@
     }
     hitAt(x, y) { const c = this.hitsAt(x, y); return c.length ? c[0].h : null; }
     tap(x, y) {
-      const c = this.hitsAt(x, y);
+      let c = this.hitsAt(x, y);
+      // A drainage mark on a bridge or under a road wins: the structure is only the backdrop.
+      if (c.some(h => !h.h.ref)) c = c.filter(h => !h.h.ref);
       if (!c.length || !this.opts.onTap) return;
       // Clear when nothing else is about as close; otherwise say which marks are under the finger.
       const [a, b] = c;
@@ -201,6 +203,7 @@
       const chBot = viewCh - ((H - readY) / px) * dir;
       const lo = Math.min(chTop, chBot) - 30, hi = Math.max(chTop, chBot) + 30;
       const hits = [];
+      const late = [];
       let s = '<svg viewBox="0 0 ' + W + ' ' + H + '" width="' + W + '" height="' + H + '">' + defs();
 
       // lanes
@@ -234,6 +237,35 @@
           const my = (y0 + y1) / 2;
           s += '<text transform="translate(' + (x + 5) + ',' + my + ') rotate(-90)" text-anchor="middle" style="fill:var(--ink-2);font:700 12px var(--f-sans);letter-spacing:0.1em">' + DI.esc(a.label || 'NONE · BY DESIGN') + '</text>';
         });
+      });
+
+      // reference structures: a railway bridge as a deck along the line, a road over or under it as a
+      // band across. Underneath everything; a tap on one opens what it is.
+      (state.refs || []).forEach(r => {
+        if (r.ch1 < lo || r.ch0 > hi) return;
+        const ya = Y(r.ch0), yb = Y(r.ch1);
+        let y0 = Math.min(ya, yb), y1 = Math.max(ya, yb);
+        if (r.kind === 'bridge') {
+          const xa = g.laneX('L', 'face'), xb = g.laneX('R', 'face');
+          const x0 = Math.min(xa, xb), x1 = Math.max(xa, xb);
+          y0 = Math.max(-6, y0); y1 = Math.min(H + 6, Math.max(y1, y0 + 6));
+          s += '<rect x="' + x0 + '" y="' + y0 + '" width="' + (x1 - x0) + '" height="' + (y1 - y0) + '" style="fill:var(--ref-bg);stroke:var(--ref);stroke-width:2.5"/>';
+          [x0 + 5, x1 - 5].forEach(x => { s += '<line x1="' + x + '" y1="' + y0 + '" x2="' + x + '" y2="' + y1 + '" style="stroke:var(--ref);stroke-width:1.5" stroke-dasharray="2 4"/>'; });
+          hits.push({ f: r, x0, x1, y0, y1, ref: true });
+          const my = Math.max(y0 + 16, Math.min(y1 - 16, H * 0.35));
+          if (y1 - y0 > 26) late.push(chip(g.cx, my, (close ? r.name + ' · BRIDGE ' + DI.fmtCh(r.ch0) + '–' + DI.fmtCh(r.ch1) : r.name), { fs: close ? 12 : 11, bg: 'var(--ref)', fg: 'var(--on-ink)', stroke: false, clampW: W }));
+          else late.push(chip(g.cx, y0 - 10, r.name, { fs: 11, bg: 'var(--ref)', fg: 'var(--on-ink)', stroke: false, clampW: W }));
+        } else {
+          const m = (y0 + y1) / 2, hh = Math.max(close ? 14 : 8, y1 - y0);
+          y0 = m - hh / 2; y1 = m + hh / 2;
+          if (y1 < -6 || y0 > H + 6) return;
+          const dash = r.kind === 'overpass' ? '' : ' stroke-dasharray="7 4"';
+          s += '<rect x="0" y="' + y0 + '" width="' + W + '" height="' + (y1 - y0) + '" style="fill:var(--ref-bg)"/>';
+          s += '<line x1="0" y1="' + y0 + '" x2="' + W + '" y2="' + y0 + '" style="stroke:var(--ref);stroke-width:2.5"' + dash + '/>';
+          s += '<line x1="0" y1="' + y1 + '" x2="' + W + '" y2="' + y1 + '" style="stroke:var(--ref);stroke-width:2.5"' + dash + '/>';
+          hits.push({ f: r, x0: 0, x1: W, y0, y1, ref: true });
+          late.push(chip(14, m, (r.name || r.short) + (close && r.name ? ' · ' + r.short : ''), { anchor: 'start', fs: close ? 12 : 11, bg: 'var(--ref)', fg: 'var(--on-ink)', stroke: false, clampW: W }));
+        }
       });
 
       // embankment height at the outer edge of each side, and where Type 9 is called for but not drawn
@@ -290,7 +322,6 @@
       // features
       const feats = state.features.filter(f => f.ch1 >= lo && f.ch0 <= hi);
       const tags = [];
-      const late = [];
       const points = [];
       const crossChips = [];
       feats.forEach(f => {
