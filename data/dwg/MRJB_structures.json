@@ -1,0 +1,233 @@
+{
+ "sub": "MRJB",
+ "source": "S05-TRA-PLAT.dxf",
+ "structures": [
+  {
+   "kind": "underpass",
+   "name": "UDR-3001",
+   "ch": 181459.0,
+   "ch0": 181453.0,
+   "ch1": 181465.0,
+   "src": "CH attribute",
+   "id": "ref_MRJB_underpass_01"
+  },
+  {
+   "kind": "bridge",
+   "name": "BRG-2601",
+   "ch0": 184161.0,
+   "ch1": 184401.0,
+   "src": "drawing text",
+   "id": "ref_MRJB_bridge_02"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2801",
+   "ch": 187281.0,
+   "ch0": 187278.0,
+   "ch1": 187284.0,
+   "src": "CH attribute",
+   "id": "ref_MRJB_overpass_03"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2802",
+   "ch": 190610.0,
+   "ch0": 190607.0,
+   "ch1": 190613.0,
+   "src": "CH attribute",
+   "id": "ref_MRJB_overpass_04"
+  },
+  {
+   "kind": "bridge",
+   "name": "BRG-2602",
+   "ch0": 190841.0,
+   "ch1": 191201.0,
+   "src": "drawing text",
+   "id": "ref_MRJB_bridge_05"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2803",
+   "ch": 191879.0,
+   "ch0": 191876.0,
+   "ch1": 191882.0,
+   "src": "CH attribute",
+   "id": "ref_MRJB_overpass_06"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2804",
+   "ch": 193347.0,
+   "ch0": 193344.0,
+   "ch1": 193350.0,
+   "src": "CH attribute",
+   "id": "ref_MRJB_overpass_07"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2805",
+   "ch": 196405.0,
+   "ch0": 196402.0,
+   "ch1": 196408.0,
+   "src": "CH attribute",
+   "id": "ref_MRJB_overpass_08"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2806",
+   "ch": 198712.0,
+   "ch0": 198709.0,
+   "ch1": 198715.0,
+   "src": "CH attribute",
+   "id": "ref_MRJB_overpass_09"
+  },
+  {
+   "kind": "bridge",
+   "name": "BRG-2603",
+   "ch0": 199932.0,
+   "ch1": 200100.0,
+   "src": "drawing text",
+   "id": "ref_MRJB_bridge_10"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2807",
+   "ch": 200787.0,
+   "ch0": 200784.0,
+   "ch1": 200790.0,
+   "src": "CH attribute",
+   "id": "ref_MRJB_overpass_11"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2808",
+   "ch": 202766.0,
+   "ch0": 202763.0,
+   "ch1": 202769.0,
+   "src": "CH attribute",
+   "id": "ref_MRJB_overpass_12"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2809",
+   "ch": 206787.5,
+   "ch0": 206784.5,
+   "ch1": 206790.5,
+   "src": "CH attribute",
+   "id": "ref_MRJB_overpass_13"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2810",
+   "ch": 208360.0,
+   "ch0": 208357.0,
+   "ch1": 208363.0,
+   "src": "CH attribute",
+   "id": "ref_MRJB_overpass_14"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2811",
+   "ch": 211535.0,
+   "ch0": 211532.0,
+   "ch1": 211538.0,
+   "src": "CH attribute",
+   "id": "ref_MRJB_overpass_15"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2812",
+   "ch": 215871.0,
+   "ch0": 215868.0,
+   "ch1": 215874.0,
+   "src": "CH attribute",
+   "id": "ref_MRJB_overpass_16"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2813",
+   "ch": 219644.0,
+   "ch0": 219641.0,
+   "ch1": 219647.0,
+   "src": "CH attribute",
+   "id": "ref_MRJB_overpass_17"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2814",
+   "ch": 221365.0,
+   "ch0": 221362.0,
+   "ch1": 221368.0,
+   "src": "CH attribute",
+   "id": "ref_MRJB_overpass_18"
+  },
+  {
+   "kind": "bridge",
+   "name": "BRG-2605",
+   "ch0": 224708.0,
+   "ch1": 224780.0,
+   "src": "drawing text",
+   "id": "ref_MRJB_bridge_19"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2815",
+   "ch": 228988.0,
+   "ch0": 228985.0,
+   "ch1": 228991.0,
+   "src": "CH attribute",
+   "id": "ref_MRJB_overpass_20"
+  },
+  {
+   "kind": "bridge",
+   "name": "BRG-2606",
+   "ch0": 231258.0,
+   "ch1": 231330.0,
+   "src": "drawing text",
+   "id": "ref_MRJB_bridge_21"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2816",
+   "ch": 234178.0,
+   "ch0": 234175.0,
+   "ch1": 234181.0,
+   "src": "CH attribute",
+   "id": "ref_MRJB_overpass_22"
+  },
+  {
+   "kind": "bridge",
+   "name": "BRG-2607",
+   "ch0": 235773.0,
+   "ch1": 235845.0,
+   "src": "drawing text",
+   "id": "ref_MRJB_bridge_23"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2817",
+   "ch": 236498.0,
+   "ch0": 236495.0,
+   "ch1": 236501.0,
+   "src": "CH attribute",
+   "id": "ref_MRJB_overpass_24"
+  },
+  {
+   "kind": "bridge",
+   "name": "BRG-2608",
+   "ch0": 239293.0,
+   "ch1": 239701.0,
+   "src": "drawing text",
+   "id": "ref_MRJB_bridge_25"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2818",
+   "ch": 240939.0,
+   "ch0": 240936.0,
+   "ch1": 240942.0,
+   "src": "CH attribute",
+   "id": "ref_MRJB_overpass_26"
+  }
+ ]
+}

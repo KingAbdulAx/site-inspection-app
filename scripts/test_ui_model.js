@@ -4,6 +4,7 @@
  */
 'use strict';
 const path = require('path');
+const fs = require('fs');
 const root = path.join(__dirname, '..');
 
 global.window = global;
@@ -17,6 +18,7 @@ require(path.join(root, 'data/bundle.js'));
 require(path.join(root, 'data/section01_bundle.js'));
 require(path.join(root, 'data/section04_bundle.js'));
 require(path.join(root, 'data/section05_bundle.js'));
+require(path.join(root, 'data/structures.js'));
 require(path.join(root, 'data/section02_bundle.js'));
 require(path.join(root, 'ui/model.js'));
 const DI = window.DI;
@@ -61,6 +63,32 @@ section('Features load for both sub-sections with lanes and certainty', () => {
   const box = all.find(f => /^Single box culvert 1×\(2\.5×2\.5 m\)$/.test(f.name));
   ok(!!box, 'box culvert named by cells and size');
   ok(all.filter(f => f.side === 'L').every(f => f.offset >= 0) && all.filter(f => f.side === 'R').every(f => f.offset <= 0), 'left positive, right negative');
+});
+
+section('Embankment height and the Type 9 rule (S02)', () => {
+  DI.loadHeights('DWKZ', JSON.parse(fs.readFileSync(path.join(root, 'data/heights_DWKZ.json'), 'utf8')));
+  ok(DI.hasHeights('DWKZ') && DI.data.heights.DWKZ.length === 2526, 'S02 profile: 2526 stations every 25 m');
+  const h = DI.heightAt('DWKZ', 80675, 'C');
+  ok(h && Math.abs(h.h - 11.09) < 0.05 && !h.est, 'highest fill 11.09 m at 80+675, formation to ground: ' + (h && h.h.toFixed(2)));
+  const a = DI.heightAt('DWKZ', 21500, 'L'), b = DI.heightAt('DWKZ', 21500, 'R');
+  ok(a.side === 'L' && b.side === 'R' && a.h !== b.h, 'each side has its own height');
+  ok(DI.heightAt('DWKZ', 20000, 'C').est, 'no formation level at Dawanau station: an estimate');
+  const old = DI.t9Check('DWKZ', 4), now = DI.t9Check('DWKZ', 1.5);
+  ok(old.km.missing < 1.5 && old.km.ok > 10, 'the 4 m rule reproduces the drawn Type 9 (' + old.km.missing.toFixed(1) + ' km not drawn)');
+  ok(now.km.missing > 25 && now.runs.every(r => r.ch0 < r.ch1 && (r.side === 'L' || r.side === 'R')), 'the 1.5 m rule finds ' + now.km.missing.toFixed(1) + ' km with no Type 9 drawn');
+  ok(DI.t9Rule().h === 1.5, 'the site rule (1.5 m) is the default');
+  DI.setT9Rule(1.8); ok(DI.t9Rule().h === 1.8 && /3545/.test(DI.t9Rule().src), 'T.E.A.M. 1.8 m rule cites KMD/MEN/Vol.15/3545'); DI.setT9Rule(1.5);
+});
+
+section('Bridges and road crossings, for reference', () => {
+  const all = DI.refs();
+  ok(all.length > 80 && ['KNDW', 'DWKZ', 'KZDR', 'DRMR', 'MRJB'].every(s => all.some(r => r.sub === s)), 'structures on all five sections: ' + all.length);
+  const b = DI.refsNear('KM', 36300, 36310).find(r => r.kind === 'bridge');
+  ok(b && b.name === 'BRG-2602' && b.ch0 === 36077 && b.ch1 === 36628, 'BRG-2602 spans 36+077 to 36+628, as the drawing says');
+  ok(all.filter(r => r.kind === 'bridge').every(r => r.ch1 - r.ch0 > 20), 'every bridge has its length');
+  const o = DI.refsNear('KM', 25850, 25850)[0];
+  ok(o && o.kind === 'overpass' && o.name === 'OVR-2801', 'OVR-2801 is a road over the railway at 25+850');
+  ok(!DI.data.features.some(f => /^ref_/.test(f.id)), 'reference structures are not drainage features');
 });
 
 section('Sub-section lookup', () => {

@@ -312,6 +312,7 @@
     if (bars.length <= 6) h += '<div class="hist" style="grid-template-columns:repeat(' + Math.max(1, bars.length) + ',1fr)">' + bars.map(x => '<div>' + x.v + '<i style="height:' + Math.max(4, x.v / hm * 90) + 'px"></i><small>' + esc(x.n) + '</small></div>').join('') + '</div></div>';
     else h += '<div style="display:grid;grid-template-columns:auto 1fr auto;gap:6px 10px;align-items:center;margin-top:10px">' + bars.map(x => '<small style="font:600 14px/1.2 var(--f-sans);color:var(--ink-2)">' + esc(x.n) + '</small><i style="display:block;height:18px;width:' + Math.max(2, x.v / hm * 100) + '%;background:var(--part);border:2px solid var(--ink)"></i><b style="font:600 16px/1 var(--f-sans)">' + x.v + '</b>').join('') + '</div></div>';
 
+    h += t9Card(sub);
     h += '<div style="border-top:3px solid var(--ink);margin-top:20px;padding:16px 16px 8px;display:flex;justify-content:space-between;align-items:center"><span class="lbl-caps">Every structure, one mark · ▲ up the line</span>' +
       '<div class="segm" style="grid-template-columns:1fr 1fr;width:150px"><button data-act="sec-view" data-v="ribbon" class="' + (S.secView === 'ribbon' ? 'on' : '') + '" style="min-height:40px">Ribbon</button><button data-act="sec-view" data-v="map" class="' + (S.secView === 'map' ? 'on' : '') + '" style="min-height:40px">Map</button></div></div>';
     if (S.secView === 'ribbon') {
@@ -349,13 +350,50 @@
     const sc2 = el.querySelector('.scroll'); if (sc2) sc2.scrollTop = top;
   }
   DA.renderSection = renderSection;
+
+  // ---------------------------------------------------------------- Type 9 check
+  // Where the embankment on the side the platform falls to is at or above the threshold, with no
+  // Type 9 drawn. Needs the height profile (data/heights_<SUB>.json): Section 02 for now.
+  const km = v => (v < 10 ? v.toFixed(1) : Math.round(v)) + ' km';
+  function t9Card(sub) {
+    DA.ensureHeights(sub.id);
+    if (!DI.hasHeights(sub.id)) return '';
+    const rule = DI.t9Rule(), chk = DI.t9Check(sub.id, rule.h);
+    const miss = chk.runs.filter(r => r.status === 'missing');
+    let h = '<div class="pad" style="border-top:3px solid var(--ink);margin-top:20px;padding-top:16px"><div class="lbl-caps">Type 9 check · embankment ≥ ' + rule.label + '</div>';
+    h += '<p class="big-stat" style="margin-top:8px">' + km(chk.km.missing) + ' with no Type 9 drawn</p>';
+    h += '<div style="font:500 16px/1.35 var(--f-sans);color:var(--ink-2);margin-top:4px">' + miss.length + ' stretches on the side the platform falls to · ' + km(chk.km.ok) + ' already drawn · ' + km(chk.km.na) + ' not assessed (stations, bridges)</div>';
+    h += '<div class="segm" style="grid-template-columns:repeat(' + DI.T9_RULES.length + ',1fr);margin-top:12px">' + DI.T9_RULES.map(r => '<button data-act="t9-rule" data-v="' + r.h + '" class="' + (r.h === rule.h ? 'on' : '') + '" style="min-height:44px">' + r.label + '</button>').join('') + '</div>';
+    h += '<div class="note" style="margin-top:6px">' + esc(rule.src) + '. Height is formation to ground on that side, from the longitudinal profile and the cross sections. Stretches with a Type 1 on that side are left out.</div>';
+    h += '<div class="grid2 mt8"><button class="btn" data-act="t9-list" data-sub="' + sub.id + '" style="min-height:52px;font-size:17px"' + (miss.length ? '' : ' disabled') + '>See the ' + miss.length + ' stretches</button><button class="btn" data-act="t9-csv" data-sub="' + sub.id + '" style="min-height:52px;font-size:17px">Export CSV</button></div></div>';
+    return h;
+  }
+  A['t9-rule'] = b => { DI.setT9Rule(Number(b.dataset.v)); DA.render(); };
+  A['t9-list'] = b => {
+    const sub = b.dataset.sub, rule = DI.t9Rule(), runs = DI.t9Check(sub, rule.h).runs.filter(r => r.status === 'missing');
+    let h = '<div style="display:flex;justify-content:space-between;align-items:center;padding:4px 0 12px;border-bottom:3px solid var(--ink);margin:0 -16px;padding-left:16px;padding-right:16px"><div><div style="font:700 22px/1.15 var(--f-sans)">No Type 9 drawn · ≥ ' + rule.label + '</div><div style="font:500 15px/1.3 var(--f-sans);color:var(--ink-3)">' + runs.length + ' stretches, by chainage. Tap one to walk it.</div></div><button data-act="close" style="width:48px;height:48px">' + I.icon('chevDown').replace('<svg', '<svg width="30" height="30"') + '</button></div><div style="margin:0 -16px">';
+    runs.forEach(r => {
+      h += '<button class="frow" data-act="walk-at" data-ch="' + Math.round((r.ch0 + r.ch1) / 2) + '" data-line="' + DI.SUBS[sub].line + '">' + DA.sideBadge(r.side) + '<div class="mid"><div class="t1"><span>' + DI.fmtCh(r.ch0) + ' → ' + DI.fmtCh(r.ch1) + '</span></div><div class="t2">' + Math.round(r.ch1 - r.ch0) + ' m · fill ' + r.minH.toFixed(1) + ' to ' + r.maxH.toFixed(1) + ' m</div></div></button>';
+    });
+    DA.openOverlay(h + '</div>', 'sheet tall');
+  };
+  A['t9-csv'] = b => {
+    const sub = b.dataset.sub, rule = DI.t9Rule(), chk = DI.t9Check(sub, rule.h);
+    const NAMES = { missing: 'Needed, not drawn', ok: 'Needed, drawn', extra: 'Drawn, below threshold', exempt: 'Type 1 on that side', na: 'Not assessed (no formation level)' };
+    const lines = [['side', 'from', 'to', 'length_m', 'min_fill_m', 'max_fill_m', 'status'].join(',')];
+    chk.runs.forEach(r => lines.push([r.side, DI.fmtCh(r.ch0), DI.fmtCh(r.ch1), Math.round(r.ch1 - r.ch0), r.minH.toFixed(2), r.maxH.toFixed(2), NAMES[r.status]].map(DI.csvCell).join(',')));
+    lines.push('', DI.csvCell('Rule: Type 9 on the side the platform falls to where formation to ground >= ' + rule.label + ' (' + rule.src + '). Source: ' + sub + ' longitudinal profile and cross sections.'));
+    download(sub + '_type9_check_' + rule.label.replace(' ', '') + '.csv', new Blob([lines.join('\n')], { type: 'text/csv' }));
+  };
   A['sec-cat'] = b => { S.secCat = b.dataset.v; DA.render(); };
   A['sec-view'] = b => { S.secView = b.dataset.v; DA.render(); };
   A['walk-at'] = b => {
     const ch = Number(b.dataset.ch);
+    DA.closeAll();
     DA.setTab('walk');
-    if (DA.strip) { DA.strip.viewCh = ch; }
     if (S.pos.source === 'hand' || S.pos.line !== b.dataset.line) DA.setHand(b.dataset.line, ch);
+    // The strip is made on the first Walk render (next frame); it takes this chainage then.
+    if (S.pos.source !== 'hand') S.pendingViewCh = ch;
     DA.render();
   };
 

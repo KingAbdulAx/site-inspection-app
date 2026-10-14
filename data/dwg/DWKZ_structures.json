@@ -1,0 +1,217 @@
+{
+ "sub": "DWKZ",
+ "source": "S02-TRA-PLAT-m.dxf",
+ "structures": [
+  {
+   "kind": "underpass",
+   "name": "UDR-3001",
+   "ch": 21495.0,
+   "ch0": 21489.0,
+   "ch1": 21501.0,
+   "src": "CH attribute",
+   "id": "ref_DWKZ_underpass_01"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2801",
+   "ch": 25850.0,
+   "ch0": 25844.0,
+   "ch1": 25856.0,
+   "src": "CH attribute",
+   "id": "ref_DWKZ_overpass_02"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2803",
+   "ch": 29077.0,
+   "ch0": 29071.0,
+   "ch1": 29083.0,
+   "src": "CH attribute",
+   "id": "ref_DWKZ_overpass_03"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2804",
+   "ch": 31878.0,
+   "ch0": 31872.0,
+   "ch1": 31884.0,
+   "src": "CH attribute",
+   "id": "ref_DWKZ_overpass_04"
+  },
+  {
+   "kind": "underpass",
+   "name": "UDR-3002",
+   "ch": 33966.0,
+   "ch0": 33960.0,
+   "ch1": 33972.0,
+   "src": "CH attribute",
+   "id": "ref_DWKZ_underpass_05"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2805",
+   "ch": 34965.0,
+   "ch0": 34959.0,
+   "ch1": 34971.0,
+   "src": "CH attribute",
+   "id": "ref_DWKZ_overpass_06"
+  },
+  {
+   "kind": "bridge",
+   "name": "BRG-2602",
+   "ch0": 36077.0,
+   "ch1": 36628.0,
+   "src": "drawing text",
+   "id": "ref_DWKZ_bridge_07"
+  },
+  {
+   "kind": "underpass",
+   "name": "UDR-3003",
+   "ch": 37185.0,
+   "ch0": 37179.0,
+   "ch1": 37191.0,
+   "src": "CH attribute",
+   "id": "ref_DWKZ_underpass_08"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2816",
+   "ch": 41500.0,
+   "ch0": 41494.0,
+   "ch1": 41506.0,
+   "src": "CH attribute",
+   "id": "ref_DWKZ_overpass_09"
+  },
+  {
+   "kind": "bridge",
+   "name": "BRG-2603",
+   "ch0": 42738.0,
+   "ch1": 42833.0,
+   "src": "drawing text",
+   "id": "ref_DWKZ_bridge_10"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2806",
+   "ch": 44624.0,
+   "ch0": 44618.0,
+   "ch1": 44630.0,
+   "src": "CH attribute",
+   "id": "ref_DWKZ_overpass_11"
+  },
+  {
+   "kind": "bridge",
+   "name": "BRG-2605",
+   "ch0": 46986.0,
+   "ch1": 47105.0,
+   "src": "drawing text",
+   "id": "ref_DWKZ_bridge_12"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2807",
+   "ch": 49698.0,
+   "ch0": 49692.0,
+   "ch1": 49704.0,
+   "src": "CH attribute",
+   "id": "ref_DWKZ_overpass_13"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2808",
+   "ch": 51558.0,
+   "ch0": 51552.0,
+   "ch1": 51564.0,
+   "src": "CH attribute",
+   "id": "ref_DWKZ_overpass_14"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2809",
+   "ch": 55464.0,
+   "ch0": 55458.0,
+   "ch1": 55470.0,
+   "src": "CH attribute",
+   "id": "ref_DWKZ_overpass_15"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2810",
+   "ch": 58426.0,
+   "ch0": 58420.0,
+   "ch1": 58432.0,
+   "src": "CH attribute",
+   "id": "ref_DWKZ_overpass_16"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2811",
+   "ch": 62371.0,
+   "ch0": 62365.0,
+   "ch1": 62377.0,
+   "src": "CH attribute",
+   "id": "ref_DWKZ_overpass_17"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2812",
+   "ch": 67741.0,
+   "ch0": 67735.0,
+   "ch1": 67747.0,
+   "src": "CH attribute",
+   "id": "ref_DWKZ_overpass_18"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2813",
+   "ch": 71352.0,
+   "ch0": 71346.0,
+   "ch1": 71358.0,
+   "src": "CH attribute",
+   "id": "ref_DWKZ_overpass_19"
+  },
+  {
+   "kind": "bridge",
+   "name": "BRG-2606",
+   "ch0": 74784.0,
+   "ch1": 75743.0,
+   "src": "drawing text",
+   "id": "ref_DWKZ_bridge_20"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2814",
+   "ch": 76483.0,
+   "ch0": 76470.9,
+   "ch1": 76495.4,
+   "src": "CH attribute",
+   "id": "ref_DWKZ_overpass_21"
+  },
+  {
+   "kind": "bridge",
+   "name": "BRG-2607",
+   "ch0": 78730.0,
+   "ch1": 78802.0,
+   "src": "drawing text",
+   "id": "ref_DWKZ_bridge_22"
+  },
+  {
+   "kind": "underpass",
+   "name": "UDR-3005",
+   "ch": 80025.0,
+   "ch0": 80019.0,
+   "ch1": 80031.0,
+   "src": "CH attribute",
+   "id": "ref_DWKZ_underpass_23"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2815",
+   "ch": 82798.0,
+   "ch0": 82792.0,
+   "ch1": 82804.0,
+   "src": "CH attribute",
+   "id": "ref_DWKZ_overpass_24"
+  }
+ ]
+}

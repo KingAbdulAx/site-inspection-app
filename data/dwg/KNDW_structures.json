@@ -1,0 +1,156 @@
+{
+ "sub": "KNDW",
+ "source": "S01-TRA-PLAT-m.dxf",
+ "structures": [
+  {
+   "kind": "overpass",
+   "name": "OVR-2801",
+   "ch": -1541.0,
+   "ch0": -1547.0,
+   "ch1": -1535.0,
+   "src": "CH attribute",
+   "id": "ref_KNDW_overpass_01"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2802",
+   "ch": -522.0,
+   "ch0": -528.0,
+   "ch1": -516.0,
+   "src": "CH attribute",
+   "id": "ref_KNDW_overpass_02"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2803",
+   "ch": 2413.3,
+   "ch0": 2407.3,
+   "ch1": 2419.3,
+   "src": "block position",
+   "id": "ref_KNDW_overpass_03"
+  },
+  {
+   "kind": "bridge",
+   "name": "BRG-2601",
+   "ch0": 3155.7,
+   "ch1": 3638.6,
+   "src": "block extent",
+   "id": "ref_KNDW_bridge_04"
+  },
+  {
+   "kind": "crossing",
+   "name": "ROAD CROSSING",
+   "ch": 3578.0,
+   "ch0": 3572.0,
+   "ch1": 3584.0,
+   "src": "CH attribute",
+   "id": "ref_KNDW_crossing_05"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2804",
+   "ch": 4471.0,
+   "ch0": 4465.0,
+   "ch1": 4477.0,
+   "src": "CH attribute",
+   "id": "ref_KNDW_overpass_06"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2805",
+   "ch": 5465.0,
+   "ch0": 5459.0,
+   "ch1": 5471.0,
+   "src": "CH attribute",
+   "id": "ref_KNDW_overpass_07"
+  },
+  {
+   "kind": "bridge",
+   "name": "BRG-2602",
+   "ch0": 6301.0,
+   "ch1": 6616.0,
+   "src": "block extent",
+   "id": "ref_KNDW_bridge_08"
+  },
+  {
+   "kind": "crossing",
+   "name": "SERVICE ROAD",
+   "ch": 6600.0,
+   "ch0": 6594.0,
+   "ch1": 6606.0,
+   "src": "CH attribute",
+   "id": "ref_KNDW_crossing_09"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2806",
+   "ch": 8653.0,
+   "ch0": 8647.0,
+   "ch1": 8659.0,
+   "src": "CH attribute",
+   "id": "ref_KNDW_overpass_10"
+  },
+  {
+   "kind": "bridge",
+   "name": "BRG-2603",
+   "ch0": 9881.0,
+   "ch1": 10051.8,
+   "src": "block extent",
+   "id": "ref_KNDW_bridge_11"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2807",
+   "ch": 11214.0,
+   "ch0": 11208.0,
+   "ch1": 11220.0,
+   "src": "CH attribute",
+   "id": "ref_KNDW_overpass_12"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2808",
+   "ch": 12278.0,
+   "ch0": 12272.0,
+   "ch1": 12284.0,
+   "src": "CH attribute",
+   "id": "ref_KNDW_overpass_13"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2809",
+   "ch": 13993.0,
+   "ch0": 13987.0,
+   "ch1": 13999.0,
+   "src": "CH attribute",
+   "id": "ref_KNDW_overpass_14"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2810",
+   "ch": 14810.0,
+   "ch0": 14804.0,
+   "ch1": 14816.0,
+   "src": "CH attribute",
+   "id": "ref_KNDW_overpass_15"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2811",
+   "ch": 15921.0,
+   "ch0": 15915.0,
+   "ch1": 15927.0,
+   "src": "CH attribute",
+   "id": "ref_KNDW_overpass_16"
+  },
+  {
+   "kind": "overpass",
+   "name": "OVR-2812",
+   "ch": 17751.0,
+   "ch0": 17742.7,
+   "ch1": 17760.3,
+   "src": "CH attribute",
+   "id": "ref_KNDW_overpass_17"
+  }
+ ]
+}

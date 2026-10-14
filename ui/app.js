@@ -200,12 +200,58 @@
     else side = p.side + ' ' + Math.round(Math.abs(p.offset)) + ' m';
     if (p.farFromLine) { youLbl = 'GPS ' + (p.farFromLine / 1000).toFixed(1) + ' km off line'; }
     const tri = p.facing === 'decreasing' ? '▼' : '▲';
-    return '<div class="pos-line"><span>' + esc(L.short) + '</span>' + (p.sub ? '<span class="chip-sub">' + p.sub + '</span>' : '<span class="chip-sub">NO DATA</span>') + '</div>' + gps +
+    return '<div class="pos-line"><span>' + esc(L.short) + '</span>' + (p.sub ? '<span class="chip-sub">' + p.sub + '</span>' : '<span class="chip-sub">NO DATA</span>') + (refChip(true) || fillChip() || refChip(false)) + '</div>' + gps +
       '<button class="pos-ch tap' + (p.source === 'hand' ? ' hand' : '') + '" data-act="keypad" aria-label="Chainage">' + chHtml + '</button>' +
       '<button class="pos-you tap" data-act="facing"><div class="lbl">' + esc(youLbl) + '</div><div class="side">' + side + '</div>' +
       '<div class="facing">FACING <span class="tri">' + tri + '</span> <b>' + p.facing + '</b></div></button>';
   }
   DA.posHeader = posHeader;
+
+  // ------------------------------------------------------- embankment height
+  // data/heights_<SUB>.json is fetched once per sub-section, like the cross sections.
+  DA.heightsAsked = {};
+  function ensureHeights(sub) {
+    if (!sub || DI.hasHeights(sub) || DA.heightsAsked[sub]) return;
+    DA.heightsAsked[sub] = true;
+    fetch('data/heights_' + sub + '.json').then(r => r.ok ? r.json() : null).then(j => { if (j) { DI.loadHeights(sub, j); render(); } }).catch(() => { /* none for this sub-section */ });
+  }
+  DA.ensureHeights = ensureHeights;
+  // 'FILL 2.4 m' (or CUT) on your side; red when Type 9 is called for here and not drawn.
+  function fillChip() {
+    const p = S.pos;
+    if (!p.sub || p.tier === 'poor' || p.source === 'hand' && p.side == null) return '';
+    ensureHeights(p.sub);
+    const hh = DI.heightAt(p.sub, p.ch, p.side);
+    if (!hh) return '';
+    const v = Math.abs(hh.h).toFixed(1);
+    const rule = DI.t9Rule();
+    const chk = DI.t9Check(p.sub, rule.h);
+    const miss = chk && chk.runs.some(r => r.status === 'missing' && (p.side === 'C' || r.side === p.side) && p.ch >= r.ch0 && p.ch <= r.ch1);
+    return '<span class="chip-fill' + (miss ? ' t9' : '') + '" title="Formation to ground' + (hh.side === 'C' ? ', centreline' : ', ' + hh.side + ' side') + '">' + (hh.est ? '≈' : '') + (hh.h < 0 ? 'CUT ' : 'FILL ') + v + ' m' + (miss ? ' · T9' : '') + '</span>';
+  }
+  DA.fillChip = fillChip;
+  // On a bridge (where the fill does not apply), or at a road over or under the line when there is
+  // no fill to show: say so in the header.
+  function refChip(bridge) {
+    const p = S.pos;
+    if (p.tier === 'poor' && p.source !== 'anchor') return '';
+    const r = DI.refsNear(p.line, p.ch - (p.acc || 0) / 2 - 10, p.ch + (p.acc || 0) / 2 + 10).filter(x => (x.kind === 'bridge') === bridge)[0];
+    if (!r) return '';
+    return '<span class="chip-ref" title="' + esc(r.label) + '">' + (r.kind === 'bridge' ? 'ON ' : '') + esc(r.name || r.short) + '</span>';
+  }
+  // What a reference structure is: from the track plan, not something to inspect.
+  function openRef(id) {
+    const r = DI.refById(id);
+    if (!r) return;
+    const len = r.kind === 'bridge' ? ' · ' + Math.round(r.ch1 - r.ch0) + ' m long' : '';
+    let h = '<div class="fhead"><span class="side-badge" style="background:var(--ref);color:var(--on-ink);display:flex;align-items:center;justify-content:center;width:52px;height:52px;font:700 13px/1 var(--f-cond)">REF</span><div style="min-width:0"><div class="t1"><span>' + esc(r.name || r.label) + '</span></div>' +
+      '<div style="font:500 17px/1.3 var(--f-sans);color:var(--ink-2);margin-top:2px">' + esc(r.label) + '</div></div></div>';
+    h += '<div style="font:500 18px/1.4 var(--f-sans);margin:16px 0 6px">' + (r.kind === 'bridge' ? DI.fmtCh(r.ch0) + ' → ' + DI.fmtCh(r.ch1) + len : 'At ' + DI.fmtCh(r.ch != null ? r.ch : (r.ch0 + r.ch1) / 2)) + '</div>';
+    h += '<div class="note">From the track plan (' + esc(r.source || 'TRA-PLAT') + '), for finding your way. It is not a drainage structure: nothing is recorded against it.</div>';
+    h += '<button class="btn mt16" data-act="goto-next" data-ch="' + Math.round((r.ch0 + r.ch1) / 2) + '" style="min-height:52px">Show it on the strip</button>';
+    openOverlay(h, 'sheet');
+  }
+  DA.openRef = openRef;
 
   function laneHeader() {
     const W = $('#vp').clientWidth || 390;
@@ -331,16 +377,18 @@
       DA.strip = new window.DStrip.Strip($('#stripHost'), {
         // Phone: a clear tap opens that structure's record; marks too close to tell apart open the
         // list there. Desk: the list is docked beside the strip, so a tap points it at the feature.
-        onTap: (f, several, ch) => { if (DA.layout !== 'phone') openDrawer(f.ch0, f.id); else if (several) openDrawer(ch, f.id); else openRecord(f.id); },
+        onTap: (f, several, ch) => { if (DI.refById(f.id)) openRef(f.id); else if (DA.layout !== 'phone') openDrawer(f.ch0, f.id); else if (several) openDrawer(ch, f.id); else openRecord(f.id); },
         onPan: () => { $('#recentre').classList.remove('hidden'); },
         onZoom: () => render()
       });
     }
+    if (S.pendingViewCh != null) { DA.strip.viewCh = S.pendingViewCh; S.pendingViewCh = null; }
     const p = S.pos;
     DA.strip.render({
       line: p.line, ch: p.ch, userCh: p.ch, facing: p.facing, tier: p.tier, acc: p.acc || 0,
-      source: p.source, offset: p.offset, features: lineFeatures(), absences: S.absences || [],
-      unlisted: DI.live(r => r.kind === 'unlisted' && r.line === p.line)
+      source: p.source, offset: p.offset, features: lineFeatures(), absences: S.absences || [], refs: DI.refs().filter(r => r.line === p.line),
+      unlisted: DI.live(r => r.kind === 'unlisted' && r.line === p.line),
+      heights: p.sub && DI.hasHeights(p.sub) ? { rows: DI.data.heights[p.sub], thr: DI.t9Rule().h, runs: DI.t9Check(p.sub, DI.t9Rule().h).runs } : null
     });
     $('#recentre').classList.toggle('hidden', DA.strip.viewCh == null);
     const z = DA.strip.zoom, m = DA.strip.span();
@@ -370,8 +418,10 @@
       fetch('data/sections_' + p.sub + '.json').then(r => r.ok ? r.json() : null).then(j => { if (j) { DI.loadSections(p.sub, j); render(); } }).catch(() => { /* none for this sub-section */ });
     }
     const sec = p.sub ? DI.sectionAt(p.sub, cutCh) : null;
+    if (p.sub) ensureHeights(p.sub);
+    const hl = p.sub && DI.heightAt(p.sub, cutCh, 'L'), hr = p.sub && DI.heightAt(p.sub, cutCh, 'R');
     $('#cutHead').innerHTML = '<span>SECTION AT ' + (sec ? DI.fmtCh(sec.ch) : pick ? DI.fmtCh(cutCh, 3) : DI.fmtCh(cutCh)) + '</span><span class="muted">LOOKING ' + (p.facing === 'decreasing' ? '▼' : '▲') + (sec ? ' · DESIGN · VERT. EXAGG.' : ' · NOT TO SCALE') + '</span>';
-    let h = '<div style="background:var(--paper)">' + (sec ? window.DStrip.realCut(sec, items, p.facing, W, fitH) : window.DStrip.sectionCut(items, p.facing, W, fitH)) + '</div>';
+    let h = '<div style="background:var(--paper)">' + (sec ? window.DStrip.realCut(sec, items, p.facing, W, fitH, hl && hr ? { L: hl, R: hr } : null) : window.DStrip.sectionCut(items, p.facing, W, fitH)) + '</div>';
     h += '<div style="display:grid;grid-template-columns:repeat(' + cols + ',1fr);gap:8px;padding:14px 12px;border-top:2px solid var(--ink);background:var(--paper)">';
     items.forEach((it, i) => {
       const f = it.f;
@@ -422,6 +472,8 @@
       : mine ? '' : '<button class="btn" data-act="side-me" style="width:auto;flex:none;min-height:44px;padding:0 12px;font-size:15px">Back to me</button>';
     let h = '<div class="drawer-h" style="display:flex;justify-content:space-between;align-items:center;gap:10px;padding:4px 0 14px;border-bottom:3px solid var(--ink);margin:0 -16px;padding-left:16px;padding-right:16px">' +
       '<div><div style="font:700 24px/1.15 var(--f-sans)">Within 20 m of ' + (mine ? 'you' : DI.fmtCh(around)) + ' · ' + list.length + '</div><div style="font:500 16px/1.3 var(--f-sans);color:var(--ink-3)">Left to right, as you face ' + (S.pos.facing === 'decreasing' ? '▼' : '▲') + '</div></div>' + btn + '</div>';
+    const near = DI.refsNear(S.pos.line, around - 20, around + 20);
+    if (near.length) h += '<div style="margin:0 -16px;padding:10px 16px;background:var(--ref-bg);border-bottom:1px solid var(--rule);font:600 16px/1.35 var(--f-sans)">' + near.map(r => '<button data-act="ref" data-id="' + esc(r.id) + '" style="display:block;text-align:left;width:100%;min-height:36px"><span class="chip-ref" style="margin-right:8px">' + esc(r.name || r.short) + '</span>' + esc(r.label) + '</button>').join('') + '</div>';
     h += '<div style="margin:0 -16px">';
     if (!list.length) h += '<div class="empty-state"><b>Nothing drawn here</b>No structure on the drawings within 20 m.</div>';
     list.forEach(f => {
@@ -471,7 +523,7 @@
     const max = f.ladder.length - 1;
     const rel = relText(f, S.pos.ch, S.pos.facing);
     let h = '<div class="fhead">' + sideBadge(f.side, 'xl') + '<div style="min-width:0"><button class="t1" data-act="feature" data-id="' + esc(f.id) + '" style="text-align:left">' + I.typeIcon(f.icon) + '<span>' + esc(f.name) + '</span></button>' +
-      '<div class="t2">' + chText(f) + ' ' + certChip(f) + ' <span class="rel">' + esc(rel) + '</span></div></div></div>';
+      '<div class="t2">' + chText(f) + ' ' + certChip(f) + ' <span class="rel">' + esc(rel) + '</span></div>' + fillRange(f) + '</div></div>';
     // A record from the office (the cloud database) says whose it is: a colleague, or a progress chart.
     const office = st.seen && st.seen.office;
     h += '<div class="pair mt16"><div class="built"><div class="part"><span class="chip seen">' + (office ? 'Office' : 'Seen by you') + '</span>' + meter(f, { s: st.s == null ? 0 : st.s, c: -1 }, '') +
@@ -508,6 +560,18 @@
     openOverlay(h, 'sheet tall');
   }
   DA.openRecord = openRecord;
+  // The embankment along a run, on its side: 'Fill 1.6–4.2 m'.
+  function fillRange(f) {
+    if (f.kind !== 'linear' || !DI.hasHeights(f.sub)) return '';
+    let lo = Infinity, hi = -Infinity;
+    for (let c = f.ch0; c <= f.ch1 + 0.1; c += Math.max(5, Math.min(25, (f.ch1 - f.ch0) / 4))) {
+      const hh = DI.heightAt(f.sub, c, f.side);
+      if (hh) { lo = Math.min(lo, hh.h); hi = Math.max(hi, hh.h); }
+    }
+    if (lo === Infinity) return '';
+    const t = v => (v < 0 ? 'cut ' + (-v).toFixed(1) : v.toFixed(1));
+    return '<div style="font:500 15px/1.3 var(--f-sans);color:var(--ink-3);margin-top:3px">Embankment along it: ' + (Math.abs(hi - lo) < 0.05 ? t(lo) : t(lo) + ' to ' + t(hi)) + ' m (formation to ground)</div>';
+  }
 
   function snapPos() {
     const p = S.pos;
@@ -700,6 +764,7 @@
       case 'tab': setTab(b.dataset.tab); break;
       case 'mode': S.mode = b.dataset.mode; render(); break;
       case 'record': closeAll(); openRecord(id); break;
+      case 'ref': openRef(id); break;
       case 'drawer': openDrawer(); break;
       case 'ladder': {
         const l = ov.querySelector('#fullLadder'); l.classList.toggle('hidden'); b.classList.add('hidden');
@@ -722,7 +787,7 @@
       case 'pane': S.pane = b.dataset.v; render(); break;
       case 'zoom': if (DA.strip) DA.strip.setZoom(DA.strip.zoom + Number(b.dataset.d)); break;
       case 'theme-toggle': setTheme(document.documentElement.getAttribute('data-theme') === 'office' ? 'sun' : 'office'); render(); break;
-      case 'goto-next': if (DA.strip) { DA.strip.viewCh = Number(b.dataset.ch); render(); } break;
+      case 'goto-next': closeAll(); if (DA.strip) { DA.strip.viewCh = Number(b.dataset.ch); render(); } break;
       case 'note': openNote(id); break;
       case 'note-save': {
         const t = ov.querySelector('textarea').value.trim();

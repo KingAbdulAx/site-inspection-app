@@ -178,7 +178,9 @@
     }
     hitAt(x, y) { const c = this.hitsAt(x, y); return c.length ? c[0].h : null; }
     tap(x, y) {
-      const c = this.hitsAt(x, y);
+      let c = this.hitsAt(x, y);
+      // A drainage mark on a bridge or under a road wins: the structure is only the backdrop.
+      if (c.some(h => !h.h.ref)) c = c.filter(h => !h.h.ref);
       if (!c.length || !this.opts.onTap) return;
       // Clear when nothing else is about as close; otherwise say which marks are under the finger.
       const [a, b] = c;
@@ -201,6 +203,7 @@
       const chBot = viewCh - ((H - readY) / px) * dir;
       const lo = Math.min(chTop, chBot) - 30, hi = Math.max(chTop, chBot) + 30;
       const hits = [];
+      const late = [];
       let s = '<svg viewBox="0 0 ' + W + ' ' + H + '" width="' + W + '" height="' + H + '">' + defs();
 
       // lanes
@@ -236,6 +239,65 @@
         });
       });
 
+      // reference structures: a railway bridge as a deck along the line, a road over or under it as a
+      // band across. Underneath everything; a tap on one opens what it is.
+      (state.refs || []).forEach(r => {
+        if (r.ch1 < lo || r.ch0 > hi) return;
+        const ya = Y(r.ch0), yb = Y(r.ch1);
+        let y0 = Math.min(ya, yb), y1 = Math.max(ya, yb);
+        if (r.kind === 'bridge') {
+          const xa = g.laneX('L', 'face'), xb = g.laneX('R', 'face');
+          const x0 = Math.min(xa, xb), x1 = Math.max(xa, xb);
+          y0 = Math.max(-6, y0); y1 = Math.min(H + 6, Math.max(y1, y0 + 6));
+          s += '<rect x="' + x0 + '" y="' + y0 + '" width="' + (x1 - x0) + '" height="' + (y1 - y0) + '" style="fill:var(--ref-bg);stroke:var(--ref);stroke-width:2.5"/>';
+          [x0 + 5, x1 - 5].forEach(x => { s += '<line x1="' + x + '" y1="' + y0 + '" x2="' + x + '" y2="' + y1 + '" style="stroke:var(--ref);stroke-width:1.5" stroke-dasharray="2 4"/>'; });
+          hits.push({ f: r, x0, x1, y0, y1, ref: true });
+          const my = Math.max(y0 + 16, Math.min(y1 - 16, H * 0.35));
+          if (y1 - y0 > 26) late.push(chip(g.cx, my, (close ? r.name + ' · BRIDGE ' + DI.fmtCh(r.ch0) + '–' + DI.fmtCh(r.ch1) : r.name), { fs: close ? 12 : 11, bg: 'var(--ref)', fg: 'var(--on-ink)', stroke: false, clampW: W }));
+          else late.push(chip(g.cx, y0 - 10, r.name, { fs: 11, bg: 'var(--ref)', fg: 'var(--on-ink)', stroke: false, clampW: W }));
+        } else {
+          const m = (y0 + y1) / 2, hh = Math.max(close ? 14 : 8, y1 - y0);
+          y0 = m - hh / 2; y1 = m + hh / 2;
+          if (y1 < -6 || y0 > H + 6) return;
+          const dash = r.kind === 'overpass' ? '' : ' stroke-dasharray="7 4"';
+          s += '<rect x="0" y="' + y0 + '" width="' + W + '" height="' + (y1 - y0) + '" style="fill:var(--ref-bg)"/>';
+          s += '<line x1="0" y1="' + y0 + '" x2="' + W + '" y2="' + y0 + '" style="stroke:var(--ref);stroke-width:2.5"' + dash + '/>';
+          s += '<line x1="0" y1="' + y1 + '" x2="' + W + '" y2="' + y1 + '" style="stroke:var(--ref);stroke-width:2.5"' + dash + '/>';
+          hits.push({ f: r, x0: 0, x1: W, y0, y1, ref: true });
+          late.push(chip(14, m, (r.name || r.short) + (close && r.name ? ' · ' + r.short : ''), { anchor: 'start', fs: close ? 12 : 11, bg: 'var(--ref)', fg: 'var(--on-ink)', stroke: false, clampW: W }));
+        }
+      });
+
+      // embankment height at the outer edge of each side, and where Type 9 is called for but not drawn
+      if (state.heights) {
+        const HS = state.heights;
+        const band = h => h >= 4 ? 'var(--fill-hi)' : h >= HS.thr ? 'var(--fill-mid)' : h > 0 ? 'var(--fill-lo)' : null;
+        ['L', 'R'].forEach(sd => {
+          const col = g.cols.find(c => c.side === sd && c.lane === 'off');
+          const outer = col.x0 < g.cx ? col.x0 : col.x1 - 6;
+          const textX = col.x0 < g.cx ? col.x0 + 9 : col.x1 - 9;
+          let lastLbl = -1e9;
+          HS.rows.forEach(r => {
+            if (r.ch < lo - 25 || r.ch > hi + 25) return;
+            const h = r[sd] != null ? r[sd] : r.c;
+            const c = band(h);
+            const ya = Y(r.ch - 12.5), yb = Y(r.ch + 12.5);
+            if (c) s += '<rect x="' + outer + '" y="' + Math.min(ya, yb) + '" width="6" height="' + (Math.abs(yb - ya) + 0.5) + '" style="fill:' + c + (r.est ? ';opacity:0.5' : '') + '"/>';
+            if (close && Math.round(r.ch) % 50 === 0 && Math.abs(Y(r.ch) - lastLbl) > 26) {
+              lastLbl = Y(r.ch);
+              s += '<text x="' + textX + '" y="' + (Y(r.ch) + 4) + '" text-anchor="' + (col.x0 < g.cx ? 'start' : 'end') + '" style="fill:var(--ink-2);font:600 11px var(--f-mono)">' + (r.est ? '≈' : '') + (h < 0 ? '−' : '') + Math.abs(h).toFixed(1) + '</text>';
+            }
+          });
+        });
+        HS.runs.filter(r => r.status === 'missing' && r.ch1 >= lo && r.ch0 <= hi).forEach(r => {
+          const x = g.laneX(r.side, 'plat');
+          const y0 = Math.max(-6, Math.min(Y(r.ch0), Y(r.ch1))), y1 = Math.min(H + 6, Math.max(Y(r.ch0), Y(r.ch1)));
+          if (y1 <= y0) return;
+          s += '<rect x="' + (x - 7) + '" y="' + y0 + '" width="14" height="' + (y1 - y0) + '" style="fill:var(--defect-bg);stroke:var(--defect);stroke-width:2" stroke-dasharray="5 3"/>';
+          if (close && y1 - y0 > 40) s += ('<text transform="translate(' + (x + 4) + ',' + Math.max(y0 + 34, Math.min(y1 - 6, H * 0.4)) + ') rotate(-90)" style="fill:var(--defect);font:700 11px var(--f-cond);letter-spacing:0.06em">T9 · ≥' + HS.thr + ' m</text>');
+        });
+      }
+
       // near band (±20 m around you)
       if (state.tier !== 'poor') {
         const ya = Y(state.userCh + 20), yb = Y(state.userCh - 20);
@@ -260,7 +322,6 @@
       // features
       const feats = state.features.filter(f => f.ch1 >= lo && f.ch0 <= hi);
       const tags = [];
-      const late = [];
       const points = [];
       const crossChips = [];
       feats.forEach(f => {
@@ -507,7 +568,7 @@
   // with the same numbered bubbles as the list. Vertical is exaggerated so a
   // 5 m bank and a 0.5 m ditch both read on a phone; the header says by how much.
   const GROUP_OF = { toe: 'toe', side: 'side', shoulder: 'side', crest: 'crest' };
-  function realCut(sec, items, facing, W, fitH) {
+  function realCut(sec, items, facing, W, fitH, fill) {
     // 320 px on a phone; a wide desk pane may draw it taller.
     const H = Math.max(190, Math.min(W >= 440 ? W * 0.85 : 320, fitH || 300));
     const flip = facing === 'decreasing';
@@ -545,8 +606,10 @@
     if (sec.h != null) s += '<text x="' + (W - 10) + '" y="' + (top - 16) + '" text-anchor="end" style="fill:var(--ink);font:500 13px var(--f-mono)">H to LRL ' + sec.h.toFixed(2) + ' m</text>';
     const lbl = (arr, side) => { if (!arr || !arr.length) return ''; const x = X((side === 'L' ? -1 : 1) * Math.max(...arr)); return '<text x="' + Math.max(28, Math.min(W - 28, x)) + '" y="' + (H - 44) + '" text-anchor="middle" style="fill:var(--ink-2);font:500 12.5px var(--f-mono)">L=' + Math.max(...arr).toFixed(2) + '</text>'; };
     s += lbl(sec.Ll, 'L') + lbl(sec.Lr, 'R');
-    s += '<text x="14" y="' + (H - 18) + '" style="fill:var(--ink);font:700 16px var(--f-cond)">' + (flip ? '◀ RIGHT' : '◀ LEFT') + '</text>';
-    s += '<text x="' + (W - 14) + '" y="' + (H - 18) + '" text-anchor="end" style="fill:var(--ink);font:700 16px var(--f-cond)">' + (flip ? 'LEFT ▶' : 'RIGHT ▶') + '</text>';
+    // embankment height each side (formation to ground), beside that side's name
+    const fl = sd => { const hh = fill && fill[sd]; return hh ? '<tspan style="font:600 14px var(--f-sans);fill:var(--ink-2)">' + (hh.h < 0 ? 'cut ' : 'fill ') + (hh.est ? '≈' : '') + Math.abs(hh.h).toFixed(1) + ' m</tspan>' : ''; };
+    s += '<text x="14" y="' + (H - 18) + '" style="fill:var(--ink);font:700 16px var(--f-cond)">' + (flip ? '◀ RIGHT ' + fl('R') : '◀ LEFT ' + fl('L')) + '</text>';
+    s += '<text x="' + (W - 14) + '" y="' + (H - 18) + '" text-anchor="end" style="fill:var(--ink);font:700 16px var(--f-cond)">' + (flip ? fl('L') + ' LEFT ▶' : fl('R') + ' RIGHT ▶') + '</text>';
 
     const bubble = (x, y, n, tx, ty) => '<line x1="' + x + '" y1="' + y + '" x2="' + tx + '" y2="' + ty + '" style="stroke:var(--ink);stroke-width:1.8"/>' +
       '<circle cx="' + x + '" cy="' + y + '" r="15" style="fill:var(--hivis);stroke:#121311;stroke-width:2.5"/><text x="' + x + '" y="' + (y + 7) + '" text-anchor="middle" style="fill:#121311;font:700 19px var(--f-cond)">' + n + '</text>';
