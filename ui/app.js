@@ -200,12 +200,36 @@
     else side = p.side + ' ' + Math.round(Math.abs(p.offset)) + ' m';
     if (p.farFromLine) { youLbl = 'GPS ' + (p.farFromLine / 1000).toFixed(1) + ' km off line'; }
     const tri = p.facing === 'decreasing' ? '▼' : '▲';
-    return '<div class="pos-line"><span>' + esc(L.short) + '</span>' + (p.sub ? '<span class="chip-sub">' + p.sub + '</span>' : '<span class="chip-sub">NO DATA</span>') + '</div>' + gps +
+    return '<div class="pos-line"><span>' + esc(L.short) + '</span>' + (p.sub ? '<span class="chip-sub">' + p.sub + '</span>' : '<span class="chip-sub">NO DATA</span>') + fillChip() + '</div>' + gps +
       '<button class="pos-ch tap' + (p.source === 'hand' ? ' hand' : '') + '" data-act="keypad" aria-label="Chainage">' + chHtml + '</button>' +
       '<button class="pos-you tap" data-act="facing"><div class="lbl">' + esc(youLbl) + '</div><div class="side">' + side + '</div>' +
       '<div class="facing">FACING <span class="tri">' + tri + '</span> <b>' + p.facing + '</b></div></button>';
   }
   DA.posHeader = posHeader;
+
+  // ------------------------------------------------------- embankment height
+  // data/heights_<SUB>.json is fetched once per sub-section, like the cross sections.
+  DA.heightsAsked = {};
+  function ensureHeights(sub) {
+    if (!sub || DI.hasHeights(sub) || DA.heightsAsked[sub]) return;
+    DA.heightsAsked[sub] = true;
+    fetch('data/heights_' + sub + '.json').then(r => r.ok ? r.json() : null).then(j => { if (j) { DI.loadHeights(sub, j); render(); } }).catch(() => { /* none for this sub-section */ });
+  }
+  DA.ensureHeights = ensureHeights;
+  // 'FILL 2.4 m' (or CUT) on your side; red when Type 9 is called for here and not drawn.
+  function fillChip() {
+    const p = S.pos;
+    if (!p.sub || p.tier === 'poor' || p.source === 'hand' && p.side == null) return '';
+    ensureHeights(p.sub);
+    const hh = DI.heightAt(p.sub, p.ch, p.side);
+    if (!hh) return '';
+    const v = Math.abs(hh.h).toFixed(1);
+    const rule = DI.t9Rule();
+    const chk = DI.t9Check(p.sub, rule.h);
+    const miss = chk && chk.runs.some(r => r.status === 'missing' && (p.side === 'C' || r.side === p.side) && p.ch >= r.ch0 && p.ch <= r.ch1);
+    return '<span class="chip-fill' + (miss ? ' t9' : '') + '" title="Formation to ground' + (hh.side === 'C' ? ', centreline' : ', ' + hh.side + ' side') + '">' + (hh.est ? '≈' : '') + (hh.h < 0 ? 'CUT ' : 'FILL ') + v + ' m' + (miss ? ' · T9' : '') + '</span>';
+  }
+  DA.fillChip = fillChip;
 
   function laneHeader() {
     const W = $('#vp').clientWidth || 390;
@@ -336,11 +360,13 @@
         onZoom: () => render()
       });
     }
+    if (S.pendingViewCh != null) { DA.strip.viewCh = S.pendingViewCh; S.pendingViewCh = null; }
     const p = S.pos;
     DA.strip.render({
       line: p.line, ch: p.ch, userCh: p.ch, facing: p.facing, tier: p.tier, acc: p.acc || 0,
       source: p.source, offset: p.offset, features: lineFeatures(), absences: S.absences || [],
-      unlisted: DI.live(r => r.kind === 'unlisted' && r.line === p.line)
+      unlisted: DI.live(r => r.kind === 'unlisted' && r.line === p.line),
+      heights: p.sub && DI.hasHeights(p.sub) ? { rows: DI.data.heights[p.sub], thr: DI.t9Rule().h, runs: DI.t9Check(p.sub, DI.t9Rule().h).runs } : null
     });
     $('#recentre').classList.toggle('hidden', DA.strip.viewCh == null);
     const z = DA.strip.zoom, m = DA.strip.span();
@@ -370,8 +396,10 @@
       fetch('data/sections_' + p.sub + '.json').then(r => r.ok ? r.json() : null).then(j => { if (j) { DI.loadSections(p.sub, j); render(); } }).catch(() => { /* none for this sub-section */ });
     }
     const sec = p.sub ? DI.sectionAt(p.sub, cutCh) : null;
+    if (p.sub) ensureHeights(p.sub);
+    const hl = p.sub && DI.heightAt(p.sub, cutCh, 'L'), hr = p.sub && DI.heightAt(p.sub, cutCh, 'R');
     $('#cutHead').innerHTML = '<span>SECTION AT ' + (sec ? DI.fmtCh(sec.ch) : pick ? DI.fmtCh(cutCh, 3) : DI.fmtCh(cutCh)) + '</span><span class="muted">LOOKING ' + (p.facing === 'decreasing' ? '▼' : '▲') + (sec ? ' · DESIGN · VERT. EXAGG.' : ' · NOT TO SCALE') + '</span>';
-    let h = '<div style="background:var(--paper)">' + (sec ? window.DStrip.realCut(sec, items, p.facing, W, fitH) : window.DStrip.sectionCut(items, p.facing, W, fitH)) + '</div>';
+    let h = '<div style="background:var(--paper)">' + (sec ? window.DStrip.realCut(sec, items, p.facing, W, fitH, hl && hr ? { L: hl, R: hr } : null) : window.DStrip.sectionCut(items, p.facing, W, fitH)) + '</div>';
     h += '<div style="display:grid;grid-template-columns:repeat(' + cols + ',1fr);gap:8px;padding:14px 12px;border-top:2px solid var(--ink);background:var(--paper)">';
     items.forEach((it, i) => {
       const f = it.f;
@@ -471,7 +499,7 @@
     const max = f.ladder.length - 1;
     const rel = relText(f, S.pos.ch, S.pos.facing);
     let h = '<div class="fhead">' + sideBadge(f.side, 'xl') + '<div style="min-width:0"><button class="t1" data-act="feature" data-id="' + esc(f.id) + '" style="text-align:left">' + I.typeIcon(f.icon) + '<span>' + esc(f.name) + '</span></button>' +
-      '<div class="t2">' + chText(f) + ' ' + certChip(f) + ' <span class="rel">' + esc(rel) + '</span></div></div></div>';
+      '<div class="t2">' + chText(f) + ' ' + certChip(f) + ' <span class="rel">' + esc(rel) + '</span></div>' + fillRange(f) + '</div></div>';
     // A record from the office (the cloud database) says whose it is: a colleague, or a progress chart.
     const office = st.seen && st.seen.office;
     h += '<div class="pair mt16"><div class="built"><div class="part"><span class="chip seen">' + (office ? 'Office' : 'Seen by you') + '</span>' + meter(f, { s: st.s == null ? 0 : st.s, c: -1 }, '') +
@@ -508,6 +536,18 @@
     openOverlay(h, 'sheet tall');
   }
   DA.openRecord = openRecord;
+  // The embankment along a run, on its side: 'Fill 1.6–4.2 m'.
+  function fillRange(f) {
+    if (f.kind !== 'linear' || !DI.hasHeights(f.sub)) return '';
+    let lo = Infinity, hi = -Infinity;
+    for (let c = f.ch0; c <= f.ch1 + 0.1; c += Math.max(5, Math.min(25, (f.ch1 - f.ch0) / 4))) {
+      const hh = DI.heightAt(f.sub, c, f.side);
+      if (hh) { lo = Math.min(lo, hh.h); hi = Math.max(hi, hh.h); }
+    }
+    if (lo === Infinity) return '';
+    const t = v => (v < 0 ? 'cut ' + (-v).toFixed(1) : v.toFixed(1));
+    return '<div style="font:500 15px/1.3 var(--f-sans);color:var(--ink-3);margin-top:3px">Embankment along it: ' + (Math.abs(hi - lo) < 0.05 ? t(lo) : t(lo) + ' to ' + t(hi)) + ' m (formation to ground)</div>';
+  }
 
   function snapPos() {
     const p = S.pos;

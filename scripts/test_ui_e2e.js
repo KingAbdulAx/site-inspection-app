@@ -140,6 +140,15 @@ const assert = (c, m) => { if (!c) { console.log('FAIL: ' + m); process.exitCode
   await t.tap('.ov:last-child [data-act=stage][data-stage="' + last + '"]'); await t.waitForTimeout(300);
   seen = await t.evaluate(id => DI.seenOf(id), one.id);
   assert(seen && seen.stage === last, 'completed from the record sheet in one tap');
+  // embankment height and the Type 9 check (S02 has the longitudinal profile)
+  await t.goto(BASE + '?sim=DWKZ:41500:-4:3&tab=section'); await t.waitForTimeout(2500);
+  const card = await t.evaluate(() => { const b = document.querySelector('[data-act=t9-list]'); return b && b.textContent; });
+  assert(card && /See the \d+ stretches/.test(card), 'Section tab shows the Type 9 check: ' + card);
+  await t.tap('[data-act=t9-list]'); await t.waitForTimeout(300);
+  const want = await t.evaluate(() => Number(document.querySelector('.ov:last-child .frow').dataset.ch));
+  await t.tap('.ov:last-child .frow'); await t.waitForTimeout(800);
+  assert(await t.evaluate(w => DA.S.tab === 'walk' && DA.strip.viewCh === w, want), 'a stretch in the list opens the strip there');
+  assert(await t.evaluate(() => /FILL|CUT/.test(document.querySelector('#posHead').textContent)), 'the header shows the fill height');
   await tctx.close();
   console.log(errs.length ? 'PAGE ERRORS:\n' + errs.join('\n') : 'no page errors');
   await b.close();

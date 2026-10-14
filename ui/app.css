@@ -26,6 +26,10 @@
   --lane-spine: #FFFFFF;
   --scrim: rgba(18, 19, 17, 0.45);
   --part: #8C8E86;
+  /* embankment height bands on the strip: below the Type 9 threshold, up to 4 m, 4 m and over */
+  --fill-lo: #E4DAC2;
+  --fill-mid: #C29F5C;
+  --fill-hi: #74551F;
   --hatch: repeating-linear-gradient(135deg, var(--ink) 0 2px, transparent 2px 6px);
   --hazard: repeating-linear-gradient(135deg, var(--ink) 0 5px, var(--hivis) 5px 10px);
   --none-design: repeating-linear-gradient(135deg, #9A9C94 0 1.5px, transparent 1.5px 8px);
@@ -60,6 +64,9 @@
   --lane-spine: #2A2B29;
   --scrim: rgba(0, 0, 0, 0.6);
   --part: #6F716A;
+  --fill-lo: #3A3428;
+  --fill-mid: #8A6E3A;
+  --fill-hi: #D9B46A;
   color-scheme: dark;
 }
 
@@ -112,6 +119,8 @@ svg { display: block; }
 }
 .pos-line { display: flex; align-items: center; gap: 8px; font: 700 13px/1 var(--f-sans); letter-spacing: 0.08em; text-transform: uppercase; min-width: 0; }
 .chip-sub { background: var(--ink); color: var(--on-ink); padding: 3px 6px; letter-spacing: 0.06em; }
+.chip-fill { border: 2px solid var(--ink); padding: 1px 5px; letter-spacing: 0.04em; white-space: nowrap; }
+.chip-fill.t9 { border-color: var(--defect); color: var(--defect); }
 .gps {
   justify-self: end;
   display: inline-flex; align-items: center; gap: 7px;

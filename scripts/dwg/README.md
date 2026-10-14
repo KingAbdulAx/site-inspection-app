@@ -57,6 +57,23 @@ So did MRJB (Section 05, 181+080 to 243+225, a new `data/section05_bundle.js`). 
 
 DWKZ has been baked (1,710 → 1,311 features), and KZDR too (837 → 1,132). Re-applying the file to the baked data changes nothing, so a phone that already imported it can keep or clear those records.
 
+## Embankment height (Section 02 for now)
+
+```
+dwg2dxf -y -o S02-TRA-PLONG.dxf T2019-0323-S02-DD-TRA-PLONG.dwg     # from the DW-03001-02 eTransmit
+python3 scripts/dwg/extract_profile.py --plong S02-TRA-PLONG.dxf --sub DWKZ \
+    --sections data/sections_DWKZ.json --out data/heights_DWKZ.json
+```
+
+The profile's band table gives rail level, formation (sub-ballast bottom) and ground level every 25 m: 2,526 stations from 19+800 to 82+902. Each side's height is formation less the ground at that side's toe on the cross section. The side the platform falls to comes from the cross section too.
+
+Two checks:
+
+- **Against the cross sections:** the profile's rail-to-ground height matches the cross sections' 'H to LRL' within 1 cm at 90% of stations.
+- **Against the drawn Type 9:** the drawn Type 9 sits on the side the platform falls to at 569 of 577 one-sided stations. With a 4 m threshold the check finds only 0.6 km of Type 9 not drawn, so the rule reproduces the design.
+
+The profile leaves out the formation level at stations and bridges (10 stretches). There the height is an estimate (rail level less 0.97 m), and the Type 9 check marks those stretches as not assessed.
+
 ## Checks built in
 
 - **Chainage axis:** the ticks are chained by distance, and each 100 m label votes for the chainage and direction. On DWKZ, 630 of 632 labels agree. The app's centreline was compared with it and is within 0.1–0.4 m, with no chainage bias.

@@ -4,6 +4,7 @@
  */
 'use strict';
 const path = require('path');
+const fs = require('fs');
 const root = path.join(__dirname, '..');
 
 global.window = global;
@@ -61,6 +62,21 @@ section('Features load for both sub-sections with lanes and certainty', () => {
   const box = all.find(f => /^Single box culvert 1×\(2\.5×2\.5 m\)$/.test(f.name));
   ok(!!box, 'box culvert named by cells and size');
   ok(all.filter(f => f.side === 'L').every(f => f.offset >= 0) && all.filter(f => f.side === 'R').every(f => f.offset <= 0), 'left positive, right negative');
+});
+
+section('Embankment height and the Type 9 rule (S02)', () => {
+  DI.loadHeights('DWKZ', JSON.parse(fs.readFileSync(path.join(root, 'data/heights_DWKZ.json'), 'utf8')));
+  ok(DI.hasHeights('DWKZ') && DI.data.heights.DWKZ.length === 2526, 'S02 profile: 2526 stations every 25 m');
+  const h = DI.heightAt('DWKZ', 80675, 'C');
+  ok(h && Math.abs(h.h - 11.09) < 0.05 && !h.est, 'highest fill 11.09 m at 80+675, formation to ground: ' + (h && h.h.toFixed(2)));
+  const a = DI.heightAt('DWKZ', 21500, 'L'), b = DI.heightAt('DWKZ', 21500, 'R');
+  ok(a.side === 'L' && b.side === 'R' && a.h !== b.h, 'each side has its own height');
+  ok(DI.heightAt('DWKZ', 20000, 'C').est, 'no formation level at Dawanau station: an estimate');
+  const old = DI.t9Check('DWKZ', 4), now = DI.t9Check('DWKZ', 1.5);
+  ok(old.km.missing < 1.5 && old.km.ok > 10, 'the 4 m rule reproduces the drawn Type 9 (' + old.km.missing.toFixed(1) + ' km not drawn)');
+  ok(now.km.missing > 25 && now.runs.every(r => r.ch0 < r.ch1 && (r.side === 'L' || r.side === 'R')), 'the 1.5 m rule finds ' + now.km.missing.toFixed(1) + ' km with no Type 9 drawn');
+  ok(DI.t9Rule().h === 1.5, 'the site rule (1.5 m) is the default');
+  DI.setT9Rule(1.8); ok(DI.t9Rule().h === 1.8 && /3545/.test(DI.t9Rule().src), 'T.E.A.M. 1.8 m rule cites KMD/MEN/Vol.15/3545'); DI.setT9Rule(1.5);
 });
 
 section('Sub-section lookup', () => {

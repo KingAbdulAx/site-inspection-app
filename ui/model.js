@@ -361,7 +361,7 @@
   }
 
   // ------------------------------------------------------ data per sub-section
-  const data = { features: [], bySub: {}, byId: {}, centre: {}, irs: {}, pristine: {}, meta: {}, source: {}, deleted: [], sections: {} };
+  const data = { features: [], bySub: {}, byId: {}, centre: {}, irs: {}, pristine: {}, meta: {}, source: {}, deleted: [], sections: {}, heights: {} };
 
   function loadCentre(sub, cl) {
     if (!cl || !cl.dense_points) return;
@@ -412,6 +412,90 @@
     while (lo < hi) { const m = (lo + hi) >> 1; if (L[m].ch < ch) lo = m + 1; else hi = m; }
     const c = [L[lo], L[lo - 1]].filter(Boolean).sort((a, b) => Math.abs(a.ch - ch) - Math.abs(b.ch - ch))[0];
     return Math.abs(c.ch - ch) <= (tol || 15) ? c : null;
+  }
+
+  // ---------------------------------------------------------------- embankment height
+  // Formation to ground, every 25 m, from the design longitudinal profile (data/heights_<SUB>.json,
+  // scripts/dwg/extract_profile.py). Each side's height is measured at that side's toe on the cross
+  // section; where a side has none, the centreline height stands in. Where the profile gives no
+  // formation level (stations, bridges) the height is an estimate from the rail level.
+  function loadHeights(sub, j) {
+    const fb = j.fl_below_rail || 0.971;
+    data.heights[sub] = (j.rows || []).map(r => {
+      const est = r[2] == null;
+      const c = (est ? r[1] - fb : r[2]) - r[3];
+      return { ch: r[0], rail: r[1], fl: est ? r[1] - fb : r[2], gl: r[3], c, L: r[4], R: r[5], est, fall: r[6] || null };
+    }).sort((a, b) => a.ch - b.ch);
+    t9Cache = {};
+  }
+  function hasHeights(sub) { return !!(data.heights[sub] && data.heights[sub].length); }
+  function heightAt(sub, ch, side) {
+    const L = data.heights[sub];
+    if (!L || !L.length || ch < L[0].ch - 13 || ch > L[L.length - 1].ch + 13) return null;
+    let lo = 0, hi = L.length - 1;
+    while (lo < hi) { const m = (lo + hi) >> 1; if (L[m].ch < ch) lo = m + 1; else hi = m; }
+    const b = L[lo], a = L[Math.max(0, lo - 1)];
+    const pick = r => (side === 'L' || side === 'R') && r[side] != null ? r[side] : r.c;
+    const u = b.ch === a.ch || b.ch - a.ch > 30 ? (Math.abs(ch - a.ch) < Math.abs(ch - b.ch) ? 0 : 1) : Math.max(0, Math.min(1, (ch - a.ch) / (b.ch - a.ch)));
+    const h = pick(a) + (pick(b) - pick(a)) * u;
+    const near = u < 0.5 ? a : b;
+    return { h, side: (side === 'L' || side === 'R') && near[side] != null ? side : 'C', est: a.est || b.est, c: a.c + (b.c - a.c) * u };
+  }
+
+  // Where Type 9 (inverted block drain) is called for. The threshold is a setting, because the
+  // letters do not agree: the design had 4 m; Mota-Engil proposed 1.0 m (NIG/KAMA/FM/2026/3634,
+  // 11 Jul 2026); T.E.A.M. recommended 1.8 m (KMD/MEN/Vol.15/3545, 12 Aug 2026); on site it is 1.5 m.
+  // Both letters keep stretches with a Type 1 on that side out of it. The drain goes on the side the
+  // platform falls to ('the lower side of the railway platform', NIG/KAMA/FM/2026/3634), which is
+  // where the design draws it (569 of 577 one-sided stations on S02); a roof-shaped platform needs both.
+  const T9_RULES = [
+    { h: 1.5, label: '1.5 m', src: 'Site rule' },
+    { h: 1.8, label: '1.8 m', src: 'T.E.A.M. KMD/MEN/Vol.15/3545, 12 Aug 2026' },
+    { h: 1.0, label: '1.0 m', src: 'Mota-Engil NIG/KAMA/FM/2026/3634, 11 Jul 2026 (proposal)' },
+    { h: 4.0, label: '4.0 m', src: 'Original design' }
+  ];
+  const T9_KEY = 'KMD_T9_RULE_V1';
+  let t9Cache = {};
+  function t9Rule() {
+    let h = 1.5;
+    try { const v = Number(localStorage.getItem(T9_KEY)); if (v > 0) h = v; } catch (e) { /* ignore */ }
+    return T9_RULES.find(r => r.h === h) || T9_RULES[0];
+  }
+  function setT9Rule(h) { try { localStorage.setItem(T9_KEY, String(h)); } catch (e) { /* ignore */ } }
+  // Stretches of each side, 25 m a station: 'missing' (needed, none drawn), 'ok' (needed and drawn),
+  // 'extra' (drawn on a side the platform falls to, below the threshold), 'exempt' (Type 1 on that
+  // side), 'na' (no formation level on the profile, or no cross section: stations and bridges).
+  function t9Check(sub, thr) {
+    const L = data.heights[sub];
+    if (!L) return null;
+    const key = sub + '|' + thr + '|' + (data.bySub[sub] || []).length;
+    if (t9Cache[key]) return t9Cache[key];
+    const feats = (data.bySub[sub] || []).filter(f => !statusOf(f).removed);
+    const on = (codes, side, ch) => feats.some(f => codes.includes(f.code) && f.side === side && ch >= f.ch0 - 5 && ch <= f.ch1 + 5);
+    const runs = [], km = { missing: 0, ok: 0, extra: 0, exempt: 0, na: 0 };
+    ['L', 'R'].forEach(side => {
+      let cur = null;
+      L.forEach(r => {
+        const h = r[side] != null ? r[side] : r.c;
+        const drawn = on(['T9'], side, r.ch);
+        const low = r.fall === side || r.fall === 'both';
+        let st;
+        if (r.est || !r.fall) st = 'na';
+        else if (!low) st = drawn && h >= thr ? 'ok' : null;
+        else if (h >= thr && on(['T1', 'T1L'], side, r.ch)) st = 'exempt';
+        else if (h >= thr) st = drawn ? 'ok' : 'missing';
+        else st = drawn ? 'extra' : null;
+        if (cur && (cur.status !== st || r.ch - cur.last > 30)) { runs.push(cur); cur = null; }
+        if (!st) return;
+        if (!cur) cur = { side, status: st, ch0: r.ch, last: r.ch, minH: h, maxH: h, n: 0 };
+        cur.last = r.ch; cur.n++; cur.minH = Math.min(cur.minH, h); cur.maxH = Math.max(cur.maxH, h);
+        km[st] += 0.025;
+      });
+      if (cur) runs.push(cur);
+    });
+    runs.forEach(r => { r.ch0 = Math.max(L[0].ch, r.ch0 - 12.5); r.ch1 = Math.min(L[L.length - 1].ch, r.last + 12.5); delete r.last; });
+    runs.sort((a, b) => a.ch0 - b.ch0 || (a.side < b.side ? -1 : 1));
+    return (t9Cache[key] = { thr, runs, km });
   }
 
   function hasData(sub) { return !!(data.bySub[sub] && data.bySub[sub].length); }
@@ -851,7 +935,7 @@
     fmtCh, fmtPlus, parseCh, fmtDate, fmtTime, monthsBetween, esc, DAYS, MONTHS,
     inspector, setInspector, addRecord, voidRecord, live, recordsFor, seenOf, ownSeen, openDefects,
     designChanges, statusOf, drafts, saveDraft, putPhoto, getPhoto, uid, loadLegacy,
-    loadSections, sectionAt,
+    loadSections, sectionAt, loadHeights, hasHeights, heightAt, T9_RULES, t9Rule, setT9Rule, t9Check,
     PRESETS, presetOf, applyBase, baseRecords, correctBase, addBase, deleteBase, verifyBase, unverifyBase, exportGeo, exportCorrections, importRecords,
     project, pointAt, laneOf, savePosition, lastPosition, csvCell,
     get records() { return records; }

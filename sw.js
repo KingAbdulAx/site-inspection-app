@@ -4,7 +4,7 @@
  * Bypasses cache for Supabase REST synchronization.
  */
 
-const CACHE_NAME = 'kmd-drainage-cache-v12';
+const CACHE_NAME = 'kmd-drainage-cache-v13';
 
 const PRECACHE_LOCAL_ASSETS = [
   './',
@@ -31,6 +31,7 @@ const PRECACHE_LOCAL_ASSETS = [
   './data/sections_KNDW.json',
   './data/sections_DRMR.json',
   './data/sections_MRJB.json',
+  './data/heights_DWKZ.json',
   './legacy.html',
   './styles.css',
   './fonts.css',
