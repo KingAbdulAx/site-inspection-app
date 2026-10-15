@@ -23,6 +23,16 @@ line 3.4 m either side of the axis. 'L' or 'R' is the side it drains to,
 'both' a roof shape. On S02 the drawn Type 9 sits on that side at 569 of 577
 stations that have it on one side only, so the app checks Type 9 there.
 
+Beyond the profile's own range (S05: the profile stops at 208+800, the
+section runs to 243+225) the cross sections stand in: their height to the rail
+level less 0.971 m. Rail to formation is 0.97 m on every section (S01-S05
+medians 0.969-0.972). Those rows carry 'xs' in the last column.
+
+With --sections-only every height comes from the cross sections. S05 uses it:
+its cross sections (DW-10332-00, November 2025) are newer than its profile
+(2024) and disagree with it at 28% of stations, in a few kilometres where the
+grade was revised; on S01-S04 the two agree at 88-93% of stations.
+
 Where the profile gives no formation level (stations, bridges) the row keeps
 fl = null: the app shows rail level - 0.97 m as an estimate and leaves those
 stretches out of the Type 9 check.
@@ -53,6 +63,8 @@ def main():
     ap.add_argument('--sub', required=True)
     ap.add_argument('--sections', help="the app's sections_<SUB>.json, for the height on each side")
     ap.add_argument('--out', required=True)
+    ap.add_argument('--sections-only', action='store_true',
+                    help='take every height from the cross sections (S05: they are newer than its profile)')
     a = ap.parse_args()
     log = lambda s: print(s, file=sys.stderr)
 
@@ -77,8 +89,21 @@ def main():
             sections[round(s['ch'], 3)] = s
 
     rows, sides = [], collections.Counter()
+    # past the profile, the cross sections' height to the rail level: relative levels, rail = 0
+    if a.sections_only:
+        log(f'--sections-only: the profile is left out; {len(stations)} profile stations dropped')
+        stations = {}
+    p0, p1 = (min(stations), max(stations)) if stations else (float('inf'), float('-inf'))
+    xs_only = 0
+    for ch, s in sections.items():
+        if (ch < p0 - 12.5 or ch > p1 + 12.5) and s.get('h') is not None:
+            stations[ch] = (0.0, -FL_BELOW_RAIL, -float(s['h']), 'xs')
+            xs_only += 1
+    if xs_only:
+        log(f'{xs_only} stations past the profile taken from the cross sections')
     for ch in sorted(stations):
-        lrl, fl, gl = stations[ch]
+        lrl, fl, gl = stations[ch][:3]
+        src = stations[ch][3] if len(stations[ch]) > 3 else None
         f = fl if fl is not None else lrl - FL_BELOW_RAIL
         hs = []
         s = sections.get(round(ch, 3))
@@ -96,10 +121,10 @@ def main():
                     h = round((f - lrl) - y, 2)   # the cross section is drawn relative to the rail level
                     sides[key] += 1
             hs.append(h)
-        rows.append([ch, round(lrl, 3), None if fl is None else round(fl, 3), round(gl, 3), hs[0], hs[1], fall])
+        rows.append([ch, round(lrl, 3), None if fl is None else round(fl, 3), round(gl, 3), hs[0], hs[1], fall] + ([src] if src else []))
     log(f'per-side heights: left {sides["Ll"]}, right {sides["Lr"]} of {len(rows)}')
     out = {'sub': a.sub, 'source': a.plong.split('/')[-1], 'fl_below_rail': FL_BELOW_RAIL,
-           'columns': ['ch', 'rail', 'formation', 'ground', 'h_left', 'h_right', 'falls_to'], 'rows': rows}
+           'columns': ['ch', 'rail', 'formation', 'ground', 'h_left', 'h_right', 'falls_to', 'source'], 'rows': rows}
     with open(a.out, 'w') as fh:
         json.dump(out, fh, separators=(',', ':'))
     log(f'wrote {len(rows)} rows to {a.out}')

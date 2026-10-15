@@ -424,7 +424,7 @@
     data.heights[sub] = (j.rows || []).map(r => {
       const est = r[2] == null;
       const c = (est ? r[1] - fb : r[2]) - r[3];
-      return { ch: r[0], rail: r[1], fl: est ? r[1] - fb : r[2], gl: r[3], c, L: r[4], R: r[5], est, fall: r[6] || null };
+      return { ch: r[0], rail: r[1], fl: est ? r[1] - fb : r[2], gl: r[3], c, L: r[4], R: r[5], est, fall: r[6] || null, xs: r[7] === 'xs' };
     }).sort((a, b) => a.ch - b.ch);
     t9Cache = {};
   }
@@ -442,29 +442,31 @@
     return { h, side: (side === 'L' || side === 'R') && near[side] != null ? side : 'C', est: a.est || b.est, c: a.c + (b.c - a.c) * u };
   }
 
-  // Where Type 9 (inverted block drain) is called for. The threshold is a setting, because the
-  // letters do not agree: the design had 4 m; Mota-Engil proposed 1.0 m (NIG/KAMA/FM/2026/3634,
-  // 11 Jul 2026); T.E.A.M. recommended 1.8 m (KMD/MEN/Vol.15/3545, 12 Aug 2026); on site it is 1.5 m.
+  // Where Type 9 (inverted block drain) is called for: embankments higher than 1.8 m, as T.E.A.M.
+  // set in KMD/MEN/Vol.15/3545 (12 Aug 2026) and Mota-Engil adopted in NIG/KAMA/FM/2026/4218 (3 Oct
+  // 2026). The other thresholds stay for comparison: the design had 4 m; Mota-Engil first proposed
+  // 1.0 m (NIG/KAMA/FM/2026/3634, 11 Jul 2026); 1.5 m was used on site before the 1.8 m letter.
   // Both letters keep stretches with a Type 1 on that side out of it. The drain goes on the side the
   // platform falls to ('the lower side of the railway platform', NIG/KAMA/FM/2026/3634), which is
   // where the design draws it (569 of 577 one-sided stations on S02); a roof-shaped platform needs both.
   const T9_RULES = [
-    { h: 1.5, label: '1.5 m', src: 'Site rule' },
-    { h: 1.8, label: '1.8 m', src: 'T.E.A.M. KMD/MEN/Vol.15/3545, 12 Aug 2026' },
+    { h: 1.8, label: '1.8 m', src: 'T.E.A.M. KMD/MEN/Vol.15/3545 (12 Aug 2026), adopted in NIG/KAMA/FM/2026/4218 (3 Oct 2026)' },
+    { h: 1.5, label: '1.5 m', src: 'Earlier site rule' },
     { h: 1.0, label: '1.0 m', src: 'Mota-Engil NIG/KAMA/FM/2026/3634, 11 Jul 2026 (proposal)' },
     { h: 4.0, label: '4.0 m', src: 'Original design' }
   ];
-  const T9_KEY = 'KMD_T9_RULE_V1';
+  const T9_KEY = 'KMD_T9_RULE_V2';   // V2: the official 1.8 m rule replaces any earlier choice
   let t9Cache = {};
   function t9Rule() {
-    let h = 1.5;
+    let h = 1.8;
     try { const v = Number(localStorage.getItem(T9_KEY)); if (v > 0) h = v; } catch (e) { /* ignore */ }
     return T9_RULES.find(r => r.h === h) || T9_RULES[0];
   }
   function setT9Rule(h) { try { localStorage.setItem(T9_KEY, String(h)); } catch (e) { /* ignore */ } }
   // Stretches of each side, 25 m a station: 'missing' (needed, none drawn), 'ok' (needed and drawn),
   // 'extra' (drawn on a side the platform falls to, below the threshold), 'exempt' (Type 1 on that
-  // side), 'na' (no formation level on the profile, or no cross section: stations and bridges).
+  // side), 'na' (on a bridge, or no formation level on the profile, or no cross section: stations).
+  // 'Higher than' the threshold: a height exactly at it does not call for Type 9.
   function t9Check(sub, thr) {
     const L = data.heights[sub];
     if (!L) return null;
@@ -472,6 +474,8 @@
     if (t9Cache[key]) return t9Cache[key];
     const feats = (data.bySub[sub] || []).filter(f => !statusOf(f).removed);
     const on = (codes, side, ch) => feats.some(f => codes.includes(f.code) && f.side === side && ch >= f.ch0 - 5 && ch <= f.ch1 + 5);
+    const bridges = refs().filter(r => r.sub === sub && r.kind === 'bridge');
+    const onBridge = ch => bridges.some(b => ch >= b.ch0 && ch <= b.ch1);
     const runs = [], km = { missing: 0, ok: 0, extra: 0, exempt: 0, na: 0 };
     ['L', 'R'].forEach(side => {
       let cur = null;
@@ -480,10 +484,10 @@
         const drawn = on(['T9'], side, r.ch);
         const low = r.fall === side || r.fall === 'both';
         let st;
-        if (r.est || !r.fall) st = 'na';
-        else if (!low) st = drawn && h >= thr ? 'ok' : null;
-        else if (h >= thr && on(['T1', 'T1L'], side, r.ch)) st = 'exempt';
-        else if (h >= thr) st = drawn ? 'ok' : 'missing';
+        if (r.est || !r.fall || onBridge(r.ch)) st = 'na';
+        else if (!low) st = drawn && h > thr ? 'ok' : null;
+        else if (h > thr && on(['T1', 'T1L'], side, r.ch)) st = 'exempt';
+        else if (h > thr) st = drawn ? 'ok' : 'missing';
         else st = drawn ? 'extra' : null;
         if (cur && (cur.status !== st || r.ch - cur.last > 30)) { runs.push(cur); cur = null; }
         if (!st) return;
