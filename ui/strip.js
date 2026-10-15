@@ -271,7 +271,7 @@
       // embankment height at the outer edge of each side, and where Type 9 is called for but not drawn
       if (state.heights) {
         const HS = state.heights;
-        const band = h => h >= 4 ? 'var(--fill-hi)' : h >= HS.thr ? 'var(--fill-mid)' : h > 0 ? 'var(--fill-lo)' : null;
+        const band = h => h >= 4 ? 'var(--fill-hi)' : h > HS.thr ? 'var(--fill-mid)' : h > 0 ? 'var(--fill-lo)' : null;
         ['L', 'R'].forEach(sd => {
           const col = g.cols.find(c => c.side === sd && c.lane === 'off');
           const outer = col.x0 < g.cx ? col.x0 : col.x1 - 6;

@@ -76,8 +76,7 @@ section('Embankment height and the Type 9 rule (S02)', () => {
   const old = DI.t9Check('DWKZ', 4), now = DI.t9Check('DWKZ', 1.5);
   ok(old.km.missing < 1.5 && old.km.ok > 10, 'the 4 m rule reproduces the drawn Type 9 (' + old.km.missing.toFixed(1) + ' km not drawn)');
   ok(now.km.missing > 25 && now.runs.every(r => r.ch0 < r.ch1 && (r.side === 'L' || r.side === 'R')), 'the 1.5 m rule finds ' + now.km.missing.toFixed(1) + ' km with no Type 9 drawn');
-  ok(DI.t9Rule().h === 1.5, 'the site rule (1.5 m) is the default');
-  DI.setT9Rule(1.8); ok(DI.t9Rule().h === 1.8 && /3545/.test(DI.t9Rule().src), 'T.E.A.M. 1.8 m rule cites KMD/MEN/Vol.15/3545'); DI.setT9Rule(1.5);
+  ok(DI.t9Rule().h === 1.8 && /3545/.test(DI.t9Rule().src) && /4218/.test(DI.t9Rule().src), 'the official 1.8 m rule is the default, citing 3545 and 4218');
 });
 
 section('Bridges and road crossings, for reference', () => {
