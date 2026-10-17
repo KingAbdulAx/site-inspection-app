@@ -34,6 +34,8 @@ PROFILE_ROLES = ('slope', 'platform', 'ground', 'toe_ditch', 'lining', 'side_dit
 # S02 labels sections 'Pk=19+825.000', S03 'CH=82+925.000'.
 PK_RE = re.compile(r'\s*(?:Pk|CH)\s*=\s*(-?)(\d+)\+(\d+(?:[.,]\d+)?)', re.I)
 NUM_RE = re.compile(r'([\d.]+)')
+# heights to the rail level are signed: S05 labels a cut 'Height to the LRL: -1.22m'
+HEIGHT_RE = re.compile(r'(-?\d+(?:\.\d+)?)')
 
 
 def load(path, log):
@@ -107,7 +109,7 @@ def main():
         rec = {'ch': round(s['ch'], 3)}
         for name, txt, dx in s['ins']:
             if name == 'S591':
-                m = NUM_RE.search(txt.split(':')[-1])
+                m = HEIGHT_RE.search(txt.split(':')[-1])
                 if m:
                     rec['height'] = float(m.group(1))
             elif name == 'S7002':
