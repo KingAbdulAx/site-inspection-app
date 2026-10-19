@@ -30,8 +30,9 @@ medians 0.969-0.972). Those rows carry 'xs' in the last column.
 
 With --sections-only every height comes from the cross sections. S05 uses it:
 its cross sections (DW-10332-00, November 2025) are newer than its profile
-(2024) and disagree with it at 28% of stations, in a few kilometres where the
-grade was revised; on S01-S04 the two agree at 88-93% of stations.
+(2024), which stops at 208+800. Where both exist they agree at 95% of stations;
+the rest is 201+725 to 202+925. (Before extract_sections.py kept the sign of
+'Height to the LRL', every cut read as a fill and they seemed to differ at 28%.)
 
 Where the profile gives no formation level (stations, bridges) the row keeps
 fl = null: the app shows rail level - 0.97 m as an estimate and leaves those
