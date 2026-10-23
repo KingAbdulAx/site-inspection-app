@@ -140,6 +140,16 @@ const assert = (c, m) => { if (!c) { console.log('FAIL: ' + m); process.exitCode
   await t.tap('.ov:last-child [data-act=stage][data-stage="' + last + '"]'); await t.waitForTimeout(300);
   seen = await t.evaluate(id => DI.seenOf(id), one.id);
   assert(seen && seen.stage === last, 'completed from the record sheet in one tap');
+  // a ditch's record sheet and feature page give both ends and the length
+  await t.evaluate(() => DA.closeAll());
+  const span = await t.evaluate(() => { const f = DI.data.bySub.DWKZ.find(x => x.code === 'T9' && x.cert === 'exact' && x.ch1 - x.ch0 > 20); return { id: f.id, a: DI.fmtCh(f.ch0, 3), b: DI.fmtCh(f.ch1, 3), m: Math.round(f.ch1 - f.ch0).toLocaleString('en-GB') + ' m' }; });
+  await t.evaluate(id => DA.openRecord(id), span.id); await t.waitForTimeout(300);
+  const sheet = await t.evaluate(() => document.querySelector('.ov:last-child .fhead .t2').textContent);
+  assert(sheet.includes(span.a) && sheet.includes(span.b) && sheet.includes(span.m), 'record sheet shows from, to and length: ' + sheet.trim());
+  await t.evaluate(id => { DA.closeAll(); DA.openFeature(id); }, span.id); await t.waitForTimeout(400);
+  const kv = await t.evaluate(() => document.querySelector('.ov:last-child .kv').textContent);
+  assert(/From/.test(kv) && kv.includes(span.b) && /Length/.test(kv) && kv.includes(span.m), 'feature page lists From, To and Length');
+  await t.evaluate(() => DA.closeAll());
   // embankment height and the Type 9 check (S02 has the longitudinal profile)
   await t.goto(BASE + '?sim=DWKZ:41500:-4:3&tab=section'); await t.waitForTimeout(2500);
   const card = await t.evaluate(() => { const b = document.querySelector('[data-act=t9-list]'); return b && b.textContent; });

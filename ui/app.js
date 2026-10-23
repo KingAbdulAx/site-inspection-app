@@ -33,8 +33,12 @@
     if (f.cert === 'measured') return '<span class="chip measured">Measured</span>';
     return '<span class="chip derived">±4 m</span>';
   }
+  // A ditch or pipe that runs along the line: it has two ends and a length. Crossings and
+  // labels are a single place.
+  function isSpan(f) { return (f.kind === 'linear' || f.kind === 'buried') && f.ch1 - f.ch0 > 1; }
+  function lenText(f) { return isSpan(f) ? Math.round(f.ch1 - f.ch0).toLocaleString('en-GB') + ' m' : ''; }
   function chText(f, arrow) {
-    if (f.cert === 'exact') return DI.fmtCh(f.ch0, 3);
+    if (f.cert === 'exact') return DI.fmtCh(f.ch0, 3) + (isSpan(f) && arrow !== false ? ' → ' + DI.fmtCh(f.ch1, 3) : '');
     if (f.cert === 'label') return 'near ' + DI.fmtCh(f.ch0);
     if (f.cert === 'measured') return DI.fmtCh(f.ch0, 1) + (f.ch1 - f.ch0 > 1 && arrow !== false ? ' → ' + DI.fmtCh(f.ch1, 1) : '');
     if (f.ch1 - f.ch0 > 1) return '≈' + DI.fmtCh(f.ch0) + (arrow === false ? '' : ' → ' + DI.fmtCh(f.ch1));
@@ -84,7 +88,7 @@
     if (Math.abs(d) < 1.5) return 'here';
     return words(d);
   }
-  Object.assign(DA, { sideBadge, certChip, chText, chHtml, meter, stageLabel, offText, relText });
+  Object.assign(DA, { sideBadge, certChip, chText, chHtml, isSpan, lenText, meter, stageLabel, offText, relText });
 
   // ----------------------------------------------------------- theme
   function setTheme(t) {
@@ -480,7 +484,7 @@
       const st = DI.statusOf(f);
       h += '<button class="frow' + (f.id === hlId ? ' hl' : '') + '" data-act="record" data-id="' + esc(f.id) + '" id="row-' + esc(f.id) + '">' + sideBadge(f.side) +
         '<div class="mid"><div class="t1">' + I.typeIcon(f.icon) + '<span>' + esc(f.name) + '</span>' + (st.defects.length ? '<span style="color:var(--defect)">' + I.icon('warn').replace('<svg', '<svg width="18" height="18"') + '</span>' : '') + '</div>' +
-        '<div class="t2">' + chHtml(f) + ' ' + certChip(f) + '</div><div class="t3">' + offText(f) + ' · ' + relText(f, S.pos.ch, S.pos.facing) + '</div></div>' +
+        '<div class="t2">' + chHtml(f) + (isSpan(f) ? ' <b class="len">' + lenText(f) + '</b>' : '') + ' ' + certChip(f) + '</div><div class="t3">' + offText(f) + ' · ' + relText(f, S.pos.ch, S.pos.facing) + '</div></div>' +
         '<div class="right">' + meter(f, st) + stageLabel(f, st) + '</div></button>';
     });
     h += '</div><div class="grid2 mt16"><button class="btn" data-act="unlisted" style="font-size:16px;min-height:56px">' + '<span style="background:var(--hivis);color:#121311;border:2px solid #121311;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font:700 18px/1 var(--f-cond)">?</span> Not on the drawings</button>' +
@@ -523,7 +527,7 @@
     const max = f.ladder.length - 1;
     const rel = relText(f, S.pos.ch, S.pos.facing);
     let h = '<div class="fhead">' + sideBadge(f.side, 'xl') + '<div style="min-width:0"><button class="t1" data-act="feature" data-id="' + esc(f.id) + '" style="text-align:left">' + I.typeIcon(f.icon) + '<span>' + esc(f.name) + '</span></button>' +
-      '<div class="t2">' + chText(f) + ' ' + certChip(f) + ' <span class="rel">' + esc(rel) + '</span></div>' + fillRange(f) + '</div></div>';
+      '<div class="t2">' + chHtml(f) + (isSpan(f) ? ' <b class="len">' + lenText(f) + '</b>' : '') + ' ' + certChip(f) + ' <span class="rel">' + esc(rel) + '</span></div>' + fillRange(f) + '</div></div>';
     // A record from the office (the cloud database) says whose it is: a colleague, or a progress chart.
     const office = st.seen && st.seen.office;
     h += '<div class="pair mt16"><div class="built"><div class="part"><span class="chip seen">' + (office ? 'Office' : 'Seen by you') + '</span>' + meter(f, { s: st.s == null ? 0 : st.s, c: -1 }, '') +

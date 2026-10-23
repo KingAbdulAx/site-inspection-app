@@ -92,7 +92,7 @@
       if (st.removed) h += '<div class="banner" style="background:var(--rev)">' + I.icon('x') + '<div><b>Removed from the design · pending</b><span>' + esc(st.changes.find(r => r.action === 'remove').source.drawing || '') + ' rev ' + esc(st.changes.find(r => r.action === 'remove').source.rev || '') + '</span></div></div>';
       h += '<div style="padding:18px 16px;background:var(--surface);border-bottom:1px solid var(--rule)"><div class="fhead">' + DA.sideBadge(f.side, 'xl') + '<div style="min-width:0"><div style="font:700 36px/1.02 var(--f-cond)">' + esc(f.name) + '</div>' +
         (f.full && f.full !== f.name ? '<div style="font:500 17px/1.3 var(--f-sans);color:var(--ink-2);margin-top:4px">' + esc(f.full) + '</div>' : '') + '</div></div>';
-      h += '<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:14px;font:500 24px/1 var(--f-mono)">' + DA.chText(f) + ' ' + DA.certChip(f) + ' <span style="font:500 18px/1 var(--f-sans);color:var(--ink-2)">' + (f.kind === 'cross' ? 'crosses under track' : '') + '</span></div>';
+      h += '<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:14px;font:500 24px/1.15 var(--f-mono)">' + DA.chHtml(f) + (DA.isSpan(f) ? ' <b class="len">' + DA.lenText(f) + '</b>' : '') + ' ' + DA.certChip(f) + ' <span style="font:500 18px/1 var(--f-sans);color:var(--ink-2)">' + (f.kind === 'cross' ? 'crosses under track' : '') + '</span></div>';
       const where = f.kind === 'cross' ? L.short + ' · ' + f.sub + ' · ' + f.catLabel : DA.offText(f).replace('≈', '≈ ') + ' ' + (f.side === 'L' ? 'left' : f.side === 'R' ? 'right' : '') + ' of CL · ' + ({ toe: 'toe of slope', plat: 'platform edge', face: 'slope face', crest: 'crest', off: 'off alignment', cl: 'under the track' }[f.lane] || '');
       h += '<div class="lbl-caps" style="margin-top:12px;color:var(--ink-3)">' + esc(where) + '</div>' + DA.baseStrip(f) + '</div>';
 
@@ -153,7 +153,11 @@
       const kv = (k, v) => { h += '<div class="k">' + k + '</div><div class="v">' + v + '</div>'; };
       kv('Typology', esc(f.full || f.name));
       if (f.specs) kv('Section', '<span style="font-family:var(--f-sans);font-size:15px">' + esc(f.specs) + '</span>');
-      kv('Position', DA.chText(f) + '<div style="margin-top:6px">' + DA.certChip(f) + '</div>');
+      if (DA.isSpan(f)) {
+        kv('From', DI.fmtCh(f.ch0, f.cert === 'exact' ? 3 : 1));
+        kv('To', DI.fmtCh(f.ch1, f.cert === 'exact' ? 3 : 1));
+        kv('Length', DA.lenText(f) + '<div style="margin-top:6px">' + DA.certChip(f) + '</div>');
+      } else kv('Position', DA.chText(f) + '<div style="margin-top:6px">' + DA.certChip(f) + '</div>');
       kv('How we know', f.cert === 'exact' ? 'Quoted on the drawing' : f.cert === 'label' ? 'Where the note sits' : 'Read from marker spacing');
       kv('Side', { L: 'Left', R: 'Right', C: 'Centre' }[f.side] + (f.kind === 'cross' ? ' · crosses' : ''));
       if (f.stated) kv('Stated length', 'L = ' + Math.round(f.stated) + ' m');

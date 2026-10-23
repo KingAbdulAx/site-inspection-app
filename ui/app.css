@@ -339,6 +339,7 @@ svg { display: block; }
 .fhead .t1 { display: flex; align-items: center; gap: 7px; font: 700 21px/1.15 var(--f-sans); }
 .fhead .t2 { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 5px; font: 500 17px/1 var(--f-mono); }
 .fhead .t2 .rel { font: 500 16px/1 var(--f-sans); color: var(--ink-3); }
+.len { font-weight: 700; white-space: nowrap; }
 
 /* what-is-built cards */
 .built { border: 3px solid var(--ink); background: var(--surface); }
@@ -383,7 +384,7 @@ svg { display: block; }
 .frow .right { flex: none; display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
 .frow .right .meter { gap: 2px; }
 .frow .right .meter i { width: 13px; height: 15px; }
-.frow .t2 .nw { white-space: nowrap; }
+.frow .t2 .nw, .fhead .t2 .nw { white-space: nowrap; }
 .frow .right .st { font: 700 16px/1 var(--f-sans); }
 .frow .right .st.never { font-style: italic; color: var(--ink-3); font-weight: 600; }
 .frow .right .st.diff { color: var(--defect); }
