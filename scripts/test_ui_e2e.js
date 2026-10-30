@@ -150,6 +150,16 @@ const assert = (c, m) => { if (!c) { console.log('FAIL: ' + m); process.exitCode
   const kv = await t.evaluate(() => document.querySelector('.ov:last-child .kv').textContent);
   assert(/From/.test(kv) && kv.includes(span.b) && /Length/.test(kv) && kv.includes(span.m), 'feature page lists From, To and Length');
   await t.evaluate(() => DA.closeAll());
+  // Type 9 from the contractor's schedule: on in Section 02, marked as from the letter
+  await t.goto(BASE + '?sim=DWKZ:25500:-4:3'); await t.waitForTimeout(2500);
+  const pc = await t.evaluate(() => { const f = DI.data.bySub.DWKZ.find(x => x.sched && x.ch1 - x.ch0 > 100); return f && { id: f.id, a: DI.fmtCh(f.ch0, 3), b: DI.fmtCh(f.ch1, 3) }; });
+  assert(pc, 'Section 02 has scheduled Type 9 pieces once the page has loaded');
+  await t.evaluate(id => DA.openRecord(id), pc.id); await t.waitForTimeout(300);
+  const psheet = await t.evaluate(() => document.querySelector('.ov:last-child .fhead').textContent);
+  assert(/Letter 4218/.test(psheet) && psheet.includes(pc.a) && psheet.includes(pc.b), 'a scheduled piece is marked Letter 4218 with its ends: ' + psheet.replace(/\s+/g, ' ').slice(0, 90));
+  await t.evaluate(() => DA.closeAll());
+  await t.goto(BASE + '?sim=KZDR:100500:-4:3'); await t.waitForTimeout(2000);
+  assert(await t.evaluate(() => !DI.hasT9Schedule('KZDR')), 'other sections have no scheduled pieces yet');
   // embankment height and the Type 9 check (S02 has the longitudinal profile)
   await t.goto(BASE + '?sim=DWKZ:41500:-4:3&tab=section'); await t.waitForTimeout(2500);
   const card = await t.evaluate(() => { const b = document.querySelector('[data-act=t9-list]'); return b && b.textContent; });

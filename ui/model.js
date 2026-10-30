@@ -42,6 +42,8 @@
   const LADDER_CONCRETE = ['Not started', 'Excavation', 'Blinding', 'Rebar', 'Shuttered', 'Concreted', 'Completed'];
   const LADDER_UNLINED = ['Not started', 'Excavated', 'Completed'];
   const LADDER_PRECAST = ['Not started', 'Excavation', 'Bedding', 'Placed', 'Completed'];
+  // Type 9 is precast half-round units, and the contractor reports a stretch only when it is done.
+  const LADDER_T9 = ['Not started', 'Completed'];
   const LADDER_RIPRAP = ['Not started', 'Geotextile laid', 'Completed'];
   // Culverts are precast units, staged as on the site execution charts. A box
   // culvert is complete once its bituminous paint is on; a pipe culvert gets
@@ -419,6 +421,29 @@
   // scripts/dwg/extract_profile.py). Each side's height is measured at that side's toe on the cross
   // section; where a side has none, the centreline height stands in. Where the profile gives no
   // formation level (stations, bridges) the height is an estimate from the rail level.
+  // Type 9 from the contractor's schedule (data/t9_schedule.json, built by scripts/t9/build_schedule.js
+  // from NIG/KAMA/FM/2026/4218). Each piece is a stretch of the letter that the drawings do not show as
+  // Type 9; a Type 9 already drawn stays the design piece. Only the sub-sections in `subs` get them.
+  function loadT9Schedule(j, subs) {
+    Object.keys(data.pristine).forEach(sub => { data.pristine[sub] = data.pristine[sub].filter(f => !f.sched); });
+    const pr = PRESETS.T9;
+    const on = subs || Object.keys(SUBS);
+    (j.pieces || []).filter(p => on.includes(p.sub) && SUBS[p.sub] && data.pristine[p.sub]).forEach(p => {
+      const f = {
+        id: p.id, sub: p.sub, line: SUBS[p.sub].line, catKey: pr.catKey, catLabel: CAT_LABEL[pr.catKey], kind: 'linear', lane: pr.lane,
+        side: p.side, ch0: p.ch0, ch1: p.ch1, cert: 'exact', code: 'T9', typeKey: '9', name: pr.name, full: 'Type 9 shoulder ditch, precast half-round',
+        icon: pr.icon, ladder: LADDER_T9, sheet: (p.sheets || [])[0] || '', drawings: p.sheets || [], level: null, onHold: false, confidence: '',
+        specs: '', notes: '', stated: null, raw: {}, sched: { src: j.source, letter: [p.a, p.b] }
+      };
+      f.offset = p.side === 'L' ? LANE_OFFSET[f.lane] : -LANE_OFFSET[f.lane];
+      data.pristine[p.sub].push(f);
+    });
+    t9Cache = {};
+    applyBase();
+  }
+  // Where the schedule is switched on. Section 02 first: work is going on there and it matches the design.
+  const T9_SCHEDULE_ON = ['DWKZ'];
+  function hasT9Schedule(sub) { return !!(data.bySub[sub] || []).some(f => f.sched); }
   function loadHeights(sub, j) {
     const fb = j.fl_below_rail || 0.971;
     data.heights[sub] = (j.rows || []).map(r => {
@@ -695,7 +720,7 @@
       const f = data.byId[id];
       if (f && f.sub === sub && !done.has(id)) { done.add(id); out.push(f.baseSet || f.verified ? featureOut(f, sub) : g); } else out.push(g);
     });
-    (data.bySub[sub] || []).filter(f => !done.has(f.id)).forEach(f => out.push(featureOut(f, sub)));
+    (data.bySub[sub] || []).filter(f => !done.has(f.id) && !f.sched).forEach(f => out.push(featureOut(f, sub)));
     const meta = Object.assign({}, src.metadata || {});
     if ('count' in meta) meta.count = out.length;
     const n = baseRecords().filter(r => ((data.byId[r.featureId] || {}).sub || r.sub) === sub).length;
@@ -963,7 +988,7 @@
     fmtCh, fmtPlus, parseCh, fmtDate, fmtTime, monthsBetween, esc, DAYS, MONTHS,
     inspector, setInspector, addRecord, voidRecord, live, recordsFor, seenOf, ownSeen, openDefects,
     designChanges, statusOf, drafts, saveDraft, putPhoto, getPhoto, uid, loadLegacy,
-    loadSections, sectionAt, refs, refsNear, refById, REF_KIND, loadHeights, hasHeights, heightAt, T9_RULES, t9Rule, setT9Rule, t9Check,
+    loadSections, sectionAt, loadT9Schedule, hasT9Schedule, T9_SCHEDULE_ON, refs, refsNear, refById, REF_KIND, loadHeights, hasHeights, heightAt, T9_RULES, t9Rule, setT9Rule, t9Check,
     PRESETS, presetOf, applyBase, baseRecords, correctBase, addBase, deleteBase, verifyBase, unverifyBase, exportGeo, exportCorrections, importRecords,
     project, pointAt, laneOf, savePosition, lastPosition, csvCell,
     get records() { return records; }

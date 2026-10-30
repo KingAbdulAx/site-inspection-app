@@ -79,6 +79,38 @@ section('Embankment height and the Type 9 rule (S02)', () => {
   ok(DI.t9Rule().h === 1.8 && /3545/.test(DI.t9Rule().src) && /4218/.test(DI.t9Rule().src), 'the official 1.8 m rule is the default, citing 3545 and 4218');
 });
 
+section('Type 9 schedule from letter 4218', () => {
+  const j = JSON.parse(fs.readFileSync(path.join(root, 'data/t9_schedule.json'), 'utf8'));
+  const letter = JSON.parse(fs.readFileSync(path.join(root, 'data/t9_letter_4218.json'), 'utf8')).stretches;
+  const tot = Object.values(letter).reduce((m, l) => m + l.reduce((n, [a, b]) => n + b - a, 0), 0);
+  ok(tot === 164625 && Object.values(letter).reduce((n, l) => n + l.length, 0) === 216, 'the letter list is 216 stretches, 164,625 m');
+  ok(Object.keys(j.totals).every(k => { const t = j.totals[k]; return Math.abs(t.letter - t.bridge - t.design - t.scheduled - t.dropped) <= 5; }), 'every stretch is a bridge deck, a drawn Type 9 or a scheduled piece');
+  ok(j.totals.DRMR.bridge > 1000 && j.totals.DWKZ.bridge === 0, 'S04 bridge decks (1,008 m) carry no ditch');
+  const before = DI.t9Check('DWKZ', 1.8).km.missing, n0 = DI.data.bySub.DWKZ.length;
+  DI.loadT9Schedule(j, DI.T9_SCHEDULE_ON);
+  const sched = DI.data.bySub.DWKZ.filter(f => f.sched);
+  ok(JSON.stringify(DI.T9_SCHEDULE_ON) === '["DWKZ"]' && DI.hasT9Schedule('DWKZ') && !DI.hasT9Schedule('KZDR'), 'switched on for Section 02 only');
+  ok(sched.length === j.pieces.filter(p => p.sub === 'DWKZ').length && DI.data.bySub.DWKZ.length === n0 + sched.length, 'S02 gets ' + sched.length + ' scheduled pieces');
+  DI.loadT9Schedule(j, DI.T9_SCHEDULE_ON);
+  ok(DI.data.bySub.DWKZ.length === n0 + sched.length, 'loading twice adds nothing more');
+  const p = sched[0];
+  ok(p.code === 'T9' && p.sched.src.includes('4218') && p.ladder.join() === 'Not started,Completed' && (p.side === 'L' || p.side === 'R'), 'a piece is a Type 9 with a two-stage ladder (precast, reported when done)');
+  ok(sched.every(f => f.ch1 - f.ch0 >= 5 && f.offset === (f.side === 'L' ? 3.5 : -3.5)), 'pieces are at least 5 m and on the platform edge');
+  // every station of every S02 stretch (off the bridges) is covered by a drawn or scheduled Type 9, on either side
+  const rows = DI.data.heights.DWKZ, t9 = DI.data.bySub.DWKZ.filter(f => f.code === 'T9');
+  const br = DI.refs().filter(r => r.sub === 'DWKZ' && r.kind === 'bridge');
+  let st = 0, cov = 0;
+  letter.DWKZ.forEach(([a, b]) => rows.filter(r => r.ch >= a && r.ch <= b && !br.some(x => r.ch >= x.ch0 && r.ch <= x.ch1)).forEach(r => { st++; if (t9.some(f => r.ch >= f.ch0 - 6 && r.ch <= f.ch1 + 6)) cov++; }));
+  ok(cov / st > 0.99, 'Type 9 covers ' + cov + ' of ' + st + ' stations in the letter\'s S02 stretches');
+  const after = DI.t9Check('DWKZ', 1.8).km.missing;
+  ok(after < before * 0.2, 'the red "not drawn" length at 1.8 m falls from ' + before.toFixed(1) + ' to ' + after.toFixed(1) + ' km');
+  const rec = DI.addRecord({ kind: 'stage', featureId: p.id, stage: 1 });
+  ok(DI.seenOf(p.id) && DI.seenOf(p.id).stage === 1, 'a piece takes a Completed record');
+  DI.voidRecord(rec.id);
+  const geo = DI.exportGeo('DWKZ');
+  ok(!(geo.features || []).some(g => /^t9s_/.test((g.properties || {}).id || '')), 'scheduled pieces are not exported as base data');
+});
+
 section('Bridges and road crossings, for reference', () => {
   const all = DI.refs();
   ok(all.length > 80 && ['KNDW', 'DWKZ', 'KZDR', 'DRMR', 'MRJB'].every(s => all.some(r => r.sub === s)), 'structures on all five sections: ' + all.length);

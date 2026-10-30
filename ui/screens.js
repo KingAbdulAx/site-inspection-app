@@ -158,7 +158,7 @@
         kv('To', DI.fmtCh(f.ch1, f.cert === 'exact' ? 3 : 1));
         kv('Length', DA.lenText(f) + '<div style="margin-top:6px">' + DA.certChip(f) + '</div>');
       } else kv('Position', DA.chText(f) + '<div style="margin-top:6px">' + DA.certChip(f) + '</div>');
-      kv('How we know', f.cert === 'exact' ? 'Quoted on the drawing' : f.cert === 'label' ? 'Where the note sits' : 'Read from marker spacing');
+      kv('How we know', f.sched ? 'Contractor’s schedule, NIG/KAMA/FM/2026/4218 · not on the drawings' : f.cert === 'exact' ? 'Quoted on the drawing' : f.cert === 'label' ? 'Where the note sits' : 'Read from marker spacing');
       kv('Side', { L: 'Left', R: 'Right', C: 'Centre' }[f.side] + (f.kind === 'cross' ? ' · crosses' : ''));
       if (f.stated) kv('Stated length', 'L = ' + Math.round(f.stated) + ' m');
       kv('Drawing', esc(f.drawings.join(' / ') || '—'));
@@ -617,7 +617,8 @@
       });
       DI.live(r => r.kind === 'base' && r.featureId === fid).forEach(r => ev.push({ at: r.at, t: 'design', dot: 'd', tag: '<span class="chip claim">Data</span>', h: esc(DA.recLabel(r)), b: esc([Object.keys(r.set || {}).map(k => k + ' → ' + (k.startsWith('ch') ? DI.fmtCh(r.set[k], 3) : r.set[k])).join(', '), r.note].filter(Boolean).join(' · ')), m: esc(String(r.by).replace(/^Engr\.\s*/, '')) + ' · base data, not a revision' }));
       (DI.data.irs[fid] || []).forEach(r => ev.push({ at: r.date, t: 'field', dot: 'ir', tag: '<span class="chip claim">IR ' + esc(r.ir) + '</span>', h: esc(r.milestone) + ' claimed', m: 'Contractor · ' + r.status }));
-      ev.push({ at: '0000', t: 'design', dot: 'd', tag: '<span class="chip rev">Drawing</span>', h: 'From the drawing set', b: esc(f.full) + ' at ' + DA.chText(f), m: esc(f.sheet || '') + (f.level ? ' · Level ' + f.level : '') + ' · office import' });
+      ev.push(f.sched ? { at: '0000', t: 'design', dot: 'd', tag: '<span class="chip rev">Letter</span>', h: 'From the contractor’s Type 9 schedule', b: esc(f.full) + ' at ' + DA.chText(f), m: esc(f.sched.src.split(' (')[0]) + ' · stretch ' + DI.fmtCh(f.sched.letter[0]) + ' → ' + DI.fmtCh(f.sched.letter[1]) }
+        : { at: '0000', t: 'design', dot: 'd', tag: '<span class="chip rev">Drawing</span>', h: 'From the drawing set', b: esc(f.full) + ' at ' + DA.chText(f), m: esc(f.sheet || '') + (f.level ? ' · Level ' + f.level : '') + ' · office import' });
       ev.sort((a, b) => a.at < b.at ? 1 : -1);
       let h = topbar('History') + '<div class="scroll">' + fsum(f) + '<div class="pad mt16"><div class="segm" style="grid-template-columns:repeat(3,1fr)">' +
         [['all', 'Everything'], ['design', 'Design'], ['field', 'Field']].map(([k, n]) => '<button data-act="hist-tab" data-v="' + k + '" class="' + (tab === k ? 'on' : '') + '">' + n + '</button>').join('') + '</div></div><div class="tl">';

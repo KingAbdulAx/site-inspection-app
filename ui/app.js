@@ -28,6 +28,7 @@
     return '<span class="' + cls + '">C</span>';
   }
   function certChip(f) {
+    if (f.sched) return '<span class="chip rev" title="Added from the contractor’s Type 9 schedule, NIG/KAMA/FM/2026/4218; not on the drawings">Letter 4218</span>';
     if (f.cert === 'exact') return '<span class="chip exact">Exact</span>';
     if (f.cert === 'label') return '<span class="chip label">Label</span>';
     if (f.cert === 'measured') return '<span class="chip measured">Measured</span>';
@@ -856,6 +857,7 @@
     try { theme = localStorage.getItem('KMD_THEME_V1') || 'sun'; } catch (e) { /* ignore */ }
     setTheme(theme);
     DI.init();
+    fetch('data/t9_schedule.json').then(r => r.ok ? r.json() : null).then(j => { if (j) { DI.loadT9Schedule(j, DI.T9_SCHEDULE_ON); render(); } }).catch(() => { /* offline before the first load: the drawings alone */ });
     const last = DI.lastPosition();
     const q = new URLSearchParams(location.search);
     if (last && last.line) Object.assign(S.pos, { line: last.line, sub: last.sub, ch: last.ch, facing: last.facing || 'increasing' });
