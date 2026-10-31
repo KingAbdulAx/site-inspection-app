@@ -127,7 +127,7 @@ const assert = (c, m) => { if (!c) { console.log('FAIL: ' + m); process.exitCode
   for (const m of marks) {
     await t.evaluate(() => DA.closeAll());
     await t.touchscreen.tap(m.x, m.y); await t.waitForTimeout(400);
-    const got = await t.evaluate(() => { const ov = document.querySelector('.ov:last-child'); if (!ov) return null; const s = ov.querySelector('[data-act=stage]'); const hl = ov.querySelector('.frow.hl'); return s ? s.dataset.id : hl ? hl.dataset.id : '?'; });
+    const got = await t.evaluate(() => { const ov = document.querySelector('.ov:last-child'); if (!ov) return null; const s = ov.querySelector('[data-act=stage],[data-act=range-all]'); const hl = ov.querySelector('.frow.hl'); return s ? s.dataset.id : hl ? hl.dataset.id : '?'; });
     if (got) opened++;
     if (got === m.id) right++;
   }
@@ -158,6 +158,18 @@ const assert = (c, m) => { if (!c) { console.log('FAIL: ' + m); process.exitCode
   const psheet = await t.evaluate(() => document.querySelector('.ov:last-child .fhead').textContent);
   assert(/Letter 4218/.test(psheet) && psheet.includes(pc.a) && psheet.includes(pc.b), 'a scheduled piece is marked Letter 4218 with its ends: ' + psheet.replace(/\s+/g, ' ').slice(0, 90));
   await t.evaluate(() => DA.closeAll());
+  // Type 9 progress by length, from the record sheet
+  const big = await t.evaluate(() => { const f = DI.data.bySub.DWKZ.find(x => x.sched && x.ch1 - x.ch0 > 250); return { id: f.id, a: Math.round(f.ch0), b: Math.round(f.ch1) }; });
+  await t.evaluate(id => DA.openRecord(id), big.id); await t.waitForTimeout(300);
+  assert(await t.evaluate(() => !!document.querySelector('.ov:last-child .rgbar') && /0 of/.test(document.querySelector('.ov:last-child .rg-sum').textContent)), 'the sheet of a Type 9 asks how much is done: 0 m so far');
+  await t.fill('#rgFrom', await t.evaluate(v => DI.fmtCh(v), big.a)); await t.fill('#rgTo', await t.evaluate(v => DI.fmtCh(v), big.a + 100));
+  await t.tap('.ov:last-child [data-act=range-save]'); await t.waitForTimeout(400);
+  const part = await t.evaluate(id => { const c = DI.statusOf(DI.data.byId[id]); return { m: Math.round(c.cover.m), bucket: c.bucket }; }, big.id);
+  assert(part.m === 100 && part.bucket === 'moving', 'a typed range saves: ' + JSON.stringify(part));
+  await t.evaluate(id => DA.openRecord(id), big.id); await t.waitForTimeout(300);
+  assert(await t.evaluate(() => /100 of/.test(document.querySelector('.ov:last-child .rg-sum').textContent) && document.querySelectorAll('.ov:last-child .rgbar i').length === 1), 'the sheet shows 100 m done');
+  await t.tap('.ov:last-child [data-act=range-all]'); await t.waitForTimeout(400);
+  assert(await t.evaluate(id => DI.statusOf(DI.data.byId[id]).bucket === 'done', big.id), 'Whole stretch completed finishes it in one tap');
   await t.goto(BASE + '?sim=KZDR:100500:-4:3'); await t.waitForTimeout(2000);
   assert(await t.evaluate(() => !DI.hasT9Schedule('KZDR')), 'other sections have no scheduled pieces yet');
   // embankment height and the Type 9 check (S02 has the longitudinal profile)

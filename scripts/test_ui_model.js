@@ -104,6 +104,27 @@ section('Type 9 schedule from letter 4218', () => {
   ok(cov / st > 0.99, 'Type 9 covers ' + cov + ' of ' + st + ' stations in the letter\'s S02 stretches');
   const after = DI.t9Check('DWKZ', 1.8).km.missing;
   ok(after < before * 0.2, 'the red "not drawn" length at 1.8 m falls from ' + before.toFixed(1) + ' to ' + after.toFixed(1) + ' km');
+  // progress by completed length
+  const big = sched.find(f => f.ch1 - f.ch0 >= 100);
+  ok(DI.rangeable(big) && !DI.rangeable(DI.data.bySub.DWKZ.find(f => f.code === 'T12')), 'Type 9 runs are tracked by length, other ditches are not');
+  ok(!DI.coverOf(big) && DI.statusOf(big).bucket === 'none', 'nothing completed yet');
+  const mid = (big.ch0 + big.ch1) / 2;
+  const r1 = DI.addRange(big.id, big.ch0, mid);
+  let st1 = DI.statusOf(big);
+  ok(Math.abs(st1.cover.m - (mid - big.ch0)) < 0.2 && st1.bucket === 'moving' && st1.fill === 'ranges', 'half done: ' + Math.round(st1.cover.m) + ' of ' + Math.round(big.ch1 - big.ch0) + ' m, part-built');
+  DI.addRange(big.id, mid - 10, big.ch1);
+  st1 = DI.statusOf(big);
+  ok(st1.cover.full && st1.bucket === 'done' && st1.fill === 'solid' && st1.cover.ranges.length === 1, 'two overlapping ranges merge, and together finish the run');
+  DI.voidRecord(DI.records.filter(x => x.kind === 'range').pop().id);
+  ok(!DI.statusOf(big).cover.full && DI.statusOf(big).cover.ranges.length === 1, 'undoing the last one takes its length back');
+  DI.voidRecord(r1.id);
+  ok(!DI.coverOf(big), 'all undone: not started again');
+  DI.addRecord({ kind: 'stage', featureId: big.id, stage: 1 });
+  ok(DI.coverOf(big).full && DI.statusOf(big).bucket === 'done', 'a Completed stage on the whole run counts as all of it');
+  ok(DI.addRange(big.id, big.ch0, big.ch0 + 0.2) === null && DI.addRange(DI.data.bySub.DWKZ.find(f => f.code === 'T12').id, 0, 50) === null, 'a sliver, or a ditch that is not Type 9, saves nothing');
+  const drawn = DI.data.bySub.DWKZ.find(f => f.code === 'T9' && !f.sched && f.ch1 - f.ch0 > 50);
+  DI.addRange(drawn.id, drawn.ch0, drawn.ch0 + 30);
+  ok(DI.statusOf(drawn).cover.m > 29 && DI.statusOf(drawn).bucket === 'moving', 'a drawn Type 9 takes ranges too');
   const rec = DI.addRecord({ kind: 'stage', featureId: p.id, stage: 1 });
   ok(DI.seenOf(p.id) && DI.seenOf(p.id).stage === 1, 'a piece takes a Completed record');
   DI.voidRecord(rec.id);

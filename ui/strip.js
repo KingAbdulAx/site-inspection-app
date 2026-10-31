@@ -375,6 +375,11 @@
         const y0 = Math.max(-6, Math.min(ya, yb)), y1 = Math.min(H + 6, Math.max(ya, yb));
         if (y1 > y0) {
           s += '<rect x="' + (x - bw / 2) + '" y="' + y0 + '" width="' + bw + '" height="' + (y1 - y0) + '" style="' + fillStyle(st.fill) + ';stroke-width:2' + faded + '"' + (st.fill === 'never' ? ' stroke-dasharray="4 3"' : '') + '/>';
+          // completed ranges, solid inside the outline
+          if (st.cover && !st.cover.full) st.cover.ranges.forEach(([ra, rb]) => {
+            const yr0 = Math.max(y0, Math.min(Y(ra), Y(rb))), yr1 = Math.min(y1, Math.max(Y(ra), Y(rb)));
+            if (yr1 > yr0) s += '<rect x="' + (x - bw / 2) + '" y="' + yr0 + '" width="' + bw + '" height="' + (yr1 - yr0) + '" style="fill:var(--ink);stroke:var(--ink);stroke-width:2' + faded + '"/>';
+          });
         }
         if (derived) {
           const capPx = Math.max(12, TOL * px);

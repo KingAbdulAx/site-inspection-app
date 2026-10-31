@@ -853,6 +853,41 @@
   function designChanges(fid) { return live(r => r.featureId === fid && r.kind === 'design'); }
 
   // A status summary used by the strip, the section view and the lists.
+  // ------------------------------------------------ progress by length
+  // A Type 9 run is finished a bit at a time, and the contractor reports it only when a stretch is done
+  // (precast units, no stages). So it is tracked by completed ranges: 'from X to Y is done'. Records are
+  // append-only like all the rest; undo voids one. A Completed stage on the whole run counts as all of it.
+  const RANGE_CODES = ['T9'];
+  const rangeable = f => RANGE_CODES.includes(f.code) && f.kind === 'linear' && f.ch1 - f.ch0 > 1;
+  function mergeRanges(list) {
+    const out = [];
+    list.slice().sort((a, b) => a[0] - b[0]).forEach(([a, b]) => {
+      const last = out[out.length - 1];
+      if (last && a <= last[1] + 0.5) last[1] = Math.max(last[1], b); else out.push([a, b]);
+    });
+    return out;
+  }
+  function coverOf(f) {
+    if (!rangeable(f)) return null;
+    const recs = live(r => r.kind === 'range' && r.featureId === f.id);
+    const own = ownSeen(f.id);
+    const byStage = !!(own && own.stage >= f.ladder.length - 1);
+    if (!recs.length && !byStage) return null;
+    const list = recs.map(r => [Math.max(f.ch0, Math.min(r.from, r.to)), Math.min(f.ch1, Math.max(r.from, r.to))]).filter(r => r[1] > r[0]);
+    if (byStage) list.push([f.ch0, f.ch1]);
+    const ranges = mergeRanges(list);
+    const m = ranges.reduce((n, [a, b]) => n + b - a, 0);
+    const lastAt = recs.map(r => r.at).concat(byStage ? [own.at] : []).sort().pop() || null;
+    return { ranges, m, len: f.ch1 - f.ch0, full: m >= f.ch1 - f.ch0 - 1, lastAt, records: recs };
+  }
+  function addRange(fid, from, to, pos) {
+    const f = data.byId[fid];
+    if (!f || !rangeable(f)) return null;
+    const a = Math.max(f.ch0, Math.min(from, to)), b = Math.min(f.ch1, Math.max(from, to));
+    if (!(b - a >= 0.5)) return null;
+    return addRecord({ kind: 'range', featureId: fid, from: Math.round(a * 10) / 10, to: Math.round(b * 10) / 10, line: f.line, sub: f.sub, ch: a, pos: pos || null });
+  }
+
   function statusOf(f) {
     const seen = seenOf(f.id);
     const claim = claimOf(f.id);
@@ -868,12 +903,22 @@
     else if (s != null && s > 0) fill = 'hatch';
     else if (s == null && c == null) fill = 'never';
     const changes = designChanges(f.id);
-    return {
+    const res = {
       seen, claim, s, c, best, max, lastAt, partBuilt, stalled, fill,
       defects: openDefects(f.id), changes,
       removed: changes.some(r => r.action === 'remove'),
       bucket: best >= max ? 'done' : best === 0 ? 'none' : stalled ? 'stalled' : 'moving'
     };
+    const cov = coverOf(f);
+    if (cov) {
+      res.cover = cov;
+      if (cov.full) Object.assign(res, { s: max, best: max, fill: 'solid', partBuilt: false, stalled: false, bucket: 'done' });
+      else {
+        const stl = !!cov.lastAt && (Date.now() - new Date(cov.lastAt).getTime()) > 182 * 864e5;
+        Object.assign(res, { best: Math.max(best, 1), partBuilt: true, stalled: stl, fill: 'ranges', bucket: stl ? 'stalled' : 'moving', lastAt: [lastAt, cov.lastAt].filter(Boolean).sort().pop() });
+      }
+    }
+    return res;
   }
 
   // Drafts (defect sheets not finished).
@@ -988,7 +1033,7 @@
     fmtCh, fmtPlus, parseCh, fmtDate, fmtTime, monthsBetween, esc, DAYS, MONTHS,
     inspector, setInspector, addRecord, voidRecord, live, recordsFor, seenOf, ownSeen, openDefects,
     designChanges, statusOf, drafts, saveDraft, putPhoto, getPhoto, uid, loadLegacy,
-    loadSections, sectionAt, loadT9Schedule, hasT9Schedule, T9_SCHEDULE_ON, refs, refsNear, refById, REF_KIND, loadHeights, hasHeights, heightAt, T9_RULES, t9Rule, setT9Rule, t9Check,
+    loadSections, sectionAt, loadT9Schedule, hasT9Schedule, rangeable, coverOf, addRange, T9_SCHEDULE_ON, refs, refsNear, refById, REF_KIND, loadHeights, hasHeights, heightAt, T9_RULES, t9Rule, setT9Rule, t9Check,
     PRESETS, presetOf, applyBase, baseRecords, correctBase, addBase, deleteBase, verifyBase, unverifyBase, exportGeo, exportCorrections, importRecords,
     project, pointAt, laneOf, savePosition, lastPosition, csvCell,
     get records() { return records; }
