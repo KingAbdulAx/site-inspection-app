@@ -275,26 +275,61 @@
   // ================================================================ SECTION TAB
   S.secCat = 'cross';
   S.secView = 'ribbon';
+  // Completion figures: single-place structures are counted, ditches are measured by length.
+  const nf = n => Math.round(n).toLocaleString('en-GB');
+  const kmf = m => (m / 1000).toLocaleString('en-GB', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+  const pctOf = (a, b) => (b > 0 ? Math.round(a / b * 100) : 0);
+  const ptsText = o => nf(o.done) + ' of ' + nf(o.n);
+  const linText = o => kmf(o.doneM) + ' of ' + kmf(o.m) + ' km';
+  function statBlock(title, text, pc) {
+    return '<div class="pstat"><span class="lbl-caps">' + title + '</span><b>' + text + '</b><span class="pc">' + pc + '%</span><div class="pbar"><i style="width:' + pc + '%"></i></div></div>';
+  }
+  function overviewStats(o) {
+    let h = '<div class="pstats">';
+    if (o.pts.n) h += statBlock('Structures', ptsText(o.pts), pctOf(o.pts.done, o.pts.n));
+    if (o.lin.n) h += statBlock('Ditches', linText(o.lin), pctOf(o.lin.doneM, o.lin.m));
+    return h + '</div>';
+  }
   function renderSection(el) {
     const p = S.pos;
-    const sub = DI.SUBS[p.sub] && DI.hasData(p.sub) ? DI.SUBS[p.sub] : DI.SUBS.KZDR;
+    // Which lines the overview covers: all, the main line or the branch.
+    const scope = S.secScope || 'all';
+    const scopeLines = DI.LINES.filter(l => scope === 'all' || l.id === scope);
+    const scopeSubs = [].concat(...scopeLines.map(l => l.subs)).filter(sb => DI.hasData(sb.id));
+    let subId = S.secSub && DI.SUBS[S.secSub] && DI.hasData(S.secSub) ? S.secSub : p.sub;
+    if (!scopeSubs.some(sb => sb.id === subId) && scopeSubs.length) subId = scopeSubs[0].id;
+    const sub = DI.SUBS[subId] && DI.hasData(subId) ? DI.SUBS[subId] : DI.SUBS.KZDR;
     const all = DI.data.bySub[sub.id] || [];
     const L = DI.LINES.find(l => l.id === sub.line);
-    const counts = {};
-    all.forEach(f => { counts[f.catKey] = (counts[f.catKey] || 0) + 1; });
-    const cats = DI.CAT_ORDER.filter(k => counts[k]);
-    if (S.secCat !== 'all' && !counts[S.secCat]) S.secCat = 'all';
-    const list = S.secCat === 'all' ? all : all.filter(f => f.catKey === S.secCat);
+    const types = DI.typeProgress(sub.id);
+    if (S.secCat !== 'all' && !types.some(t => t.key === S.secCat)) S.secCat = 'all';
+    const cur = types.find(t => t.key === S.secCat);
+    const list = cur ? cur.feats : all;
     const stats = list.map(f => ({ f, st: DI.statusOf(f) }));
     const b = { none: 0, moving: 0, stalled: 0, done: 0 };
     stats.forEach(x => b[x.st.bucket]++);
-    const label = S.secCat === 'all' ? 'structures' : (all.find(f => f.catKey === S.secCat) || {}).catLabel || '';
-    let h = '<div class="scroll"><div class="sec-head"><div><h1>' + sub.id + ' <small>' + esc(sub.name.replace(' – ', '–')) + '</small></h1><div class="rng">' + esc(L.name) + ' · ' + DI.fmtCh(sub.from) + ' → ' + DI.fmtCh(sub.to) + ' · ' + ((sub.to - sub.from) / 1000).toFixed(1) + ' km</div></div>' +
+    let h = '<div class="scroll"><div class="sec-head"><div><h1>Progress</h1><div class="rng">Completed structures, and metres of ditch</div></div>' +
       '<button class="btn" data-act="project" style="width:auto;min-height:56px;font-size:19px">' + I.icon('layers') + 'Switch</button></div>';
-    h += '<div class="chips-scroll"><button data-act="sec-cat" data-v="all" class="' + (S.secCat === 'all' ? 'on' : '') + '">All <small>' + all.length + '</small></button>' +
-      cats.map(k => '<button data-act="sec-cat" data-v="' + k + '" class="' + (S.secCat === k ? 'on' : '') + '">' + esc(all.find(f => f.catKey === k).catLabel) + ' <small>' + counts[k] + '</small></button>').join('') + '</div>';
-    const part = b.moving + b.stalled;
-    h += '<div class="pad mt16"><p class="big-stat">' + part + ' of ' + list.length + ' part-built</p><div style="font:500 18px/1.3 var(--f-sans);color:var(--ink-2);margin-top:4px">' + b.stalled + ' of them unchanged for over 6 months</div>';
+    // overview: all, main line, branch line
+    h += '<div class="pad"><div class="segm" style="grid-template-columns:repeat(3,1fr)">' + [['all', 'All'], ['KM', 'Main line'], ['KD', 'Branch line']].map(([k, n]) => '<button data-act="sec-scope" data-v="' + k + '" class="' + (scope === k ? 'on' : '') + '" style="min-height:48px">' + n + '</button>').join('') + '</div>';
+    if (!scopeSubs.length) h += '<p class="note">No drawings processed yet for this line.</p>';
+    else {
+      const tot = DI.progressOf([].concat(...scopeSubs.map(sb => DI.data.bySub[sb.id] || [])));
+      h += '<div class="povr"><div class="lbl-caps">' + (scope === 'all' ? 'Whole project' : scope === 'KM' ? 'Main line' : 'Branch line') + ' · ' + scopeSubs.length + ' sub-section' + (scopeSubs.length > 1 ? 's' : '') + '</div>' + overviewStats(tot) + '</div>';
+      scopeSubs.forEach(sb => {
+        const o = DI.progressOf(DI.data.bySub[sb.id] || []);
+        h += '<button class="psub' + (sb.id === sub.id ? ' cur' : '') + '" data-act="sec-sub" data-sub="' + sb.id + '"><span class="who"><b>' + sb.id + '</b>' + esc(sb.name.replace(' – ', '–')) + '</span>' + overviewStats(o) + '</button>';
+      });
+    }
+    h += '</div>';
+    // the sub-section picked, by drainage type
+    h += '<div class="sec-head" style="padding-top:8px"><div><h1>' + sub.id + ' <small>' + esc(sub.name.replace(' – ', '–')) + '</small></h1><div class="rng">' + esc(L.name) + ' · ' + DI.fmtCh(sub.from) + ' → ' + DI.fmtCh(sub.to) + ' · ' + ((sub.to - sub.from) / 1000).toFixed(1) + ' km</div></div></div>';
+    const subTot = DI.progressOf(all);
+    h += '<div class="chips-scroll tchips"><button data-act="sec-cat" data-v="all" class="' + (S.secCat === 'all' ? 'on' : '') + '"><span>All types</span><small>' + (subTot.pts.n ? ptsText(subTot.pts) + (subTot.lin.n ? ' · ' : '') : '') + (subTot.lin.n ? linText(subTot.lin) : '') + '</small></button>' +
+      types.map(t => '<button data-act="sec-cat" data-v="' + esc(t.key) + '" class="' + (S.secCat === t.key ? 'on' : '') + '"><span>' + esc(t.label) + '</span><small>' + (t.span ? linText(t.p.lin) : ptsText(t.p.pts)) + '</small></button>').join('') + '</div>';
+    const cp = DI.progressOf(list);
+    h += '<div class="pad mt16">' + overviewStats(cp);
+    h += '<div style="font:500 18px/1.3 var(--f-sans);color:var(--ink-2);margin-top:4px">' + cp.part + ' part-built' + (cp.stalled ? ', ' + cp.stalled + ' unchanged for over 6 months' : '') + '</div>';
     const tot = Math.max(1, list.length);
     h += '<div class="stack"><i style="width:' + (b.none / tot * 100) + '%;background:var(--surface)"></i><i style="width:' + (b.moving / tot * 100) + '%;background:var(--part)"></i><i style="width:' + (b.stalled / tot * 100) + '%;background:var(--hazard)"></i><i style="width:' + (b.done / tot * 100) + '%;background:var(--ink)"></i></div>';
     const chk = list.filter(f => f.verified).length;
@@ -390,6 +425,8 @@
     download(sub + '_type9_check_' + rule.label.replace(' ', '') + '.csv', new Blob([lines.join('\n')], { type: 'text/csv' }));
   };
   A['sec-cat'] = b => { S.secCat = b.dataset.v; DA.render(); };
+  A['sec-scope'] = b => { S.secScope = b.dataset.v; DA.render(); };
+  A['sec-sub'] = b => { S.secSub = b.dataset.sub; S.secCat = 'all'; DA.render(); };
   A['sec-view'] = b => { S.secView = b.dataset.v; DA.render(); };
   A['walk-at'] = b => {
     const ch = Number(b.dataset.ch);
@@ -480,6 +517,7 @@
     const sb = DI.SUBS[b.dataset.sub];
     if (!DI.hasData(sb.id)) { DA.toast({ title: sb.id + ': drawings not yet processed', sub: 'Shown here so the line is complete' }); return; }
     DA.closeAll();
+    S.secSub = null;
     if (S.pos.sub !== sb.id) DA.setHand(sb.line, sb.from + 50);
     DA.setTab('walk');
   };

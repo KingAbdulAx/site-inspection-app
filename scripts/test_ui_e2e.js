@@ -174,6 +174,23 @@ const assert = (c, m) => { if (!c) { console.log('FAIL: ' + m); process.exitCode
   assert(await t.evaluate(() => !DI.hasT9Schedule('KZDR')), 'other sections have no scheduled pieces yet');
   // embankment height and the Type 9 check (S02 has the longitudinal profile)
   await t.goto(BASE + '?sim=DWKZ:41500:-4:3&tab=section'); await t.waitForTimeout(2500);
+  // the Progress tab: scopes, completion by count and by length, types named on their buttons
+  assert(await t.evaluate(() => /Progress/.test(document.querySelector('.nav [data-tab=section]').textContent)), 'the tab is called Progress');
+  const pg = await t.evaluate(() => ({
+    scopes: [...document.querySelectorAll('[data-act=sec-scope]')].map(b => b.textContent.trim()),
+    rows: [...document.querySelectorAll('[data-act=sec-sub]')].map(b => b.dataset.sub),
+    chips: [...document.querySelectorAll('[data-act=sec-cat]')].map(b => b.innerText.replace(/\s+/g, ' ').trim()),
+    stat: document.querySelector('.povr').innerText.replace(/\s+/g, ' ')
+  }));
+  assert(pg.scopes.join() === 'All,Main line,Branch line' && pg.rows.length === 5, 'overview: All / Main line / Branch line, one row per section: ' + pg.rows.join());
+  assert(pg.chips.some(c => /Type 9 shoulder ditch \d+\.\d of \d+\.\d km/.test(c)) && pg.chips.some(c => /Box culverts \d+ of \d+/.test(c)), 'type buttons carry their progress: ' + pg.chips.slice(1, 4).join(' | '));
+  assert(/Structures \d[\d,]* of \d[\d,]* \d+%/i.test(pg.stat) && /Ditches \d[\d,.]* of \d[\d,.]* km/i.test(pg.stat), 'completion shown as a count and as km: ' + pg.stat.slice(0, 120));
+  await t.tap('[data-act=sec-scope][data-v=KD]'); await t.waitForTimeout(300);
+  assert(await t.evaluate(() => document.querySelectorAll('[data-act=sec-sub]').length === 0 && /No drawings/.test(document.querySelector('#scr-section').textContent)), 'the branch line has no drawings yet and says so');
+  await t.tap('[data-act=sec-scope][data-v=KM]'); await t.waitForTimeout(300);
+  await t.tap('[data-act=sec-sub][data-sub=KZDR]'); await t.waitForTimeout(300);
+  assert(await t.evaluate(() => /KZDR/.test(document.querySelector('#scr-section h1 + .rng, #scr-section').textContent) && document.querySelector('.psub.cur').dataset.sub === 'KZDR'), 'tapping a section row opens that section');
+  await t.goto(BASE + '?sim=DWKZ:41500:-4:3&tab=section'); await t.waitForTimeout(2500);
   const card = await t.evaluate(() => { const b = document.querySelector('[data-act=t9-list]'); return b && b.textContent; });
   assert(card && /See the \d+ stretches/.test(card), 'Section tab shows the Type 9 check: ' + card);
   await t.tap('[data-act=t9-list]'); await t.waitForTimeout(300);

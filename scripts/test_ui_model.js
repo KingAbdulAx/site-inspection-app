@@ -132,6 +132,27 @@ section('Type 9 schedule from letter 4218', () => {
   ok(!(geo.features || []).some(g => /^t9s_/.test((g.properties || {}).id || '')), 'scheduled pieces are not exported as base data');
 });
 
+section('Progress: counts for structures, length for ditches', () => {
+  const tp = DI.typeProgress('DWKZ');
+  const t9 = tp.find(t => t.key === 'T9'), box = tp.find(t => t.key === 'BC.pt');
+  ok(t9 && t9.span && /Type 9/.test(t9.label) && t9.p.lin.m > 15000 && t9.p.pts.n === 0, 'Type 9 is a ditch type, measured by length: ' + (t9 && (t9.p.lin.m / 1000).toFixed(1)) + ' km');
+  ok(box && !box.span && box.label === 'Box culverts' && box.p.pts.n > 50 && box.p.lin.n === 0, 'Box culverts are counted: ' + (box && box.p.pts.n));
+  const all = DI.progressOf(DI.data.bySub.DWKZ), sum = tp.reduce((n, t) => n + t.p.pts.n + t.p.lin.n, 0);
+  ok(sum === all.pts.n + all.lin.n, 'every structure is in exactly one type (' + sum + ')');
+  ok(tp.every(t => t.label && !/^\s*$/.test(t.label)) && new Set(tp.map(t => t.key)).size === tp.length, 'types have names and are distinct');
+  const g = tp.find(t => t.key === 'T9'), before = DI.progressOf(g.feats).lin.doneM;
+  const piece = g.feats.find(f => f.sched && f.ch1 - f.ch0 > 150 && !DI.statusOf(f).cover);
+  DI.addRange(piece.id, piece.ch0, piece.ch0 + 100);
+  ok(Math.abs(DI.progressOf(g.feats).lin.doneM - before - 100) < 0.2, 'a completed range of 100 m adds 100 m to the Type 9 total');
+  const wd = tp.find(t => t.key === 'WD.pt'), w = wd.feats[0];
+  const d0 = DI.progressOf(wd.feats).pts.done;
+  DI.addRecord({ kind: 'stage', featureId: w.id, stage: w.ladder.length - 1 });
+  ok(DI.progressOf(wd.feats).pts.done === d0 + 1, 'a completed water descent adds one to the count');
+  const whole = DI.progressOf([].concat(...['KNDW', 'DWKZ', 'KZDR', 'DRMR', 'MRJB'].map(s => DI.data.bySub[s])));
+  ok(whole.pts.n > 3000 && whole.lin.m > 300000, 'the whole project: ' + whole.pts.n + ' structures, ' + (whole.lin.m / 1000).toFixed(0) + ' km of ditch');
+  ok(DI.LINES.map(l => l.id).join() === 'KM,KD' && !DI.hasData('KNYG'), 'main line has data, the branch has none yet');
+});
+
 section('Bridges and road crossings, for reference', () => {
   const all = DI.refs();
   ok(all.length > 80 && ['KNDW', 'DWKZ', 'KZDR', 'DRMR', 'MRJB'].every(s => all.some(r => r.sub === s)), 'structures on all five sections: ' + all.length);

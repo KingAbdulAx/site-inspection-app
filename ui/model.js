@@ -921,6 +921,43 @@
     return res;
   }
 
+  // ------------------------------------------------ progress overview
+  // Completion, not "part-built": structures that are a single place (culverts, descents, riprap) are
+  // counted; ditches and drains that run along the line are measured by length. The two are never added.
+  const isSpan = f => f.kind === 'linear' || f.kind === 'buried';
+  const TYPE_LABEL = { PC: 'Pipe culverts', BC: 'Box culverts', CC: 'Cattle crossings', T16: 'Underpass water passages', WD: 'Water descents', 'D-SD': 'Slope descents', BRG: 'Railway bridges', OP: 'Road overbridges' };
+  // The drainage type of a feature, as a tab: 'Type 9 shoulder ditch', 'Box culverts'.
+  function typeOf(f) {
+    const span = isSpan(f);
+    if (span && /^CH-/.test(f.code || '')) return { key: 'CH', label: 'Diversion channels', span };
+    if (span && f.code === 'MD') return { key: 'MD', label: 'Approach and earth toe ditches', span };
+    if (span) return { key: f.code || f.catKey, label: f.name, span };
+    return { key: (f.code || f.catKey) + '.pt', label: TYPE_LABEL[f.code] || f.catLabel, span };
+  }
+  function progressOf(feats) {
+    const o = { pts: { n: 0, done: 0 }, lin: { n: 0, done: 0, m: 0, doneM: 0 }, part: 0, stalled: 0 };
+    feats.forEach(f => {
+      const st = statusOf(f);
+      if (st.removed) return;
+      if (st.bucket === 'moving') o.part++;
+      if (st.bucket === 'stalled') { o.part++; o.stalled++; }
+      if (isSpan(f)) {
+        const len = f.ch1 - f.ch0;
+        o.lin.n++; o.lin.m += len;
+        if (st.cover) o.lin.doneM += st.cover.m; else if (st.bucket === 'done') o.lin.doneM += len;
+        if (st.bucket === 'done') o.lin.done++;
+      } else { o.pts.n++; if (st.bucket === 'done') o.pts.done++; }
+    });
+    return o;
+  }
+  // The types in a sub-section with their own progress, in the order of the drawing categories.
+  function typeProgress(sub) {
+    const by = {};
+    (data.bySub[sub] || []).forEach(f => { const t = typeOf(f); (by[t.key] = by[t.key] || { key: t.key, label: t.label, span: t.span, cat: CAT_ORDER.indexOf(f.catKey), feats: [] }).feats.push(f); });
+    return Object.values(by).sort((a, b) => a.cat - b.cat || (a.span === b.span ? (a.label < b.label ? -1 : 1) : a.span ? -1 : 1))
+      .map(g => Object.assign(g, { p: progressOf(g.feats) }));
+  }
+
   // Drafts (defect sheets not finished).
   function drafts() { try { return JSON.parse(localStorage.getItem(DRAFTS_KEY) || '{}'); } catch (e) { return {}; } }
   function saveDraft(fid, d) {
@@ -1033,7 +1070,7 @@
     fmtCh, fmtPlus, parseCh, fmtDate, fmtTime, monthsBetween, esc, DAYS, MONTHS,
     inspector, setInspector, addRecord, voidRecord, live, recordsFor, seenOf, ownSeen, openDefects,
     designChanges, statusOf, drafts, saveDraft, putPhoto, getPhoto, uid, loadLegacy,
-    loadSections, sectionAt, loadT9Schedule, hasT9Schedule, rangeable, coverOf, addRange, T9_SCHEDULE_ON, refs, refsNear, refById, REF_KIND, loadHeights, hasHeights, heightAt, T9_RULES, t9Rule, setT9Rule, t9Check,
+    loadSections, sectionAt, loadT9Schedule, hasT9Schedule, rangeable, coverOf, addRange, isSpan, typeOf, progressOf, typeProgress, T9_SCHEDULE_ON, refs, refsNear, refById, REF_KIND, loadHeights, hasHeights, heightAt, T9_RULES, t9Rule, setT9Rule, t9Check,
     PRESETS, presetOf, applyBase, baseRecords, correctBase, addBase, deleteBase, verifyBase, unverifyBase, exportGeo, exportCorrections, importRecords,
     project, pointAt, laneOf, savePosition, lastPosition, csvCell,
     get records() { return records; }
