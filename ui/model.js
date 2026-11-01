@@ -639,7 +639,7 @@
     if (r.kind === 'stage' && r.stageName == null) { const f = data.byId[r.featureId]; if (f) r.stageName = f.ladder[r.stage]; }
     records.push(r);
     saveRecords();
-    if (r.kind === 'stage' || r.kind === 'defect') mirrorLegacy(r.featureId);
+    if (r.kind === 'stage' || r.kind === 'defect' || r.kind === 'range') mirrorLegacy(r.featureId);
     if (r.kind === 'base') applyBase();
     return r;
   }
@@ -800,10 +800,19 @@
     const seen = ownSeen(fid);
     const defects = openDefects(fid);
     const now = new Date().toISOString();
+    // A Type 9 run says how much is done in its notes; the status says only done or under way.
+    if (rangeable(f)) adoptForeignRanges(f);
+    const cov = rangeable(f) ? coverOf(f) : null;
+    let status = seen ? toLegacyStatus(f, seen.stage) : 'Not Started';
+    let notes = defects.map(d => d.defect + (d.note ? ': ' + d.note : '')).join(' | ');
+    if (cov && cov.ranges.length) {
+      status = cov.full ? toLegacyStatus(f, f.ladder.length - 1) : 'Concreted';
+      notes = [notes, rangeNote(cov.ranges)].filter(Boolean).join(' | ');
+    }
     legacy[fid] = {
       assetId: fid, chainage_str: f.raw.chainage_str, short_code: f.raw.short_code, typology: f.full,
-      status: seen ? toLegacyStatus(f, seen.stage) : 'Not Started',
-      notes: defects.map(d => d.defect + (d.note ? ': ' + d.note : '')).join(' | '),
+      status,
+      notes,
       hasDefect: defects.length > 0, date: now.replace('T', ' ').slice(0, 16), updated_at: now, inspected_by: inspector(), source: 'walk'
     };
     const key = LEGACY_KEYS[f.sub];
@@ -867,18 +876,48 @@
     });
     return out;
   }
+  // The completed ranges travel to the cloud database in the row's notes, since the table has no column for
+  // them: '[T9 done 20900 to 21000; 21100 to 21225]', chainages in metres. The office import writes the same.
+  const RANGE_NOTE = /\[T9 done ([^\]]*)\]/;
+  function rangeNote(ranges) {
+    return ranges.length ? '[T9 done ' + ranges.map(([a, b]) => Math.round(a * 10) / 10 + ' to ' + Math.round(b * 10) / 10).join('; ') + ']' : '';
+  }
+  function parseRangeNote(notes) {
+    const m = RANGE_NOTE.exec(notes || '');
+    if (!m) return [];
+    return m[1].split(';').map(x => x.trim().match(/^(-?\d+(?:\.\d+)?) to (-?\d+(?:\.\d+)?)$/)).filter(Boolean).map(x => [Number(x[1]), Number(x[2])]).filter(r => r[1] > r[0]);
+  }
+  // Ranges the database holds that this phone has no record of: the office import, or another phone. A row
+  // this phone wrote itself (source 'walk') is already in its own records, so undoing one stays undone.
+  function foreignRanges(f) {
+    const lg = legacy[f.id];
+    return lg && lg.source !== 'walk' ? parseRangeNote(lg.notes) : [];
+  }
+  // Before this phone writes over such a row, those ranges become its own records (undoable like the rest),
+  // so the row it writes still carries them.
+  function adoptForeignRanges(f) {
+    const lg = legacy[f.id];
+    const got = foreignRanges(f).map(([a, b]) => [Math.max(f.ch0, a), Math.min(f.ch1, b)]).filter(r => r[1] - r[0] >= 0.5);
+    got.forEach(([a, b]) => {
+      const mine = live(r => r.kind === 'range' && r.featureId === f.id).some(r => Math.abs(r.from - a) < 0.2 && Math.abs(r.to - b) < 0.2);
+      if (!mine) records.push({ id: uid(), at: (lg && lg.updated_at) || new Date().toISOString(), by: (lg && lg.inspected_by) || 'office', kind: 'range', featureId: f.id, from: a, to: b, line: f.line, sub: f.sub, ch: a, pos: null, imported: true });
+    });
+    if (got.length) saveRecords();
+  }
   function coverOf(f) {
     if (!rangeable(f)) return null;
     const recs = live(r => r.kind === 'range' && r.featureId === f.id);
     const own = ownSeen(f.id);
     const byStage = !!(own && own.stage >= f.ladder.length - 1);
-    if (!recs.length && !byStage) return null;
-    const list = recs.map(r => [Math.max(f.ch0, Math.min(r.from, r.to)), Math.min(f.ch1, Math.max(r.from, r.to))]).filter(r => r[1] > r[0]);
+    const foreign = foreignRanges(f);
+    if (!recs.length && !byStage && !foreign.length) return null;
+    const list = recs.map(r => [r.from, r.to]).concat(foreign).map(([a, b]) => [Math.max(f.ch0, Math.min(a, b)), Math.min(f.ch1, Math.max(a, b))]).filter(r => r[1] > r[0]);
     if (byStage) list.push([f.ch0, f.ch1]);
     const ranges = mergeRanges(list);
     const m = ranges.reduce((n, [a, b]) => n + b - a, 0);
-    const lastAt = recs.map(r => r.at).concat(byStage ? [own.at] : []).sort().pop() || null;
-    return { ranges, m, len: f.ch1 - f.ch0, full: m >= f.ch1 - f.ch0 - 1, lastAt, records: recs };
+    const lg = legacy[f.id];
+    const lastAt = recs.map(r => r.at).concat(byStage ? [own.at] : []).concat(foreign.length && lg ? [lg.updated_at || (lg.date || '').replace(' ', 'T')] : []).filter(Boolean).sort().pop() || null;
+    return { ranges, m, len: f.ch1 - f.ch0, full: m >= f.ch1 - f.ch0 - 1, lastAt, records: recs, foreign: foreign.length };
   }
   function addRange(fid, from, to, pos) {
     const f = data.byId[fid];
@@ -915,7 +954,9 @@
       if (cov.full) Object.assign(res, { s: max, best: max, fill: 'solid', partBuilt: false, stalled: false, bucket: 'done' });
       else {
         const stl = !!cov.lastAt && (Date.now() - new Date(cov.lastAt).getTime()) > 182 * 864e5;
-        Object.assign(res, { best: Math.max(best, 1), partBuilt: true, stalled: stl, fill: 'ranges', bucket: stl ? 'stalled' : 'moving', lastAt: [lastAt, cov.lastAt].filter(Boolean).sort().pop() });
+        // the ranges are the authority: an office row's 'Concreted' must not read as finished on a short ladder
+        const cap = Math.max(0, max - 1);
+        Object.assign(res, { s: res.s == null ? null : Math.min(res.s, cap), best: Math.min(Math.max(best, 1), cap), partBuilt: true, stalled: stl, fill: 'ranges', bucket: stl ? 'stalled' : 'moving', lastAt: [lastAt, cov.lastAt].filter(Boolean).sort().pop() });
       }
     }
     return res;
@@ -1070,7 +1111,7 @@
     fmtCh, fmtPlus, parseCh, fmtDate, fmtTime, monthsBetween, esc, DAYS, MONTHS,
     inspector, setInspector, addRecord, voidRecord, live, recordsFor, seenOf, ownSeen, openDefects,
     designChanges, statusOf, drafts, saveDraft, putPhoto, getPhoto, uid, loadLegacy,
-    loadSections, sectionAt, loadT9Schedule, hasT9Schedule, rangeable, coverOf, addRange, isSpan, typeOf, progressOf, typeProgress, T9_SCHEDULE_ON, refs, refsNear, refById, REF_KIND, loadHeights, hasHeights, heightAt, T9_RULES, t9Rule, setT9Rule, t9Check,
+    loadSections, sectionAt, loadT9Schedule, hasT9Schedule, rangeable, coverOf, addRange, rangeNote, parseRangeNote, isSpan, typeOf, progressOf, typeProgress, T9_SCHEDULE_ON, refs, refsNear, refById, REF_KIND, loadHeights, hasHeights, heightAt, T9_RULES, t9Rule, setT9Rule, t9Check,
     PRESETS, presetOf, applyBase, baseRecords, correctBase, addBase, deleteBase, verifyBase, unverifyBase, exportGeo, exportCorrections, importRecords,
     project, pointAt, laneOf, savePosition, lastPosition, csvCell,
     get records() { return records; }

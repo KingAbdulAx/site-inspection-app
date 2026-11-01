@@ -33,7 +33,7 @@ Code: `ui/model.js` (data, append-only records, position/projection), `ui/strip.
 ### Type 9: the contractor's schedule and progress by length
 
 - **Schedule.** The contractor's list in NIG/KAMA/FM/2026/4218 (216 stretches, 164,625 m) is in `data/t9_letter_4218.json`. `node scripts/t9/build_schedule.js` turns it into the Type 9 pieces the drawings do not show (`data/t9_schedule.json`): each on the side the platform falls to (the letter gives chainages only), no ditch on bridge decks, and a Type 9 already drawn stays the design piece. Pieces are marked **Letter 4218** in the sheet, lists and history. On for Section 02 only for now (`T9_SCHEDULE_ON` in `ui/model.js`).
-- **Progress.** Type 9 is precast and reported only when a stretch is done, so it is tracked by completed ranges, not stages. The record sheet shows metres done, takes **Whole stretch completed** in one tap or a part between two chainages (Here fills each from where you stand), and undo voids it. Overlapping ranges merge. Ranges are kept on the phone (they are not yet written to the cloud database).
+- **Progress.** Type 9 is precast and reported only when a stretch is done, so it is tracked by completed ranges, not stages. The record sheet shows metres done, takes **Whole stretch completed** in one tap or a part between two chainages (Here fills each from where you stand), and undo voids it. Overlapping ranges merge. Ranges go to the cloud database in the row's notes (`[T9 done 20900 to 21000; …]`), and the office import writes the same, so the office's progress and the phone's add up; see `scripts/progress/README.md`.
 - **Extents.** Every ditch shows From → To and its length in the record sheet, the list and the feature page.
 
 ### Site progress (execution charts and ditch sheets)

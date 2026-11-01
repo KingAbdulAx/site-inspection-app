@@ -21,8 +21,12 @@
  * once its joints are done; backfill is not a stage.
  *
  * Ditches: executed runs (Type 1, Type 9) are laid over the app's ditches of
- * the same type and side. 90% covered, or no more than 15 m left, is Completed;
- * less is Concreted, with the executed metres in the note.
+ * the same type and side. Type 1: 90% covered, or no more than 15 m left, is Completed; less is
+ * Concreted, with the executed metres in the note. Type 9 is precast and tracked by length: the
+ * executed ranges go into the row's notes as '[T9 done 20900 to 21000; ...]' (what the app reads as
+ * completed metres), Completed when no more than 5 m is left, otherwise Concreted. The Type 9 pieces
+ * from the contractor's schedule (data/t9_schedule.json) are laid over too. --out DIR sends the
+ * outputs elsewhere (default data/progress).
  */
 'use strict';
 const fs = require('fs');
@@ -36,7 +40,7 @@ const ditchDate = opt('--ditch-date') || asof;
 const charts = many('--chart').map(s => { const [sub, file] = s.split('='); return { sub, file }; });
 const ditchFile = opt('--ditches');
 const existing = opt('--existing') ? JSON.parse(fs.readFileSync(opt('--existing'), 'utf8')) : [];
-const OUT = path.join(__dirname, '..', '..', 'data', 'progress');
+const OUT = opt('--out') || path.join(__dirname, '..', '..', 'data', 'progress');
 const SECTION = { KNDW: 'S01', DWKZ: 'S02', KZDR: 'S03', DRMR: 'S04', MRJB: 'S05' };
 // --tag S04 names the outputs culverts_from_charts_S04.json, progress_<asof>_S04.json/.md, so a
 // later section's run does not overwrite an earlier one.
@@ -51,6 +55,8 @@ global.localStorage = { getItem: k => (k in store ? store[k] : null), setItem: (
 ['data/bundle.js', 'data/section01_bundle.js', 'data/section02_bundle.js', 'data/section04_bundle.js', 'data/section05_bundle.js', 'ui/model.js'].forEach(f => require(path.join(ROOT, f)));
 const DI = window.DI;
 DI.init();
+// Type 9 pieces of the contractor's schedule are features too, so executed runs are laid over them.
+DI.loadT9Schedule(JSON.parse(fs.readFileSync(path.join(ROOT, 'data/t9_schedule.json'), 'utf8')), DI.T9_SCHEDULE_ON);
 
 const MAIN = /^(-?\d+\.(\d+|[A-Z])|E\.\d+|CC ?\d+)$/;
 const COL = { excavation: 'Excavation', bedding: 'Bedding', installed: 'Installed', haunch: 'Haunched', apron: 'Apron', wings: 'Wing walls' };
@@ -171,13 +177,18 @@ if (ditchFile) {
     let cov = 0, end = -1e12;
     iv.forEach(([a, b]) => { if (b <= end) return; cov += b - Math.max(a, end); end = b; });
     const L = f.ch1 - f.ch0;
-    const complete = cov / L >= 0.9 || L - cov <= 15;
+    const t9 = f.code === 'T9';
+    // Type 9 is tracked by length: finished when no more than 5 m is left, and the ranges go in the notes
+    const complete = t9 ? L - cov <= 5 : cov / L >= 0.9 || L - cov <= 15;
+    const merged = [];
+    iv.forEach(([a, b]) => { const l = merged[merged.length - 1]; if (l && a <= l[1] + 0.5) l[1] = Math.max(l[1], b); else merged.push([a, b]); });
     const status = complete ? f.ladder[f.ladder.length - 1] : 'Concreted';
+    const stageOf = complete ? f.ladder.length - 1 : f.ladder.indexOf('Concreted') >= 0 ? f.ladder.indexOf('Concreted') : Math.max(0, f.ladder.length - 2);
     const irs = Array.from(new Set(over.map(r => [r.ir1, r.ir2].filter(Boolean).join(' / ')).filter(Boolean)));
     const date = over.map(r => r.date).filter(Boolean).sort().pop() || ditchDate;
     if (complete) st.completed++; else st.partial.push(f.code + ' ' + f.side + ' ' + DI.fmtCh(f.ch0) + '–' + DI.fmtCh(f.ch1) + ': ' + Math.round(cov) + ' of ' + Math.round(L) + ' m');
-    rows.push({ asset_id: f.id, sub: f.sub, stage: f.ladder.indexOf(status), ladder: f.ladder, status: statusName(f.ladder, f.ladder.indexOf(status)), has_defect: false, inspection_date: date, inspected_by: 'Ditch progress ' + fam(f) + ' ' + dmy(ditchDate),
-      notes: 'Ditch progress ' + fam(f) + ' ' + dmy(ditchDate) + ' · ' + Math.round(cov) + ' of ' + Math.round(L) + ' m executed' + (complete ? '' : ' (' + iv.map(([a, b]) => DI.fmtCh(a) + '–' + DI.fmtCh(b)).join(', ') + ')') + (irs.length ? ' · ' + irs.join('; ') : '') });
+    rows.push({ asset_id: f.id, sub: f.sub, stage: stageOf, ladder: f.ladder, status: complete ? 'Completed & Approved' : 'Concreted', has_defect: false, inspection_date: date, inspected_by: 'Ditch progress ' + fam(f) + ' ' + dmy(ditchDate),
+      notes: 'Ditch progress ' + fam(f) + ' ' + dmy(ditchDate) + ' · ' + Math.round(cov) + ' of ' + Math.round(L) + ' m executed' + (complete ? '' : ' (' + iv.map(([a, b]) => DI.fmtCh(a) + '–' + DI.fmtCh(b)).join(', ') + ')') + (irs.length ? ' · ' + irs.join('; ') : '') + (t9 ? ' · ' + DI.rangeNote(merged) : '') });
   });
   st.lost = done.filter(r => !feats.some(f => fam(f) === r.code && f.side === r.sd && f.ch1 > r.ch0 && f.ch0 < r.ch1)).map(r => r.code + ' ' + r.side + ' ' + r.a + '–' + r.b + ' (' + r.executed + ' m, ' + (r.ir1 || 'no IR') + ')');
 }
@@ -190,7 +201,10 @@ rows.forEach(r => {
   const e = have.get(r.asset_id);
   if (!e) { out.push(r); return; }
   const was = dbStage(r.ladder, e.status);
-  if (was != null && r.stage > was && String(e.updated_at).slice(0, 10) < r.inspection_date) {
+  // A Type 9 row the office wrote earlier is replaced when more of it is done now
+  const rangeLen = n => DI.parseRangeNote(n).reduce((m, [a, b]) => m + b - a, 0);
+  const grew = DI.parseRangeNote(r.notes).length > 0 && /^Ditch progress/.test(e.inspected_by || '') && rangeLen(r.notes) > rangeLen(e.notes) + 0.5 && String(e.updated_at).slice(0, 10) <= r.inspection_date;
+  if (grew || (was != null && r.stage > was && String(e.updated_at).slice(0, 10) < r.inspection_date)) {
     r.notes += ' · was ' + e.status + ' (' + String(e.updated_at).slice(0, 10) + ')';
     r.replaces = { status: e.status, by: e.inspected_by, at: e.updated_at };
     out.push(r);
