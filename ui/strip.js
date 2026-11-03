@@ -320,7 +320,11 @@
       s += '<line x1="' + g.cx + '" y1="0" x2="' + g.cx + '" y2="' + H + '" style="stroke:var(--ink);stroke-width:4"/>';
 
       // features
-      const feats = state.features.filter(f => f.ch1 >= lo && f.ch0 <= hi);
+      const feats = state.features.filter(f => {
+        const c0 = f.built ? Math.min(f.ch0, f.built.ch0) : f.ch0;
+        const c1 = f.built ? Math.max(f.ch1, f.built.ch1) : f.ch1;
+        return c1 >= lo && c0 <= hi;
+      });
       const tags = [];
       const points = [];
       const crossChips = [];
@@ -373,13 +377,68 @@
         if (derived) { a += TOL; b -= TOL; }
         const ya = Y(a), yb = Y(b);
         const y0 = Math.max(-6, Math.min(ya, yb)), y1 = Math.min(H + 6, Math.max(ya, yb));
+
+        const hasBuilt = !!f.built;
+        const d0 = Math.min(f.ch0, f.ch1), d1 = Math.max(f.ch0, f.ch1);
+        const b0 = hasBuilt ? Math.min(f.built.ch0, f.built.ch1) : d0;
+        const b1 = hasBuilt ? Math.max(f.built.ch0, f.built.ch1) : d1;
+
         if (y1 > y0) {
-          s += '<rect x="' + (x - bw / 2) + '" y="' + y0 + '" width="' + bw + '" height="' + (y1 - y0) + '" style="' + fillStyle(st.fill) + ';stroke-width:2' + faded + '"' + (st.fill === 'never' ? ' stroke-dasharray="4 3"' : '') + '/>';
-          // completed ranges, solid inside the outline
+          // Design outline: unchanged. If built extent exists with shortfall, outline remains but solid fill is constrained to built
+          const outlineFill = hasBuilt ? (st.fill === 'never' ? fillStyle('never') : 'fill:var(--surface);stroke:var(--ink)') : fillStyle(st.fill);
+          s += '<rect x="' + (x - bw / 2) + '" y="' + y0 + '" width="' + bw + '" height="' + (y1 - y0) + '" style="' + outlineFill + ';stroke-width:2' + faded + '"' + (st.fill === 'never' ? ' stroke-dasharray="4 3"' : '') + '/>';
+          
+          // If solid fill (completed) and built extent exists, fill only the built portion
+          if (hasBuilt && st.fill === 'solid') {
+            const ysb0 = Math.max(-6, Math.min(Y(b0), Y(b1))), ysb1 = Math.min(H + 6, Math.max(Y(b0), Y(b1)));
+            if (ysb1 > ysb0) s += '<rect x="' + (x - bw / 2) + '" y="' + ysb0 + '" width="' + bw + '" height="' + (ysb1 - ysb0) + '" style="fill:var(--ink);stroke:var(--ink);stroke-width:2' + faded + '"/>';
+          }
+
+          // Completed ranges (Type 9): solid inside outline and any added extent
           if (st.cover && !st.cover.full) st.cover.ranges.forEach(([ra, rb]) => {
-            const yr0 = Math.max(y0, Math.min(Y(ra), Y(rb))), yr1 = Math.min(y1, Math.max(Y(ra), Y(rb)));
+            const yr0 = Math.max(-6, Math.min(Y(ra), Y(rb))), yr1 = Math.min(H + 6, Math.max(Y(ra), Y(rb)));
             if (yr1 > yr0) s += '<rect x="' + (x - bw / 2) + '" y="' + yr0 + '" width="' + bw + '" height="' + (yr1 - yr0) + '" style="fill:var(--ink);stroke:var(--ink);stroke-width:2' + faded + '"/>';
           });
+        }
+
+        // As-built modifications: extensions & shortfall markers
+        if (hasBuilt) {
+          const labelX = (f.side === 'L' ? x - bw / 2 - 4 : x + bw / 2 + 4);
+          const anchor = (f.side === 'L' ? 'end' : 'start');
+
+          // Shortfall marker: thin line where construction stopped short of design
+          if (b0 > d0 + 0.1) {
+            const yCut = Y(b0);
+            s += '<line x1="' + (x - bw / 2 - 2) + '" y1="' + yCut + '" x2="' + (x + bw / 2 + 2) + '" y2="' + yCut + '" style="stroke:var(--ink);stroke-width:1.5" stroke-dasharray="2 2"/>';
+          }
+          if (b1 < d1 - 0.1) {
+            const yCut = Y(b1);
+            s += '<line x1="' + (x - bw / 2 - 2) + '" y1="' + yCut + '" x2="' + (x + bw / 2 + 2) + '" y2="' + yCut + '" style="stroke:var(--ink);stroke-width:1.5" stroke-dasharray="2 2"/>';
+          }
+
+          // Length added at start (b0 < d0)
+          if (b0 < d0 - 0.1) {
+            const ya0 = Math.max(-6, Math.min(Y(b0), Y(d0))), ya1 = Math.min(H + 6, Math.max(Y(b0), Y(d0)));
+            if (ya1 > ya0) {
+              s += '<rect x="' + (x - bw / 2) + '" y="' + ya0 + '" width="' + bw + '" height="' + (ya1 - ya0) + '" style="fill:var(--surface);stroke:var(--ink);stroke-width:2' + faded + '"/>';
+              // joint marker at design end
+              s += '<line x1="' + (x - bw / 2 - 2) + '" y1="' + Y(d0) + '" x2="' + (x + bw / 2 + 2) + '" y2="' + Y(d0) + '" style="stroke:var(--ink);stroke-width:1.5"/>';
+              // +Xm label at outer end
+              s += '<text x="' + labelX + '" y="' + (Y(b0) + 4) + '" text-anchor="' + anchor + '" style="fill:var(--ink);font:700 11px var(--f-cond)">+' + Math.round(d0 - b0) + 'm</text>';
+            }
+          }
+
+          // Length added at end (b1 > d1)
+          if (b1 > d1 + 0.1) {
+            const ya0 = Math.max(-6, Math.min(Y(d1), Y(b1))), ya1 = Math.min(H + 6, Math.max(Y(d1), Y(b1)));
+            if (ya1 > ya0) {
+              s += '<rect x="' + (x - bw / 2) + '" y="' + ya0 + '" width="' + bw + '" height="' + (ya1 - ya0) + '" style="fill:var(--surface);stroke:var(--ink);stroke-width:2' + faded + '"/>';
+              // joint marker at design end
+              s += '<line x1="' + (x - bw / 2 - 2) + '" y1="' + Y(d1) + '" x2="' + (x + bw / 2 + 2) + '" y2="' + Y(d1) + '" style="stroke:var(--ink);stroke-width:1.5"/>';
+              // +Xm label at outer end
+              s += '<text x="' + labelX + '" y="' + (Y(b1) + 4) + '" text-anchor="' + anchor + '" style="fill:var(--ink);font:700 11px var(--f-cond)">+' + Math.round(b1 - d1) + 'm</text>';
+            }
+          }
         }
         if (derived) {
           const capPx = Math.max(12, TOL * px);
@@ -391,8 +450,12 @@
           });
         }
         if (st.removed) s += '<line x1="' + (x - 9) + '" y1="' + y0 + '" x2="' + (x + 9) + '" y2="' + y1 + '" style="stroke:var(--rev);stroke-width:2.5"/>';
-        hits.push({ f, x0: x - 10, x1: x + 10, y0: y0 - 4, y1: y1 + 4 });
-        tags.push({ x, yTop: Math.min(Y(f.ch0), Y(f.ch1)), yBot: Math.max(Y(f.ch0), Y(f.ch1)), code: f.code });
+        const hitY0 = hasBuilt ? Math.min(y0, Y(b0), Y(b1)) : y0;
+        const hitY1 = hasBuilt ? Math.max(y1, Y(b0), Y(b1)) : y1;
+        hits.push({ f, x0: x - 10, x1: x + 10, y0: hitY0 - 4, y1: hitY1 + 4 });
+        const tagY0 = hasBuilt ? Math.min(Y(f.ch0), Y(f.ch1), Y(b0), Y(b1)) : Math.min(Y(f.ch0), Y(f.ch1));
+        const tagY1 = hasBuilt ? Math.max(Y(f.ch0), Y(f.ch1), Y(b0), Y(b1)) : Math.max(Y(f.ch0), Y(f.ch1));
+        tags.push({ x, yTop: tagY0, yBot: tagY1, code: f.code });
         if (st.defects.length) s += warnMark(x + 8, Math.max(8, Math.min(H - 24, Math.min(ya, yb) - 4)));
         if (st.changes.length) s += revMark(x, Math.max(14, Math.min(ya, yb) + 20), st.changes[0], W);
       });

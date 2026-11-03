@@ -222,3 +222,11 @@ See also the master workspace log at `../MISTAKES.md`.
 
 
 
+
+### [2026-11-03 09:46] — PowerShell Quotation and Parameter Parser Failure in Inline Node.js Command
+
+- **Date/Time:** 2026-11-03 09:46 (WAT)
+- **Context:** Patching `ui/base.js` with inline Node.js snippet (`node -e "..."`) in PowerShell.
+- **The Mistake/Error:** PowerShell parsed escaped quotes and nested commas as cmdlet parameter separators, failing with `ParserError: Missing argument in parameter list`.
+- **The Fix:** Avoid multi-line inline scripts in PowerShell; use dedicated patch scripts or node files to perform code manipulation.
+- **Lesson Learned:** On Windows PowerShell, execute JavaScript code manipulation via script files rather than `node -e` with inline string literals containing commas or nested quotation.

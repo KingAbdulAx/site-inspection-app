@@ -36,14 +36,35 @@
   }
   // A ditch or pipe that runs along the line: it has two ends and a length. Crossings and
   // labels are a single place.
-  function isSpan(f) { return (f.kind === 'linear' || f.kind === 'buried') && f.ch1 - f.ch0 > 1; }
-  function lenText(f) { return isSpan(f) ? Math.round(f.ch1 - f.ch0).toLocaleString('en-GB') + ' m' : ''; }
+  function isSpan(f) { return (f.kind === 'linear' || f.kind === 'buried') && (f.built ? f.built.len : f.ch1 - f.ch0) > 1; }
+  function diffTag(f) {
+    if (!f.built) return '';
+    const d = Math.round(f.built.len - (f.ch1 - f.ch0));
+    const sign = d > 0 ? '+' : '';
+    return '<span class="chip measured" style="font-weight:700;font-size:12px;padding:1px 5px;margin-left:4px">' + sign + d + ' m</span>';
+  }
+  function quietExtentsHtml(f) {
+    if (!f.built) return '';
+    const d = Math.round(f.built.len - (f.ch1 - f.ch0));
+    const tag = d !== 0 ? (d > 0 ? ', +' : ', ') + d + ' m on site' : '';
+    return '<div class="quiet-extents" style="font:500 13.5px/1.35 var(--f-sans);color:var(--ink-2);margin-top:5px">' +
+      'Design ' + DI.fmtCh(f.ch0, f.cert === 'exact' ? 3 : 0) + ' → ' + DI.fmtCh(f.ch1, f.cert === 'exact' ? 3 : 0) + ' (' + Math.round(f.ch1 - f.ch0) + ' m) · ' +
+      'As built ' + DI.fmtCh(f.built.ch0, 1) + ' → ' + DI.fmtCh(f.built.ch1, 1) + ' (' + Math.round(f.built.len) + ' m' + tag + ')</div>';
+  }
+  function lenText(f) {
+    if (!isSpan(f)) return '';
+    const len = Math.round(f.built ? f.built.len : f.ch1 - f.ch0);
+    return len.toLocaleString('en-GB') + ' m' + diffTag(f);
+  }
   function chText(f, arrow) {
-    if (f.cert === 'exact') return DI.fmtCh(f.ch0, 3) + (isSpan(f) && arrow !== false ? ' → ' + DI.fmtCh(f.ch1, 3) : '');
-    if (f.cert === 'label') return 'near ' + DI.fmtCh(f.ch0);
-    if (f.cert === 'measured') return DI.fmtCh(f.ch0, 1) + (f.ch1 - f.ch0 > 1 && arrow !== false ? ' → ' + DI.fmtCh(f.ch1, 1) : '');
-    if (f.ch1 - f.ch0 > 1) return '≈' + DI.fmtCh(f.ch0) + (arrow === false ? '' : ' → ' + DI.fmtCh(f.ch1));
-    return '≈' + DI.fmtCh(f.ch0);
+    const ch0 = f.built ? f.built.ch0 : f.ch0;
+    const ch1 = f.built ? f.built.ch1 : f.ch1;
+    const isS = isSpan(f);
+    if (f.cert === 'exact' && !f.built) return DI.fmtCh(ch0, 3) + (isS && arrow !== false ? ' → ' + DI.fmtCh(ch1, 3) : '');
+    if (f.cert === 'label' && !f.built) return 'near ' + DI.fmtCh(ch0);
+    if (f.cert === 'measured' || f.built) return DI.fmtCh(ch0, 1) + (isS && arrow !== false ? ' → ' + DI.fmtCh(ch1, 1) : '');
+    if (isS) return '≈' + DI.fmtCh(ch0) + (arrow === false ? '' : ' → ' + DI.fmtCh(ch1));
+    return '≈' + DI.fmtCh(ch0);
   }
   function chHtml(f, arrow) {
     const t = chText(f, arrow);
@@ -89,7 +110,7 @@
     if (Math.abs(d) < 1.5) return 'here';
     return words(d);
   }
-  Object.assign(DA, { sideBadge, certChip, chText, chHtml, isSpan, lenText, meter, stageLabel, offText, relText });
+  Object.assign(DA, { sideBadge, certChip, chText, chHtml, isSpan, lenText, meter, stageLabel, offText, relText, diffTag, quietExtentsHtml });
 
   // ----------------------------------------------------------- theme
   function setTheme(t) {
@@ -528,7 +549,7 @@
     const max = f.ladder.length - 1;
     const rel = relText(f, S.pos.ch, S.pos.facing);
     let h = '<div class="fhead">' + sideBadge(f.side, 'xl') + '<div style="min-width:0"><button class="t1" data-act="feature" data-id="' + esc(f.id) + '" style="text-align:left">' + I.typeIcon(f.icon) + '<span>' + esc(f.name) + '</span></button>' +
-      '<div class="t2">' + chHtml(f) + (isSpan(f) ? ' <b class="len">' + lenText(f) + '</b>' : '') + ' ' + certChip(f) + ' <span class="rel">' + esc(rel) + '</span></div>' + fillRange(f) + '</div></div>';
+      '<div class="t2">' + chHtml(f) + (isSpan(f) ? ' <b class="len">' + lenText(f) + '</b>' : '') + ' ' + certChip(f) + ' <span class="rel">' + esc(rel) + '</span></div>' + quietExtentsHtml(f) + fillRange(f) + '</div></div>';
     // A record from the office (the cloud database) says whose it is: a colleague, or a progress chart.
     const office = st.seen && st.seen.office;
     h += '<div class="pair mt16"><div class="built"><div class="part"><span class="chip seen">' + (office ? 'Office' : 'Seen by you') + '</span>' + meter(f, { s: st.s == null ? 0 : st.s, c: -1 }, '') +
@@ -564,15 +585,17 @@
     h += '<div class="row-btns mt8"><button class="btn defect" data-act="defect" data-id="' + esc(f.id) + '">' + I.icon('warn') + 'Defect</button>' +
       '<button class="btn" data-act="photo" data-id="' + esc(f.id) + '">' + I.icon('camera') + 'Photo</button>' +
       '<button class="btn" data-act="note" data-id="' + esc(f.id) + '">' + I.icon('notes') + 'Note</button></div>';
+    if (isSpan(f)) h += '<button class="btn mt8" data-act="extent-edit" data-id="' + esc(f.id) + '" style="min-height:48px;font-weight:700">' + I.icon('sizes') + 'Built to a different length ›</button>';
     h += '<button class="btn mt8" data-act="feature" data-id="' + esc(f.id) + '" style="min-height:48px;border:0;background:transparent;font-size:17px;text-decoration:underline">Everything about this feature ›</button>';
     openOverlay(h, 'sheet tall');
   }
   // A Type 9 run: how much is done, and one tap (or two chainages) to add more.
   function rangeBlock(f, st) {
-    const cov = st.cover, len = f.ch1 - f.ch0, done = cov ? cov.m : 0;
-    const last = cov && cov.ranges.length ? cov.ranges[cov.ranges.length - 1][1] : f.ch0;
-    const from = last < f.ch1 - 1 ? last : f.ch0;
-    const to = S.pos.ch > from + 1 && S.pos.ch <= f.ch1 ? S.pos.ch : f.ch1;
+    const ch0 = f.built ? f.built.ch0 : f.ch0, ch1 = f.built ? f.built.ch1 : f.ch1;
+    const cov = st.cover, len = ch1 - ch0, done = cov ? cov.m : 0;
+    const last = cov && cov.ranges.length ? cov.ranges[cov.ranges.length - 1][1] : ch0;
+    const from = last < ch1 - 1 ? last : ch0;
+    const to = S.pos.ch > from + 1 && S.pos.ch <= ch1 ? S.pos.ch : ch1;
     const ch = v => DI.fmtCh(Math.round(v));
     let h = '<div style="font:700 21px/1.2 var(--f-sans);margin:18px 0 10px;color:var(--ink-2)">How much is done?</div>';
     h += '<div class="rg-sum"><b>' + Math.round(done) + ' of ' + Math.round(len) + ' m</b><span>' + Math.round(done / len * 100) + '%</span></div>';
@@ -596,6 +619,159 @@
   }
   DA.recordRange = recordRange;
   DA.openRecord = openRecord;
+
+  // ------------------------------------------------ extent editing sheet
+  function openExtentEdit(fid) {
+    const f = DI.data.byId[fid];
+    if (!f) return;
+    let activeEnd = 'end'; // 'start' | 'end'
+    let from = f.built ? f.built.ch0 : f.ch0;
+    let to = f.built ? f.built.ch1 : f.ch1;
+    let note = f.built ? (f.built.note || '') : '';
+    const ov = openOverlay('', 'sheet tall');
+
+    const draw = () => {
+      const len = to - from;
+      const valid = len >= 0.5;
+      const diffLen = Math.round(len - (f.ch1 - f.ch0));
+      const diffSign = diffLen > 0 ? '+' : '';
+      const diffTxt = diffLen !== 0 ? (diffSign + diffLen + ' m on site (' + (diffLen > 0 ? 'longer' : 'shorter') + ')') : 'matches design length (shifted)';
+
+      let h = '<div class="fhead">' + sideBadge(f.side, 'xl') + '<div style="min-width:0">' +
+        '<div style="font:700 24px/1.1 var(--f-sans)">' + esc(f.name) + '</div>' +
+        '<div class="t2" style="margin-top:4px">' + DI.fmtCh(f.ch0, 1) + ' → ' + DI.fmtCh(f.ch1, 1) + ' · design ' + Math.round(f.ch1 - f.ch0) + ' m</div>' +
+        '</div></div>';
+
+      h += '<div style="font:700 21px/1.2 var(--f-sans);margin:16px 0 10px;color:var(--ink-2)">Built to a different length</div>';
+      h += '<p class="note" style="margin-bottom:14px">Design stays as drawn. You record the as-built start and end as seen on site.</p>';
+
+      // End selector (Start or End)
+      h += '<div class="segm" style="grid-template-columns:1fr 1fr;margin-bottom:14px">' +
+        '<button data-act="ee-pick-end" data-end="start" class="' + (activeEnd === 'start' ? 'on' : '') + '">Start · ' + DI.fmtCh(from, 1) + '</button>' +
+        '<button data-act="ee-pick-end" data-end="end" class="' + (activeEnd === 'end' ? 'on' : '') + '">End · ' + DI.fmtCh(to, 1) + '</button></div>';
+
+      // 1. Set to where I stand
+      const curStand = Math.round(S.pos.ch);
+      h += '<button class="btn hivis" data-act="ee-stand" style="min-height:54px;width:100%;font-weight:700">' +
+        I.icon('target') + 'Set ' + activeEnd + ' to where I stand (' + DI.fmtCh(curStand) + ')</button>';
+
+      // 2. Type chainage
+      const activeVal = activeEnd === 'start' ? from : to;
+      h += '<div class="lbl-caps" style="margin:16px 0 6px">Or type chainage for ' + activeEnd + '</div>';
+      h += '<div style="display:flex;gap:8px;align-items:center">' +
+        '<input id="eeChInput" class="inp" inputmode="decimal" autocomplete="off" value="' + DI.fmtCh(activeVal, 1) + '" style="font-family:var(--f-mono);font-size:20px;font-weight:600;flex:1;min-width:0">' +
+        '<button class="btn" data-act="ee-apply-input" style="width:auto;flex:none;min-width:84px;min-height:56px;padding:0 16px;font-weight:700">Set</button></div>';
+
+      // 3. Nudge buttons
+      h += '<div class="lbl-caps" style="margin:16px 0 6px">Nudge ' + activeEnd + '</div>';
+      h += '<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px">' +
+        '<button class="btn" data-act="ee-nudge" data-n="-25" style="padding:0 2px;font-size:16px;white-space:nowrap;min-height:48px">-25 m</button>' +
+        '<button class="btn" data-act="ee-nudge" data-n="-5" style="padding:0 2px;font-size:16px;white-space:nowrap;min-height:48px">-5 m</button>' +
+        '<button class="btn" data-act="ee-nudge" data-n="5" style="padding:0 2px;font-size:16px;white-space:nowrap;min-height:48px">+5 m</button>' +
+        '<button class="btn" data-act="ee-nudge" data-n="25" style="padding:0 2px;font-size:16px;white-space:nowrap;min-height:48px">+25 m</button></div>';
+
+      // Live Preview Box
+      h += '<div class="lbl-caps" style="margin:18px 0 6px">Preview</div>';
+      if (valid) {
+        h += '<div id="eePreview" style="border:2.5px solid var(--ink);background:var(--surface);padding:14px;border-radius:2px">' +
+          '<div style="font:700 20px/1.2 var(--f-mono);color:var(--ink)">' + DI.fmtCh(from, 1) + ' → ' + DI.fmtCh(to, 1) + '</div>' +
+          '<div style="font:600 16px/1.3 var(--f-sans);margin-top:6px">New length: ' + Math.round(len).toLocaleString('en-GB') + ' m</div>' +
+          '<div style="font:500 14px/1.3 var(--f-sans);color:var(--ink-2);margin-top:4px">' + diffTxt + '</div>';
+        const st = DI.statusOf(f);
+        if (st.cover && st.cover.ranges.some(([a, b]) => a < from || b > to)) {
+          h += '<div class="note" style="margin-top:8px;color:var(--ink-2)">Completed ranges beyond ' + DI.fmtCh(from, 1) + '–' + DI.fmtCh(to, 1) + ' will be clipped in display, but records remain safe.</div>';
+        }
+        h += '</div>';
+      } else {
+        h += '<div class="warn" style="margin-top:0">' + I.icon('warn') + '<div>End must be after start (length must be at least 0.5 m).</div></div>';
+      }
+
+      // Note (optional)
+      h += '<input class="inp mt12" id="eeNote" placeholder="Reason or note (optional)" value="' + esc(note) + '">';
+
+      // Save button
+      h += '<button class="btn primary center mt16" data-act="ee-save"' + (valid ? '' : ' disabled') + ' style="min-height:56px;font-size:18px;font-weight:700">Save as-built extent</button>';
+      h += '<div style="height:48px"></div>';
+
+      (ov.querySelector('.body') || ov.firstChild).innerHTML = h;
+
+      const inp = ov.querySelector('#eeChInput');
+      if (inp) {
+        inp.addEventListener('change', () => {
+          const v = DI.parseCh(inp.value);
+          if (v != null && !isNaN(v)) {
+            if (activeEnd === 'start') from = Math.round(v * 10) / 10;
+            else to = Math.round(v * 10) / 10;
+            draw();
+          }
+        });
+        inp.addEventListener('keydown', e => {
+          if (e.key === 'Enter') {
+            e.preventDefault();
+            const v = DI.parseCh(inp.value);
+            if (v != null && !isNaN(v)) {
+              if (activeEnd === 'start') from = Math.round(v * 10) / 10;
+              else to = Math.round(v * 10) / 10;
+              draw();
+            }
+          }
+        });
+      }
+      const noteEl = ov.querySelector('#eeNote');
+      if (noteEl) noteEl.addEventListener('input', e => { note = e.target.value; });
+    };
+
+    ov.ee = {
+      pickEnd(end) { activeEnd = end; draw(); },
+      stand() {
+        const v = Math.round(S.pos.ch * 10) / 10;
+        if (activeEnd === 'start') from = v; else to = v;
+        draw();
+      },
+      applyInput() {
+        const inp = ov.querySelector('#eeChInput');
+        if (inp) {
+          const v = DI.parseCh(inp.value);
+          if (v != null && !isNaN(v)) {
+            if (activeEnd === 'start') from = Math.round(v * 10) / 10;
+            else to = Math.round(v * 10) / 10;
+            draw();
+          }
+        }
+      },
+      nudge(n) {
+        if (activeEnd === 'start') from = Math.round((from + n) * 10) / 10;
+        else to = Math.round((to + n) * 10) / 10;
+        draw();
+      },
+      save() {
+        if (to - from < 0.5) {
+          toast({ title: 'Invalid extent', sub: 'End must be after start' });
+          return;
+        }
+        recordExtent(fid, from, to, note);
+      }
+    };
+
+    draw();
+  }
+  function recordExtent(fid, from, to, note) {
+    const r = DI.addExtent(fid, from, to, note, snapPos());
+    if (!r) { toast({ title: 'Nothing saved', sub: 'Invalid chainage extent' }); return; }
+    closeAll();
+    toast({
+      title: 'Saved on this phone',
+      sub: 'As built ' + DI.fmtCh(r.from, 1) + ' → ' + DI.fmtCh(r.to, 1) + ' · ' + Math.round(r.to - r.from) + ' m',
+      undo: () => {
+        DI.voidRecord(r.id);
+        render();
+        toast({ title: 'Undone', sub: 'The as-built extent record was withdrawn' });
+      }
+    });
+    render();
+  }
+  DA.openExtentEdit = openExtentEdit;
+  DA.recordExtent = recordExtent;
   // The embankment along a run, on its side: 'Fill 1.6–4.2 m'.
   function fillRange(f) {
     if (f.kind !== 'linear' || !DI.hasHeights(f.sub)) return '';
@@ -810,7 +986,13 @@
         break;
       }
       case 'stage': recordStage(id, Number(b.dataset.stage)); break;
-      case 'range-all': { const f = DI.data.byId[id]; if (f) recordRange(id, f.ch0, f.ch1); break; }
+      case 'range-all': { const f = DI.data.byId[id]; if (f) { const c0 = f.built ? f.built.ch0 : f.ch0, c1 = f.built ? f.built.ch1 : f.ch1; recordRange(id, c0, c1); } break; }
+      case 'extent-edit': closeAll(); openExtentEdit(id); break;
+      case 'ee-pick-end': if (ov && ov.ee) ov.ee.pickEnd(b.dataset.end); break;
+      case 'ee-stand': if (ov && ov.ee) ov.ee.stand(); break;
+      case 'ee-apply-input': if (ov && ov.ee) ov.ee.applyInput(); break;
+      case 'ee-nudge': if (ov && ov.ee) ov.ee.nudge(Number(b.dataset.n)); break;
+      case 'ee-save': if (ov && ov.ee) ov.ee.save(); break;
       case 'range-here': { const el = $('#' + b.dataset.target); if (el) el.value = DI.fmtCh(Math.round(S.pos.ch)); break; }
       case 'range-save': recordRange(id, DI.parseCh($('#rgFrom').value), DI.parseCh($('#rgTo').value)); break;
       case 'undo': if (DA.pendingUndo) { const u = DA.pendingUndo; DA.pendingUndo = null; $('#toastHost').innerHTML = ''; u(); } break;

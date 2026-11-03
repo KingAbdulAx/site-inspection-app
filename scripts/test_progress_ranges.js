@@ -84,6 +84,25 @@ const r2 = out2.rows.find(r => r.asset_id === A.id);
 ok(r2 && r2.replaces && DI.parseRangeNote(r2.notes).reduce((n, [a, b]) => n + b - a, 0) > 340, 'the earlier office row is replaced once more is done: ' + (r2 && r2.notes.slice(-60)));
 ok(!out2.skipped_existing.some(x => x.asset_id === A.id), 'and is not left alone');
 
+
+console.log('--- sync carries as-built extents');
+const extFrom = A.ch0 - 25, extTo = A.ch1 + 35;
+const rExtPhone = DI.addExtent(A.id, extFrom, extTo, 'Extended on site');
+ok(A.built && A.built.ch0 === extFrom && A.built.ch1 === extTo, 'extent saved on phone');
+const rowWithExt = JSON.parse(store[KEY])[A.id];
+ok(rowWithExt && /\[extent \d+(\.\d)? to \d+(\.\d)?\]/.test(rowWithExt.notes), 'phone notes carry [extent ... to ...]: ' + (rowWithExt && rowWithExt.notes));
+const pExt = DI.parseExtentNote(rowWithExt.notes);
+ok(pExt && pExt[0] === extFrom && pExt[1] === extTo, 'parseExtentNote matches from/to');
+
+// Foreign extent adoption: simulate pulling an office row that carries an extent marker
+const foreignRow = { status: 'Concreted', notes: '[T9 done 20950 to 21050] | [extent 20880 to 21260]', inspected_by: 'office', updated_at: '2026-10-31T10:00:00+00:00' };
+store[KEY] = JSON.stringify(Object.assign(JSON.parse(store[KEY]), { [B.id]: foreignRow }));
+DI.loadLegacy();
+ok(B.built && B.built.ch0 === 20880 && B.built.ch1 === 21260, 'foreign extent from cloud row read by app');
+DI.adoptForeignExtent(B);
+ok(DI.records.some(r => r.kind === 'extent' && r.featureId === B.id && r.imported), 'foreign extent adopted as phone own record');
+DI.voidRecord(rExtPhone.id);
+
 fs.rmSync(dir, { recursive: true, force: true });
 console.log('\n' + (fail ? 'FAILED' : 'ALL PASSED') + ': ' + pass + ' passed, ' + fail + ' failed');
 process.exit(fail ? 1 : 0);
