@@ -26,6 +26,10 @@ const box = (p, sel) => p.evaluate(s => { const e = document.querySelector(s); i
   await new Promise(res => server.listen(0, res));
   const BASE = 'http://localhost:' + server.address().port + '/index.html';
   const b = await chromium.launch();
+  // These tests must never reach the live cloud database: the app would sync the records they make
+  // (stages, defects, ranges) as real inspections. Every request to Supabase is refused.
+  const _newContext = b.newContext.bind(b);
+  b.newContext = async (...a) => { const c = await _newContext(...a); await c.route(/supabase\.co/, r => r.abort()); return c; };
   const p = await (await b.newContext({ viewport: { width: 1440, height: 900 } })).newPage();
   const errs = []; p.on('pageerror', e => errs.push(e.message));
   await p.goto(BASE + '?sim=DWKZ:21560:12:4'); await p.waitForTimeout(1200);

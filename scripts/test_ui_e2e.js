@@ -28,6 +28,10 @@ const assert = (c, m) => { if (!c) { console.log('FAIL: ' + m); process.exitCode
   const SP = fs.mkdtempSync(path.join(os.tmpdir(), 'di-e2e-'));
   fs.writeFileSync(SP + '/photo.jpg', JPEG);
   const b = await chromium.launch();
+  // These tests must never reach the live cloud database: the app would sync the records they make
+  // (stages, defects, ranges) as real inspections. Every request to Supabase is refused.
+  const _newContext = b.newContext.bind(b);
+  b.newContext = async (...a) => { const c = await _newContext(...a); await c.route(/supabase\.co/, r => r.abort()); return c; };
   const ctx = await b.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, ignoreHTTPSErrors: true });
   const p = await ctx.newPage();
   const errs = [];
@@ -171,7 +175,7 @@ const assert = (c, m) => { if (!c) { console.log('FAIL: ' + m); process.exitCode
   await t.tap('.ov:last-child [data-act=range-all]'); await t.waitForTimeout(400);
   assert(await t.evaluate(id => DI.statusOf(DI.data.byId[id]).bucket === 'done', big.id), 'Whole stretch completed finishes it in one tap');
   await t.goto(BASE + '?sim=KZDR:100500:-4:3'); await t.waitForTimeout(2000);
-  assert(await t.evaluate(() => !DI.hasT9Schedule('KZDR')), 'other sections have no scheduled pieces yet');
+  assert(await t.evaluate(() => DI.hasT9Schedule('KZDR') && DI.hasT9Schedule('MRJB')), 'the other sections have their scheduled pieces too');
   // embankment height and the Type 9 check (S02 has the longitudinal profile)
   await t.goto(BASE + '?sim=DWKZ:41500:-4:3&tab=section'); await t.waitForTimeout(2500);
   // the Progress tab: scopes, completion by count and by length, types named on their buttons

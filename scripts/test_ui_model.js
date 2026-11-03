@@ -89,8 +89,9 @@ section('Type 9 schedule from letter 4218', () => {
   const before = DI.t9Check('DWKZ', 1.8).km.missing, n0 = DI.data.bySub.DWKZ.length;
   DI.loadT9Schedule(j, DI.T9_SCHEDULE_ON);
   const sched = DI.data.bySub.DWKZ.filter(f => f.sched);
-  ok(JSON.stringify(DI.T9_SCHEDULE_ON) === '["DWKZ"]' && DI.hasT9Schedule('DWKZ') && !DI.hasT9Schedule('KZDR'), 'switched on for Section 02 only');
+  ok(DI.T9_SCHEDULE_ON.length === 5 && ['KNDW', 'DWKZ', 'KZDR', 'DRMR', 'MRJB'].every(s => DI.hasT9Schedule(s)), 'switched on for all five sections');
   ok(sched.length === j.pieces.filter(p => p.sub === 'DWKZ').length && DI.data.bySub.DWKZ.length === n0 + sched.length, 'S02 gets ' + sched.length + ' scheduled pieces');
+  ok(j.pieces.length === DI.data.features.filter(f => f.sched).length, 'all ' + j.pieces.length + ' pieces of the schedule are in the app');
   DI.loadT9Schedule(j, DI.T9_SCHEDULE_ON);
   ok(DI.data.bySub.DWKZ.length === n0 + sched.length, 'loading twice adds nothing more');
   const p = sched[0];
@@ -288,7 +289,7 @@ section('Base data: correct, add, remove, check, bake', () => {
   ok(!D2.data.byId[gone.id], 'baked removal is gone');
   store.KMD_WALK_RECORDS_V1 = keep.recs;
   delete require.cache[mod]; require(mod); window.DI.init();
-  ok(window.DI.data.bySub.KZDR.length === n0, 're-applying the same corrections on baked data changes nothing');
+  ok(window.DI.data.bySub.KZDR.length === n0 - DI.data.bySub.KZDR.filter(f => f.sched).length, 're-applying the same corrections on baked data changes nothing');
   window.SECTION03_ASSETS = src;
 });
 

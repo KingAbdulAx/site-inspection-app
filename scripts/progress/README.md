@@ -29,7 +29,7 @@ Rules:
 - **Stage** = the furthest column ticked, on the feature's ladder. A box culvert is **Completed** once painted; a pipe culvert once its joints are done. Backfill is not a stage. "Ongoing" goes in the note.
 - **Ditches**: executed runs laid over ditches of the same type and side.
   - **Type 1**: 90% covered (or no more than 15 m left) is Completed; less is Concreted, with the metres in the note.
-  - **Type 9** is precast and tracked by length. The executed ranges go into the row's notes as `[T9 done 20900 to 21000; 21100 to 21225]` (chainages in metres), which the app reads as completed metres; no more than 5 m left is Completed, otherwise Concreted. The Type 9 pieces of the contractor's schedule (`data/t9_schedule.json`, on for the sub-sections in `T9_SCHEDULE_ON`) are laid over too. A Type 9 row the office wrote earlier is replaced when more is done now; a row from a phone is never replaced.
+  - **Type 9** is precast and tracked by length. The executed ranges go into the row's notes as `[T9 done 20900 to 21000; 21100 to 21225]` (chainages in metres), which the app reads as completed metres; no more than 5 m left is Completed, otherwise Concreted. The Type 9 pieces of the contractor's schedule (`data/t9_schedule.json`, on for every section) are laid over too. A Type 9 row the office wrote earlier is replaced when more is done now; a row from a phone is never replaced.
   - The phone writes the same note when it records a range, and adopts the office's ranges as its own (undoable) records before it writes over such a row. Test: `node scripts/test_progress_ranges.js`.
 - A row already in the database is left alone, unless the chart is further on **and** newer.
 

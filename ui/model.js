@@ -441,8 +441,8 @@
     t9Cache = {};
     applyBase();
   }
-  // Where the schedule is switched on. Section 02 first: work is going on there and it matches the design.
-  const T9_SCHEDULE_ON = ['DWKZ'];
+  // Where the schedule is switched on: every section.
+  const T9_SCHEDULE_ON = ['KNDW', 'DWKZ', 'KZDR', 'DRMR', 'MRJB'];
   function hasT9Schedule(sub) { return !!(data.bySub[sub] || []).some(f => f.sched); }
   function loadHeights(sub, j) {
     const fb = j.fl_below_rail || 0.971;
