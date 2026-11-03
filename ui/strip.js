@@ -321,6 +321,7 @@
 
       // features
       const feats = state.features.filter(f => {
+        if (f.absorbedInto) return false;
         const c0 = f.built ? Math.min(f.ch0, f.built.ch0) : f.ch0;
         const c1 = f.built ? Math.max(f.ch1, f.built.ch1) : f.ch1;
         return c1 >= lo && c0 <= hi;
