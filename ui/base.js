@@ -27,6 +27,7 @@
     ['measured', 'Measured on site', 'GPS or tape, where you stand', '<span class="chip measured">Measured</span>']];
 
   function recLabel(r) {
+    if (r.kind === 'range') return 'Completed ' + DI.fmtCh(r.from) + ' → ' + DI.fmtCh(r.to) + ' · ' + Math.round(r.to - r.from) + ' m';
     if (r.kind !== 'base') return null;
     return { edit: 'Data corrected', add: 'Added to the data', delete: 'Removed from the data', verify: 'Checked against the drawing', unverify: 'Check withdrawn' }[r.action] || 'Data';
   }

@@ -28,13 +28,18 @@
     return '<span class="' + cls + '">C</span>';
   }
   function certChip(f) {
+    if (f.sched) return '<span class="chip rev" title="Added from the contractor’s Type 9 schedule, NIG/KAMA/FM/2026/4218; not on the drawings">Letter 4218</span>';
     if (f.cert === 'exact') return '<span class="chip exact">Exact</span>';
     if (f.cert === 'label') return '<span class="chip label">Label</span>';
     if (f.cert === 'measured') return '<span class="chip measured">Measured</span>';
     return '<span class="chip derived">±4 m</span>';
   }
+  // A ditch or pipe that runs along the line: it has two ends and a length. Crossings and
+  // labels are a single place.
+  function isSpan(f) { return (f.kind === 'linear' || f.kind === 'buried') && f.ch1 - f.ch0 > 1; }
+  function lenText(f) { return isSpan(f) ? Math.round(f.ch1 - f.ch0).toLocaleString('en-GB') + ' m' : ''; }
   function chText(f, arrow) {
-    if (f.cert === 'exact') return DI.fmtCh(f.ch0, 3);
+    if (f.cert === 'exact') return DI.fmtCh(f.ch0, 3) + (isSpan(f) && arrow !== false ? ' → ' + DI.fmtCh(f.ch1, 3) : '');
     if (f.cert === 'label') return 'near ' + DI.fmtCh(f.ch0);
     if (f.cert === 'measured') return DI.fmtCh(f.ch0, 1) + (f.ch1 - f.ch0 > 1 && arrow !== false ? ' → ' + DI.fmtCh(f.ch1, 1) : '');
     if (f.ch1 - f.ch0 > 1) return '≈' + DI.fmtCh(f.ch0) + (arrow === false ? '' : ' → ' + DI.fmtCh(f.ch1));
@@ -84,7 +89,7 @@
     if (Math.abs(d) < 1.5) return 'here';
     return words(d);
   }
-  Object.assign(DA, { sideBadge, certChip, chText, chHtml, meter, stageLabel, offText, relText });
+  Object.assign(DA, { sideBadge, certChip, chText, chHtml, isSpan, lenText, meter, stageLabel, offText, relText });
 
   // ----------------------------------------------------------- theme
   function setTheme(t) {
@@ -480,7 +485,7 @@
       const st = DI.statusOf(f);
       h += '<button class="frow' + (f.id === hlId ? ' hl' : '') + '" data-act="record" data-id="' + esc(f.id) + '" id="row-' + esc(f.id) + '">' + sideBadge(f.side) +
         '<div class="mid"><div class="t1">' + I.typeIcon(f.icon) + '<span>' + esc(f.name) + '</span>' + (st.defects.length ? '<span style="color:var(--defect)">' + I.icon('warn').replace('<svg', '<svg width="18" height="18"') + '</span>' : '') + '</div>' +
-        '<div class="t2">' + chHtml(f) + ' ' + certChip(f) + '</div><div class="t3">' + offText(f) + ' · ' + relText(f, S.pos.ch, S.pos.facing) + '</div></div>' +
+        '<div class="t2">' + chHtml(f) + (isSpan(f) ? ' <b class="len">' + lenText(f) + '</b>' : '') + ' ' + certChip(f) + '</div><div class="t3">' + offText(f) + ' · ' + relText(f, S.pos.ch, S.pos.facing) + '</div></div>' +
         '<div class="right">' + meter(f, st) + stageLabel(f, st) + '</div></button>';
     });
     h += '</div><div class="grid2 mt16"><button class="btn" data-act="unlisted" style="font-size:16px;min-height:56px">' + '<span style="background:var(--hivis);color:#121311;border:2px solid #121311;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font:700 18px/1 var(--f-cond)">?</span> Not on the drawings</button>' +
@@ -523,7 +528,7 @@
     const max = f.ladder.length - 1;
     const rel = relText(f, S.pos.ch, S.pos.facing);
     let h = '<div class="fhead">' + sideBadge(f.side, 'xl') + '<div style="min-width:0"><button class="t1" data-act="feature" data-id="' + esc(f.id) + '" style="text-align:left">' + I.typeIcon(f.icon) + '<span>' + esc(f.name) + '</span></button>' +
-      '<div class="t2">' + chText(f) + ' ' + certChip(f) + ' <span class="rel">' + esc(rel) + '</span></div>' + fillRange(f) + '</div></div>';
+      '<div class="t2">' + chHtml(f) + (isSpan(f) ? ' <b class="len">' + lenText(f) + '</b>' : '') + ' ' + certChip(f) + ' <span class="rel">' + esc(rel) + '</span></div>' + fillRange(f) + '</div></div>';
     // A record from the office (the cloud database) says whose it is: a colleague, or a progress chart.
     const office = st.seen && st.seen.office;
     h += '<div class="pair mt16"><div class="built"><div class="part"><span class="chip seen">' + (office ? 'Office' : 'Seen by you') + '</span>' + meter(f, { s: st.s == null ? 0 : st.s, c: -1 }, '') +
@@ -531,6 +536,8 @@
       (office && st.seen.by ? '<div style="flex-basis:100%;font:500 14px/1.3 var(--f-sans);color:var(--ink-3);margin-top:3px">' + esc(st.seen.by) + '</div>' : '') + '</div></div></div>';
     h += '<div class="built"><div class="part"><span class="chip claim">Contractor</span>' + (st.claim ? meter(f, { s: -1, c: st.c }, '') : meter(f, { s: -1, c: -1 }, '')) +
       '<div class="stage"><b>' + (st.claim ? esc(f.ladder[st.c]) + ' <span class="mono" style="font-size:14px;color:var(--ink-3);font-weight:500">IR ' + esc(st.claim.ir) + ' · ' + DI.fmtDate(st.claim.date) + '</span>' : '<span class="muted" style="font-weight:600">No IR</span>') + '</b></div></div></div></div>';
+    if (DI.rangeable(f)) h += rangeBlock(f, st);
+    else {
     h += '<div style="font:700 21px/1.2 var(--f-sans);margin:18px 0 10px;color:var(--ink-2)">What stage is it at now?</div>';
     const opts = [];
     const s = st.s, c = st.c;
@@ -553,12 +560,41 @@
     });
     h += '<button class="opt" data-act="ladder"><span><b>Other stage</b><small>Show all ' + f.ladder.length + '</small></span>' + I.icon('chevDown') + '</button>';
     h += '<div class="ladder hidden" id="fullLadder">' + f.ladder.map((n, i) => '<button class="opt" data-act="stage" data-id="' + esc(f.id) + '" data-stage="' + i + '"><span><b>' + esc(n) + '</b></span>' + (s === i ? '<small>seen</small>' : c === i ? '<small>claimed</small>' : '') + '</button>').join('') + '</div>';
+    }
     h += '<div class="row-btns mt8"><button class="btn defect" data-act="defect" data-id="' + esc(f.id) + '">' + I.icon('warn') + 'Defect</button>' +
       '<button class="btn" data-act="photo" data-id="' + esc(f.id) + '">' + I.icon('camera') + 'Photo</button>' +
       '<button class="btn" data-act="note" data-id="' + esc(f.id) + '">' + I.icon('notes') + 'Note</button></div>';
     h += '<button class="btn mt8" data-act="feature" data-id="' + esc(f.id) + '" style="min-height:48px;border:0;background:transparent;font-size:17px;text-decoration:underline">Everything about this feature ›</button>';
     openOverlay(h, 'sheet tall');
   }
+  // A Type 9 run: how much is done, and one tap (or two chainages) to add more.
+  function rangeBlock(f, st) {
+    const cov = st.cover, len = f.ch1 - f.ch0, done = cov ? cov.m : 0;
+    const last = cov && cov.ranges.length ? cov.ranges[cov.ranges.length - 1][1] : f.ch0;
+    const from = last < f.ch1 - 1 ? last : f.ch0;
+    const to = S.pos.ch > from + 1 && S.pos.ch <= f.ch1 ? S.pos.ch : f.ch1;
+    const ch = v => DI.fmtCh(Math.round(v));
+    let h = '<div style="font:700 21px/1.2 var(--f-sans);margin:18px 0 10px;color:var(--ink-2)">How much is done?</div>';
+    h += '<div class="rg-sum"><b>' + Math.round(done) + ' of ' + Math.round(len) + ' m</b><span>' + Math.round(done / len * 100) + '%</span></div>';
+    h += '<div class="rgbar">' + (cov ? cov.ranges.map(([a, b]) => '<i style="left:' + ((a - f.ch0) / len * 100) + '%;width:' + Math.max(0.8, (b - a) / len * 100) + '%"></i>').join('') : '') + '</div>';
+    if (cov && cov.ranges.length && !cov.full) h += '<div class="rg-list">' + cov.ranges.map(([a, b]) => ch(a) + ' → ' + ch(b) + ' · ' + Math.round(b - a) + ' m').join('<br>') + '</div>';
+    if (!(cov && cov.full)) {
+      h += '<button class="opt primary" data-act="range-all" data-id="' + esc(f.id) + '"><span><b>Whole stretch completed</b><small>' + ch(f.ch0) + ' → ' + ch(f.ch1) + ' · ' + Math.round(len) + ' m</small></span>' + I.icon('check') + '</button>';
+      h += '<div class="rg-form"><div class="lbl-caps">Completed from → to</div><div class="rg-row">' +
+        '<label>From<input id="rgFrom" inputmode="decimal" autocomplete="off" value="' + ch(from) + '"></label><button class="btn here" data-act="range-here" data-target="rgFrom">Here</button>' +
+        '<label>To<input id="rgTo" inputmode="decimal" autocomplete="off" value="' + ch(to) + '"></label><button class="btn here" data-act="range-here" data-target="rgTo">Here</button></div>' +
+        '<button class="opt" data-act="range-save" data-id="' + esc(f.id) + '"><span><b>Save this part as completed</b><small>Between the two chainages, on this stretch</small></span></button></div>';
+    }
+    return h;
+  }
+  function recordRange(fid, from, to) {
+    const r = DI.addRange(fid, from, to, snapPos());
+    if (!r) { toast({ title: 'Nothing saved', sub: 'Give two chainages on this stretch, at least 1 m apart' }); return; }
+    closeAll();
+    toast({ title: 'Saved on this phone', sub: 'Completed ' + DI.fmtCh(r.from) + ' → ' + DI.fmtCh(r.to) + ' · ' + Math.round(r.to - r.from) + ' m', undo: () => { DI.voidRecord(r.id); render(); toast({ title: 'Undone', sub: 'The record is kept, marked as withdrawn' }); } });
+    render();
+  }
+  DA.recordRange = recordRange;
   DA.openRecord = openRecord;
   // The embankment along a run, on its side: 'Fill 1.6–4.2 m'.
   function fillRange(f) {
@@ -774,6 +810,9 @@
         break;
       }
       case 'stage': recordStage(id, Number(b.dataset.stage)); break;
+      case 'range-all': { const f = DI.data.byId[id]; if (f) recordRange(id, f.ch0, f.ch1); break; }
+      case 'range-here': { const el = $('#' + b.dataset.target); if (el) el.value = DI.fmtCh(Math.round(S.pos.ch)); break; }
+      case 'range-save': recordRange(id, DI.parseCh($('#rgFrom').value), DI.parseCh($('#rgTo').value)); break;
       case 'undo': if (DA.pendingUndo) { const u = DA.pendingUndo; DA.pendingUndo = null; $('#toastHost').innerHTML = ''; u(); } break;
       case 'keypad': openKeypad(); break;
       case 'kp-key': ov.kp.key(b.dataset.k); break;
@@ -852,6 +891,7 @@
     try { theme = localStorage.getItem('KMD_THEME_V1') || 'sun'; } catch (e) { /* ignore */ }
     setTheme(theme);
     DI.init();
+    fetch('data/t9_schedule.json').then(r => r.ok ? r.json() : null).then(j => { if (j) { DI.loadT9Schedule(j, DI.T9_SCHEDULE_ON); render(); } }).catch(() => { /* offline before the first load: the drawings alone */ });
     const last = DI.lastPosition();
     const q = new URLSearchParams(location.search);
     if (last && last.line) Object.assign(S.pos, { line: last.line, sub: last.sub, ch: last.ch, facing: last.facing || 'increasing' });

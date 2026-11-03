@@ -28,6 +28,10 @@ const assert = (c, m) => { if (!c) { console.log('FAIL: ' + m); process.exitCode
   const SP = fs.mkdtempSync(path.join(os.tmpdir(), 'di-e2e-'));
   fs.writeFileSync(SP + '/photo.jpg', JPEG);
   const b = await chromium.launch();
+  // These tests must never reach the live cloud database: the app would sync the records they make
+  // (stages, defects, ranges) as real inspections. Every request to Supabase is refused.
+  const _newContext = b.newContext.bind(b);
+  b.newContext = async (...a) => { const c = await _newContext(...a); await c.route(/supabase\.co/, r => r.abort()); return c; };
   const ctx = await b.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, ignoreHTTPSErrors: true });
   const p = await ctx.newPage();
   const errs = [];
@@ -127,7 +131,7 @@ const assert = (c, m) => { if (!c) { console.log('FAIL: ' + m); process.exitCode
   for (const m of marks) {
     await t.evaluate(() => DA.closeAll());
     await t.touchscreen.tap(m.x, m.y); await t.waitForTimeout(400);
-    const got = await t.evaluate(() => { const ov = document.querySelector('.ov:last-child'); if (!ov) return null; const s = ov.querySelector('[data-act=stage]'); const hl = ov.querySelector('.frow.hl'); return s ? s.dataset.id : hl ? hl.dataset.id : '?'; });
+    const got = await t.evaluate(() => { const ov = document.querySelector('.ov:last-child'); if (!ov) return null; const s = ov.querySelector('[data-act=stage],[data-act=range-all]'); const hl = ov.querySelector('.frow.hl'); return s ? s.dataset.id : hl ? hl.dataset.id : '?'; });
     if (got) opened++;
     if (got === m.id) right++;
   }
@@ -140,7 +144,56 @@ const assert = (c, m) => { if (!c) { console.log('FAIL: ' + m); process.exitCode
   await t.tap('.ov:last-child [data-act=stage][data-stage="' + last + '"]'); await t.waitForTimeout(300);
   seen = await t.evaluate(id => DI.seenOf(id), one.id);
   assert(seen && seen.stage === last, 'completed from the record sheet in one tap');
+  // a ditch's record sheet and feature page give both ends and the length
+  await t.evaluate(() => DA.closeAll());
+  const span = await t.evaluate(() => { const f = DI.data.bySub.DWKZ.find(x => x.code === 'T9' && x.cert === 'exact' && x.ch1 - x.ch0 > 20); return { id: f.id, a: DI.fmtCh(f.ch0, 3), b: DI.fmtCh(f.ch1, 3), m: Math.round(f.ch1 - f.ch0).toLocaleString('en-GB') + ' m' }; });
+  await t.evaluate(id => DA.openRecord(id), span.id); await t.waitForTimeout(300);
+  const sheet = await t.evaluate(() => document.querySelector('.ov:last-child .fhead .t2').textContent);
+  assert(sheet.includes(span.a) && sheet.includes(span.b) && sheet.includes(span.m), 'record sheet shows from, to and length: ' + sheet.trim());
+  await t.evaluate(id => { DA.closeAll(); DA.openFeature(id); }, span.id); await t.waitForTimeout(400);
+  const kv = await t.evaluate(() => document.querySelector('.ov:last-child .kv').textContent);
+  assert(/From/.test(kv) && kv.includes(span.b) && /Length/.test(kv) && kv.includes(span.m), 'feature page lists From, To and Length');
+  await t.evaluate(() => DA.closeAll());
+  // Type 9 from the contractor's schedule: on in Section 02, marked as from the letter
+  await t.goto(BASE + '?sim=DWKZ:25500:-4:3'); await t.waitForTimeout(2500);
+  const pc = await t.evaluate(() => { const f = DI.data.bySub.DWKZ.find(x => x.sched && x.ch1 - x.ch0 > 100); return f && { id: f.id, a: DI.fmtCh(f.ch0, 3), b: DI.fmtCh(f.ch1, 3) }; });
+  assert(pc, 'Section 02 has scheduled Type 9 pieces once the page has loaded');
+  await t.evaluate(id => DA.openRecord(id), pc.id); await t.waitForTimeout(300);
+  const psheet = await t.evaluate(() => document.querySelector('.ov:last-child .fhead').textContent);
+  assert(/Letter 4218/.test(psheet) && psheet.includes(pc.a) && psheet.includes(pc.b), 'a scheduled piece is marked Letter 4218 with its ends: ' + psheet.replace(/\s+/g, ' ').slice(0, 90));
+  await t.evaluate(() => DA.closeAll());
+  // Type 9 progress by length, from the record sheet
+  const big = await t.evaluate(() => { const f = DI.data.bySub.DWKZ.find(x => x.sched && x.ch1 - x.ch0 > 250); return { id: f.id, a: Math.round(f.ch0), b: Math.round(f.ch1) }; });
+  await t.evaluate(id => DA.openRecord(id), big.id); await t.waitForTimeout(300);
+  assert(await t.evaluate(() => !!document.querySelector('.ov:last-child .rgbar') && /0 of/.test(document.querySelector('.ov:last-child .rg-sum').textContent)), 'the sheet of a Type 9 asks how much is done: 0 m so far');
+  await t.fill('#rgFrom', await t.evaluate(v => DI.fmtCh(v), big.a)); await t.fill('#rgTo', await t.evaluate(v => DI.fmtCh(v), big.a + 100));
+  await t.tap('.ov:last-child [data-act=range-save]'); await t.waitForTimeout(400);
+  const part = await t.evaluate(id => { const c = DI.statusOf(DI.data.byId[id]); return { m: Math.round(c.cover.m), bucket: c.bucket }; }, big.id);
+  assert(part.m === 100 && part.bucket === 'moving', 'a typed range saves: ' + JSON.stringify(part));
+  await t.evaluate(id => DA.openRecord(id), big.id); await t.waitForTimeout(300);
+  assert(await t.evaluate(() => /100 of/.test(document.querySelector('.ov:last-child .rg-sum').textContent) && document.querySelectorAll('.ov:last-child .rgbar i').length === 1), 'the sheet shows 100 m done');
+  await t.tap('.ov:last-child [data-act=range-all]'); await t.waitForTimeout(400);
+  assert(await t.evaluate(id => DI.statusOf(DI.data.byId[id]).bucket === 'done', big.id), 'Whole stretch completed finishes it in one tap');
+  await t.goto(BASE + '?sim=KZDR:100500:-4:3'); await t.waitForTimeout(2000);
+  assert(await t.evaluate(() => DI.hasT9Schedule('KZDR') && DI.hasT9Schedule('MRJB')), 'the other sections have their scheduled pieces too');
   // embankment height and the Type 9 check (S02 has the longitudinal profile)
+  await t.goto(BASE + '?sim=DWKZ:41500:-4:3&tab=section'); await t.waitForTimeout(2500);
+  // the Progress tab: scopes, completion by count and by length, types named on their buttons
+  assert(await t.evaluate(() => /Progress/.test(document.querySelector('.nav [data-tab=section]').textContent)), 'the tab is called Progress');
+  const pg = await t.evaluate(() => ({
+    scopes: [...document.querySelectorAll('[data-act=sec-scope]')].map(b => b.textContent.trim()),
+    rows: [...document.querySelectorAll('[data-act=sec-sub]')].map(b => b.dataset.sub),
+    chips: [...document.querySelectorAll('[data-act=sec-cat]')].map(b => b.innerText.replace(/\s+/g, ' ').trim()),
+    stat: document.querySelector('.povr').innerText.replace(/\s+/g, ' ')
+  }));
+  assert(pg.scopes.join() === 'All,Main line,Branch line' && pg.rows.length === 5, 'overview: All / Main line / Branch line, one row per section: ' + pg.rows.join());
+  assert(pg.chips.some(c => /Type 9 shoulder ditch \d+\.\d of \d+\.\d km/.test(c)) && pg.chips.some(c => /Box culverts \d+ of \d+/.test(c)), 'type buttons carry their progress: ' + pg.chips.slice(1, 4).join(' | '));
+  assert(/Structures \d[\d,]* of \d[\d,]* \d+%/i.test(pg.stat) && /Ditches \d[\d,.]* of \d[\d,.]* km/i.test(pg.stat), 'completion shown as a count and as km: ' + pg.stat.slice(0, 120));
+  await t.tap('[data-act=sec-scope][data-v=KD]'); await t.waitForTimeout(300);
+  assert(await t.evaluate(() => document.querySelectorAll('[data-act=sec-sub]').length === 0 && /No drawings/.test(document.querySelector('#scr-section').textContent)), 'the branch line has no drawings yet and says so');
+  await t.tap('[data-act=sec-scope][data-v=KM]'); await t.waitForTimeout(300);
+  await t.tap('[data-act=sec-sub][data-sub=KZDR]'); await t.waitForTimeout(300);
+  assert(await t.evaluate(() => /KZDR/.test(document.querySelector('#scr-section h1 + .rng, #scr-section').textContent) && document.querySelector('.psub.cur').dataset.sub === 'KZDR'), 'tapping a section row opens that section');
   await t.goto(BASE + '?sim=DWKZ:41500:-4:3&tab=section'); await t.waitForTimeout(2500);
   const card = await t.evaluate(() => { const b = document.querySelector('[data-act=t9-list]'); return b && b.textContent; });
   assert(card && /See the \d+ stretches/.test(card), 'Section tab shows the Type 9 check: ' + card);

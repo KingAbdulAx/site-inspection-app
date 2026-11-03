@@ -42,6 +42,8 @@
   const LADDER_CONCRETE = ['Not started', 'Excavation', 'Blinding', 'Rebar', 'Shuttered', 'Concreted', 'Completed'];
   const LADDER_UNLINED = ['Not started', 'Excavated', 'Completed'];
   const LADDER_PRECAST = ['Not started', 'Excavation', 'Bedding', 'Placed', 'Completed'];
+  // Type 9 is precast half-round units, and the contractor reports a stretch only when it is done.
+  const LADDER_T9 = ['Not started', 'Completed'];
   const LADDER_RIPRAP = ['Not started', 'Geotextile laid', 'Completed'];
   // Culverts are precast units, staged as on the site execution charts. A box
   // culvert is complete once its bituminous paint is on; a pipe culvert gets
@@ -419,6 +421,29 @@
   // scripts/dwg/extract_profile.py). Each side's height is measured at that side's toe on the cross
   // section; where a side has none, the centreline height stands in. Where the profile gives no
   // formation level (stations, bridges) the height is an estimate from the rail level.
+  // Type 9 from the contractor's schedule (data/t9_schedule.json, built by scripts/t9/build_schedule.js
+  // from NIG/KAMA/FM/2026/4218). Each piece is a stretch of the letter that the drawings do not show as
+  // Type 9; a Type 9 already drawn stays the design piece. Only the sub-sections in `subs` get them.
+  function loadT9Schedule(j, subs) {
+    Object.keys(data.pristine).forEach(sub => { data.pristine[sub] = data.pristine[sub].filter(f => !f.sched); });
+    const pr = PRESETS.T9;
+    const on = subs || Object.keys(SUBS);
+    (j.pieces || []).filter(p => on.includes(p.sub) && SUBS[p.sub] && data.pristine[p.sub]).forEach(p => {
+      const f = {
+        id: p.id, sub: p.sub, line: SUBS[p.sub].line, catKey: pr.catKey, catLabel: CAT_LABEL[pr.catKey], kind: 'linear', lane: pr.lane,
+        side: p.side, ch0: p.ch0, ch1: p.ch1, cert: 'exact', code: 'T9', typeKey: '9', name: pr.name, full: 'Type 9 shoulder ditch, precast half-round',
+        icon: pr.icon, ladder: LADDER_T9, sheet: (p.sheets || [])[0] || '', drawings: p.sheets || [], level: null, onHold: false, confidence: '',
+        specs: '', notes: '', stated: null, raw: {}, sched: { src: j.source, letter: [p.a, p.b] }
+      };
+      f.offset = p.side === 'L' ? LANE_OFFSET[f.lane] : -LANE_OFFSET[f.lane];
+      data.pristine[p.sub].push(f);
+    });
+    t9Cache = {};
+    applyBase();
+  }
+  // Where the schedule is switched on: every section.
+  const T9_SCHEDULE_ON = ['KNDW', 'DWKZ', 'KZDR', 'DRMR', 'MRJB'];
+  function hasT9Schedule(sub) { return !!(data.bySub[sub] || []).some(f => f.sched); }
   function loadHeights(sub, j) {
     const fb = j.fl_below_rail || 0.971;
     data.heights[sub] = (j.rows || []).map(r => {
@@ -614,7 +639,7 @@
     if (r.kind === 'stage' && r.stageName == null) { const f = data.byId[r.featureId]; if (f) r.stageName = f.ladder[r.stage]; }
     records.push(r);
     saveRecords();
-    if (r.kind === 'stage' || r.kind === 'defect') mirrorLegacy(r.featureId);
+    if (r.kind === 'stage' || r.kind === 'defect' || r.kind === 'range') mirrorLegacy(r.featureId);
     if (r.kind === 'base') applyBase();
     return r;
   }
@@ -695,7 +720,7 @@
       const f = data.byId[id];
       if (f && f.sub === sub && !done.has(id)) { done.add(id); out.push(f.baseSet || f.verified ? featureOut(f, sub) : g); } else out.push(g);
     });
-    (data.bySub[sub] || []).filter(f => !done.has(f.id)).forEach(f => out.push(featureOut(f, sub)));
+    (data.bySub[sub] || []).filter(f => !done.has(f.id) && !f.sched).forEach(f => out.push(featureOut(f, sub)));
     const meta = Object.assign({}, src.metadata || {});
     if ('count' in meta) meta.count = out.length;
     const n = baseRecords().filter(r => ((data.byId[r.featureId] || {}).sub || r.sub) === sub).length;
@@ -775,10 +800,19 @@
     const seen = ownSeen(fid);
     const defects = openDefects(fid);
     const now = new Date().toISOString();
+    // A Type 9 run says how much is done in its notes; the status says only done or under way.
+    if (rangeable(f)) adoptForeignRanges(f);
+    const cov = rangeable(f) ? coverOf(f) : null;
+    let status = seen ? toLegacyStatus(f, seen.stage) : 'Not Started';
+    let notes = defects.map(d => d.defect + (d.note ? ': ' + d.note : '')).join(' | ');
+    if (cov && cov.ranges.length) {
+      status = cov.full ? toLegacyStatus(f, f.ladder.length - 1) : 'Concreted';
+      notes = [notes, rangeNote(cov.ranges)].filter(Boolean).join(' | ');
+    }
     legacy[fid] = {
       assetId: fid, chainage_str: f.raw.chainage_str, short_code: f.raw.short_code, typology: f.full,
-      status: seen ? toLegacyStatus(f, seen.stage) : 'Not Started',
-      notes: defects.map(d => d.defect + (d.note ? ': ' + d.note : '')).join(' | '),
+      status,
+      notes,
       hasDefect: defects.length > 0, date: now.replace('T', ' ').slice(0, 16), updated_at: now, inspected_by: inspector(), source: 'walk'
     };
     const key = LEGACY_KEYS[f.sub];
@@ -828,6 +862,71 @@
   function designChanges(fid) { return live(r => r.featureId === fid && r.kind === 'design'); }
 
   // A status summary used by the strip, the section view and the lists.
+  // ------------------------------------------------ progress by length
+  // A Type 9 run is finished a bit at a time, and the contractor reports it only when a stretch is done
+  // (precast units, no stages). So it is tracked by completed ranges: 'from X to Y is done'. Records are
+  // append-only like all the rest; undo voids one. A Completed stage on the whole run counts as all of it.
+  const RANGE_CODES = ['T9'];
+  const rangeable = f => RANGE_CODES.includes(f.code) && f.kind === 'linear' && f.ch1 - f.ch0 > 1;
+  function mergeRanges(list) {
+    const out = [];
+    list.slice().sort((a, b) => a[0] - b[0]).forEach(([a, b]) => {
+      const last = out[out.length - 1];
+      if (last && a <= last[1] + 0.5) last[1] = Math.max(last[1], b); else out.push([a, b]);
+    });
+    return out;
+  }
+  // The completed ranges travel to the cloud database in the row's notes, since the table has no column for
+  // them: '[T9 done 20900 to 21000; 21100 to 21225]', chainages in metres. The office import writes the same.
+  const RANGE_NOTE = /\[T9 done ([^\]]*)\]/;
+  function rangeNote(ranges) {
+    return ranges.length ? '[T9 done ' + ranges.map(([a, b]) => Math.round(a * 10) / 10 + ' to ' + Math.round(b * 10) / 10).join('; ') + ']' : '';
+  }
+  function parseRangeNote(notes) {
+    const m = RANGE_NOTE.exec(notes || '');
+    if (!m) return [];
+    return m[1].split(';').map(x => x.trim().match(/^(-?\d+(?:\.\d+)?) to (-?\d+(?:\.\d+)?)$/)).filter(Boolean).map(x => [Number(x[1]), Number(x[2])]).filter(r => r[1] > r[0]);
+  }
+  // Ranges the database holds that this phone has no record of: the office import, or another phone. A row
+  // this phone wrote itself (source 'walk') is already in its own records, so undoing one stays undone.
+  function foreignRanges(f) {
+    const lg = legacy[f.id];
+    return lg && lg.source !== 'walk' ? parseRangeNote(lg.notes) : [];
+  }
+  // Before this phone writes over such a row, those ranges become its own records (undoable like the rest),
+  // so the row it writes still carries them.
+  function adoptForeignRanges(f) {
+    const lg = legacy[f.id];
+    const got = foreignRanges(f).map(([a, b]) => [Math.max(f.ch0, a), Math.min(f.ch1, b)]).filter(r => r[1] - r[0] >= 0.5);
+    got.forEach(([a, b]) => {
+      const mine = live(r => r.kind === 'range' && r.featureId === f.id).some(r => Math.abs(r.from - a) < 0.2 && Math.abs(r.to - b) < 0.2);
+      if (!mine) records.push({ id: uid(), at: (lg && lg.updated_at) || new Date().toISOString(), by: (lg && lg.inspected_by) || 'office', kind: 'range', featureId: f.id, from: a, to: b, line: f.line, sub: f.sub, ch: a, pos: null, imported: true });
+    });
+    if (got.length) saveRecords();
+  }
+  function coverOf(f) {
+    if (!rangeable(f)) return null;
+    const recs = live(r => r.kind === 'range' && r.featureId === f.id);
+    const own = ownSeen(f.id);
+    const byStage = !!(own && own.stage >= f.ladder.length - 1);
+    const foreign = foreignRanges(f);
+    if (!recs.length && !byStage && !foreign.length) return null;
+    const list = recs.map(r => [r.from, r.to]).concat(foreign).map(([a, b]) => [Math.max(f.ch0, Math.min(a, b)), Math.min(f.ch1, Math.max(a, b))]).filter(r => r[1] > r[0]);
+    if (byStage) list.push([f.ch0, f.ch1]);
+    const ranges = mergeRanges(list);
+    const m = ranges.reduce((n, [a, b]) => n + b - a, 0);
+    const lg = legacy[f.id];
+    const lastAt = recs.map(r => r.at).concat(byStage ? [own.at] : []).concat(foreign.length && lg ? [lg.updated_at || (lg.date || '').replace(' ', 'T')] : []).filter(Boolean).sort().pop() || null;
+    return { ranges, m, len: f.ch1 - f.ch0, full: m >= f.ch1 - f.ch0 - 1, lastAt, records: recs, foreign: foreign.length };
+  }
+  function addRange(fid, from, to, pos) {
+    const f = data.byId[fid];
+    if (!f || !rangeable(f)) return null;
+    const a = Math.max(f.ch0, Math.min(from, to)), b = Math.min(f.ch1, Math.max(from, to));
+    if (!(b - a >= 0.5)) return null;
+    return addRecord({ kind: 'range', featureId: fid, from: Math.round(a * 10) / 10, to: Math.round(b * 10) / 10, line: f.line, sub: f.sub, ch: a, pos: pos || null });
+  }
+
   function statusOf(f) {
     const seen = seenOf(f.id);
     const claim = claimOf(f.id);
@@ -843,12 +942,61 @@
     else if (s != null && s > 0) fill = 'hatch';
     else if (s == null && c == null) fill = 'never';
     const changes = designChanges(f.id);
-    return {
+    const res = {
       seen, claim, s, c, best, max, lastAt, partBuilt, stalled, fill,
       defects: openDefects(f.id), changes,
       removed: changes.some(r => r.action === 'remove'),
       bucket: best >= max ? 'done' : best === 0 ? 'none' : stalled ? 'stalled' : 'moving'
     };
+    const cov = coverOf(f);
+    if (cov) {
+      res.cover = cov;
+      if (cov.full) Object.assign(res, { s: max, best: max, fill: 'solid', partBuilt: false, stalled: false, bucket: 'done' });
+      else {
+        const stl = !!cov.lastAt && (Date.now() - new Date(cov.lastAt).getTime()) > 182 * 864e5;
+        // the ranges are the authority: an office row's 'Concreted' must not read as finished on a short ladder
+        const cap = Math.max(0, max - 1);
+        Object.assign(res, { s: res.s == null ? null : Math.min(res.s, cap), best: Math.min(Math.max(best, 1), cap), partBuilt: true, stalled: stl, fill: 'ranges', bucket: stl ? 'stalled' : 'moving', lastAt: [lastAt, cov.lastAt].filter(Boolean).sort().pop() });
+      }
+    }
+    return res;
+  }
+
+  // ------------------------------------------------ progress overview
+  // Completion, not "part-built": structures that are a single place (culverts, descents, riprap) are
+  // counted; ditches and drains that run along the line are measured by length. The two are never added.
+  const isSpan = f => f.kind === 'linear' || f.kind === 'buried';
+  const TYPE_LABEL = { PC: 'Pipe culverts', BC: 'Box culverts', CC: 'Cattle crossings', T16: 'Underpass water passages', WD: 'Water descents', 'D-SD': 'Slope descents', BRG: 'Railway bridges', OP: 'Road overbridges' };
+  // The drainage type of a feature, as a tab: 'Type 9 shoulder ditch', 'Box culverts'.
+  function typeOf(f) {
+    const span = isSpan(f);
+    if (span && /^CH-/.test(f.code || '')) return { key: 'CH', label: 'Diversion channels', span };
+    if (span && f.code === 'MD') return { key: 'MD', label: 'Approach and earth toe ditches', span };
+    if (span) return { key: f.code || f.catKey, label: f.name, span };
+    return { key: (f.code || f.catKey) + '.pt', label: TYPE_LABEL[f.code] || f.catLabel, span };
+  }
+  function progressOf(feats) {
+    const o = { pts: { n: 0, done: 0 }, lin: { n: 0, done: 0, m: 0, doneM: 0 }, part: 0, stalled: 0 };
+    feats.forEach(f => {
+      const st = statusOf(f);
+      if (st.removed) return;
+      if (st.bucket === 'moving') o.part++;
+      if (st.bucket === 'stalled') { o.part++; o.stalled++; }
+      if (isSpan(f)) {
+        const len = f.ch1 - f.ch0;
+        o.lin.n++; o.lin.m += len;
+        if (st.cover) o.lin.doneM += st.cover.m; else if (st.bucket === 'done') o.lin.doneM += len;
+        if (st.bucket === 'done') o.lin.done++;
+      } else { o.pts.n++; if (st.bucket === 'done') o.pts.done++; }
+    });
+    return o;
+  }
+  // The types in a sub-section with their own progress, in the order of the drawing categories.
+  function typeProgress(sub) {
+    const by = {};
+    (data.bySub[sub] || []).forEach(f => { const t = typeOf(f); (by[t.key] = by[t.key] || { key: t.key, label: t.label, span: t.span, cat: CAT_ORDER.indexOf(f.catKey), feats: [] }).feats.push(f); });
+    return Object.values(by).sort((a, b) => a.cat - b.cat || (a.span === b.span ? (a.label < b.label ? -1 : 1) : a.span ? -1 : 1))
+      .map(g => Object.assign(g, { p: progressOf(g.feats) }));
   }
 
   // Drafts (defect sheets not finished).
@@ -963,7 +1111,7 @@
     fmtCh, fmtPlus, parseCh, fmtDate, fmtTime, monthsBetween, esc, DAYS, MONTHS,
     inspector, setInspector, addRecord, voidRecord, live, recordsFor, seenOf, ownSeen, openDefects,
     designChanges, statusOf, drafts, saveDraft, putPhoto, getPhoto, uid, loadLegacy,
-    loadSections, sectionAt, refs, refsNear, refById, REF_KIND, loadHeights, hasHeights, heightAt, T9_RULES, t9Rule, setT9Rule, t9Check,
+    loadSections, sectionAt, loadT9Schedule, hasT9Schedule, rangeable, coverOf, addRange, rangeNote, parseRangeNote, isSpan, typeOf, progressOf, typeProgress, T9_SCHEDULE_ON, refs, refsNear, refById, REF_KIND, loadHeights, hasHeights, heightAt, T9_RULES, t9Rule, setT9Rule, t9Check,
     PRESETS, presetOf, applyBase, baseRecords, correctBase, addBase, deleteBase, verifyBase, unverifyBase, exportGeo, exportCorrections, importRecords,
     project, pointAt, laneOf, savePosition, lastPosition, csvCell,
     get records() { return records; }

@@ -1,0 +1,1056 @@
+{
+ "kind": "kmd-progress",
+ "asof": "2026-09-30",
+ "ditch_date": "2026-09-30",
+ "rows": [
+  {
+   "asset_id": "s02_asset_171",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-01",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 375 of 375 m executed · IR 54150 · [T9 done 26425 to 26800] · was Completed & Approved (2026-09-01)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-01T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "s02_asset_189",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-01",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 200 of 200 m executed · IR 54152 · [T9 done 27575 to 27775] · was Completed & Approved (2026-09-01)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-01T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "s02_asset_214",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-01",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 275 of 275 m executed · IR 54153 · [T9 done 28400 to 28675] · was Completed & Approved (2026-09-01)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-01T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "t9s_DWKZ_L_28675",
+   "sub": "DWKZ",
+   "status": "Concreted",
+   "has_defect": false,
+   "inspection_date": "2026-09-01",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 245 of 525 m executed (28+675–28+920) · IR 54153 · [T9 done 28675 to 28920]"
+  },
+  {
+   "asset_id": "s02_asset_331",
+   "sub": "DWKZ",
+   "status": "Concreted",
+   "has_defect": false,
+   "inspection_date": "2026-09-04",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 70 of 105 m executed (33+885–33+955) · IR 54316 · [T9 done 33885 to 33955] · was Concreted (2026-09-04)",
+   "replaces": {
+    "status": "Concreted",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-04T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "t9s_DWKZ_L_33955",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-04",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 20 of 20 m executed · IR 54316 · [T9 done 33955 to 33975]"
+  },
+  {
+   "asset_id": "s02_asset_338",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-04",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 125 of 125 m executed · IR 54316 · [T9 done 33975 to 34100] · was Completed & Approved (2026-09-04)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-04T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "s02_asset_344",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-04",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 400 of 400 m executed · IR 54316 · [T9 done 34100 to 34500] · was Completed & Approved (2026-09-04)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-04T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "s02_asset_392",
+   "sub": "DWKZ",
+   "status": "Concreted",
+   "has_defect": false,
+   "inspection_date": "2026-09-04",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 90 of 98 m executed (35+975–36+065) · IR 54317 · [T9 done 35975 to 36065] · was Completed & Approved (2026-09-04)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-04T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "s02_asset_400",
+   "sub": "DWKZ",
+   "status": "Concreted",
+   "has_defect": false,
+   "inspection_date": "2026-09-07",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 85 of 95 m executed (36+640–36+725) · IR 54431 · [T9 done 36640 to 36725] · was Completed & Approved (2026-09-07)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-07T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "s02_asset_402",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-07",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 125 of 125 m executed · IR 54431 · [T9 done 36725 to 36850] · was Completed & Approved (2026-09-07)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-07T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "s02_asset_426",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-07",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 150 of 150 m executed · IR 54434 · [T9 done 37675 to 37825] · was Completed & Approved (2026-09-07)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-07T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "s02_asset_456",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-07-10",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 100 of 100 m executed · IR 51365 · [T9 done 39450 to 39550] · was Completed & Approved (2026-07-10)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-07-10T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "s02_asset_465",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-07-10",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 125 of 125 m executed · IR 51365 · [T9 done 39550 to 39675] · was Completed & Approved (2026-07-10)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-07-10T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "s02_asset_518",
+   "sub": "DWKZ",
+   "status": "Concreted",
+   "has_defect": false,
+   "inspection_date": "2026-07-10",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 100 of 108 m executed (42+625–42+725) · IR 51367 · [T9 done 42625 to 42725] · was Completed & Approved (2026-07-10)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-07-10T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "s02_asset_533",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-07-10",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 285 of 288 m executed · IR 51368 · [T9 done 42840 to 43125] · was Completed & Approved (2026-07-10)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-07-10T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "s02_asset_578",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-07-10",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 125 of 125 m executed · IR 51369 · [T9 done 46125 to 46250] · was Completed & Approved (2026-07-10)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-07-10T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "s02_asset_594",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-07-10",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 200 of 200 m executed · IR 51370 · [T9 done 46575 to 46775] · was Completed & Approved (2026-07-10)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-07-10T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "s02_asset_612",
+   "sub": "DWKZ",
+   "status": "Concreted",
+   "has_defect": false,
+   "inspection_date": "2026-07-10",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 60 of 67 m executed (47+115–47+175) · IR 51372 · [T9 done 47115 to 47175] · was Completed & Approved (2026-07-10)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-07-10T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "s02_asset_646",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-07-10",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 295 of 300 m executed · IR 51378 · [T9 done 48555 to 48850.1] · was Completed & Approved (2026-07-10)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-07-10T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "s02_asset_648",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-07-10",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 175 of 175 m executed · IR 51378 · [T9 done 48850.1 to 49025] · was Completed & Approved (2026-07-10)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-07-10T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "s02_asset_675",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-07-10",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 250 of 250 m executed · IR 51379 · [T9 done 50925 to 51175] · was Completed & Approved (2026-07-10)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-07-10T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "s02_asset_735",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-07-21",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 317 of 317 m executed · IR 52028 · [T9 done 53175 to 53492] · was Completed & Approved (2026-07-21)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-07-21T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "s02_asset_739",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-07-21",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 133 of 133 m executed · IR 52028 · [T9 done 53492 to 53625] · was Completed & Approved (2026-07-21)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-07-21T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "s02_asset_761",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-07-10",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 675 of 675 m executed · IR 51381 · [T9 done 54425 to 55100] · was Completed & Approved (2026-07-10)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-07-10T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "s02_asset_815",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-07-10",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 50 of 50 m executed · IR 51383 · [T9 done 57025 to 57074.9] · was Completed & Approved (2026-07-10)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-07-10T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "s02_asset_821",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-07-10",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 525 of 525 m executed · IR 51383 · [T9 done 57074.9 to 57600] · was Completed & Approved (2026-07-10)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-07-10T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "s02_asset_1253",
+   "sub": "DWKZ",
+   "status": "Concreted",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 450 of 475 m executed (64+500–64+950) · IR 49086 · [T9 done 64500 to 64950] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "s02_asset_1282",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 350 of 350 m executed · IR 49087 · [T9 done 65475 to 65825] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "s02_asset_1288",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 75 of 75 m executed · IR 49087 · [T9 done 65825 to 65900] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "s02_asset_1356",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 100 of 100 m executed · IR 49088 · [T9 done 68600 to 68700] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "cad_DWKZ_1C50E",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 50 of 50 m executed · IR 49088 · [T9 done 68700 to 68750] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "s02_asset_1366",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 325 of 325 m executed · IR 49088 · [T9 done 68750 to 69075] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "cad_DWKZ_1C50C",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 125 of 125 m executed · IR 49089 · [T9 done 69175 to 69300] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "s02_asset_1380",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 75 of 75 m executed · IR 49090 · [T9 done 69450 to 69525] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "cad_DWKZ_1C612",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 125 of 125 m executed · IR 49085 · [T9 done 73100 to 73225] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "s02_asset_1502",
+   "sub": "DWKZ",
+   "status": "Concreted",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 150 of 155 m executed (74+625–74+775) · IR 49084 · [T9 done 74625 to 74775] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "s02_asset_1619",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 425 of 425 m executed · IR 49081 · [T9 done 79200 to 79625] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "t9s_KZDR_R_84825",
+   "sub": "KZDR",
+   "status": "Concreted",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 25 of 600 m executed (85+400–85+425) · IR 39076-01 · [T9 done 85400 to 85424.9]"
+  },
+  {
+   "asset_id": "t9s_KZDR_R_87225",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 75 of 75 m executed · IR 39078-01 · [T9 done 87225 to 87300]"
+  },
+  {
+   "asset_id": "cad_KZDR_1CA067",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 225 of 225 m executed · IR 38990-01 · [T9 done 88349.9 to 88575.1] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "t9s_KZDR_R_88575",
+   "sub": "KZDR",
+   "status": "Concreted",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 15 of 100 m executed (88+575–88+590, 88+675–88+675) · IR 38990-01 · [T9 done 88575.1 to 88590; 88675 to 88675.1]"
+  },
+  {
+   "asset_id": "t9s_KZDR_R_88775",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 125 of 125 m executed · IR 38990-01 · [T9 done 88775.1 to 88900]"
+  },
+  {
+   "asset_id": "asset_072",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 563 of 563 m executed · IR 39080-01 · [T9 done 89575 to 90137.7] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "cad_KZDR_1CA06A",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 237 of 237 m executed · IR 39080-01 · [T9 done 90137.7 to 90375] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "cad_KZDR_1CA058",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 375 of 375 m executed · IR 39081-01 · [T9 done 92175 to 92550] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "cad_KZDR_1CA059",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 195 of 200 m executed · IR 39082-01 · [T9 done 93475 to 93670] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "asset_091",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 209 of 210 m executed · IR 39082-01 · [T9 done 93735 to 93943.8] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "cad_KZDR_1CA05F",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 156 of 156 m executed · IR 39082-01 · [T9 done 93943.8 to 94100] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "cad_KZDR_1CA05B",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 175 of 175 m executed · IR 39083-01 · [T9 done 94900 to 95075] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "cad_KZDR_1CA05C",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 100 of 100 m executed · IR 39084-01 · [T9 done 95950 to 96050] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "t9s_KZDR_R_96088",
+   "sub": "KZDR",
+   "status": "Concreted",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 498 of 1038 m executed (96+475–96+613, 96+615–96+975, 97+125–97+125) · IR 39085-01; IR 39086-01 · [T9 done 96475 to 96613; 96615 to 96975; 97125 to 97125.1]"
+  },
+  {
+   "asset_id": "cad_KZDR_1CA064",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 125 of 125 m executed · IR 39086-01 · [T9 done 97125.1 to 97249.9] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "cad_KZDR_1CA05D",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 150 of 150 m executed · IR 39087-01 · [T9 done 98700.1 to 98850] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "t9s_KZDR_L_103088",
+   "sub": "KZDR",
+   "status": "Concreted",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 225 of 263 m executed (103+125–103+350) · IR 38993-01 · [T9 done 103125 to 103350]"
+  },
+  {
+   "asset_id": "t9s_KZDR_L_104025",
+   "sub": "KZDR",
+   "status": "Concreted",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 325 of 450 m executed (104+100–104+425) · IR 38994-01 · [T9 done 104100 to 104425]"
+  },
+  {
+   "asset_id": "cad_KZDR_1CA061",
+   "sub": "KZDR",
+   "status": "Concreted",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 450 of 456 m executed (105+275–105+725) · IR 38995-01 · [T9 done 105275 to 105725] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "cad_KZDR_1CA3DA",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 134 of 138 m executed · IR 38996-01 · [T9 done 105815 to 105948.7] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "cad_KZDR_1CA3DD",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 683 of 683 m executed · IR 38996-01 · [T9 done 106654 to 107337] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "cad_KZDR_1CA3DC",
+   "sub": "KZDR",
+   "status": "Concreted",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 526 of 551 m executed (107+337–107+400, 107+425–107+888) · IR 38996-01; IR 48189-01 · [T9 done 107337 to 107400; 107425 to 107888] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "cad_KZDR_1CA3DB",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 1360 of 1360 m executed · IR 48189-01 · [T9 done 107888 to 109247.6] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "cad_KZDR_1CA3DF",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 598 of 598 m executed · IR 48189-01 · [T9 done 109327 to 109925] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "cad_KZDR_1CA3E0",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 875 of 875 m executed · IR 48190-01 · [T9 done 110200 to 111075] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "cad_KZDR_1CA6C1",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 150 of 150 m executed · IR 48191-01 · [T9 done 111950 to 112100] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "cad_KZDR_1CA6C0",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 150 of 150 m executed · IR 48191-01 · [T9 done 112100 to 112250] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "cad_KZDR_1CA6C2",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 200 of 200 m executed · IR 48239-01 · [T9 done 113675 to 113875] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "cad_KZDR_1CA6BE",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 513 of 513 m executed · IR 48241-01 · [T9 done 116175 to 116688] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "cad_KZDR_1CA6BD",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 53 of 53 m executed · IR 48241-01 · [T9 done 116688 to 116741] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "cad_KZDR_1CA6BF",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 34 of 34 m executed · IR 48241-01 · [T9 done 116741 to 116775] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "cad_KZDR_1CA6C4",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-09-30",
+   "inspected_by": "Ditch progress T9 30/09/26",
+   "notes": "Ditch progress T9 30/09/26 · 400 of 400 m executed · IR 48944-01 · [T9 done 118500 to 118900] · was Completed & Approved (2026-09-30)",
+   "replaces": {
+    "status": "Completed & Approved",
+    "by": "Ditch progress T9 30/09/26",
+    "at": "2026-09-30T12:00:00+00:00"
+   }
+  }
+ ],
+ "skipped_existing": [
+  {
+   "asset_id": "s02_asset_417",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-29T15:36:12.438+00:00"
+  },
+  {
+   "asset_id": "s02_asset_1571",
+   "chart": "Concreted",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-10-09T13:37:42.87+00:00"
+  },
+  {
+   "asset_id": "s02_asset_1589",
+   "chart": "Concreted",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-10-09T13:38:21.866+00:00"
+  },
+  {
+   "asset_id": "asset_023",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T14:55:02+00:00"
+  },
+  {
+   "asset_id": "asset_026",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T14:55:02+00:00"
+  },
+  {
+   "asset_id": "asset_036",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T14:55:02+00:00"
+  },
+  {
+   "asset_id": "asset_045",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T14:55:02+00:00"
+  },
+  {
+   "asset_id": "asset_049",
+   "chart": "Concreted",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T14:55:02+00:00"
+  },
+  {
+   "asset_id": "asset_057",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T14:55:02+00:00"
+  },
+  {
+   "asset_id": "cad_KZDR_1CA068",
+   "chart": "Concreted",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-10-06T13:19:11.944+00:00"
+  },
+  {
+   "asset_id": "cad_KZDR_1CA063",
+   "chart": "Concreted",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-10-15T09:12:48.292+00:00"
+  },
+  {
+   "asset_id": "asset_107",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T14:55:02+00:00"
+  },
+  {
+   "asset_id": "asset_110",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T14:55:02+00:00"
+  },
+  {
+   "asset_id": "asset_113",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T14:55:02+00:00"
+  },
+  {
+   "asset_id": "asset_121",
+   "chart": "Completed & Approved",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-09-07T14:55:02+00:00"
+  },
+  {
+   "asset_id": "cad_KZDR_1CA6C3",
+   "chart": "Concreted",
+   "database": "Completed & Approved",
+   "database_by": "Engr. Abdulaziz A. A.",
+   "database_at": "2026-10-22T14:42:13.074+00:00"
+  }
+ ]
+}

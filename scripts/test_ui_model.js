@@ -79,6 +79,81 @@ section('Embankment height and the Type 9 rule (S02)', () => {
   ok(DI.t9Rule().h === 1.8 && /3545/.test(DI.t9Rule().src) && /4218/.test(DI.t9Rule().src), 'the official 1.8 m rule is the default, citing 3545 and 4218');
 });
 
+section('Type 9 schedule from letter 4218', () => {
+  const j = JSON.parse(fs.readFileSync(path.join(root, 'data/t9_schedule.json'), 'utf8'));
+  const letter = JSON.parse(fs.readFileSync(path.join(root, 'data/t9_letter_4218.json'), 'utf8')).stretches;
+  const tot = Object.values(letter).reduce((m, l) => m + l.reduce((n, [a, b]) => n + b - a, 0), 0);
+  ok(tot === 164625 && Object.values(letter).reduce((n, l) => n + l.length, 0) === 216, 'the letter list is 216 stretches, 164,625 m');
+  ok(Object.keys(j.totals).every(k => { const t = j.totals[k]; return Math.abs(t.letter - t.bridge - t.design - t.scheduled - t.dropped) <= 5; }), 'every stretch is a bridge deck, a drawn Type 9 or a scheduled piece');
+  ok(j.totals.DRMR.bridge > 1000 && j.totals.DWKZ.bridge === 0, 'S04 bridge decks (1,008 m) carry no ditch');
+  const before = DI.t9Check('DWKZ', 1.8).km.missing, n0 = DI.data.bySub.DWKZ.length;
+  DI.loadT9Schedule(j, DI.T9_SCHEDULE_ON);
+  const sched = DI.data.bySub.DWKZ.filter(f => f.sched);
+  ok(DI.T9_SCHEDULE_ON.length === 5 && ['KNDW', 'DWKZ', 'KZDR', 'DRMR', 'MRJB'].every(s => DI.hasT9Schedule(s)), 'switched on for all five sections');
+  ok(sched.length === j.pieces.filter(p => p.sub === 'DWKZ').length && DI.data.bySub.DWKZ.length === n0 + sched.length, 'S02 gets ' + sched.length + ' scheduled pieces');
+  ok(j.pieces.length === DI.data.features.filter(f => f.sched).length, 'all ' + j.pieces.length + ' pieces of the schedule are in the app');
+  DI.loadT9Schedule(j, DI.T9_SCHEDULE_ON);
+  ok(DI.data.bySub.DWKZ.length === n0 + sched.length, 'loading twice adds nothing more');
+  const p = sched[0];
+  ok(p.code === 'T9' && p.sched.src.includes('4218') && p.ladder.join() === 'Not started,Completed' && (p.side === 'L' || p.side === 'R'), 'a piece is a Type 9 with a two-stage ladder (precast, reported when done)');
+  ok(sched.every(f => f.ch1 - f.ch0 >= 5 && f.offset === (f.side === 'L' ? 3.5 : -3.5)), 'pieces are at least 5 m and on the platform edge');
+  // every station of every S02 stretch (off the bridges) is covered by a drawn or scheduled Type 9, on either side
+  const rows = DI.data.heights.DWKZ, t9 = DI.data.bySub.DWKZ.filter(f => f.code === 'T9');
+  const br = DI.refs().filter(r => r.sub === 'DWKZ' && r.kind === 'bridge');
+  let st = 0, cov = 0;
+  letter.DWKZ.forEach(([a, b]) => rows.filter(r => r.ch >= a && r.ch <= b && !br.some(x => r.ch >= x.ch0 && r.ch <= x.ch1)).forEach(r => { st++; if (t9.some(f => r.ch >= f.ch0 - 6 && r.ch <= f.ch1 + 6)) cov++; }));
+  ok(cov / st > 0.99, 'Type 9 covers ' + cov + ' of ' + st + ' stations in the letter\'s S02 stretches');
+  const after = DI.t9Check('DWKZ', 1.8).km.missing;
+  ok(after < before * 0.2, 'the red "not drawn" length at 1.8 m falls from ' + before.toFixed(1) + ' to ' + after.toFixed(1) + ' km');
+  // progress by completed length
+  const big = sched.find(f => f.ch1 - f.ch0 >= 100);
+  ok(DI.rangeable(big) && !DI.rangeable(DI.data.bySub.DWKZ.find(f => f.code === 'T12')), 'Type 9 runs are tracked by length, other ditches are not');
+  ok(!DI.coverOf(big) && DI.statusOf(big).bucket === 'none', 'nothing completed yet');
+  const mid = (big.ch0 + big.ch1) / 2;
+  const r1 = DI.addRange(big.id, big.ch0, mid);
+  let st1 = DI.statusOf(big);
+  ok(Math.abs(st1.cover.m - (mid - big.ch0)) < 0.2 && st1.bucket === 'moving' && st1.fill === 'ranges', 'half done: ' + Math.round(st1.cover.m) + ' of ' + Math.round(big.ch1 - big.ch0) + ' m, part-built');
+  DI.addRange(big.id, mid - 10, big.ch1);
+  st1 = DI.statusOf(big);
+  ok(st1.cover.full && st1.bucket === 'done' && st1.fill === 'solid' && st1.cover.ranges.length === 1, 'two overlapping ranges merge, and together finish the run');
+  DI.voidRecord(DI.records.filter(x => x.kind === 'range').pop().id);
+  ok(!DI.statusOf(big).cover.full && DI.statusOf(big).cover.ranges.length === 1, 'undoing the last one takes its length back');
+  DI.voidRecord(r1.id);
+  ok(!DI.coverOf(big), 'all undone: not started again');
+  DI.addRecord({ kind: 'stage', featureId: big.id, stage: 1 });
+  ok(DI.coverOf(big).full && DI.statusOf(big).bucket === 'done', 'a Completed stage on the whole run counts as all of it');
+  ok(DI.addRange(big.id, big.ch0, big.ch0 + 0.2) === null && DI.addRange(DI.data.bySub.DWKZ.find(f => f.code === 'T12').id, 0, 50) === null, 'a sliver, or a ditch that is not Type 9, saves nothing');
+  const drawn = DI.data.bySub.DWKZ.find(f => f.code === 'T9' && !f.sched && f.ch1 - f.ch0 > 50);
+  DI.addRange(drawn.id, drawn.ch0, drawn.ch0 + 30);
+  ok(DI.statusOf(drawn).cover.m > 29 && DI.statusOf(drawn).bucket === 'moving', 'a drawn Type 9 takes ranges too');
+  const rec = DI.addRecord({ kind: 'stage', featureId: p.id, stage: 1 });
+  ok(DI.seenOf(p.id) && DI.seenOf(p.id).stage === 1, 'a piece takes a Completed record');
+  DI.voidRecord(rec.id);
+  const geo = DI.exportGeo('DWKZ');
+  ok(!(geo.features || []).some(g => /^t9s_/.test((g.properties || {}).id || '')), 'scheduled pieces are not exported as base data');
+});
+
+section('Progress: counts for structures, length for ditches', () => {
+  const tp = DI.typeProgress('DWKZ');
+  const t9 = tp.find(t => t.key === 'T9'), box = tp.find(t => t.key === 'BC.pt');
+  ok(t9 && t9.span && /Type 9/.test(t9.label) && t9.p.lin.m > 15000 && t9.p.pts.n === 0, 'Type 9 is a ditch type, measured by length: ' + (t9 && (t9.p.lin.m / 1000).toFixed(1)) + ' km');
+  ok(box && !box.span && box.label === 'Box culverts' && box.p.pts.n > 50 && box.p.lin.n === 0, 'Box culverts are counted: ' + (box && box.p.pts.n));
+  const all = DI.progressOf(DI.data.bySub.DWKZ), sum = tp.reduce((n, t) => n + t.p.pts.n + t.p.lin.n, 0);
+  ok(sum === all.pts.n + all.lin.n, 'every structure is in exactly one type (' + sum + ')');
+  ok(tp.every(t => t.label && !/^\s*$/.test(t.label)) && new Set(tp.map(t => t.key)).size === tp.length, 'types have names and are distinct');
+  const g = tp.find(t => t.key === 'T9'), before = DI.progressOf(g.feats).lin.doneM;
+  const piece = g.feats.find(f => f.sched && f.ch1 - f.ch0 > 150 && !DI.statusOf(f).cover);
+  DI.addRange(piece.id, piece.ch0, piece.ch0 + 100);
+  ok(Math.abs(DI.progressOf(g.feats).lin.doneM - before - 100) < 0.2, 'a completed range of 100 m adds 100 m to the Type 9 total');
+  const wd = tp.find(t => t.key === 'WD.pt'), w = wd.feats[0];
+  const d0 = DI.progressOf(wd.feats).pts.done;
+  DI.addRecord({ kind: 'stage', featureId: w.id, stage: w.ladder.length - 1 });
+  ok(DI.progressOf(wd.feats).pts.done === d0 + 1, 'a completed water descent adds one to the count');
+  const whole = DI.progressOf([].concat(...['KNDW', 'DWKZ', 'KZDR', 'DRMR', 'MRJB'].map(s => DI.data.bySub[s])));
+  ok(whole.pts.n > 3000 && whole.lin.m > 300000, 'the whole project: ' + whole.pts.n + ' structures, ' + (whole.lin.m / 1000).toFixed(0) + ' km of ditch');
+  ok(DI.LINES.map(l => l.id).join() === 'KM,KD' && !DI.hasData('KNYG'), 'main line has data, the branch has none yet');
+});
+
 section('Bridges and road crossings, for reference', () => {
   const all = DI.refs();
   ok(all.length > 80 && ['KNDW', 'DWKZ', 'KZDR', 'DRMR', 'MRJB'].every(s => all.some(r => r.sub === s)), 'structures on all five sections: ' + all.length);
@@ -214,7 +289,7 @@ section('Base data: correct, add, remove, check, bake', () => {
   ok(!D2.data.byId[gone.id], 'baked removal is gone');
   store.KMD_WALK_RECORDS_V1 = keep.recs;
   delete require.cache[mod]; require(mod); window.DI.init();
-  ok(window.DI.data.bySub.KZDR.length === n0, 're-applying the same corrections on baked data changes nothing');
+  ok(window.DI.data.bySub.KZDR.length === n0 - DI.data.bySub.KZDR.filter(f => f.sched).length, 're-applying the same corrections on baked data changes nothing');
   window.SECTION03_ASSETS = src;
 });
 

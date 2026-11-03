@@ -27,6 +27,10 @@ const ok = (c, m) => { console.log((c ? 'ok: ' : 'FAIL: ') + m); if (!c) process
   const BASE = 'http://localhost:' + server.address().port + '/index.html';
   const SP = fs.mkdtempSync(path.join(os.tmpdir(), 'di-base-'));
   const b = await chromium.launch();
+  // These tests must never reach the live cloud database: the app would sync the records they make
+  // (stages, defects, ranges) as real inspections. Every request to Supabase is refused.
+  const _newContext = b.newContext.bind(b);
+  b.newContext = async (...a) => { const c = await _newContext(...a); await c.route(/supabase\.co/, r => r.abort()); return c; };
   const ctx = await b.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, acceptDownloads: true });
   const p = await ctx.newPage();
   const errs = []; p.on('pageerror', e => errs.push(e.message));
