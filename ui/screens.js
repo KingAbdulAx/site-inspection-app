@@ -643,7 +643,9 @@
 
   // ================================================================ HISTORY
   function openHistory(fid) {
-    const f = DI.data.byId[fid];
+    let f = DI.data.byId[fid];
+    if (!f) return;
+    if (f.absorbedInto) { fid = f.absorbedInto; f = DI.data.byId[fid]; }
     const ov = DA.openOverlay('', 'full');
     let tab = 'all';
     const draw = () => {
@@ -664,6 +666,27 @@
       DI.live(r => r.kind === 'range' && r.featureId === fid).forEach(r => ev.push({ at: r.at, t: 'field', dot: 'seen', tag: '<span class="chip seen">Seen</span>', h: esc(DA.recLabel(r)), m: esc(String(r.by).replace(/^Engr\.\s*/, '')) + ' · on phone' }));
       DI.live(r => r.kind === 'base' && r.featureId === fid).forEach(r => ev.push({ at: r.at, t: 'design', dot: 'd', tag: '<span class="chip claim">Data</span>', h: esc(DA.recLabel(r)), b: esc([Object.keys(r.set || {}).map(k => k + ' → ' + (k.startsWith('ch') ? DI.fmtCh(r.set[k], 3) : r.set[k])).join(', '), r.note].filter(Boolean).join(' · ')), m: esc(String(r.by).replace(/^Engr\.\s*/, '')) + ' · base data, not a revision' }));
       (DI.data.irs[fid] || []).forEach(r => ev.push({ at: r.date, t: 'field', dot: 'ir', tag: '<span class="chip claim">IR ' + esc(r.ir) + '</span>', h: esc(r.milestone) + ' claimed', m: 'Contractor · ' + r.status }));
+      if (f.absorbed && f.absorbed.length) {
+        ev.push({
+          at: f.joinRecord ? f.joinRecord.at : (f.built ? f.built.at : '0000'),
+          t: 'field',
+          dot: 'seen',
+          tag: '<span class="chip measured">Joined</span>',
+          h: 'Merged ' + (f.absorbed.length + 1) + ' overlapping spans into one run (' + Math.round(f.built ? f.built.len : f.ch1 - f.ch0) + ' m)',
+          b: 'Primary: ' + esc(f.name) + ' (' + (f.sched ? 'Letter 4218' : 'Drawing') + ' · ' + DI.fmtCh(f.ch0, 1) + '–' + DI.fmtCh(f.ch1, 1) + ')<br>' +
+             f.absorbed.map(p => 'Absorbed: ' + esc(p.name) + ' (' + (p.sched ? 'Letter 4218' : 'Drawing') + ' · ' + DI.fmtCh(p.ch0, 1) + '–' + DI.fmtCh(p.ch1, 1) + ')').join('<br>'),
+          m: (f.joinRecord && f.joinRecord.by ? f.joinRecord.by + ' · ' : '') + 'automatic join on overlap'
+        });
+        f.absorbed.forEach(p => {
+          DI.recordsFor(p.id).forEach(r => {
+            if (r.kind === 'stage') ev.push({ at: r.at, t: 'field', dot: 'seen', tag: '<span class="chip seen">Seen (' + esc(p.name) + ')</span>', h: esc(p.ladder[r.stage]), m: esc(String(r.by).replace(/^Engr\.\s*/, '')) });
+            else if (r.kind === 'range') ev.push({ at: r.at, t: 'field', dot: 'seen', tag: '<span class="chip seen">Range (' + esc(p.name) + ')</span>', h: esc(DA.recLabel(r)), m: esc(String(r.by).replace(/^Engr\.\s*/, '')) });
+            else if (r.kind === 'extent') ev.push({ at: r.at, t: 'field', dot: 'seen', tag: '<span class="chip measured">As built (' + esc(p.name) + ')</span>', h: esc(DA.recLabel(r)), m: esc(String(r.by).replace(/^Engr\.\s*/, '')) });
+          });
+          DI.live(r => r.kind === 'range' && r.featureId === p.id).forEach(r => ev.push({ at: r.at, t: 'field', dot: 'seen', tag: '<span class="chip seen">Seen (' + esc(p.name) + ')</span>', h: esc(DA.recLabel(r)), m: esc(String(r.by).replace(/^Engr\.\s*/, '')) }));
+          (DI.data.irs[p.id] || []).forEach(r => ev.push({ at: r.date, t: 'field', dot: 'ir', tag: '<span class="chip claim">IR (' + esc(p.name) + ')</span>', h: esc(r.milestone) + ' claimed', m: 'Contractor · ' + r.status }));
+        });
+      }
       ev.push(f.sched ? { at: '0000', t: 'design', dot: 'd', tag: '<span class="chip rev">Letter</span>', h: 'From the contractor’s Type 9 schedule', b: esc(f.full) + ' at ' + DA.chText(f), m: esc(f.sched.src.split(' (')[0]) + ' · stretch ' + DI.fmtCh(f.sched.letter[0]) + ' → ' + DI.fmtCh(f.sched.letter[1]) }
         : { at: '0000', t: 'design', dot: 'd', tag: '<span class="chip rev">Drawing</span>', h: 'From the drawing set', b: esc(f.full) + ' at ' + DA.chText(f), m: esc(f.sheet || '') + (f.level ? ' · Level ' + f.level : '') + ' · office import' });
       ev.sort((a, b) => a.at < b.at ? 1 : -1);

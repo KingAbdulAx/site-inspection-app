@@ -219,6 +219,49 @@ const assert = (c, m) => { if (!c) { console.log('FAIL: ' + m); process.exitCode
   }, spanFeat.id);
   const reverted = await t.evaluate(id => !DI.data.byId[id].built, spanFeat.id);
   assert(reverted, 'undoing extent record reverts f.built');
+
+  // Phase 4: Automatic joins when spans overlap
+  const joinFeats = await t.evaluate(() => {
+    const f1 = DI.data.byId['s02_asset_143'];
+    const f2 = DI.data.byId['t9s_DWKZ_R_24825'];
+    return { id1: f1.id, id2: f2.id, ch0: Math.round(f1.ch0), ch1: Math.round(f1.ch1), f2ch0: Math.round(f2.ch0), f2ch1: Math.round(f2.ch1) };
+  });
+  await t.evaluate(id => DA.openRecord(id), joinFeats.id1);
+  await t.waitForTimeout(300);
+  await t.tap('.ov:last-child [data-act=extent-edit]');
+  await t.waitForTimeout(300);
+  await t.tap('.ov:last-child [data-act=ee-pick-end][data-end=end]');
+  await t.fill('#eeChInput', '24+850');
+  await t.evaluate(() => {
+    const inp = document.querySelector('#eeChInput');
+    inp.dispatchEvent(new Event('change'));
+  });
+  await t.waitForTimeout(200);
+  const joinPreview = await t.evaluate(() => document.querySelector('#eePreview').textContent);
+  assert(joinPreview.includes('This will join with'), 'live preview announces join on overlap: ' + joinPreview);
+  await t.tap('.ov:last-child [data-act=ee-save]');
+  await t.waitForTimeout(400);
+  const joinToast = await t.evaluate(() => document.querySelector('#toastHost').textContent);
+  assert(joinToast.includes('Joined with'), 'toast confirms join: ' + joinToast);
+  const isJoined = await t.evaluate(([id1, id2]) => {
+    const p = DI.data.byId[id1];
+    const abs = DI.data.byId[id2];
+    return p.absorbed && p.absorbed.some(x => x.id === id2) && abs.absorbedInto === id1;
+  }, [joinFeats.id1, joinFeats.id2]);
+  assert(isJoined, 'primary lists absorbed piece and absorbed piece points to primary');
+  await t.evaluate(id => DA.openHistory(id), joinFeats.id1);
+  await t.waitForTimeout(300);
+  const histJoin = await t.evaluate(() => document.querySelector('.ov:last-child').textContent);
+  assert(histJoin.includes('Joined') && histJoin.includes('Absorbed'), 'history lists join timeline event');
+  await t.evaluate(() => DA.closeAll());
+  // Undo join via toast
+  await t.tap('#toastHost [data-act=undo]');
+  await t.waitForTimeout(400);
+  const undone = await t.evaluate(([id1, id2]) => {
+    return DI.data.byId[id1].absorbed === null && DI.data.byId[id2].absorbedInto === null;
+  }, [joinFeats.id1, joinFeats.id2]);
+  assert(undone, 'undo via toast restores separate spans');
+
   await t.goto(BASE + '?sim=KZDR:100500:-4:3'); await t.waitForTimeout(2000);
   assert(await t.evaluate(() => DI.hasT9Schedule('KZDR') && DI.hasT9Schedule('MRJB')), 'the other sections have their scheduled pieces too');
   // embankment height and the Type 9 check (S02 has the longitudinal profile)

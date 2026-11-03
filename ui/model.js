@@ -497,8 +497,8 @@
     if (!L) return null;
     const key = sub + '|' + thr + '|' + (data.bySub[sub] || []).length;
     if (t9Cache[key]) return t9Cache[key];
-    const feats = (data.bySub[sub] || []).filter(f => !statusOf(f).removed);
-    const on = (codes, side, ch) => feats.some(f => codes.includes(f.code) && f.side === side && ch >= f.ch0 - 5 && ch <= f.ch1 + 5);
+    const feats = (data.bySub[sub] || []).filter(f => !statusOf(f).removed && !f.absorbedInto);
+    const on = (codes, side, ch) => feats.some(f => { if (!codes.includes(f.code) || f.side !== side) return false; const [c0, c1] = extentEnds(f); return ch >= c0 - 5 && ch <= c1 + 5; });
     const bridges = refs().filter(r => r.sub === sub && r.kind === 'bridge');
     const onBridge = ch => bridges.some(b => ch >= b.ch0 && ch <= b.ch1);
     const runs = [], km = { missing: 0, ok: 0, extra: 0, exempt: 0, na: 0 };
@@ -639,8 +639,9 @@
     if (r.kind === 'stage' && r.stageName == null) { const f = data.byId[r.featureId]; if (f) r.stageName = f.ladder[r.stage]; }
     records.push(r);
     saveRecords();
-    if (r.kind === 'extent') applyExtents();
-    if (r.kind === 'stage' || r.kind === 'defect' || r.kind === 'range' || r.kind === 'extent') mirrorLegacy(r.featureId);
+    if (r.kind === 'extent') { applyExtents(); applyJoins(); }
+    if (r.kind === 'join') { applyJoins(); }
+    if (r.kind === 'stage' || r.kind === 'defect' || r.kind === 'range' || r.kind === 'extent' || r.kind === 'join') mirrorLegacy(r.featureId || r.into);
     if (r.kind === 'base') applyBase();
     return r;
   }
@@ -649,7 +650,7 @@
     const r = addRecord({ kind: 'void', target: id });
     const t = records.find(x => x.id === id);
     if (t && t.kind === 'base') applyBase();
-    else if (t && t.kind === 'extent') { applyExtents(); mirrorLegacy(t.featureId); }
+    else if (t && (t.kind === 'extent' || t.kind === 'join')) { applyExtents(); applyJoins(); mirrorLegacy(t.featureId || t.into); }
     else if (t && t.featureId) mirrorLegacy(t.featureId);
     return r;
   }
@@ -698,6 +699,7 @@
     if (SUBS.DWKZ) SUBS.DWKZ.count = (data.bySub.DWKZ || []).length;
     if (SUBS.KZDR) SUBS.KZDR.count = (data.bySub.KZDR || []).length;
     applyExtents();
+    applyJoins();
   }
   function baseRecords() { return live(r => r.kind === 'base'); }
   function correctBase(fid, set, note) { return addRecord({ kind: 'base', action: 'edit', featureId: fid, set, note }); }
@@ -797,6 +799,7 @@
     window.appState = window.appState || {};
     window.appState.inspections = legacy;
     applyExtents();
+    applyJoins();
   }
   function mirrorLegacy(fid) {
     const f = data.byId[fid];
@@ -915,23 +918,42 @@
   }
   function coverOf(f) {
     if (!rangeable(f)) return null;
-    const recs = live(r => r.kind === 'range' && r.featureId === f.id);
-    const own = ownSeen(f.id);
-    const byStage = !!(own && own.stage >= f.ladder.length - 1);
-    const foreign = foreignRanges(f);
-    if (!recs.length && !byStage && !foreign.length) return null;
+    const pieces = (f.absorbed && f.absorbed.length) ? [f, ...f.absorbed] : [f];
+    const recs = [];
+    const foreign = [];
+    let hasFullStage = false;
+    let maxLastAt = null;
+
+    pieces.forEach(p => {
+      const pRecs = live(r => r.kind === 'range' && r.featureId === p.id);
+      recs.push(...pRecs);
+      const own = ownSeen(p.id);
+      if (own && own.stage >= p.ladder.length - 1) {
+        hasFullStage = true;
+        const [p0, p1] = extentEnds(p);
+        recs.push({ from: p0, to: p1, at: own.at });
+      }
+      const pForeign = foreignRanges(p);
+      foreign.push(...pForeign);
+      const lg = legacy[p.id];
+      const pLast = pRecs.map(r => r.at).concat(own ? [own.at] : []).concat(pForeign.length && lg ? [lg.updated_at || (lg.date || '').replace(' ', 'T')] : []).filter(Boolean).sort().pop();
+      if (pLast && (!maxLastAt || pLast > maxLastAt)) maxLastAt = pLast;
+    });
+
+    if (!recs.length && !foreign.length && !hasFullStage) return null;
+
     const ch0 = f.built ? f.built.ch0 : f.ch0;
     const ch1 = f.built ? f.built.ch1 : f.ch1;
     const list = recs.map(r => [r.from, r.to]).concat(foreign).map(([a, b]) => [Math.max(ch0, Math.min(a, b)), Math.min(ch1, Math.max(a, b))]).filter(r => r[1] > r[0]);
-    if (byStage) list.push([ch0, ch1]);
+    if (hasFullStage && (!f.absorbed || !f.absorbed.length)) list.push([ch0, ch1]);
     const ranges = mergeRanges(list);
     const m = ranges.reduce((n, [a, b]) => n + b - a, 0);
-    const lg = legacy[f.id];
-    const lastAt = recs.map(r => r.at).concat(byStage ? [own.at] : []).concat(foreign.length && lg ? [lg.updated_at || (lg.date || '').replace(' ', 'T')] : []).filter(Boolean).sort().pop() || null;
-    return { ranges, m, len: ch1 - ch0, full: m >= ch1 - ch0 - 1, lastAt, records: recs, foreign: foreign.length };
+    const len = ch1 - ch0;
+    return { ranges, m, len, full: m >= len - 1, lastAt: maxLastAt, records: recs, foreign: foreign.length };
   }
   function addRange(fid, from, to, pos) {
-    const f = data.byId[fid];
+    let f = data.byId[fid];
+    if (f && f.absorbedInto) { fid = f.absorbedInto; f = data.byId[fid]; }
     if (!f || !rangeable(f)) return null;
     const ch0 = f.built ? f.built.ch0 : f.ch0;
     const ch1 = f.built ? f.built.ch1 : f.ch1;
@@ -969,6 +991,7 @@
       records.push({ id: uid(), at: (lg && lg.updated_at) || new Date().toISOString(), by: (lg && lg.inspected_by) || 'office', kind: 'extent', featureId: f.id, from: a, to: b, line: f.line, sub: f.sub, ch: a, pos: null, imported: true });
       saveRecords();
       applyExtents();
+    applyJoins();
     }
   }
   function applyExtents() {
@@ -1034,6 +1057,146 @@
     });
   }
 
+  function extentEnds(f) {
+    if (!f) return [0, 0];
+    if (f.built) return [f.built.ch0, f.built.ch1];
+    return [Math.min(f.ch0, f.ch1), Math.max(f.ch0, f.ch1)];
+  }
+  function addJoin(intoFid, absorbedIds, note, pos) {
+    const primary = data.byId[intoFid];
+    if (!primary || !absorbedIds || !absorbedIds.length) return null;
+    const r = addRecord({
+      kind: 'join',
+      into: intoFid,
+      absorbed: absorbedIds,
+      line: primary.line,
+      sub: primary.sub,
+      note: note || '',
+      pos: pos || null
+    });
+    applyJoins();
+    return r;
+  }
+  function detectJoins(fid, from, to) {
+    const f = data.byId[fid];
+    if (!f) return null;
+    const a = Math.min(from, to);
+    const b = Math.max(from, to);
+    const subFeats = (data.bySub[f.sub] || []).filter(o =>
+      o.id !== f.id &&
+      o.code === f.code &&
+      o.side === f.side &&
+      o.lane === f.lane &&
+      !statusOf(o).removed
+    );
+    const cluster = new Set([f.id]);
+    let minCh = a, maxCh = b;
+    let added = true;
+    while (added) {
+      added = false;
+      subFeats.forEach(o => {
+        if (cluster.has(o.id)) return;
+        const [o0, o1] = extentEnds(o);
+        if (Math.max(minCh, o0) <= Math.min(maxCh, o1) + 0.5) {
+          cluster.add(o.id);
+          minCh = Math.min(minCh, o0);
+          maxCh = Math.max(maxCh, o1);
+          added = true;
+        }
+      });
+    }
+    if (cluster.size <= 1) return null;
+    const allPieces = Array.from(cluster).map(id => data.byId[id]);
+    allPieces.sort((p1, p2) => {
+      const s1 = p1.id === f.id ? a : extentEnds(p1)[0];
+      const s2 = p2.id === f.id ? a : extentEnds(p2)[0];
+      return s1 - s2;
+    });
+    const primary = allPieces[0];
+    const absorbed = allPieces.slice(1);
+    const unionLen = maxCh - minCh;
+    return {
+      primary,
+      absorbed,
+      allPieces,
+      from: minCh,
+      to: maxCh,
+      unionLen
+    };
+  }
+  function applyJoins() {
+    const v = voided();
+    Object.values(data.byId).forEach(f => {
+      f.absorbedInto = null;
+      f.absorbed = null;
+      f.joinRecord = null;
+    });
+    const joinRecs = records.filter(r => r.kind === 'join' && !v.has(r.id)).sort((a, b) => a.at < b.at ? -1 : 1);
+    if (!joinRecs.length) return;
+
+    const parentMap = {};
+    const recMap = {};
+    joinRecs.forEach(r => {
+      const primary = data.byId[r.into];
+      if (!primary) return;
+      recMap[r.into] = r;
+      (r.absorbed || []).forEach(absId => {
+        if (data.byId[absId] && absId !== r.into) {
+          parentMap[absId] = r.into;
+        }
+      });
+    });
+
+    function getRoot(id) {
+      let curr = id;
+      const seen = new Set();
+      while (parentMap[curr] && !seen.has(curr)) {
+        seen.add(curr);
+        curr = parentMap[curr];
+      }
+      return curr;
+    }
+
+    const absorbedByRoot = {};
+    Object.keys(parentMap).forEach(childId => {
+      const rootId = getRoot(childId);
+      if (rootId !== childId && data.byId[rootId]) {
+        const child = data.byId[childId];
+        child.absorbedInto = rootId;
+        if (!absorbedByRoot[rootId]) absorbedByRoot[rootId] = [];
+        absorbedByRoot[rootId].push(child);
+      }
+    });
+
+    Object.keys(absorbedByRoot).forEach(rootId => {
+      const root = data.byId[rootId];
+      if (!root || root.absorbedInto) return;
+      const absorbedList = absorbedByRoot[rootId];
+      root.absorbed = absorbedList;
+      root.joinRecord = recMap[root.id] || null;
+
+      const all = [root, ...absorbedList];
+      const minFrom = Math.min(...all.map(p => extentEnds(p)[0]));
+      const maxTo = Math.max(...all.map(p => extentEnds(p)[1]));
+      const len = maxTo - minFrom;
+
+      root.built = {
+        ch0: minFrom,
+        ch1: maxTo,
+        len,
+        diff0: minFrom - root.ch0,
+        diff1: maxTo - root.ch1,
+        diffLen: len - (root.ch1 - root.ch0),
+        recordId: root.joinRecord ? root.joinRecord.id : (root.built ? root.built.recordId : null),
+        at: root.joinRecord ? root.joinRecord.at : (root.built ? root.built.at : null),
+        by: root.joinRecord ? root.joinRecord.by : (root.built ? root.built.by : null),
+        note: root.joinRecord ? root.joinRecord.note : (root.built ? root.built.note : ''),
+        joined: true
+      };
+    });
+  }
+
+
   function statusOf(f) {
     const seen = seenOf(f.id);
     const claim = claimOf(f.id);
@@ -1085,6 +1248,7 @@
   function progressOf(feats) {
     const o = { pts: { n: 0, done: 0 }, lin: { n: 0, done: 0, m: 0, doneM: 0 }, part: 0, stalled: 0 };
     feats.forEach(f => {
+      if (f.absorbedInto) return;
       const st = statusOf(f);
       if (st.removed) return;
       if (st.bucket === 'moving') o.part++;
@@ -1218,7 +1382,7 @@
     fmtCh, fmtPlus, parseCh, fmtDate, fmtTime, monthsBetween, esc, DAYS, MONTHS,
     inspector, setInspector, addRecord, voidRecord, live, recordsFor, seenOf, ownSeen, openDefects,
     designChanges, statusOf, drafts, saveDraft, putPhoto, getPhoto, uid, loadLegacy, mirrorLegacy,
-    loadSections, sectionAt, loadT9Schedule, hasT9Schedule, rangeable, coverOf, addRange, rangeNote, parseRangeNote, extentNote, parseExtentNote, foreignExtent, adoptForeignExtent, applyExtents, extentOf, addExtent, isSpan, typeOf, progressOf, typeProgress, T9_SCHEDULE_ON, refs, refsNear, refById, REF_KIND, loadHeights, hasHeights, heightAt, T9_RULES, t9Rule, setT9Rule, t9Check,
+    loadSections, sectionAt, loadT9Schedule, hasT9Schedule, rangeable, coverOf, addRange, rangeNote, parseRangeNote, extentNote, parseExtentNote, foreignExtent, adoptForeignExtent, applyExtents, extentOf, addExtent, extentEnds, addJoin, detectJoins, applyJoins, isSpan, typeOf, progressOf, typeProgress, T9_SCHEDULE_ON, refs, refsNear, refById, REF_KIND, loadHeights, hasHeights, heightAt, T9_RULES, t9Rule, setT9Rule, t9Check,
     PRESETS, presetOf, applyBase, baseRecords, correctBase, addBase, deleteBase, verifyBase, unverifyBase, exportGeo, exportCorrections, importRecords,
     project, pointAt, laneOf, savePosition, lastPosition, csvCell,
     get records() { return records; }

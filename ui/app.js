@@ -122,7 +122,7 @@
   DA.setTheme = setTheme;
 
   // -------------------------------------------------------- position
-  function lineFeatures() { return DI.data.features.filter(f => f.line === S.pos.line); }
+  function lineFeatures() { return DI.data.features.filter(f => f.line === S.pos.line && !f.absorbedInto); }
   DA.lineFeatures = lineFeatures;
 
   function setHand(line, ch) {
@@ -543,7 +543,9 @@
 
   // ------------------------------------------------------- record sheet
   function openRecord(fid) {
-    const f = DI.data.byId[fid];
+    let f = DI.data.byId[fid];
+    if (!f) return;
+    if (f.absorbedInto) { fid = f.absorbedInto; f = DI.data.byId[fid]; }
     if (!f) return;
     const st = DI.statusOf(f);
     const max = f.ladder.length - 1;
@@ -622,7 +624,9 @@
 
   // ------------------------------------------------ extent editing sheet
   function openExtentEdit(fid) {
-    const f = DI.data.byId[fid];
+    let f = DI.data.byId[fid];
+    if (!f) return;
+    if (f.absorbedInto) { fid = f.absorbedInto; f = DI.data.byId[fid]; }
     if (!f) return;
     let activeEnd = 'end'; // 'start' | 'end'
     let from = f.built ? f.built.ch0 : f.ch0;
@@ -680,6 +684,16 @@
         const st = DI.statusOf(f);
         if (st.cover && st.cover.ranges.some(([a, b]) => a < from || b > to)) {
           h += '<div class="note" style="margin-top:8px;color:var(--ink-2)">Completed ranges beyond ' + DI.fmtCh(from, 1) + '–' + DI.fmtCh(to, 1) + ' will be clipped in display, but records remain safe.</div>';
+        }
+        const willJoin = DI.detectJoins(fid, from, to);
+        if (willJoin) {
+          const joinNames = willJoin.absorbed.map(p => {
+            const ext = DI.extentEnds(p);
+            return esc(p.name) + ' ' + DI.fmtCh(ext[0], 0) + '–' + DI.fmtCh(ext[1], 0);
+          }).join(', ');
+          h += '<div class="note" style="margin-top:8px;padding:8px 12px;background:var(--surface);border:1.5px solid var(--ink);border-radius:2px;color:var(--ink);font-weight:600">' +
+            'This will join with ' + joinNames + ' (now ' + Math.round(willJoin.unionLen).toLocaleString('en-GB') + ' m)' +
+            '</div>';
         }
         h += '</div>';
       } else {
@@ -756,18 +770,39 @@
     draw();
   }
   function recordExtent(fid, from, to, note) {
+    const willJoin = DI.detectJoins(fid, from, to);
     const r = DI.addExtent(fid, from, to, note, snapPos());
     if (!r) { toast({ title: 'Nothing saved', sub: 'Invalid chainage extent' }); return; }
+
+    let rJoin = null;
+    if (willJoin) {
+      rJoin = DI.addJoin(willJoin.primary.id, willJoin.absorbed.map(p => p.id), note, snapPos());
+    }
+
     closeAll();
-    toast({
-      title: 'Saved on this phone',
-      sub: 'As built ' + DI.fmtCh(r.from, 1) + ' → ' + DI.fmtCh(r.to, 1) + ' · ' + Math.round(r.to - r.from) + ' m',
-      undo: () => {
-        DI.voidRecord(r.id);
-        render();
-        toast({ title: 'Undone', sub: 'The as-built extent record was withdrawn' });
-      }
-    });
+    if (willJoin && rJoin) {
+      const absNames = willJoin.absorbed.map(p => esc(p.name)).join(', ');
+      toast({
+        title: 'Saved on this phone',
+        sub: 'Joined with ' + absNames + ' · now ' + Math.round(willJoin.unionLen) + ' m',
+        undo: () => {
+          DI.voidRecord(rJoin.id);
+          DI.voidRecord(r.id);
+          render();
+          toast({ title: 'Undone', sub: 'The join and extent edit were withdrawn' });
+        }
+      });
+    } else {
+      toast({
+        title: 'Saved on this phone',
+        sub: 'As built ' + DI.fmtCh(r.from, 1) + ' → ' + DI.fmtCh(r.to, 1) + ' · ' + Math.round(r.to - r.from) + ' m',
+        undo: () => {
+          DI.voidRecord(r.id);
+          render();
+          toast({ title: 'Undone', sub: 'The as-built extent record was withdrawn' });
+        }
+      });
+    }
     render();
   }
   DA.openExtentEdit = openExtentEdit;

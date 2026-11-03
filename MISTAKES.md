@@ -230,3 +230,19 @@ See also the master workspace log at `../MISTAKES.md`.
 - **The Mistake/Error:** PowerShell parsed escaped quotes and nested commas as cmdlet parameter separators, failing with `ParserError: Missing argument in parameter list`.
 - **The Fix:** Avoid multi-line inline scripts in PowerShell; use dedicated patch scripts or node files to perform code manipulation.
 - **Lesson Learned:** On Windows PowerShell, execute JavaScript code manipulation via script files rather than `node -e` with inline string literals containing commas or nested quotation.
+
+### [2026-11-03 10:58] — Quadratic O(N^2) Iteration in applyJoins Hanging Automated Test Runner
+
+- **Date/Time:** 2026-11-03 10:58 (WAT)
+- **Context:** Applying join records across 5,410 features in `ui/model.js` (`applyJoins`).
+- **The Mistake/Error:** `Object.values(data.byId).forEach(root => { const absorbedList = Object.values(data.byId).filter(f => f.absorbedInto === root.id); ... })` iterated over 5,410 elements and allocated a new array with an inner filter of 5,410 elements on every single iteration (~29.2 million operations), causing `test_ui_model.js` to hang for over 25 seconds.
+- **The Fix:** Created an `absorbedByRoot` mapping indexed directly by `rootId` from `parentMap`, reducing iteration from $O(N^2)$ to $O(K)$ where $K$ is the number of absorbed spans (typically 1 or 2).
+- **Lesson Learned:** Never perform nested linear scans or filtering over entire entity collections when grouping parent-child hierarchies; index lookups in a single-pass hash map.
+
+### [2026-11-03 11:08] — Playwright evaluate Multiple Arguments Signature Error
+
+- **Date/Time:** 2026-11-03 11:08 (WAT)
+- **Context:** Verifying joined feature states in browser E2E test `scripts/test_ui_e2e.js`.
+- **The Mistake/Error:** Executed `await t.evaluate((id1, id2) => { ... }, joinFeats.id1, joinFeats.id2)`. Playwright rejected the call with `Error: Too many arguments. If you need to pass more than 1 argument to the function wrap them in an object`.
+- **The Fix:** Wrapped parameters in a single array: `await t.evaluate(([id1, id2]) => { ... }, [joinFeats.id1, joinFeats.id2])`.
+- **Lesson Learned:** In Playwright, `page.evaluate()` accepts only a single parameter payload following the callback; multiple arguments must always be bundled into an array or object literal.
