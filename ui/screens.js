@@ -93,6 +93,7 @@
       h += '<div style="padding:18px 16px;background:var(--surface);border-bottom:1px solid var(--rule)"><div class="fhead">' + DA.sideBadge(f.side, 'xl') + '<div style="min-width:0"><div style="font:700 36px/1.02 var(--f-cond)">' + esc(f.name) + '</div>' +
         (f.full && f.full !== f.name ? '<div style="font:500 17px/1.3 var(--f-sans);color:var(--ink-2);margin-top:4px">' + esc(f.full) + '</div>' : '') + '</div></div>';
       h += '<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:14px;font:500 24px/1.15 var(--f-mono)">' + DA.chHtml(f) + (DA.isSpan(f) ? ' <b class="len">' + DA.lenText(f) + '</b>' : '') + ' ' + DA.certChip(f) + ' <span style="font:500 18px/1 var(--f-sans);color:var(--ink-2)">' + (f.kind === 'cross' ? 'crosses under track' : '') + '</span></div>';
+      h += DA.quietExtentsHtml(f);
       const where = f.kind === 'cross' ? L.short + ' · ' + f.sub + ' · ' + f.catLabel : DA.offText(f).replace('≈', '≈ ') + ' ' + (f.side === 'L' ? 'left' : f.side === 'R' ? 'right' : '') + ' of CL · ' + ({ toe: 'toe of slope', plat: 'platform edge', face: 'slope face', crest: 'crest', off: 'off alignment', cl: 'under the track' }[f.lane] || '');
       h += '<div class="lbl-caps" style="margin-top:12px;color:var(--ink-3)">' + esc(where) + '</div>' + DA.baseStrip(f) + '</div>';
 
@@ -113,7 +114,9 @@
         if (f.level === 'C' && st.best > 0) h += '<div class="warn">' + I.icon('warn') + '<div>Work started ahead of an approved drawing. Sent to the office as an open item.</div></div>';
         h += '</div><button class="btn primary mt12" data-act="record" data-id="' + esc(f.id) + '">Record stage ' + I.icon('chev') + '</button>';
       }
-      h += '<div class="row-btns two mt8"><button class="btn defect" data-act="defect" data-id="' + esc(f.id) + '">' + I.icon('warn') + 'Defect</button><button class="btn" data-act="photo" data-id="' + esc(f.id) + '">' + I.icon('camera') + 'Photo</button></div></div>';
+      h += '<div class="row-btns two mt8"><button class="btn defect" data-act="defect" data-id="' + esc(f.id) + '">' + I.icon('warn') + 'Defect</button><button class="btn" data-act="photo" data-id="' + esc(f.id) + '">' + I.icon('camera') + 'Photo</button></div>';
+      if (DA.isSpan(f)) h += '<button class="btn mt8" data-act="extent-edit" data-id="' + esc(f.id) + '" style="font-weight:700">' + I.icon('sizes') + 'Built to a different length ›</button>';
+      h += '</div>';
 
       // open defects
       if (st.defects.length) {
@@ -156,7 +159,7 @@
       if (DA.isSpan(f)) {
         kv('From', DI.fmtCh(f.ch0, f.cert === 'exact' ? 3 : 1));
         kv('To', DI.fmtCh(f.ch1, f.cert === 'exact' ? 3 : 1));
-        kv('Length', DA.lenText(f) + '<div style="margin-top:6px">' + DA.certChip(f) + '</div>');
+        kv('Length', Math.round(f.ch1 - f.ch0).toLocaleString('en-GB') + ' m<div style="margin-top:6px">' + DA.certChip(f) + '</div>');
       } else kv('Position', DA.chText(f) + '<div style="margin-top:6px">' + DA.certChip(f) + '</div>');
       kv('How we know', f.sched ? 'Contractor’s schedule, NIG/KAMA/FM/2026/4218 · not on the drawings' : f.cert === 'exact' ? 'Quoted on the drawing' : f.cert === 'label' ? 'Where the note sits' : 'Read from marker spacing');
       kv('Side', { L: 'Left', R: 'Right', C: 'Centre' }[f.side] + (f.kind === 'cross' ? ' · crosses' : ''));
@@ -652,6 +655,11 @@
         else if (r.kind === 'note') ev.push({ at: r.at, t: 'field', dot: 'seen', tag: '<span class="chip claim">Note</span>', h: '', b: esc(r.note), m: esc(String(r.by).replace(/^Engr\.\s*/, '')) });
         else if (r.kind === 'photo') ev.push({ at: r.at, t: 'field', dot: 'seen', tag: '<span class="chip claim">Photo</span>', h: '', m: esc(String(r.by).replace(/^Engr\.\s*/, '')) });
         else if (r.kind === 'design') ev.push({ at: r.at, t: 'design', dot: 'd', tag: '<span class="chip rev">Δ ' + esc(r.source.rev || '') + '</span>', h: esc({ remove: 'Removed', move: 'Moved', retype: 'Type or size changed', add: 'Added' }[r.action]), b: esc(r.summary || ''), m: esc([r.source.drawing, r.source.rev ? 'rev ' + r.source.rev : '', r.source.level ? 'Level ' + r.source.level : '', r.source.kind].filter(Boolean).join(' · ')) + ' · pending' });
+        else if (r.kind === 'extent') {
+          const dM = Math.round((r.to - r.from) - (f.ch1 - f.ch0));
+          const dStr = dM !== 0 ? ' (' + (dM > 0 ? '+' : '') + dM + ' m on site)' : '';
+          ev.push({ at: r.at, t: 'field', dot: 'seen', tag: '<span class="chip measured">As built</span>', h: 'Extent ' + DI.fmtCh(r.from, 1) + ' → ' + DI.fmtCh(r.to, 1) + ' · ' + Math.round(r.to - r.from) + ' m' + dStr, b: esc(r.note || ''), m: esc(String(r.by).replace(/^Engr\.\s*/, '')) + ' · on phone' });
+        }
       });
       DI.live(r => r.kind === 'range' && r.featureId === fid).forEach(r => ev.push({ at: r.at, t: 'field', dot: 'seen', tag: '<span class="chip seen">Seen</span>', h: esc(DA.recLabel(r)), m: esc(String(r.by).replace(/^Engr\.\s*/, '')) + ' · on phone' }));
       DI.live(r => r.kind === 'base' && r.featureId === fid).forEach(r => ev.push({ at: r.at, t: 'design', dot: 'd', tag: '<span class="chip claim">Data</span>', h: esc(DA.recLabel(r)), b: esc([Object.keys(r.set || {}).map(k => k + ' → ' + (k.startsWith('ch') ? DI.fmtCh(r.set[k], 3) : r.set[k])).join(', '), r.note].filter(Boolean).join(' · ')), m: esc(String(r.by).replace(/^Engr\.\s*/, '')) + ' · base data, not a revision' }));
@@ -672,6 +680,7 @@
     draw();
   }
   A.history = b => openHistory(b.dataset.id);
+  DA.openHistory = openHistory;
   A['hist-tab'] = (b, ov) => ov.hist.tab(b.dataset.v);
 
   // ================================================================ EDITING: TWO DOORS
@@ -679,7 +688,9 @@
     const f = DI.data.byId[fid];
     const h = '<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">' + DA.sideBadge(f.side) + '<b style="font:700 19px/1.2 var(--f-sans)">' + esc(f.name) + '</b><span class="mono">' + DA.chText(f, false) + '</span>' + DA.certChip(f) + '</div>' +
       '<div style="font:700 38px/1.05 var(--f-cond);margin:14px 0">What doesn’t match?</div>' +
-      '<div class="door"><div class="dh"><b>The ground differs from the drawing</b><span>Design stays as drawn. You record what is there — it becomes a query.</span></div>' +
+      (DA.isSpan(f) ? '<div class="door yellow"><div class="dh"><b>Built longer or shorter than designed</b><span>Keeps the design as drawn. Sets the as-built start and end on site.</span></div>' +
+      '<button data-act="extent-edit" data-id="' + esc(fid) + '">' + I.icon('sizes') + 'Built to a different length' + I.icon('chev', 'chev') + '</button></div>' : '') +
+      '<div class="door"><div class="dh"><b>The ground differs from the drawing</b><span>' + 'Design stays as drawn. You record what is there — it becomes a query.</span></div><span>Design stays as drawn. You record what is there — it becomes a query.</span></div>' +
       '<button data-act="asbuilt" data-id="' + esc(fid) + '">' + I.icon('pin') + 'Built in a different place' + I.icon('chev', 'chev') + '</button>' +
       '<button data-act="query" data-id="' + esc(fid) + '" data-v="type">' + I.typeIcon('trap') + 'Built as a different type or size' + I.icon('chev', 'chev') + '</button>' +
       '<button data-act="query" data-id="' + esc(fid) + '" data-v="other">' + I.icon('notes') + 'Something else about it' + I.icon('chev', 'chev') + '</button></div>' +

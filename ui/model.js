@@ -639,7 +639,8 @@
     if (r.kind === 'stage' && r.stageName == null) { const f = data.byId[r.featureId]; if (f) r.stageName = f.ladder[r.stage]; }
     records.push(r);
     saveRecords();
-    if (r.kind === 'stage' || r.kind === 'defect' || r.kind === 'range') mirrorLegacy(r.featureId);
+    if (r.kind === 'extent') applyExtents();
+    if (r.kind === 'stage' || r.kind === 'defect' || r.kind === 'range' || r.kind === 'extent') mirrorLegacy(r.featureId);
     if (r.kind === 'base') applyBase();
     return r;
   }
@@ -648,6 +649,7 @@
     const r = addRecord({ kind: 'void', target: id });
     const t = records.find(x => x.id === id);
     if (t && t.kind === 'base') applyBase();
+    else if (t && t.kind === 'extent') { applyExtents(); mirrorLegacy(t.featureId); }
     else if (t && t.featureId) mirrorLegacy(t.featureId);
     return r;
   }
@@ -695,6 +697,7 @@
     if (SUBS.MRJB) SUBS.MRJB.count = (data.bySub.MRJB || []).length;
     if (SUBS.DWKZ) SUBS.DWKZ.count = (data.bySub.DWKZ || []).length;
     if (SUBS.KZDR) SUBS.KZDR.count = (data.bySub.KZDR || []).length;
+    applyExtents();
   }
   function baseRecords() { return live(r => r.kind === 'base'); }
   function correctBase(fid, set, note) { return addRecord({ kind: 'base', action: 'edit', featureId: fid, set, note }); }
@@ -793,6 +796,7 @@
     });
     window.appState = window.appState || {};
     window.appState.inspections = legacy;
+    applyExtents();
   }
   function mirrorLegacy(fid) {
     const f = data.byId[fid];
@@ -802,12 +806,16 @@
     const now = new Date().toISOString();
     // A Type 9 run says how much is done in its notes; the status says only done or under way.
     if (rangeable(f)) adoptForeignRanges(f);
+    adoptForeignExtent(f);
     const cov = rangeable(f) ? coverOf(f) : null;
     let status = seen ? toLegacyStatus(f, seen.stage) : 'Not Started';
     let notes = defects.map(d => d.defect + (d.note ? ': ' + d.note : '')).join(' | ');
     if (cov && cov.ranges.length) {
       status = cov.full ? toLegacyStatus(f, f.ladder.length - 1) : 'Concreted';
       notes = [notes, rangeNote(cov.ranges)].filter(Boolean).join(' | ');
+    }
+    if (f.built) {
+      notes = [notes, extentNote(f.built)].filter(Boolean).join(' | ');
     }
     legacy[fid] = {
       assetId: fid, chainage_str: f.raw.chainage_str, short_code: f.raw.short_code, typology: f.full,
@@ -897,7 +905,8 @@
   // so the row it writes still carries them.
   function adoptForeignRanges(f) {
     const lg = legacy[f.id];
-    const got = foreignRanges(f).map(([a, b]) => [Math.max(f.ch0, a), Math.min(f.ch1, b)]).filter(r => r[1] - r[0] >= 0.5);
+    const ch0 = f.built ? f.built.ch0 : f.ch0, ch1 = f.built ? f.built.ch1 : f.ch1;
+    const got = foreignRanges(f).map(([a, b]) => [Math.max(ch0, a), Math.min(ch1, b)]).filter(r => r[1] - r[0] >= 0.5);
     got.forEach(([a, b]) => {
       const mine = live(r => r.kind === 'range' && r.featureId === f.id).some(r => Math.abs(r.from - a) < 0.2 && Math.abs(r.to - b) < 0.2);
       if (!mine) records.push({ id: uid(), at: (lg && lg.updated_at) || new Date().toISOString(), by: (lg && lg.inspected_by) || 'office', kind: 'range', featureId: f.id, from: a, to: b, line: f.line, sub: f.sub, ch: a, pos: null, imported: true });
@@ -911,20 +920,118 @@
     const byStage = !!(own && own.stage >= f.ladder.length - 1);
     const foreign = foreignRanges(f);
     if (!recs.length && !byStage && !foreign.length) return null;
-    const list = recs.map(r => [r.from, r.to]).concat(foreign).map(([a, b]) => [Math.max(f.ch0, Math.min(a, b)), Math.min(f.ch1, Math.max(a, b))]).filter(r => r[1] > r[0]);
-    if (byStage) list.push([f.ch0, f.ch1]);
+    const ch0 = f.built ? f.built.ch0 : f.ch0;
+    const ch1 = f.built ? f.built.ch1 : f.ch1;
+    const list = recs.map(r => [r.from, r.to]).concat(foreign).map(([a, b]) => [Math.max(ch0, Math.min(a, b)), Math.min(ch1, Math.max(a, b))]).filter(r => r[1] > r[0]);
+    if (byStage) list.push([ch0, ch1]);
     const ranges = mergeRanges(list);
     const m = ranges.reduce((n, [a, b]) => n + b - a, 0);
     const lg = legacy[f.id];
     const lastAt = recs.map(r => r.at).concat(byStage ? [own.at] : []).concat(foreign.length && lg ? [lg.updated_at || (lg.date || '').replace(' ', 'T')] : []).filter(Boolean).sort().pop() || null;
-    return { ranges, m, len: f.ch1 - f.ch0, full: m >= f.ch1 - f.ch0 - 1, lastAt, records: recs, foreign: foreign.length };
+    return { ranges, m, len: ch1 - ch0, full: m >= ch1 - ch0 - 1, lastAt, records: recs, foreign: foreign.length };
   }
   function addRange(fid, from, to, pos) {
     const f = data.byId[fid];
     if (!f || !rangeable(f)) return null;
-    const a = Math.max(f.ch0, Math.min(from, to)), b = Math.min(f.ch1, Math.max(from, to));
+    const ch0 = f.built ? f.built.ch0 : f.ch0;
+    const ch1 = f.built ? f.built.ch1 : f.ch1;
+    const a = Math.max(ch0, Math.min(from, to)), b = Math.min(ch1, Math.max(from, to));
     if (!(b - a >= 0.5)) return null;
     return addRecord({ kind: 'range', featureId: fid, from: Math.round(a * 10) / 10, to: Math.round(b * 10) / 10, line: f.line, sub: f.sub, ch: a, pos: pos || null });
+  }
+
+  
+  // ------------------------------------------------ as-built extents
+  // A feature built longer or shorter than the design. Design ends f.ch0/f.ch1 are never changed.
+  // The latest live extent record wins. Zero or negative length is rejected.
+  const EXTENT_NOTE = /\[extent (-?\d+(?:\.\d+)?) to (-?\d+(?:\.\d+)?)\]/;
+  function extentNote(built) {
+    return built ? '[extent ' + Math.round(built.ch0 * 10) / 10 + ' to ' + Math.round(built.ch1 * 10) / 10 + ']' : '';
+  }
+  function parseExtentNote(notes) {
+    const m = EXTENT_NOTE.exec(notes || '');
+    if (!m) return null;
+    const a = Number(m[1]), b = Number(m[2]);
+    return b > a ? [a, b] : null;
+  }
+  function foreignExtent(f) {
+    const lg = legacy[f.id];
+    return lg && lg.source !== 'walk' ? parseExtentNote(lg.notes) : null;
+  }
+  function adoptForeignExtent(f) {
+    const lg = legacy[f.id];
+    const got = foreignExtent(f);
+    if (!got) return;
+    const [a, b] = got;
+    if (b - a < 0.5) return;
+    const mine = live(r => r.kind === 'extent' && r.featureId === f.id).some(r => Math.abs(r.from - a) < 0.2 && Math.abs(r.to - b) < 0.2);
+    if (!mine) {
+      records.push({ id: uid(), at: (lg && lg.updated_at) || new Date().toISOString(), by: (lg && lg.inspected_by) || 'office', kind: 'extent', featureId: f.id, from: a, to: b, line: f.line, sub: f.sub, ch: a, pos: null, imported: true });
+      saveRecords();
+      applyExtents();
+    }
+  }
+  function applyExtents() {
+    const v = voided();
+    Object.values(data.byId).forEach(f => { f.built = null; });
+    const extRecs = records.filter(r => r.kind === 'extent' && !v.has(r.id)).sort((a, b) => a.at < b.at ? -1 : 1);
+    const latestByFid = {};
+    extRecs.forEach(r => { latestByFid[r.featureId] = r; });
+    Object.entries(latestByFid).forEach(([fid, r]) => {
+      const f = data.byId[fid];
+      if (!f) return;
+      const ch0 = Math.min(r.from, r.to);
+      const ch1 = Math.max(r.from, r.to);
+      const len = ch1 - ch0;
+      f.built = {
+        ch0, ch1, len,
+        diff0: ch0 - f.ch0,
+        diff1: ch1 - f.ch1,
+        diffLen: len - (f.ch1 - f.ch0),
+        recordId: r.id,
+        at: r.at,
+        by: r.by,
+        note: r.note || ''
+      };
+    });
+    Object.values(data.byId).forEach(f => {
+      if (!f.built) {
+        const fe = foreignExtent(f);
+        if (fe) {
+          const ch0 = Math.min(fe[0], fe[1]);
+          const ch1 = Math.max(fe[0], fe[1]);
+          const len = ch1 - ch0;
+          f.built = {
+            ch0, ch1, len,
+            diff0: ch0 - f.ch0,
+            diff1: ch1 - f.ch1,
+            diffLen: len - (f.ch1 - f.ch0),
+            recordId: null,
+            foreign: true
+          };
+        }
+      }
+    });
+  }
+  function extentOf(f) { return f ? (f.built || null) : null; }
+  function addExtent(fid, from, to, note, pos) {
+    const f = data.byId[fid];
+    if (!f) return null;
+    if (from == null || to == null || isNaN(from) || isNaN(to)) return null;
+    const a = Math.round(Number(from) * 10) / 10;
+    const b = Math.round(Number(to) * 10) / 10;
+    if (b <= a || b - a < 0.5) return null;
+    return addRecord({
+      kind: 'extent',
+      featureId: fid,
+      from: a,
+      to: b,
+      note: note || '',
+      line: f.line,
+      sub: f.sub,
+      ch: a,
+      pos: pos || null
+    });
   }
 
   function statusOf(f) {
@@ -983,7 +1090,7 @@
       if (st.bucket === 'moving') o.part++;
       if (st.bucket === 'stalled') { o.part++; o.stalled++; }
       if (isSpan(f)) {
-        const len = f.ch1 - f.ch0;
+        const len = f.built ? (f.built.ch1 - f.built.ch0) : (f.ch1 - f.ch0);
         o.lin.n++; o.lin.m += len;
         if (st.cover) o.lin.doneM += st.cover.m; else if (st.bucket === 'done') o.lin.doneM += len;
         if (st.bucket === 'done') o.lin.done++;
@@ -1110,8 +1217,8 @@
     init, hasData, subAt, featuresNear, loadIRs, claimOf, migrateCulvertStages,
     fmtCh, fmtPlus, parseCh, fmtDate, fmtTime, monthsBetween, esc, DAYS, MONTHS,
     inspector, setInspector, addRecord, voidRecord, live, recordsFor, seenOf, ownSeen, openDefects,
-    designChanges, statusOf, drafts, saveDraft, putPhoto, getPhoto, uid, loadLegacy,
-    loadSections, sectionAt, loadT9Schedule, hasT9Schedule, rangeable, coverOf, addRange, rangeNote, parseRangeNote, isSpan, typeOf, progressOf, typeProgress, T9_SCHEDULE_ON, refs, refsNear, refById, REF_KIND, loadHeights, hasHeights, heightAt, T9_RULES, t9Rule, setT9Rule, t9Check,
+    designChanges, statusOf, drafts, saveDraft, putPhoto, getPhoto, uid, loadLegacy, mirrorLegacy,
+    loadSections, sectionAt, loadT9Schedule, hasT9Schedule, rangeable, coverOf, addRange, rangeNote, parseRangeNote, extentNote, parseExtentNote, foreignExtent, adoptForeignExtent, applyExtents, extentOf, addExtent, isSpan, typeOf, progressOf, typeProgress, T9_SCHEDULE_ON, refs, refsNear, refById, REF_KIND, loadHeights, hasHeights, heightAt, T9_RULES, t9Rule, setT9Rule, t9Check,
     PRESETS, presetOf, applyBase, baseRecords, correctBase, addBase, deleteBase, verifyBase, unverifyBase, exportGeo, exportCorrections, importRecords,
     project, pointAt, laneOf, savePosition, lastPosition, csvCell,
     get records() { return records; }

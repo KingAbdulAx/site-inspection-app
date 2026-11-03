@@ -174,6 +174,51 @@ const assert = (c, m) => { if (!c) { console.log('FAIL: ' + m); process.exitCode
   assert(await t.evaluate(() => /100 of/.test(document.querySelector('.ov:last-child .rg-sum').textContent) && document.querySelectorAll('.ov:last-child .rgbar i').length === 1), 'the sheet shows 100 m done');
   await t.tap('.ov:last-child [data-act=range-all]'); await t.waitForTimeout(400);
   assert(await t.evaluate(id => DI.statusOf(DI.data.byId[id]).bucket === 'done', big.id), 'Whole stretch completed finishes it in one tap');
+
+  // Phase 3: Built to a different length (as-built extent editing, quiet design vs built display, strip rendering, undo)
+  const spanFeat = await t.evaluate(() => {
+    const f = DI.data.bySub.DWKZ.find(x => x.kind === 'linear' && x.ch1 - x.ch0 > 100);
+    return { id: f.id, ch0: Math.round(f.ch0), ch1: Math.round(f.ch1) };
+  });
+  await t.evaluate(id => DA.openRecord(id), spanFeat.id);
+  await t.waitForTimeout(300);
+  assert(await t.evaluate(() => !!document.querySelector('.ov:last-child [data-act=extent-edit]')), 'record sheet has Built to a different length button');
+  await t.tap('.ov:last-child [data-act=extent-edit]');
+  await t.waitForTimeout(300);
+  assert(await t.evaluate(() => !!document.querySelector('#eeChInput')), 'extent editing sheet opened with chainage input');
+  await t.tap('.ov:last-child [data-act=ee-pick-end][data-end=end]');
+  await t.tap('.ov:last-child [data-act=ee-nudge][data-n="25"]');
+  await t.waitForTimeout(200);
+  const preview = await t.evaluate(() => document.querySelector('#eePreview').textContent);
+  assert(preview.includes('+25 m'), 'live preview shows +25 m extension: ' + preview);
+  await t.tap('.ov:last-child [data-act=ee-save]');
+  await t.waitForTimeout(400);
+  await t.evaluate(id => DA.openRecord(id), spanFeat.id);
+  await t.waitForTimeout(300);
+  const sheetHead = await t.evaluate(() => document.querySelector('.ov:last-child .fhead').textContent);
+  assert(sheetHead.includes('+25 m') && sheetHead.includes('As built'), 'sheet header displays quiet as-built extent: ' + sheetHead.replace(/\s+/g, ' ').slice(0, 100));
+  await t.evaluate(id => DA.openFeature(id), spanFeat.id);
+  await t.waitForTimeout(300);
+  const featText = await t.evaluate(() => document.querySelector('.ov:last-child').textContent);
+  assert(featText.includes('As built') && featText.includes('+25 m on site'), 'feature page shows quiet extent under title');
+  await t.evaluate(id => DA.openHistory(id), spanFeat.id);
+  await t.waitForTimeout(300);
+  const histText = await t.evaluate(() => document.querySelector('.ov:last-child').textContent);
+  assert(histText.includes('As built') && histText.includes('+25 m'), 'history page lists as-built event');
+  await t.evaluate(() => DA.closeAll());
+  await t.evaluate(id => {
+    const f = DI.data.byId[id];
+    DA.setHand(f.line, f.built ? f.built.ch1 : f.ch1);
+  }, spanFeat.id);
+  await t.waitForTimeout(600);
+  const stripHasTag = await t.evaluate(() => document.querySelector('#stripHost').innerHTML.includes('+25m'));
+  assert(stripHasTag, 'strip renders +25m tag on extended end');
+  await t.evaluate(id => {
+    const rec = DI.live(r => r.kind === 'extent' && r.featureId === id).pop();
+    if (rec) DI.voidRecord(rec.id);
+  }, spanFeat.id);
+  const reverted = await t.evaluate(id => !DI.data.byId[id].built, spanFeat.id);
+  assert(reverted, 'undoing extent record reverts f.built');
   await t.goto(BASE + '?sim=KZDR:100500:-4:3'); await t.waitForTimeout(2000);
   assert(await t.evaluate(() => DI.hasT9Schedule('KZDR') && DI.hasT9Schedule('MRJB')), 'the other sections have their scheduled pieces too');
   // embankment height and the Type 9 check (S02 has the longitudinal profile)

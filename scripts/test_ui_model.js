@@ -293,5 +293,89 @@ section('Base data: correct, add, remove, check, bake', () => {
   window.SECTION03_ASSETS = src;
 });
 
+
+section('Phase 3: As-built extents (built to a different length)', () => {
+  const sched = JSON.parse(fs.readFileSync(path.join(root, 'data/t9_schedule.json'), 'utf8'));
+  DI.loadT9Schedule(sched, DI.T9_SCHEDULE_ON);
+  const f = DI.data.bySub.KZDR.find(x => x.code === 'T12');
+  const origCh0 = f.ch0, origCh1 = f.ch1, origLen = f.ch1 - f.ch0;
+
+  // 1. Zero/negative length rejected
+  ok(DI.addExtent(f.id, 100, 100) === null, 'zero length extent rejected');
+  ok(DI.addExtent(f.id, 100, 90) === null, 'negative length extent rejected');
+  ok(DI.addExtent(f.id, 100, 100.2) === null, 'sub-0.5 m length extent rejected');
+  ok(!f.built, 'feature has no built extent after rejected calls');
+
+  // 2. Extending a feature
+  const rExt = DI.addExtent(f.id, origCh0 - 20, origCh1 + 30, 'Extended on site');
+  ok(rExt && rExt.kind === 'extent', 'valid extent record added');
+  ok(f.built && f.built.ch0 === origCh0 - 20 && f.built.ch1 === origCh1 + 30, 'f.built derived correctly');
+  ok(f.built.len === origLen + 50 && f.built.diffLen === 50, 'f.built lengths and differences computed');
+  ok(f.ch0 === origCh0 && f.ch1 === origCh1, 'design ends f.ch0/f.ch1 never changed');
+
+  // 3. Latest live extent wins
+  const rExt2 = DI.addExtent(f.id, origCh0 - 10, origCh1 + 40, 'Second adjustment');
+  ok(f.built.ch0 === origCh0 - 10 && f.built.ch1 === origCh1 + 40, 'latest live extent wins');
+  DI.voidRecord(rExt2.id);
+  ok(f.built.ch0 === origCh0 - 20 && f.built.ch1 === origCh1 + 30, 'undoing latest restores previous live extent');
+
+  // 4. Undoing all extents restores f.built = null
+  DI.voidRecord(rExt.id);
+  ok(f.built === null, 'voiding all extents leaves f.built null');
+
+  // 5. Scheduled feature (Letter 4218) supports extents
+  const t9 = DI.data.bySub.DWKZ.find(x => x.sched && x.code === 'T9');
+  ok(t9, 'found scheduled Type 9 feature');
+  const t9OrigCh0 = t9.ch0, t9OrigCh1 = t9.ch1;
+  const rT9 = DI.addExtent(t9.id, t9OrigCh0, t9OrigCh1 + 30);
+  ok(t9.built && t9.built.ch1 === t9OrigCh1 + 30, 'extents work on scheduled features');
+
+  // 6. Range clamping to as-built extent: can record range up to as-built end
+  const rng1 = DI.addRange(t9.id, t9OrigCh1, t9OrigCh1 + 30);
+  ok(rng1 && rng1.from === t9OrigCh1 && rng1.to === t9OrigCh1 + 30, 'range recorded on the extended stretch');
+  const cov1 = DI.coverOf(t9);
+  ok(cov1 && cov1.ranges.some(([a, b]) => b === t9OrigCh1 + 30), 'coverOf includes ranges on extended stretch');
+
+  // 7. Shortening below completed ranges: ranges beyond new end clipped in coverOf, records intact
+  const rT9Short = DI.addExtent(t9.id, t9OrigCh0, t9OrigCh1 - 10);
+  const covShort = DI.coverOf(t9);
+  ok(covShort.len === (t9OrigCh1 - 10) - t9OrigCh0, 'coverOf length uses shortened as-built length');
+  ok(covShort.ranges.every(([a, b]) => b <= t9OrigCh1 - 10), 'ranges beyond shortened end clipped in coverOf');
+  ok(DI.live(r => r.kind === 'range' && r.featureId === t9.id).length >= 1, 'underlying range records remain intact');
+
+  // 8. Progress totals use as-built length
+  const pTot = DI.progressOf([t9]);
+  ok(pTot.lin.m === t9.built.len, 'progressOf uses as-built length for total metres');
+
+  // 9. Base data exportGeo must NOT include as-built extents
+  const rCADExt = DI.addExtent(f.id, origCh0 - 15, origCh1 + 25);
+  const geoSec03 = DI.exportGeo('KZDR');
+  const exportedCAD = geoSec03.features.find(g => (g.properties || {}).id === f.id);
+  ok(exportedCAD && exportedCAD.properties.start_pk === origCh0 && exportedCAD.properties.end_pk === origCh1, 'exportGeo isolates design geometry from as-built extents');
+  DI.voidRecord(rCADExt.id);
+
+  // 10. Extending across a bridge deck
+  const brgs = DI.refsNear('DWKZ', t9.ch0, 50000).filter(r => r.kind === 'bridge');
+  if (brgs.length) {
+    const extBridge = DI.addExtent(t9.id, brgs[0].ch0 - 50, brgs[0].ch1 + 50);
+    ok(t9.built && t9.built.ch0 === brgs[0].ch0 - 50 && t9.built.ch1 === brgs[0].ch1 + 50, 'extending across bridge deck succeeds');
+    DI.voidRecord(extBridge.id);
+  }
+
+  // 11. Extents with office row and sync: notes carry [extent ... to ...] and can be adopted
+  DI.mirrorLegacy(t9.id);
+  const legKey = 'KMD_DRAINAGE_INSPECTIONS_SEC02_V1';
+  const legRow = JSON.parse(store[legKey] || '{}')[t9.id];
+  ok(legRow && /\[extent \d+(\.\d)? to \d+(\.\d)?\]/.test(legRow.notes), 'mirrorLegacy notes carry [extent ... to ...]: ' + (legRow && legRow.notes));
+  const parsedExt = DI.parseExtentNote(legRow.notes);
+  ok(parsedExt && parsedExt[0] === t9.built.ch0 && parsedExt[1] === t9.built.ch1, 'parseExtentNote recovers extent coordinates');
+
+  // Clean up
+  DI.voidRecord(rT9Short.id);
+  DI.voidRecord(rT9.id);
+  DI.voidRecord(rng1.id);
+  ok(t9.built === null, 'clean up restored pristine state');
+});
+
 console.log('\n' + (fail ? 'FAILED: ' : 'ALL PASSED: ') + pass + ' passed, ' + fail + ' failed');
 process.exit(fail ? 1 : 0);
