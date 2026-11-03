@@ -377,5 +377,85 @@ section('Phase 3: As-built extents (built to a different length)', () => {
   ok(t9.built === null, 'clean up restored pristine state');
 });
 
+
+section('Phase 4: Automatic joins when spans overlap', () => {
+  // Find two same-sub, same-side, same-lane linear features
+  const sub = 'DWKZ';
+  const t9List = DI.data.bySub[sub].filter(x => x.code === 'T9' && x.side === 'R' && x.lane === 'plat' && !DI.coverOf(x) && !DI.seenOf(x.id));
+  ok(t9List.length >= 2, 'found at least two clean Type 9 spans on R plat in DWKZ: ' + t9List.length);
+  const fA = t9List[0];
+  const fB = t9List[1];
+
+  // 1. Overlap detection
+  // Gap > 0.5 m returns null
+  const noJoin = DI.detectJoins(fA.id, 1000, 1050);
+  // (Assuming fB is not at 1000..1050)
+  ok(noJoin === null || !noJoin.absorbed.includes(fB), 'gap > 0.5 m does not join across gap');
+
+  // Overlap or touching within 0.5 m: set proposed extent of fA to touch fB.ch0
+  const fBExt = DI.extentEnds(fB);
+  const touchJoin = DI.detectJoins(fA.id, fBExt[0] - 100, fBExt[0] - 0.2);
+  ok(touchJoin !== null && touchJoin.allPieces.some(p => p.id === fB.id), 'ends touching within 0.5 m detected as overlap');
+
+  // Overlap sharing length
+  const overlapJoin = DI.detectJoins(fA.id, fBExt[0] - 50, fBExt[0] + 50);
+  ok(overlapJoin !== null && overlapJoin.allPieces.some(p => p.id === fB.id), 'extents sharing length detected as overlap');
+  ok(overlapJoin.from === Math.min(fBExt[0] - 50, fBExt[0]) && overlapJoin.to === Math.max(fBExt[0] + 50, fBExt[1]), 'union extent computed correctly');
+
+  // 2. Execute join
+  const primaryId = overlapJoin.primary.id;
+  const absIds = overlapJoin.absorbed.map(p => p.id);
+  const rExt = DI.addExtent(fA.id, fBExt[0] - 50, fBExt[0] + 50);
+  const rJoin = DI.addJoin(primaryId, absIds);
+  ok(rJoin && rJoin.into === primaryId, 'join record added successfully');
+
+  const prim = DI.data.byId[primaryId];
+  ok(prim.absorbed && prim.absorbed.length === absIds.length, 'primary lists absorbed pieces');
+  absIds.forEach(id => {
+    ok(DI.data.byId[id].absorbedInto === primaryId, 'absorbed piece has absorbedInto set to primary');
+  });
+  ok(prim.built && prim.built.ch0 === overlapJoin.from && prim.built.ch1 === overlapJoin.to, 'primary feature has union as-built extent: ' + prim.built.ch0 + ' to ' + prim.built.ch1);
+
+  // 3. Progress totals do NOT double count absorbed features
+  const progBoth = DI.progressOf([prim, ...prim.absorbed]);
+  ok(progBoth.lin.n === 1, 'progressOf counts joined run as 1 span instead of multiple');
+  ok(progBoth.lin.m === prim.built.len, 'progressOf uses union length for total metres');
+
+  // 4. Records on absorbed piece count towards joined coverOf
+  const absFeat = prim.absorbed[0];
+  const absExt = DI.extentEnds(absFeat);
+  const rngOnAbs = DI.addRange(absFeat.id, absExt[0], absExt[0] + 20);
+  const covPrim = DI.coverOf(prim);
+  ok(covPrim && covPrim.ranges.some(([a, b]) => Math.abs(b - a - 20) < 0.2), 'coverOf on primary includes range recorded on absorbed piece');
+
+  // Completed stage on absorbed piece counts as that piece entire extent
+  const absLadderMax = absFeat.ladder.length - 1;
+  const rStageAbs = DI.addRecord({ kind: 'stage', featureId: absFeat.id, stage: absLadderMax, line: absFeat.line, sub: absFeat.sub });
+  const covPrimStage = DI.coverOf(prim);
+  ok(covPrimStage.m >= (absExt[1] - absExt[0]), 'completed stage on absorbed piece counts its whole extent towards joined run');
+
+  // 5. 3-way join handling
+  if (t9List.length >= 3) {
+    const fC = t9List[2];
+    const fCExt = DI.extentEnds(fC);
+    // Join fC as well
+    const rJoin3 = DI.addJoin(primaryId, [absFeat.id, fC.id]);
+    ok(prim.absorbed.length === 2, '3-way join absorbs two pieces into primary');
+    DI.voidRecord(rJoin3.id);
+  }
+
+  // 6. Undo of the join reverts cleanly
+  DI.voidRecord(rStageAbs.id);
+  DI.voidRecord(rngOnAbs.id);
+  DI.voidRecord(rJoin.id);
+  DI.voidRecord(rExt.id);
+
+  ok(prim.absorbed === null, 'undoing join clears primary.absorbed');
+  absIds.forEach(id => {
+    ok(DI.data.byId[id].absorbedInto === null, 'undoing join clears absorbedInto on absorbed piece');
+  });
+  ok(fA.built === null, 'undoing extent restores original null built state');
+});
+
 console.log('\n' + (fail ? 'FAILED: ' : 'ALL PASSED: ') + pass + ' passed, ' + fail + ' failed');
 process.exit(fail ? 1 : 0);

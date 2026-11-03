@@ -103,6 +103,19 @@ DI.adoptForeignExtent(B);
 ok(DI.records.some(r => r.kind === 'extent' && r.featureId === B.id && r.imported), 'foreign extent adopted as phone own record');
 DI.voidRecord(rExtPhone.id);
 
+console.log('--- joins preserve office import and foreign ranges on absorbed pieces');
+// A and B join: A is primary, B is absorbed
+const rJoin = DI.addJoin(A.id, [B.id], 'Joined spans');
+ok(A.absorbed && A.absorbed.some(x => x.id === B.id), 'B absorbed into A');
+// B has foreign range from earlier foreignRow: [20950 to 21050]
+const covJoined = DI.coverOf(A);
+ok(covJoined && covJoined.ranges.some(([a, b]) => a <= 20950 && b >= 21050), 'joined primary cover includes foreign ranges from absorbed piece');
+// Office import still matches by individual piece ID (B.id)
+const importMatches = DI.data.byId[B.id] != null;
+ok(importMatches, 'absorbed piece remains in data.byId so office import can match by piece id');
+DI.voidRecord(rJoin.id);
+ok(A.absorbed === null && B.absorbedInto === null, 'undo join restores separate pieces');
+
 fs.rmSync(dir, { recursive: true, force: true });
 console.log('\n' + (fail ? 'FAILED' : 'ALL PASSED') + ': ' + pass + ' passed, ' + fail + ' failed');
 process.exit(fail ? 1 : 0);
