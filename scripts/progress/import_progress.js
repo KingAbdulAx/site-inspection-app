@@ -176,6 +176,7 @@ if (ditchFile) {
     const iv = over.map(r => [Math.max(r.ch0, f.ch0), Math.min(r.ch1, f.ch1)]).sort((a, b) => a[0] - b[0]);
     let cov = 0, end = -1e12;
     iv.forEach(([a, b]) => { if (b <= end) return; cov += b - Math.max(a, end); end = b; });
+    if (cov < 1) return;   // a run that only touches the end of a piece (rounding) is not progress on it
     const L = f.ch1 - f.ch0;
     const t9 = f.code === 'T9';
     // Type 9 is tracked by length: finished when no more than 5 m is left, and the ranges go in the notes
