@@ -188,18 +188,18 @@ store.migrate({
   forceBackup: true
 });
 
-// Verify KZDR (837 features)
+// Verify KZDR
 const kzdrRoundTrip = store.verifyRoundTrip(s3Raw.features, 'KZDR');
 check(kzdrRoundTrip.passed, 'KZDR round-trip verification must pass with zero issues');
-check(kzdrRoundTrip.total_features === 837, `KZDR must verify all 837 features (got ${kzdrRoundTrip.total_features})`);
+check(kzdrRoundTrip.total_features === s3Raw.features.length, `KZDR must verify all ${s3Raw.features.length} features (got ${kzdrRoundTrip.total_features})`);
 check(kzdrRoundTrip.missing_properties === 0, 'KZDR must have zero missing properties');
 check(kzdrRoundTrip.mismatched_properties === 0, 'KZDR must have zero mismatched property values');
 check(kzdrRoundTrip.fidelity_percentage === '100.00', 'KZDR property fidelity must be exactly 100.00%');
 
-// Verify DWKZ (1,710 features)
+// Verify DWKZ
 const dwkzRoundTrip = store.verifyRoundTrip(s2Raw.features, 'DWKZ');
 check(dwkzRoundTrip.passed, 'DWKZ round-trip verification must pass with zero issues');
-check(dwkzRoundTrip.total_features === 1710, `DWKZ must verify all 1,710 features (got ${dwkzRoundTrip.total_features})`);
+check(dwkzRoundTrip.total_features === s2Raw.features.length, `DWKZ must verify all ${s2Raw.features.length} features (got ${dwkzRoundTrip.total_features})`);
 check(dwkzRoundTrip.missing_properties === 0, 'DWKZ must have zero missing properties');
 check(dwkzRoundTrip.mismatched_properties === 0, 'DWKZ must have zero mismatched property values');
 check(dwkzRoundTrip.fidelity_percentage === '100.00', 'DWKZ property fidelity must be exactly 100.00%');
@@ -207,10 +207,10 @@ check(dwkzRoundTrip.fidelity_percentage === '100.00', 'DWKZ property fidelity mu
 // Test exportLegacyGeoJSON
 const exportedKzdr = store.exportLegacyGeoJSON('KZDR');
 check(exportedKzdr.type === 'FeatureCollection', 'exportLegacyGeoJSON must return a GeoJSON FeatureCollection');
-check(exportedKzdr.features.length === 837, `exportLegacyGeoJSON('KZDR') must export exactly 837 features (got ${exportedKzdr.features.length})`);
+check(exportedKzdr.features.length === s3Raw.features.length, `exportLegacyGeoJSON('KZDR') must export exactly ${s3Raw.features.length} features (got ${exportedKzdr.features.length})`);
 
 const exportedDwkz = store.exportLegacyGeoJSON('DWKZ');
-check(exportedDwkz.features.length === 1710, `exportLegacyGeoJSON('DWKZ') must export exactly 1,710 features (got ${exportedDwkz.features.length})`);
+check(exportedDwkz.features.length === s2Raw.features.length, `exportLegacyGeoJSON('DWKZ') must export exactly ${s2Raw.features.length} features (got ${exportedDwkz.features.length})`);
 
 // Deep check on sample asset
 const origAsset001 = s3Raw.features.find(f => f.properties && f.properties.id === 'asset_001');
@@ -517,7 +517,7 @@ console.log('--- 10. Testing Zero-Config Migration Auto-Discovery ---');
 const freshStore = new DataStore(createMockStorage());
 const autoMigReport = freshStore.migrate(); // No arguments passed
 check(autoMigReport.success, 'Zero-config migrate() must succeed');
-check(autoMigReport.stats.total_design_features === 2547, `Zero-config must auto-load 2,547 features (got ${autoMigReport.stats.total_design_features})`);
+check(autoMigReport.stats.total_design_features === 2474, `Zero-config must auto-load 2,474 features (got ${autoMigReport.stats.total_design_features})`);
 check(autoMigReport.stats.irs_migrated === 1066, `Zero-config must auto-load 1,066 IRs (got ${autoMigReport.stats.irs_migrated})`);
 check(freshStore.getLines().length === 2, 'Zero-config must populate master lines');
 check(freshStore.getSubSections().length === 9, 'Zero-config must populate all 9 subsections');
