@@ -340,20 +340,30 @@
     h += '<div class="legend"><div><i style="background:var(--surface)"></i><b>' + b.none + '</b>Not started</div><div><i style="background:var(--part)"></i><b>' + b.moving + '</b>Part-built, moving</div><div><i style="background:var(--hazard)"></i><b>' + b.stalled + '</b>Part-built, stalled &gt; 6 mo</div><div><i style="background:var(--ink)"></i><b>' + b.done + '</b>Completed</div></div>';
     // Bars by the structures' own stage names: a precast culvert's Bedding or Joints is not a
     // ditch's Blinding or Rebar. The in-between stages of every ladder here, in ladder order.
+    // Structures in one place are counted here; ditches are measured by stage below.
+    const ptList = list.filter(f => !DI.isSpan(f));
     const names = [];
-    [...new Set(list.map(f => f.ladder))].sort((a, b2) => list.filter(f => f.ladder === b2).length - list.filter(f => f.ladder === a).length).forEach(l => {
+    [...new Set(ptList.map(f => f.ladder))].sort((a, b2) => list.filter(f => f.ladder === b2).length - list.filter(f => f.ladder === a).length).forEach(l => {
       let at = -1;
       l.slice(1, -1).forEach(n => { const k = names.indexOf(n); if (k >= 0) at = k; else names.splice(++at, 0, n); });
     });
     const hist = names.map(() => 0);
-    stats.forEach(x => { if (x.st.partBuilt) { const k = names.indexOf(x.f.ladder[x.st.best]); if (k >= 0) hist[k]++; } });
+    stats.forEach(x => { if (x.st.partBuilt && !DI.isSpan(x.f)) { const k = names.indexOf(x.f.ladder[x.st.best]); if (k >= 0) hist[k]++; } });
     // Mixed ladders (All): only the stages something stands at, as rows, so the names stay readable.
     const bars = names.map((n, i) => ({ n, v: hist[i] })).filter(x => names.length <= 6 || x.v);
     const hm = Math.max(1, ...hist);
-    h += '<div class="lbl-caps mt24">Where the part-built ones stand</div>';
-    if (bars.length <= 6) h += '<div class="hist" style="grid-template-columns:repeat(' + Math.max(1, bars.length) + ',1fr)">' + bars.map(x => '<div>' + x.v + '<i style="height:' + Math.max(4, x.v / hm * 90) + 'px"></i><small>' + esc(x.n) + '</small></div>').join('') + '</div></div>';
+    if (ptList.length) h += '<div class="lbl-caps mt24">Where the part-built ' + (cp.lin.n ? 'structures' : 'ones') + ' stand</div>';
+    if (!ptList.length) h += '</div>';
+    else if (bars.length <= 6) h += '<div class="hist" style="grid-template-columns:repeat(' + Math.max(1, bars.length) + ',1fr)">' + bars.map(x => '<div>' + x.v + '<i style="height:' + Math.max(4, x.v / hm * 90) + 'px"></i><small>' + esc(x.n) + '</small></div>').join('') + '</div></div>';
     else h += '<div style="display:grid;grid-template-columns:auto 1fr auto;gap:6px 10px;align-items:center;margin-top:10px">' + bars.map(x => '<small style="font:600 14px/1.2 var(--f-sans);color:var(--ink-2)">' + esc(x.n) + '</small><i style="display:block;height:18px;width:' + Math.max(2, x.v / hm * 100) + '%;background:var(--part);border:2px solid var(--ink)"></i><b style="font:600 16px/1 var(--f-sans)">' + x.v + '</b>').join('') + '</div></div>';
 
+    // Ditches by stage: the length that has reached each stage, of the ditches that have that stage.
+    if (cp.lin.n && cp.lin.names.length) {
+      h += '<div class="pad"><div class="lbl-caps mt24">Ditch length at each stage</div><div class="sbars">' + cp.lin.names.map(n => {
+        const m = cp.lin.atLeast[n], of = cp.lin.ofLen[n], pc = pctOf(m, of);
+        return '<small>' + esc(n) + '</small><i><u style="width:' + pc + '%"></u></i><b>' + kmf(m) + ' km · ' + pc + '%</b>';
+      }).join('') + '</div><div class="note" style="margin-top:6px">A length counts at every stage it has passed. Each percentage is of the ditches that have that stage.</div></div>';
+    }
     h += t9Card(sub);
     h += '<div style="border-top:3px solid var(--ink);margin-top:20px;padding:16px 16px 8px;display:flex;justify-content:space-between;align-items:center"><span class="lbl-caps">Every structure, one mark · ▲ up the line</span>' +
       '<div class="segm" style="grid-template-columns:1fr 1fr;width:150px"><button data-act="sec-view" data-v="ribbon" class="' + (S.secView === 'ribbon' ? 'on' : '') + '" style="min-height:40px">Ribbon</button><button data-act="sec-view" data-v="map" class="' + (S.secView === 'map' ? 'on' : '') + '" style="min-height:40px">Map</button></div></div>';

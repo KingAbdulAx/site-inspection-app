@@ -116,6 +116,18 @@ ok(importMatches, 'absorbed piece remains in data.byId so office import can matc
 DI.voidRecord(rJoin.id);
 ok(A.absorbed === null && B.absorbedInto === null, 'undo join restores separate pieces');
 
+console.log('--- a Type 1 run: cast metres, by stage');
+const T1 = DI.data.bySub.DWKZ.find(f => f.code === 'T1' && f.ch1 - f.ch0 > 400);
+const t1row = { code: 'T1', date: '2026-11-05', a: pk(T1.ch0 + 50), b: pk(T1.ch0 + 170), total: 120, side: T1.side === 'L' ? 'LHS' : 'RHS', executed: 120, ir1: 'IR-T1', ir2: null, remark: null };
+fs.writeFileSync(path.join(dir, 'ditch_t1.json'), JSON.stringify([t1row]));
+execFileSync('node', [path.join(root, 'scripts/progress/import_progress.js'), '--asof', '2026-11-06', '--ditches', path.join(dir, 'ditch_t1.json'), '--out', dir], { stdio: 'pipe' });
+const rT1 = JSON.parse(fs.readFileSync(path.join(dir, 'progress_2026-11-06.json'), 'utf8')).rows.find(r => r.asset_id === T1.id);
+ok(rT1 && rT1.status === 'Concreted' && /\[stages Cast: [\d.]+ to [\d.]+\]/.test(rT1.notes) && !/done/.test(rT1.notes.replace(/Ditch progress/, '')), 'a part-cast Type 1 row says which length is cast: ' + (rT1 && rT1.notes.slice(-60)));
+store['KMD_DRAINAGE_INSPECTIONS_SEC02_V1'] = JSON.stringify(Object.assign(JSON.parse(store['KMD_DRAINAGE_INSPECTIONS_SEC02_V1']), { [T1.id]: pulled(rT1) }));
+DI.loadLegacy();
+const c1 = DI.coverOf(T1);
+ok(c1 && Math.round(c1.mAt[DI.stageByName(T1, 'Cast')]) === 120 && c1.m === 0 && DI.statusOf(T1).bucket === 'moving', 'the app reads 120 m cast, none finished');
+
 fs.rmSync(dir, { recursive: true, force: true });
 console.log('\n' + (fail ? 'FAILED' : 'ALL PASSED') + ': ' + pass + ' passed, ' + fail + ' failed');
 process.exit(fail ? 1 : 0);

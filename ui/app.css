@@ -611,6 +611,14 @@ a { color: inherit; }
 .rgbar { position: relative; height: 20px; border: 2px solid var(--ink); background: var(--surface); margin: 8px 0 10px; }
 .rgbar i { position: absolute; top: 0; bottom: 0; background: var(--ink); }
 .rg-list { font: 500 15px/1.5 var(--f-mono); color: var(--ink-2); margin-bottom: 12px; }
+.rg-stages { display: grid; grid-template-columns: 1fr; gap: 4px; margin: 4px 0 12px; }
+.rg-stages div { display: grid; grid-template-columns: 18px 1fr auto; gap: 10px; align-items: center; font: 500 16px/1.25 var(--f-sans); }
+.rg-stages div.muted { color: var(--ink-3); }
+.rg-stages i { display: block; width: 18px; height: 14px; background: var(--ink); border: 1.5px solid var(--ink); }
+.rg-stages b { font: 600 16px/1 var(--f-mono); }
+.rg-pick { margin: 8px -16px 4px; padding: 6px 16px 10px; border-bottom: 0; }
+.rg-pick button { min-height: 44px; padding: 0 14px; border: 2px solid var(--ink); background: var(--surface); font: 600 16px/1 var(--f-sans); white-space: nowrap; }
+.rg-pick button.on { background: var(--ink); color: var(--paper, #fff); }
 .rg-form { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--rule); }
 .rg-row { display: grid; grid-template-columns: 1fr auto 1fr auto; gap: 8px; align-items: end; margin: 8px 0 12px; }
 .rg-row label { display: flex; flex-direction: column; gap: 4px; font: 600 14px/1 var(--f-sans); color: var(--ink-2); }
@@ -634,3 +642,10 @@ a { color: inherit; }
 .tchips button { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; text-align: left; }
 .tchips button small { font: 600 14px/1.1 var(--f-mono); opacity: 0.9; }
 @media (max-width: 420px) { .pstats { grid-template-columns: 1fr; } .psub .pstats { grid-template-columns: 1fr 1fr; } .psub .pstat b { font-size: 19px; } }
+
+/* Progress: ditch length at each stage */
+.sbars { display: grid; grid-template-columns: minmax(96px, auto) 1fr auto; gap: 6px 10px; align-items: center; margin-top: 10px; }
+.sbars small { font: 600 14px/1.2 var(--f-sans); color: var(--ink-2); }
+.sbars i { display: block; height: 18px; border: 2px solid var(--ink); background: var(--surface); position: relative; }
+.sbars i u { position: absolute; left: 0; top: 0; bottom: 0; background: var(--ink); text-decoration: none; }
+.sbars b { font: 600 15px/1 var(--f-mono); white-space: nowrap; }

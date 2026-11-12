@@ -553,24 +553,34 @@
     let h = '<div class="fhead">' + sideBadge(f.side, 'xl') + '<div style="min-width:0"><button class="t1" data-act="feature" data-id="' + esc(f.id) + '" style="text-align:left">' + I.typeIcon(f.icon) + '<span>' + esc(f.name) + '</span></button>' +
       '<div class="t2">' + chHtml(f) + (isSpan(f) ? ' <b class="len">' + lenText(f) + '</b>' : '') + ' ' + certChip(f) + ' <span class="rel">' + esc(rel) + '</span></div>' + quietExtentsHtml(f) + fillRange(f) + '</div></div>';
     // A record from the office (the cloud database) says whose it is: a colleague, or a progress chart.
-    const office = st.seen && st.seen.office;
+    const office = st.seen && st.seen.office && !(st.cover && st.cover.records.length);
     h += '<div class="pair mt16"><div class="built"><div class="part"><span class="chip seen">' + (office ? 'Office' : 'Seen by you') + '</span>' + meter(f, { s: st.s == null ? 0 : st.s, c: -1 }, '') +
-      '<div class="stage"><b>' + (st.seen ? esc(f.ladder[st.s]) + ' · ' + DI.fmtDate(st.seen.at) : 'Not yet') + '</b>' +
+      '<div class="stage"><b>' + (st.cover ? (st.cover.full ? esc(f.ladder[max]) : 'Part, furthest ' + esc(f.ladder[st.s])) + (st.cover.lastAt ? ' · ' + DI.fmtDate(st.cover.lastAt) : '') : st.seen ? esc(f.ladder[st.s]) + ' · ' + DI.fmtDate(st.seen.at) : 'Not yet') + '</b>' +
       (office && st.seen.by ? '<div style="flex-basis:100%;font:500 14px/1.3 var(--f-sans);color:var(--ink-3);margin-top:3px">' + esc(st.seen.by) + '</div>' : '') + '</div></div></div>';
     h += '<div class="built"><div class="part"><span class="chip claim">Contractor</span>' + (st.claim ? meter(f, { s: -1, c: st.c }, '') : meter(f, { s: -1, c: -1 }, '')) +
       '<div class="stage"><b>' + (st.claim ? esc(f.ladder[st.c]) + ' <span class="mono" style="font-size:14px;color:var(--ink-3);font-weight:500">IR ' + esc(st.claim.ir) + ' · ' + DI.fmtDate(st.claim.date) + '</span>' : '<span class="muted" style="font-weight:600">No IR</span>') + '</b></div></div></div></div>';
     if (DI.rangeable(f)) h += rangeBlock(f, st);
-    else {
-    h += '<div style="font:700 21px/1.2 var(--f-sans);margin:18px 0 10px;color:var(--ink-2)">What stage is it at now?</div>';
+    else h += stageOptions(f, st, st.s, 'What stage is it at now?');
+    h += '<div class="row-btns mt8"><button class="btn defect" data-act="defect" data-id="' + esc(f.id) + '">' + I.icon('warn') + 'Defect</button>' +
+      '<button class="btn" data-act="photo" data-id="' + esc(f.id) + '">' + I.icon('camera') + 'Photo</button>' +
+      '<button class="btn" data-act="note" data-id="' + esc(f.id) + '">' + I.icon('notes') + 'Note</button></div>';
+    if (isSpan(f)) h += '<button class="btn mt8" data-act="extent-edit" data-id="' + esc(f.id) + '" style="min-height:48px;font-weight:700">' + I.icon('sizes') + 'Built to a different length ›</button>';
+    h += '<button class="btn mt8" data-act="feature" data-id="' + esc(f.id) + '" style="min-height:48px;border:0;background:transparent;font-size:17px;text-decoration:underline">Everything about this feature ›</button>';
+    openOverlay(h, 'sheet tall');
+  }
+  // The stage choices for a whole structure (or a whole stretch): one up from what was seen, the claim,
+  // no change, and Finished always one tap away; the full ladder behind 'Other stage'.
+  function stageOptions(f, st, s, title) {
+    const max = f.ladder.length - 1, c = st.c;
+    let h = '<div style="font:700 21px/1.2 var(--f-sans);margin:18px 0 10px;color:var(--ink-2)">' + esc(title) + '</div>';
     const opts = [];
-    const s = st.s, c = st.c;
-    if (s != null) {
+    if (s != null && s > 0) {
       if (s < max) {
         const up = s + 1;
         opts.push({ stage: up, sub: 'One up from what you saw' + (c === up ? ' · matches the claim' : '') });
         if (c != null && c > up) opts.push({ stage: c, sub: 'What the contractor claims · IR ' + st.claim.ir });
       }
-      opts.push({ stage: s, sub: 'No change since ' + DI.fmtDate(st.seen.at) });
+      opts.push({ stage: s, sub: st.seen && st.s === s ? 'No change since ' + DI.fmtDate(st.seen.at) : 'No change' });
     } else {
       if (c != null && c > 0) opts.push({ stage: c, sub: 'Matches the claim · IR ' + st.claim.ir });
       opts.push({ stage: 0, sub: 'Nothing built yet' });
@@ -583,40 +593,52 @@
     });
     h += '<button class="opt" data-act="ladder"><span><b>Other stage</b><small>Show all ' + f.ladder.length + '</small></span>' + I.icon('chevDown') + '</button>';
     h += '<div class="ladder hidden" id="fullLadder">' + f.ladder.map((n, i) => '<button class="opt" data-act="stage" data-id="' + esc(f.id) + '" data-stage="' + i + '"><span><b>' + esc(n) + '</b></span>' + (s === i ? '<small>seen</small>' : c === i ? '<small>claimed</small>' : '') + '</button>').join('') + '</div>';
-    }
-    h += '<div class="row-btns mt8"><button class="btn defect" data-act="defect" data-id="' + esc(f.id) + '">' + I.icon('warn') + 'Defect</button>' +
-      '<button class="btn" data-act="photo" data-id="' + esc(f.id) + '">' + I.icon('camera') + 'Photo</button>' +
-      '<button class="btn" data-act="note" data-id="' + esc(f.id) + '">' + I.icon('notes') + 'Note</button></div>';
-    if (isSpan(f)) h += '<button class="btn mt8" data-act="extent-edit" data-id="' + esc(f.id) + '" style="min-height:48px;font-weight:700">' + I.icon('sizes') + 'Built to a different length ›</button>';
-    h += '<button class="btn mt8" data-act="feature" data-id="' + esc(f.id) + '" style="min-height:48px;border:0;background:transparent;font-size:17px;text-decoration:underline">Everything about this feature ›</button>';
-    openOverlay(h, 'sheet tall');
+    return h;
   }
-  // A Type 9 run: how much is done, and one tap (or two chainages) to add more.
+  // Shade of a stage on a bar: lighter early, ink when finished.
+  const stageShade = (k, max) => k >= max ? 1 : 0.18 + 0.5 * (k - 1) / Math.max(1, max - 2);
+  DA.stageShade = stageShade;
+  // A drain along the line: how far each stage has got, the whole stretch in one tap, or a part of it at a
+  // stage, between two chainages.
+  S.rgStage = S.rgStage || {};
   function rangeBlock(f, st) {
-    const ch0 = f.built ? f.built.ch0 : f.ch0, ch1 = f.built ? f.built.ch1 : f.ch1;
-    const cov = st.cover, len = ch1 - ch0, done = cov ? cov.m : 0;
-    const last = cov && cov.ranges.length ? cov.ranges[cov.ranges.length - 1][1] : ch0;
-    const from = last < ch1 - 1 ? last : ch0;
-    const to = S.pos.ch > from + 1 && S.pos.ch <= ch1 ? S.pos.ch : ch1;
+    const [ch0, ch1] = DI.extentEnds(f);
+    const cov = st.cover, len = ch1 - ch0, max = f.ladder.length - 1;
     const ch = v => DI.fmtCh(Math.round(v));
-    let h = '<div style="font:700 21px/1.2 var(--f-sans);margin:18px 0 10px;color:var(--ink-2)">How much is done?</div>';
-    h += '<div class="rg-sum"><b>' + Math.round(done) + ' of ' + Math.round(len) + ' m</b><span>' + Math.round(done / len * 100) + '%</span></div>';
-    h += '<div class="rgbar">' + (cov ? cov.ranges.map(([a, b]) => '<i style="left:' + ((a - f.ch0) / len * 100) + '%;width:' + Math.max(0.8, (b - a) / len * 100) + '%"></i>').join('') : '') + '</div>';
-    if (cov && cov.ranges.length && !cov.full) h += '<div class="rg-list">' + cov.ranges.map(([a, b]) => ch(a) + ' → ' + ch(b) + ' · ' + Math.round(b - a) + ' m').join('<br>') + '</div>';
+    const done = cov ? cov.m : 0;
+    let h = '<div style="font:700 21px/1.2 var(--f-sans);margin:18px 0 10px;color:var(--ink-2)">How far along is it?</div>';
+    h += '<div class="rg-sum"><b>' + Math.round(done) + ' of ' + Math.round(len) + ' m</b><span>' + esc(f.ladder[max]) + ' · ' + Math.round(done / len * 100) + '%</span></div>';
+    h += '<div class="rgbar">' + (cov ? cov.segs.map(g => '<i style="left:' + ((g.a - ch0) / len * 100) + '%;width:' + Math.max(0.8, (g.b - g.a) / len * 100) + '%;opacity:' + stageShade(g.s, max).toFixed(2) + '" title="' + esc(f.ladder[g.s]) + '"></i>').join('') : '') + '</div>';
+    if (cov && !cov.full) {
+      h += '<div class="rg-stages">' + f.ladder.slice(1).map((n, i) => {
+        const k = i + 1, m = cov.mAt[k];
+        return '<div class="' + (m > 0 ? '' : 'muted') + '"><i style="opacity:' + stageShade(k, max).toFixed(2) + '"></i><span>' + esc(n) + '</span><b>' + Math.round(m) + ' m</b></div>';
+      }).join('') + '</div>';
+      h += '<div class="rg-list">' + cov.segs.map(g => ch(g.a) + ' → ' + ch(g.b) + ' · ' + Math.round(g.b - g.a) + ' m · ' + esc(f.ladder[g.s])).join('<br>') + '</div>';
+    }
+    // the whole stretch: the run's own stage is where all of it has got to
+    h += stageOptions(f, st, cov ? cov.floor : st.s, 'The whole stretch, ' + ch(ch0) + ' → ' + ch(ch1));
     if (!(cov && cov.full)) {
-      h += '<button class="opt primary" data-act="range-all" data-id="' + esc(f.id) + '"><span><b>Whole stretch completed</b><small>' + ch(f.ch0) + ' → ' + ch(f.ch1) + ' · ' + Math.round(len) + ' m</small></span>' + I.icon('check') + '</button>';
-      h += '<div class="rg-form"><div class="lbl-caps">Completed from → to</div><div class="rg-row">' +
+      const pick = S.rgStage[f.id] != null ? S.rgStage[f.id] : DI.ladderKind(f.ladder) === 'precast' ? max : Math.min(max, (cov ? cov.floor : 0) + 1);
+      // From: where the picked stage stops; to: where you stand, if that is further on this stretch.
+      const at = cov && cov.byStage[pick] && cov.byStage[pick].length ? cov.byStage[pick] : [];
+      const startAt = at.length && at[0][0] <= ch0 + 1 ? at[0][1] : ch0;
+      const from = startAt < ch1 - 1 ? startAt : ch0;
+      const to = S.pos.ch > from + 1 && S.pos.ch <= ch1 ? S.pos.ch : ch1;
+      h += '<div class="rg-form"><div class="lbl-caps">Or only part of it, at a stage</div>' +
+        '<div class="chips-scroll rg-pick">' + f.ladder.slice(1).map((n, i) => '<button data-act="range-stage" data-id="' + esc(f.id) + '" data-stage="' + (i + 1) + '" class="' + (pick === i + 1 ? 'on' : '') + '">' + esc(n) + '</button>').join('') + '</div>' +
+        '<div class="rg-row">' +
         '<label>From<input id="rgFrom" inputmode="decimal" autocomplete="off" value="' + ch(from) + '"></label><button class="btn here" data-act="range-here" data-target="rgFrom">Here</button>' +
         '<label>To<input id="rgTo" inputmode="decimal" autocomplete="off" value="' + ch(to) + '"></label><button class="btn here" data-act="range-here" data-target="rgTo">Here</button></div>' +
-        '<button class="opt" data-act="range-save" data-id="' + esc(f.id) + '"><span><b>Save this part as completed</b><small>Between the two chainages, on this stretch</small></span></button></div>';
+        '<button class="opt" data-act="range-save" data-id="' + esc(f.id) + '" data-stage="' + pick + '"><span><b>Save this part at ' + esc(f.ladder[pick]) + '</b><small>Between the two chainages, on this stretch</small></span></button></div>';
     }
     return h;
   }
-  function recordRange(fid, from, to) {
-    const r = DI.addRange(fid, from, to, snapPos());
+  function recordRange(fid, from, to, stage) {
+    const r = DI.addRange(fid, from, to, snapPos(), stage);
     if (!r) { toast({ title: 'Nothing saved', sub: 'Give two chainages on this stretch, at least 1 m apart' }); return; }
     closeAll();
-    toast({ title: 'Saved on this phone', sub: 'Completed ' + DI.fmtCh(r.from) + ' → ' + DI.fmtCh(r.to) + ' · ' + Math.round(r.to - r.from) + ' m', undo: () => { DI.voidRecord(r.id); render(); toast({ title: 'Undone', sub: 'The record is kept, marked as withdrawn' }); } });
+    toast({ title: 'Saved on this phone', sub: r.stageName + ' ' + DI.fmtCh(r.from) + ' → ' + DI.fmtCh(r.to) + ' · ' + Math.round(r.to - r.from) + ' m', undo: () => { DI.voidRecord(r.id); render(); toast({ title: 'Undone', sub: 'The record is kept, marked as withdrawn' }); } });
     render();
   }
   DA.recordRange = recordRange;
@@ -1029,7 +1051,18 @@
       case 'ee-nudge': if (ov && ov.ee) ov.ee.nudge(Number(b.dataset.n)); break;
       case 'ee-save': if (ov && ov.ee) ov.ee.save(); break;
       case 'range-here': { const el = $('#' + b.dataset.target); if (el) el.value = DI.fmtCh(Math.round(S.pos.ch)); break; }
-      case 'range-save': recordRange(id, DI.parseCh($('#rgFrom').value), DI.parseCh($('#rgTo').value)); break;
+      case 'range-save': recordRange(id, DI.parseCh($('#rgFrom').value), DI.parseCh($('#rgTo').value), b.dataset.stage == null ? null : Number(b.dataset.stage)); break;
+      case 'range-stage': {
+        // pick the stage for a part; the chainages typed so far stay
+        const fv = $('#rgFrom') && $('#rgFrom').value, tv = $('#rgTo') && $('#rgTo').value;
+        S.rgStage[id] = Number(b.dataset.stage);
+        const sc = ov && ov.querySelector('.body') ? ov.querySelector('.body').scrollTop : 0;
+        closeAll(); openRecord(id);
+        if (fv != null && $('#rgFrom')) $('#rgFrom').value = fv;
+        if (tv != null && $('#rgTo')) $('#rgTo').value = tv;
+        const ov2 = document.querySelector('.ov:last-child .body'); if (ov2) ov2.scrollTop = sc;
+        break;
+      }
       case 'undo': if (DA.pendingUndo) { const u = DA.pendingUndo; DA.pendingUndo = null; $('#toastHost').innerHTML = ''; u(); } break;
       case 'keypad': openKeypad(); break;
       case 'kp-key': ov.kp.key(b.dataset.k); break;

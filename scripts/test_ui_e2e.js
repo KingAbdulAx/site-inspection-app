@@ -172,8 +172,21 @@ const assert = (c, m) => { if (!c) { console.log('FAIL: ' + m); process.exitCode
   assert(part.m === 100 && part.bucket === 'moving', 'a typed range saves: ' + JSON.stringify(part));
   await t.evaluate(id => DA.openRecord(id), big.id); await t.waitForTimeout(300);
   assert(await t.evaluate(() => /100 of/.test(document.querySelector('.ov:last-child .rg-sum').textContent) && document.querySelectorAll('.ov:last-child .rgbar i').length === 1), 'the sheet shows 100 m done');
-  await t.tap('.ov:last-child [data-act=range-all]'); await t.waitForTimeout(400);
-  assert(await t.evaluate(id => DI.statusOf(DI.data.byId[id]).bucket === 'done', big.id), 'Whole stretch completed finishes it in one tap');
+  const bigLast = await t.evaluate(id => DI.data.byId[id].ladder.length - 1, big.id);
+  await t.tap('.ov:last-child [data-act=stage][data-stage="' + bigLast + '"]'); await t.waitForTimeout(400);
+  assert(await t.evaluate(id => DI.statusOf(DI.data.byId[id]).bucket === 'done', big.id), 'the whole stretch finished in one tap');
+  // any ditch: a part at a stage, picked on the sheet
+  const t12 = await t.evaluate(() => { const f = DI.data.bySub.DWKZ.find(x => x.code === 'T12' && x.ch1 - x.ch0 > 200 && !DI.coverOf(x)); return { id: f.id, a: Math.round(f.ch0) }; });
+  await t.evaluate(id => DA.openRecord(id), t12.id); await t.waitForTimeout(300);
+  await t.tap('.ov:last-child [data-act=range-stage][data-stage="3"]'); await t.waitForTimeout(300);
+  assert(await t.evaluate(() => /Save this part at Formwork/.test(document.querySelector('.ov:last-child [data-act=range-save]').textContent)), 'the stage picked for a part shows on the save button');
+  await t.fill('#rgFrom', await t.evaluate(v => DI.fmtCh(v), t12.a + 10)); await t.fill('#rgTo', await t.evaluate(v => DI.fmtCh(v), t12.a + 70));
+  await t.tap('.ov:last-child [data-act=range-save]'); await t.waitForTimeout(400);
+  const tw = await t.evaluate(id => { const c = DI.coverOf(DI.data.byId[id]); return { f: Math.round(c.mAt[3]), e: Math.round(c.mAt[1]), m: Math.round(c.m) }; }, t12.id);
+  assert(tw.f === 60 && tw.e === 60 && tw.m === 0, 'a T12 part saved at Formwork: ' + JSON.stringify(tw));
+  await t.evaluate(id => DA.openRecord(id), t12.id); await t.waitForTimeout(300);
+  assert(await t.evaluate(() => /Formwork\s*60 m/.test(document.querySelector('.ov:last-child .rg-stages').textContent.replace(/\s+/g, ' '))), 'the sheet lists the metres at each stage');
+  await t.evaluate(() => DA.closeAll());
 
   // Phase 3: Built to a different length (as-built extent editing, quiet design vs built display, strip rendering, undo)
   const spanFeat = await t.evaluate(() => {

@@ -357,6 +357,12 @@
           const x = g.cx + (f.side === 'R' ? 1 : -1) * (g.flip ? -1 : 1) * 17;
           const y0 = Math.max(-5, Math.min(Y(f.ch0), Y(f.ch1))), y1 = Math.min(H + 5, Math.max(Y(f.ch0), Y(f.ch1)));
           s += '<line x1="' + x + '" y1="' + y0 + '" x2="' + x + '" y2="' + y1 + '" style="stroke:var(--ink);stroke-width:3' + faded + '" stroke-dasharray="5 4"/>';
+          // built lengths: a solid line over the dashes, darker the further on
+          if (st.cover) st.cover.segs.forEach(sg => {
+            const ys0 = Math.max(-5, Math.min(Y(sg.a), Y(sg.b))), ys1 = Math.min(H + 5, Math.max(Y(sg.a), Y(sg.b)));
+            const op = sg.s >= st.cover.max ? 1 : 0.25 + 0.5 * (sg.s - 1) / Math.max(1, st.cover.max - 2);
+            if (ys1 > ys0) s += '<line x1="' + x + '" y1="' + ys0 + '" x2="' + x + '" y2="' + ys1 + '" style="stroke:var(--ink);stroke-width:6;stroke-opacity:' + op.toFixed(2) + faded + '"/>';
+          });
           hits.push({ f, x0: x - 6, x1: x + 6, y0, y1 });
           tags.push({ x, yTop: Math.min(Y(f.ch0), Y(f.ch1)), code: f.code, dashed: true });
           return;
@@ -395,10 +401,11 @@
             if (ysb1 > ysb0) s += '<rect x="' + (x - bw / 2) + '" y="' + ysb0 + '" width="' + bw + '" height="' + (ysb1 - ysb0) + '" style="fill:var(--ink);stroke:var(--ink);stroke-width:2' + faded + '"/>';
           }
 
-          // Completed ranges (Type 9): solid inside outline and any added extent
-          if (st.cover && !st.cover.full) st.cover.ranges.forEach(([ra, rb]) => {
-            const yr0 = Math.max(-6, Math.min(Y(ra), Y(rb))), yr1 = Math.min(H + 6, Math.max(Y(ra), Y(rb)));
-            if (yr1 > yr0) s += '<rect x="' + (x - bw / 2) + '" y="' + yr0 + '" width="' + bw + '" height="' + (yr1 - yr0) + '" style="fill:var(--ink);stroke:var(--ink);stroke-width:2' + faded + '"/>';
+          // Part built: each length shaded by the stage it has reached, ink where finished
+          if (st.cover && !st.cover.full) st.cover.segs.forEach(g => {
+            const yr0 = Math.max(-6, Math.min(Y(g.a), Y(g.b))), yr1 = Math.min(H + 6, Math.max(Y(g.a), Y(g.b)));
+            const op = g.s >= st.cover.max ? 1 : 0.18 + 0.5 * (g.s - 1) / Math.max(1, st.cover.max - 2);
+            if (yr1 > yr0) s += '<rect x="' + (x - bw / 2) + '" y="' + yr0 + '" width="' + bw + '" height="' + (yr1 - yr0) + '" style="fill:var(--ink);fill-opacity:' + op.toFixed(2) + ';stroke:var(--ink);stroke-width:2' + faded + '"/>';
           });
         }
 

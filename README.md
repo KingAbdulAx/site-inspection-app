@@ -35,9 +35,22 @@ Code: `ui/model.js` (data, append-only records, position/projection), `ui/strip.
 ### Type 9: the contractor's schedule and progress by length
 
 - **Schedule.** The contractor's list in NIG/KAMA/FM/2026/4218 (216 stretches, 164,625 m) is in `data/t9_letter_4218.json`. `node scripts/t9/build_schedule.js` turns it into the Type 9 pieces the drawings do not show (`data/t9_schedule.json`): each on the side the platform falls to (the letter gives chainages only), no ditch on bridge decks, and a Type 9 already drawn stays the design piece. Pieces are marked **Letter 4218** in the sheet, lists and history. On for all five sections (`T9_SCHEDULE_ON` in `ui/model.js`).
-- **Progress.** Type 9 is precast and reported only when a stretch is done, so it is tracked by completed ranges, not stages. The record sheet shows metres done, takes **Whole stretch completed** in one tap or a part between two chainages (Here fills each from where you stand), and undo voids it. Overlapping ranges merge. Ranges go to the cloud database in the row's notes (`[T9 done 20900 to 21000; …]`), and the office import writes the same, so the office's progress and the phone's add up; see `scripts/progress/README.md`.
+- **Progress.** Type 9 is precast and reported by the contractor only when a stretch is done; the office import writes those as finished ranges (`[T9 done 20900 to 21000; …]` in the row's notes), and the phone can add the stages in between. Like every ditch, it is tracked by length and stage (below).
 - **Extents & as-built lengths.** Every ditch shows From → To and its length in the record sheet, the list and the feature page. When built to a different length, the sheet and feature page quietly present both: e.g. `Design 45+212 → 45+637 (425 m) · As built 45+180 → 45+637 (457 m, +32 m on site)`. Type 9 completed ranges clamp to the as-built extent, allowing field extensions to record their full completion. Progress totals (Progress tab, `progressOf`) use the as-built length for both completed metres and total metres on that feature. Cloud sync carries `[extent <from> to <to>]` in the row's notes marker. Base data corrections (`exportGeo`) strictly omit as-built extents to keep CAD design definitions pure.
 - **Automatic joins on overlap.** When two Type 9 spans (e.g. drawn piece and Letter 4218 piece, or two adjacent letter spans) overlap or touch within 0.5 m following an as-built extent edit, they automatically merge into a single continuous run. The primary feature assumes the union extent, completed ranges pool and merge across all constituent pieces, completed stages on absorbed pieces count for their full extents, and the primary History details each absorbed piece with its origin (Drawing or Letter 4218). Undoing the join cleanly restores the separate spans.
+
+### Stages by construction method, by length (12 Nov 2026)
+
+Every drain that runs along the line (ditches, diversion channels, Type 6) is tracked by length **and** stage, on the ladder of how it is built:
+
+| Method | Types | Stages |
+|---|---|---|
+| Cast in situ | T1, T7, T8, T11, T12, T13, CH-B/C/R… | Excavation → Surface prep → Formwork → Reinforcement → Cast → Completed / approved (formwork struck) |
+| Precast | T9, water descents (chutes), dissipators | Excavation → Blinding → Placed → Mortared |
+| Unlined | T4, T5, MD, CH-A | Excavation → Profiling |
+| Type 6 French drain | T6 | Excavation → Stone dust bedding → Pipe laid → Gravel to half height → Concrete wash → Geotextile laid → Washed gravel → Geotextile wrapped |
+
+The record sheet shows how far each stage has got (metres at or beyond it), a bar shaded by stage, the whole stretch's stage in one tap, and **Or only part of it, at a stage**: pick the stage, give From and To (Here fills each from where you stand). A higher stage counts at every stage below it. The strip shades each length by its stage (ink when finished). The Progress tab gives the ditch length at each stage. Ranges go to the cloud database in the row's notes: `[done …]` (`[T9 done …]` for Type 9) for finished lengths and `[stages Excavation: 20900 to 21300; Formwork: 21000 to 21100]` for the rest; a status with no ranges counts as that stage over the whole run. Records on the old ladders are said once on the new ones by meaning (old Rebar or Shuttered is Reinforcement, since the formwork goes up first on site).
 
 ### Site progress (execution charts and ditch sheets)
 
