@@ -523,5 +523,23 @@ section('Phase 5: stages by construction method, and by length for every ditch',
   ok(DI.legacyStage(t12, 'Rebar / Shuttering') === 3 && DI.legacyStage(t12, 'Concreted') === 5 && DI.legacyStage(t9p, 'Concreted') === 3 && DI.legacyStage(t4, 'Completed & Approved') === 2, 'database words on each ladder');
 });
 
+
+section('Phase 5b: stations and yards, for reference like bridges', () => {
+  const areas = DI.refs().filter(r => r.area);
+  const st = areas.filter(r => r.kind === 'station'), yd = areas.filter(r => r.kind === 'yard');
+  ok(st.length === 12 && yd.length === 6 && yd.filter(r => r.what === 'maintenance').length === 2, 'twelve stations, four freight yards and two maintenance centres: ' + st.length + ', ' + yd.length);
+  const names = st.map(r => r.name.replace(' Station', '')).join();
+  ok(names === 'Dawanau,Kunya,Dambatta,Kazaure,Durbe,Daura,Shargalle,Mashi,Muduru,Katsina,Daddara,Jibiya', 'the stations in order along the line: ' + names);
+  ok(areas.every(r => r.ch1 > r.ch0 && r.line === 'KM' && DI.SUBS[r.sub] && r.source && r.id), 'each has an extent, a sub-section, its drawing and an id');
+  ok(st.filter(r => r.platform).every(r => r.platform[1] - r.platform[0] > 300 && r.platform[0] >= r.ch0 - 1 && r.platform[1] <= r.ch1 + 1), 'platforms (about 350 m) lie within their station');
+  const kz = DI.areasAt('KM', 83500);
+  ok(kz.length === 1 && kz[0].name === 'Kazaure Station' && kz[0].sub === 'KZDR', 'at 83+500: Kazaure station');
+  ok(DI.areasAt('KM', 80000).some(r => r.name === 'Kazaure freight yard' && r.side === 'R'), 'at 80+000: Kazaure freight yard, on the right');
+  ok(!DI.areasAt('KM', 140000).length, 'open line has none');
+  ok(DI.refById(kz[0].id) === kz[0] && DI.refsNear('KM', 83400, 83600).includes(kz[0]), 'found like any reference structure');
+  ok(st.find(r => /Kunya/.test(r.name)).note.includes('no platform'), 'a station with nothing drawn yet says so');
+  ok(DI.refs().filter(r => r.kind === 'bridge').length === DI.refs().filter(r => r.kind === 'bridge' && !r.area).length, 'bridges are unchanged');
+});
+
 console.log('\n' + (fail ? 'FAILED: ' : 'ALL PASSED: ') + pass + ' passed, ' + fail + ' failed');
 process.exit(fail ? 1 : 0);

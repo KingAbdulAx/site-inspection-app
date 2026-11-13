@@ -72,6 +72,20 @@ The track plans draw them on the same layers:
 
 The 3x3 m underpasses are the cattle crossings already in the data, so they are left out. In all: S01 17, S02 24, S03 11, S04 17, S05 26.
 
+## Stations and yards (for reference)
+
+```
+dwg2dxf -y -o S02-SY-raw.dxf T2019-0323-S02-DD-STATIONS_YARDS_DAWANAU-KAZAURE.dwg      # and S03, S04, S05
+python3 scripts/dwg/fix_dxf.py S02-SY-raw.dxf S02-SY.dxf
+python3 scripts/dwg/extract_stations.py \
+    S02-SY.dxf=T2019-0323-S02-DD-STATIONS_YARDS_DAWANAU-KAZAURE S03-SY.dxf=T2019-0323-S03-DD-STATIONS_YARDS_KAZAURE-DAURA \
+    S04-SY.dxf=T2019-0323-S04-DD-STATIONS_YARDS_DAURA-MUDURU S05-SY.dxf=T2019-0323-S05-DD-STATIONS_YARDS_MUDURU-JIBIYA \
+    --yards S02-STI.dxf=T2019-0323-S02-DD-STI-DAWANAU-KAZAURE_INFRASTR        # Dawanau yard: not in the S02 STATIONS_YARDS sheet
+node scripts/dwg/bundle_structures.js       # data/dwg/stations.json -> window.KMD_STATIONS in data/structures.js
+```
+
+Each section's STATIONS_YARDS drawing (S02-S05; S01 has none) draws the stations and freight yards on the same layers: the name (STATION_NAME), the platforms (STATION_PLATAFORM_OUTLINE, ~350 m, 7-17 m off), the buildings' limits (STATION_LIMITS, S04 and S05), the loops and sidings (HORIZONTAL_GEOMETRY_STATION, SECONDARY-RAILWAYS, SIDING_TRACKS, or a -<NAME>-STATION layer), a yard's outline (FREIGHT_YARD_LIMITS) or, where it has none, its tracks (FREIGHT_YARD_LINES, INTEGRATED_M_CENTER_LINES...). LONG-TERM layers are left out. Everything is projected onto the main-line axes of `data/dwg/<SUB>_plan.json`, joined end to end so the 25 m between two sub-sections' axes is not clamped. A station spans its loops and sidings joined to its platforms. 12 stations, 4 freight yards and 2 maintenance centres (12 Nov 2026). Kunya has only its name drawn so far, and four stations are "(buildings and road accesses under development)": both are kept as the station's note. Kano station (T2019-0323-S00-DD-SYR-KANO-STATION) is drawn on the old line's DK chainage, 3-5 km off this alignment, and is left out.
+
 ## Embankment height (Section 02 for now)
 
 ```

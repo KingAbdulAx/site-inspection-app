@@ -1,6 +1,7 @@
 /*
  * Bundle every data/dwg/<SUB>_structures.json (scripts/dwg/extract_structures.py) into
- * data/structures.js, so bridges and road crossings are on the phone with no signal.
+ * data/structures.js, so bridges and road crossings are on the phone with no signal; and the stations and
+ * freight yards of data/dwg/stations.json (scripts/dwg/extract_stations.py) with them.
  *   node scripts/dwg/bundle_structures.js
  */
 'use strict';
@@ -14,8 +15,13 @@ fs.readdirSync(dir).filter(f => /_structures\.json$/.test(f)).sort().forEach(f =
   const source = String(j.source).replace(/^(S0\d)-TRA-PLAT.*$/, 'T2019-0323-$1-DD-TRA-PLAT');
   out[j.sub] = { source, structures: j.structures };
 });
+const stPath = path.join(dir, 'stations.json');
+const stations = fs.existsSync(stPath) ? JSON.parse(fs.readFileSync(stPath, 'utf8')).stations : [];
 fs.writeFileSync(path.join(ROOT, 'data', 'structures.js'),
   '// Bridges, overpasses and underpasses from the track plans, for reference on the strip (not inspected).\n' +
   '// Made by scripts/dwg/bundle_structures.js from data/dwg/*_structures.json.\n' +
-  'window.KMD_STRUCTURES = ' + JSON.stringify(out, null, 1) + ';\n');
-console.log(Object.entries(out).map(([k, v]) => k + ' ' + v.structures.length).join(', '));
+  'window.KMD_STRUCTURES = ' + JSON.stringify(out, null, 1) + ';\n' +
+  '// Stations and freight yards from the STATIONS_YARDS drawings (data/dwg/stations.json): extent along the line,\n' +
+  '// platforms, buildings, and outlines as [chainage, offset left +] pairs. For reference, not inspected.\n' +
+  'window.KMD_STATIONS = ' + JSON.stringify(stations) + ';\n');
+console.log(Object.entries(out).map(([k, v]) => k + ' ' + v.structures.length).join(', ') + '; stations and yards ' + stations.length);

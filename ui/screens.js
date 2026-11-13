@@ -999,7 +999,7 @@
   };
 
   // ================================================================ MAP
-  S.map = { ground: 'washed', corridor: true, chainage: true, drainage: true, claims: false, photos: false };
+  S.map = { ground: 'washed', corridor: true, chainage: true, drainage: true, stations: true, claims: false, photos: false };
   let map = null, layer = null, lastKey = '';
   function renderMap(host) {
     if (!window.L) {
@@ -1042,6 +1042,24 @@
       L.polyline([[q0.lat, q0.lon], [q1.lat, q1.lon]], { color: '#121311', weight: 2 }).addTo(layer);
       L.marker([q.lat, q.lon], { icon: L.divIcon({ className: '', html: '<span class="map-lbl">' + DI.fmtCh(c) + '</span>', iconAnchor: [0, 10] }) }).addTo(layer);
     }
+    // stations and yards: their outlines from the STATIONS_YARDS drawings, and a station's track area
+    if (S.map.stations !== false) DI.refsNear(p.line, a, b).filter(r => r.area).forEach(r => {
+      const at = (c, o) => DI.pointAt(r.sub, c, o);
+      const style = { color: '#4F6272', weight: 2, fillColor: '#4F6272', fillOpacity: 0.14 };
+      if (r.kind === 'station') {
+        const c0 = Math.max(a - 200, r.ch0), c1 = Math.min(b + 200, r.ch1), pl = [];
+        for (let c = c0; c <= c1; c += 20) { const q = at(c, 9); if (q) pl.push([q.lat, q.lon]); }
+        for (let c = c1; c >= c0; c -= 20) { const q = at(c, -9); if (q) pl.push([q.lat, q.lon]); }
+        if (pl.length > 2) L.polygon(pl, { color: '#4F6272', weight: 1.5, dashArray: '8 5', fill: false }).addTo(layer).on('click', () => DA.openRef(r.id));
+      }
+      (r.outline || []).forEach(poly => {
+        const ll = poly.map(([c, o]) => at(c, o)).filter(Boolean).map(q => [q.lat, q.lon]);
+        if (ll.length > 2) L.polygon(ll, style).addTo(layer).on('click', () => DA.openRef(r.id));
+      });
+      const off = r.side === 'R' ? -70 : r.side === 'L' ? 70 : r.kind === 'yard' && r.off ? (r.off[0] + r.off[1]) / 2 : 40;
+      const q = at(Math.max(a, Math.min(b, r.ch)), off);
+      if (q) L.marker([q.lat, q.lon], { icon: L.divIcon({ className: '', html: '<span class="map-lbl" style="background:#4F6272;color:#fff">' + DI.esc(r.name) + '</span>', iconAnchor: [0, 10] }) }).addTo(layer).on('click', () => DA.openRef(r.id));
+    });
     if (S.map.drainage) DI.featuresNear(p.line, a, b).forEach(f => {
       const st = DI.statusOf(f);
       const fill = st.fill === 'solid' ? '#121311' : st.fill === 'hatch' ? '#8C8E86' : '#fff';
@@ -1079,7 +1097,7 @@
         h += '<button class="setrow' + (S.map.ground === k ? ' sel' : '') + '" data-act="ml-ground" data-v="' + k + '"><span style="display:flex;gap:14px;align-items:center"><span class="radio' + (S.map.ground === k ? ' on' : '') + '"></span><span><b>' + n + '</b><small>' + s2 + '</small></span></span></button>';
       });
       h += '</div><div style="border:2.5px solid var(--ink);padding:14px;margin:14px 0"><b style="font:700 19px/1.2 var(--f-sans)">Imagery on this phone</b><div class="mono muted" style="font-size:14px;margin-top:6px">Tiles are kept after you have viewed them, so ground you have looked at with signal stays available offline.</div><div style="font:700 15px/1.3 var(--f-sans);margin-top:8px">Older than the works: for ground, never for progress.</div></div><div class="lbl-caps" style="margin:6px 0 8px">On the map</div><div style="margin:0 -16px">';
-      [['corridor', 'Corridor and earthworks line', ''], ['chainage', 'Chainage every 100 m', ''], ['drainage', 'Drainage, by stage', ''], ['photos', 'Where photos were taken', 'Raw GPS fix, not the snapped chainage']].forEach(([k, n, s2]) => {
+      [['corridor', 'Corridor and earthworks line', ''], ['chainage', 'Chainage every 100 m', ''], ['stations', 'Stations and yards', 'From the STATIONS_YARDS drawings'], ['drainage', 'Drainage, by stage', ''], ['photos', 'Where photos were taken', 'Raw GPS fix, not the snapped chainage']].forEach(([k, n, s2]) => {
         h += '<button class="setrow" data-act="ml-tog" data-v="' + k + '"><span><b>' + n + '</b>' + (s2 ? '<small>' + s2 + '</small>' : '') + '</span><span class="tog' + (S.map[k] ? ' on' : '') + '"></span></button>';
       });
       h += '</div><div class="lbl-caps" style="margin:16px 0 8px">Alignment source</div><div class="mono" style="font-size:14px;line-height:1.6">SECTION 02.kmz / SECTION 03.kmz · drawn centreline<br>Chainage measured along the line, checked against the station labels</div>';

@@ -226,7 +226,9 @@
     else side = p.side + ' ' + Math.round(Math.abs(p.offset)) + ' m';
     if (p.farFromLine) { youLbl = 'GPS ' + (p.farFromLine / 1000).toFixed(1) + ' km off line'; }
     const tri = p.facing === 'decreasing' ? '▼' : '▲';
-    return '<div class="pos-line"><span>' + esc(L.short) + '</span>' + (p.sub ? '<span class="chip-sub">' + p.sub + '</span>' : '<span class="chip-sub">NO DATA</span>') + (refChip(true) || fillChip() || refChip(false)) + '</div>' + gps +
+    // In a station or yard its name takes the line's place (the line is the main line there anyway)
+    const stc = stationChip();
+    return '<div class="pos-line">' + (stc || '<span>' + esc(L.short) + '</span>') + (p.sub ? '<span class="chip-sub">' + p.sub + '</span>' : '<span class="chip-sub">NO DATA</span>') + (refChip(true) || fillChip() || refChip(false)) + '</div>' + gps +
       '<button class="pos-ch tap' + (p.source === 'hand' ? ' hand' : '') + '" data-act="keypad" aria-label="Chainage">' + chHtml + '</button>' +
       '<button class="pos-you tap" data-act="facing"><div class="lbl">' + esc(youLbl) + '</div><div class="side">' + side + '</div>' +
       '<div class="facing">FACING <span class="tri">' + tri + '</span> <b>' + p.facing + '</b></div></button>';
@@ -261,14 +263,41 @@
   function refChip(bridge) {
     const p = S.pos;
     if (p.tier === 'poor' && p.source !== 'anchor') return '';
-    const r = DI.refsNear(p.line, p.ch - (p.acc || 0) / 2 - 10, p.ch + (p.acc || 0) / 2 + 10).filter(x => (x.kind === 'bridge') === bridge)[0];
+    const r = DI.refsNear(p.line, p.ch - (p.acc || 0) / 2 - 10, p.ch + (p.acc || 0) / 2 + 10).filter(x => !x.area && (x.kind === 'bridge') === bridge)[0];
     if (!r) return '';
     return '<span class="chip-ref" title="' + esc(r.label) + '">' + (r.kind === 'bridge' ? 'ON ' : '') + esc(r.name || r.short) + '</span>';
+  }
+  // In a station's track area or a yard's extent: say which, in the header.
+  function stationChip() {
+    const p = S.pos;
+    if (p.tier === 'poor' && p.source !== 'anchor') return '';
+    const r = DI.areasAt(p.line, p.ch)[0];
+    if (!r) return '';
+    return '<span class="chip-ref" title="' + esc(r.label + ' · ' + DI.fmtCh(r.ch0) + '–' + DI.fmtCh(r.ch1)) + '" style="flex:none;max-width:none">' + esc(r.name.replace(/ Station$/, '').replace(/ freight yard$/, ' YD').replace(/ maintenance centre$/, ' DEPOT').toUpperCase()) + '</span>';
+  }
+  // A station or a yard: where it runs, its platforms and buildings, from the STATIONS_YARDS drawing.
+  function openArea(r) {
+    const len = Math.round(r.ch1 - r.ch0);
+    const sideW = sd => sd === 'L' ? 'left' : sd === 'R' ? 'right' : sd === 'both' ? 'both sides' : '';
+    let h = '<div class="fhead"><span class="side-badge" style="background:var(--ref);color:var(--on-ink);display:flex;align-items:center;justify-content:center;width:52px;height:52px;font:700 12px/1 var(--f-cond)">' + (r.kind === 'station' ? 'STN' : r.short) + '</span><div style="min-width:0"><div class="t1"><span>' + esc(r.name) + '</span></div>' +
+      '<div style="font:500 17px/1.3 var(--f-sans);color:var(--ink-2);margin-top:2px">' + esc(r.label) + ' · ' + r.sub + '</div></div></div>';
+    h += '<div class="kv mt16">';
+    h += '<div class=\"k\">' + (r.kind === 'station' ? 'Tracks (loops, sidings)' : 'Extent') + '</div><div class=\"v\">' + DI.fmtCh(r.ch0) + ' → ' + DI.fmtCh(r.ch1) + ' · ' + len.toLocaleString('en-GB') + ' m</div>';
+    if (r.platform) h += '<div class=\"k\">Platforms</div><div class=\"v\">' + DI.fmtCh(r.platform[0]) + ' → ' + DI.fmtCh(r.platform[1]) + ' · ' + sideW(r.platform_side) + '</div>';
+    if (r.limits) h += '<div class=\"k\">Buildings and access</div><div class=\"v\">' + DI.fmtCh(r.limits[0]) + ' → ' + DI.fmtCh(r.limits[1]) + ' · ' + sideW(r.side) + '</div>';
+    if (r.kind === 'yard' && r.off) h += '<div class=\"k\">Side</div><div class=\"v\">' + sideW(r.side) + ', ' + Math.round(Math.min(Math.abs(r.off[0]), Math.abs(r.off[1]))) + '–' + Math.round(Math.max(Math.abs(r.off[0]), Math.abs(r.off[1]))) + ' m off the main line</div>';
+    h += '</div>';
+    if (r.note) h += '<div class="note mt8">' + esc(r.note) + '.</div>';
+    const n = DI.data.features.filter(f => f.line === r.line && f.ch1 >= r.ch0 && f.ch0 <= r.ch1).length;
+    h += '<div class="note mt8">From ' + esc(r.source) + ', for finding your way. ' + n + ' drainage structure' + (n === 1 ? '' : 's') + ' on the drawings lie' + (n === 1 ? 's' : '') + ' within it.</div>';
+    h += '<button class="btn mt16" data-act="goto-next" data-ch="' + Math.round((r.ch0 + r.ch1) / 2) + '" style="min-height:52px">Show it on the strip</button>';
+    openOverlay(h, 'sheet');
   }
   // What a reference structure is: from the track plan, not something to inspect.
   function openRef(id) {
     const r = DI.refById(id);
     if (!r) return;
+    if (r.area) return openArea(r);
     const len = r.kind === 'bridge' ? ' · ' + Math.round(r.ch1 - r.ch0) + ' m long' : '';
     let h = '<div class="fhead"><span class="side-badge" style="background:var(--ref);color:var(--on-ink);display:flex;align-items:center;justify-content:center;width:52px;height:52px;font:700 13px/1 var(--f-cond)">REF</span><div style="min-width:0"><div class="t1"><span>' + esc(r.name || r.label) + '</span></div>' +
       '<div style="font:500 17px/1.3 var(--f-sans);color:var(--ink-2);margin-top:2px">' + esc(r.label) + '</div></div></div>';

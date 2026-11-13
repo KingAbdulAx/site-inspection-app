@@ -188,6 +188,17 @@ const assert = (c, m) => { if (!c) { console.log('FAIL: ' + m); process.exitCode
   assert(await t.evaluate(() => /Formwork\s*60 m/.test(document.querySelector('.ov:last-child .rg-stages').textContent.replace(/\s+/g, ' '))), 'the sheet lists the metres at each stage');
   await t.evaluate(() => DA.closeAll());
 
+  // Phase 5b: stations and yards on the strip, like bridges
+  await t.goto(BASE + '?sim=KZDR:83500:4:3'); await t.waitForTimeout(2500);
+  assert(await t.evaluate(() => /KAZAURE/.test(document.querySelector('.pos-line').textContent) && !/KANO-MARADI/.test(document.querySelector('.pos-line').textContent)), 'the header says you are in Kazaure station, in place of the line');
+  const stHit = await t.evaluate(() => { const h = DA.strip.hits.find(x => x.ref && x.f.kind === 'station'); const r = document.querySelector('#stripHost').getBoundingClientRect(); return h && { x: r.left + (h.x0 + h.x1) / 2, y: r.top + Math.max(10, Math.min(r.height - 10, (h.y0 + h.y1) / 2)), id: h.f.id }; });
+  assert(stHit, 'the station is drawn on the strip');
+  await t.evaluate(id => DA.openRef(id), stHit.id); await t.waitForTimeout(300);
+  const stSheet = await t.evaluate(() => document.querySelector('.ov:last-child').textContent);
+  assert(/Kazaure Station/.test(stSheet) && /Platforms/.test(stSheet) && /STATIONS_YARDS/.test(stSheet), 'its sheet gives the extent, the platforms and the drawing');
+  await t.evaluate(() => DA.closeAll());
+  await t.goto(BASE + '?sim=DWKZ:25500:-4:3'); await t.waitForTimeout(2500);
+
   // Phase 3: Built to a different length (as-built extent editing, quiet design vs built display, strip rendering, undo)
   const spanFeat = await t.evaluate(() => {
     const f = DI.data.bySub.DWKZ.find(x => x.kind === 'linear' && x.ch1 - x.ch0 > 100);

@@ -1,0 +1,838 @@
+{
+ "source": "STATIONS_YARDS drawings (S02-S05)",
+ "stations": [
+  {
+   "kind": "yard",
+   "what": "freight",
+   "name": "Dawanau freight yard",
+   "sub": "KNDW",
+   "ch0": 18845.1,
+   "ch1": 19983.3,
+   "ch": 19414.2,
+   "side": "R",
+   "off": [
+    -172.1,
+    -16.6
+   ],
+   "src": "T2019-0323-S02-DD-STATIONS_YARDS_DAWANAU-KAZAURE",
+   "outline": [
+    [
+     [
+      18845.1,
+      -172.1
+     ],
+     [
+      19983.3,
+      -172.1
+     ],
+     [
+      19983.3,
+      -16.6
+     ],
+     [
+      18845.1,
+      -16.6
+     ],
+     [
+      18845.1,
+      -172.1
+     ]
+    ]
+   ],
+   "note": "Extent of its tracks (the drawing has no outline)",
+   "id": "ref_KNDW_yard_01"
+  },
+  {
+   "kind": "station",
+   "name": "Dawanau Station",
+   "sub": "DWKZ",
+   "ch0": 19822.4,
+   "ch1": 21252.7,
+   "ch": 20408.3,
+   "src": "T2019-0323-S02-DD-STATIONS_YARDS_DAWANAU-KAZAURE",
+   "outline": [
+    [
+     [
+      20583.3,
+      6.8
+     ],
+     [
+      20233.3,
+      6.7
+     ],
+     [
+      20233.3,
+      17.2
+     ],
+     [
+      20583.3,
+      17.3
+     ]
+    ]
+   ],
+   "platform": [
+    20233.3,
+    20583.3
+   ],
+   "platform_side": "L",
+   "id": "ref_DWKZ_station_01"
+  },
+  {
+   "kind": "station",
+   "name": "Kunya Station",
+   "sub": "DWKZ",
+   "ch0": 33096.3,
+   "ch1": 33446.3,
+   "ch": 33271.3,
+   "src": "T2019-0323-S02-DD-STATIONS_YARDS_DAWANAU-KAZAURE",
+   "outline": [],
+   "note": "Buildings and road accesses under development. Where its name is on the drawing; no platform or loop drawn yet",
+   "id": "ref_DWKZ_station_02"
+  },
+  {
+   "kind": "station",
+   "name": "Dambatta Station",
+   "sub": "DWKZ",
+   "ch0": 59307.4,
+   "ch1": 60500.2,
+   "ch": 59928.7,
+   "src": "T2019-0323-S02-DD-STATIONS_YARDS_DAWANAU-KAZAURE",
+   "outline": [
+    [
+     [
+      59753.7,
+      6.7
+     ],
+     [
+      60103.7,
+      6.8
+     ],
+     [
+      60103.7,
+      17.3
+     ],
+     [
+      59753.7,
+      17.2
+     ]
+    ],
+    [
+     [
+      59753.7,
+      -6.8
+     ],
+     [
+      60103.7,
+      -6.7
+     ],
+     [
+      60103.7,
+      -17.2
+     ],
+     [
+      59753.7,
+      -17.3
+     ]
+    ]
+   ],
+   "platform": [
+    59753.7,
+    60103.7
+   ],
+   "platform_side": "both",
+   "id": "ref_DWKZ_station_03"
+  },
+  {
+   "kind": "yard",
+   "what": "freight",
+   "name": "Kazaure freight yard",
+   "sub": "DWKZ",
+   "ch0": 79801.1,
+   "ch1": 80165.0,
+   "ch": 79983.0,
+   "side": "R",
+   "off": [
+    -228.5,
+    -77.0
+   ],
+   "src": "T2019-0323-S02-DD-STATIONS_YARDS_DAWANAU-KAZAURE",
+   "outline": [
+    [
+     [
+      80165.0,
+      -228.5
+     ],
+     [
+      80165.0,
+      -144.3
+     ],
+     [
+      80138.1,
+      -144.3
+     ],
+     [
+      80138.1,
+      -77.0
+     ],
+     [
+      79801.1,
+      -77.0
+     ],
+     [
+      79801.1,
+      -214.0
+     ],
+     [
+      80073.1,
+      -214.0
+     ],
+     [
+      80073.1,
+      -228.5
+     ]
+    ]
+   ],
+   "id": "ref_DWKZ_yard_01"
+  },
+  {
+   "kind": "yard",
+   "what": "maintenance",
+   "name": "Kazaure maintenance centre",
+   "sub": "DWKZ",
+   "ch0": 80370.3,
+   "ch1": 80466.3,
+   "ch": 80418.3,
+   "side": "R",
+   "off": [
+    -40.0,
+    -40.0
+   ],
+   "src": "T2019-0323-S02-DD-STI-DAWANAU-KAZAURE_INFRASTR",
+   "outline": [
+    [
+     [
+      80370.3,
+      -40.0
+     ],
+     [
+      80466.3,
+      -40.0
+     ],
+     [
+      80466.3,
+      -40.0
+     ],
+     [
+      80370.3,
+      -40.0
+     ],
+     [
+      80370.3,
+      -40.0
+     ]
+    ]
+   ],
+   "note": "Extent of its tracks (the drawing has no outline)",
+   "id": "ref_DWKZ_yard_02"
+  },
+  {
+   "kind": "station",
+   "name": "Kazaure Station",
+   "sub": "KZDR",
+   "ch0": 82869.1,
+   "ch1": 84061.9,
+   "ch": 83490.4,
+   "src": "T2019-0323-S03-DD-STATIONS_YARDS_KAZAURE-DAURA",
+   "outline": [
+    [
+     [
+      83315.4,
+      6.7
+     ],
+     [
+      83665.4,
+      6.8
+     ],
+     [
+      83665.4,
+      17.3
+     ],
+     [
+      83315.4,
+      17.2
+     ]
+    ],
+    [
+     [
+      83315.4,
+      -6.8
+     ],
+     [
+      83665.4,
+      -6.7
+     ],
+     [
+      83665.4,
+      -17.2
+     ],
+     [
+      83315.4,
+      -17.3
+     ]
+    ]
+   ],
+   "platform": [
+    83315.4,
+    83665.4
+   ],
+   "platform_side": "both",
+   "id": "ref_KZDR_station_01"
+  },
+  {
+   "kind": "station",
+   "name": "Durbe Station",
+   "sub": "KZDR",
+   "ch0": 108025.0,
+   "ch1": 109210.0,
+   "ch": 108618.6,
+   "src": "T2019-0323-S03-DD-STATIONS_YARDS_KAZAURE-DAURA",
+   "outline": [
+    [
+     [
+      108443.6,
+      -6.7
+     ],
+     [
+      108793.6,
+      -6.8
+     ],
+     [
+      108793.6,
+      -17.3
+     ],
+     [
+      108443.6,
+      -17.2
+     ]
+    ]
+   ],
+   "platform": [
+    108443.6,
+    108793.6
+   ],
+   "platform_side": "R",
+   "note": "Buildings and road accesses under development",
+   "id": "ref_KZDR_station_02"
+  },
+  {
+   "kind": "yard",
+   "what": "freight",
+   "name": "Daura freight yard",
+   "sub": "KZDR",
+   "ch0": 120948.0,
+   "ch1": 121312.0,
+   "ch": 121130.0,
+   "side": "R",
+   "off": [
+    -190.5,
+    -39.0
+   ],
+   "src": "T2019-0323-S03-DD-STATIONS_YARDS_KAZAURE-DAURA",
+   "outline": [
+    [
+     [
+      121312.0,
+      -190.5
+     ],
+     [
+      121312.0,
+      -106.3
+     ],
+     [
+      121285.0,
+      -106.3
+     ],
+     [
+      121285.0,
+      -39.0
+     ],
+     [
+      120948.0,
+      -39.0
+     ],
+     [
+      120948.0,
+      -176.0
+     ],
+     [
+      121220.0,
+      -176.0
+     ],
+     [
+      121220.0,
+      -190.5
+     ]
+    ]
+   ],
+   "id": "ref_KZDR_yard_01"
+  },
+  {
+   "kind": "station",
+   "name": "Daura Station",
+   "sub": "KZDR",
+   "ch0": 123265.9,
+   "ch1": 124458.7,
+   "ch": 123837.3,
+   "src": "T2019-0323-S03-DD-STATIONS_YARDS_KAZAURE-DAURA",
+   "outline": [
+    [
+     [
+      123662.3,
+      6.8
+     ],
+     [
+      124012.3,
+      6.7
+     ],
+     [
+      124012.3,
+      17.2
+     ],
+     [
+      123662.3,
+      17.3
+     ]
+    ],
+    [
+     [
+      123662.3,
+      -6.7
+     ],
+     [
+      124012.3,
+      -6.8
+     ],
+     [
+      124012.3,
+      -17.3
+     ],
+     [
+      123662.3,
+      -17.2
+     ]
+    ]
+   ],
+   "platform": [
+    123662.3,
+    124012.3
+   ],
+   "platform_side": "both",
+   "id": "ref_KZDR_station_03"
+  },
+  {
+   "kind": "station",
+   "name": "Shargalle Station",
+   "sub": "DRMR",
+   "ch0": 149521.8,
+   "ch1": 150661.2,
+   "ch": 150091.5,
+   "src": "T2019-0323-S04-DD-STATIONS_YARDS_DAURA-MUDURU",
+   "outline": [
+    [
+     [
+      150266.5,
+      6.8
+     ],
+     [
+      149916.5,
+      6.8
+     ],
+     [
+      149916.5,
+      17.3
+     ],
+     [
+      150266.5,
+      17.3
+     ]
+    ],
+    [
+     [
+      150291.5,
+      81.8
+     ],
+     [
+      150291.5,
+      6.8
+     ],
+     [
+      149891.5,
+      6.7
+     ],
+     [
+      149891.5,
+      81.7
+     ]
+    ]
+   ],
+   "platform": [
+    149916.5,
+    150266.5
+   ],
+   "platform_side": "L",
+   "limits": [
+    149891.5,
+    150291.5
+   ],
+   "side": "L",
+   "id": "ref_DRMR_station_01"
+  },
+  {
+   "kind": "station",
+   "name": "Mashi Station",
+   "sub": "DRMR",
+   "ch0": 163115.7,
+   "ch1": 164255.2,
+   "ch": 163685.4,
+   "src": "T2019-0323-S04-DD-STATIONS_YARDS_DAURA-MUDURU",
+   "outline": [
+    [
+     [
+      163860.4,
+      6.8
+     ],
+     [
+      163510.4,
+      6.8
+     ],
+     [
+      163510.4,
+      17.3
+     ],
+     [
+      163860.4,
+      17.3
+     ]
+    ],
+    [
+     [
+      163885.4,
+      81.7
+     ],
+     [
+      163885.4,
+      6.7
+     ],
+     [
+      163485.4,
+      6.7
+     ],
+     [
+      163485.4,
+      81.7
+     ]
+    ]
+   ],
+   "platform": [
+    163510.4,
+    163860.4
+   ],
+   "platform_side": "L",
+   "limits": [
+    163485.4,
+    163885.4
+   ],
+   "side": "L",
+   "id": "ref_DRMR_station_02"
+  },
+  {
+   "kind": "station",
+   "name": "Muduru Station",
+   "sub": "DRMR",
+   "ch0": 179865.0,
+   "ch1": 181045.0,
+   "ch": 180454.7,
+   "src": "T2019-0323-S04-DD-STATIONS_YARDS_DAURA-MUDURU",
+   "outline": [
+    [
+     [
+      180629.7,
+      6.7
+     ],
+     [
+      180279.7,
+      6.8
+     ],
+     [
+      180279.7,
+      17.3
+     ],
+     [
+      180629.7,
+      17.2
+     ]
+    ],
+    [
+     [
+      180654.7,
+      81.8
+     ],
+     [
+      180654.7,
+      6.8
+     ],
+     [
+      180254.7,
+      6.8
+     ],
+     [
+      180254.7,
+      81.8
+     ]
+    ]
+   ],
+   "platform": [
+    180279.7,
+    180629.7
+   ],
+   "platform_side": "L",
+   "limits": [
+    180254.7,
+    180654.7
+   ],
+   "side": "L",
+   "note": "Buildings and road accesses under development",
+   "id": "ref_DRMR_station_03"
+  },
+  {
+   "kind": "yard",
+   "what": "freight",
+   "name": "Katsina freight yard",
+   "sub": "MRJB",
+   "ch0": 202942.8,
+   "ch1": 204877.4,
+   "ch": 203910.1,
+   "side": "both",
+   "off": [
+    -60.5,
+    93.8
+   ],
+   "src": "T2019-0323-S05-DD-STATIONS_YARDS_MUDURU-JIBIYA",
+   "outline": [
+    [
+     [
+      202942.8,
+      -60.5
+     ],
+     [
+      204877.4,
+      -60.5
+     ],
+     [
+      204877.4,
+      93.8
+     ],
+     [
+      202942.8,
+      93.8
+     ],
+     [
+      202942.8,
+      -60.5
+     ]
+    ]
+   ],
+   "note": "Extent of its tracks (the drawing has no outline)",
+   "id": "ref_MRJB_yard_01"
+  },
+  {
+   "kind": "station",
+   "name": "Katsina Station",
+   "sub": "MRJB",
+   "ch0": 203032.0,
+   "ch1": 204275.6,
+   "ch": 203668.4,
+   "src": "T2019-0323-S05-DD-STATIONS_YARDS_MUDURU-JIBIYA",
+   "outline": [
+    [
+     [
+      203893.4,
+      -6.8
+     ],
+     [
+      203443.4,
+      -6.7
+     ],
+     [
+      203443.4,
+      -17.2
+     ],
+     [
+      203893.4,
+      -17.3
+     ]
+    ],
+    [
+     [
+      203893.4,
+      6.7
+     ],
+     [
+      203443.4,
+      6.8
+     ],
+     [
+      203443.4,
+      17.3
+     ],
+     [
+      203893.4,
+      17.2
+     ]
+    ]
+   ],
+   "platform": [
+    203443.4,
+    203893.4
+   ],
+   "platform_side": "both",
+   "note": "Railway layout, buildings and road accesses under development",
+   "id": "ref_MRJB_station_01"
+  },
+  {
+   "kind": "yard",
+   "what": "maintenance",
+   "name": "Katsina maintenance centre",
+   "sub": "MRJB",
+   "ch0": 204100.0,
+   "ch1": 206111.4,
+   "ch": 205105.7,
+   "side": "both",
+   "off": [
+    -100.0,
+    32.0
+   ],
+   "src": "T2019-0323-S05-DD-STATIONS_YARDS_MUDURU-JIBIYA",
+   "outline": [
+    [
+     [
+      204100.0,
+      -100.0
+     ],
+     [
+      206111.4,
+      -100.0
+     ],
+     [
+      206111.4,
+      32.0
+     ],
+     [
+      204100.0,
+      32.0
+     ],
+     [
+      204100.0,
+      -100.0
+     ]
+    ]
+   ],
+   "note": "Extent of its tracks (the drawing has no outline)",
+   "id": "ref_MRJB_yard_02"
+  },
+  {
+   "kind": "station",
+   "name": "Daddara Station",
+   "sub": "MRJB",
+   "ch0": 227077.2,
+   "ch1": 227427.2,
+   "ch": 227252.2,
+   "src": "T2019-0323-S05-DD-STATIONS_YARDS_MUDURU-JIBIYA",
+   "outline": [
+    [
+     [
+      227427.2,
+      6.7
+     ],
+     [
+      227077.2,
+      6.8
+     ],
+     [
+      227077.2,
+      17.3
+     ],
+     [
+      227427.2,
+      17.2
+     ]
+    ],
+    [
+     [
+      227452.2,
+      81.7
+     ],
+     [
+      227452.2,
+      6.7
+     ],
+     [
+      227052.2,
+      6.7
+     ],
+     [
+      227052.2,
+      81.7
+     ]
+    ]
+   ],
+   "platform": [
+    227077.2,
+    227427.2
+   ],
+   "platform_side": "L",
+   "limits": [
+    227052.2,
+    227452.2
+   ],
+   "side": "L",
+   "note": "Buildings and road accesses under development",
+   "id": "ref_MRJB_station_02"
+  },
+  {
+   "kind": "station",
+   "name": "Jibiya Station",
+   "sub": "MRJB",
+   "ch0": 242041.5,
+   "ch1": 243181.0,
+   "ch": 242611.2,
+   "src": "T2019-0323-S05-DD-STATIONS_YARDS_MUDURU-JIBIYA",
+   "outline": [
+    [
+     [
+      242786.2,
+      6.8
+     ],
+     [
+      242436.2,
+      6.8
+     ],
+     [
+      242436.2,
+      17.3
+     ],
+     [
+      242786.2,
+      17.3
+     ]
+    ]
+   ],
+   "platform": [
+    242436.2,
+    242786.2
+   ],
+   "platform_side": "L",
+   "id": "ref_MRJB_station_03"
+  }
+ ]
+}

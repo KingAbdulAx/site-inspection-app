@@ -572,8 +572,12 @@
     bridge: { label: 'Railway bridge', short: 'BRIDGE' },
     overpass: { label: 'Overpass · road over the railway', short: 'ROAD OVER' },
     underpass: { label: 'Underpass · road under the railway', short: 'ROAD UNDER' },
-    crossing: { label: 'Road crossing', short: 'ROAD' }
+    crossing: { label: 'Road crossing', short: 'ROAD' },
+    station: { label: 'Station', short: 'STATION' },
+    yard: { label: 'Freight yard', short: 'YARD' }
   };
+  // Stations and yards (data/structures.js, KMD_STATIONS) run along the line like a bridge, beside it.
+  const isArea = r => r.kind === 'station' || r.kind === 'yard';
   let refList = null;
   function refs() {
     if (refList) return refList;
@@ -583,8 +587,20 @@
       if (!SUBS[sub]) return;
       (src[sub].structures || []).forEach(s => refList.push(Object.assign({ sub, line: SUBS[sub].line, source: src[sub].source }, s, REF_KIND[s.kind] || REF_KIND.crossing, { kind: s.kind })));
     });
+    (window.KMD_STATIONS || []).forEach(s => {
+      if (!SUBS[s.sub]) return;
+      const k = REF_KIND[s.kind];
+      refList.push(Object.assign({ line: SUBS[s.sub].line, source: s.src }, s, k, { kind: s.kind, area: true,
+        label: s.kind === 'yard' ? (s.what === 'maintenance' ? 'Maintenance centre' : 'Freight yard') : 'Station',
+        short: s.kind === 'yard' ? (s.what === 'maintenance' ? 'DEPOT' : 'YARD') : 'STATION' }));
+    });
     refList.sort((a, b) => a.ch0 - b.ch0);
     return refList;
+  }
+  // The stations and yards at a chainage (a station's track area; a yard's extent).
+  function areasAt(line, ch, pad) {
+    const p = pad || 0;
+    return refs().filter(r => r.area && r.line === line && ch >= r.ch0 - p && ch <= r.ch1 + p);
   }
   function refsNear(line, a, b) { return refs().filter(r => r.line === line && r.ch1 >= a && r.ch0 <= b); }
   function refById(id) { return refs().find(r => r.id === id) || null; }
@@ -1545,7 +1561,7 @@
     fmtCh, fmtPlus, parseCh, fmtDate, fmtTime, monthsBetween, esc, DAYS, MONTHS,
     inspector, setInspector, addRecord, voidRecord, live, recordsFor, seenOf, ownSeen, openDefects,
     designChanges, statusOf, drafts, saveDraft, putPhoto, getPhoto, uid, loadLegacy, mirrorLegacy,
-    loadSections, sectionAt, loadT9Schedule, hasT9Schedule, rangeable, coverOf, addRange, rangeNote, parseRangeNote, stageNote, parseStageNote, noteMetres, parseExecutedNote, foreignStaged, extentNote, parseExtentNote, foreignExtent, adoptForeignExtent, applyExtents, extentOf, addExtent, extentEnds, addJoin, detectJoins, applyJoins, isSpan, typeOf, progressOf, typeProgress, T9_SCHEDULE_ON, refs, refsNear, refById, REF_KIND, loadHeights, hasHeights, heightAt, T9_RULES, t9Rule, setT9Rule, t9Check,
+    loadSections, sectionAt, loadT9Schedule, hasT9Schedule, rangeable, coverOf, addRange, rangeNote, parseRangeNote, stageNote, parseStageNote, noteMetres, parseExecutedNote, foreignStaged, extentNote, parseExtentNote, foreignExtent, adoptForeignExtent, applyExtents, extentOf, addExtent, extentEnds, addJoin, detectJoins, applyJoins, isSpan, typeOf, progressOf, typeProgress, T9_SCHEDULE_ON, refs, refsNear, refById, REF_KIND, areasAt, isArea, loadHeights, hasHeights, heightAt, T9_RULES, t9Rule, setT9Rule, t9Check,
     PRESETS, presetOf, applyBase, baseRecords, correctBase, addBase, deleteBase, verifyBase, unverifyBase, exportGeo, exportCorrections, importRecords,
     project, pointAt, laneOf, savePosition, lastPosition, csvCell,
     get records() { return records; }
