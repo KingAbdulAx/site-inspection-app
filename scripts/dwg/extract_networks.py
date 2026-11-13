@@ -16,7 +16,8 @@ Type 6 (French drain, collector drain):
     DRN_DITCH_TYPE6, DRN_F_YARD_DITCH_TYPE6, _S02-DRN-DITCH_TYPE6 (yards)    the drain, with its turns
     DRN__F_YARD_PIPE                                                        a yard's collector pipe
     MH (blocks, or closed polylines in S03), DRN_MANHOLE_GRID_COVER, DRN_F_YARD_MANHOLE_COVER   manholes
-    DRN_MANHOLE TEXT                                                        a yard manhole's name
+    MANHOLE-NAME (attribute of an MH block)  its name: 'MH3.3-YDKZ', 'MH2.9/MH3.1-YDKZ' where two drains meet
+    DRN_MANHOLE TEXT                                                        a yard manhole's name, beside it
   A drain is cut at every manhole within 2.5 m of it: each piece between two manholes (or an end) is a leg,
   with its own length measured along it. A manhole keeps its drawing handle, so the app joins it to the
   manhole it already has from the plans (data/connectors.json: cn_<SUB>_<handle>).
@@ -124,11 +125,23 @@ def t6(paths, axes):
             if e.dxftype() not in ('INSERT', 'LWPOLYLINE'):
                 continue
             c = centre(e)
-            if not c or any(math.hypot(c[0] - m['xy'][0], c[1] - m['xy'][1]) < 0.5 for m in mhs):
+            if not c:
                 continue
-            mhs.append({'xy': c, 'handle': e.dxf.handle, 'grid': 'GRID' in lay.upper() or 'COVER' in lay.upper(), 'name': None})
-        names = [(e.dxf.insert.x, e.dxf.insert.y, text(e).strip()) for e in msp if e.dxftype() in ('TEXT', 'MTEXT') and re.search(r'MANHOLE TEXT', e.dxf.layer, re.I)]
-        for m in mhs:
+            same = next((m for m in mhs if math.hypot(c[0] - m['xy'][0], c[1] - m['xy'][1]) < 1.0), None)
+            name = None
+            if e.dxftype() == 'INSERT':
+                try:
+                    name = next((a.dxf.text.strip() for a in e.attribs if a.dxf.tag.upper() == 'MANHOLE-NAME' and a.dxf.text.strip()), None)
+                except Exception:
+                    name = None
+            grid = 'GRID' in lay.upper() or ('COVER' in lay.upper() and 'YARD' not in lay.upper())
+            if same:        # a grid cover on a named manhole: one manhole, with its name
+                same['name'] = same['name'] or name
+                same['grid'] = same['grid'] or grid
+                continue
+            mhs.append({'xy': c, 'handle': e.dxf.handle, 'grid': grid, 'name': name})
+        names = [(e.dxf.insert.x, e.dxf.insert.y, text(e).strip()) for e in msp if e.dxftype() in ('TEXT', 'MTEXT') and re.search(r'MANHOLE TEXT', e.dxf.layer, re.I) and re.match(r'^\s*MH?\s*[\d.]', text(e), re.I)]
+        for m in [m for m in mhs if not m['name']]:     # the yards name theirs in text beside them
             n = min(names, key=lambda t: math.hypot(t[0] - m['xy'][0], t[1] - m['xy'][1]), default=None)
             if n and math.hypot(n[0] - m['xy'][0], n[1] - m['xy'][1]) < 15:
                 m['name'] = n[2]
@@ -324,6 +337,7 @@ def main():
     rail = railway([split(p) for p in a.rail], axes)
     rd = roads([split(p) for p in a.roads], axes, load_refs(), rail)
     json.dump({'source': 'scripts/dwg/extract_networks.py', 't6': legs, 'manholes': nodes, 'roads': rd}, open(a.out, 'w'))
+    print('named manholes', sum(1 for n in nodes if n['name']), 'of', len(nodes))
     print('Type 6 legs', len(legs), 'of', round(sum(l['len'] for l in legs)), 'm;', sum(1 for l in legs if l['kind'] == 'pipe'), 'collector pipes;', len(nodes), 'manholes')
     print('road drains', sum(1 for i in rd if i['kind'] == 'drain'), 'of', round(sum(i.get('len', 0) for i in rd)), 'm;',
           sum(1 for i in rd if i['kind'] == 'riprap'), 'riprap dissipators;', sum(1 for i in rd if i['kind'] == 'culvert'), 'road culverts;',

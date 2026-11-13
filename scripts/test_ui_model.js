@@ -590,6 +590,9 @@ section('Phases 8 and 9: Type 6 networks, road drainage', () => {
   ok(turn && turn.ch1 - turn.ch0 < 0.8 * turn.len && DI.geomOf(turn).length >= 1, 'a leg that turns or crosses the line is tracked whole, and drawn with its turns');
   ok(Math.abs(DI.progressOf([turn]).lin.m - turn.len) < 0.01, 'its length in Progress is its own, not its chainage');
   ok(F.some(f => /^mh_/.test(f.id) && f.mhName), 'yard manholes come with their names');
+  const named = F.filter(f => f.mhName);
+  ok(named.length > 240 && named.every(f => f.name.includes(f.mhName)) && named.some(f => /^MH\d+\.\d+-[A-Z]+$/.test(f.mhName)), 'manholes keep their drawing names (MH3.3-YDKZ): ' + named.length);
+  ok(legs.filter(f => / → /.test(f.name)).length > legs.length * 0.8, 'a leg is named by its manholes: ' + legs.find(f => / → /.test(f.name)).name);
   // roads
   const rd = F.filter(f => f.road);
   ok(rd.length > 1500 && rd.filter(f => f.kind === 'net').every(f => f.len > 0 && DI.geomOf(f)), 'road drains, with their shape and length: ' + rd.filter(f => f.kind === 'net').length);

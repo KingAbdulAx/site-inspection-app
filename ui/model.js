@@ -594,7 +594,8 @@
     (j.manholes || []).forEach(m => {
       const key = m.src + '|' + m.handle;
       const known = (data.pristine[m.sub] || []).find(f => f.conn && (f.code === 'MH' || f.code === 'MHG') && Math.abs(f.ch0 - m.ch) < 3 && Math.abs(f.offset - m.off) < 3);
-      if (known) { node[key] = known.id; if (m.name && !known.mhName) { known.mhName = m.name; known.name += ' ' + m.name; } return; }
+      // its drawing's name goes first: 'Manhole MH3.3-YDKZ'
+      if (known) { node[key] = known.id; if (m.name && !known.mhName) { known.mhName = m.name; known.name = known.name.replace(/^(Manhole[^,]*)/, '$1 ' + m.name); known.full = known.name; } return; }
       if (!SUBS[m.sub] || !data.pristine[m.sub]) return;
       const id = 'mh_' + m.sub + '_' + m.handle;
       const pr = PRESETS[m.grid ? 'MHG' : 'MH'];
@@ -608,7 +609,10 @@
       if (!SUBS[l.sub] || !data.pristine[l.sub]) return;
       const chs = l.pts.map(p => p[0]), offs = l.pts.map(p => p[1]);
       const pipe = l.kind === 'pipe';
-      const name = pipe ? 'Collector pipe' : 'Type 6 drain';
+      // between which manholes, by their names where the drawing gives them
+      const mhn = h => { const k = h && node[l.src + '|' + h]; const f = k && (data.pristine[l.sub] || []).concat(...Object.values(data.pristine)).find(x => x.id === k); return f && f.mhName; };
+      const na = mhn(l.from), nb = mhn(l.to);
+      const name = (pipe ? 'Collector pipe' : 'Type 6 drain') + (na || nb ? ' ' + (na || '…') + ' → ' + (nb || '…') : '');
       const f = { id: l.id, sub: l.sub, line: SUBS[l.sub].line, catKey: 'track', catLabel: CAT_LABEL.track, kind: 'buried', lane: 'cl', side: l.side,
         ch0: Math.min(...chs), ch1: Math.max(...chs), cert: 'derived', code: pipe ? 'CP' : 'T6', typeKey: pipe ? null : '6', name, full: name + ', ' + Math.round(l.len) + ' m manhole to manhole',
         icon: 'collector', ladder: pipe ? LADDER_BPIPE : LADDER_FRENCH, sheet: '', drawings: [], level: null, onHold: false, confidence: '', specs: '', notes: '', stated: null, raw: {},

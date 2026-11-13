@@ -104,7 +104,7 @@ python3 scripts/dwg/extract_networks.py --out data/networks.json \
     --roads S01-ROD.dxf=T2019-0323-S01-DD-ROD-DRAINAGE ... S04-ROD.dxf=T2019-0323-S04-DD-ROD-DRAINAGE_REV03 ...
 ```
 
-The layers and rules are in the script's header. S01's DRN-LONG and the S01 and S02 ROD-DRAINAGE were purged in AutoCAD (regapps, unused blocks) to bring them under the Drive connector's 10 MB; S01 DRN-LONG then gave the same ditches, descents and blocks as before. 13 Nov 2026: 271 Type 6 legs and 16 collector pipes (12.6 km), 315 manholes (26 new, in the yards); 1,538 road drains (118 km), 537 riprap dissipators, 96 road culverts, 98 road-drain ends on 72 railway ditches. Takes about 4 minutes.
+The layers and rules are in the script's header. S01's DRN-LONG and the S01 and S02 ROD-DRAINAGE were purged in AutoCAD (regapps, unused blocks) to bring them under the Drive connector's 10 MB; S01 DRN-LONG then gave the same ditches, descents and blocks as before. 13 Nov 2026: 271 Type 6 legs and 16 collector pipes (12.6 km), 315 manholes (26 new, in the yards; 263 named: the MH blocks' MANHOLE-NAME, 'MH3.3-YDKZ', and the Kazaure yard's 'M 1.0' labels); 1,538 road drains (118 km), 537 riprap dissipators, 96 road culverts, 98 road-drain ends on 72 railway ditches. Takes about 4 minutes.
 
 ## Embankment height (Section 02 for now)
 
