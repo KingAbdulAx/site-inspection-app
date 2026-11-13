@@ -197,6 +197,21 @@ const assert = (c, m) => { if (!c) { console.log('FAIL: ' + m); process.exitCode
   const stSheet = await t.evaluate(() => document.querySelector('.ov:last-child').textContent);
   assert(/Kazaure Station/.test(stSheet) && /Platforms/.test(stSheet) && /STATIONS_YARDS/.test(stSheet), 'its sheet gives the extent, the platforms and the drawing');
   await t.evaluate(() => DA.closeAll());
+  // Phase 6 and 7: connectors on the record sheet, and the plan view from the station's sheet
+  await t.waitForFunction(() => DI.hasConnectors(), null, { timeout: 15000 });
+  const tc = await t.evaluate(() => DI.data.bySub.KZDR.find(f => f.code === 'T12' && DI.endsOf(f).start && DI.endsOf(f).end).id);
+  await t.evaluate(id => DA.openRecord(id), tc); await t.waitForTimeout(300);
+  assert(await t.evaluate(() => /Starts at/i.test(document.querySelector('.ov:last-child .conn').textContent) && document.querySelectorAll('.ov:last-child .conn [data-act=record]').length === 2), 'the record sheet says what each end runs into');
+  await t.tap('.ov:last-child .conn [data-act=record]'); await t.waitForTimeout(300);
+  assert(await t.evaluate(() => /End of|Start of|Joins/.test(document.querySelector('.ov:last-child .conn').textContent)), 'a tap opens the connector, which names the ditch');
+  await t.evaluate(() => DA.closeAll());
+  await t.evaluate(id => DA.openRef(id), stHit.id); await t.waitForTimeout(300);
+  await t.tap('.ov:last-child [data-act=plan-open]'); await t.waitForTimeout(600);
+  const plan = await t.evaluate(() => { const o = document.querySelector('.ov:last-child'); return { svg: !!o.querySelector('.plan-scroll svg'), n: o.querySelectorAll('[data-act=plan-rec]').length, mh: [...o.querySelectorAll('[data-act=plan-rec]')].map(g => g.dataset.id).find(id => DI.data.byId[id] && DI.data.byId[id].code === 'MH') }; });
+  assert(plan.svg && plan.n > 20 && plan.mh, 'the plan view draws the station\'s drainage and its manholes: ' + plan.n);
+  await t.evaluate(id => document.querySelector('.ov:last-child [data-act=plan-rec][data-id="' + id + '"]').dispatchEvent(new MouseEvent('click', { bubbles: true })), plan.mh); await t.waitForTimeout(300);
+  assert(await t.evaluate(id => document.querySelector('.ov:last-child [data-act=stage]') && document.querySelector('.ov:last-child [data-act=stage]').dataset.id === id, plan.mh), 'a tap on a manhole in the plan opens its record sheet');
+  await t.evaluate(() => DA.closeAll());
   await t.goto(BASE + '?sim=DWKZ:25500:-4:3'); await t.waitForTimeout(2500);
 
   // Phase 3: Built to a different length (as-built extent editing, quiet design vs built display, strip rendering, undo)

@@ -205,9 +205,10 @@
     'Diversion Channel': { key: 'diversion', label: 'Diversion channel', lane: 'off', kind: 'linear' },
     'Track Drainage': { key: 'track', label: 'Track drainage', lane: 'cl', kind: 'buried' },
     'Energy Dissipator': { key: 'dissipator', label: 'Energy dissipator', lane: 'toe', kind: 'point' },
-    'Miscellaneous': { key: 'misc', label: 'Miscellaneous', lane: 'toe', kind: 'linear' }
+    'Miscellaneous': { key: 'misc', label: 'Miscellaneous', lane: 'toe', kind: 'linear' },
+    'Connector': { key: 'connector', label: 'Connectors', lane: 'toe', kind: 'point' }
   };
-  const CAT_ORDER = ['cross', 'toe', 'descent', 'riprap', 'diversion', 'shoulder', 'side', 'underpass', 'track', 'berm', 'crest', 'dissipator', 'bridge', 'misc'];
+  const CAT_ORDER = ['cross', 'toe', 'descent', 'riprap', 'diversion', 'shoulder', 'side', 'underpass', 'track', 'berm', 'crest', 'dissipator', 'connector', 'bridge', 'misc'];
 
   function normalise(p, sub) {
     const catName = p.category || (p.Type === 'Bridge' ? 'Bridge Crossing' : null);
@@ -359,7 +360,11 @@
     OP: P('bridge', 'OP', 'Road overbridge', 'across', 'cross', 'bridge'),
     UP: P('underpass', 'UP', 'Road underpass', 'across', 'cross', 'arch'),
     CC: P('cross', 'CC', 'Cattle crossing', 'across', 'cross', 'box', LADDER_BOX),
-    MD: P('misc', 'MD', 'Culvert approach ditch', 'toe', 'linear', 'trap', LADDER_UNLINED)
+    MD: P('misc', 'MD', 'Culvert approach ditch', 'toe', 'linear', 'trap', LADDER_UNLINED),
+    CB: P('connector', 'CB', 'Connection box', 'toe', 'point', 'cbox'),
+    MH: P('connector', 'MH', 'Manhole', 'cl', 'point', 'mh', LADDER_PRECAST),
+    MHG: P('connector', 'MHG', 'Manhole, grid cover', 'cl', 'point', 'mh', LADDER_PRECAST),
+    PO: P('connector', 'PO', 'Outlet pipe', 'toe', 'point', 'outlet', LADDER_PRECAST)
   };
   const CAT_LABEL = {};
   Object.values(CAT).forEach(c => { if (!CAT_LABEL[c.key]) CAT_LABEL[c.key] = c.label; });
@@ -479,6 +484,69 @@
     applyBase();
     migrateStageNames();
   }
+  // ------------------------------------------------ connectors
+  // Where a drain ends and what it runs into, from the drainage plans (data/connectors.json, made by
+  // scripts/dwg/build_connectors.js): connection boxes, manholes, grid-cover manholes and outlet pipes become
+  // features of their own (they are built, so they have stages); a dissipator of the plans is the app's own.
+  // ends: what each ditch end runs into; geom: where the plans draw each ditch (chainage and true offset).
+  const CONN = { box: 'CB', manhole: 'MH', grid: 'MHG', pipe: 'PO' };
+  // The lane a true offset falls in, for the strip.
+  function laneOf(off) {
+    const a = Math.abs(off);
+    return a < 2 ? 'cl' : a < 5.75 ? 'plat' : a < 10.75 ? 'face' : a < 18.75 ? 'toe' : a < 37 ? 'crest' : 'off';
+  }
+  function loadConnectors(j) {
+    Object.keys(data.pristine).forEach(sub => { data.pristine[sub] = data.pristine[sub].filter(f => !f.conn); });
+    data.connEnds = j.ends || {};
+    data.geom = j.geom || {};
+    data.connAt = {};      // feature id -> [{ id, end }] of the connectors it touches
+    Object.keys(j.subs || {}).forEach(sub => {
+      if (!SUBS[sub] || !data.pristine[sub]) return;
+      const list = j.subs[sub];
+      // the manhole nearest each outlet pipe (within 60 m) is the outlet's
+      const exits = new Set();
+      list.filter(c => c.kind === 'pipe').forEach(o => {
+        const m = list.filter(c => c.kind === 'manhole' && Math.abs(c.ch - o.ch) < 60).sort((a, b) => Math.hypot(a.ch - o.ch, a.off - o.off) - Math.hypot(b.ch - o.ch, b.off - o.off))[0];
+        if (m) exits.add(m.id);
+      });
+      list.forEach(c => {
+        c.links.forEach(([fid, end]) => (data.connAt[fid] = data.connAt[fid] || []).push({ id: c.id, end }));
+        if (c.app) {        // the app's own dissipator: it only gains its links
+          (data.connAt[c.id] = data.connAt[c.id] || []).push(...c.links.map(([fid, end]) => ({ id: fid, end: end === 'a' ? 'start' : end === 'b' ? 'end' : end, of: true })));
+          return;
+        }
+        const code = CONN[c.kind];
+        const pr = PRESETS[code];
+        // a manhole at the outlet of a collector drain is cast in situ; the rest are precast rings
+        const exit = exits.has(c.id);
+        const ladder = c.kind === 'box' ? LADDER_INSITU : exit ? LADDER_INSITU : pr.ladder;
+        const lane = c.kind === 'manhole' || c.kind === 'grid' ? (Math.abs(c.off) < 20 ? 'cl' : laneOf(c.off)) : laneOf(c.off);
+        const name = c.kind === 'box' ? 'Connection box' + (c.type && /^Type/.test(c.type) ? ', ' + c.type.toLowerCase() : '') : exit ? 'Manhole at the outlet' : pr.name;
+        const f = {
+          id: c.id, sub, line: SUBS[sub].line, catKey: 'connector', catLabel: CAT_LABEL.connector, kind: 'point', lane,
+          side: c.side, ch0: c.ch, ch1: c.ch, cert: 'derived', code, typeKey: null, name, full: name + (c.block ? ' (' + c.block + ')' : ''),
+          icon: pr.icon, ladder, sheet: '', drawings: [], level: null, onHold: false, confidence: '', specs: c.block || '', notes: '', stated: null,
+          raw: {}, offset: c.off, conn: { kind: c.kind, type: c.type, block: c.block, exit, links: c.links }
+        };
+        data.pristine[sub].push(f);
+      });
+    });
+    applyBase();
+    migrateStageNames();
+  }
+  function hasConnectors() { return !!data.connAt; }
+  // What a ditch's start and end run into: { start: feature|null, end: feature|null }; and for a connector or
+  // a dissipator, what runs into it.
+  function endsOf(f) {
+    const e = (data.connEnds || {})[f.id] || {};
+    return { start: e.a ? data.byId[e.a] || null : null, end: e.b ? data.byId[e.b] || null : null };
+  }
+  function joinsOf(f) {
+    if (f.conn) return f.conn.links.map(([fid, end]) => ({ f: data.byId[fid], end: end === 'a' ? 'start' : end === 'b' ? 'end' : end })).filter(x => x.f);
+    return ((data.connAt || {})[f.id] || []).filter(x => x.of).map(x => ({ f: data.byId[x.id], end: x.end })).filter(x => x.f);
+  }
+  // Where the plans draw a ditch: pieces [ch, offset, ch, offset]; none for one the plans do not have.
+  function geomOf(f) { return (data.geom || {})[f.id] || null; }
   // Where the schedule is switched on: every section.
   const T9_SCHEDULE_ON = ['KNDW', 'DWKZ', 'KZDR', 'DRMR', 'MRJB'];
   function hasT9Schedule(sub) { return !!(data.bySub[sub] || []).some(f => f.sched); }
@@ -1397,7 +1465,7 @@
   // Completion, not "part-built": structures that are a single place (culverts, descents, riprap) are
   // counted; ditches and drains that run along the line are measured by length. The two are never added.
   const isSpan = f => f.kind === 'linear' || f.kind === 'buried';
-  const TYPE_LABEL = { PC: 'Pipe culverts', BC: 'Box culverts', CC: 'Cattle crossings', T16: 'Underpass water passages', WD: 'Water descents', 'D-SD': 'Slope descents', BRG: 'Railway bridges', OP: 'Road overbridges' };
+  const TYPE_LABEL = { CB: 'Connection boxes', MH: 'Manholes', MHG: 'Grid-cover manholes', PO: 'Outlet pipes', PC: 'Pipe culverts', BC: 'Box culverts', CC: 'Cattle crossings', T16: 'Underpass water passages', WD: 'Water descents', 'D-SD': 'Slope descents', BRG: 'Railway bridges', OP: 'Road overbridges' };
   // The drainage type of a feature, as a tab: 'Type 9 shoulder ditch', 'Box culverts'.
   function typeOf(f) {
     const span = isSpan(f);
@@ -1561,7 +1629,7 @@
     fmtCh, fmtPlus, parseCh, fmtDate, fmtTime, monthsBetween, esc, DAYS, MONTHS,
     inspector, setInspector, addRecord, voidRecord, live, recordsFor, seenOf, ownSeen, openDefects,
     designChanges, statusOf, drafts, saveDraft, putPhoto, getPhoto, uid, loadLegacy, mirrorLegacy,
-    loadSections, sectionAt, loadT9Schedule, hasT9Schedule, rangeable, coverOf, addRange, rangeNote, parseRangeNote, stageNote, parseStageNote, noteMetres, parseExecutedNote, foreignStaged, extentNote, parseExtentNote, foreignExtent, adoptForeignExtent, applyExtents, extentOf, addExtent, extentEnds, addJoin, detectJoins, applyJoins, isSpan, typeOf, progressOf, typeProgress, T9_SCHEDULE_ON, refs, refsNear, refById, REF_KIND, areasAt, isArea, loadHeights, hasHeights, heightAt, T9_RULES, t9Rule, setT9Rule, t9Check,
+    loadSections, sectionAt, loadT9Schedule, hasT9Schedule, rangeable, coverOf, addRange, rangeNote, parseRangeNote, stageNote, parseStageNote, noteMetres, parseExecutedNote, foreignStaged, extentNote, parseExtentNote, foreignExtent, adoptForeignExtent, applyExtents, extentOf, addExtent, extentEnds, addJoin, detectJoins, applyJoins, isSpan, typeOf, progressOf, typeProgress, T9_SCHEDULE_ON, refs, refsNear, refById, REF_KIND, areasAt, isArea, loadConnectors, hasConnectors, endsOf, joinsOf, geomOf, laneOf, loadHeights, hasHeights, heightAt, T9_RULES, t9Rule, setT9Rule, t9Check,
     PRESETS, presetOf, applyBase, baseRecords, correctBase, addBase, deleteBase, verifyBase, unverifyBase, exportGeo, exportCorrections, importRecords,
     project, pointAt, laneOf, savePosition, lastPosition, csvCell,
     get records() { return records; }

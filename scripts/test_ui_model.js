@@ -541,5 +541,37 @@ section('Phase 5b: stations and yards, for reference like bridges', () => {
   ok(DI.refs().filter(r => r.kind === 'bridge').length === DI.refs().filter(r => r.kind === 'bridge' && !r.area).length, 'bridges are unchanged');
 });
 
+
+section('Phase 6: connectors from the drainage plans', () => {
+  const j = JSON.parse(require('fs').readFileSync(require('path').join(__dirname, '..', 'data/connectors.json'), 'utf8'));
+  const n0 = DI.data.features.length;
+  DI.loadConnectors(j);
+  const conn = DI.data.features.filter(f => f.conn);
+  ok(conn.length > 2000 && DI.data.features.length === n0 + conn.length, 'connection boxes, manholes and outlet pipes are features: ' + conn.length);
+  DI.loadConnectors(j);
+  ok(DI.data.features.filter(f => f.conn).length === conn.length, 'loading twice adds nothing more');
+  const cb = DI.data.features.filter(f => f.code === 'CB'), mh = DI.data.features.filter(f => f.code === 'MH');
+  ok(cb.length > 1500 && cb.every(f => DI.ladderKind(f.ladder) === 'insitu'), 'connection boxes are cast in situ: ' + cb.length);
+  const exits = mh.filter(f => f.conn.exit);
+  ok(exits.length > 10 && exits.length < 40 && exits.every(f => DI.ladderKind(f.ladder) === 'insitu') && mh.filter(f => !f.conn.exit).every(f => DI.ladderKind(f.ladder) === 'precast'), 'manholes are precast, except the one at each outlet: ' + exits.length + ' of ' + mh.length);
+  ok(conn.every(f => f.kind === 'point' && Math.abs(f.offset) < 400 && f.ch0 === f.ch1 && DI.LANES.concat(['cl']).includes(f.lane)), 'each sits at its true offset, in the lane that offset falls in');
+  // a ditch that runs from a dissipator into a connection box, and both ways round
+  const t = DI.data.bySub.KZDR.find(f => f.code === 'T12' && DI.endsOf(f).start && DI.endsOf(f).end);
+  const e = DI.endsOf(t);
+  ok(Math.abs(e.start.ch0 - t.ch0) < 16 && Math.abs(e.end.ch0 - t.ch1) < 16, 'a ditch names what each end runs into, near that end');
+  const back = DI.joinsOf(e.end);
+  ok(back.some(x => x.f === t && x.end === 'end'), 'and the connector names the ditch, at its end');
+  const ds = DI.data.features.find(f => /^D-/.test(f.code) && DI.joinsOf(f).length);
+  ok(ds && !ds.conn && DI.joinsOf(ds).every(x => DI.isSpan(x.f) || x.f.code === 'WD'), 'a dissipator of the plans is the app\'s own, with what runs into it');
+  ok(mh.filter(f => DI.joinsOf(f).some(x => x.end === 'on' && x.f.code === 'T6')).length > mh.length * 0.8, 'manholes sit on their Type 6 runs');
+  const tp = DI.typeProgress('DWKZ');
+  ok(tp.some(x => x.key === 'CB.pt' && x.label === 'Connection boxes' && x.p.pts.n > 400), 'Progress counts connection boxes as a type');
+  // a connector is built like anything else
+  const box = cb.find(f => f.sub === 'DWKZ');
+  DI.addRecord({ kind: 'stage', featureId: box.id, stage: box.ladder.length - 1 });
+  ok(DI.statusOf(box).bucket === 'done', 'a connection box takes a stage record');
+  ok(Object.keys(j.geom).length > 1000 && DI.geomOf(t) && DI.geomOf(t).every(p => p.length === 4), 'ditches have their plan geometry for the plan view');
+});
+
 console.log('\n' + (fail ? 'FAILED: ' : 'ALL PASSED: ') + pass + ' passed, ' + fail + ' failed');
 process.exit(fail ? 1 : 0);

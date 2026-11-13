@@ -95,7 +95,7 @@
       h += '<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:14px;font:500 24px/1.15 var(--f-mono)">' + DA.chHtml(f) + (DA.isSpan(f) ? ' <b class="len">' + DA.lenText(f) + '</b>' : '') + ' ' + DA.certChip(f) + ' <span style="font:500 18px/1 var(--f-sans);color:var(--ink-2)">' + (f.kind === 'cross' ? 'crosses under track' : '') + '</span></div>';
       h += DA.quietExtentsHtml(f);
       const where = f.kind === 'cross' ? L.short + ' · ' + f.sub + ' · ' + f.catLabel : DA.offText(f).replace('≈', '≈ ') + ' ' + (f.side === 'L' ? 'left' : f.side === 'R' ? 'right' : '') + ' of CL · ' + ({ toe: 'toe of slope', plat: 'platform edge', face: 'slope face', crest: 'crest', off: 'off alignment', cl: 'under the track' }[f.lane] || '');
-      h += '<div class="lbl-caps" style="margin-top:12px;color:var(--ink-3)">' + esc(where) + '</div>' + DA.baseStrip(f) + '</div>';
+      h += '<div class="lbl-caps" style="margin-top:12px;color:var(--ink-3)">' + esc(where) + '</div>' + DA.baseStrip(f) + DA.connHtml(f) + '</div>';
 
       // what is built
       h += '<div class="section-h"><span class="lbl-caps">What is built</span></div><div class="pad">';
@@ -1108,4 +1108,127 @@
   };
   A['ml-ground'] = (b, ov) => { S.map.ground = b.dataset.v; ov.refresh(); lastKey = ''; DA.render(); };
   A['ml-tog'] = (b, ov) => { S.map[b.dataset.v] = !S.map[b.dataset.v]; ov.refresh(); lastKey = ''; DA.render(); };
+
+  // ================================================================ PLAN VIEW
+  // The drainage to scale: chainage up the screen (as the strip, as you face), true offset across, from the
+  // drainage plans (DI.geomOf: each ditch's pieces end to end), the connectors at their offsets, stations,
+  // yards and bridges. Where the plans have no geometry for a ditch it is drawn at its lane, faint and marked ≈.
+  // For what the strip cannot show: drains that turn, run off at an angle, or lie far from the line.
+  function openPlan(line, c0, c1, title) {
+    const st = { k: 1 };
+    const ov = DA.openOverlay('', 'full', { key: 'plan' });
+    ov.plan = st;
+    const draw = () => {
+      const facing = S.pos.facing === 'decreasing' ? -1 : 1;
+      const feats = DI.featuresNear(line, c0 - 10, c1 + 10).filter(f => !f.absorbedInto && !f.deleted);
+      const refs = DI.refsNear(line, c0, c1);
+      // how far out to draw: what is here, at least 40 m each side
+      let maxOff = 40;
+      feats.forEach(f => {
+        const g = DI.geomOf(f);
+        if (g) g.forEach(([, o0, , o1]) => { maxOff = Math.max(maxOff, Math.abs(o0), Math.abs(o1)); });
+        else if (f.offset != null) maxOff = Math.max(maxOff, Math.abs(f.offset));
+      });
+      refs.filter(r => r.area).forEach(r => (r.outline || []).forEach(p => p.forEach(([c, o]) => { if (c >= c0 && c <= c1) maxOff = Math.max(maxOff, Math.abs(o)); })));
+      maxOff = Math.min(400, maxOff + 8);
+      const W0 = Math.max(320, Math.min(window.innerWidth || 390, 900));
+      const sc = (W0 - 24) / (2 * maxOff) * st.k;          // px per metre, the same both ways
+      const W = Math.max(W0, 2 * maxOff * sc + 24), top = 28, H = top + (c1 - c0) * sc + 28;
+      const cx = W / 2;
+      const X = off => cx - off * sc * facing;
+      const Y = ch => facing > 0 ? top + (c1 - ch) * sc : top + (ch - c0) * sc;
+      const ink = b => b === 'done' ? 'var(--ink)' : b === 'moving' || b === 'stalled' ? '#6F716A' : 'var(--ink)';
+      let g = '';
+      // chainage grid
+      const step = sc > 1.5 ? 50 : sc > 0.6 ? 100 : 250;
+      for (let c = Math.ceil(c0 / step) * step; c <= c1; c += step) {
+        g += '<line x1="0" x2="' + W + '" y1="' + Y(c) + '" y2="' + Y(c) + '" style="stroke:var(--rule);stroke-width:1"/>';
+        g += '<text x="4" y="' + (Y(c) - 3) + '" style="fill:var(--ink-3);font:600 11px var(--f-mono)">' + DI.fmtCh(c) + '</text>';
+      }
+      // stations, yards, bridges
+      refs.forEach(r => {
+        const a = Math.max(c0, r.ch0), b = Math.min(c1, r.ch1);
+        if (r.area) {
+          (r.outline || []).forEach(p => {
+            const pts = p.map(([c, o]) => X(o) + ',' + Y(c)).join(' ');
+            g += '<polygon points="' + pts + '" style="fill:' + (r.kind === 'yard' ? 'url(#pRefP)' : 'var(--ref-bg)') + ';stroke:var(--ref);stroke-width:1.5" data-act="plan-ref" data-id="' + DI.esc(r.id) + '"/>';
+          });
+          if (r.kind === 'station') [-4.5, 4.5].forEach(o => { g += '<line x1="' + X(o) + '" x2="' + X(o) + '" y1="' + Y(a) + '" y2="' + Y(b) + '" style="stroke:var(--ref);stroke-width:2" stroke-dasharray="10 5"/>'; });
+          g += '<text x="' + X(r.side === 'R' ? -maxOff + 10 : r.side === 'L' ? maxOff - 10 : 0) + '" y="' + (Math.min(Y(a), Y(b)) + 16) + '" text-anchor="middle" style="fill:var(--ref);font:700 12px var(--f-cond);letter-spacing:0.05em">' + DI.esc(r.name.toUpperCase()) + '</text>';
+        } else if (r.kind === 'bridge') {
+          g += '<rect x="' + X(facing > 0 ? 12 : -12) + '" y="' + Math.min(Y(a), Y(b)) + '" width="' + 24 * sc + '" height="' + Math.max(2, Math.abs(Y(b) - Y(a))) + '" style="fill:var(--ref-bg);stroke:var(--ref);stroke-width:2"/>';
+        } else {
+          const y = Y(r.ch != null ? r.ch : (r.ch0 + r.ch1) / 2);
+          g += '<line x1="0" x2="' + W + '" y1="' + y + '" y2="' + y + '" style="stroke:var(--ref);stroke-width:3;opacity:0.5"/><text x="' + (W - 4) + '" y="' + (y - 4) + '" text-anchor="end" style="fill:var(--ref);font:700 11px var(--f-cond)">' + DI.esc(r.name || r.short) + '</text>';
+        }
+      });
+      // the main line
+      g += '<line x1="' + cx + '" x2="' + cx + '" y1="' + top + '" y2="' + (H - 28) + '" style="stroke:var(--ink);stroke-width:2.5"/>';
+      // ditches: where the plans draw them
+      const pts = [];
+      feats.forEach(f => {
+        const sts = DI.statusOf(f);
+        if (DI.isSpan(f)) {
+          const geo = DI.geomOf(f);
+          const dash = f.kind === 'buried' ? ' stroke-dasharray="7 4"' : sts.bucket === 'none' ? ' stroke-dasharray="2 3"' : '';
+          const pieces = geo || [[Math.max(c0, f.ch0), f.offset || 0, Math.min(c1, f.ch1), f.offset || 0]];
+          pieces.forEach(([a, oa, b, ob]) => {
+            const line_ = 'x1="' + X(oa) + '" y1="' + Y(a) + '" x2="' + X(ob) + '" y2="' + Y(b) + '"';
+            g += '<g data-act="plan-rec" data-id="' + DI.esc(f.id) + '"><line ' + line_ + ' style="stroke:transparent;stroke-width:16"/>' +
+              '<line ' + line_ + ' style="stroke:' + ink(sts.bucket) + ';stroke-width:' + (geo ? 3 : 1.5) + (geo ? '' : ';opacity:0.45') + '"' + dash + '/></g>';
+          });
+          const [a, oa, b, ob] = pieces[0];
+          if (sc > 0.8) g += '<text x="' + (X((oa + ob) / 2) + 4) + '" y="' + (Y((a + b) / 2)) + '" style="fill:var(--ink-2);font:700 11px var(--f-cond)">' + DI.esc((geo ? '' : '≈') + f.code) + '</text>';
+        } else pts.push({ f, sts });
+      });
+      // structures and connectors on top
+      pts.forEach(({ f, sts }) => {
+        const x = X(f.offset || 0), y = Y(f.ch0);
+        const fill = sts.bucket === 'done' ? 'var(--ink)' : sts.bucket === 'none' ? 'var(--surface)' : '#9A9C94';
+        const stl = 'style="fill:' + fill + ';stroke:var(--ink);stroke-width:1.8"';
+        let m = '';
+        if (f.kind === 'cross') m = '<rect x="' + (cx - 20 * sc) + '" y="' + (y - 3) + '" width="' + 40 * sc + '" height="6" ' + stl + '/>';
+        else if (f.code === 'CB') m = '<rect x="' + (x - 4.5) + '" y="' + (y - 4.5) + '" width="9" height="9" ' + stl + '/>';
+        else if (f.code === 'MH' || f.code === 'MHG') m = '<circle cx="' + x + '" cy="' + y + '" r="5.5" ' + stl + '/>' + (f.code === 'MHG' ? '<path d="M' + (x - 4) + ' ' + y + ' H' + (x + 4) + ' M' + x + ' ' + (y - 4) + ' V' + (y + 4) + '" style="stroke:var(--ink);stroke-width:1.2"/>' : '');
+        else if (/^D-/.test(f.code || '') || f.code === 'PO') m = '<path d="M' + (x - 6) + ' ' + (y + 5) + ' L' + x + ' ' + (y - 6) + ' L' + (x + 6) + ' ' + (y + 5) + ' Z" ' + stl + '/>';
+        else if (f.kind === 'label') m = '<circle cx="' + x + '" cy="' + y + '" r="5" style="fill:none;stroke:var(--ink);stroke-width:1.5" stroke-dasharray="3 2"/>';
+        else m = '<path d="M' + x + ' ' + (y - 5) + ' L' + (x + 5) + ' ' + y + ' L' + x + ' ' + (y + 5) + ' L' + (x - 5) + ' ' + y + ' Z" ' + stl + '/>';
+        g += '<g data-act="plan-rec" data-id="' + DI.esc(f.id) + '"><circle cx="' + (f.kind === 'cross' ? cx : x) + '" cy="' + y + '" r="12" style="fill:transparent"/>' + m + '</g>';
+      });
+      // you
+      if (S.pos.line === line && S.pos.ch >= c0 && S.pos.ch <= c1) g += '<circle cx="' + X(S.pos.source === 'gps' ? S.pos.offset || 0 : 0) + '" cy="' + Y(S.pos.ch) + '" r="8" style="fill:var(--hivis);stroke:var(--ink);stroke-width:3"/>';
+      const svg = '<svg width="' + W + '" height="' + H + '" viewBox="0 0 ' + W + ' ' + H + '" style="display:block"><defs><pattern id="pRefP" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" style="fill:var(--ref-bg)"/><rect width="1.4" height="8" style="fill:var(--ref)"/></pattern></defs>' + g + '</svg>';
+      const nGeo = feats.filter(f => DI.isSpan(f) && DI.geomOf(f)).length, nSpan = feats.filter(f => DI.isSpan(f)).length;
+      let h = topbar('Plan · ' + title, { right: '<button class="ib" data-act="plan-zoom" data-d="-1" aria-label="Zoom out">−</button><button class="ib" data-act="plan-zoom" data-d="1" aria-label="Zoom in">+</button>' });
+      h += '<div class="plan-legend">To scale · ' + (facing > 0 ? '▲ up the line' : '▼ down the line') + ' · ' + DI.fmtCh(c0) + ' → ' + DI.fmtCh(c1) + ' · out to ' + Math.round(maxOff) + ' m each side<br>' +
+        '<span><i class="pl-sq"></i>Connection box</span><span><i class="pl-ci"></i>Manhole</span><span><i class="pl-tr"></i>Dissipator, outlet</span><span><i class="pl-ln"></i>Ditch, as drawn' + (nSpan > nGeo ? ' (≈ at its lane: ' + (nSpan - nGeo) + ')' : '') + '</span></div>';
+      h += '<div class="scroll plan-scroll">' + svg + '</div>';
+      ov.firstChild.innerHTML = h;
+    };
+    ov.refresh = draw;
+    draw();
+    // open where you are, if you are in it
+    const sc2 = ov.querySelector('.plan-scroll');
+    if (sc2 && S.pos.ch >= c0 && S.pos.ch <= c1) {
+      const frac = S.pos.facing === 'decreasing' ? (S.pos.ch - c0) / (c1 - c0) : (c1 - S.pos.ch) / (c1 - c0);
+      sc2.scrollTop = Math.max(0, frac * sc2.scrollHeight - sc2.clientHeight / 2);
+    }
+    return ov;
+  }
+  DA.openPlan = openPlan;
+  A['plan-zoom'] = (b, ov) => {
+    if (!ov || !ov.plan) return;
+    const scl = ov.querySelector('.plan-scroll'), mid = scl ? (scl.scrollTop + scl.clientHeight / 2) / scl.scrollHeight : 0.5;
+    ov.plan.k = Math.max(0.5, Math.min(16, ov.plan.k * (Number(b.dataset.d) > 0 ? 2 : 0.5)));
+    ov.refresh();
+    const s2 = ov.querySelector('.plan-scroll'); if (s2) { s2.scrollTop = mid * s2.scrollHeight - s2.clientHeight / 2; s2.scrollLeft = (s2.scrollWidth - s2.clientWidth) / 2; }
+  };
+  A['plan-rec'] = b => DA.openRecord(b.dataset.id);
+  A['plan-ref'] = b => DA.openRef(b.dataset.id);
+  // from a station or a yard, from a feature, or around where you are
+  A['plan-open'] = b => {
+    const a = Number(b.dataset.a), z = Number(b.dataset.b);
+    DA.closeAll();
+    openPlan(b.dataset.line || S.pos.line, a, z, b.dataset.title || '');
+  };
 })();

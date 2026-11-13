@@ -86,6 +86,14 @@ node scripts/dwg/bundle_structures.js       # data/dwg/stations.json -> window.K
 
 Each section's STATIONS_YARDS drawing (S02-S05; S01 has none) draws the stations and freight yards on the same layers: the name (STATION_NAME), the platforms (STATION_PLATAFORM_OUTLINE, ~350 m, 7-17 m off), the buildings' limits (STATION_LIMITS, S04 and S05), the loops and sidings (HORIZONTAL_GEOMETRY_STATION, SECONDARY-RAILWAYS, SIDING_TRACKS, or a -<NAME>-STATION layer), a yard's outline (FREIGHT_YARD_LIMITS) or, where it has none, its tracks (FREIGHT_YARD_LINES, INTEGRATED_M_CENTER_LINES...). LONG-TERM layers are left out. Everything is projected onto the main-line axes of `data/dwg/<SUB>_plan.json`, joined end to end so the 25 m between two sub-sections' axes is not clamped. A station spans its loops and sidings joined to its platforms. 12 stations, 4 freight yards and 2 maintenance centres (12 Nov 2026). Kunya has only its name drawn so far, and four stations are "(buildings and road accesses under development)": both are kept as the station's note. Kano station (T2019-0323-S00-DD-SYR-KANO-STATION) is drawn on the old line's DK chainage, 3-5 km off this alignment, and is left out.
 
+## Connectors and plan geometry
+
+```
+node scripts/dwg/build_connectors.js       # data/dwg/<SUB>_plan.json -> data/connectors.json
+```
+
+From the point blocks extract_plan.py already keeps (DRN_CONNECTION_BOX_1..6, MH, DRN_MANHOLE_GRID_COVER, DRN_PIPE, DRN_DISSIPATOR) and the ditches' two ends (x0y0, x1y1). A ditch end within 4 m of a block runs into it (6 m for a dissipator, whose insertion point is its centre); a descent whose top or foot is within 4 m of it does too. Each block then names the app's features: a ditch of that type and side with an end within 15 m, a water descent of that side, or for a manhole the Type 6 run it sits on. Each ditch end goes to its nearest block only. A dissipator of the plans is the app's nearest dissipator of that side within 25 m. Duplicate blocks at one point count once. It also writes each plan ditch's ends as chainage and true offset (projected on the plan's own axis), given to the app ditch of that type and side it overlaps most: the plan view draws them. 13 Nov 2026: 2,502 blocks, 2,311 new features, 986 ditch ends that run into one.
+
 ## Embankment height (Section 02 for now)
 
 ```
