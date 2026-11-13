@@ -172,8 +172,56 @@ const assert = (c, m) => { if (!c) { console.log('FAIL: ' + m); process.exitCode
   assert(part.m === 100 && part.bucket === 'moving', 'a typed range saves: ' + JSON.stringify(part));
   await t.evaluate(id => DA.openRecord(id), big.id); await t.waitForTimeout(300);
   assert(await t.evaluate(() => /100 of/.test(document.querySelector('.ov:last-child .rg-sum').textContent) && document.querySelectorAll('.ov:last-child .rgbar i').length === 1), 'the sheet shows 100 m done');
-  await t.tap('.ov:last-child [data-act=range-all]'); await t.waitForTimeout(400);
-  assert(await t.evaluate(id => DI.statusOf(DI.data.byId[id]).bucket === 'done', big.id), 'Whole stretch completed finishes it in one tap');
+  const bigLast = await t.evaluate(id => DI.data.byId[id].ladder.length - 1, big.id);
+  await t.tap('.ov:last-child [data-act=stage][data-stage="' + bigLast + '"]'); await t.waitForTimeout(400);
+  assert(await t.evaluate(id => DI.statusOf(DI.data.byId[id]).bucket === 'done', big.id), 'the whole stretch finished in one tap');
+  // any ditch: a part at a stage, picked on the sheet
+  const t12 = await t.evaluate(() => { const f = DI.data.bySub.DWKZ.find(x => x.code === 'T12' && x.ch1 - x.ch0 > 200 && !DI.coverOf(x)); return { id: f.id, a: Math.round(f.ch0) }; });
+  await t.evaluate(id => DA.openRecord(id), t12.id); await t.waitForTimeout(300);
+  await t.tap('.ov:last-child [data-act=range-stage][data-stage="3"]'); await t.waitForTimeout(300);
+  assert(await t.evaluate(() => /Save this part at Formwork/.test(document.querySelector('.ov:last-child [data-act=range-save]').textContent)), 'the stage picked for a part shows on the save button');
+  await t.fill('#rgFrom', await t.evaluate(v => DI.fmtCh(v), t12.a + 10)); await t.fill('#rgTo', await t.evaluate(v => DI.fmtCh(v), t12.a + 70));
+  await t.tap('.ov:last-child [data-act=range-save]'); await t.waitForTimeout(400);
+  const tw = await t.evaluate(id => { const c = DI.coverOf(DI.data.byId[id]); return { f: Math.round(c.mAt[3]), e: Math.round(c.mAt[1]), m: Math.round(c.m) }; }, t12.id);
+  assert(tw.f === 60 && tw.e === 60 && tw.m === 0, 'a T12 part saved at Formwork: ' + JSON.stringify(tw));
+  await t.evaluate(id => DA.openRecord(id), t12.id); await t.waitForTimeout(300);
+  assert(await t.evaluate(() => /Formwork\s*60 m/.test(document.querySelector('.ov:last-child .rg-stages').textContent.replace(/\s+/g, ' '))), 'the sheet lists the metres at each stage');
+  await t.evaluate(() => DA.closeAll());
+
+  // Phase 5b: stations and yards on the strip, like bridges
+  await t.goto(BASE + '?sim=KZDR:83500:4:3'); await t.waitForTimeout(2500);
+  assert(await t.evaluate(() => /KAZAURE/.test(document.querySelector('.pos-line').textContent) && !/KANO-MARADI/.test(document.querySelector('.pos-line').textContent)), 'the header says you are in Kazaure station, in place of the line');
+  const stHit = await t.evaluate(() => { const h = DA.strip.hits.find(x => x.ref && x.f.kind === 'station'); const r = document.querySelector('#stripHost').getBoundingClientRect(); return h && { x: r.left + (h.x0 + h.x1) / 2, y: r.top + Math.max(10, Math.min(r.height - 10, (h.y0 + h.y1) / 2)), id: h.f.id }; });
+  assert(stHit, 'the station is drawn on the strip');
+  await t.evaluate(id => DA.openRef(id), stHit.id); await t.waitForTimeout(300);
+  const stSheet = await t.evaluate(() => document.querySelector('.ov:last-child').textContent);
+  assert(/Kazaure Station/.test(stSheet) && /Platforms/.test(stSheet) && /STATIONS_YARDS/.test(stSheet), 'its sheet gives the extent, the platforms and the drawing');
+  await t.evaluate(() => DA.closeAll());
+  // Phase 6 and 7: connectors on the record sheet, and the plan view from the station's sheet
+  await t.waitForFunction(() => DI.hasConnectors(), null, { timeout: 15000 });
+  const tc = await t.evaluate(() => DI.data.bySub.KZDR.find(f => f.code === 'T12' && DI.endsOf(f).start && DI.endsOf(f).end).id);
+  await t.evaluate(id => DA.openRecord(id), tc); await t.waitForTimeout(300);
+  assert(await t.evaluate(() => /Starts at/i.test(document.querySelector('.ov:last-child .conn').textContent) && document.querySelectorAll('.ov:last-child .conn [data-act=record]').length === 2), 'the record sheet says what each end runs into');
+  await t.tap('.ov:last-child .conn [data-act=record]'); await t.waitForTimeout(300);
+  assert(await t.evaluate(() => /End of|Start of|Joins/.test(document.querySelector('.ov:last-child .conn').textContent)), 'a tap opens the connector, which names the ditch');
+  await t.evaluate(() => DA.closeAll());
+  await t.evaluate(id => DA.openRef(id), stHit.id); await t.waitForTimeout(300);
+  await t.tap('.ov:last-child [data-act=plan-open]'); await t.waitForTimeout(600);
+  const plan = await t.evaluate(() => { const o = document.querySelector('.ov:last-child'); return { svg: !!o.querySelector('.plan-scroll svg'), n: o.querySelectorAll('[data-act=plan-rec]').length, mh: [...o.querySelectorAll('[data-act=plan-rec]')].map(g => g.dataset.id).find(id => DI.data.byId[id] && DI.data.byId[id].code === 'MH') }; });
+  assert(plan.svg && plan.n > 20 && plan.mh, 'the plan view draws the station\'s drainage and its manholes: ' + plan.n);
+  await t.evaluate(id => document.querySelector('.ov:last-child [data-act=plan-rec][data-id="' + id + '"]').dispatchEvent(new MouseEvent('click', { bubbles: true })), plan.mh); await t.waitForTimeout(300);
+  assert(await t.evaluate(id => document.querySelector('.ov:last-child [data-act=stage]') && document.querySelector('.ov:last-child [data-act=stage]').dataset.id === id, plan.mh), 'a tap on a manhole in the plan opens its record sheet');
+  await t.evaluate(() => DA.closeAll());
+  // Phases 8 and 9: a road crossing's sheet gathers its drainage and opens it in plan
+  await t.waitForFunction(() => DI.hasNetworks(), null, { timeout: 20000 });
+  const xr = await t.evaluate(() => DI.refs().find(r => r.kind === 'overpass' && DI.roadDrainage(r.id).length > 10).id);
+  await t.evaluate(id => DA.openRef(id), xr); await t.waitForTimeout(300);
+  assert(await t.evaluate(() => /Its road drainage/i.test(document.querySelector('.ov:last-child').textContent) && document.querySelectorAll('.ov:last-child .frow[data-act=record]').length > 5), 'a road crossing\'s sheet lists its drains');
+  await t.tap('.ov:last-child [data-act=plan-open]'); await t.waitForTimeout(600);
+  assert(await t.evaluate(() => [...document.querySelectorAll('.ov:last-child [data-act=plan-rec]')].some(g => DI.data.byId[g.dataset.id] && DI.data.byId[g.dataset.id].road)), 'and its plan draws them');
+  assert(await t.evaluate(() => !DA.lineFeatures().some(f => f.road)), 'road drainage stays off the strip');
+  await t.evaluate(() => DA.closeAll());
+  await t.goto(BASE + '?sim=DWKZ:25500:-4:3'); await t.waitForTimeout(2500);
 
   // Phase 3: Built to a different length (as-built extent editing, quiet design vs built display, strip rendering, undo)
   const spanFeat = await t.evaluate(() => {

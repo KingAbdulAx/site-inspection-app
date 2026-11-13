@@ -18,7 +18,10 @@
     divert: '<path d="M2 5 L7 15 H15 L20 5"/><path d="M15 9 L23 2 M18 2 H23 V7"/>',
     collector: '<path d="M3 2.5 H23"/><circle cx="13" cy="10.5" r="5.5" stroke-dasharray="2.6 2.2"/>',
     dissip: '<rect x="3" y="6" width="8" height="7"/><path d="M11 9.5 H14 M23 3 L14 9.5 L23 16"/>',
-    cascade: '<path d="M5 2 V6 H11 V11 H17 V16"/>'
+    cascade: '<path d="M5 2 V6 H11 V11 H17 V16"/>',
+    cbox: '<rect x="7" y="3" width="12" height="12"/><path d="M2 9 H7 M19 9 H24"/>',
+    mh: '<circle cx="13" cy="9" r="6.5"/><circle cx="13" cy="9" r="2.5"/>',
+    outlet: '<path d="M3 6 H15 M3 12 H15 M15 4 V14 M18 9 H24 M21 6 L24 9 L21 12"/>'
   };
   function typeIcon(key, cls) { return S('0 0 26 18', TYPE[key] || TYPE.trap, cls || 'ticon'); }
 

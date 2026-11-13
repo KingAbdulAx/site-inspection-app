@@ -54,6 +54,7 @@
       '<pattern id="pHatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" style="fill:var(--surface)"/><rect width="2.2" height="6" style="fill:var(--ink)"/></pattern>' +
       '<pattern id="pNone" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width="1.6" height="9" style="fill:#9A9C94"/></pattern>' +
       '<pattern id="pNoData" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="2" height="6" style="fill:#BDBFB7"/></pattern>' +
+      '<pattern id="pRef" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" style="fill:var(--ref-bg)"/><rect width="1.6" height="8" style="fill:var(--ref)"/></pattern>' +
       '<pattern id="pHazard" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" style="fill:var(--hivis)"/><rect width="5" height="10" fill="#121311"/></pattern>' +
       '</defs>';
   }
@@ -245,6 +246,49 @@
         if (r.ch1 < lo || r.ch0 > hi) return;
         const ya = Y(r.ch0), yb = Y(r.ch1);
         let y0 = Math.min(ya, yb), y1 = Math.max(ya, yb);
+        if (r.area) {
+          // A station: its loops as two rails beside the centreline over its track area, its platforms in
+          // the platform lane, its buildings out in the off lane. A yard: a hatched block on its side.
+          const sides = sd => sd === 'both' ? ['L', 'R'] : sd === 'L' || sd === 'R' ? [sd] : [];
+          const col = (sd, lane) => g.cols.find(c => c.side === sd && c.lane === lane);
+          const span = (a, b) => [Math.max(-6, Math.min(Y(a), Y(b))), Math.min(H + 6, Math.max(Y(a), Y(b)))];
+          y0 = Math.max(-6, y0); y1 = Math.min(H + 6, y1);
+          let lx = g.cx;
+          if (r.kind === 'station') {
+            const sp = g.cols.find(c => c.lane === 'cl');
+            [sp.x0 + 3, sp.x1 - 3].forEach(x => { s += '<line x1="' + x + '" y1="' + y0 + '" x2="' + x + '" y2="' + y1 + '" style="stroke:var(--ref);stroke-width:2" stroke-dasharray="12 5"/>'; });
+            hits.push({ f: r, x0: sp.x0, x1: sp.x1, y0, y1, ref: true });
+            if (r.platform) sides(r.platform_side).forEach(sd => {
+              const c = col(sd, 'plat'), [a, b] = span(r.platform[0], r.platform[1]);
+              if (b > a) { s += '<rect x="' + (c.x0 + 2) + '" y="' + a + '" width="' + (c.x1 - c.x0 - 4) + '" height="' + (b - a) + '" style="fill:var(--ref-bg);stroke:var(--ref);stroke-width:2"/>'; hits.push({ f: r, x0: c.x0, x1: c.x1, y0: a, y1: b, ref: true }); }
+            });
+            if (r.limits) sides(r.side).forEach(sd => {
+              const c = col(sd, 'off'), [a, b] = span(r.limits[0], r.limits[1]);
+              if (b > a) { s += '<rect x="' + (c.x0 + 2) + '" y="' + a + '" width="' + (c.x1 - c.x0 - 4) + '" height="' + (b - a) + '" style="fill:var(--ref-bg);stroke:var(--ref);stroke-width:1.5" stroke-dasharray="5 3"/>'; hits.push({ f: r, x0: c.x0, x1: c.x1, y0: a, y1: b, ref: true }); }
+            });
+          } else {
+            sides(r.side).forEach(sd => {
+              const c0 = col(sd, 'off'), c1 = col(sd, 'crest');
+              const x0 = Math.min(c0.x0, c1.x0) + 2, x1 = Math.max(c0.x1, c1.x1) - 2;
+              s += '<rect x="' + x0 + '" y="' + y0 + '" width="' + (x1 - x0) + '" height="' + (y1 - y0) + '" style="fill:url(#pRef);stroke:var(--ref);stroke-width:2"/>';
+              hits.push({ f: r, x0, x1, y0, y1, ref: true });
+              lx = (x0 + x1) / 2;
+            });
+            // the name runs up inside the block, clear of the drains and the chainage tags
+            const txt = r.name.toUpperCase();
+            const tl = txt.length * 7.2 + 12;
+            if (y1 - y0 > tl) {
+              const my = Math.max(y0 + tl / 2, Math.min(y1 - tl / 2, H * 0.35));
+              late.push('<g transform="translate(' + lx + ',' + my + ') rotate(-90)"><rect x="' + (-tl / 2) + '" y="-9" width="' + tl + '" height="18" style="fill:var(--ref)"/><text x="0" y="4.5" text-anchor="middle" style="fill:var(--on-ink);font:700 12px var(--f-cond);letter-spacing:0.04em">' + DI.esc(txt) + '</text></g>');
+            } else late.push(chip(lx, y0 - 10, txt, { fs: 11, bg: 'var(--ref)', fg: 'var(--on-ink)', stroke: false, clampW: W }));
+            return;
+          }
+          const txt = r.name.toUpperCase();
+          const my = Math.max(y0 + 16, Math.min(y1 - 16, H * 0.28));
+          if (y1 - y0 > 26) late.push(chip(lx, my, close ? txt + ' ' + DI.fmtCh(r.ch0) + '–' + DI.fmtCh(r.ch1) : txt, { fs: close ? 12 : 11, bg: 'var(--ref)', fg: 'var(--on-ink)', stroke: false, clampW: W }));
+          else late.push(chip(lx, y0 - 10, txt, { fs: 11, bg: 'var(--ref)', fg: 'var(--on-ink)', stroke: false, clampW: W }));
+          return;
+        }
         if (r.kind === 'bridge') {
           const xa = g.laneX('L', 'face'), xb = g.laneX('R', 'face');
           const x0 = Math.min(xa, xb), x1 = Math.max(xa, xb);
@@ -357,6 +401,12 @@
           const x = g.cx + (f.side === 'R' ? 1 : -1) * (g.flip ? -1 : 1) * 17;
           const y0 = Math.max(-5, Math.min(Y(f.ch0), Y(f.ch1))), y1 = Math.min(H + 5, Math.max(Y(f.ch0), Y(f.ch1)));
           s += '<line x1="' + x + '" y1="' + y0 + '" x2="' + x + '" y2="' + y1 + '" style="stroke:var(--ink);stroke-width:3' + faded + '" stroke-dasharray="5 4"/>';
+          // built lengths: a solid line over the dashes, darker the further on
+          if (st.cover) st.cover.segs.forEach(sg => {
+            const ys0 = Math.max(-5, Math.min(Y(sg.a), Y(sg.b))), ys1 = Math.min(H + 5, Math.max(Y(sg.a), Y(sg.b)));
+            const op = sg.s >= st.cover.max ? 1 : 0.25 + 0.5 * (sg.s - 1) / Math.max(1, st.cover.max - 2);
+            if (ys1 > ys0) s += '<line x1="' + x + '" y1="' + ys0 + '" x2="' + x + '" y2="' + ys1 + '" style="stroke:var(--ink);stroke-width:6;stroke-opacity:' + op.toFixed(2) + faded + '"/>';
+          });
           hits.push({ f, x0: x - 6, x1: x + 6, y0, y1 });
           tags.push({ x, yTop: Math.min(Y(f.ch0), Y(f.ch1)), code: f.code, dashed: true });
           return;
@@ -395,10 +445,11 @@
             if (ysb1 > ysb0) s += '<rect x="' + (x - bw / 2) + '" y="' + ysb0 + '" width="' + bw + '" height="' + (ysb1 - ysb0) + '" style="fill:var(--ink);stroke:var(--ink);stroke-width:2' + faded + '"/>';
           }
 
-          // Completed ranges (Type 9): solid inside outline and any added extent
-          if (st.cover && !st.cover.full) st.cover.ranges.forEach(([ra, rb]) => {
-            const yr0 = Math.max(-6, Math.min(Y(ra), Y(rb))), yr1 = Math.min(H + 6, Math.max(Y(ra), Y(rb)));
-            if (yr1 > yr0) s += '<rect x="' + (x - bw / 2) + '" y="' + yr0 + '" width="' + bw + '" height="' + (yr1 - yr0) + '" style="fill:var(--ink);stroke:var(--ink);stroke-width:2' + faded + '"/>';
+          // Part built: each length shaded by the stage it has reached, ink where finished
+          if (st.cover && !st.cover.full) st.cover.segs.forEach(g => {
+            const yr0 = Math.max(-6, Math.min(Y(g.a), Y(g.b))), yr1 = Math.min(H + 6, Math.max(Y(g.a), Y(g.b)));
+            const op = g.s >= st.cover.max ? 1 : 0.18 + 0.5 * (g.s - 1) / Math.max(1, st.cover.max - 2);
+            if (yr1 > yr0) s += '<rect x="' + (x - bw / 2) + '" y="' + yr0 + '" width="' + bw + '" height="' + (yr1 - yr0) + '" style="fill:var(--ink);fill-opacity:' + op.toFixed(2) + ';stroke:var(--ink);stroke-width:2' + faded + '"/>';
           });
         }
 

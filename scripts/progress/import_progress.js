@@ -21,10 +21,12 @@
  * once its joints are done; backfill is not a stage.
  *
  * Ditches: executed runs (Type 1, Type 9) are laid over the app's ditches of
- * the same type and side. Type 1: 90% covered, or no more than 15 m left, is Completed; less is
- * Concreted, with the executed metres in the note. Type 9 is precast and tracked by length: the
- * executed ranges go into the row's notes as '[T9 done 20900 to 21000; ...]' (what the app reads as
- * completed metres), Completed when no more than 5 m is left, otherwise Concreted. The Type 9 pieces
+ * the same type and side. Every ditch is tracked by length and stage in the app, so the executed ranges
+ * go into the row's notes. Type 1 is cast in situ and the sheet's executed metres are cast: 90% covered,
+ * or no more than 15 m left, is Completed; less is Concreted, with '[stages Cast: 20900 to 21000, ...]'
+ * in the note. Type 9 is precast and reported only when a stretch is done: the executed ranges go in as
+ * '[T9 done 20900 to 21000; ...]' (finished metres), Completed when no more than 5 m is left, otherwise
+ * Concreted. The Type 9 pieces
  * from the contractor's schedule (data/t9_schedule.json) are laid over too. --out DIR sends the
  * outputs elsewhere (default data/progress).
  */
@@ -67,7 +69,9 @@ const COL_WORD = { excavation: 'excavation', bedding: 'bedding', installed: 'ins
 const statusName = (ladder, i) => (i === ladder.length - 1 ? 'Completed & Approved' : ladder[i]);
 const LEGACY = { 'Not Started': 0, 'Excavation': 1, 'Blinding': 2, 'Rebar / Shuttering': 3, 'Concreted': 5 };
 // Where a database status sits on a ladder (the app's own reading of it, simplified).
-function dbStage(ladder, status) {
+// A feature of the app's: its own reading, on the ladder of its construction method.
+function dbStage(ladder, status, f) {
+  if (f && f.ladder === ladder) return DI.legacyStage(f, status);
   if (status === 'Completed & Approved') return ladder.length - 1;
   if (ladder.indexOf(status) >= 0) return ladder.indexOf(status);
   if (LEGACY[status] == null) return null;
@@ -184,12 +188,12 @@ if (ditchFile) {
     const merged = [];
     iv.forEach(([a, b]) => { const l = merged[merged.length - 1]; if (l && a <= l[1] + 0.5) l[1] = Math.max(l[1], b); else merged.push([a, b]); });
     const status = complete ? f.ladder[f.ladder.length - 1] : 'Concreted';
-    const stageOf = complete ? f.ladder.length - 1 : f.ladder.indexOf('Concreted') >= 0 ? f.ladder.indexOf('Concreted') : Math.max(0, f.ladder.length - 2);
+    const stageOf = complete ? f.ladder.length - 1 : DI.legacyStage(f, 'Concreted');
     const irs = Array.from(new Set(over.map(r => [r.ir1, r.ir2].filter(Boolean).join(' / ')).filter(Boolean)));
     const date = over.map(r => r.date).filter(Boolean).sort().pop() || ditchDate;
     if (complete) st.completed++; else st.partial.push(f.code + ' ' + f.side + ' ' + DI.fmtCh(f.ch0) + '–' + DI.fmtCh(f.ch1) + ': ' + Math.round(cov) + ' of ' + Math.round(L) + ' m');
     rows.push({ asset_id: f.id, sub: f.sub, stage: stageOf, ladder: f.ladder, status: complete ? 'Completed & Approved' : 'Concreted', has_defect: false, inspection_date: date, inspected_by: 'Ditch progress ' + fam(f) + ' ' + dmy(ditchDate),
-      notes: 'Ditch progress ' + fam(f) + ' ' + dmy(ditchDate) + ' · ' + Math.round(cov) + ' of ' + Math.round(L) + ' m executed' + (complete ? '' : ' (' + iv.map(([a, b]) => DI.fmtCh(a) + '–' + DI.fmtCh(b)).join(', ') + ')') + (irs.length ? ' · ' + irs.join('; ') : '') + (t9 ? ' · ' + DI.rangeNote(merged) : '') });
+      notes: 'Ditch progress ' + fam(f) + ' ' + dmy(ditchDate) + ' · ' + Math.round(cov) + ' of ' + Math.round(L) + ' m executed' + (complete ? '' : ' (' + iv.map(([a, b]) => DI.fmtCh(a) + '–' + DI.fmtCh(b)).join(', ') + ')') + (irs.length ? ' · ' + irs.join('; ') : '') + (t9 ? ' · ' + DI.rangeNote(merged) : complete ? '' : ' · ' + DI.stageNote(f, merged.map(([a, b]) => ({ a, b, s: DI.stageByName(f, 'Cast') })))) });
   });
   st.lost = done.filter(r => !feats.some(f => fam(f) === r.code && f.side === r.sd && f.ch1 > r.ch0 && f.ch0 < r.ch1)).map(r => r.code + ' ' + r.side + ' ' + r.a + '–' + r.b + ' (' + r.executed + ' m, ' + (r.ir1 || 'no IR') + ')');
 }
@@ -201,10 +205,11 @@ const kept = [], out = [];
 rows.forEach(r => {
   const e = have.get(r.asset_id);
   if (!e) { out.push(r); return; }
-  const was = dbStage(r.ladder, e.status);
-  // A Type 9 row the office wrote earlier is replaced when more of it is done now
-  const rangeLen = n => DI.parseRangeNote(n).reduce((m, [a, b]) => m + b - a, 0);
-  const grew = DI.parseRangeNote(r.notes).length > 0 && /^Ditch progress/.test(e.inspected_by || '') && rangeLen(r.notes) > rangeLen(e.notes) + 0.5 && String(e.updated_at).slice(0, 10) <= r.inspection_date;
+  const was = dbStage(r.ladder, e.status, DI.data.byId[r.asset_id]);
+  // A ditch row the office wrote earlier is replaced when more of it is done now
+  // (any ditch: ranges at any stage, or an older row's 'm executed (…)')
+  const rangeLen = n => DI.noteMetres(n) || DI.parseExecutedNote(n).reduce((m, [a, b]) => m + b - a, 0);
+  const grew = DI.noteMetres(r.notes) > 0 && /^Ditch progress/.test(e.inspected_by || '') && rangeLen(r.notes) > rangeLen(e.notes) + 0.5 && String(e.updated_at).slice(0, 10) <= r.inspection_date;
   if (grew || (was != null && r.stage > was && String(e.updated_at).slice(0, 10) < r.inspection_date)) {
     r.notes += ' · was ' + e.status + ' (' + String(e.updated_at).slice(0, 10) + ')';
     r.replaces = { status: e.status, by: e.inspected_by, at: e.updated_at };

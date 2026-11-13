@@ -72,6 +72,40 @@ The track plans draw them on the same layers:
 
 The 3x3 m underpasses are the cattle crossings already in the data, so they are left out. In all: S01 17, S02 24, S03 11, S04 17, S05 26.
 
+## Stations and yards (for reference)
+
+```
+dwg2dxf -y -o S02-SY-raw.dxf T2019-0323-S02-DD-STATIONS_YARDS_DAWANAU-KAZAURE.dwg      # and S03, S04, S05
+python3 scripts/dwg/fix_dxf.py S02-SY-raw.dxf S02-SY.dxf
+python3 scripts/dwg/extract_stations.py \
+    S02-SY.dxf=T2019-0323-S02-DD-STATIONS_YARDS_DAWANAU-KAZAURE S03-SY.dxf=T2019-0323-S03-DD-STATIONS_YARDS_KAZAURE-DAURA \
+    S04-SY.dxf=T2019-0323-S04-DD-STATIONS_YARDS_DAURA-MUDURU S05-SY.dxf=T2019-0323-S05-DD-STATIONS_YARDS_MUDURU-JIBIYA \
+    --yards S02-STI.dxf=T2019-0323-S02-DD-STI-DAWANAU-KAZAURE_INFRASTR        # Dawanau yard: not in the S02 STATIONS_YARDS sheet
+node scripts/dwg/bundle_structures.js       # data/dwg/stations.json -> window.KMD_STATIONS in data/structures.js
+```
+
+Each section's STATIONS_YARDS drawing (S02-S05; S01 has none) draws the stations and freight yards on the same layers: the name (STATION_NAME), the platforms (STATION_PLATAFORM_OUTLINE, ~350 m, 7-17 m off), the buildings' limits (STATION_LIMITS, S04 and S05), the loops and sidings (HORIZONTAL_GEOMETRY_STATION, SECONDARY-RAILWAYS, SIDING_TRACKS, or a -<NAME>-STATION layer), a yard's outline (FREIGHT_YARD_LIMITS) or, where it has none, its tracks (FREIGHT_YARD_LINES, INTEGRATED_M_CENTER_LINES...). LONG-TERM layers are left out. Everything is projected onto the main-line axes of `data/dwg/<SUB>_plan.json`, joined end to end so the 25 m between two sub-sections' axes is not clamped. A station spans its loops and sidings joined to its platforms. 12 stations, 4 freight yards and 2 maintenance centres (12 Nov 2026). Kunya has only its name drawn so far, and four stations are "(buildings and road accesses under development)": both are kept as the station's note. Kano station (T2019-0323-S00-DD-SYR-KANO-STATION) is drawn on the old line's DK chainage, 3-5 km off this alignment, and is left out.
+
+## Connectors and plan geometry
+
+```
+node scripts/dwg/build_connectors.js       # data/dwg/<SUB>_plan.json -> data/connectors.json
+```
+
+From the point blocks extract_plan.py already keeps (DRN_CONNECTION_BOX_1..6, MH, DRN_MANHOLE_GRID_COVER, DRN_PIPE, DRN_DISSIPATOR) and the ditches' two ends (x0y0, x1y1). A ditch end within 4 m of a block runs into it (6 m for a dissipator, whose insertion point is its centre); a descent whose top or foot is within 4 m of it does too. Each block then names the app's features: a ditch of that type and side with an end within 15 m, a water descent of that side, or for a manhole the Type 6 run it sits on. Each ditch end goes to its nearest block only. A dissipator of the plans is the app's nearest dissipator of that side within 25 m. Duplicate blocks at one point count once. It also writes each plan ditch's ends as chainage and true offset (projected on the plan's own axis), given to the app ditch of that type and side it overlaps most: the plan view draws them. 13 Nov 2026: 2,502 blocks, 2,311 new features, 986 ditch ends that run into one.
+
+## Type 6 networks and road drainage
+
+```
+# DRN-LONG (S01-S05), the yards' STI-DWYD_DRN_LONG and STI-KZYD_DRN_LONG, ROD-DRAINAGE (S01-S05; S04 REV03), each dwg2dxf + fix_dxf.py
+python3 scripts/dwg/extract_networks.py --out data/networks.json \
+    --t6 S02-DRN-LONG.dxf=T2019-0323-S02-DD-DRN-LONG ... S02-DWYD.dxf=T2019-0323-S02-DD-STI-DWYD_DRN_LONG S02-KZYD.dxf=... \
+    --rail S01-DRN-LONG.dxf S02-DRN-LONG.dxf S03-DRN-LONG.dxf S04-DRN-LONG.dxf S05-DRN-LONG.dxf \
+    --roads S01-ROD.dxf=T2019-0323-S01-DD-ROD-DRAINAGE ... S04-ROD.dxf=T2019-0323-S04-DD-ROD-DRAINAGE_REV03 ...
+```
+
+The layers and rules are in the script's header. S01's DRN-LONG and the S01 and S02 ROD-DRAINAGE were purged in AutoCAD (regapps, unused blocks) to bring them under the Drive connector's 10 MB; S01 DRN-LONG then gave the same ditches, descents and blocks as before. 13 Nov 2026: 271 Type 6 legs and 16 collector pipes (12.6 km), 315 manholes (26 new, in the yards; 263 named: the MH blocks' MANHOLE-NAME, 'MH3.3-YDKZ', and the Kazaure yard's 'M 1.0' labels); 1,538 road drains (118 km), 537 riprap dissipators, 96 road culverts, 98 road-drain ends on 72 railway ditches. Takes about 4 minutes.
+
 ## Embankment height (Section 02 for now)
 
 ```

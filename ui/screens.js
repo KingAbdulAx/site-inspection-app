@@ -95,7 +95,7 @@
       h += '<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:14px;font:500 24px/1.15 var(--f-mono)">' + DA.chHtml(f) + (DA.isSpan(f) ? ' <b class="len">' + DA.lenText(f) + '</b>' : '') + ' ' + DA.certChip(f) + ' <span style="font:500 18px/1 var(--f-sans);color:var(--ink-2)">' + (f.kind === 'cross' ? 'crosses under track' : '') + '</span></div>';
       h += DA.quietExtentsHtml(f);
       const where = f.kind === 'cross' ? L.short + ' · ' + f.sub + ' · ' + f.catLabel : DA.offText(f).replace('≈', '≈ ') + ' ' + (f.side === 'L' ? 'left' : f.side === 'R' ? 'right' : '') + ' of CL · ' + ({ toe: 'toe of slope', plat: 'platform edge', face: 'slope face', crest: 'crest', off: 'off alignment', cl: 'under the track' }[f.lane] || '');
-      h += '<div class="lbl-caps" style="margin-top:12px;color:var(--ink-3)">' + esc(where) + '</div>' + DA.baseStrip(f) + '</div>';
+      h += '<div class="lbl-caps" style="margin-top:12px;color:var(--ink-3)">' + esc(where) + '</div>' + DA.baseStrip(f) + DA.connHtml(f) + '</div>';
 
       // what is built
       h += '<div class="section-h"><span class="lbl-caps">What is built</span></div><div class="pad">';
@@ -340,20 +340,30 @@
     h += '<div class="legend"><div><i style="background:var(--surface)"></i><b>' + b.none + '</b>Not started</div><div><i style="background:var(--part)"></i><b>' + b.moving + '</b>Part-built, moving</div><div><i style="background:var(--hazard)"></i><b>' + b.stalled + '</b>Part-built, stalled &gt; 6 mo</div><div><i style="background:var(--ink)"></i><b>' + b.done + '</b>Completed</div></div>';
     // Bars by the structures' own stage names: a precast culvert's Bedding or Joints is not a
     // ditch's Blinding or Rebar. The in-between stages of every ladder here, in ladder order.
+    // Structures in one place are counted here; ditches are measured by stage below.
+    const ptList = list.filter(f => !DI.isSpan(f));
     const names = [];
-    [...new Set(list.map(f => f.ladder))].sort((a, b2) => list.filter(f => f.ladder === b2).length - list.filter(f => f.ladder === a).length).forEach(l => {
+    [...new Set(ptList.map(f => f.ladder))].sort((a, b2) => list.filter(f => f.ladder === b2).length - list.filter(f => f.ladder === a).length).forEach(l => {
       let at = -1;
       l.slice(1, -1).forEach(n => { const k = names.indexOf(n); if (k >= 0) at = k; else names.splice(++at, 0, n); });
     });
     const hist = names.map(() => 0);
-    stats.forEach(x => { if (x.st.partBuilt) { const k = names.indexOf(x.f.ladder[x.st.best]); if (k >= 0) hist[k]++; } });
+    stats.forEach(x => { if (x.st.partBuilt && !DI.isSpan(x.f)) { const k = names.indexOf(x.f.ladder[x.st.best]); if (k >= 0) hist[k]++; } });
     // Mixed ladders (All): only the stages something stands at, as rows, so the names stay readable.
     const bars = names.map((n, i) => ({ n, v: hist[i] })).filter(x => names.length <= 6 || x.v);
     const hm = Math.max(1, ...hist);
-    h += '<div class="lbl-caps mt24">Where the part-built ones stand</div>';
-    if (bars.length <= 6) h += '<div class="hist" style="grid-template-columns:repeat(' + Math.max(1, bars.length) + ',1fr)">' + bars.map(x => '<div>' + x.v + '<i style="height:' + Math.max(4, x.v / hm * 90) + 'px"></i><small>' + esc(x.n) + '</small></div>').join('') + '</div></div>';
+    if (ptList.length) h += '<div class="lbl-caps mt24">Where the part-built ' + (cp.lin.n ? 'structures' : 'ones') + ' stand</div>';
+    if (!ptList.length) h += '</div>';
+    else if (bars.length <= 6) h += '<div class="hist" style="grid-template-columns:repeat(' + Math.max(1, bars.length) + ',1fr)">' + bars.map(x => '<div>' + x.v + '<i style="height:' + Math.max(4, x.v / hm * 90) + 'px"></i><small>' + esc(x.n) + '</small></div>').join('') + '</div></div>';
     else h += '<div style="display:grid;grid-template-columns:auto 1fr auto;gap:6px 10px;align-items:center;margin-top:10px">' + bars.map(x => '<small style="font:600 14px/1.2 var(--f-sans);color:var(--ink-2)">' + esc(x.n) + '</small><i style="display:block;height:18px;width:' + Math.max(2, x.v / hm * 100) + '%;background:var(--part);border:2px solid var(--ink)"></i><b style="font:600 16px/1 var(--f-sans)">' + x.v + '</b>').join('') + '</div></div>';
 
+    // Ditches by stage: the length that has reached each stage, of the ditches that have that stage.
+    if (cp.lin.n && cp.lin.names.length) {
+      h += '<div class="pad"><div class="lbl-caps mt24">Ditch length at each stage</div><div class="sbars">' + cp.lin.names.map(n => {
+        const m = cp.lin.atLeast[n], of = cp.lin.ofLen[n], pc = pctOf(m, of);
+        return '<small>' + esc(n) + '</small><i><u style="width:' + pc + '%"></u></i><b>' + kmf(m) + ' km · ' + pc + '%</b>';
+      }).join('') + '</div><div class="note" style="margin-top:6px">A length counts at every stage it has passed. Each percentage is of the ditches that have that stage.</div></div>';
+    }
     h += t9Card(sub);
     h += '<div style="border-top:3px solid var(--ink);margin-top:20px;padding:16px 16px 8px;display:flex;justify-content:space-between;align-items:center"><span class="lbl-caps">Every structure, one mark · ▲ up the line</span>' +
       '<div class="segm" style="grid-template-columns:1fr 1fr;width:150px"><button data-act="sec-view" data-v="ribbon" class="' + (S.secView === 'ribbon' ? 'on' : '') + '" style="min-height:40px">Ribbon</button><button data-act="sec-view" data-v="map" class="' + (S.secView === 'map' ? 'on' : '') + '" style="min-height:40px">Map</button></div></div>';
@@ -989,7 +999,7 @@
   };
 
   // ================================================================ MAP
-  S.map = { ground: 'washed', corridor: true, chainage: true, drainage: true, claims: false, photos: false };
+  S.map = { ground: 'washed', corridor: true, chainage: true, drainage: true, stations: true, claims: false, photos: false };
   let map = null, layer = null, lastKey = '';
   function renderMap(host) {
     if (!window.L) {
@@ -1032,6 +1042,24 @@
       L.polyline([[q0.lat, q0.lon], [q1.lat, q1.lon]], { color: '#121311', weight: 2 }).addTo(layer);
       L.marker([q.lat, q.lon], { icon: L.divIcon({ className: '', html: '<span class="map-lbl">' + DI.fmtCh(c) + '</span>', iconAnchor: [0, 10] }) }).addTo(layer);
     }
+    // stations and yards: their outlines from the STATIONS_YARDS drawings, and a station's track area
+    if (S.map.stations !== false) DI.refsNear(p.line, a, b).filter(r => r.area).forEach(r => {
+      const at = (c, o) => DI.pointAt(r.sub, c, o);
+      const style = { color: '#4F6272', weight: 2, fillColor: '#4F6272', fillOpacity: 0.14 };
+      if (r.kind === 'station') {
+        const c0 = Math.max(a - 200, r.ch0), c1 = Math.min(b + 200, r.ch1), pl = [];
+        for (let c = c0; c <= c1; c += 20) { const q = at(c, 9); if (q) pl.push([q.lat, q.lon]); }
+        for (let c = c1; c >= c0; c -= 20) { const q = at(c, -9); if (q) pl.push([q.lat, q.lon]); }
+        if (pl.length > 2) L.polygon(pl, { color: '#4F6272', weight: 1.5, dashArray: '8 5', fill: false }).addTo(layer).on('click', () => DA.openRef(r.id));
+      }
+      (r.outline || []).forEach(poly => {
+        const ll = poly.map(([c, o]) => at(c, o)).filter(Boolean).map(q => [q.lat, q.lon]);
+        if (ll.length > 2) L.polygon(ll, style).addTo(layer).on('click', () => DA.openRef(r.id));
+      });
+      const off = r.side === 'R' ? -70 : r.side === 'L' ? 70 : r.kind === 'yard' && r.off ? (r.off[0] + r.off[1]) / 2 : 40;
+      const q = at(Math.max(a, Math.min(b, r.ch)), off);
+      if (q) L.marker([q.lat, q.lon], { icon: L.divIcon({ className: '', html: '<span class="map-lbl" style="background:#4F6272;color:#fff">' + DI.esc(r.name) + '</span>', iconAnchor: [0, 10] }) }).addTo(layer).on('click', () => DA.openRef(r.id));
+    });
     if (S.map.drainage) DI.featuresNear(p.line, a, b).forEach(f => {
       const st = DI.statusOf(f);
       const fill = st.fill === 'solid' ? '#121311' : st.fill === 'hatch' ? '#8C8E86' : '#fff';
@@ -1042,6 +1070,13 @@
         L.polyline([[q0.lat, q0.lon], [q1.lat, q1.lon]], { color: '#121311', weight: 7 }).addTo(layer).on('click', () => DA.openRecord(f.id));
         const ql = DI.pointAt(sub, f.ch0, -30);
         if (S.map.chainage) L.marker([ql.lat, ql.lon], { icon: L.divIcon({ className: '', html: '<span class="map-lbl exact">' + DI.fmtCh(f.ch0, f.cert === 'exact' ? 3 : 0) + '</span>', iconAnchor: [0, 10] }) }).addTo(layer);
+      } else if (DI.geomOf(f) || f.kind === 'net') {
+        // drawn where the plans have it: turns, and roads' drains running off across the land
+        const pl = (DI.geomOf(f) || []).reduce((acc, [c0, o0, c1, o1], i) => { if (!i) acc.push(DI.pointAt(sub, c0, o0)); acc.push(DI.pointAt(sub, c1, o1)); return acc; }, []).filter(Boolean).map(q => [q.lat, q.lon]);
+        if (pl.length > 1) {
+          L.polyline(pl, { color: '#fff', weight: 7 }).addTo(layer);
+          L.polyline(pl, { color: '#121311', weight: 3.5, dashArray: st.fill === 'never' || f.kind === 'buried' || /^RT6|^RTR/.test(f.code) ? '5 4' : st.fill === 'hatch' ? '2 3' : null }).addTo(layer).on('click', () => DA.openRecord(f.id));
+        }
       } else if (f.kind === 'linear' || f.kind === 'buried') {
         const pl = line(off, Math.max(a, f.ch0), Math.min(b, f.ch1), 5);
         if (pl.length > 1) {
@@ -1069,7 +1104,7 @@
         h += '<button class="setrow' + (S.map.ground === k ? ' sel' : '') + '" data-act="ml-ground" data-v="' + k + '"><span style="display:flex;gap:14px;align-items:center"><span class="radio' + (S.map.ground === k ? ' on' : '') + '"></span><span><b>' + n + '</b><small>' + s2 + '</small></span></span></button>';
       });
       h += '</div><div style="border:2.5px solid var(--ink);padding:14px;margin:14px 0"><b style="font:700 19px/1.2 var(--f-sans)">Imagery on this phone</b><div class="mono muted" style="font-size:14px;margin-top:6px">Tiles are kept after you have viewed them, so ground you have looked at with signal stays available offline.</div><div style="font:700 15px/1.3 var(--f-sans);margin-top:8px">Older than the works: for ground, never for progress.</div></div><div class="lbl-caps" style="margin:6px 0 8px">On the map</div><div style="margin:0 -16px">';
-      [['corridor', 'Corridor and earthworks line', ''], ['chainage', 'Chainage every 100 m', ''], ['drainage', 'Drainage, by stage', ''], ['photos', 'Where photos were taken', 'Raw GPS fix, not the snapped chainage']].forEach(([k, n, s2]) => {
+      [['corridor', 'Corridor and earthworks line', ''], ['chainage', 'Chainage every 100 m', ''], ['stations', 'Stations and yards', 'From the STATIONS_YARDS drawings'], ['drainage', 'Drainage, by stage', ''], ['photos', 'Where photos were taken', 'Raw GPS fix, not the snapped chainage']].forEach(([k, n, s2]) => {
         h += '<button class="setrow" data-act="ml-tog" data-v="' + k + '"><span><b>' + n + '</b>' + (s2 ? '<small>' + s2 + '</small>' : '') + '</span><span class="tog' + (S.map[k] ? ' on' : '') + '"></span></button>';
       });
       h += '</div><div class="lbl-caps" style="margin:16px 0 8px">Alignment source</div><div class="mono" style="font-size:14px;line-height:1.6">SECTION 02.kmz / SECTION 03.kmz · drawn centreline<br>Chainage measured along the line, checked against the station labels</div>';
@@ -1080,4 +1115,131 @@
   };
   A['ml-ground'] = (b, ov) => { S.map.ground = b.dataset.v; ov.refresh(); lastKey = ''; DA.render(); };
   A['ml-tog'] = (b, ov) => { S.map[b.dataset.v] = !S.map[b.dataset.v]; ov.refresh(); lastKey = ''; DA.render(); };
+
+  // ================================================================ PLAN VIEW
+  // The drainage to scale: chainage up the screen (as the strip, as you face), true offset across, from the
+  // drainage plans (DI.geomOf: each ditch's pieces end to end), the connectors at their offsets, stations,
+  // yards and bridges. Where the plans have no geometry for a ditch it is drawn at its lane, faint and marked ≈.
+  // For what the strip cannot show: drains that turn, run off at an angle, or lie far from the line.
+  function openPlan(line, c0, c1, title) {
+    const st = { k: 1 };
+    const ov = DA.openOverlay('', 'full', { key: 'plan' });
+    ov.plan = st;
+    const draw = () => {
+      const facing = S.pos.facing === 'decreasing' ? -1 : 1;
+      const feats = DI.featuresNear(line, c0 - 10, c1 + 10).filter(f => !f.absorbedInto && !f.deleted);
+      const refs = DI.refsNear(line, c0, c1);
+      // how far out to draw: what is here, at least 40 m each side
+      let maxOff = 40;
+      feats.forEach(f => {
+        const g = DI.geomOf(f);
+        if (g) g.forEach(([, o0, , o1]) => { maxOff = Math.max(maxOff, Math.abs(o0), Math.abs(o1)); });
+        else if (f.offset != null) maxOff = Math.max(maxOff, Math.abs(f.offset));
+      });
+      refs.filter(r => r.area).forEach(r => (r.outline || []).forEach(p => p.forEach(([c, o]) => { if (c >= c0 && c <= c1) maxOff = Math.max(maxOff, Math.abs(o)); })));
+      maxOff = Math.min(1500, maxOff + 8);
+      const W0 = Math.max(320, Math.min(window.innerWidth || 390, 900));
+      // px per metre, the same both ways: the width fits the screen, unless the stretch is short along the line
+      // (a road crossing), when its height fills the screen and it scrolls sideways
+      const fitW = (W0 - 24) / (2 * maxOff), fitH = Math.max(200, (window.innerHeight || 800) - 260) / Math.max(20, c1 - c0);
+      const sc = Math.min(Math.max(fitW, fitH), fitW * 6) * st.k;
+      const W = Math.max(W0, 2 * maxOff * sc + 24), top = 28, H = top + (c1 - c0) * sc + 28;
+      const cx = W / 2;
+      const X = off => cx - off * sc * facing;
+      const Y = ch => facing > 0 ? top + (c1 - ch) * sc : top + (ch - c0) * sc;
+      const ink = b => b === 'done' ? 'var(--ink)' : b === 'moving' || b === 'stalled' ? '#6F716A' : 'var(--ink)';
+      let g = '';
+      // chainage grid
+      const step = sc > 1.5 ? 50 : sc > 0.6 ? 100 : 250;
+      for (let c = Math.ceil(c0 / step) * step; c <= c1; c += step) {
+        g += '<line x1="0" x2="' + W + '" y1="' + Y(c) + '" y2="' + Y(c) + '" style="stroke:var(--rule);stroke-width:1"/>';
+        g += '<text x="4" y="' + (Y(c) - 3) + '" style="fill:var(--ink-3);font:600 11px var(--f-mono)">' + DI.fmtCh(c) + '</text>';
+      }
+      // stations, yards, bridges
+      refs.forEach(r => {
+        const a = Math.max(c0, r.ch0), b = Math.min(c1, r.ch1);
+        if (r.area) {
+          (r.outline || []).forEach(p => {
+            const pts = p.map(([c, o]) => X(o) + ',' + Y(c)).join(' ');
+            g += '<polygon points="' + pts + '" style="fill:' + (r.kind === 'yard' ? 'url(#pRefP)' : 'var(--ref-bg)') + ';stroke:var(--ref);stroke-width:1.5" data-act="plan-ref" data-id="' + DI.esc(r.id) + '"/>';
+          });
+          if (r.kind === 'station') [-4.5, 4.5].forEach(o => { g += '<line x1="' + X(o) + '" x2="' + X(o) + '" y1="' + Y(a) + '" y2="' + Y(b) + '" style="stroke:var(--ref);stroke-width:2" stroke-dasharray="10 5"/>'; });
+          g += '<text x="' + X(r.side === 'R' ? -maxOff + 10 : r.side === 'L' ? maxOff - 10 : 0) + '" y="' + (Math.min(Y(a), Y(b)) + 16) + '" text-anchor="middle" style="fill:var(--ref);font:700 12px var(--f-cond);letter-spacing:0.05em">' + DI.esc(r.name.toUpperCase()) + '</text>';
+        } else if (r.kind === 'bridge') {
+          g += '<rect x="' + X(facing > 0 ? 12 : -12) + '" y="' + Math.min(Y(a), Y(b)) + '" width="' + 24 * sc + '" height="' + Math.max(2, Math.abs(Y(b) - Y(a))) + '" style="fill:var(--ref-bg);stroke:var(--ref);stroke-width:2"/>';
+        } else {
+          const y = Y(r.ch != null ? r.ch : (r.ch0 + r.ch1) / 2);
+          g += '<line x1="0" x2="' + W + '" y1="' + y + '" y2="' + y + '" style="stroke:var(--ref);stroke-width:3;opacity:0.5"/><text x="' + (W - 4) + '" y="' + (y - 4) + '" text-anchor="end" style="fill:var(--ref);font:700 11px var(--f-cond)">' + DI.esc(r.name || r.short) + '</text>';
+        }
+      });
+      // the main line
+      g += '<line x1="' + cx + '" x2="' + cx + '" y1="' + top + '" y2="' + (H - 28) + '" style="stroke:var(--ink);stroke-width:2.5"/>';
+      // ditches: where the plans draw them
+      const pts = [];
+      feats.forEach(f => {
+        const sts = DI.statusOf(f);
+        if (DI.isSpan(f)) {
+          const geo = DI.geomOf(f);
+          const dash = f.kind === 'buried' ? ' stroke-dasharray="7 4"' : sts.bucket === 'none' ? ' stroke-dasharray="2 3"' : '';
+          const pieces = geo || [[Math.max(c0, f.ch0), f.offset || 0, Math.min(c1, f.ch1), f.offset || 0]];
+          pieces.forEach(([a, oa, b, ob]) => {
+            const line_ = 'x1="' + X(oa) + '" y1="' + Y(a) + '" x2="' + X(ob) + '" y2="' + Y(b) + '"';
+            g += '<g data-act="plan-rec" data-id="' + DI.esc(f.id) + '"><line ' + line_ + ' style="stroke:transparent;stroke-width:16"/>' +
+              '<line ' + line_ + ' style="stroke:' + ink(sts.bucket) + ';stroke-width:' + (geo ? 3 : 1.5) + (geo ? '' : ';opacity:0.45') + '"' + dash + '/></g>';
+          });
+          const [a, oa, b, ob] = pieces.reduce((m, q) => Math.hypot(q[2] - q[0], q[3] - q[1]) > Math.hypot(m[2] - m[0], m[3] - m[1]) ? q : m, pieces[0]);
+          if (Math.hypot(b - a, ob - oa) * sc > 60) g += '<text x="' + (X((oa + ob) / 2) + 4) + '" y="' + (Y((a + b) / 2)) + '" style="fill:var(--ink-2);font:700 11px var(--f-cond)">' + DI.esc((geo ? '' : '≈') + f.code) + '</text>';
+        } else pts.push({ f, sts });
+      });
+      // structures and connectors on top
+      pts.forEach(({ f, sts }) => {
+        const x = X(f.offset || 0), y = Y(f.ch0);
+        const fill = sts.bucket === 'done' ? 'var(--ink)' : sts.bucket === 'none' ? 'var(--surface)' : '#9A9C94';
+        const stl = 'style="fill:' + fill + ';stroke:var(--ink);stroke-width:1.8"';
+        let m = '';
+        if (f.kind === 'cross') m = '<rect x="' + (cx - 20 * sc) + '" y="' + (y - 3) + '" width="' + 40 * sc + '" height="6" ' + stl + '/>';
+        else if (f.code === 'CB') m = '<rect x="' + (x - 4.5) + '" y="' + (y - 4.5) + '" width="9" height="9" ' + stl + '/>';
+        else if (f.code === 'MH' || f.code === 'MHG') m = '<circle cx="' + x + '" cy="' + y + '" r="5.5" ' + stl + '/>' + (f.code === 'MHG' ? '<path d="M' + (x - 4) + ' ' + y + ' H' + (x + 4) + ' M' + x + ' ' + (y - 4) + ' V' + (y + 4) + '" style="stroke:var(--ink);stroke-width:1.2"/>' : '');
+        else if (/^D-/.test(f.code || '') || f.code === 'PO') m = '<path d="M' + (x - 6) + ' ' + (y + 5) + ' L' + x + ' ' + (y - 6) + ' L' + (x + 6) + ' ' + (y + 5) + ' Z" ' + stl + '/>';
+        else if (f.kind === 'label') m = '<circle cx="' + x + '" cy="' + y + '" r="5" style="fill:none;stroke:var(--ink);stroke-width:1.5" stroke-dasharray="3 2"/>';
+        else m = '<path d="M' + x + ' ' + (y - 5) + ' L' + (x + 5) + ' ' + y + ' L' + x + ' ' + (y + 5) + ' L' + (x - 5) + ' ' + y + ' Z" ' + stl + '/>';
+        g += '<g data-act="plan-rec" data-id="' + DI.esc(f.id) + '"><circle cx="' + (f.kind === 'cross' ? cx : x) + '" cy="' + y + '" r="12" style="fill:transparent"/>' + m + '</g>';
+      });
+      // you
+      if (S.pos.line === line && S.pos.ch >= c0 && S.pos.ch <= c1) g += '<circle cx="' + X(S.pos.source === 'gps' ? S.pos.offset || 0 : 0) + '" cy="' + Y(S.pos.ch) + '" r="8" style="fill:var(--hivis);stroke:var(--ink);stroke-width:3"/>';
+      const svg = '<svg width="' + W + '" height="' + H + '" viewBox="0 0 ' + W + ' ' + H + '" style="display:block"><defs><pattern id="pRefP" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" style="fill:var(--ref-bg)"/><rect width="1.4" height="8" style="fill:var(--ref)"/></pattern></defs>' + g + '</svg>';
+      const nGeo = feats.filter(f => DI.isSpan(f) && DI.geomOf(f)).length, nSpan = feats.filter(f => DI.isSpan(f)).length;
+      let h = topbar('Plan · ' + title, { right: '<button class="ib" data-act="plan-zoom" data-d="-1" aria-label="Zoom out">−</button><button class="ib" data-act="plan-zoom" data-d="1" aria-label="Zoom in">+</button>' });
+      h += '<div class="plan-legend">To scale · ' + (facing > 0 ? '▲ up the line' : '▼ down the line') + ' · ' + DI.fmtCh(c0) + ' → ' + DI.fmtCh(c1) + ' · out to ' + Math.round(maxOff) + ' m each side<br>' +
+        '<span><i class="pl-sq"></i>Connection box</span><span><i class="pl-ci"></i>Manhole</span><span><i class="pl-tr"></i>Dissipator, outlet</span><span><i class="pl-ln"></i>Ditch, as drawn' + (nSpan > nGeo ? ' (≈ at its lane: ' + (nSpan - nGeo) + ')' : '') + '</span></div>';
+      h += '<div class="scroll plan-scroll">' + svg + '</div>';
+      ov.firstChild.innerHTML = h;
+    };
+    ov.refresh = draw;
+    draw();
+    // open on the line (it may scroll sideways), where you are if you are in it
+    const sc2 = ov.querySelector('.plan-scroll');
+    if (sc2) sc2.scrollLeft = (sc2.scrollWidth - sc2.clientWidth) / 2;
+    if (sc2 && S.pos.ch >= c0 && S.pos.ch <= c1) {
+      const frac = S.pos.facing === 'decreasing' ? (S.pos.ch - c0) / (c1 - c0) : (c1 - S.pos.ch) / (c1 - c0);
+      sc2.scrollTop = Math.max(0, frac * sc2.scrollHeight - sc2.clientHeight / 2);
+    }
+    return ov;
+  }
+  DA.openPlan = openPlan;
+  A['plan-zoom'] = (b, ov) => {
+    if (!ov || !ov.plan) return;
+    const scl = ov.querySelector('.plan-scroll'), mid = scl ? (scl.scrollTop + scl.clientHeight / 2) / scl.scrollHeight : 0.5;
+    ov.plan.k = Math.max(0.5, Math.min(16, ov.plan.k * (Number(b.dataset.d) > 0 ? 2 : 0.5)));
+    ov.refresh();
+    const s2 = ov.querySelector('.plan-scroll'); if (s2) { s2.scrollTop = mid * s2.scrollHeight - s2.clientHeight / 2; s2.scrollLeft = (s2.scrollWidth - s2.clientWidth) / 2; }
+  };
+  A['plan-rec'] = b => DA.openRecord(b.dataset.id);
+  A['plan-ref'] = b => DA.openRef(b.dataset.id);
+  // from a station or a yard, from a feature, or around where you are
+  A['plan-open'] = b => {
+    const a = Number(b.dataset.a), z = Number(b.dataset.b);
+    DA.closeAll();
+    openPlan(b.dataset.line || S.pos.line, a, z, b.dataset.title || '');
+  };
 })();

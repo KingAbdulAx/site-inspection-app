@@ -39,11 +39,25 @@
   LINES.forEach(l => l.subs.forEach(s => { s.line = l.id; SUBS[s.id] = s; }));
 
   // --------------------------------------------------------------- stages
-  const LADDER_CONCRETE = ['Not started', 'Excavation', 'Blinding', 'Rebar', 'Shuttered', 'Concreted', 'Completed'];
-  const LADDER_UNLINED = ['Not started', 'Excavated', 'Completed'];
-  const LADDER_PRECAST = ['Not started', 'Excavation', 'Bedding', 'Placed', 'Completed'];
-  // Type 9 is precast half-round units, and the contractor reports a stretch only when it is done.
-  const LADDER_T9 = ['Not started', 'Completed'];
+  // Stages by how a drain is built (Abdul, 12 Nov 2026).
+  //   cast in situ: excavate, prepare the surface to shape, formwork (the side profile), reinforcement,
+  //                 cast; Completed / approved once the formwork is struck.
+  //   precast (Type 9 half-round units, chutes, dissipators): excavate, light blinding, place, then mortar
+  //                 the joints and the gap the excavation left. Mortared is finished.
+  //   unlined: excavate, then profile.
+  //   Type 6 French drain: as built on site (stone dust replaced the sharp sand of the design).
+  const LADDER_INSITU = ['Not started', 'Excavation', 'Surface prep', 'Formwork', 'Reinforcement', 'Cast', 'Completed / approved'];
+  const LADDER_CONCRETE = LADDER_INSITU;
+  const LADDER_UNLINED = ['Not started', 'Excavation', 'Profiling'];
+  const LADDER_PRECAST = ['Not started', 'Excavation', 'Blinding', 'Placed', 'Mortared'];
+  // Type 9 is precast like the rest; the contractor reports a stretch only when it is done, and the
+  // office import writes it as finished, but the stages between can be recorded on the phone.
+  const LADDER_T9 = LADDER_PRECAST;
+  const LADDER_FRENCH = ['Not started', 'Excavation', 'Stone dust bedding', 'Pipe laid', 'Gravel to half height', 'Concrete wash', 'Geotextile laid', 'Washed gravel', 'Geotextile wrapped'];
+  // A buried collector pipe (the yards' DN pipes between manholes).
+  const LADDER_BPIPE = ['Not started', 'Excavation', 'Bedding', 'Pipe laid', 'Backfilled'];
+  // The cast-in-place ladder before 12 Nov 2026. IR claims are indexed on it, and older records name its stages.
+  const OLD_CONCRETE = ['Not started', 'Excavation', 'Blinding', 'Rebar', 'Shuttered', 'Concreted', 'Completed'];
   const LADDER_RIPRAP = ['Not started', 'Geotextile laid', 'Completed'];
   // Culverts are precast units, staged as on the site execution charts. A box
   // culvert is complete once its bituminous paint is on; a pipe culvert gets
@@ -54,11 +68,35 @@
   // A stage on the old cast-in-place ladder, said on a culvert ladder.
   function fromConcrete(f, i) {
     if (i == null || !isCulvertLadder(f.ladder)) return i;
-    const name = LADDER_CONCRETE[Math.max(0, Math.min(LADDER_CONCRETE.length - 1, i))];
+    const name = OLD_CONCRETE[Math.max(0, Math.min(OLD_CONCRETE.length - 1, i))];
     if (name === 'Completed') return f.ladder.length - 1;
     if (name === 'Rebar' || name === 'Shuttered' || name === 'Concreted') return f.ladder.indexOf('Installed');
     if (name === 'Blinding') return f.ladder.indexOf('Bedding');
     return f.ladder.indexOf(name) < 0 ? 0 : f.ladder.indexOf(name);
+  }
+
+  // A stage named on another (older) ladder, said on this feature's ladder. Exact names win; otherwise
+  // by what the old name meant on site. On the old cast-in-place ladder Rebar came before Shuttered; on
+  // site the formwork goes up first and the steel follows, so either one means the reinforcement is in.
+  const STAGE_ALIAS = {
+    insitu: { Excavated: 1, Excavation: 1, Blinding: 2, Bedding: 2, Rebar: 4, Shuttered: 4, Placed: 4, Installed: 4, Concreted: 5, Completed: 6, Mortared: 6 },
+    precast: { Excavated: 1, Bedding: 2, 'Surface prep': 2, Rebar: 3, Shuttered: 3, Formwork: 3, Reinforcement: 3, Installed: 3, Concreted: 3, Cast: 3, Completed: 4, 'Completed / approved': 4 },
+    unlined: { Excavated: 1, Blinding: 1, Bedding: 1, 'Surface prep': 1, Rebar: 1, Shuttered: 1, Placed: 1, Concreted: 1, Completed: 2 },
+    french: { Excavated: 1, Blinding: 2, Bedding: 2, 'Surface prep': 2, Rebar: 3, Shuttered: 3, Placed: 3, Concreted: 3, Completed: 8, 'Completed / approved': 8 }
+  };
+  function ladderKind(l) {
+    return l === LADDER_INSITU ? 'insitu' : l === LADDER_PRECAST ? 'precast' : l === LADDER_UNLINED ? 'unlined' : l === LADDER_FRENCH ? 'french' : isCulvertLadder(l) ? 'culvert' : 'other';
+  }
+  function stageByName(f, name) {
+    if (name == null) return null;
+    const i = f.ladder.indexOf(name);
+    if (i >= 0) return i;
+    const k = ladderKind(f.ladder);
+    if (k === 'culvert') { const j = OLD_CONCRETE.indexOf(name); return j >= 0 ? fromConcrete(f, j) : null; }
+    const a = STAGE_ALIAS[k];
+    if (a && a[name] != null) return Math.min(a[name], f.ladder.length - 1);
+    if (name === 'Completed' || name === 'Completed / approved' || name === 'Mortared') return f.ladder.length - 1;
+    return null;
   }
 
   // Lane geometry: typical offsets, used for ranking and for the written metres.
@@ -169,9 +207,11 @@
     'Diversion Channel': { key: 'diversion', label: 'Diversion channel', lane: 'off', kind: 'linear' },
     'Track Drainage': { key: 'track', label: 'Track drainage', lane: 'cl', kind: 'buried' },
     'Energy Dissipator': { key: 'dissipator', label: 'Energy dissipator', lane: 'toe', kind: 'point' },
-    'Miscellaneous': { key: 'misc', label: 'Miscellaneous', lane: 'toe', kind: 'linear' }
+    'Miscellaneous': { key: 'misc', label: 'Miscellaneous', lane: 'toe', kind: 'linear' },
+    'Connector': { key: 'connector', label: 'Connectors', lane: 'toe', kind: 'point' },
+    'Road Drainage': { key: 'road', label: 'Road drainage', lane: 'off', kind: 'net' }
   };
-  const CAT_ORDER = ['cross', 'toe', 'descent', 'riprap', 'diversion', 'shoulder', 'side', 'underpass', 'track', 'berm', 'crest', 'dissipator', 'bridge', 'misc'];
+  const CAT_ORDER = ['cross', 'toe', 'descent', 'riprap', 'diversion', 'shoulder', 'side', 'underpass', 'track', 'berm', 'crest', 'dissipator', 'connector', 'road', 'bridge', 'misc'];
 
   function normalise(p, sub) {
     const catName = p.category || (p.Type === 'Bridge' ? 'Bridge Crossing' : null);
@@ -204,7 +244,7 @@
         break;
       }
       case 'shoulder':
-        code = 'T9'; typeKey = '9'; name = 'Type 9 shoulder ditch'; icon = 'half';
+        code = 'T9'; typeKey = '9'; name = 'Type 9 shoulder ditch'; icon = 'half'; ladder = LADDER_PRECAST;
         break;
       case 'berm':
         code = 'T8'; typeKey = '8'; name = 'Type 8 bench ditch'; icon = 'half';
@@ -245,10 +285,10 @@
       }
       case 'track':
         code = 'T6'; typeKey = '6'; name = /Discharge Pipe/i.test(t) ? 'Discharge pipe' : 'Type 6 collector drain'; icon = 'collector';
-        if (/Discharge/i.test(t)) { kind = 'point'; lane = 'toe'; }
+        if (/Discharge/i.test(t)) { kind = 'point'; lane = 'toe'; } else ladder = LADDER_FRENCH;
         break;
       case 'dissipator':
-        code = 'D-SD'; name = 'Energy dissipator'; icon = 'dissip';
+        code = 'D-SD'; name = 'Energy dissipator'; icon = 'dissip'; ladder = LADDER_PRECAST;
         break;
       case 'misc':
         code = 'MD'; name = /Culvert/i.test(t) ? 'Culvert approach ditch' : 'Earth toe ditch'; icon = 'trap';
@@ -295,7 +335,7 @@
     T10: P('side', 'T10', 'Type 10 side ditch with trench filter', 'plat', 'linear', 'trap', null, '10'),
     T15: P('side', 'T15', 'Type 15 rectangular side ditch', 'plat', 'linear', 'trap', null, '15'),
     T2: P('shoulder', 'T2', 'Type 2 half-round ditch', 'plat', 'linear', 'half', null, '2'),
-    T9: P('shoulder', 'T9', 'Type 9 shoulder ditch', 'plat', 'linear', 'half', null, '9'),
+    T9: P('shoulder', 'T9', 'Type 9 shoulder ditch', 'plat', 'linear', 'half', LADDER_PRECAST, '9'),
     T4: P('toe', 'T4', 'Type 4 toe ditch, unlined', 'toe', 'linear', 'vee-dash', LADDER_UNLINED, '4'),
     T7: P('toe', 'T7', 'Type 7 toe ditch', 'toe', 'linear', 'vee', null, '7'),
     T12: P('toe', 'T12', 'Type 12 toe ditch', 'toe', 'linear', 'trap', null, '12'),
@@ -304,7 +344,7 @@
     T8: P('berm', 'T8', 'Type 8 bench ditch', 'face', 'linear', 'half', null, '8'),
     T5: P('crest', 'T5', 'Type 5 crest ditch, unlined', 'crest', 'linear', 'vee-dash', LADDER_UNLINED, '5'),
     T11: P('crest', 'T11', 'Type 11 crest ditch', 'crest', 'linear', 'vee', null, '11'),
-    T6: P('track', 'T6', 'Type 6 collector drain', 'cl', 'buried', 'collector', null, '6'),
+    T6: P('track', 'T6', 'Type 6 collector drain', 'cl', 'buried', 'collector', LADDER_FRENCH, '6'),
     WD: P('descent', 'WD', 'Water descent, precast', 'face', 'point', 'descent', LADDER_PRECAST),
     RIP: P('riprap', '', 'Riprap protection', 'face', 'label', 'riprap', LADDER_RIPRAP),
     BC: P('cross', 'BC', 'Box culvert', 'across', 'cross', 'box', LADDER_BOX),
@@ -314,16 +354,20 @@
     'CH-B': P('diversion', 'CH-B', 'Diversion channel, concrete', 'off', 'linear', 'divert'),
     'CH-C': P('diversion', 'CH-C', 'Diversion channel with embankments', 'off', 'linear', 'divert'),
     'CH-R': P('diversion', 'CH-R', 'Rectangular channel', 'off', 'linear', 'divert'),
-    'D-SOZ': P('dissipator', 'D-SOZ', 'Spread-out zone dissipator', 'toe', 'point', 'dissip'),
-    'D-SD': P('dissipator', 'D-SD', 'Slope descent dissipator', 'toe', 'point', 'dissip'),
-    'D-TC': P('dissipator', 'D-TC', 'Trapezoidal channel dissipator', 'toe', 'point', 'dissip'),
-    'D-ST': P('dissipator', 'D-ST', 'Stool ditch dissipator', 'toe', 'point', 'dissip'),
-    'D-RF': P('dissipator', 'D-RF', 'Rockfill dissipator', 'toe', 'point', 'dissip'),
+    'D-SOZ': P('dissipator', 'D-SOZ', 'Spread-out zone dissipator', 'toe', 'point', 'dissip', LADDER_PRECAST),
+    'D-SD': P('dissipator', 'D-SD', 'Slope descent dissipator', 'toe', 'point', 'dissip', LADDER_PRECAST),
+    'D-TC': P('dissipator', 'D-TC', 'Trapezoidal channel dissipator', 'toe', 'point', 'dissip', LADDER_PRECAST),
+    'D-ST': P('dissipator', 'D-ST', 'Stool ditch dissipator', 'toe', 'point', 'dissip', LADDER_PRECAST),
+    'D-RF': P('dissipator', 'D-RF', 'Rockfill dissipator', 'toe', 'point', 'dissip', LADDER_RIPRAP),
     BRG: P('bridge', 'BRG', 'Railway bridge', 'across', 'cross', 'bridge'),
     OP: P('bridge', 'OP', 'Road overbridge', 'across', 'cross', 'bridge'),
     UP: P('underpass', 'UP', 'Road underpass', 'across', 'cross', 'arch'),
     CC: P('cross', 'CC', 'Cattle crossing', 'across', 'cross', 'box', LADDER_BOX),
-    MD: P('misc', 'MD', 'Culvert approach ditch', 'toe', 'linear', 'trap', LADDER_UNLINED)
+    MD: P('misc', 'MD', 'Culvert approach ditch', 'toe', 'linear', 'trap', LADDER_UNLINED),
+    CB: P('connector', 'CB', 'Connection box', 'toe', 'point', 'cbox'),
+    MH: P('connector', 'MH', 'Manhole', 'cl', 'point', 'mh', LADDER_PRECAST),
+    MHG: P('connector', 'MHG', 'Manhole, grid cover', 'cl', 'point', 'mh', LADDER_PRECAST),
+    PO: P('connector', 'PO', 'Outlet pipe', 'toe', 'point', 'outlet', LADDER_PRECAST)
   };
   const CAT_LABEL = {};
   Object.values(CAT).forEach(c => { if (!CAT_LABEL[c.key]) CAT_LABEL[c.key] = c.label; });
@@ -400,6 +444,7 @@
     SUBS.DRMR.count = (data.bySub.DRMR || []).length;
     SUBS.MRJB.count = (data.bySub.MRJB || []).length;
     migrateCulvertStages();
+    migrateStageNames();
     SUBS.DWKZ.count = (data.bySub.DWKZ || []).length;
     SUBS.KZDR.count = (data.bySub.KZDR || []).length;
     loadLegacy();
@@ -440,7 +485,185 @@
     });
     t9Cache = {};
     applyBase();
+    migrateStageNames();
   }
+  // ------------------------------------------------ connectors
+  // Where a drain ends and what it runs into, from the drainage plans (data/connectors.json, made by
+  // scripts/dwg/build_connectors.js): connection boxes, manholes, grid-cover manholes and outlet pipes become
+  // features of their own (they are built, so they have stages); a dissipator of the plans is the app's own.
+  // ends: what each ditch end runs into; geom: where the plans draw each ditch (chainage and true offset).
+  const CONN = { box: 'CB', manhole: 'MH', grid: 'MHG', pipe: 'PO' };
+  // The lane a true offset falls in, for the strip.
+  function laneOf(off) {
+    const a = Math.abs(off);
+    return a < 2 ? 'cl' : a < 5.75 ? 'plat' : a < 10.75 ? 'face' : a < 18.75 ? 'toe' : a < 37 ? 'crest' : 'off';
+  }
+  function loadConnectors(j) {
+    Object.keys(data.pristine).forEach(sub => { data.pristine[sub] = data.pristine[sub].filter(f => !f.conn); });
+    data.connEnds = j.ends || {};
+    data.geom = j.geom || {};
+    data.connAt = {};      // feature id -> [{ id, end }] of the connectors it touches
+    Object.keys(j.subs || {}).forEach(sub => {
+      if (!SUBS[sub] || !data.pristine[sub]) return;
+      const list = j.subs[sub];
+      // the manhole nearest each outlet pipe (within 60 m) is the outlet's
+      const exits = new Set();
+      list.filter(c => c.kind === 'pipe').forEach(o => {
+        const m = list.filter(c => c.kind === 'manhole' && Math.abs(c.ch - o.ch) < 60).sort((a, b) => Math.hypot(a.ch - o.ch, a.off - o.off) - Math.hypot(b.ch - o.ch, b.off - o.off))[0];
+        if (m) exits.add(m.id);
+      });
+      list.forEach(c => {
+        c.links.forEach(([fid, end]) => (data.connAt[fid] = data.connAt[fid] || []).push({ id: c.id, end }));
+        if (c.app) {        // the app's own dissipator: it only gains its links
+          (data.connAt[c.id] = data.connAt[c.id] || []).push(...c.links.map(([fid, end]) => ({ id: fid, end: end === 'a' ? 'start' : end === 'b' ? 'end' : end, of: true })));
+          return;
+        }
+        const code = CONN[c.kind];
+        const pr = PRESETS[code];
+        // a manhole at the outlet of a collector drain is cast in situ; the rest are precast rings
+        const exit = exits.has(c.id);
+        const ladder = c.kind === 'box' ? LADDER_INSITU : exit ? LADDER_INSITU : pr.ladder;
+        const lane = c.kind === 'manhole' || c.kind === 'grid' ? (Math.abs(c.off) < 20 ? 'cl' : laneOf(c.off)) : laneOf(c.off);
+        const name = c.kind === 'box' ? 'Connection box' + (c.type && /^Type/.test(c.type) ? ', ' + c.type.toLowerCase() : '') : exit ? 'Manhole at the outlet' : pr.name;
+        const f = {
+          id: c.id, sub, line: SUBS[sub].line, catKey: 'connector', catLabel: CAT_LABEL.connector, kind: 'point', lane,
+          side: c.side, ch0: c.ch, ch1: c.ch, cert: 'derived', code, typeKey: null, name, full: name + (c.block ? ' (' + c.block + ')' : ''),
+          icon: pr.icon, ladder, sheet: '', drawings: [], level: null, onHold: false, confidence: '', specs: c.block || '', notes: '', stated: null,
+          raw: {}, offset: c.off, conn: { kind: c.kind, type: c.type, block: c.block, exit, links: c.links }
+        };
+        data.pristine[sub].push(f);
+      });
+    });
+    applyBase();
+    migrateStageNames();
+  }
+  function hasConnectors() { return !!data.connAt; }
+  // What a ditch's start and end run into: { start: feature|null, end: feature|null }; and for a connector or
+  // a dissipator, what runs into it.
+  function endsOf(f) {
+    const e = (data.connEnds || {})[f.id] || {};
+    return { start: e.a ? data.byId[e.a] || null : null, end: e.b ? data.byId[e.b] || null : null };
+  }
+  function joinsOf(f) {
+    if (f.conn) {
+      const out = f.conn.links.map(([fid, end]) => ({ f: data.byId[fid], end: end === 'a' ? 'start' : end === 'b' ? 'end' : end }));
+      // Type 6 legs that start or end here
+      Object.entries(data.connEnds || {}).forEach(([fid, e]) => {
+        if (!/^(t6|pipe)_/.test(fid)) return;
+        if (e.a === f.id) out.push({ f: data.byId[fid], end: 'start' });
+        if (e.b === f.id) out.push({ f: data.byId[fid], end: 'end' });
+      });
+      return out.filter(x => x.f);
+    }
+    return ((data.connAt || {})[f.id] || []).filter(x => x.of).map(x => ({ f: data.byId[x.id], end: x.end })).filter(x => x.f);
+  }
+  // Where the plans draw a ditch: pieces [ch, offset, ch, offset]; none for one the plans do not have.
+  function geomOf(f) { return (data.geom || {})[f.id] || null; }
+  // ------------------------------------------------ networks: Type 6 legs, road drainage
+  // data/networks.json (scripts/dwg/extract_networks.py). Type 6 is cut at its manholes into legs, each with
+  // its turns and its own length; they take the place of the bundle's straight Type 6 runs (one with records
+  // on it stays). A leg's manholes are the plans' (connectors.json) where they are, else its own. Road drains,
+  // riprap dissipators and road culverts belong to the road crossing they serve; a road drain whose end lands
+  // on a railway ditch names it.
+  function roadDrainName(it) {
+    const n = it.ltype || (/^\d/.test(it.rtype) ? it.rtype.split('_')[0] : null);
+    if (it.rtype === 'discharge') return { code: 'RDD', name: 'Road discharge ditch', ladder: LADDER_INSITU };
+    if (it.rtype === 'service') return { code: 'RSD', name: 'Service road ditch', ladder: LADDER_UNLINED };
+    if (it.rtype === 'trench') return { code: 'RTR', name: 'Road drainage trench', ladder: LADDER_FRENCH };
+    if (n === '6') return { code: 'RT6', name: 'Road Type 6 drain', ladder: LADDER_FRENCH };
+    const unl = (n === '4' || n === '3' || n === '5') && !it.concrete;
+    const guess = !it.ltype && /_/.test(it.rtype) ? ' (type ' + it.rtype.replace(/_/g, '/') + ' on the drawing)' : '';
+    return { code: 'RT' + (n || ''), name: 'Road ditch, type ' + (n || '?') + (it.concrete ? ', concrete' : unl ? ', unlined' : '') + guess,
+      ladder: n === '9' ? LADDER_PRECAST : unl ? LADDER_UNLINED : LADDER_INSITU };
+  }
+  function loadNetworks(j) {
+    Object.keys(data.pristine).forEach(sub => { data.pristine[sub] = data.pristine[sub].filter(f => !f.net && !f.road); });
+    data.geom = data.geom || {};
+    data.connEnds = data.connEnds || {};
+    data.roadJoins = {};
+    const legs = j.t6 || [];
+    const hasRecs = id => records.some(r => r.featureId === id);
+    // the bundle's straight Type 6 runs give way where the network covers that sub-section
+    const netSubs = new Set(legs.filter(l => l.kind === 'T6').map(l => l.sub));
+    Object.keys(data.pristine).forEach(sub => {
+      if (!netSubs.has(sub)) return;
+      data.pristine[sub] = data.pristine[sub].filter(f => !(f.code === 'T6' && f.kind === 'buried' && !f.net && !hasRecs(f.id)));
+    });
+    // manholes: the plans' own where they are, else new
+    const node = {};
+    (j.manholes || []).forEach(m => {
+      const key = m.src + '|' + m.handle;
+      const known = (data.pristine[m.sub] || []).find(f => f.conn && (f.code === 'MH' || f.code === 'MHG') && Math.abs(f.ch0 - m.ch) < 3 && Math.abs(f.offset - m.off) < 3);
+      // its drawing's name goes first: 'Manhole MH3.3-YDKZ'
+      if (known) { node[key] = known.id; if (m.name && !known.mhName) { known.mhName = m.name; known.name = known.name.replace(/^(Manhole[^,]*)/, '$1 ' + m.name); known.full = known.name; } return; }
+      if (!SUBS[m.sub] || !data.pristine[m.sub]) return;
+      const id = 'mh_' + m.sub + '_' + m.handle;
+      const pr = PRESETS[m.grid ? 'MHG' : 'MH'];
+      const name = pr.name + (m.name ? ' ' + m.name : '');
+      data.pristine[m.sub].push({ id, sub: m.sub, line: SUBS[m.sub].line, catKey: 'connector', catLabel: CAT_LABEL.connector, kind: 'point', lane: Math.abs(m.off) < 20 ? 'cl' : laneOf(m.off),
+        side: m.off >= 0 ? 'L' : 'R', ch0: m.ch, ch1: m.ch, cert: 'derived', code: pr.code, typeKey: null, name, full: name, icon: 'mh', ladder: pr.ladder, sheet: '', drawings: [],
+        level: null, onHold: false, confidence: '', specs: '', notes: '', stated: null, raw: {}, offset: m.off, conn: { kind: m.grid ? 'grid' : 'manhole', type: null, block: null, exit: false, links: [] }, mhName: m.name, net: true });
+      node[key] = id;
+    });
+    legs.forEach(l => {
+      if (!SUBS[l.sub] || !data.pristine[l.sub]) return;
+      const chs = l.pts.map(p => p[0]), offs = l.pts.map(p => p[1]);
+      const pipe = l.kind === 'pipe';
+      // between which manholes, by their names where the drawing gives them
+      const mhn = h => { const k = h && node[l.src + '|' + h]; const f = k && (data.pristine[l.sub] || []).concat(...Object.values(data.pristine)).find(x => x.id === k); return f && f.mhName; };
+      const na = mhn(l.from), nb = mhn(l.to);
+      const name = (pipe ? 'Collector pipe' : 'Type 6 drain') + (na || nb ? ' ' + (na || '…') + ' → ' + (nb || '…') : '');
+      const f = { id: l.id, sub: l.sub, line: SUBS[l.sub].line, catKey: 'track', catLabel: CAT_LABEL.track, kind: 'buried', lane: 'cl', side: l.side,
+        ch0: Math.min(...chs), ch1: Math.max(...chs), cert: 'derived', code: pipe ? 'CP' : 'T6', typeKey: pipe ? null : '6', name, full: name + ', ' + Math.round(l.len) + ' m manhole to manhole',
+        icon: 'collector', ladder: pipe ? LADDER_BPIPE : LADDER_FRENCH, sheet: '', drawings: [], level: null, onHold: false, confidence: '', specs: '', notes: '', stated: null, raw: {},
+        offset: offs.reduce((a, b) => a + b, 0) / offs.length, len: l.len, net: { src: l.src } };
+      data.pristine[l.sub].push(f);
+      data.geom[l.id] = l.pts.slice(1).map((p, i) => [l.pts[i][0], l.pts[i][1], p[0], p[1]]);
+      const a = l.from && node[l.src + '|' + l.from], b = l.to && node[l.src + '|' + l.to];
+      if (a || b) data.connEnds[l.id] = Object.assign({}, a ? { a } : {}, b ? { b } : {});
+    });
+    // roads
+    const roadsNear = {};
+    (j.roads || []).forEach((it, i) => {
+      if (!SUBS[it.sub] || !data.pristine[it.sub]) return;
+      const srcS = (it.src.match(/S0\d/) || ['S0'])[0];
+      const id = 'rd_' + srcS + '_' + it.handle;
+      const ref = it.road ? refById(it.road) : null;
+      const roadName = ref ? (ref.name || ref.short) : null;
+      let f;
+      if (it.kind === 'drain') {
+        const t = roadDrainName(it);
+        const chs = it.pts.map(p => p[0]);
+        f = { kind: 'net', code: t.code, name: t.name + (it.label ? ' · ' + it.label : ''), ladder: t.ladder, ch0: Math.min(...chs), ch1: Math.max(...chs), len: it.len, icon: t.code === 'RT6' ? 'collector' : 'trap' };
+        data.geom[id] = it.pts.slice(1).map((p, k) => [it.pts[k][0], it.pts[k][1], p[0], p[1]]);
+        f.railJoins = it.joins || [];
+      } else if (it.kind === 'riprap') {
+        f = { kind: 'point', code: 'RDS', name: 'Riprap dissipator', ladder: LADDER_RIPRAP, ch0: it.near[0], ch1: it.near[0], icon: 'riprap' };
+      } else {
+        const box = /BC|BD-1x-2|BOX/i.test((it.block || '') + ' ' + (it.what || ''));
+        f = { kind: 'point', code: 'RPC', name: 'Road culvert' + (it.what ? ', ' + it.what.toLowerCase() : box ? ', box' : ', pipe') + (it.road_ch ? ' at road CH ' + it.road_ch : ''), ladder: box ? LADDER_BOX : LADDER_PIPE, ch0: it.near[0], ch1: it.near[0], icon: box ? 'box' : 'pipe' };
+      }
+      Object.assign(f, { id, sub: it.sub, line: SUBS[it.sub].line, catKey: 'road', catLabel: CAT_LABEL.road, lane: 'off', side: it.near[1] >= 0 ? 'L' : 'R', cert: 'derived', typeKey: null,
+        full: f.name + (roadName ? ' — road ' + roadName : ''), sheet: '', drawings: [], level: null, onHold: false, confidence: '', specs: it.block || '', notes: '', stated: null, raw: {},
+        offset: it.near[1], road: it.road || 'none', roadName });
+      data.pristine[it.sub].push(f);
+      (roadsNear[it.road || 'none'] = roadsNear[it.road || 'none'] || []).push(id);
+    });
+    data.roadsOf = roadsNear;
+    applyBase();
+    migrateStageNames();
+    // a road drain's end on a railway ditch: that ditch, by type, side and chainage
+    data.features.filter(f => f.railJoins && f.railJoins.length).forEach(f => f.railJoins.forEach(jn => {
+      const rail = data.features.filter(x => x.line === f.line && x.code === jn.code && x.side === jn.side && !x.road && x.ch0 - 15 <= jn.ch && jn.ch <= x.ch1 + 15)
+        .sort((x, y) => Math.max(0, x.ch0 - jn.ch, jn.ch - x.ch1) - Math.max(0, y.ch0 - jn.ch, jn.ch - y.ch1))[0];
+      if (rail) (data.roadJoins[rail.id] = data.roadJoins[rail.id] || []).push({ id: f.id, ch: jn.ch, end: jn.end });
+    }));
+  }
+  function hasNetworks() { return !!data.roadsOf; }
+  // The road drainage of a road crossing (a reference structure's id).
+  function roadDrainage(refId) { return ((data.roadsOf || {})[refId] || []).map(id => data.byId[id]).filter(Boolean); }
+  // Road drains that run into a railway ditch: [{ f, ch }]
+  function roadJoinsOf(f) { return ((data.roadJoins || {})[f.id] || []).map(x => ({ f: data.byId[x.id], ch: x.ch })).filter(x => x.f); }
   // Where the schedule is switched on: every section.
   const T9_SCHEDULE_ON = ['KNDW', 'DWKZ', 'KZDR', 'DRMR', 'MRJB'];
   function hasT9Schedule(sub) { return !!(data.bySub[sub] || []).some(f => f.sched); }
@@ -534,8 +757,12 @@
     bridge: { label: 'Railway bridge', short: 'BRIDGE' },
     overpass: { label: 'Overpass · road over the railway', short: 'ROAD OVER' },
     underpass: { label: 'Underpass · road under the railway', short: 'ROAD UNDER' },
-    crossing: { label: 'Road crossing', short: 'ROAD' }
+    crossing: { label: 'Road crossing', short: 'ROAD' },
+    station: { label: 'Station', short: 'STATION' },
+    yard: { label: 'Freight yard', short: 'YARD' }
   };
+  // Stations and yards (data/structures.js, KMD_STATIONS) run along the line like a bridge, beside it.
+  const isArea = r => r.kind === 'station' || r.kind === 'yard';
   let refList = null;
   function refs() {
     if (refList) return refList;
@@ -545,8 +772,20 @@
       if (!SUBS[sub]) return;
       (src[sub].structures || []).forEach(s => refList.push(Object.assign({ sub, line: SUBS[sub].line, source: src[sub].source }, s, REF_KIND[s.kind] || REF_KIND.crossing, { kind: s.kind })));
     });
+    (window.KMD_STATIONS || []).forEach(s => {
+      if (!SUBS[s.sub]) return;
+      const k = REF_KIND[s.kind];
+      refList.push(Object.assign({ line: SUBS[s.sub].line, source: s.src }, s, k, { kind: s.kind, area: true,
+        label: s.kind === 'yard' ? (s.what === 'maintenance' ? 'Maintenance centre' : 'Freight yard') : 'Station',
+        short: s.kind === 'yard' ? (s.what === 'maintenance' ? 'DEPOT' : 'YARD') : 'STATION' }));
+    });
     refList.sort((a, b) => a.ch0 - b.ch0);
     return refList;
+  }
+  // The stations and yards at a chainage (a station's track area; a yard's extent).
+  function areasAt(line, ch, pad) {
+    const p = pad || 0;
+    return refs().filter(r => r.area && r.line === line && ch >= r.ch0 - p && ch <= r.ch1 + p);
   }
   function refsNear(line, a, b) { return refs().filter(r => r.line === line && r.ch1 >= a && r.ch0 <= b); }
   function refById(id) { return refs().find(r => r.id === id) || null; }
@@ -583,7 +822,10 @@
     list.forEach(h => { if (h.status !== 'rejected' && (!best || h.stage >= best.stage)) best = h; });
     if (!best) return null;
     const f = data.byId[fid];
-    const stage = isCulvertLadder(f.ladder) ? fromConcrete(f, best.stage) : best.stage;
+    // IR stages are indexed on the old cast-in-place ladder: said on this feature's ladder by meaning
+    const k = Math.max(0, Math.min(OLD_CONCRETE.length - 1, best.stage));
+    const named = isCulvertLadder(f.ladder) ? fromConcrete(f, best.stage) : f.ladder === LADDER_INSITU || f.ladder.length === OLD_CONCRETE.length ? best.stage : (k === 0 ? 0 : stageByName(f, OLD_CONCRETE[k]));
+    const stage = named == null ? best.stage : named;
     return Object.assign({}, best, { stage: Math.min(stage, f.ladder.length - 1) });
   }
 
@@ -611,6 +853,29 @@
       r.stage = fromConcrete(f, r.stage);
       if (r.claimStage != null) r.claimStage = fromConcrete(f, r.claimStage);
       r.stageName = f.ladder[r.stage];
+      n++;
+    });
+    if (n) saveRecords();
+    return n;
+  }
+  // Stage records said on a ladder that has since changed (12 Nov 2026: stages by construction method).
+  // Each record names its stage; say it on the feature's ladder now, by meaning, once. The name it had is kept.
+  function migrateStageNames() {
+    let n = 0;
+    records.forEach(r => {
+      if (r.kind !== 'stage') return;
+      const f = data.byId[r.featureId];
+      if (!f || isCulvertLadder(f.ladder)) return;
+      if (r.stageName == null) {
+        if (r.stage >= f.ladder.length) { r.stage = f.ladder.length - 1; n++; }
+        r.stageName = f.ladder[r.stage];
+        return;
+      }
+      if (f.ladder[r.stage] === r.stageName) return;
+      const j = stageByName(f, r.stageName);
+      if (j == null) return;
+      r.wasStage = { stage: r.stage, name: r.stageName };
+      r.stage = j; r.stageName = f.ladder[j];
       n++;
     });
     if (n) saveRecords();
@@ -781,15 +1046,30 @@
 
   // Legacy per-asset inspections (older app, and what the cloud sync reads).
   const LEGACY_STAGE = { 'Not Started': 0, 'Excavation': 1, 'Blinding': 2, 'Rebar / Shuttering': 3, 'Concreted': 5, 'Completed & Approved': 6 };
+  // The database's status column is coarse (the old app's five words); the stage detail of a drain
+  // travels in the notes ('[stages …]', below). An exact stage name of a culvert ladder goes as it is.
   function toLegacyStatus(f, s) {
     const name = f.ladder[s];
-    if (s === 0) return 'Not Started';
+    if (!s) return 'Not Started';
     if (s === f.ladder.length - 1) return 'Completed & Approved';
     if (isCulvertLadder(f.ladder)) return name;
-    if (name === 'Concreted') return 'Concreted';
-    if (name === 'Rebar' || name === 'Shuttered' || name === 'Placed') return 'Rebar / Shuttering';
-    if (name === 'Blinding' || name === 'Bedding' || name === 'Geotextile laid') return 'Blinding';
+    const k = ladderKind(f.ladder);
+    if (k === 'insitu') return s >= 5 ? 'Concreted' : s >= 3 ? 'Rebar / Shuttering' : s === 2 ? 'Blinding' : 'Excavation';
+    if (k === 'precast' || k === 'french') return s >= 3 ? 'Rebar / Shuttering' : s === 2 ? 'Blinding' : 'Excavation';
+    if (name === 'Geotextile laid') return 'Blinding';
     return 'Excavation';
+  }
+  // A status from the database, on this feature's ladder (null: not a stage of it).
+  function legacyStage(f, status) {
+    if (!status || status === 'Not Started') return 0;
+    if (status === 'Completed & Approved') return f.ladder.length - 1;
+    const i = f.ladder.indexOf(status);
+    if (i >= 0) return i;
+    if (status === 'Rebar / Shuttering') {
+      const k = ladderKind(f.ladder);
+      return k === 'culvert' ? f.ladder.indexOf('Installed') : k === 'unlined' ? 1 : Math.min(3, f.ladder.length - 1);
+    }
+    return stageByName(f, status);
   }
   function loadLegacy() {
     legacy = {};
@@ -807,15 +1087,18 @@
     const seen = ownSeen(fid);
     const defects = openDefects(fid);
     const now = new Date().toISOString();
-    // A Type 9 run says how much is done in its notes; the status says only done or under way.
+    // A drain along the line says in its notes how much is at which stage; the status says only how far
+    // it has got: finished, part finished ('Concreted'), or the furthest stage anywhere on it.
     if (rangeable(f)) adoptForeignRanges(f);
     adoptForeignExtent(f);
     const cov = rangeable(f) ? coverOf(f) : null;
     let status = seen ? toLegacyStatus(f, seen.stage) : 'Not Started';
     let notes = defects.map(d => d.defect + (d.note ? ': ' + d.note : '')).join(' | ');
-    if (cov && cov.ranges.length) {
-      status = cov.full ? toLegacyStatus(f, f.ladder.length - 1) : 'Concreted';
-      notes = [notes, rangeNote(cov.ranges)].filter(Boolean).join(' | ');
+    if (rangeable(f)) status = 'Not Started';
+    if (cov) {
+      const max = f.ladder.length - 1;
+      status = cov.full ? toLegacyStatus(f, max) : cov.m > 0 ? 'Concreted' : toLegacyStatus(f, Math.min(cov.top, max - 1));
+      notes = [notes, rangeNote(cov.ranges, f.code), stageNote(f, cov.segs)].filter(Boolean).join(' | ');
     }
     if (f.built) {
       notes = [notes, extentNote(f.built)].filter(Boolean).join(' | ');
@@ -847,21 +1130,11 @@
     const own = ownSeen(fid);
     const lg = legacy[fid];
     const fl = data.byId[fid];
-    // An office row can name a stage of this feature's own ladder exactly ('Installed', 'Wing walls').
-    if (lg && lg.source !== 'walk' && lg.status && fl && LEGACY_STAGE[lg.status] == null && fl.ladder.indexOf(lg.status) > 0) {
+    // An office row names a stage: exactly on this ladder ('Installed', 'Wing walls'), or in the old words.
+    if (lg && lg.source !== 'walk' && lg.status && fl && lg.status !== 'Not Started') {
+      const st = legacyStage(fl, lg.status);
       const at = lg.updated_at || (lg.date ? lg.date.replace(' ', 'T') : null);
-      if (!own || (at && at > own.at)) return { stage: fl.ladder.indexOf(lg.status), at, by: lg.inspected_by || 'office', office: true, note: lg.notes || '' };
-    }
-    if (lg && lg.source !== 'walk' && lg.status && LEGACY_STAGE[lg.status] != null && lg.status !== 'Not Started') {
-      const at = lg.updated_at || (lg.date ? lg.date.replace(' ', 'T') : null);
-      if (!own || (at && at > own.at)) {
-        const f = data.byId[fid];
-        let s = LEGACY_STAGE[lg.status];
-        if (f && isCulvertLadder(f.ladder)) s = fromConcrete(f, s);
-        if (f && s >= f.ladder.length) s = f.ladder.length - 1;
-        if (f && lg.status === 'Completed & Approved') s = f.ladder.length - 1;
-        return { stage: s, at, by: lg.inspected_by || 'office', office: true };
-      }
+      if (st != null && st > 0 && (!own || (at && at > own.at))) return { stage: st, at, by: lg.inspected_by || 'office', office: true, note: lg.notes || '' };
     }
     return own;
   }
@@ -873,12 +1146,15 @@
   function designChanges(fid) { return live(r => r.featureId === fid && r.kind === 'design'); }
 
   // A status summary used by the strip, the section view and the lists.
-  // ------------------------------------------------ progress by length
-  // A Type 9 run is finished a bit at a time, and the contractor reports it only when a stretch is done
-  // (precast units, no stages). So it is tracked by completed ranges: 'from X to Y is done'. Records are
-  // append-only like all the rest; undo voids one. A Completed stage on the whole run counts as all of it.
-  const RANGE_CODES = ['T9'];
-  const rangeable = f => RANGE_CODES.includes(f.code) && f.kind === 'linear' && f.ch1 - f.ch0 > 1;
+  // ------------------------------------------------ progress by length, by stage
+  // Every drain that runs along the line is built a bit at a time, so it is tracked by ranges: 'from X to Y
+  // is at Formwork'. A range carries the stage it reached; a higher stage means the lower ones are done over
+  // the same length. Records are append-only like all the rest; undo voids one. A stage recorded for the
+  // whole run counts as that stage over all of it. A range with no stage (Type 9, before 12 Nov 2026) is
+  // finished.
+  const isSpanF = f => f.kind === 'linear' || f.kind === 'buried';
+  // A Type 6 leg that turns or crosses the line (its chainage much shorter than its length) is tracked whole.
+  const rangeable = f => !!f && isSpanF(f) && !isCulvertLadder(f.ladder) && f.ladder.length > 1 && f.ch1 - f.ch0 > 1 && !(f.len && f.ch1 - f.ch0 < 0.8 * f.len);
   function mergeRanges(list) {
     const out = [];
     list.slice().sort((a, b) => a[0] - b[0]).forEach(([a, b]) => {
@@ -887,82 +1163,153 @@
     });
     return out;
   }
-  // The completed ranges travel to the cloud database in the row's notes, since the table has no column for
-  // them: '[T9 done 20900 to 21000; 21100 to 21225]', chainages in metres. The office import writes the same.
-  const RANGE_NOTE = /\[T9 done ([^\]]*)\]/;
-  function rangeNote(ranges) {
-    return ranges.length ? '[T9 done ' + ranges.map(([a, b]) => Math.round(a * 10) / 10 + ' to ' + Math.round(b * 10) / 10).join('; ') + ']' : '';
+  // The ranges travel to the cloud database in the row's notes, since the table has no column for them,
+  // chainages in metres:
+  //   finished       '[T9 done 20900 to 21000; 21100 to 21225]' (a Type 9; '[done …]' for any other drain)
+  //   in between     '[stages Excavation: 20900 to 21300; Formwork: 21000 to 21100]', each length under the
+  //                  highest stage it reached
+  // The office import writes the same. A Type 9 row keeps its old form, which phones on an older app read.
+  const RANGE_NOTE = /\[(?:T9 )?done ([^\]]*)\]/;
+  const STAGE_NOTE = /\[stages ([^\]]*)\]/;
+  const r1 = n => Math.round(n * 10) / 10;
+  const rangeList = ranges => ranges.map(([a, b]) => r1(a) + ' to ' + r1(b)).join('; ');
+  function rangeNote(ranges, code) {
+    return ranges.length ? '[' + (code === undefined || code === 'T9' ? 'T9 ' : '') + 'done ' + rangeList(ranges) + ']' : '';
+  }
+  function parsePairs(txt) {
+    return String(txt).split(/[;,]/).map(x => x.trim().match(/^(-?\d+(?:\.\d+)?) to (-?\d+(?:\.\d+)?)$/)).filter(Boolean).map(x => [Number(x[1]), Number(x[2])]).filter(r => r[1] > r[0]);
   }
   function parseRangeNote(notes) {
     const m = RANGE_NOTE.exec(notes || '');
+    return m ? parsePairs(m[1]) : [];
+  }
+  // '[stages …]' from segments [{a, b, s}] of a feature: the in-between stages only (finished goes in '[done …]').
+  function stageNote(f, segs) {
+    const max = f.ladder.length - 1, by = {};
+    segs.forEach(g => { if (g.s > 0 && g.s < max) (by[g.s] = by[g.s] || []).push([g.a, g.b]); });
+    const ks = Object.keys(by).map(Number).sort((x, y) => x - y);
+    return ks.length ? '[stages ' + ks.map(k => f.ladder[k] + ': ' + by[k].map(([a, b]) => r1(a) + ' to ' + r1(b)).join(', ')).join('; ') + ']' : '';
+  }
+  // [{name, a, b}] from '[stages …]'
+  function parseStageNote(notes) {
+    const m = STAGE_NOTE.exec(notes || '');
     if (!m) return [];
-    return m[1].split(';').map(x => x.trim().match(/^(-?\d+(?:\.\d+)?) to (-?\d+(?:\.\d+)?)$/)).filter(Boolean).map(x => [Number(x[1]), Number(x[2])]).filter(r => r[1] > r[0]);
+    const out = [];
+    m[1].split(';').forEach(part => {
+      const i = part.indexOf(':');
+      if (i < 0) return;
+      const name = part.slice(0, i).trim();
+      parsePairs(part.slice(i + 1)).forEach(([a, b]) => out.push({ name, a, b }));
+    });
+    return out;
   }
-  // Ranges the database holds that this phone has no record of: the office import, or another phone. A row
-  // this phone wrote itself (source 'walk') is already in its own records, so undoing one stays undone.
-  function foreignRanges(f) {
+  // Metres named in a row's notes, any stage: to tell whether an office row grew.
+  function noteMetres(notes) {
+    return parseRangeNote(notes).concat(parseStageNote(notes).map(x => [x.a, x.b])).reduce((m, [a, b]) => m + b - a, 0);
+  }
+  // Rows the office import wrote before ranges were kept for every ditch: 'N of L m executed (20+900–21+000, …)'.
+  function parseExecutedNote(notes) {
+    const m = /m executed \(([^)]*)\)/.exec(notes || '');
+    if (!m) return [];
+    return m[1].split(',').map(x => x.trim().split('–')).filter(x => x.length === 2).map(([a, b]) => [parseCh(a), parseCh(b)]).filter(([a, b]) => !isNaN(a) && !isNaN(b) && b > a);
+  }
+  // What the database holds that this phone has no record of (the office import, another phone), as
+  // [a, b, stage]. A row this phone wrote itself (source 'walk') is already in its own records, so undoing
+  // one stays undone. Ranges in the notes are the authority; with none, the status is the whole run's stage.
+  function foreignStaged(f) {
     const lg = legacy[f.id];
-    return lg && lg.source !== 'walk' ? parseRangeNote(lg.notes) : [];
+    if (!lg || lg.source === 'walk') return [];
+    const max = f.ladder.length - 1;
+    const out = parseRangeNote(lg.notes).map(([a, b]) => [a, b, max]);
+    parseStageNote(lg.notes).forEach(x => { const k = stageByName(f, x.name); if (k != null && k > 0) out.push([x.a, x.b, k]); });
+    if (out.length) return out;
+    const st = legacyStage(f, lg.status);
+    if (!st) return [];
+    const ex = parseExecutedNote(lg.notes);
+    if (ex.length && st < max) return ex.map(([a, b]) => [a, b, st]);
+    const [p0, p1] = extentEnds(f);
+    return [[p0, p1, st]];
   }
-  // Before this phone writes over such a row, those ranges become its own records (undoable like the rest),
-  // so the row it writes still carries them.
+  function foreignRanges(f) { return foreignStaged(f).filter(x => x[2] >= f.ladder.length - 1).map(([a, b]) => [a, b]); }
+  // Before this phone writes over such a row, what it holds becomes the phone's own records (undoable like
+  // the rest), so the row it writes still carries it.
   function adoptForeignRanges(f) {
     const lg = legacy[f.id];
-    const ch0 = f.built ? f.built.ch0 : f.ch0, ch1 = f.built ? f.built.ch1 : f.ch1;
-    const got = foreignRanges(f).map(([a, b]) => [Math.max(ch0, a), Math.min(ch1, b)]).filter(r => r[1] - r[0] >= 0.5);
-    got.forEach(([a, b]) => {
-      const mine = live(r => r.kind === 'range' && r.featureId === f.id).some(r => Math.abs(r.from - a) < 0.2 && Math.abs(r.to - b) < 0.2);
-      if (!mine) records.push({ id: uid(), at: (lg && lg.updated_at) || new Date().toISOString(), by: (lg && lg.inspected_by) || 'office', kind: 'range', featureId: f.id, from: a, to: b, line: f.line, sub: f.sub, ch: a, pos: null, imported: true });
+    const max = f.ladder.length - 1;
+    const [ch0, ch1] = extentEnds(f);
+    const got = foreignStaged(f).map(([a, b, k]) => [Math.max(ch0, a), Math.min(ch1, b), k]).filter(r => r[1] - r[0] >= 0.5);
+    got.forEach(([a, b, k]) => {
+      const mine = live(r => r.kind === 'range' && r.featureId === f.id).some(r => Math.abs(r.from - a) < 0.2 && Math.abs(r.to - b) < 0.2 && (r.stage == null ? max : r.stage) === k);
+      if (!mine) records.push({ id: uid(), at: (lg && lg.updated_at) || new Date().toISOString(), by: (lg && lg.inspected_by) || 'office', kind: 'range', featureId: f.id, from: a, to: b, stage: k, stageName: f.ladder[k], line: f.line, sub: f.sub, ch: a, pos: null, imported: true });
     });
     if (got.length) saveRecords();
   }
+  // Highest stage at each point, as segments [{a, b, s}] over [ch0, ch1].
+  function segmentsOf(items, ch0, ch1) {
+    const xs = [ch0, ch1];
+    items.forEach(([a, b]) => { if (a > ch0 && a < ch1) xs.push(a); if (b > ch0 && b < ch1) xs.push(b); });
+    const pts = [...new Set(xs.map(x => Math.round(x * 100) / 100))].sort((x, y) => x - y);
+    const segs = [];
+    for (let i = 0; i < pts.length - 1; i++) {
+      const a = pts[i], b = pts[i + 1], mid = (a + b) / 2;
+      let s = 0;
+      items.forEach(([p, q, k]) => { if (p <= mid && q >= mid && k > s) s = k; });
+      if (!s) continue;
+      const last = segs[segs.length - 1];
+      if (last && last.s === s && Math.abs(last.b - a) < 0.5) last.b = b; else segs.push({ a, b, s });
+    }
+    return segs;
+  }
   function coverOf(f) {
     if (!rangeable(f)) return null;
+    const max = f.ladder.length - 1;
     const pieces = (f.absorbed && f.absorbed.length) ? [f, ...f.absorbed] : [f];
-    const recs = [];
-    const foreign = [];
-    let hasFullStage = false;
-    let maxLastAt = null;
-
+    const items = [], recs = [];
+    let foreignN = 0, lastAt = null;
+    const later = at => { if (at && (!lastAt || at > lastAt)) lastAt = at; };
     pieces.forEach(p => {
-      const pRecs = live(r => r.kind === 'range' && r.featureId === p.id);
-      recs.push(...pRecs);
+      const pmax = p.ladder.length - 1;
+      const on = k => Math.min(max, k == null ? max : k === pmax ? max : k);
+      live(r => r.kind === 'range' && r.featureId === p.id).forEach(r => { recs.push(r); items.push([r.from, r.to, on(r.stage)]); later(r.at); });
       const own = ownSeen(p.id);
-      if (own && own.stage >= p.ladder.length - 1) {
-        hasFullStage = true;
-        const [p0, p1] = extentEnds(p);
-        recs.push({ from: p0, to: p1, at: own.at });
+      if (own && own.stage > 0) { const [p0, p1] = extentEnds(p); items.push([p0, p1, on(own.stage)]); recs.push({ from: p0, to: p1, at: own.at, stage: own.stage, whole: true }); later(own.at); }
+      const fr = foreignStaged(p);
+      if (fr.length) {
+        foreignN += fr.length;
+        fr.forEach(([a, b, k]) => items.push([a, b, on(k)]));
+        const lg = legacy[p.id];
+        later(lg && (lg.updated_at || (lg.date || '').replace(' ', 'T')));
       }
-      const pForeign = foreignRanges(p);
-      foreign.push(...pForeign);
-      const lg = legacy[p.id];
-      const pLast = pRecs.map(r => r.at).concat(own ? [own.at] : []).concat(pForeign.length && lg ? [lg.updated_at || (lg.date || '').replace(' ', 'T')] : []).filter(Boolean).sort().pop();
-      if (pLast && (!maxLastAt || pLast > maxLastAt)) maxLastAt = pLast;
     });
-
-    if (!recs.length && !foreign.length && !hasFullStage) return null;
-
-    const ch0 = f.built ? f.built.ch0 : f.ch0;
-    const ch1 = f.built ? f.built.ch1 : f.ch1;
-    const list = recs.map(r => [r.from, r.to]).concat(foreign).map(([a, b]) => [Math.max(ch0, Math.min(a, b)), Math.min(ch1, Math.max(a, b))]).filter(r => r[1] > r[0]);
-    if (hasFullStage && (!f.absorbed || !f.absorbed.length)) list.push([ch0, ch1]);
-    const ranges = mergeRanges(list);
-    const m = ranges.reduce((n, [a, b]) => n + b - a, 0);
+    if (!items.length) return null;
+    const [ch0, ch1] = extentEnds(f);
+    const clipped = items.map(([a, b, k]) => [Math.max(ch0, Math.min(a, b)), Math.min(ch1, Math.max(a, b)), k]).filter(r => r[1] > r[0] && r[2] > 0);
+    const segs = segmentsOf(clipped, ch0, ch1);
     const len = ch1 - ch0;
-    return { ranges, m, len, full: m >= len - 1, lastAt: maxLastAt, records: recs, foreign: foreign.length };
+    const byStage = [], mAt = [];
+    for (let k = 0; k <= max; k++) {
+      byStage[k] = k === 0 ? [[ch0, ch1]] : mergeRanges(segs.filter(g => g.s >= k).map(g => [g.a, g.b]));
+      mAt[k] = k === 0 ? len : byStage[k].reduce((n, [a, b]) => n + b - a, 0);
+    }
+    let floor = 0;
+    for (let k = 1; k <= max; k++) if (mAt[k] >= len - 1) floor = k;
+    const top = segs.reduce((n, g) => Math.max(n, g.s), 0);
+    if (!top) return null;
+    return { ranges: byStage[max], m: mAt[max], len, full: mAt[max] >= len - 1, lastAt, records: recs, foreign: foreignN, segs, byStage, mAt, top, floor, max };
   }
-  function addRange(fid, from, to, pos) {
+  // A length at a stage (the last stage when none is given).
+  function addRange(fid, from, to, pos, stage) {
     let f = data.byId[fid];
     if (f && f.absorbedInto) { fid = f.absorbedInto; f = data.byId[fid]; }
     if (!f || !rangeable(f)) return null;
-    const ch0 = f.built ? f.built.ch0 : f.ch0;
-    const ch1 = f.built ? f.built.ch1 : f.ch1;
+    const max = f.ladder.length - 1;
+    const k = stage == null ? max : Math.max(1, Math.min(max, Math.round(stage)));
+    const [ch0, ch1] = extentEnds(f);
     const a = Math.max(ch0, Math.min(from, to)), b = Math.min(ch1, Math.max(from, to));
     if (!(b - a >= 0.5)) return null;
-    return addRecord({ kind: 'range', featureId: fid, from: Math.round(a * 10) / 10, to: Math.round(b * 10) / 10, line: f.line, sub: f.sub, ch: a, pos: pos || null });
+    return addRecord({ kind: 'range', featureId: fid, from: r1(a), to: r1(b), stage: k, stageName: f.ladder[k], line: f.line, sub: f.sub, ch: a, pos: pos || null });
   }
 
-  
   // ------------------------------------------------ as-built extents
   // A feature built longer or shorter than the design. Design ends f.ch0/f.ch1 are never changed.
   // The latest live extent record wins. Zero or negative length is rejected.
@@ -1221,12 +1568,12 @@
     const cov = coverOf(f);
     if (cov) {
       res.cover = cov;
-      if (cov.full) Object.assign(res, { s: max, best: max, fill: 'solid', partBuilt: false, stalled: false, bucket: 'done' });
+      if (cov.full) Object.assign(res, { s: max, best: max, fill: 'solid', partBuilt: false, stalled: false, bucket: 'done', floor: max });
       else {
         const stl = !!cov.lastAt && (Date.now() - new Date(cov.lastAt).getTime()) > 182 * 864e5;
-        // the ranges are the authority: an office row's 'Concreted' must not read as finished on a short ladder
-        const cap = Math.max(0, max - 1);
-        Object.assign(res, { s: res.s == null ? null : Math.min(res.s, cap), best: Math.min(Math.max(best, 1), cap), partBuilt: true, stalled: stl, fill: 'ranges', bucket: stl ? 'stalled' : 'moving', lastAt: [lastAt, cov.lastAt].filter(Boolean).sort().pop() });
+        // the ranges are the authority: a part finished run is not finished, whatever the office row's status says
+        const cap = Math.max(0, max - 1), top = Math.min(cov.top, cap);
+        Object.assign(res, { s: top, best: Math.min(Math.max(top, c == null ? 0 : c, 1), cap), floor: cov.floor, partBuilt: true, stalled: stl, fill: 'ranges', bucket: stl ? 'stalled' : 'moving', lastAt: [lastAt, cov.lastAt].filter(Boolean).sort().pop() });
       }
     }
     return res;
@@ -1235,18 +1582,33 @@
   // ------------------------------------------------ progress overview
   // Completion, not "part-built": structures that are a single place (culverts, descents, riprap) are
   // counted; ditches and drains that run along the line are measured by length. The two are never added.
-  const isSpan = f => f.kind === 'linear' || f.kind === 'buried';
-  const TYPE_LABEL = { PC: 'Pipe culverts', BC: 'Box culverts', CC: 'Cattle crossings', T16: 'Underpass water passages', WD: 'Water descents', 'D-SD': 'Slope descents', BRG: 'Railway bridges', OP: 'Road overbridges' };
+  const isSpan = f => f.kind === 'linear' || f.kind === 'buried' || f.kind === 'net';
+  const TYPE_LABEL = { RDS: 'Road riprap dissipators', RPC: 'Road culverts', CP: 'Collector pipes', CB: 'Connection boxes', MH: 'Manholes', MHG: 'Grid-cover manholes', PO: 'Outlet pipes', PC: 'Pipe culverts', BC: 'Box culverts', CC: 'Cattle crossings', T16: 'Underpass water passages', WD: 'Water descents', 'D-SD': 'Slope descents', BRG: 'Railway bridges', OP: 'Road overbridges' };
   // The drainage type of a feature, as a tab: 'Type 9 shoulder ditch', 'Box culverts'.
   function typeOf(f) {
     const span = isSpan(f);
     if (span && /^CH-/.test(f.code || '')) return { key: 'CH', label: 'Diversion channels', span };
     if (span && f.code === 'MD') return { key: 'MD', label: 'Approach and earth toe ditches', span };
+    if (f.road) return span ? { key: 'RD', label: 'Road drainage', span } : { key: 'RD.' + f.code, label: TYPE_LABEL[f.code] || f.catLabel, span };
     if (span) return { key: f.code || f.catKey, label: f.name, span };
     return { key: (f.code || f.catKey) + '.pt', label: TYPE_LABEL[f.code] || f.catLabel, span };
   }
   function progressOf(feats) {
-    const o = { pts: { n: 0, done: 0 }, lin: { n: 0, done: 0, m: 0, doneM: 0 }, part: 0, stalled: 0 };
+    // lin.atLeast: metres that have reached each stage (by the stage's name, in ladder order in lin.names)
+    // lin.ofLen: the length of the ditches whose ladder has that stage (what its percentage is of)
+    const o = { pts: { n: 0, done: 0 }, lin: { n: 0, done: 0, m: 0, doneM: 0, atLeast: {}, ofLen: {}, names: [] }, part: 0, stalled: 0 };
+    const addAt = (f, k, m, len) => {
+      const n = f.ladder[k];
+      if (!(n in o.lin.atLeast)) {
+        o.lin.ofLen[n] = 0;
+        // keep each ladder's order: after the stage before it, if that one is listed
+        const prev = k > 1 ? o.lin.names.indexOf(f.ladder[k - 1]) : -1;
+        o.lin.names.splice(prev >= 0 ? prev + 1 : o.lin.names.length, 0, n);
+        o.lin.atLeast[n] = 0;
+      }
+      o.lin.atLeast[n] += m;
+      o.lin.ofLen[n] += len;
+    };
     feats.forEach(f => {
       if (f.absorbedInto) return;
       const st = statusOf(f);
@@ -1254,9 +1616,14 @@
       if (st.bucket === 'moving') o.part++;
       if (st.bucket === 'stalled') { o.part++; o.stalled++; }
       if (isSpan(f)) {
-        const len = f.built ? (f.built.ch1 - f.built.ch0) : (f.ch1 - f.ch0);
+        // a drain that turns or runs off from the line: its own length, not its chainage
+        const len = f.built ? (f.built.ch1 - f.built.ch0) : f.len || (f.ch1 - f.ch0);
         o.lin.n++; o.lin.m += len;
         if (st.cover) o.lin.doneM += st.cover.m; else if (st.bucket === 'done') o.lin.doneM += len;
+        for (let k = 1; k < f.ladder.length; k++) {
+          const m = st.cover ? st.cover.mAt[k] : st.bucket === 'done' ? len : 0;
+          addAt(f, k, m, len);
+        }
         if (st.bucket === 'done') o.lin.done++;
       } else { o.pts.n++; if (st.bucket === 'done') o.pts.done++; }
     });
@@ -1378,11 +1745,11 @@
 
   window.DI = {
     LINES, SUBS, LANES, LANE_OFFSET, CAT_ORDER, data,
-    init, hasData, subAt, featuresNear, loadIRs, claimOf, migrateCulvertStages,
+    init, hasData, subAt, featuresNear, loadIRs, claimOf, migrateCulvertStages, migrateStageNames, stageByName, legacyStage, ladderKind, LADDER_INSITU, LADDER_PRECAST, LADDER_UNLINED, LADDER_FRENCH,
     fmtCh, fmtPlus, parseCh, fmtDate, fmtTime, monthsBetween, esc, DAYS, MONTHS,
     inspector, setInspector, addRecord, voidRecord, live, recordsFor, seenOf, ownSeen, openDefects,
     designChanges, statusOf, drafts, saveDraft, putPhoto, getPhoto, uid, loadLegacy, mirrorLegacy,
-    loadSections, sectionAt, loadT9Schedule, hasT9Schedule, rangeable, coverOf, addRange, rangeNote, parseRangeNote, extentNote, parseExtentNote, foreignExtent, adoptForeignExtent, applyExtents, extentOf, addExtent, extentEnds, addJoin, detectJoins, applyJoins, isSpan, typeOf, progressOf, typeProgress, T9_SCHEDULE_ON, refs, refsNear, refById, REF_KIND, loadHeights, hasHeights, heightAt, T9_RULES, t9Rule, setT9Rule, t9Check,
+    loadSections, sectionAt, loadT9Schedule, hasT9Schedule, rangeable, coverOf, addRange, rangeNote, parseRangeNote, stageNote, parseStageNote, noteMetres, parseExecutedNote, foreignStaged, extentNote, parseExtentNote, foreignExtent, adoptForeignExtent, applyExtents, extentOf, addExtent, extentEnds, addJoin, detectJoins, applyJoins, isSpan, typeOf, progressOf, typeProgress, T9_SCHEDULE_ON, refs, refsNear, refById, REF_KIND, areasAt, isArea, loadConnectors, hasConnectors, endsOf, joinsOf, geomOf, laneOf, loadNetworks, hasNetworks, roadDrainage, roadJoinsOf, LADDER_BPIPE, loadHeights, hasHeights, heightAt, T9_RULES, t9Rule, setT9Rule, t9Check,
     PRESETS, presetOf, applyBase, baseRecords, correctBase, addBase, deleteBase, verifyBase, unverifyBase, exportGeo, exportCorrections, importRecords,
     project, pointAt, laneOf, savePosition, lastPosition, csvCell,
     get records() { return records; }

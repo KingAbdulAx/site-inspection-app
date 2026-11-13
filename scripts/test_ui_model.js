@@ -95,7 +95,7 @@ section('Type 9 schedule from letter 4218', () => {
   DI.loadT9Schedule(j, DI.T9_SCHEDULE_ON);
   ok(DI.data.bySub.DWKZ.length === n0 + sched.length, 'loading twice adds nothing more');
   const p = sched[0];
-  ok(p.code === 'T9' && p.sched.src.includes('4218') && p.ladder.join() === 'Not started,Completed' && (p.side === 'L' || p.side === 'R'), 'a piece is a Type 9 with a two-stage ladder (precast, reported when done)');
+  ok(p.code === 'T9' && p.sched.src.includes('4218') && p.ladder.join() === 'Not started,Excavation,Blinding,Placed,Mortared' && (p.side === 'L' || p.side === 'R'), 'a piece is a Type 9 on the precast ladder');
   ok(sched.every(f => f.ch1 - f.ch0 >= 5 && f.offset === (f.side === 'L' ? 3.5 : -3.5)), 'pieces are at least 5 m and on the platform edge');
   // every station of every S02 stretch (off the bridges) is covered by a drawn or scheduled Type 9, on either side
   const rows = DI.data.heights.DWKZ, t9 = DI.data.bySub.DWKZ.filter(f => f.code === 'T9');
@@ -107,7 +107,7 @@ section('Type 9 schedule from letter 4218', () => {
   ok(after < before * 0.2, 'the red "not drawn" length at 1.8 m falls from ' + before.toFixed(1) + ' to ' + after.toFixed(1) + ' km');
   // progress by completed length
   const big = sched.find(f => f.ch1 - f.ch0 >= 100);
-  ok(DI.rangeable(big) && !DI.rangeable(DI.data.bySub.DWKZ.find(f => f.code === 'T12')), 'Type 9 runs are tracked by length, other ditches are not');
+  ok(DI.rangeable(big) && DI.rangeable(DI.data.bySub.DWKZ.find(f => f.code === 'T12')) && !DI.rangeable(DI.data.bySub.DWKZ.find(f => f.code === 'BC')), 'every ditch along the line is tracked by length; a culvert is not');
   ok(!DI.coverOf(big) && DI.statusOf(big).bucket === 'none', 'nothing completed yet');
   const mid = (big.ch0 + big.ch1) / 2;
   const r1 = DI.addRange(big.id, big.ch0, mid);
@@ -120,14 +120,14 @@ section('Type 9 schedule from letter 4218', () => {
   ok(!DI.statusOf(big).cover.full && DI.statusOf(big).cover.ranges.length === 1, 'undoing the last one takes its length back');
   DI.voidRecord(r1.id);
   ok(!DI.coverOf(big), 'all undone: not started again');
-  DI.addRecord({ kind: 'stage', featureId: big.id, stage: 1 });
-  ok(DI.coverOf(big).full && DI.statusOf(big).bucket === 'done', 'a Completed stage on the whole run counts as all of it');
-  ok(DI.addRange(big.id, big.ch0, big.ch0 + 0.2) === null && DI.addRange(DI.data.bySub.DWKZ.find(f => f.code === 'T12').id, 0, 50) === null, 'a sliver, or a ditch that is not Type 9, saves nothing');
+  DI.addRecord({ kind: 'stage', featureId: big.id, stage: big.ladder.length - 1 });
+  ok(DI.coverOf(big).full && DI.statusOf(big).bucket === 'done', 'a finished stage on the whole run counts as all of it');
+  ok(DI.addRange(big.id, big.ch0, big.ch0 + 0.2) === null && DI.addRange(DI.data.bySub.DWKZ.find(f => f.code === 'BC').id, 0, 50) === null, 'a sliver, or a culvert, saves nothing');
   const drawn = DI.data.bySub.DWKZ.find(f => f.code === 'T9' && !f.sched && f.ch1 - f.ch0 > 50);
   DI.addRange(drawn.id, drawn.ch0, drawn.ch0 + 30);
   ok(DI.statusOf(drawn).cover.m > 29 && DI.statusOf(drawn).bucket === 'moving', 'a drawn Type 9 takes ranges too');
-  const rec = DI.addRecord({ kind: 'stage', featureId: p.id, stage: 1 });
-  ok(DI.seenOf(p.id) && DI.seenOf(p.id).stage === 1, 'a piece takes a Completed record');
+  const rec = DI.addRecord({ kind: 'stage', featureId: p.id, stage: p.ladder.length - 1 });
+  ok(DI.seenOf(p.id) && DI.seenOf(p.id).stage === p.ladder.length - 1, 'a piece takes a finished record');
   DI.voidRecord(rec.id);
   const geo = DI.exportGeo('DWKZ');
   ok(!(geo.features || []).some(g => /^t9s_/.test((g.properties || {}).id || '')), 'scheduled pieces are not exported as base data');
@@ -455,6 +455,159 @@ section('Phase 4: Automatic joins when spans overlap', () => {
     ok(DI.data.byId[id].absorbedInto === null, 'undoing join clears absorbedInto on absorbed piece');
   });
   ok(fA.built === null, 'undoing extent restores original null built state');
+});
+
+
+section('Phase 5: stages by construction method, and by length for every ditch', () => {
+  const KZ = DI.data.bySub.KZDR, DW = DI.data.bySub.DWKZ;
+  const t12 = KZ.find(f => f.code === 'T12' && f.ch1 - f.ch0 > 200 && !DI.coverOf(f));
+  const t4 = DW.find(f => f.code === 'T4' && f.ch1 - f.ch0 > 50 && !DI.coverOf(f));
+  const t6 = DW.find(f => f.code === 'T6' && f.kind === 'buried');
+  const wd = DW.find(f => f.code === 'WD');
+  ok(t12.ladder.join('>') === 'Not started>Excavation>Surface prep>Formwork>Reinforcement>Cast>Completed / approved', 'cast in situ: formwork before reinforcement, then cast, then completed / approved');
+  ok(t4.ladder.join('>') === 'Not started>Excavation>Profiling', 'unlined: excavation, then profiling');
+  ok(t6 && t6.ladder.length === 9 && t6.ladder[2] === 'Stone dust bedding' && t6.ladder[8] === 'Geotextile wrapped' && DI.rangeable(t6), 'Type 6 French drain: eight stages, tracked by length');
+  ok(wd.ladder.join('>') === 'Not started>Excavation>Blinding>Placed>Mortared', 'chutes are precast: excavation, blinding, placed, mortared');
+  // stages by length
+  const a = t12.ch0, L = t12.ch1 - t12.ch0;
+  const rA = DI.addRange(t12.id, a, a + 150, null, 1);   // excavated 150 m
+  const rB = DI.addRange(t12.id, a, a + 80, null, 3);    // formwork on the first 80 m
+  let st = DI.statusOf(t12), c = st.cover;
+  ok(c && Math.round(c.mAt[1]) === 150 && Math.round(c.mAt[3]) === 80 && Math.round(c.mAt[2]) === 80 && c.m === 0, 'a higher stage counts at every stage below it: excavated 150, formwork 80, finished 0');
+  ok(st.bucket === 'moving' && st.s === 3 && c.floor === 0 && c.segs.length === 2, 'part-built at Formwork, two lengths');
+  const lg = JSON.parse(store.KMD_DRAINAGE_INSPECTIONS_SEC03_V1)[t12.id];
+  ok(lg.status === 'Rebar / Shuttering' && /\[stages Excavation: [\d.]+ to [\d.]+; Formwork: [\d.]+ to [\d.]+\]/.test(lg.notes) && !/done/.test(lg.notes), 'the cloud row: the furthest stage as status, each length under its stage in the notes: ' + lg.notes);
+  const back = DI.parseStageNote(lg.notes);
+  ok(back.length === 2 && back[0].name === 'Excavation' && Math.round(back[0].b - back[0].a) === 70 && back[1].name === 'Formwork', 'the note reads back');
+  // the whole stretch at a stage, then a finished part
+  const rW = DI.addRecord({ kind: 'stage', featureId: t12.id, stage: 1 });
+  c = DI.coverOf(t12);
+  ok(Math.round(c.mAt[1]) === Math.round(L) && c.floor === 1 && Math.round(c.mAt[3]) === 80, 'the whole stretch excavated, the first 80 m still at formwork');
+  const rC = DI.addRange(t12.id, a, a + 40);
+  c = DI.coverOf(t12);
+  ok(Math.round(c.m) === 40 && !c.full && Math.round(c.mAt[5]) === 40, 'a range with no stage is finished: 40 m');
+  const lg2 = JSON.parse(store.KMD_DRAINAGE_INSPECTIONS_SEC03_V1)[t12.id];
+  ok(lg2.status === 'Concreted' && /\[done [\d.]+ to [\d.]+\]/.test(lg2.notes) && !/T9 done/.test(lg2.notes), 'part finished: Concreted, and the finished part as [done …] (not a Type 9): ' + lg2.notes);
+  const p0 = DI.progressOf([t12]);
+  ok(Math.round(p0.lin.atLeast.Excavation) === Math.round(L) && Math.round(p0.lin.atLeast.Formwork) === 80 && Math.round(p0.lin.doneM) === 40 && p0.lin.names.join() === t12.ladder.slice(1).join(), 'Progress has the metres at each stage, in ladder order');
+  [rC, rW, rB, rA].forEach(r => DI.voidRecord(r.id));
+  ok(!DI.coverOf(t12) && JSON.parse(store.KMD_DRAINAGE_INSPECTIONS_SEC03_V1)[t12.id].status === 'Not Started', 'all undone: not started, the row follows');
+  // an office row: a whole-run status, the old executed note, staged notes
+  const KEY = 'KMD_DRAINAGE_INSPECTIONS_SEC02_V1', put = rows => { store[KEY] = JSON.stringify(Object.assign(JSON.parse(store[KEY] || '{}'), rows)); DI.loadLegacy(); };
+  put({ [t4.id]: { status: 'Excavation', notes: '', updated_at: '2026-11-01T10:00:00+00:00', inspected_by: 'office' } });
+  c = DI.coverOf(t4);
+  ok(c && c.floor === 1 && !c.full && DI.statusOf(t4).s === 1, 'an office status with no ranges is the whole run at that stage');
+  const t1 = DW.find(f => f.code === 'T1' && f.ch1 - f.ch0 > 300);
+  const ea = DI.fmtCh(t1.ch0 + 10), eb = DI.fmtCh(t1.ch0 + 110);
+  put({ [t1.id]: { status: 'Concreted', notes: 'Ditch progress T1 30/09/26 · 100 of ' + Math.round(t1.ch1 - t1.ch0) + ' m executed (' + ea + '–' + eb + ')', updated_at: '2026-10-01T10:00:00+00:00', inspected_by: 'Ditch progress T1 30/09/26' } });
+  c = DI.coverOf(t1);
+  ok(c && Math.round(c.mAt[5]) === 100 && c.m === 0 && c.floor === 0, 'an older import row ("100 m executed (a–b)") reads as 100 m cast, not the whole run');
+  // a phone adds a part on top of an office row: the row it writes still has the office's stages
+  const r6 = DI.addRange(t1.id, t1.ch0 + 200, t1.ch0 + 260, null, 1);
+  const lg3 = JSON.parse(store[KEY])[t1.id];
+  const sn = DI.parseStageNote(lg3.notes);
+  ok(lg3.source === 'walk' && sn.some(x => x.name === 'Cast' && Math.round(x.b - x.a) === 100) && sn.some(x => x.name === 'Excavation' && Math.round(x.b - x.a) === 60), 'adding to an office row keeps its cast 100 m: ' + lg3.notes);
+  DI.voidRecord(r6.id);
+  // old records on the old ladders say the same thing on the new ones
+  const rOld = { id: 'old-1', at: '2026-10-01T00:00:00Z', by: 'x', kind: 'stage', featureId: t12.id, stage: 3, stageName: 'Rebar' };
+  const rOld2 = { id: 'old-2', at: '2026-10-01T00:00:00Z', by: 'x', kind: 'stage', featureId: t4.id, stage: 1, stageName: 'Excavated' };
+  const t9p = DW.find(f => f.sched);
+  const rOld3 = { id: 'old-3', at: '2026-10-01T00:00:00Z', by: 'x', kind: 'stage', featureId: t9p.id, stage: 1, stageName: 'Completed' };
+  DI.importRecords([rOld, rOld2, rOld3]);
+  ok(DI.migrateStageNames() === 3, 'three old stage records migrated');
+  const m1 = DI.records.find(r => r.id === 'old-1'), m2 = DI.records.find(r => r.id === 'old-2'), m3 = DI.records.find(r => r.id === 'old-3');
+  ok(m1.stageName === 'Reinforcement' && m1.stage === 4 && m1.wasStage.name === 'Rebar', 'old Rebar is Reinforcement now (formwork comes first)');
+  ok(m2.stageName === 'Excavation' && m2.stage === 1, 'old Excavated is Excavation');
+  ok(m3.stage === t9p.ladder.length - 1 && m3.stageName === 'Mortared', 'a Type 9 piece Completed on the old two-stage ladder is Mortared (finished)');
+  ok(DI.migrateStageNames() === 0, 'migration runs once');
+  ok(DI.legacyStage(t12, 'Rebar / Shuttering') === 3 && DI.legacyStage(t12, 'Concreted') === 5 && DI.legacyStage(t9p, 'Concreted') === 3 && DI.legacyStage(t4, 'Completed & Approved') === 2, 'database words on each ladder');
+});
+
+
+section('Phase 5b: stations and yards, for reference like bridges', () => {
+  const areas = DI.refs().filter(r => r.area);
+  const st = areas.filter(r => r.kind === 'station'), yd = areas.filter(r => r.kind === 'yard');
+  ok(st.length === 12 && yd.length === 6 && yd.filter(r => r.what === 'maintenance').length === 2, 'twelve stations, four freight yards and two maintenance centres: ' + st.length + ', ' + yd.length);
+  const names = st.map(r => r.name.replace(' Station', '')).join();
+  ok(names === 'Dawanau,Kunya,Dambatta,Kazaure,Durbe,Daura,Shargalle,Mashi,Muduru,Katsina,Daddara,Jibiya', 'the stations in order along the line: ' + names);
+  ok(areas.every(r => r.ch1 > r.ch0 && r.line === 'KM' && DI.SUBS[r.sub] && r.source && r.id), 'each has an extent, a sub-section, its drawing and an id');
+  ok(st.filter(r => r.platform).every(r => r.platform[1] - r.platform[0] > 300 && r.platform[0] >= r.ch0 - 1 && r.platform[1] <= r.ch1 + 1), 'platforms (about 350 m) lie within their station');
+  const kz = DI.areasAt('KM', 83500);
+  ok(kz.length === 1 && kz[0].name === 'Kazaure Station' && kz[0].sub === 'KZDR', 'at 83+500: Kazaure station');
+  ok(DI.areasAt('KM', 80000).some(r => r.name === 'Kazaure freight yard' && r.side === 'R'), 'at 80+000: Kazaure freight yard, on the right');
+  ok(!DI.areasAt('KM', 140000).length, 'open line has none');
+  ok(DI.refById(kz[0].id) === kz[0] && DI.refsNear('KM', 83400, 83600).includes(kz[0]), 'found like any reference structure');
+  ok(st.find(r => /Kunya/.test(r.name)).note.includes('no platform'), 'a station with nothing drawn yet says so');
+  ok(DI.refs().filter(r => r.kind === 'bridge').length === DI.refs().filter(r => r.kind === 'bridge' && !r.area).length, 'bridges are unchanged');
+});
+
+
+section('Phase 6: connectors from the drainage plans', () => {
+  const j = JSON.parse(require('fs').readFileSync(require('path').join(__dirname, '..', 'data/connectors.json'), 'utf8'));
+  const n0 = DI.data.features.length;
+  DI.loadConnectors(j);
+  const conn = DI.data.features.filter(f => f.conn);
+  ok(conn.length > 2000 && DI.data.features.length === n0 + conn.length, 'connection boxes, manholes and outlet pipes are features: ' + conn.length);
+  DI.loadConnectors(j);
+  ok(DI.data.features.filter(f => f.conn).length === conn.length, 'loading twice adds nothing more');
+  const cb = DI.data.features.filter(f => f.code === 'CB'), mh = DI.data.features.filter(f => f.code === 'MH');
+  ok(cb.length > 1500 && cb.every(f => DI.ladderKind(f.ladder) === 'insitu'), 'connection boxes are cast in situ: ' + cb.length);
+  const exits = mh.filter(f => f.conn.exit);
+  ok(exits.length > 10 && exits.length < 40 && exits.every(f => DI.ladderKind(f.ladder) === 'insitu') && mh.filter(f => !f.conn.exit).every(f => DI.ladderKind(f.ladder) === 'precast'), 'manholes are precast, except the one at each outlet: ' + exits.length + ' of ' + mh.length);
+  ok(conn.every(f => f.kind === 'point' && Math.abs(f.offset) < 400 && f.ch0 === f.ch1 && DI.LANES.concat(['cl']).includes(f.lane)), 'each sits at its true offset, in the lane that offset falls in');
+  // a ditch that runs from a dissipator into a connection box, and both ways round
+  const t = DI.data.bySub.KZDR.find(f => f.code === 'T12' && DI.endsOf(f).start && DI.endsOf(f).end);
+  const e = DI.endsOf(t);
+  ok(Math.abs(e.start.ch0 - t.ch0) < 16 && Math.abs(e.end.ch0 - t.ch1) < 16, 'a ditch names what each end runs into, near that end');
+  const back = DI.joinsOf(e.end);
+  ok(back.some(x => x.f === t && x.end === 'end'), 'and the connector names the ditch, at its end');
+  const ds = DI.data.features.find(f => /^D-/.test(f.code) && DI.joinsOf(f).length);
+  ok(ds && !ds.conn && DI.joinsOf(ds).every(x => DI.isSpan(x.f) || x.f.code === 'WD'), 'a dissipator of the plans is the app\'s own, with what runs into it');
+  ok(mh.filter(f => DI.joinsOf(f).some(x => x.end === 'on' && x.f.code === 'T6')).length > mh.length * 0.8, 'manholes sit on their Type 6 runs');
+  const tp = DI.typeProgress('DWKZ');
+  ok(tp.some(x => x.key === 'CB.pt' && x.label === 'Connection boxes' && x.p.pts.n > 400), 'Progress counts connection boxes as a type');
+  // a connector is built like anything else
+  const box = cb.find(f => f.sub === 'DWKZ');
+  DI.addRecord({ kind: 'stage', featureId: box.id, stage: box.ladder.length - 1 });
+  ok(DI.statusOf(box).bucket === 'done', 'a connection box takes a stage record');
+  ok(Object.keys(j.geom).length > 1000 && DI.geomOf(t) && DI.geomOf(t).every(p => p.length === 4), 'ditches have their plan geometry for the plan view');
+});
+
+
+section('Phases 8 and 9: Type 6 networks, road drainage', () => {
+  const j = JSON.parse(require('fs').readFileSync(require('path').join(__dirname, '..', 'data/networks.json'), 'utf8'));
+  const before = DI.data.features.filter(f => f.code === 'T6' && f.kind === 'buried').length;
+  DI.loadNetworks(j);
+  const F = DI.data.features, legs = F.filter(f => /^t6_/.test(f.id)), pipes = F.filter(f => f.code === 'CP');
+  ok(legs.length > 200 && legs.every(f => f.kind === 'buried' && f.len > 0 && DI.ladderKind(f.ladder) === 'french'), 'Type 6 is cut into legs with their own length: ' + legs.length + ' (was ' + before + ' straight runs)');
+  ok(pipes.length > 10 && pipes.every(f => f.ladder === DI.LADDER_BPIPE), 'the yards\' collector pipes are legs too: ' + pipes.length);
+  ok(!F.some(f => f.code === 'T6' && f.kind === 'buried' && !f.net && f.sub === 'DWKZ'), 'the straight runs give way where the network is drawn');
+  const both = legs.filter(f => DI.endsOf(f).start && DI.endsOf(f).end);
+  ok(both.length > legs.length * 0.8 && both.every(f => /^(MH|MHG)$/.test(DI.endsOf(f).start.code)), 'most legs run manhole to manhole: ' + both.length);
+  const mh = DI.endsOf(both[0]).end;
+  ok(DI.joinsOf(mh).some(x => x.f === both[0] && x.end === 'end'), 'and the manhole names the leg that ends at it');
+  const turn = legs.find(f => !DI.rangeable(f) && f.len > 5);
+  ok(turn && turn.ch1 - turn.ch0 < 0.8 * turn.len && DI.geomOf(turn).length >= 1, 'a leg that turns or crosses the line is tracked whole, and drawn with its turns');
+  ok(Math.abs(DI.progressOf([turn]).lin.m - turn.len) < 0.01, 'its length in Progress is its own, not its chainage');
+  ok(F.some(f => /^mh_/.test(f.id) && f.mhName), 'yard manholes come with their names');
+  const named = F.filter(f => f.mhName);
+  ok(named.length > 240 && named.every(f => f.name.includes(f.mhName)) && named.some(f => /^MH\d+\.\d+-[A-Z]+$/.test(f.mhName)), 'manholes keep their drawing names (MH3.3-YDKZ): ' + named.length);
+  ok(legs.filter(f => / → /.test(f.name)).length > legs.length * 0.8, 'a leg is named by its manholes: ' + legs.find(f => / → /.test(f.name)).name);
+  // roads
+  const rd = F.filter(f => f.road);
+  ok(rd.length > 1500 && rd.filter(f => f.kind === 'net').every(f => f.len > 0 && DI.geomOf(f)), 'road drains, with their shape and length: ' + rd.filter(f => f.kind === 'net').length);
+  ok(rd.some(f => f.code === 'RDS' && f.ladder.length === 3) && rd.some(f => f.code === 'RPC'), 'riprap dissipators and road culverts');
+  const ovr = DI.refs().find(r => r.kind === 'overpass' && DI.roadDrainage(r.id).length > 10);
+  ok(ovr && DI.roadDrainage(ovr.id).every(f => f.road === ovr.id), 'a road crossing gathers its drainage: ' + (ovr && ovr.name));
+  const joined = Object.keys(DI.data.roadJoins);
+  const rail = DI.data.byId[joined[0]];
+  ok(joined.length > 40 && !rail.road && DI.roadJoinsOf(rail).every(x => x.f.road && Math.abs(x.ch - (rail.ch0 + rail.ch1) / 2) < (rail.ch1 - rail.ch0) / 2 + 16), 'road drains that end on a railway ditch name it: ' + joined.length + ' ditches');
+  const tp = DI.typeProgress(ovr.sub);
+  ok(tp.some(t => t.key === 'RD' && t.label === 'Road drainage' && t.span && t.p.lin.m > 1000), 'Progress has road drainage, in km');
+  const t4 = rd.find(f => f.code === 'RT4' && /unlined/.test(f.name));
+  ok(t4 && DI.ladderKind(t4.ladder) === 'unlined' && rd.filter(f => /concrete/.test(f.name)).every(f => DI.ladderKind(f.ladder) === (f.code === 'RT9' ? 'precast' : 'insitu')), 'road ditches: unlined type 4 on the unlined stages, concrete ones cast in situ (type 9 precast)');
+  DI.addRecord({ kind: 'stage', featureId: t4.id, stage: t4.ladder.length - 1 });
+  ok(DI.statusOf(t4).bucket === 'done' && Math.abs(DI.progressOf([t4]).lin.doneM - t4.len) < 0.01, 'a road drain takes a stage, and counts its own length');
 });
 
 console.log('\n' + (fail ? 'FAILED: ' : 'ALL PASSED: ') + pass + ' passed, ' + fail + ' failed');

@@ -27,7 +27,7 @@
     ['measured', 'Measured on site', 'GPS or tape, where you stand', '<span class="chip measured">Measured</span>']];
 
   function recLabel(r) {
-    if (r.kind === 'range') return 'Completed ' + DI.fmtCh(r.from) + ' → ' + DI.fmtCh(r.to) + ' · ' + Math.round(r.to - r.from) + ' m';
+    if (r.kind === 'range') return (r.stageName || 'Completed') + ' ' + DI.fmtCh(r.from) + ' → ' + DI.fmtCh(r.to) + ' · ' + Math.round(r.to - r.from) + ' m';
     if (r.kind === 'extent') return 'Built to ' + DI.fmtCh(r.from, 1) + ' → ' + DI.fmtCh(r.to, 1) + ' · ' + Math.round(r.to - r.from) + ' m';
     if (r.kind === 'join') return 'Joined with ' + ((r.absorbed || []).length) + ' overlapping span' + ((r.absorbed || []).length === 1 ? '' : 's');
     if (r.kind !== 'base') return null;

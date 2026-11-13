@@ -53,7 +53,7 @@
   }
   function lenText(f) {
     if (!isSpan(f)) return '';
-    const len = Math.round(f.built ? f.built.len : f.ch1 - f.ch0);
+    const len = Math.round(f.built ? f.built.len : f.len || f.ch1 - f.ch0);
     return len.toLocaleString('en-GB') + ' m' + diffTag(f);
   }
   function chText(f, arrow) {
@@ -122,7 +122,9 @@
   DA.setTheme = setTheme;
 
   // -------------------------------------------------------- position
-  function lineFeatures() { return DI.data.features.filter(f => f.line === S.pos.line && !f.absorbedInto); }
+  // Road drainage stays off the strip and its lists (it runs off across the land); the road crossing's sheet
+  // and the plan view gather it.
+  function lineFeatures() { return DI.data.features.filter(f => f.line === S.pos.line && !f.absorbedInto && !f.road); }
   DA.lineFeatures = lineFeatures;
 
   function setHand(line, ch) {
@@ -226,7 +228,9 @@
     else side = p.side + ' ' + Math.round(Math.abs(p.offset)) + ' m';
     if (p.farFromLine) { youLbl = 'GPS ' + (p.farFromLine / 1000).toFixed(1) + ' km off line'; }
     const tri = p.facing === 'decreasing' ? '▼' : '▲';
-    return '<div class="pos-line"><span>' + esc(L.short) + '</span>' + (p.sub ? '<span class="chip-sub">' + p.sub + '</span>' : '<span class="chip-sub">NO DATA</span>') + (refChip(true) || fillChip() || refChip(false)) + '</div>' + gps +
+    // In a station or yard its name takes the line's place (the line is the main line there anyway)
+    const stc = stationChip();
+    return '<div class="pos-line">' + (stc || '<span>' + esc(L.short) + '</span>') + (p.sub ? '<span class="chip-sub">' + p.sub + '</span>' : '<span class="chip-sub">NO DATA</span>') + (refChip(true) || fillChip() || refChip(false)) + '</div>' + gps +
       '<button class="pos-ch tap' + (p.source === 'hand' ? ' hand' : '') + '" data-act="keypad" aria-label="Chainage">' + chHtml + '</button>' +
       '<button class="pos-you tap" data-act="facing"><div class="lbl">' + esc(youLbl) + '</div><div class="side">' + side + '</div>' +
       '<div class="facing">FACING <span class="tri">' + tri + '</span> <b>' + p.facing + '</b></div></button>';
@@ -261,20 +265,63 @@
   function refChip(bridge) {
     const p = S.pos;
     if (p.tier === 'poor' && p.source !== 'anchor') return '';
-    const r = DI.refsNear(p.line, p.ch - (p.acc || 0) / 2 - 10, p.ch + (p.acc || 0) / 2 + 10).filter(x => (x.kind === 'bridge') === bridge)[0];
+    const r = DI.refsNear(p.line, p.ch - (p.acc || 0) / 2 - 10, p.ch + (p.acc || 0) / 2 + 10).filter(x => !x.area && (x.kind === 'bridge') === bridge)[0];
     if (!r) return '';
     return '<span class="chip-ref" title="' + esc(r.label) + '">' + (r.kind === 'bridge' ? 'ON ' : '') + esc(r.name || r.short) + '</span>';
+  }
+  // In a station's track area or a yard's extent: say which, in the header.
+  function stationChip() {
+    const p = S.pos;
+    if (p.tier === 'poor' && p.source !== 'anchor') return '';
+    const r = DI.areasAt(p.line, p.ch)[0];
+    if (!r) return '';
+    return '<span class="chip-ref" title="' + esc(r.label + ' · ' + DI.fmtCh(r.ch0) + '–' + DI.fmtCh(r.ch1)) + '" style="flex:none;max-width:none">' + esc(r.name.replace(/ Station$/, '').replace(/ freight yard$/, ' YD').replace(/ maintenance centre$/, ' DEPOT').toUpperCase()) + '</span>';
+  }
+  // A station or a yard: where it runs, its platforms and buildings, from the STATIONS_YARDS drawing.
+  function openArea(r) {
+    const len = Math.round(r.ch1 - r.ch0);
+    const sideW = sd => sd === 'L' ? 'left' : sd === 'R' ? 'right' : sd === 'both' ? 'both sides' : '';
+    let h = '<div class="fhead"><span class="side-badge" style="background:var(--ref);color:var(--on-ink);display:flex;align-items:center;justify-content:center;width:52px;height:52px;font:700 12px/1 var(--f-cond)">' + (r.kind === 'station' ? 'STN' : r.short) + '</span><div style="min-width:0"><div class="t1"><span>' + esc(r.name) + '</span></div>' +
+      '<div style="font:500 17px/1.3 var(--f-sans);color:var(--ink-2);margin-top:2px">' + esc(r.label) + ' · ' + r.sub + '</div></div></div>';
+    h += '<div class="kv mt16">';
+    h += '<div class=\"k\">' + (r.kind === 'station' ? 'Tracks (loops, sidings)' : 'Extent') + '</div><div class=\"v\">' + DI.fmtCh(r.ch0) + ' → ' + DI.fmtCh(r.ch1) + ' · ' + len.toLocaleString('en-GB') + ' m</div>';
+    if (r.platform) h += '<div class=\"k\">Platforms</div><div class=\"v\">' + DI.fmtCh(r.platform[0]) + ' → ' + DI.fmtCh(r.platform[1]) + ' · ' + sideW(r.platform_side) + '</div>';
+    if (r.limits) h += '<div class=\"k\">Buildings and access</div><div class=\"v\">' + DI.fmtCh(r.limits[0]) + ' → ' + DI.fmtCh(r.limits[1]) + ' · ' + sideW(r.side) + '</div>';
+    if (r.kind === 'yard' && r.off) h += '<div class=\"k\">Side</div><div class=\"v\">' + sideW(r.side) + ', ' + Math.round(Math.min(Math.abs(r.off[0]), Math.abs(r.off[1]))) + '–' + Math.round(Math.max(Math.abs(r.off[0]), Math.abs(r.off[1]))) + ' m off the main line</div>';
+    h += '</div>';
+    if (r.note) h += '<div class="note mt8">' + esc(r.note) + '.</div>';
+    const n = DI.data.features.filter(f => f.line === r.line && f.ch1 >= r.ch0 && f.ch0 <= r.ch1).length;
+    h += '<div class="note mt8">From ' + esc(r.source) + ', for finding your way. ' + n + ' drainage structure' + (n === 1 ? '' : 's') + ' on the drawings lie' + (n === 1 ? 's' : '') + ' within it.</div>';
+    h += '<button class="btn primary mt16" data-act="plan-open" data-line="' + r.line + '" data-a="' + Math.round(r.ch0 - 100) + '" data-b="' + Math.round(r.ch1 + 100) + '" data-title="' + esc(r.name) + '" style="min-height:52px">' + I.icon('layers') + 'See it in plan, to scale</button>';
+    h += '<button class="btn mt8" data-act="goto-next" data-ch="' + Math.round((r.ch0 + r.ch1) / 2) + '" style="min-height:52px">Show it on the strip</button>';
+    openOverlay(h, 'sheet');
   }
   // What a reference structure is: from the track plan, not something to inspect.
   function openRef(id) {
     const r = DI.refById(id);
     if (!r) return;
+    if (r.area) return openArea(r);
     const len = r.kind === 'bridge' ? ' · ' + Math.round(r.ch1 - r.ch0) + ' m long' : '';
     let h = '<div class="fhead"><span class="side-badge" style="background:var(--ref);color:var(--on-ink);display:flex;align-items:center;justify-content:center;width:52px;height:52px;font:700 13px/1 var(--f-cond)">REF</span><div style="min-width:0"><div class="t1"><span>' + esc(r.name || r.label) + '</span></div>' +
       '<div style="font:500 17px/1.3 var(--f-sans);color:var(--ink-2);margin-top:2px">' + esc(r.label) + '</div></div></div>';
     h += '<div style="font:500 18px/1.4 var(--f-sans);margin:16px 0 6px">' + (r.kind === 'bridge' ? DI.fmtCh(r.ch0) + ' → ' + DI.fmtCh(r.ch1) + len : 'At ' + DI.fmtCh(r.ch != null ? r.ch : (r.ch0 + r.ch1) / 2)) + '</div>';
-    h += '<div class="note">From the track plan (' + esc(r.source || 'TRA-PLAT') + '), for finding your way. It is not a drainage structure: nothing is recorded against it.</div>';
-    h += '<button class="btn mt16" data-act="goto-next" data-ch="' + Math.round((r.ch0 + r.ch1) / 2) + '" style="min-height:52px">Show it on the strip</button>';
+    const rd = DI.roadDrainage(r.id);
+    if (rd.length) {
+      const drains = rd.filter(f => f.kind === 'net'), p = DI.progressOf(rd);
+      const km = m => (m / 1000).toLocaleString('en-GB', { maximumFractionDigits: 2 });
+      h += '<div class="lbl-caps mt16">Its road drainage</div><div class="kv">' +
+        '<div class="k">Drains</div><div class="v">' + drains.length + ' · ' + km(p.lin.m) + ' km<small>' + km(p.lin.doneM) + ' km finished</small></div>' +
+        (p.pts.n ? '<div class="k">Dissipators, culverts</div><div class="v">' + p.pts.n + '<small>' + p.pts.done + ' finished</small></div>' : '') + '</div>';
+      const joins = drains.filter(f => DI.data.roadJoins && Object.values(DI.data.roadJoins).some(l => l.some(x => x.id === f.id)));
+      if (joins.length) h += '<div class="note mt8">' + joins.length + ' of its drains run into the railway\'s ditches.</div>';
+      const chs = rd.map(f => [f.ch0, f.ch1]).flat(), geo = rd.map(f => DI.geomOf(f) || []).flat().map(q => [q[0], q[2]]).flat();
+      const a = Math.min(...chs, ...geo) - 40, b = Math.max(...chs, ...geo) + 40;
+      h += '<button class="btn primary mt16" data-act="plan-open" data-line="' + r.line + '" data-a="' + Math.round(a) + '" data-b="' + Math.round(b) + '" data-title="' + esc('Road ' + (r.name || r.short)) + '" style="min-height:52px">' + I.icon('layers') + 'See its drainage in plan</button>';
+      h += '<div class="lbl-caps mt16">Drains</div><div style="margin:0 -16px">' + drains.slice().sort((x, y) => y.len - x.len).map(f => { const st = DI.statusOf(f); return '<button class="frow" data-act="record" data-id="' + esc(f.id) + '">' + sideBadge(f.side) + '<div class="mid"><div class="t1">' + I.typeIcon(f.icon) + '<span>' + esc(f.name) + '</span></div><div class="t2">' + Math.round(f.len) + ' m</div></div><div class="right">' + meter(f, st) + '</div></button>'; }).join('') + '</div>';
+    }
+    h += '<div class="note">From the track plan (' + esc(r.source || 'TRA-PLAT') + '), for finding your way.' + (rd.length ? ' Its road drainage is from the road drainage drawings.' : ' It is not a drainage structure: nothing is recorded against it.') + '</div>';
+    h += '<button class="btn primary mt16" data-act="plan-open" data-line="' + r.line + '" data-a="' + Math.round(r.ch0 - 100) + '" data-b="' + Math.round(r.ch1 + 100) + '" data-title="' + esc(r.name) + '" style="min-height:52px">' + I.icon('layers') + 'See it in plan, to scale</button>';
+    h += '<button class="btn mt8" data-act="goto-next" data-ch="' + Math.round((r.ch0 + r.ch1) / 2) + '" style="min-height:52px">Show it on the strip</button>';
     openOverlay(h, 'sheet');
   }
   DA.openRef = openRef;
@@ -551,26 +598,67 @@
     const max = f.ladder.length - 1;
     const rel = relText(f, S.pos.ch, S.pos.facing);
     let h = '<div class="fhead">' + sideBadge(f.side, 'xl') + '<div style="min-width:0"><button class="t1" data-act="feature" data-id="' + esc(f.id) + '" style="text-align:left">' + I.typeIcon(f.icon) + '<span>' + esc(f.name) + '</span></button>' +
-      '<div class="t2">' + chHtml(f) + (isSpan(f) ? ' <b class="len">' + lenText(f) + '</b>' : '') + ' ' + certChip(f) + ' <span class="rel">' + esc(rel) + '</span></div>' + quietExtentsHtml(f) + fillRange(f) + '</div></div>';
+      '<div class="t2">' + chHtml(f) + (isSpan(f) ? ' <b class="len">' + lenText(f) + '</b>' : '') + ' ' + certChip(f) + ' <span class="rel">' + esc(rel) + '</span></div>' + quietExtentsHtml(f) + fillRange(f) + '</div></div>' + connHtml(f);
     // A record from the office (the cloud database) says whose it is: a colleague, or a progress chart.
-    const office = st.seen && st.seen.office;
+    const office = st.seen && st.seen.office && !(st.cover && st.cover.records.length);
     h += '<div class="pair mt16"><div class="built"><div class="part"><span class="chip seen">' + (office ? 'Office' : 'Seen by you') + '</span>' + meter(f, { s: st.s == null ? 0 : st.s, c: -1 }, '') +
-      '<div class="stage"><b>' + (st.seen ? esc(f.ladder[st.s]) + ' · ' + DI.fmtDate(st.seen.at) : 'Not yet') + '</b>' +
+      '<div class="stage"><b>' + (st.cover ? (st.cover.full ? esc(f.ladder[max]) : 'Part, furthest ' + esc(f.ladder[st.s])) + (st.cover.lastAt ? ' · ' + DI.fmtDate(st.cover.lastAt) : '') : st.seen ? esc(f.ladder[st.s]) + ' · ' + DI.fmtDate(st.seen.at) : 'Not yet') + '</b>' +
       (office && st.seen.by ? '<div style="flex-basis:100%;font:500 14px/1.3 var(--f-sans);color:var(--ink-3);margin-top:3px">' + esc(st.seen.by) + '</div>' : '') + '</div></div></div>';
     h += '<div class="built"><div class="part"><span class="chip claim">Contractor</span>' + (st.claim ? meter(f, { s: -1, c: st.c }, '') : meter(f, { s: -1, c: -1 }, '')) +
       '<div class="stage"><b>' + (st.claim ? esc(f.ladder[st.c]) + ' <span class="mono" style="font-size:14px;color:var(--ink-3);font-weight:500">IR ' + esc(st.claim.ir) + ' · ' + DI.fmtDate(st.claim.date) + '</span>' : '<span class="muted" style="font-weight:600">No IR</span>') + '</b></div></div></div></div>';
     if (DI.rangeable(f)) h += rangeBlock(f, st);
-    else {
-    h += '<div style="font:700 21px/1.2 var(--f-sans);margin:18px 0 10px;color:var(--ink-2)">What stage is it at now?</div>';
+    else h += stageOptions(f, st, st.s, 'What stage is it at now?');
+    h += '<div class="row-btns mt8"><button class="btn defect" data-act="defect" data-id="' + esc(f.id) + '">' + I.icon('warn') + 'Defect</button>' +
+      '<button class="btn" data-act="photo" data-id="' + esc(f.id) + '">' + I.icon('camera') + 'Photo</button>' +
+      '<button class="btn" data-act="note" data-id="' + esc(f.id) + '">' + I.icon('notes') + 'Note</button></div>';
+    if (isSpan(f)) h += '<button class="btn mt8" data-act="extent-edit" data-id="' + esc(f.id) + '" style="min-height:48px;font-weight:700">' + I.icon('sizes') + 'Built to a different length ›</button>';
+    const pa = Math.round(Math.min(f.ch0, f.ch1) - 150), pb = Math.round(Math.max(f.ch0, f.ch1) + 150);
+    h += '<div class="grid2 mt8"><button class="btn" data-act="plan-open" data-line="' + f.line + '" data-a="' + pa + '" data-b="' + pb + '" data-title="' + esc(f.code || f.name) + ' ' + DI.fmtCh(f.ch0) + '" style="min-height:48px;font-size:16px">' + I.icon('layers') + 'In plan</button>' +
+      '<button class="btn" data-act="feature" data-id="' + esc(f.id) + '" style="min-height:48px;font-size:16px">Everything ›</button></div>';
+    openOverlay(h, 'sheet tall');
+  }
+  // What a ditch runs into at each end, or what runs into a connector: from the drainage plans.
+  function connHtml(f) {
+    if (!DI.hasConnectors()) return '';
+    const row = (lbl, g, sub) => '<button class="conn-row" data-act="record" data-id="' + esc(g.id) + '"><span class="lbl-caps">' + esc(lbl) + '</span>' + I.typeIcon(g.icon) + '<b>' + esc(g.name) + '</b><small>' + esc(sub) + '</small></button>';
+    let h = '';
+    if (f.road) {
+      // a road's drain: its road, and the railway ditch it runs into
+      const ref = f.road !== 'none' ? DI.refById(f.road) : null;
+      h = ref ? '<button class="conn-row" data-act="ref" data-id="' + esc(ref.id) + '"><span class="lbl-caps">Road</span>' + I.typeIcon('bridge') + '<b>' + esc(ref.name || ref.label) + '</b><small>' + esc(ref.label) + ' · ' + DI.fmtCh(ref.ch != null ? ref.ch : ref.ch0) + '</small></button>' : '';
+      Object.entries(DI.data.roadJoins || {}).forEach(([rid, list]) => list.forEach(x => {
+        const g = DI.data.byId[rid];
+        if (x.id === f.id && g) h += row('Runs into', g, DI.fmtCh(x.ch) + ' · ' + (g.side === 'L' ? 'left' : 'right'));
+      }));
+      return h ? '<div class="conn">' + h + '</div>' : '';
+    }
+    if (DI.isSpan(f)) {
+      const e = DI.endsOf(f);
+      const one = (lbl, g, ch) => g ? row(lbl, g, DI.fmtCh(g.ch0)) : '<div class="conn-row none"><span class="lbl-caps">' + esc(lbl) + '</span><small>' + DI.fmtCh(ch) + ' · nothing drawn here: runs on, or an open end</small></div>';
+      h = one('Starts at', e.start, f.ch0) + one('Ends at', e.end, f.ch1);
+      DI.roadJoinsOf(f).forEach(x => { h += row('Road drain in', x.f, DI.fmtCh(x.ch) + (x.f.roadName ? ' · road ' + x.f.roadName : '')); });
+    } else {
+      const j = DI.joinsOf(f);
+      if (!j.length && !f.conn) return '';
+      h = j.length ? j.map(x => row(x.end === 'start' ? 'Start of' : x.end === 'end' ? 'End of' : x.end === 'on' ? 'On' : 'Joins', x.f, DI.fmtCh(x.f.ch0) + (DI.isSpan(x.f) ? ' → ' + DI.fmtCh(x.f.ch1) : '') + ' · ' + (x.f.side === 'L' ? 'left' : x.f.side === 'R' ? 'right' : ''))).join('')
+        : '<div class="conn-row none"><small>Nothing on the plans runs into it within 4 m</small></div>';
+    }
+    return '<div class="conn">' + h + '</div>';
+  }
+  DA.connHtml = connHtml;
+  // The stage choices for a whole structure (or a whole stretch): one up from what was seen, the claim,
+  // no change, and Finished always one tap away; the full ladder behind 'Other stage'.
+  function stageOptions(f, st, s, title) {
+    const max = f.ladder.length - 1, c = st.c;
+    let h = '<div style="font:700 21px/1.2 var(--f-sans);margin:18px 0 10px;color:var(--ink-2)">' + esc(title) + '</div>';
     const opts = [];
-    const s = st.s, c = st.c;
-    if (s != null) {
+    if (s != null && s > 0) {
       if (s < max) {
         const up = s + 1;
         opts.push({ stage: up, sub: 'One up from what you saw' + (c === up ? ' · matches the claim' : '') });
         if (c != null && c > up) opts.push({ stage: c, sub: 'What the contractor claims · IR ' + st.claim.ir });
       }
-      opts.push({ stage: s, sub: 'No change since ' + DI.fmtDate(st.seen.at) });
+      opts.push({ stage: s, sub: st.seen && st.s === s ? 'No change since ' + DI.fmtDate(st.seen.at) : 'No change' });
     } else {
       if (c != null && c > 0) opts.push({ stage: c, sub: 'Matches the claim · IR ' + st.claim.ir });
       opts.push({ stage: 0, sub: 'Nothing built yet' });
@@ -583,40 +671,52 @@
     });
     h += '<button class="opt" data-act="ladder"><span><b>Other stage</b><small>Show all ' + f.ladder.length + '</small></span>' + I.icon('chevDown') + '</button>';
     h += '<div class="ladder hidden" id="fullLadder">' + f.ladder.map((n, i) => '<button class="opt" data-act="stage" data-id="' + esc(f.id) + '" data-stage="' + i + '"><span><b>' + esc(n) + '</b></span>' + (s === i ? '<small>seen</small>' : c === i ? '<small>claimed</small>' : '') + '</button>').join('') + '</div>';
-    }
-    h += '<div class="row-btns mt8"><button class="btn defect" data-act="defect" data-id="' + esc(f.id) + '">' + I.icon('warn') + 'Defect</button>' +
-      '<button class="btn" data-act="photo" data-id="' + esc(f.id) + '">' + I.icon('camera') + 'Photo</button>' +
-      '<button class="btn" data-act="note" data-id="' + esc(f.id) + '">' + I.icon('notes') + 'Note</button></div>';
-    if (isSpan(f)) h += '<button class="btn mt8" data-act="extent-edit" data-id="' + esc(f.id) + '" style="min-height:48px;font-weight:700">' + I.icon('sizes') + 'Built to a different length ›</button>';
-    h += '<button class="btn mt8" data-act="feature" data-id="' + esc(f.id) + '" style="min-height:48px;border:0;background:transparent;font-size:17px;text-decoration:underline">Everything about this feature ›</button>';
-    openOverlay(h, 'sheet tall');
+    return h;
   }
-  // A Type 9 run: how much is done, and one tap (or two chainages) to add more.
+  // Shade of a stage on a bar: lighter early, ink when finished.
+  const stageShade = (k, max) => k >= max ? 1 : 0.18 + 0.5 * (k - 1) / Math.max(1, max - 2);
+  DA.stageShade = stageShade;
+  // A drain along the line: how far each stage has got, the whole stretch in one tap, or a part of it at a
+  // stage, between two chainages.
+  S.rgStage = S.rgStage || {};
   function rangeBlock(f, st) {
-    const ch0 = f.built ? f.built.ch0 : f.ch0, ch1 = f.built ? f.built.ch1 : f.ch1;
-    const cov = st.cover, len = ch1 - ch0, done = cov ? cov.m : 0;
-    const last = cov && cov.ranges.length ? cov.ranges[cov.ranges.length - 1][1] : ch0;
-    const from = last < ch1 - 1 ? last : ch0;
-    const to = S.pos.ch > from + 1 && S.pos.ch <= ch1 ? S.pos.ch : ch1;
+    const [ch0, ch1] = DI.extentEnds(f);
+    const cov = st.cover, len = ch1 - ch0, max = f.ladder.length - 1;
     const ch = v => DI.fmtCh(Math.round(v));
-    let h = '<div style="font:700 21px/1.2 var(--f-sans);margin:18px 0 10px;color:var(--ink-2)">How much is done?</div>';
-    h += '<div class="rg-sum"><b>' + Math.round(done) + ' of ' + Math.round(len) + ' m</b><span>' + Math.round(done / len * 100) + '%</span></div>';
-    h += '<div class="rgbar">' + (cov ? cov.ranges.map(([a, b]) => '<i style="left:' + ((a - f.ch0) / len * 100) + '%;width:' + Math.max(0.8, (b - a) / len * 100) + '%"></i>').join('') : '') + '</div>';
-    if (cov && cov.ranges.length && !cov.full) h += '<div class="rg-list">' + cov.ranges.map(([a, b]) => ch(a) + ' → ' + ch(b) + ' · ' + Math.round(b - a) + ' m').join('<br>') + '</div>';
+    const done = cov ? cov.m : 0;
+    let h = '<div style="font:700 21px/1.2 var(--f-sans);margin:18px 0 10px;color:var(--ink-2)">How far along is it?</div>';
+    h += '<div class="rg-sum"><b>' + Math.round(done) + ' of ' + Math.round(len) + ' m</b><span>' + esc(f.ladder[max]) + ' · ' + Math.round(done / len * 100) + '%</span></div>';
+    h += '<div class="rgbar">' + (cov ? cov.segs.map(g => '<i style="left:' + ((g.a - ch0) / len * 100) + '%;width:' + Math.max(0.8, (g.b - g.a) / len * 100) + '%;opacity:' + stageShade(g.s, max).toFixed(2) + '" title="' + esc(f.ladder[g.s]) + '"></i>').join('') : '') + '</div>';
+    if (cov && !cov.full) {
+      h += '<div class="rg-stages">' + f.ladder.slice(1).map((n, i) => {
+        const k = i + 1, m = cov.mAt[k];
+        return '<div class="' + (m > 0 ? '' : 'muted') + '"><i style="opacity:' + stageShade(k, max).toFixed(2) + '"></i><span>' + esc(n) + '</span><b>' + Math.round(m) + ' m</b></div>';
+      }).join('') + '</div>';
+      h += '<div class="rg-list">' + cov.segs.map(g => ch(g.a) + ' → ' + ch(g.b) + ' · ' + Math.round(g.b - g.a) + ' m · ' + esc(f.ladder[g.s])).join('<br>') + '</div>';
+    }
+    // the whole stretch: the run's own stage is where all of it has got to
+    h += stageOptions(f, st, cov ? cov.floor : st.s, 'The whole stretch, ' + ch(ch0) + ' → ' + ch(ch1));
     if (!(cov && cov.full)) {
-      h += '<button class="opt primary" data-act="range-all" data-id="' + esc(f.id) + '"><span><b>Whole stretch completed</b><small>' + ch(f.ch0) + ' → ' + ch(f.ch1) + ' · ' + Math.round(len) + ' m</small></span>' + I.icon('check') + '</button>';
-      h += '<div class="rg-form"><div class="lbl-caps">Completed from → to</div><div class="rg-row">' +
+      const pick = S.rgStage[f.id] != null ? S.rgStage[f.id] : DI.ladderKind(f.ladder) === 'precast' ? max : Math.min(max, (cov ? cov.floor : 0) + 1);
+      // From: where the picked stage stops; to: where you stand, if that is further on this stretch.
+      const at = cov && cov.byStage[pick] && cov.byStage[pick].length ? cov.byStage[pick] : [];
+      const startAt = at.length && at[0][0] <= ch0 + 1 ? at[0][1] : ch0;
+      const from = startAt < ch1 - 1 ? startAt : ch0;
+      const to = S.pos.ch > from + 1 && S.pos.ch <= ch1 ? S.pos.ch : ch1;
+      h += '<div class="rg-form"><div class="lbl-caps">Or only part of it, at a stage</div>' +
+        '<div class="chips-scroll rg-pick">' + f.ladder.slice(1).map((n, i) => '<button data-act="range-stage" data-id="' + esc(f.id) + '" data-stage="' + (i + 1) + '" class="' + (pick === i + 1 ? 'on' : '') + '">' + esc(n) + '</button>').join('') + '</div>' +
+        '<div class="rg-row">' +
         '<label>From<input id="rgFrom" inputmode="decimal" autocomplete="off" value="' + ch(from) + '"></label><button class="btn here" data-act="range-here" data-target="rgFrom">Here</button>' +
         '<label>To<input id="rgTo" inputmode="decimal" autocomplete="off" value="' + ch(to) + '"></label><button class="btn here" data-act="range-here" data-target="rgTo">Here</button></div>' +
-        '<button class="opt" data-act="range-save" data-id="' + esc(f.id) + '"><span><b>Save this part as completed</b><small>Between the two chainages, on this stretch</small></span></button></div>';
+        '<button class="opt" data-act="range-save" data-id="' + esc(f.id) + '" data-stage="' + pick + '"><span><b>Save this part at ' + esc(f.ladder[pick]) + '</b><small>Between the two chainages, on this stretch</small></span></button></div>';
     }
     return h;
   }
-  function recordRange(fid, from, to) {
-    const r = DI.addRange(fid, from, to, snapPos());
+  function recordRange(fid, from, to, stage) {
+    const r = DI.addRange(fid, from, to, snapPos(), stage);
     if (!r) { toast({ title: 'Nothing saved', sub: 'Give two chainages on this stretch, at least 1 m apart' }); return; }
     closeAll();
-    toast({ title: 'Saved on this phone', sub: 'Completed ' + DI.fmtCh(r.from) + ' → ' + DI.fmtCh(r.to) + ' · ' + Math.round(r.to - r.from) + ' m', undo: () => { DI.voidRecord(r.id); render(); toast({ title: 'Undone', sub: 'The record is kept, marked as withdrawn' }); } });
+    toast({ title: 'Saved on this phone', sub: r.stageName + ' ' + DI.fmtCh(r.from) + ' → ' + DI.fmtCh(r.to) + ' · ' + Math.round(r.to - r.from) + ' m', undo: () => { DI.voidRecord(r.id); render(); toast({ title: 'Undone', sub: 'The record is kept, marked as withdrawn' }); } });
     render();
   }
   DA.recordRange = recordRange;
@@ -1029,7 +1129,18 @@
       case 'ee-nudge': if (ov && ov.ee) ov.ee.nudge(Number(b.dataset.n)); break;
       case 'ee-save': if (ov && ov.ee) ov.ee.save(); break;
       case 'range-here': { const el = $('#' + b.dataset.target); if (el) el.value = DI.fmtCh(Math.round(S.pos.ch)); break; }
-      case 'range-save': recordRange(id, DI.parseCh($('#rgFrom').value), DI.parseCh($('#rgTo').value)); break;
+      case 'range-save': recordRange(id, DI.parseCh($('#rgFrom').value), DI.parseCh($('#rgTo').value), b.dataset.stage == null ? null : Number(b.dataset.stage)); break;
+      case 'range-stage': {
+        // pick the stage for a part; the chainages typed so far stay
+        const fv = $('#rgFrom') && $('#rgFrom').value, tv = $('#rgTo') && $('#rgTo').value;
+        S.rgStage[id] = Number(b.dataset.stage);
+        const sc = ov && ov.querySelector('.body') ? ov.querySelector('.body').scrollTop : 0;
+        closeAll(); openRecord(id);
+        if (fv != null && $('#rgFrom')) $('#rgFrom').value = fv;
+        if (tv != null && $('#rgTo')) $('#rgTo').value = tv;
+        const ov2 = document.querySelector('.ov:last-child .body'); if (ov2) ov2.scrollTop = sc;
+        break;
+      }
       case 'undo': if (DA.pendingUndo) { const u = DA.pendingUndo; DA.pendingUndo = null; $('#toastHost').innerHTML = ''; u(); } break;
       case 'keypad': openKeypad(); break;
       case 'kp-key': ov.kp.key(b.dataset.k); break;
@@ -1108,7 +1219,9 @@
     try { theme = localStorage.getItem('KMD_THEME_V1') || 'sun'; } catch (e) { /* ignore */ }
     setTheme(theme);
     DI.init();
-    fetch('data/t9_schedule.json').then(r => r.ok ? r.json() : null).then(j => { if (j) { DI.loadT9Schedule(j, DI.T9_SCHEDULE_ON); render(); } }).catch(() => { /* offline before the first load: the drawings alone */ });
+    fetch('data/t9_schedule.json').then(r => r.ok ? r.json() : null).then(j => { if (j) { DI.loadT9Schedule(j, DI.T9_SCHEDULE_ON); render(); } }).catch(() => { /* offline before the first load: the drawings alone */ })
+      .then(() => fetch('data/connectors.json')).then(r => r && r.ok ? r.json() : null).then(j => { if (j) { DI.loadConnectors(j); render(); } }).catch(() => { /* connectors come with the next load */ })
+      .then(() => fetch('data/networks.json')).then(r => r && r.ok ? r.json() : null).then(j => { if (j) { DI.loadNetworks(j); render(); } }).catch(() => { /* networks come with the next load */ });
     const last = DI.lastPosition();
     const q = new URLSearchParams(location.search);
     if (last && last.line) Object.assign(S.pos, { line: last.line, sub: last.sub, ch: last.ch, facing: last.facing || 'increasing' });
