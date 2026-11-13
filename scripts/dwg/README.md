@@ -94,6 +94,18 @@ node scripts/dwg/build_connectors.js       # data/dwg/<SUB>_plan.json -> data/co
 
 From the point blocks extract_plan.py already keeps (DRN_CONNECTION_BOX_1..6, MH, DRN_MANHOLE_GRID_COVER, DRN_PIPE, DRN_DISSIPATOR) and the ditches' two ends (x0y0, x1y1). A ditch end within 4 m of a block runs into it (6 m for a dissipator, whose insertion point is its centre); a descent whose top or foot is within 4 m of it does too. Each block then names the app's features: a ditch of that type and side with an end within 15 m, a water descent of that side, or for a manhole the Type 6 run it sits on. Each ditch end goes to its nearest block only. A dissipator of the plans is the app's nearest dissipator of that side within 25 m. Duplicate blocks at one point count once. It also writes each plan ditch's ends as chainage and true offset (projected on the plan's own axis), given to the app ditch of that type and side it overlaps most: the plan view draws them. 13 Nov 2026: 2,502 blocks, 2,311 new features, 986 ditch ends that run into one.
 
+## Type 6 networks and road drainage
+
+```
+# DRN-LONG (S01-S05), the yards' STI-DWYD_DRN_LONG and STI-KZYD_DRN_LONG, ROD-DRAINAGE (S01-S05; S04 REV03), each dwg2dxf + fix_dxf.py
+python3 scripts/dwg/extract_networks.py --out data/networks.json \
+    --t6 S02-DRN-LONG.dxf=T2019-0323-S02-DD-DRN-LONG ... S02-DWYD.dxf=T2019-0323-S02-DD-STI-DWYD_DRN_LONG S02-KZYD.dxf=... \
+    --rail S01-DRN-LONG.dxf S02-DRN-LONG.dxf S03-DRN-LONG.dxf S04-DRN-LONG.dxf S05-DRN-LONG.dxf \
+    --roads S01-ROD.dxf=T2019-0323-S01-DD-ROD-DRAINAGE ... S04-ROD.dxf=T2019-0323-S04-DD-ROD-DRAINAGE_REV03 ...
+```
+
+The layers and rules are in the script's header. S01's DRN-LONG and the S01 and S02 ROD-DRAINAGE were purged in AutoCAD (regapps, unused blocks) to bring them under the Drive connector's 10 MB; S01 DRN-LONG then gave the same ditches, descents and blocks as before. 13 Nov 2026: 271 Type 6 legs and 16 collector pipes (12.6 km), 315 manholes (26 new, in the yards); 1,538 road drains (118 km), 537 riprap dissipators, 96 road culverts, 98 road-drain ends on 72 railway ditches. Takes about 4 minutes.
+
 ## Embankment height (Section 02 for now)
 
 ```

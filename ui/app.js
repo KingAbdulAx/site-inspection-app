@@ -53,7 +53,7 @@
   }
   function lenText(f) {
     if (!isSpan(f)) return '';
-    const len = Math.round(f.built ? f.built.len : f.ch1 - f.ch0);
+    const len = Math.round(f.built ? f.built.len : f.len || f.ch1 - f.ch0);
     return len.toLocaleString('en-GB') + ' m' + diffTag(f);
   }
   function chText(f, arrow) {
@@ -122,7 +122,9 @@
   DA.setTheme = setTheme;
 
   // -------------------------------------------------------- position
-  function lineFeatures() { return DI.data.features.filter(f => f.line === S.pos.line && !f.absorbedInto); }
+  // Road drainage stays off the strip and its lists (it runs off across the land); the road crossing's sheet
+  // and the plan view gather it.
+  function lineFeatures() { return DI.data.features.filter(f => f.line === S.pos.line && !f.absorbedInto && !f.road); }
   DA.lineFeatures = lineFeatures;
 
   function setHand(line, ch) {
@@ -303,7 +305,21 @@
     let h = '<div class="fhead"><span class="side-badge" style="background:var(--ref);color:var(--on-ink);display:flex;align-items:center;justify-content:center;width:52px;height:52px;font:700 13px/1 var(--f-cond)">REF</span><div style="min-width:0"><div class="t1"><span>' + esc(r.name || r.label) + '</span></div>' +
       '<div style="font:500 17px/1.3 var(--f-sans);color:var(--ink-2);margin-top:2px">' + esc(r.label) + '</div></div></div>';
     h += '<div style="font:500 18px/1.4 var(--f-sans);margin:16px 0 6px">' + (r.kind === 'bridge' ? DI.fmtCh(r.ch0) + ' → ' + DI.fmtCh(r.ch1) + len : 'At ' + DI.fmtCh(r.ch != null ? r.ch : (r.ch0 + r.ch1) / 2)) + '</div>';
-    h += '<div class="note">From the track plan (' + esc(r.source || 'TRA-PLAT') + '), for finding your way. It is not a drainage structure: nothing is recorded against it.</div>';
+    const rd = DI.roadDrainage(r.id);
+    if (rd.length) {
+      const drains = rd.filter(f => f.kind === 'net'), p = DI.progressOf(rd);
+      const km = m => (m / 1000).toLocaleString('en-GB', { maximumFractionDigits: 2 });
+      h += '<div class="lbl-caps mt16">Its road drainage</div><div class="kv">' +
+        '<div class="k">Drains</div><div class="v">' + drains.length + ' · ' + km(p.lin.m) + ' km<small>' + km(p.lin.doneM) + ' km finished</small></div>' +
+        (p.pts.n ? '<div class="k">Dissipators, culverts</div><div class="v">' + p.pts.n + '<small>' + p.pts.done + ' finished</small></div>' : '') + '</div>';
+      const joins = drains.filter(f => DI.data.roadJoins && Object.values(DI.data.roadJoins).some(l => l.some(x => x.id === f.id)));
+      if (joins.length) h += '<div class="note mt8">' + joins.length + ' of its drains run into the railway\'s ditches.</div>';
+      const chs = rd.map(f => [f.ch0, f.ch1]).flat(), geo = rd.map(f => DI.geomOf(f) || []).flat().map(q => [q[0], q[2]]).flat();
+      const a = Math.min(...chs, ...geo) - 40, b = Math.max(...chs, ...geo) + 40;
+      h += '<button class="btn primary mt16" data-act="plan-open" data-line="' + r.line + '" data-a="' + Math.round(a) + '" data-b="' + Math.round(b) + '" data-title="' + esc('Road ' + (r.name || r.short)) + '" style="min-height:52px">' + I.icon('layers') + 'See its drainage in plan</button>';
+      h += '<div class="lbl-caps mt16">Drains</div><div style="margin:0 -16px">' + drains.slice().sort((x, y) => y.len - x.len).map(f => { const st = DI.statusOf(f); return '<button class="frow" data-act="record" data-id="' + esc(f.id) + '">' + sideBadge(f.side) + '<div class="mid"><div class="t1">' + I.typeIcon(f.icon) + '<span>' + esc(f.name) + '</span></div><div class="t2">' + Math.round(f.len) + ' m</div></div><div class="right">' + meter(f, st) + '</div></button>'; }).join('') + '</div>';
+    }
+    h += '<div class="note">From the track plan (' + esc(r.source || 'TRA-PLAT') + '), for finding your way.' + (rd.length ? ' Its road drainage is from the road drainage drawings.' : ' It is not a drainage structure: nothing is recorded against it.') + '</div>';
     h += '<button class="btn primary mt16" data-act="plan-open" data-line="' + r.line + '" data-a="' + Math.round(r.ch0 - 100) + '" data-b="' + Math.round(r.ch1 + 100) + '" data-title="' + esc(r.name) + '" style="min-height:52px">' + I.icon('layers') + 'See it in plan, to scale</button>';
     h += '<button class="btn mt8" data-act="goto-next" data-ch="' + Math.round((r.ch0 + r.ch1) / 2) + '" style="min-height:52px">Show it on the strip</button>';
     openOverlay(h, 'sheet');
@@ -606,10 +622,21 @@
     if (!DI.hasConnectors()) return '';
     const row = (lbl, g, sub) => '<button class="conn-row" data-act="record" data-id="' + esc(g.id) + '"><span class="lbl-caps">' + esc(lbl) + '</span>' + I.typeIcon(g.icon) + '<b>' + esc(g.name) + '</b><small>' + esc(sub) + '</small></button>';
     let h = '';
+    if (f.road) {
+      // a road's drain: its road, and the railway ditch it runs into
+      const ref = f.road !== 'none' ? DI.refById(f.road) : null;
+      h = ref ? '<button class="conn-row" data-act="ref" data-id="' + esc(ref.id) + '"><span class="lbl-caps">Road</span>' + I.typeIcon('bridge') + '<b>' + esc(ref.name || ref.label) + '</b><small>' + esc(ref.label) + ' · ' + DI.fmtCh(ref.ch != null ? ref.ch : ref.ch0) + '</small></button>' : '';
+      Object.entries(DI.data.roadJoins || {}).forEach(([rid, list]) => list.forEach(x => {
+        const g = DI.data.byId[rid];
+        if (x.id === f.id && g) h += row('Runs into', g, DI.fmtCh(x.ch) + ' · ' + (g.side === 'L' ? 'left' : 'right'));
+      }));
+      return h ? '<div class="conn">' + h + '</div>' : '';
+    }
     if (DI.isSpan(f)) {
       const e = DI.endsOf(f);
       const one = (lbl, g, ch) => g ? row(lbl, g, DI.fmtCh(g.ch0)) : '<div class="conn-row none"><span class="lbl-caps">' + esc(lbl) + '</span><small>' + DI.fmtCh(ch) + ' · nothing drawn here: runs on, or an open end</small></div>';
       h = one('Starts at', e.start, f.ch0) + one('Ends at', e.end, f.ch1);
+      DI.roadJoinsOf(f).forEach(x => { h += row('Road drain in', x.f, DI.fmtCh(x.ch) + (x.f.roadName ? ' · road ' + x.f.roadName : '')); });
     } else {
       const j = DI.joinsOf(f);
       if (!j.length && !f.conn) return '';
@@ -1193,7 +1220,8 @@
     setTheme(theme);
     DI.init();
     fetch('data/t9_schedule.json').then(r => r.ok ? r.json() : null).then(j => { if (j) { DI.loadT9Schedule(j, DI.T9_SCHEDULE_ON); render(); } }).catch(() => { /* offline before the first load: the drawings alone */ })
-      .then(() => fetch('data/connectors.json')).then(r => r && r.ok ? r.json() : null).then(j => { if (j) { DI.loadConnectors(j); render(); } }).catch(() => { /* connectors come with the next load */ });
+      .then(() => fetch('data/connectors.json')).then(r => r && r.ok ? r.json() : null).then(j => { if (j) { DI.loadConnectors(j); render(); } }).catch(() => { /* connectors come with the next load */ })
+      .then(() => fetch('data/networks.json')).then(r => r && r.ok ? r.json() : null).then(j => { if (j) { DI.loadNetworks(j); render(); } }).catch(() => { /* networks come with the next load */ });
     const last = DI.lastPosition();
     const q = new URLSearchParams(location.search);
     if (last && last.line) Object.assign(S.pos, { line: last.line, sub: last.sub, ch: last.ch, facing: last.facing || 'increasing' });

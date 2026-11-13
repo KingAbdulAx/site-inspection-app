@@ -54,6 +54,8 @@
   // office import writes it as finished, but the stages between can be recorded on the phone.
   const LADDER_T9 = LADDER_PRECAST;
   const LADDER_FRENCH = ['Not started', 'Excavation', 'Stone dust bedding', 'Pipe laid', 'Gravel to half height', 'Concrete wash', 'Geotextile laid', 'Washed gravel', 'Geotextile wrapped'];
+  // A buried collector pipe (the yards' DN pipes between manholes).
+  const LADDER_BPIPE = ['Not started', 'Excavation', 'Bedding', 'Pipe laid', 'Backfilled'];
   // The cast-in-place ladder before 12 Nov 2026. IR claims are indexed on it, and older records name its stages.
   const OLD_CONCRETE = ['Not started', 'Excavation', 'Blinding', 'Rebar', 'Shuttered', 'Concreted', 'Completed'];
   const LADDER_RIPRAP = ['Not started', 'Geotextile laid', 'Completed'];
@@ -206,9 +208,10 @@
     'Track Drainage': { key: 'track', label: 'Track drainage', lane: 'cl', kind: 'buried' },
     'Energy Dissipator': { key: 'dissipator', label: 'Energy dissipator', lane: 'toe', kind: 'point' },
     'Miscellaneous': { key: 'misc', label: 'Miscellaneous', lane: 'toe', kind: 'linear' },
-    'Connector': { key: 'connector', label: 'Connectors', lane: 'toe', kind: 'point' }
+    'Connector': { key: 'connector', label: 'Connectors', lane: 'toe', kind: 'point' },
+    'Road Drainage': { key: 'road', label: 'Road drainage', lane: 'off', kind: 'net' }
   };
-  const CAT_ORDER = ['cross', 'toe', 'descent', 'riprap', 'diversion', 'shoulder', 'side', 'underpass', 'track', 'berm', 'crest', 'dissipator', 'connector', 'bridge', 'misc'];
+  const CAT_ORDER = ['cross', 'toe', 'descent', 'riprap', 'diversion', 'shoulder', 'side', 'underpass', 'track', 'berm', 'crest', 'dissipator', 'connector', 'road', 'bridge', 'misc'];
 
   function normalise(p, sub) {
     const catName = p.category || (p.Type === 'Bridge' ? 'Bridge Crossing' : null);
@@ -542,11 +545,121 @@
     return { start: e.a ? data.byId[e.a] || null : null, end: e.b ? data.byId[e.b] || null : null };
   }
   function joinsOf(f) {
-    if (f.conn) return f.conn.links.map(([fid, end]) => ({ f: data.byId[fid], end: end === 'a' ? 'start' : end === 'b' ? 'end' : end })).filter(x => x.f);
+    if (f.conn) {
+      const out = f.conn.links.map(([fid, end]) => ({ f: data.byId[fid], end: end === 'a' ? 'start' : end === 'b' ? 'end' : end }));
+      // Type 6 legs that start or end here
+      Object.entries(data.connEnds || {}).forEach(([fid, e]) => {
+        if (!/^(t6|pipe)_/.test(fid)) return;
+        if (e.a === f.id) out.push({ f: data.byId[fid], end: 'start' });
+        if (e.b === f.id) out.push({ f: data.byId[fid], end: 'end' });
+      });
+      return out.filter(x => x.f);
+    }
     return ((data.connAt || {})[f.id] || []).filter(x => x.of).map(x => ({ f: data.byId[x.id], end: x.end })).filter(x => x.f);
   }
   // Where the plans draw a ditch: pieces [ch, offset, ch, offset]; none for one the plans do not have.
   function geomOf(f) { return (data.geom || {})[f.id] || null; }
+  // ------------------------------------------------ networks: Type 6 legs, road drainage
+  // data/networks.json (scripts/dwg/extract_networks.py). Type 6 is cut at its manholes into legs, each with
+  // its turns and its own length; they take the place of the bundle's straight Type 6 runs (one with records
+  // on it stays). A leg's manholes are the plans' (connectors.json) where they are, else its own. Road drains,
+  // riprap dissipators and road culverts belong to the road crossing they serve; a road drain whose end lands
+  // on a railway ditch names it.
+  function roadDrainName(it) {
+    const n = it.ltype || (/^\d/.test(it.rtype) ? it.rtype.split('_')[0] : null);
+    if (it.rtype === 'discharge') return { code: 'RDD', name: 'Road discharge ditch', ladder: LADDER_INSITU };
+    if (it.rtype === 'service') return { code: 'RSD', name: 'Service road ditch', ladder: LADDER_UNLINED };
+    if (it.rtype === 'trench') return { code: 'RTR', name: 'Road drainage trench', ladder: LADDER_FRENCH };
+    if (n === '6') return { code: 'RT6', name: 'Road Type 6 drain', ladder: LADDER_FRENCH };
+    const unl = (n === '4' || n === '3' || n === '5') && !it.concrete;
+    const guess = !it.ltype && /_/.test(it.rtype) ? ' (type ' + it.rtype.replace(/_/g, '/') + ' on the drawing)' : '';
+    return { code: 'RT' + (n || ''), name: 'Road ditch, type ' + (n || '?') + (it.concrete ? ', concrete' : unl ? ', unlined' : '') + guess,
+      ladder: n === '9' ? LADDER_PRECAST : unl ? LADDER_UNLINED : LADDER_INSITU };
+  }
+  function loadNetworks(j) {
+    Object.keys(data.pristine).forEach(sub => { data.pristine[sub] = data.pristine[sub].filter(f => !f.net && !f.road); });
+    data.geom = data.geom || {};
+    data.connEnds = data.connEnds || {};
+    data.roadJoins = {};
+    const legs = j.t6 || [];
+    const hasRecs = id => records.some(r => r.featureId === id);
+    // the bundle's straight Type 6 runs give way where the network covers that sub-section
+    const netSubs = new Set(legs.filter(l => l.kind === 'T6').map(l => l.sub));
+    Object.keys(data.pristine).forEach(sub => {
+      if (!netSubs.has(sub)) return;
+      data.pristine[sub] = data.pristine[sub].filter(f => !(f.code === 'T6' && f.kind === 'buried' && !f.net && !hasRecs(f.id)));
+    });
+    // manholes: the plans' own where they are, else new
+    const node = {};
+    (j.manholes || []).forEach(m => {
+      const key = m.src + '|' + m.handle;
+      const known = (data.pristine[m.sub] || []).find(f => f.conn && (f.code === 'MH' || f.code === 'MHG') && Math.abs(f.ch0 - m.ch) < 3 && Math.abs(f.offset - m.off) < 3);
+      if (known) { node[key] = known.id; if (m.name && !known.mhName) { known.mhName = m.name; known.name += ' ' + m.name; } return; }
+      if (!SUBS[m.sub] || !data.pristine[m.sub]) return;
+      const id = 'mh_' + m.sub + '_' + m.handle;
+      const pr = PRESETS[m.grid ? 'MHG' : 'MH'];
+      const name = pr.name + (m.name ? ' ' + m.name : '');
+      data.pristine[m.sub].push({ id, sub: m.sub, line: SUBS[m.sub].line, catKey: 'connector', catLabel: CAT_LABEL.connector, kind: 'point', lane: Math.abs(m.off) < 20 ? 'cl' : laneOf(m.off),
+        side: m.off >= 0 ? 'L' : 'R', ch0: m.ch, ch1: m.ch, cert: 'derived', code: pr.code, typeKey: null, name, full: name, icon: 'mh', ladder: pr.ladder, sheet: '', drawings: [],
+        level: null, onHold: false, confidence: '', specs: '', notes: '', stated: null, raw: {}, offset: m.off, conn: { kind: m.grid ? 'grid' : 'manhole', type: null, block: null, exit: false, links: [] }, mhName: m.name, net: true });
+      node[key] = id;
+    });
+    legs.forEach(l => {
+      if (!SUBS[l.sub] || !data.pristine[l.sub]) return;
+      const chs = l.pts.map(p => p[0]), offs = l.pts.map(p => p[1]);
+      const pipe = l.kind === 'pipe';
+      const name = pipe ? 'Collector pipe' : 'Type 6 drain';
+      const f = { id: l.id, sub: l.sub, line: SUBS[l.sub].line, catKey: 'track', catLabel: CAT_LABEL.track, kind: 'buried', lane: 'cl', side: l.side,
+        ch0: Math.min(...chs), ch1: Math.max(...chs), cert: 'derived', code: pipe ? 'CP' : 'T6', typeKey: pipe ? null : '6', name, full: name + ', ' + Math.round(l.len) + ' m manhole to manhole',
+        icon: 'collector', ladder: pipe ? LADDER_BPIPE : LADDER_FRENCH, sheet: '', drawings: [], level: null, onHold: false, confidence: '', specs: '', notes: '', stated: null, raw: {},
+        offset: offs.reduce((a, b) => a + b, 0) / offs.length, len: l.len, net: { src: l.src } };
+      data.pristine[l.sub].push(f);
+      data.geom[l.id] = l.pts.slice(1).map((p, i) => [l.pts[i][0], l.pts[i][1], p[0], p[1]]);
+      const a = l.from && node[l.src + '|' + l.from], b = l.to && node[l.src + '|' + l.to];
+      if (a || b) data.connEnds[l.id] = Object.assign({}, a ? { a } : {}, b ? { b } : {});
+    });
+    // roads
+    const roadsNear = {};
+    (j.roads || []).forEach((it, i) => {
+      if (!SUBS[it.sub] || !data.pristine[it.sub]) return;
+      const srcS = (it.src.match(/S0\d/) || ['S0'])[0];
+      const id = 'rd_' + srcS + '_' + it.handle;
+      const ref = it.road ? refById(it.road) : null;
+      const roadName = ref ? (ref.name || ref.short) : null;
+      let f;
+      if (it.kind === 'drain') {
+        const t = roadDrainName(it);
+        const chs = it.pts.map(p => p[0]);
+        f = { kind: 'net', code: t.code, name: t.name + (it.label ? ' · ' + it.label : ''), ladder: t.ladder, ch0: Math.min(...chs), ch1: Math.max(...chs), len: it.len, icon: t.code === 'RT6' ? 'collector' : 'trap' };
+        data.geom[id] = it.pts.slice(1).map((p, k) => [it.pts[k][0], it.pts[k][1], p[0], p[1]]);
+        f.railJoins = it.joins || [];
+      } else if (it.kind === 'riprap') {
+        f = { kind: 'point', code: 'RDS', name: 'Riprap dissipator', ladder: LADDER_RIPRAP, ch0: it.near[0], ch1: it.near[0], icon: 'riprap' };
+      } else {
+        const box = /BC|BD-1x-2|BOX/i.test((it.block || '') + ' ' + (it.what || ''));
+        f = { kind: 'point', code: 'RPC', name: 'Road culvert' + (it.what ? ', ' + it.what.toLowerCase() : box ? ', box' : ', pipe') + (it.road_ch ? ' at road CH ' + it.road_ch : ''), ladder: box ? LADDER_BOX : LADDER_PIPE, ch0: it.near[0], ch1: it.near[0], icon: box ? 'box' : 'pipe' };
+      }
+      Object.assign(f, { id, sub: it.sub, line: SUBS[it.sub].line, catKey: 'road', catLabel: CAT_LABEL.road, lane: 'off', side: it.near[1] >= 0 ? 'L' : 'R', cert: 'derived', typeKey: null,
+        full: f.name + (roadName ? ' — road ' + roadName : ''), sheet: '', drawings: [], level: null, onHold: false, confidence: '', specs: it.block || '', notes: '', stated: null, raw: {},
+        offset: it.near[1], road: it.road || 'none', roadName });
+      data.pristine[it.sub].push(f);
+      (roadsNear[it.road || 'none'] = roadsNear[it.road || 'none'] || []).push(id);
+    });
+    data.roadsOf = roadsNear;
+    applyBase();
+    migrateStageNames();
+    // a road drain's end on a railway ditch: that ditch, by type, side and chainage
+    data.features.filter(f => f.railJoins && f.railJoins.length).forEach(f => f.railJoins.forEach(jn => {
+      const rail = data.features.filter(x => x.line === f.line && x.code === jn.code && x.side === jn.side && !x.road && x.ch0 - 15 <= jn.ch && jn.ch <= x.ch1 + 15)
+        .sort((x, y) => Math.max(0, x.ch0 - jn.ch, jn.ch - x.ch1) - Math.max(0, y.ch0 - jn.ch, jn.ch - y.ch1))[0];
+      if (rail) (data.roadJoins[rail.id] = data.roadJoins[rail.id] || []).push({ id: f.id, ch: jn.ch, end: jn.end });
+    }));
+  }
+  function hasNetworks() { return !!data.roadsOf; }
+  // The road drainage of a road crossing (a reference structure's id).
+  function roadDrainage(refId) { return ((data.roadsOf || {})[refId] || []).map(id => data.byId[id]).filter(Boolean); }
+  // Road drains that run into a railway ditch: [{ f, ch }]
+  function roadJoinsOf(f) { return ((data.roadJoins || {})[f.id] || []).map(x => ({ f: data.byId[x.id], ch: x.ch })).filter(x => x.f); }
   // Where the schedule is switched on: every section.
   const T9_SCHEDULE_ON = ['KNDW', 'DWKZ', 'KZDR', 'DRMR', 'MRJB'];
   function hasT9Schedule(sub) { return !!(data.bySub[sub] || []).some(f => f.sched); }
@@ -1036,7 +1149,8 @@
   // whole run counts as that stage over all of it. A range with no stage (Type 9, before 12 Nov 2026) is
   // finished.
   const isSpanF = f => f.kind === 'linear' || f.kind === 'buried';
-  const rangeable = f => !!f && isSpanF(f) && !isCulvertLadder(f.ladder) && f.ladder.length > 1 && f.ch1 - f.ch0 > 1;
+  // A Type 6 leg that turns or crosses the line (its chainage much shorter than its length) is tracked whole.
+  const rangeable = f => !!f && isSpanF(f) && !isCulvertLadder(f.ladder) && f.ladder.length > 1 && f.ch1 - f.ch0 > 1 && !(f.len && f.ch1 - f.ch0 < 0.8 * f.len);
   function mergeRanges(list) {
     const out = [];
     list.slice().sort((a, b) => a[0] - b[0]).forEach(([a, b]) => {
@@ -1464,13 +1578,14 @@
   // ------------------------------------------------ progress overview
   // Completion, not "part-built": structures that are a single place (culverts, descents, riprap) are
   // counted; ditches and drains that run along the line are measured by length. The two are never added.
-  const isSpan = f => f.kind === 'linear' || f.kind === 'buried';
-  const TYPE_LABEL = { CB: 'Connection boxes', MH: 'Manholes', MHG: 'Grid-cover manholes', PO: 'Outlet pipes', PC: 'Pipe culverts', BC: 'Box culverts', CC: 'Cattle crossings', T16: 'Underpass water passages', WD: 'Water descents', 'D-SD': 'Slope descents', BRG: 'Railway bridges', OP: 'Road overbridges' };
+  const isSpan = f => f.kind === 'linear' || f.kind === 'buried' || f.kind === 'net';
+  const TYPE_LABEL = { RDS: 'Road riprap dissipators', RPC: 'Road culverts', CP: 'Collector pipes', CB: 'Connection boxes', MH: 'Manholes', MHG: 'Grid-cover manholes', PO: 'Outlet pipes', PC: 'Pipe culverts', BC: 'Box culverts', CC: 'Cattle crossings', T16: 'Underpass water passages', WD: 'Water descents', 'D-SD': 'Slope descents', BRG: 'Railway bridges', OP: 'Road overbridges' };
   // The drainage type of a feature, as a tab: 'Type 9 shoulder ditch', 'Box culverts'.
   function typeOf(f) {
     const span = isSpan(f);
     if (span && /^CH-/.test(f.code || '')) return { key: 'CH', label: 'Diversion channels', span };
     if (span && f.code === 'MD') return { key: 'MD', label: 'Approach and earth toe ditches', span };
+    if (f.road) return span ? { key: 'RD', label: 'Road drainage', span } : { key: 'RD.' + f.code, label: TYPE_LABEL[f.code] || f.catLabel, span };
     if (span) return { key: f.code || f.catKey, label: f.name, span };
     return { key: (f.code || f.catKey) + '.pt', label: TYPE_LABEL[f.code] || f.catLabel, span };
   }
@@ -1497,7 +1612,8 @@
       if (st.bucket === 'moving') o.part++;
       if (st.bucket === 'stalled') { o.part++; o.stalled++; }
       if (isSpan(f)) {
-        const len = f.built ? (f.built.ch1 - f.built.ch0) : (f.ch1 - f.ch0);
+        // a drain that turns or runs off from the line: its own length, not its chainage
+        const len = f.built ? (f.built.ch1 - f.built.ch0) : f.len || (f.ch1 - f.ch0);
         o.lin.n++; o.lin.m += len;
         if (st.cover) o.lin.doneM += st.cover.m; else if (st.bucket === 'done') o.lin.doneM += len;
         for (let k = 1; k < f.ladder.length; k++) {
@@ -1629,7 +1745,7 @@
     fmtCh, fmtPlus, parseCh, fmtDate, fmtTime, monthsBetween, esc, DAYS, MONTHS,
     inspector, setInspector, addRecord, voidRecord, live, recordsFor, seenOf, ownSeen, openDefects,
     designChanges, statusOf, drafts, saveDraft, putPhoto, getPhoto, uid, loadLegacy, mirrorLegacy,
-    loadSections, sectionAt, loadT9Schedule, hasT9Schedule, rangeable, coverOf, addRange, rangeNote, parseRangeNote, stageNote, parseStageNote, noteMetres, parseExecutedNote, foreignStaged, extentNote, parseExtentNote, foreignExtent, adoptForeignExtent, applyExtents, extentOf, addExtent, extentEnds, addJoin, detectJoins, applyJoins, isSpan, typeOf, progressOf, typeProgress, T9_SCHEDULE_ON, refs, refsNear, refById, REF_KIND, areasAt, isArea, loadConnectors, hasConnectors, endsOf, joinsOf, geomOf, laneOf, loadHeights, hasHeights, heightAt, T9_RULES, t9Rule, setT9Rule, t9Check,
+    loadSections, sectionAt, loadT9Schedule, hasT9Schedule, rangeable, coverOf, addRange, rangeNote, parseRangeNote, stageNote, parseStageNote, noteMetres, parseExecutedNote, foreignStaged, extentNote, parseExtentNote, foreignExtent, adoptForeignExtent, applyExtents, extentOf, addExtent, extentEnds, addJoin, detectJoins, applyJoins, isSpan, typeOf, progressOf, typeProgress, T9_SCHEDULE_ON, refs, refsNear, refById, REF_KIND, areasAt, isArea, loadConnectors, hasConnectors, endsOf, joinsOf, geomOf, laneOf, loadNetworks, hasNetworks, roadDrainage, roadJoinsOf, LADDER_BPIPE, loadHeights, hasHeights, heightAt, T9_RULES, t9Rule, setT9Rule, t9Check,
     PRESETS, presetOf, applyBase, baseRecords, correctBase, addBase, deleteBase, verifyBase, unverifyBase, exportGeo, exportCorrections, importRecords,
     project, pointAt, laneOf, savePosition, lastPosition, csvCell,
     get records() { return records; }

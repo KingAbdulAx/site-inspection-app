@@ -573,5 +573,39 @@ section('Phase 6: connectors from the drainage plans', () => {
   ok(Object.keys(j.geom).length > 1000 && DI.geomOf(t) && DI.geomOf(t).every(p => p.length === 4), 'ditches have their plan geometry for the plan view');
 });
 
+
+section('Phases 8 and 9: Type 6 networks, road drainage', () => {
+  const j = JSON.parse(require('fs').readFileSync(require('path').join(__dirname, '..', 'data/networks.json'), 'utf8'));
+  const before = DI.data.features.filter(f => f.code === 'T6' && f.kind === 'buried').length;
+  DI.loadNetworks(j);
+  const F = DI.data.features, legs = F.filter(f => /^t6_/.test(f.id)), pipes = F.filter(f => f.code === 'CP');
+  ok(legs.length > 200 && legs.every(f => f.kind === 'buried' && f.len > 0 && DI.ladderKind(f.ladder) === 'french'), 'Type 6 is cut into legs with their own length: ' + legs.length + ' (was ' + before + ' straight runs)');
+  ok(pipes.length > 10 && pipes.every(f => f.ladder === DI.LADDER_BPIPE), 'the yards\' collector pipes are legs too: ' + pipes.length);
+  ok(!F.some(f => f.code === 'T6' && f.kind === 'buried' && !f.net && f.sub === 'DWKZ'), 'the straight runs give way where the network is drawn');
+  const both = legs.filter(f => DI.endsOf(f).start && DI.endsOf(f).end);
+  ok(both.length > legs.length * 0.8 && both.every(f => /^(MH|MHG)$/.test(DI.endsOf(f).start.code)), 'most legs run manhole to manhole: ' + both.length);
+  const mh = DI.endsOf(both[0]).end;
+  ok(DI.joinsOf(mh).some(x => x.f === both[0] && x.end === 'end'), 'and the manhole names the leg that ends at it');
+  const turn = legs.find(f => !DI.rangeable(f) && f.len > 5);
+  ok(turn && turn.ch1 - turn.ch0 < 0.8 * turn.len && DI.geomOf(turn).length >= 1, 'a leg that turns or crosses the line is tracked whole, and drawn with its turns');
+  ok(Math.abs(DI.progressOf([turn]).lin.m - turn.len) < 0.01, 'its length in Progress is its own, not its chainage');
+  ok(F.some(f => /^mh_/.test(f.id) && f.mhName), 'yard manholes come with their names');
+  // roads
+  const rd = F.filter(f => f.road);
+  ok(rd.length > 1500 && rd.filter(f => f.kind === 'net').every(f => f.len > 0 && DI.geomOf(f)), 'road drains, with their shape and length: ' + rd.filter(f => f.kind === 'net').length);
+  ok(rd.some(f => f.code === 'RDS' && f.ladder.length === 3) && rd.some(f => f.code === 'RPC'), 'riprap dissipators and road culverts');
+  const ovr = DI.refs().find(r => r.kind === 'overpass' && DI.roadDrainage(r.id).length > 10);
+  ok(ovr && DI.roadDrainage(ovr.id).every(f => f.road === ovr.id), 'a road crossing gathers its drainage: ' + (ovr && ovr.name));
+  const joined = Object.keys(DI.data.roadJoins);
+  const rail = DI.data.byId[joined[0]];
+  ok(joined.length > 40 && !rail.road && DI.roadJoinsOf(rail).every(x => x.f.road && Math.abs(x.ch - (rail.ch0 + rail.ch1) / 2) < (rail.ch1 - rail.ch0) / 2 + 16), 'road drains that end on a railway ditch name it: ' + joined.length + ' ditches');
+  const tp = DI.typeProgress(ovr.sub);
+  ok(tp.some(t => t.key === 'RD' && t.label === 'Road drainage' && t.span && t.p.lin.m > 1000), 'Progress has road drainage, in km');
+  const t4 = rd.find(f => f.code === 'RT4' && /unlined/.test(f.name));
+  ok(t4 && DI.ladderKind(t4.ladder) === 'unlined' && rd.filter(f => /concrete/.test(f.name)).every(f => DI.ladderKind(f.ladder) === (f.code === 'RT9' ? 'precast' : 'insitu')), 'road ditches: unlined type 4 on the unlined stages, concrete ones cast in situ (type 9 precast)');
+  DI.addRecord({ kind: 'stage', featureId: t4.id, stage: t4.ladder.length - 1 });
+  ok(DI.statusOf(t4).bucket === 'done' && Math.abs(DI.progressOf([t4]).lin.doneM - t4.len) < 0.01, 'a road drain takes a stage, and counts its own length');
+});
+
 console.log('\n' + (fail ? 'FAILED: ' : 'ALL PASSED: ') + pass + ' passed, ' + fail + ' failed');
 process.exit(fail ? 1 : 0);

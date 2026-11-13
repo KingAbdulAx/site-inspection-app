@@ -1070,6 +1070,13 @@
         L.polyline([[q0.lat, q0.lon], [q1.lat, q1.lon]], { color: '#121311', weight: 7 }).addTo(layer).on('click', () => DA.openRecord(f.id));
         const ql = DI.pointAt(sub, f.ch0, -30);
         if (S.map.chainage) L.marker([ql.lat, ql.lon], { icon: L.divIcon({ className: '', html: '<span class="map-lbl exact">' + DI.fmtCh(f.ch0, f.cert === 'exact' ? 3 : 0) + '</span>', iconAnchor: [0, 10] }) }).addTo(layer);
+      } else if (DI.geomOf(f) || f.kind === 'net') {
+        // drawn where the plans have it: turns, and roads' drains running off across the land
+        const pl = (DI.geomOf(f) || []).reduce((acc, [c0, o0, c1, o1], i) => { if (!i) acc.push(DI.pointAt(sub, c0, o0)); acc.push(DI.pointAt(sub, c1, o1)); return acc; }, []).filter(Boolean).map(q => [q.lat, q.lon]);
+        if (pl.length > 1) {
+          L.polyline(pl, { color: '#fff', weight: 7 }).addTo(layer);
+          L.polyline(pl, { color: '#121311', weight: 3.5, dashArray: st.fill === 'never' || f.kind === 'buried' || /^RT6|^RTR/.test(f.code) ? '5 4' : st.fill === 'hatch' ? '2 3' : null }).addTo(layer).on('click', () => DA.openRecord(f.id));
+        }
       } else if (f.kind === 'linear' || f.kind === 'buried') {
         const pl = line(off, Math.max(a, f.ch0), Math.min(b, f.ch1), 5);
         if (pl.length > 1) {
@@ -1130,9 +1137,12 @@
         else if (f.offset != null) maxOff = Math.max(maxOff, Math.abs(f.offset));
       });
       refs.filter(r => r.area).forEach(r => (r.outline || []).forEach(p => p.forEach(([c, o]) => { if (c >= c0 && c <= c1) maxOff = Math.max(maxOff, Math.abs(o)); })));
-      maxOff = Math.min(400, maxOff + 8);
+      maxOff = Math.min(1500, maxOff + 8);
       const W0 = Math.max(320, Math.min(window.innerWidth || 390, 900));
-      const sc = (W0 - 24) / (2 * maxOff) * st.k;          // px per metre, the same both ways
+      // px per metre, the same both ways: the width fits the screen, unless the stretch is short along the line
+      // (a road crossing), when its height fills the screen and it scrolls sideways
+      const fitW = (W0 - 24) / (2 * maxOff), fitH = Math.max(200, (window.innerHeight || 800) - 260) / Math.max(20, c1 - c0);
+      const sc = Math.min(Math.max(fitW, fitH), fitW * 6) * st.k;
       const W = Math.max(W0, 2 * maxOff * sc + 24), top = 28, H = top + (c1 - c0) * sc + 28;
       const cx = W / 2;
       const X = off => cx - off * sc * facing;
@@ -1177,8 +1187,8 @@
             g += '<g data-act="plan-rec" data-id="' + DI.esc(f.id) + '"><line ' + line_ + ' style="stroke:transparent;stroke-width:16"/>' +
               '<line ' + line_ + ' style="stroke:' + ink(sts.bucket) + ';stroke-width:' + (geo ? 3 : 1.5) + (geo ? '' : ';opacity:0.45') + '"' + dash + '/></g>';
           });
-          const [a, oa, b, ob] = pieces[0];
-          if (sc > 0.8) g += '<text x="' + (X((oa + ob) / 2) + 4) + '" y="' + (Y((a + b) / 2)) + '" style="fill:var(--ink-2);font:700 11px var(--f-cond)">' + DI.esc((geo ? '' : '≈') + f.code) + '</text>';
+          const [a, oa, b, ob] = pieces.reduce((m, q) => Math.hypot(q[2] - q[0], q[3] - q[1]) > Math.hypot(m[2] - m[0], m[3] - m[1]) ? q : m, pieces[0]);
+          if (Math.hypot(b - a, ob - oa) * sc > 60) g += '<text x="' + (X((oa + ob) / 2) + 4) + '" y="' + (Y((a + b) / 2)) + '" style="fill:var(--ink-2);font:700 11px var(--f-cond)">' + DI.esc((geo ? '' : '≈') + f.code) + '</text>';
         } else pts.push({ f, sts });
       });
       // structures and connectors on top
@@ -1207,8 +1217,9 @@
     };
     ov.refresh = draw;
     draw();
-    // open where you are, if you are in it
+    // open on the line (it may scroll sideways), where you are if you are in it
     const sc2 = ov.querySelector('.plan-scroll');
+    if (sc2) sc2.scrollLeft = (sc2.scrollWidth - sc2.clientWidth) / 2;
     if (sc2 && S.pos.ch >= c0 && S.pos.ch <= c1) {
       const frac = S.pos.facing === 'decreasing' ? (S.pos.ch - c0) / (c1 - c0) : (c1 - S.pos.ch) / (c1 - c0);
       sc2.scrollTop = Math.max(0, frac * sc2.scrollHeight - sc2.clientHeight / 2);

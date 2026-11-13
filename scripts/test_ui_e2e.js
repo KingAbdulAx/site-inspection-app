@@ -212,6 +212,15 @@ const assert = (c, m) => { if (!c) { console.log('FAIL: ' + m); process.exitCode
   await t.evaluate(id => document.querySelector('.ov:last-child [data-act=plan-rec][data-id="' + id + '"]').dispatchEvent(new MouseEvent('click', { bubbles: true })), plan.mh); await t.waitForTimeout(300);
   assert(await t.evaluate(id => document.querySelector('.ov:last-child [data-act=stage]') && document.querySelector('.ov:last-child [data-act=stage]').dataset.id === id, plan.mh), 'a tap on a manhole in the plan opens its record sheet');
   await t.evaluate(() => DA.closeAll());
+  // Phases 8 and 9: a road crossing's sheet gathers its drainage and opens it in plan
+  await t.waitForFunction(() => DI.hasNetworks(), null, { timeout: 20000 });
+  const xr = await t.evaluate(() => DI.refs().find(r => r.kind === 'overpass' && DI.roadDrainage(r.id).length > 10).id);
+  await t.evaluate(id => DA.openRef(id), xr); await t.waitForTimeout(300);
+  assert(await t.evaluate(() => /Its road drainage/i.test(document.querySelector('.ov:last-child').textContent) && document.querySelectorAll('.ov:last-child .frow[data-act=record]').length > 5), 'a road crossing\'s sheet lists its drains');
+  await t.tap('.ov:last-child [data-act=plan-open]'); await t.waitForTimeout(600);
+  assert(await t.evaluate(() => [...document.querySelectorAll('.ov:last-child [data-act=plan-rec]')].some(g => DI.data.byId[g.dataset.id] && DI.data.byId[g.dataset.id].road)), 'and its plan draws them');
+  assert(await t.evaluate(() => !DA.lineFeatures().some(f => f.road)), 'road drainage stays off the strip');
+  await t.evaluate(() => DA.closeAll());
   await t.goto(BASE + '?sim=DWKZ:25500:-4:3'); await t.waitForTimeout(2500);
 
   // Phase 3: Built to a different length (as-built extent editing, quiet design vs built display, strip rendering, undo)
