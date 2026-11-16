@@ -123,8 +123,9 @@
 
   // -------------------------------------------------------- position
   // Road drainage stays off the strip and its lists (it runs off across the land); the road crossing's sheet
-  // and the plan view gather it.
-  function lineFeatures() { return DI.data.features.filter(f => f.line === S.pos.line && !f.absorbedInto && !f.road); }
+  // and the plan view gather it. So do a station's or a yard's Type 6 drains and manholes: their own page (the
+  // station's sheet) and the plan show them, where drains along and across the tracks can be told apart.
+  function lineFeatures() { return DI.data.features.filter(f => f.line === S.pos.line && !f.absorbedInto && !f.road && !DI.netAreaOf(f)); }
   DA.lineFeatures = lineFeatures;
 
   function setHand(line, ch) {
@@ -292,9 +293,29 @@
     if (r.note) h += '<div class="note mt8">' + esc(r.note) + '.</div>';
     const n = DI.data.features.filter(f => f.line === r.line && f.ch1 >= r.ch0 && f.ch0 <= r.ch1).length;
     h += '<div class="note mt8">From ' + esc(r.source) + ', for finding your way. ' + n + ' drainage structure' + (n === 1 ? '' : 's') + ' on the drawings lie' + (n === 1 ? 's' : '') + ' within it.</div>';
-    h += '<button class="btn primary mt16" data-act="plan-open" data-line="' + r.line + '" data-a="' + Math.round(r.ch0 - 100) + '" data-b="' + Math.round(r.ch1 + 100) + '" data-title="' + esc(r.name) + '" style="min-height:52px">' + I.icon('layers') + 'See it in plan, to scale</button>';
+    const net = DI.netOf(r.id).filter(f => !f.absorbedInto);
+    const a = Math.min(r.ch0, ...net.map(f => f.ch0)) - 100, b = Math.max(r.ch1, ...net.map(f => f.ch1)) + 100;
+    h += '<button class="btn primary mt16" data-act="plan-open" data-line="' + r.line + '" data-a="' + Math.round(a) + '" data-b="' + Math.round(b) + '" data-title="' + esc(r.name) + '" style="min-height:52px">' + I.icon('layers') + 'See it in plan, to scale</button>';
+    if (net.length) h += netHtml(net);
     h += '<button class="btn mt8" data-act="goto-next" data-ch="' + Math.round((r.ch0 + r.ch1) / 2) + '" style="min-height:52px">Show it on the strip</button>';
     openOverlay(h, 'sheet');
+  }
+  // A station's or a yard's Type 6 network: its drains (French drains, collector pipes) and their manholes, kept
+  // off the strip. Junction manholes (drains meeting, or a run turning across the tracks) are cast in situ.
+  function netHtml(net) {
+    const legs = net.filter(f => DI.isSpan(f)).sort((x, y) => x.ch0 - y.ch0 || x.offset - y.offset);
+    const mhs = net.filter(f => !DI.isSpan(f)).sort((x, y) => x.ch0 - y.ch0 || x.offset - y.offset);
+    const p = DI.progressOf(net), done = f => DI.statusOf(f).bucket === 'done';
+    const km = m => (m / 1000).toLocaleString('en-GB', { maximumFractionDigits: 2 });
+    const jn = mhs.filter(f => f.conn && f.conn.junction), out = mhs.filter(f => f.conn && f.conn.exit);
+    let h = '<div class="lbl-caps mt16">Type 6 drains and manholes</div><div class="kv">' +
+      '<div class="k">Drains</div><div class="v">' + legs.length + ' · ' + km(p.lin.m) + ' km<small>' + km(p.lin.doneM) + ' km finished · ' + legs.filter(done).length + ' drains</small></div>' +
+      '<div class="k">Manholes</div><div class="v">' + mhs.length + '<small>' + mhs.filter(done).length + ' finished' + (jn.length ? ' · ' + jn.length + ' at junctions, cast in situ' : '') + (out.length ? ' · ' + out.length + ' outlets' : '') + '</small></div></div>';
+    h += '<div class="note mt8">They are kept off the strip, where drains along and across the tracks crowd it: find them here and in the plan.</div>';
+    const row = f => { const st = DI.statusOf(f); return '<button class="frow" data-act="record" data-id="' + esc(f.id) + '">' + sideBadge(f.side) + '<div class="mid"><div class="t1">' + I.typeIcon(f.icon) + '<span>' + esc(f.name) + '</span></div><div class="t2">' + DI.fmtCh(f.ch0) + (DI.isSpan(f) ? ' · ' + Math.round(f.len || f.ch1 - f.ch0) + ' m' + (f.dia ? ' · ø' + f.dia : '') : (f.conn && f.conn.junction ? ' · in situ' : '')) + '</div></div><div class="right">' + meter(f, st) + '</div></button>'; };
+    h += '<div class="lbl-caps mt16">Drains</div><div style="margin:0 -16px">' + legs.map(row).join('') + '</div>';
+    if (mhs.length) h += '<div class="lbl-caps mt16">Manholes</div><div style="margin:0 -16px">' + mhs.map(row).join('') + '</div>';
+    return h;
   }
   // What a reference structure is: from the track plan, not something to inspect.
   function openRef(id) {
@@ -632,6 +653,10 @@
       }));
       return h ? '<div class="conn">' + h + '</div>' : '';
     }
+    // a station's or a yard's Type 6 network: its page
+    const ar = DI.netAreaOf(f);
+    const part = ar ? '<button class="conn-row" data-act="ref" data-id="' + esc(ar.id) + '"><span class="lbl-caps">Network of</span>' + I.icon('layers') + '<b>' + esc(ar.name) + '</b><small>' +
+      (f.conn && f.conn.junction ? 'junction, cast in situ' : f.dia ? 'ø' + f.dia + ' mm' : 'its drains and manholes') + '</small></button>' : '';
     if (DI.isSpan(f)) {
       const e = DI.endsOf(f);
       const one = (lbl, g, ch) => g ? row(lbl, g, DI.fmtCh(g.ch0)) : '<div class="conn-row none"><span class="lbl-caps">' + esc(lbl) + '</span><small>' + DI.fmtCh(ch) + ' · nothing drawn here: runs on, or an open end</small></div>';
@@ -639,11 +664,11 @@
       DI.roadJoinsOf(f).forEach(x => { h += row('Road drain in', x.f, DI.fmtCh(x.ch) + (x.f.roadName ? ' · road ' + x.f.roadName : '')); });
     } else {
       const j = DI.joinsOf(f);
-      if (!j.length && !f.conn) return '';
+      if (!j.length && !f.conn) return part ? '<div class="conn">' + part + '</div>' : '';
       h = j.length ? j.map(x => row(x.end === 'start' ? 'Start of' : x.end === 'end' ? 'End of' : x.end === 'on' ? 'On' : 'Joins', x.f, DI.fmtCh(x.f.ch0) + (DI.isSpan(x.f) ? ' → ' + DI.fmtCh(x.f.ch1) : '') + ' · ' + (x.f.side === 'L' ? 'left' : x.f.side === 'R' ? 'right' : ''))).join('')
         : '<div class="conn-row none"><small>Nothing on the plans runs into it within 4 m</small></div>';
     }
-    return '<div class="conn">' + h + '</div>';
+    return '<div class="conn">' + part + h + '</div>';
   }
   DA.connHtml = connHtml;
   // The stage choices for a whole structure (or a whole stretch): one up from what was seen, the claim,

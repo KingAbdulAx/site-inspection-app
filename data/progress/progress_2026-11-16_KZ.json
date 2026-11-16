@@ -1,0 +1,304 @@
+{
+ "kind": "kmd-progress",
+ "asof": "2026-11-16",
+ "source": "Site report: the French drains at Kazaure Station and in front of Kazaure yard are completed",
+ "rows": [
+  {
+   "asset_id": "t6_KZDR_163B6D_1",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Kazaure Station · French drain MH1.6-KZ → MH1.5-KZ · 83+275–83+325, 50 m · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_163B6D_2",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Kazaure Station · French drain MH1.5-KZ → MH1.4-KZ · 83+325–83+375, 50 m · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_163B6D_3",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Kazaure Station · French drain MH1.4-KZ → MH1.3-KZ · 83+375–83+425, 50 m · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_163B6D_4",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Kazaure Station · French drain MH1.3-KZ → MH1.2-KZ · 83+425–83+475, 50 m · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_163B6D_5",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Kazaure Station · French drain MH1.2-KZ → MH1.1/MH2.1-KZ · 83+475–83+525, 50 m · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_163B6D_6",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Kazaure Station · French drain MH1.1/MH2.1-KZ → MH2.2-KZ · 83+525–83+575, 50 m · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_163B6D_7",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Kazaure Station · French drain MH2.2-KZ → MH2.3-KZ · 83+575–83+625, 50 m · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_163B6D_8",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Kazaure Station · French drain MH2.3-KZ → MH2.4-KZ · 83+625–83+675, 50 m · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_163B6D_9",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Kazaure Station · French drain MH2.4-KZ → MH2.5/MH3.6-KZ · 83+675–83+725, 50 m · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_163B6D_10",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Kazaure Station · French drain MH2.5/MH3.6-KZ → MH3.5-KZ · 83+725–83+775, 50 m · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_163B6D_11",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Kazaure Station · French drain MH3.5-KZ → MH3.4-KZ · 83+775–83+825, 50 m · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_163B6D_12",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Kazaure Station · French drain MH3.4-KZ → MH3.3-KZ · 83+825–83+875, 50 m · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_163B6D_13",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Kazaure Station · French drain MH3.3-KZ → MH3.2-KZ · 83+875–83+937, 62 m · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_163B6D_14",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Kazaure Station · French drain MH3.2-KZ → MH3.1-KZ · 83+937–84+000, 63 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_47134_19",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · in front of Kazaure yard · French drain MH3.4-YDKZ → MH3.5-YDKZ · 80+975–81+025, 50 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_47134_18",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · in front of Kazaure yard · French drain MH3.3-YDKZ → MH3.4-YDKZ · 81+025–81+075, 50 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_47134_17",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · in front of Kazaure yard · French drain MH3.2-YDKZ → MH3.3-YDKZ · 81+075–81+137, 62 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_47134_16",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · in front of Kazaure yard · French drain MH2.9/MH3.1-YDKZ → MH3.2-YDKZ · 81+137–81+200, 63 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_47134_15",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · in front of Kazaure yard · French drain MH2.8-YDKZ → MH2.9/MH3.1-YDKZ · 81+200–81+250, 50 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_47134_14",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · in front of Kazaure yard · French drain MH2.7-YDKZ → MH2.8-YDKZ · 81+250–81+300, 50 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_47134_13",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · in front of Kazaure yard · French drain MH2.6-YDKZ → MH2.7-YDKZ · 81+300–81+350, 50 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_47134_12",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · in front of Kazaure yard · French drain MH2.5-YDKZ → MH2.6-YDKZ · 81+350–81+400, 50 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_47134_11",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · in front of Kazaure yard · French drain MH2.4-YDKZ → MH2.5-YDKZ · 81+400–81+450, 50 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_47134_10",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · in front of Kazaure yard · French drain MH2.3-YDKZ → MH2.4-YDKZ · 81+450–81+500, 50 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_47134_9",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · in front of Kazaure yard · French drain MH2.2-YDKZ → MH2.3-YDKZ · 81+500–81+550, 50 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_47134_8",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · in front of Kazaure yard · French drain MH1.8/MH2.1-YDKZ → MH2.2-YDKZ · 81+550–81+600, 50 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_47134_7",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · in front of Kazaure yard · French drain MH1.7-YDKZ → MH1.8/MH2.1-YDKZ · 81+600–81+650, 50 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_47134_6",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · in front of Kazaure yard · French drain MH1.6-YDKZ → MH1.7-YDKZ · 81+650–81+700, 50 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_47134_5",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · in front of Kazaure yard · French drain MH1.5-YDKZ → MH1.6-YDKZ · 81+700–81+750, 50 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_47134_4",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · in front of Kazaure yard · French drain MH1.4-YDKZ → MH1.5-YDKZ · 81+750–81+800, 50 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_47134_3",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · in front of Kazaure yard · French drain MH1.3-YDKZ → MH1.4-YDKZ · 81+800–81+850, 50 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_47134_2",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · in front of Kazaure yard · French drain MH1.2-YDKZ → MH1.3-YDKZ · 81+850–81+900, 50 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_47134_1",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · in front of Kazaure yard · French drain MH1.1-YDKZ → MH1.2-YDKZ · 81+900–81+950, 50 m · completed"
+  }
+ ]
+}

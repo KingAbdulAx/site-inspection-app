@@ -610,5 +610,33 @@ section('Phases 8 and 9: Type 6 networks, road drainage', () => {
   ok(DI.statusOf(t4).bucket === 'done' && Math.abs(DI.progressOf([t4]).lin.doneM - t4.len) < 0.01, 'a road drain takes a stage, and counts its own length');
 });
 
+section('Station and yard networks: set-out drawings, junctions, their own pages', () => {
+  const F = DI.data.features;
+  // Dawanau station as set out (S02 - FD - Dawanau ST - Settings 260715)
+  const dw = F.filter(f => f.net && f.net.src && /Settings/.test(f.net.src));
+  ok(dw.length === 54 && dw.filter(f => f.dia).length === 52, 'Dawanau station is drawn as set out: 54 legs, 52 with their pipe diameter');
+  const name = n => F.find(f => f.mhName === n);
+  ok(name('MH1.1-DW') && name('MH1.28-DW') && name('MH2.22-DW') && name('Exit 1-DW'), 'its manholes keep the profiles\' names, 1.1 to 1.28 and 2.1 to 2.22, and its exits');
+  ok(!F.some(f => (f.code === 'MH' || f.code === 'MHG') && !f.net && f.sub === 'DWKZ' && f.ch0 > 19950 && f.ch0 < 21200 && f.offset > -60 && f.offset < 5 && !f.mhName),
+    'the plans\' manholes it does not have give way');
+  ok(F.some(f => f.id === 't6_DWKZ_4A65E_1' && f.dia === 800), 'a leg drawn the same before keeps its id, so its records stay on it');
+  // junctions
+  const j17 = name('MH1.7-DW'), j8 = name('MH1.8-DW'), j3 = name('MH1.3-DW'), j10 = name('MH1.10-DW');
+  ok(j17.conn.junction === 'meet' && j8.conn.junction === 'meet' && j3.conn.junction === 'turn' && DI.ladderKind(j17.ladder) === 'insitu',
+    'where drains meet, or a run turns across the tracks, the manhole is a junction cast in situ');
+  ok(!j10.conn.junction && DI.ladderKind(j10.ladder) === 'precast', 'a manhole on a straight run stays precast');
+  ok(DI.ladderKind(name('Exit 2-DW').ladder) === 'insitu' && name('Exit 2-DW').conn.exit && /^Outlet/.test(name('Exit 2-DW').name), 'an exit is an outlet, cast in situ');
+  // S03 sheets
+  ok(F.filter(f => f.sub === 'KZDR' && f.net && f.dia).length === 46 && F.find(f => f.id === 't6_KZDR_163B6D_14').dia === 400, 'S03\'s collector drain sheets give its legs their diameters');
+  ok(!F.some(f => f.sub === 'KZDR' && /^mh_/.test(f.id) && !f.mhName && f.ch0 > 83000 && f.ch0 < 124500), 'S03\'s outlines of an older layout are left out');
+  // sub-pages
+  const st = DI.refs().find(r => r.name === 'Kazaure Station'), net = DI.netOf(st.id);
+  ok(net.filter(f => f.code === 'T6').length === 14 && net.every(f => DI.netAreaOf(f) === st), 'Kazaure Station has its 14 drains and their manholes');
+  const yd = DI.refs().find(r => r.name === 'Daura freight yard');
+  ok(DI.netOf(yd.id).filter(f => DI.isSpan(f)).every(f => /-YD/.test(f.name)) && DI.netOf(yd.id).filter(f => DI.isSpan(f)).length === 19, 'a yard\'s drains go to the yard, by their names');
+  const leg = net.find(f => f.code === 'T6');
+  ok(DI.isNetMember(leg) && !DI.netAreaOf(F.find(f => f.code === 'T1')), 'other drainage stays on the strip');
+});
+
 console.log('\n' + (fail ? 'FAILED: ' : 'ALL PASSED: ') + pass + ' passed, ' + fail + ' failed');
 process.exit(fail ? 1 : 0);

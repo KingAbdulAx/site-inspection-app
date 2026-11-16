@@ -1213,7 +1213,14 @@
       h += '<div class="plan-legend">To scale · ' + (facing > 0 ? '▲ up the line' : '▼ down the line') + ' · ' + DI.fmtCh(c0) + ' → ' + DI.fmtCh(c1) + ' · out to ' + Math.round(maxOff) + ' m each side<br>' +
         '<span><i class="pl-sq"></i>Connection box</span><span><i class="pl-ci"></i>Manhole</span><span><i class="pl-tr"></i>Dissipator, outlet</span><span><i class="pl-ln"></i>Ditch, as drawn' + (nSpan > nGeo ? ' (≈ at its lane: ' + (nSpan - nGeo) + ')' : '') + '</span></div>';
       h += '<div class="scroll plan-scroll">' + svg + '</div>';
+      // The app redraws its overlays on every change (a GPS fix, a sync): the plan keeps where it was scrolled
+      // to, and is left alone when nothing in it changed.
+      if (ov.planHtml === h) return;
+      const was = ov.querySelector('.plan-scroll'), keep = was ? [was.scrollLeft, was.scrollTop] : null;
+      ov.planHtml = h;
       ov.firstChild.innerHTML = h;
+      const now = keep && ov.querySelector('.plan-scroll');
+      if (now) { now.scrollLeft = keep[0]; now.scrollTop = keep[1]; }
     };
     ov.refresh = draw;
     draw();
