@@ -1,0 +1,254 @@
+{
+ "kind": "kmd-progress",
+ "asof": "2026-11-16",
+ "source": "Correction: line 1 at Dawanau Station is complete only at its ends",
+ "rows": [
+  {
+   "asset_id": "t6_DWKZ_4A80F_5",
+   "sub": "DWKZ",
+   "status": "Not Started",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "replaces": {
+    "status": "Completed & Approved",
+    "at": "2026-11-16T12:00:00+00:00"
+   },
+   "notes": "Site report 16/11/26 · Dawanau Station · French drain MH1.8-DW → MH1.9-DW · not completed: marked complete by mistake earlier the same day (line 1 is complete only at its ends)"
+  },
+  {
+   "asset_id": "t6_DWKZ_4A80F_6",
+   "sub": "DWKZ",
+   "status": "Not Started",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "replaces": {
+    "status": "Completed & Approved",
+    "at": "2026-11-16T12:00:00+00:00"
+   },
+   "notes": "Site report 16/11/26 · Dawanau Station · French drain MH1.9-DW → MH1.10-DW · not completed: marked complete by mistake earlier the same day (line 1 is complete only at its ends)"
+  },
+  {
+   "asset_id": "t6_DWKZ_4A80F_7",
+   "sub": "DWKZ",
+   "status": "Not Started",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "replaces": {
+    "status": "Completed & Approved",
+    "at": "2026-11-16T12:00:00+00:00"
+   },
+   "notes": "Site report 16/11/26 · Dawanau Station · French drain MH1.10-DW → MH1.11-DW · not completed: marked complete by mistake earlier the same day (line 1 is complete only at its ends)"
+  },
+  {
+   "asset_id": "t6_DWKZ_4A80F_8",
+   "sub": "DWKZ",
+   "status": "Not Started",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "replaces": {
+    "status": "Completed & Approved",
+    "at": "2026-11-16T12:00:00+00:00"
+   },
+   "notes": "Site report 16/11/26 · Dawanau Station · French drain MH1.11-DW → MH1.12-DW · not completed: marked complete by mistake earlier the same day (line 1 is complete only at its ends)"
+  },
+  {
+   "asset_id": "t6_DWKZ_4A80F_9",
+   "sub": "DWKZ",
+   "status": "Not Started",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "replaces": {
+    "status": "Completed & Approved",
+    "at": "2026-11-16T12:00:00+00:00"
+   },
+   "notes": "Site report 16/11/26 · Dawanau Station · French drain MH1.12-DW → MH1.13-DW · not completed: marked complete by mistake earlier the same day (line 1 is complete only at its ends)"
+  },
+  {
+   "asset_id": "t6_DWKZ_4A80F_10",
+   "sub": "DWKZ",
+   "status": "Not Started",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "replaces": {
+    "status": "Completed & Approved",
+    "at": "2026-11-16T12:00:00+00:00"
+   },
+   "notes": "Site report 16/11/26 · Dawanau Station · French drain MH1.13-DW → MH1.14-DW · not completed: marked complete by mistake earlier the same day (line 1 is complete only at its ends)"
+  },
+  {
+   "asset_id": "t6_DWKZ_4A80F_11",
+   "sub": "DWKZ",
+   "status": "Not Started",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "replaces": {
+    "status": "Completed & Approved",
+    "at": "2026-11-16T12:00:00+00:00"
+   },
+   "notes": "Site report 16/11/26 · Dawanau Station · French drain MH1.14-DW → MH1.15-DW · not completed: marked complete by mistake earlier the same day (line 1 is complete only at its ends)"
+  },
+  {
+   "asset_id": "t6_DWKZ_4A80F_12",
+   "sub": "DWKZ",
+   "status": "Not Started",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "replaces": {
+    "status": "Completed & Approved",
+    "at": "2026-11-16T12:00:00+00:00"
+   },
+   "notes": "Site report 16/11/26 · Dawanau Station · French drain MH1.15-DW → MH1.16-DW · not completed: marked complete by mistake earlier the same day (line 1 is complete only at its ends)"
+  },
+  {
+   "asset_id": "t6_DWKZ_4A80F_13",
+   "sub": "DWKZ",
+   "status": "Not Started",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "replaces": {
+    "status": "Completed & Approved",
+    "at": "2026-11-16T12:00:00+00:00"
+   },
+   "notes": "Site report 16/11/26 · Dawanau Station · French drain MH1.16-DW → MH1.17-DW · not completed: marked complete by mistake earlier the same day (line 1 is complete only at its ends)"
+  },
+  {
+   "asset_id": "t6_DWKZ_4A80F_14",
+   "sub": "DWKZ",
+   "status": "Not Started",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "replaces": {
+    "status": "Completed & Approved",
+    "at": "2026-11-16T12:00:00+00:00"
+   },
+   "notes": "Site report 16/11/26 · Dawanau Station · French drain MH1.17-DW → MH1.18-DW · not completed: marked complete by mistake earlier the same day (line 1 is complete only at its ends)"
+  },
+  {
+   "asset_id": "t6_DWKZ_4A80F_15",
+   "sub": "DWKZ",
+   "status": "Not Started",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "replaces": {
+    "status": "Completed & Approved",
+    "at": "2026-11-16T12:00:00+00:00"
+   },
+   "notes": "Site report 16/11/26 · Dawanau Station · French drain MH1.18-DW → MH1.19-DW · not completed: marked complete by mistake earlier the same day (line 1 is complete only at its ends)"
+  },
+  {
+   "asset_id": "t6_DWKZ_4A80F_16",
+   "sub": "DWKZ",
+   "status": "Not Started",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "replaces": {
+    "status": "Completed & Approved",
+    "at": "2026-11-16T12:00:00+00:00"
+   },
+   "notes": "Site report 16/11/26 · Dawanau Station · French drain MH1.19-DW → MH1.20-DW · not completed: marked complete by mistake earlier the same day (line 1 is complete only at its ends)"
+  },
+  {
+   "asset_id": "t6_DWKZ_4A80F_17",
+   "sub": "DWKZ",
+   "status": "Not Started",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "replaces": {
+    "status": "Completed & Approved",
+    "at": "2026-11-16T12:00:00+00:00"
+   },
+   "notes": "Site report 16/11/26 · Dawanau Station · French drain MH1.20-DW → MH1.21-DW · not completed: marked complete by mistake earlier the same day (line 1 is complete only at its ends)"
+  },
+  {
+   "asset_id": "t6_DWKZ_4A80F_18",
+   "sub": "DWKZ",
+   "status": "Not Started",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "replaces": {
+    "status": "Completed & Approved",
+    "at": "2026-11-16T12:00:00+00:00"
+   },
+   "notes": "Site report 16/11/26 · Dawanau Station · French drain MH1.21-DW → MH1.22-DW · not completed: marked complete by mistake earlier the same day (line 1 is complete only at its ends)"
+  },
+  {
+   "asset_id": "t6_DWKZ_4A80F_19",
+   "sub": "DWKZ",
+   "status": "Not Started",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "replaces": {
+    "status": "Completed & Approved",
+    "at": "2026-11-16T12:00:00+00:00"
+   },
+   "notes": "Site report 16/11/26 · Dawanau Station · French drain MH1.22-DW → MH1.23-DW · not completed: marked complete by mistake earlier the same day (line 1 is complete only at its ends)"
+  },
+  {
+   "asset_id": "t6_DWKZ_4A80F_20",
+   "sub": "DWKZ",
+   "status": "Not Started",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "replaces": {
+    "status": "Completed & Approved",
+    "at": "2026-11-16T12:00:00+00:00"
+   },
+   "notes": "Site report 16/11/26 · Dawanau Station · French drain MH1.23-DW → MH1.24-DW · not completed: marked complete by mistake earlier the same day (line 1 is complete only at its ends)"
+  },
+  {
+   "asset_id": "t6_DWKZ_4A80F_22",
+   "sub": "DWKZ",
+   "status": "Not Started",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "replaces": {
+    "status": "Completed & Approved",
+    "at": "2026-11-16T12:00:00+00:00"
+   },
+   "notes": "Site report 16/11/26 · Dawanau Station · French drain MH1.25-DW → MH1.26-DW · not completed: marked complete by mistake earlier the same day (line 1 is complete only at its ends)"
+  },
+  {
+   "asset_id": "t6_DWKZ_DWST_26",
+   "sub": "DWKZ",
+   "status": "Not Started",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "replaces": {
+    "status": "Completed & Approved",
+    "at": "2026-11-16T12:00:00+00:00"
+   },
+   "notes": "Site report 16/11/26 · Dawanau Station · French drain MH1.26-DW → MH1.27-DW · not completed: marked complete by mistake earlier the same day (line 1 is complete only at its ends)"
+  },
+  {
+   "asset_id": "t6_DWKZ_DWST_27",
+   "sub": "DWKZ",
+   "status": "Not Started",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "replaces": {
+    "status": "Completed & Approved",
+    "at": "2026-11-16T12:00:00+00:00"
+   },
+   "notes": "Site report 16/11/26 · Dawanau Station · French drain MH1.27-DW → MH1.28-DW · not completed: marked complete by mistake earlier the same day (line 1 is complete only at its ends)"
+  }
+ ]
+}

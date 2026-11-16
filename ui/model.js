@@ -757,6 +757,44 @@
     });
     return netCache;
   }
+  // On the strip a station's or a yard's Type 6 network shows as one straight run a side, as the design's
+  // straight runs did; tapping it opens the network's page. It is not a feature: nothing is recorded against it,
+  // and Progress counts the drains themselves.
+  let runCache = null;
+  function netRuns(line) {
+    const idx = netIndex();
+    if (!runCache || runCache.idx !== idx) {
+      runCache = { idx, list: [] };
+      Object.entries(idx.by).forEach(([rid, fs]) => {
+        const r = refById(rid);
+        const legs = fs.filter(f => isSpanF(f) && (f.code === 'T6' || f.code === 'CP'));
+        ['L', 'R'].forEach(side => {
+          const L = legs.filter(f => f.side === side);
+          if (!r || !L.length) return;
+          const name = 'Type 6 network, ' + r.name;
+          runCache.list.push({ id: 'netrun_' + rid + '_' + side, netRun: rid, legs: L.map(f => f.id), line: r.line, sub: L[0].sub, catKey: 'track', catLabel: CAT_LABEL.track,
+            kind: 'buried', lane: 'cl', side, ch0: Math.min(...L.map(f => f.ch0)), ch1: Math.max(...L.map(f => f.ch1)), cert: 'derived', code: 'T6', typeKey: '6', name, full: name + ': ' + L.length + ' drains, tap for its page',
+            icon: 'collector', ladder: LADDER_FRENCH, sheet: '', drawings: [], level: null, onHold: false, confidence: '', specs: '', notes: '', stated: null, raw: {}, offset: side === 'L' ? 3 : -3 });
+        });
+      });
+    }
+    return runCache.list.filter(x => !line || x.line === line);
+  }
+  function netRunById(id) { return /^netrun_/.test(id || '') ? netRuns().find(x => x.id === id) || null : null; }
+  // A network run's state: its drains', as one line. Done where a drain is done, by its chainage.
+  function netRunStatus(f) {
+    const legs = f.legs.map(id => data.byId[id]).filter(Boolean), max = f.ladder.length - 1;
+    const sts = legs.map(g => statusOf(g)), p = progressOf(legs);
+    const segs = [];
+    legs.forEach((g, i) => { const st = sts[i], k = st.cover ? st.cover.floor || st.cover.top : st.best; if (k > 0) segs.push({ a: g.ch0, b: Math.max(g.ch1, g.ch0 + 0.5), s: Math.min(max, k) }); });
+    const all = legs.length && sts.every(st => st.bucket === 'done');
+    const frac = p.lin.m ? p.lin.doneM / p.lin.m : 0;
+    const any = segs.length > 0;
+    const s = all ? max : any ? Math.max(1, Math.min(max - 1, Math.round(frac * max))) : null;
+    return { seen: null, claim: null, s, c: null, best: s || 0, max, lastAt: null, partBuilt: any && !all, stalled: false, fill: all ? 'solid' : any ? 'ranges' : 'never',
+      defects: [].concat(...sts.map(st => st.defects)), changes: [], removed: false, bucket: all ? 'done' : any ? 'moving' : 'none',
+      cover: any && !all ? { segs, max, m: p.lin.doneM, mAt: [], full: false, floor: 0, top: s, byStage: [], ranges: [] } : null, net: p };
+  }
   // The station or yard a Type 6 drain or manhole belongs to (a reference structure), or null.
   function netAreaOf(f) { const id = netIndex().of[f.id]; return id ? refById(id) : null; }
   // A station's or a yard's Type 6 drains and manholes.
@@ -1667,6 +1705,7 @@
 
 
   function statusOf(f) {
+    if (f.netRun) return netRunStatus(f);
     const seen = seenOf(f.id);
     const claim = claimOf(f.id);
     const max = f.ladder.length - 1;
@@ -1871,7 +1910,7 @@
     fmtCh, fmtPlus, parseCh, fmtDate, fmtTime, monthsBetween, esc, DAYS, MONTHS,
     inspector, setInspector, addRecord, voidRecord, live, recordsFor, seenOf, ownSeen, openDefects,
     designChanges, statusOf, drafts, saveDraft, putPhoto, getPhoto, uid, loadLegacy, mirrorLegacy,
-    loadSections, sectionAt, loadT9Schedule, hasT9Schedule, rangeable, alongOf, measureEnds, measureAt, coverOf, addRange, rangeNote, parseRangeNote, stageNote, parseStageNote, noteMetres, parseExecutedNote, foreignStaged, extentNote, parseExtentNote, foreignExtent, adoptForeignExtent, applyExtents, extentOf, addExtent, extentEnds, addJoin, detectJoins, applyJoins, isSpan, typeOf, progressOf, typeProgress, T9_SCHEDULE_ON, refs, refsNear, refById, REF_KIND, areasAt, isArea, loadConnectors, hasConnectors, endsOf, joinsOf, geomOf, laneOf, loadNetworks, hasNetworks, netAreaOf, netOf, isNetMember, roadDrainage, roadJoinsOf, LADDER_BPIPE, loadHeights, hasHeights, heightAt, T9_RULES, t9Rule, setT9Rule, t9Check,
+    loadSections, sectionAt, loadT9Schedule, hasT9Schedule, rangeable, alongOf, measureEnds, measureAt, coverOf, addRange, rangeNote, parseRangeNote, stageNote, parseStageNote, noteMetres, parseExecutedNote, foreignStaged, extentNote, parseExtentNote, foreignExtent, adoptForeignExtent, applyExtents, extentOf, addExtent, extentEnds, addJoin, detectJoins, applyJoins, isSpan, typeOf, progressOf, typeProgress, T9_SCHEDULE_ON, refs, refsNear, refById, REF_KIND, areasAt, isArea, loadConnectors, hasConnectors, endsOf, joinsOf, geomOf, laneOf, loadNetworks, hasNetworks, netAreaOf, netOf, isNetMember, netRuns, netRunById, roadDrainage, roadJoinsOf, LADDER_BPIPE, loadHeights, hasHeights, heightAt, T9_RULES, t9Rule, setT9Rule, t9Check,
     PRESETS, presetOf, applyBase, baseRecords, correctBase, addBase, deleteBase, verifyBase, unverifyBase, exportGeo, exportCorrections, importRecords,
     project, pointAt, laneOf, savePosition, lastPosition, csvCell,
     get records() { return records; }

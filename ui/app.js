@@ -124,8 +124,9 @@
   // -------------------------------------------------------- position
   // Road drainage stays off the strip and its lists (it runs off across the land); the road crossing's sheet
   // and the plan view gather it. So do a station's or a yard's Type 6 drains and manholes: their own page (the
-  // station's sheet) and the plan show them, where drains along and across the tracks can be told apart.
-  function lineFeatures() { return DI.data.features.filter(f => f.line === S.pos.line && !f.absorbedInto && !f.road && !DI.netAreaOf(f)); }
+  // station's sheet) and the plan show them, where drains along and across the tracks can be told apart. The
+  // strip keeps one straight Type 6 run a side for each, as the design drew it, which opens that page.
+  function lineFeatures() { return DI.data.features.filter(f => f.line === S.pos.line && !f.absorbedInto && !f.road && !DI.netAreaOf(f)).concat(DI.netRuns(S.pos.line)); }
   DA.lineFeatures = lineFeatures;
 
   function setHand(line, ch) {
@@ -311,7 +312,7 @@
     let h = '<div class="lbl-caps mt16">Type 6 drains and manholes</div><div class="kv">' +
       '<div class="k">Drains</div><div class="v">' + legs.length + ' · ' + km(p.lin.m) + ' km<small>' + km(p.lin.doneM) + ' km finished · ' + legs.filter(done).length + ' drains</small></div>' +
       '<div class="k">Manholes</div><div class="v">' + mhs.length + '<small>' + mhs.filter(done).length + ' finished' + (jn.length ? ' · ' + jn.length + ' at junctions, cast in situ' : '') + (out.length ? ' · ' + out.length + ' outlets' : '') + '</small></div></div>';
-    h += '<div class="note mt8">They are kept off the strip, where drains along and across the tracks crowd it: find them here and in the plan.</div>';
+    h += '<div class="note mt8">The strip shows them as one straight Type 6 run a side, which opens this page: drains along and across the tracks would crowd it. Each drain and manhole is here and in the plan.</div>';
     const row = f => { const st = DI.statusOf(f); return '<button class="frow" data-act="record" data-id="' + esc(f.id) + '">' + sideBadge(f.side) + '<div class="mid"><div class="t1">' + I.typeIcon(f.icon) + '<span>' + esc(f.name) + '</span></div><div class="t2">' + DI.fmtCh(f.ch0) + (DI.isSpan(f) ? ' · ' + Math.round(f.len || f.ch1 - f.ch0) + ' m' + (f.dia ? ' · ø' + f.dia : '') : (f.conn && f.conn.junction ? ' · in situ' : '')) + '</div></div><div class="right">' + meter(f, st) + '</div></button>'; };
     h += '<div class="lbl-caps mt16">Drains</div><div style="margin:0 -16px">' + legs.map(row).join('') + '</div>';
     if (mhs.length) h += '<div class="lbl-caps mt16">Manholes</div><div style="margin:0 -16px">' + mhs.map(row).join('') + '</div>';
@@ -611,6 +612,9 @@
 
   // ------------------------------------------------------- record sheet
   function openRecord(fid) {
+    // a station's network run on the strip: its page
+    const run = DI.netRunById(fid);
+    if (run) return openRef(run.netRun);
     let f = DI.data.byId[fid];
     if (!f) return;
     if (f.absorbedInto) { fid = f.absorbedInto; f = DI.data.byId[fid]; }

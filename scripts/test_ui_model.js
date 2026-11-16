@@ -658,6 +658,20 @@ section('Station and yard networks: set-out drawings, junctions, their own pages
   ok(DI.netOf(yd.id).filter(f => DI.isSpan(f)).every(f => /-YD/.test(f.name)) && DI.netOf(yd.id).filter(f => DI.isSpan(f)).length === 19, 'a yard\'s drains go to the yard, by their names');
   const leg = net.find(f => f.code === 'T6');
   ok(DI.isNetMember(leg) && !DI.netAreaOf(F.find(f => f.code === 'T1')), 'other drainage stays on the strip');
+  // on the strip: one straight run a side, which opens the network's page
+  const run = DI.netRuns('KM').find(r => r.netRun === st.id);
+  ok(run && run.kind === 'buried' && run.code === 'T6' && run.ch0 === Math.min(...net.filter(f => f.code === 'T6').map(f => f.ch0)) && DI.netRunById(run.id) === run && !DI.data.byId[run.id],
+    'the strip has one straight Type 6 run for it, not a feature of its own');
+  ok(DI.statusOf(run).bucket === 'none', 'nothing built: the run shows nothing built');
+  const dws = DI.refs().find(r => r.name === 'Dawanau Station'), drun = DI.netRuns('KM').find(r => r.netRun === dws.id);
+  // as on site (16 Nov): all of line 2, and line 1 only at its ends (MH1.1 to MH1.8, MH1.24 to MH1.25)
+  const done = JSON.parse(require('fs').readFileSync(require('path').join(__dirname, '..', 'data/progress/progress_2026-11-16_DW.json'), 'utf8')).rows.map(r => DI.data.byId[r.asset_id]);
+  const undone = JSON.parse(require('fs').readFileSync(require('path').join(__dirname, '..', 'data/progress/progress_2026-11-16_DW_fix.json'), 'utf8')).rows.map(r => r.asset_id);
+  ok(done.length === 29 && done.every(f => f && DI.netAreaOf(f) === dws) && done.filter(f => /MH2\.|MH2\.20/.test(f.name)).length === 21 && !done.some(f => undone.includes(f.id)),
+    'the Dawanau progress file has line 2 (21 drains) and the ends of line 1 (8), none of the 19 set back');
+  done.forEach(f => DI.addRecord({ kind: 'stage', featureId: f.id, stage: f.ladder.length - 1 }));
+  const rs = DI.statusOf(drun);
+  ok(rs.bucket === 'moving' && rs.cover.segs.length === 29 && Math.abs(rs.net.lin.doneM - done.reduce((a, f) => a + f.len, 0)) < 0.5, 'those show built on the strip\'s run, the middle of line 1 not');
 });
 
 console.log('\n' + (fail ? 'FAILED: ' : 'ALL PASSED: ') + pass + ' passed, ' + fail + ' failed');

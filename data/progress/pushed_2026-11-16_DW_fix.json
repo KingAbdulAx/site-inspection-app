@@ -1,0 +1,274 @@
+{
+ "kind": "kmd-progress-pushed",
+ "asof": "2026-11-16",
+ "pushed_at": "2026-11-16T07:18:17.759Z",
+ "table_before": 770,
+ "written": [
+  {
+   "asset_id": "t6_DWKZ_4A80F_5",
+   "status": "Not Started",
+   "replaced": {
+    "asset_id": "t6_DWKZ_4A80F_5",
+    "status": "Completed & Approved",
+    "notes": "Site report 16/11/26 · Dawanau Station run 1 · French drain MH1.8-DW → MH1.9-DW · 50 m, ø600 · completed",
+    "has_defect": false,
+    "inspection_date": "2026-11-16",
+    "inspected_by": "Site report 16/11/26",
+    "device_id": "import-progress",
+    "updated_at": "2026-11-16T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "t6_DWKZ_4A80F_6",
+   "status": "Not Started",
+   "replaced": {
+    "asset_id": "t6_DWKZ_4A80F_6",
+    "status": "Completed & Approved",
+    "notes": "Site report 16/11/26 · Dawanau Station run 1 · French drain MH1.9-DW → MH1.10-DW · 50 m, ø600 · completed",
+    "has_defect": false,
+    "inspection_date": "2026-11-16",
+    "inspected_by": "Site report 16/11/26",
+    "device_id": "import-progress",
+    "updated_at": "2026-11-16T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "t6_DWKZ_4A80F_7",
+   "status": "Not Started",
+   "replaced": {
+    "asset_id": "t6_DWKZ_4A80F_7",
+    "status": "Completed & Approved",
+    "notes": "Site report 16/11/26 · Dawanau Station run 1 · French drain MH1.10-DW → MH1.11-DW · 50 m, ø600 · completed",
+    "has_defect": false,
+    "inspection_date": "2026-11-16",
+    "inspected_by": "Site report 16/11/26",
+    "device_id": "import-progress",
+    "updated_at": "2026-11-16T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "t6_DWKZ_4A80F_8",
+   "status": "Not Started",
+   "replaced": {
+    "asset_id": "t6_DWKZ_4A80F_8",
+    "status": "Completed & Approved",
+    "notes": "Site report 16/11/26 · Dawanau Station run 1 · French drain MH1.11-DW → MH1.12-DW · 50 m, ø600 · completed",
+    "has_defect": false,
+    "inspection_date": "2026-11-16",
+    "inspected_by": "Site report 16/11/26",
+    "device_id": "import-progress",
+    "updated_at": "2026-11-16T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "t6_DWKZ_4A80F_9",
+   "status": "Not Started",
+   "replaced": {
+    "asset_id": "t6_DWKZ_4A80F_9",
+    "status": "Completed & Approved",
+    "notes": "Site report 16/11/26 · Dawanau Station run 1 · French drain MH1.12-DW → MH1.13-DW · 50 m, ø600 · completed",
+    "has_defect": false,
+    "inspection_date": "2026-11-16",
+    "inspected_by": "Site report 16/11/26",
+    "device_id": "import-progress",
+    "updated_at": "2026-11-16T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "t6_DWKZ_4A80F_10",
+   "status": "Not Started",
+   "replaced": {
+    "asset_id": "t6_DWKZ_4A80F_10",
+    "status": "Completed & Approved",
+    "notes": "Site report 16/11/26 · Dawanau Station run 1 · French drain MH1.13-DW → MH1.14-DW · 50 m, ø600 · completed",
+    "has_defect": false,
+    "inspection_date": "2026-11-16",
+    "inspected_by": "Site report 16/11/26",
+    "device_id": "import-progress",
+    "updated_at": "2026-11-16T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "t6_DWKZ_4A80F_11",
+   "status": "Not Started",
+   "replaced": {
+    "asset_id": "t6_DWKZ_4A80F_11",
+    "status": "Completed & Approved",
+    "notes": "Site report 16/11/26 · Dawanau Station run 1 · French drain MH1.14-DW → MH1.15-DW · 50 m, ø600 · completed",
+    "has_defect": false,
+    "inspection_date": "2026-11-16",
+    "inspected_by": "Site report 16/11/26",
+    "device_id": "import-progress",
+    "updated_at": "2026-11-16T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "t6_DWKZ_4A80F_12",
+   "status": "Not Started",
+   "replaced": {
+    "asset_id": "t6_DWKZ_4A80F_12",
+    "status": "Completed & Approved",
+    "notes": "Site report 16/11/26 · Dawanau Station run 1 · French drain MH1.15-DW → MH1.16-DW · 50 m, ø600 · completed",
+    "has_defect": false,
+    "inspection_date": "2026-11-16",
+    "inspected_by": "Site report 16/11/26",
+    "device_id": "import-progress",
+    "updated_at": "2026-11-16T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "t6_DWKZ_4A80F_13",
+   "status": "Not Started",
+   "replaced": {
+    "asset_id": "t6_DWKZ_4A80F_13",
+    "status": "Completed & Approved",
+    "notes": "Site report 16/11/26 · Dawanau Station run 1 · French drain MH1.16-DW → MH1.17-DW · 50 m, ø600 · completed",
+    "has_defect": false,
+    "inspection_date": "2026-11-16",
+    "inspected_by": "Site report 16/11/26",
+    "device_id": "import-progress",
+    "updated_at": "2026-11-16T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "t6_DWKZ_4A80F_14",
+   "status": "Not Started",
+   "replaced": {
+    "asset_id": "t6_DWKZ_4A80F_14",
+    "status": "Completed & Approved",
+    "notes": "Site report 16/11/26 · Dawanau Station run 1 · French drain MH1.17-DW → MH1.18-DW · 50 m, ø600 · completed",
+    "has_defect": false,
+    "inspection_date": "2026-11-16",
+    "inspected_by": "Site report 16/11/26",
+    "device_id": "import-progress",
+    "updated_at": "2026-11-16T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "t6_DWKZ_4A80F_15",
+   "status": "Not Started",
+   "replaced": {
+    "asset_id": "t6_DWKZ_4A80F_15",
+    "status": "Completed & Approved",
+    "notes": "Site report 16/11/26 · Dawanau Station run 1 · French drain MH1.18-DW → MH1.19-DW · 50 m, ø600 · completed",
+    "has_defect": false,
+    "inspection_date": "2026-11-16",
+    "inspected_by": "Site report 16/11/26",
+    "device_id": "import-progress",
+    "updated_at": "2026-11-16T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "t6_DWKZ_4A80F_16",
+   "status": "Not Started",
+   "replaced": {
+    "asset_id": "t6_DWKZ_4A80F_16",
+    "status": "Completed & Approved",
+    "notes": "Site report 16/11/26 · Dawanau Station run 1 · French drain MH1.19-DW → MH1.20-DW · 50 m, ø600 · completed",
+    "has_defect": false,
+    "inspection_date": "2026-11-16",
+    "inspected_by": "Site report 16/11/26",
+    "device_id": "import-progress",
+    "updated_at": "2026-11-16T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "t6_DWKZ_4A80F_17",
+   "status": "Not Started",
+   "replaced": {
+    "asset_id": "t6_DWKZ_4A80F_17",
+    "status": "Completed & Approved",
+    "notes": "Site report 16/11/26 · Dawanau Station run 1 · French drain MH1.20-DW → MH1.21-DW · 50 m, ø600 · completed",
+    "has_defect": false,
+    "inspection_date": "2026-11-16",
+    "inspected_by": "Site report 16/11/26",
+    "device_id": "import-progress",
+    "updated_at": "2026-11-16T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "t6_DWKZ_4A80F_18",
+   "status": "Not Started",
+   "replaced": {
+    "asset_id": "t6_DWKZ_4A80F_18",
+    "status": "Completed & Approved",
+    "notes": "Site report 16/11/26 · Dawanau Station run 1 · French drain MH1.21-DW → MH1.22-DW · 50 m, ø600 · completed",
+    "has_defect": false,
+    "inspection_date": "2026-11-16",
+    "inspected_by": "Site report 16/11/26",
+    "device_id": "import-progress",
+    "updated_at": "2026-11-16T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "t6_DWKZ_4A80F_19",
+   "status": "Not Started",
+   "replaced": {
+    "asset_id": "t6_DWKZ_4A80F_19",
+    "status": "Completed & Approved",
+    "notes": "Site report 16/11/26 · Dawanau Station run 1 · French drain MH1.22-DW → MH1.23-DW · 50 m, ø600 · completed",
+    "has_defect": false,
+    "inspection_date": "2026-11-16",
+    "inspected_by": "Site report 16/11/26",
+    "device_id": "import-progress",
+    "updated_at": "2026-11-16T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "t6_DWKZ_4A80F_20",
+   "status": "Not Started",
+   "replaced": {
+    "asset_id": "t6_DWKZ_4A80F_20",
+    "status": "Completed & Approved",
+    "notes": "Site report 16/11/26 · Dawanau Station run 1 · French drain MH1.23-DW → MH1.24-DW · 50 m, ø600 · completed",
+    "has_defect": false,
+    "inspection_date": "2026-11-16",
+    "inspected_by": "Site report 16/11/26",
+    "device_id": "import-progress",
+    "updated_at": "2026-11-16T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "t6_DWKZ_4A80F_22",
+   "status": "Not Started",
+   "replaced": {
+    "asset_id": "t6_DWKZ_4A80F_22",
+    "status": "Completed & Approved",
+    "notes": "Site report 16/11/26 · Dawanau Station run 1 · French drain MH1.25-DW → MH1.26-DW · 50 m, ø600 · completed",
+    "has_defect": false,
+    "inspection_date": "2026-11-16",
+    "inspected_by": "Site report 16/11/26",
+    "device_id": "import-progress",
+    "updated_at": "2026-11-16T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "t6_DWKZ_DWST_26",
+   "status": "Not Started",
+   "replaced": {
+    "asset_id": "t6_DWKZ_DWST_26",
+    "status": "Completed & Approved",
+    "notes": "Site report 16/11/26 · Dawanau Station run 1 · French drain MH1.26-DW → MH1.27-DW · 50 m, ø600 · completed",
+    "has_defect": false,
+    "inspection_date": "2026-11-16",
+    "inspected_by": "Site report 16/11/26",
+    "device_id": "import-progress",
+    "updated_at": "2026-11-16T12:00:00+00:00"
+   }
+  },
+  {
+   "asset_id": "t6_DWKZ_DWST_27",
+   "status": "Not Started",
+   "replaced": {
+    "asset_id": "t6_DWKZ_DWST_27",
+    "status": "Completed & Approved",
+    "notes": "Site report 16/11/26 · Dawanau Station run 1 · French drain MH1.27-DW → MH1.28-DW · 50 m, ø400 · completed",
+    "has_defect": false,
+    "inspection_date": "2026-11-16",
+    "inspected_by": "Site report 16/11/26",
+    "device_id": "import-progress",
+    "updated_at": "2026-11-16T12:00:00+00:00"
+   }
+  }
+ ]
+}

@@ -78,6 +78,8 @@
   }
 
   function openFeature(fid) {
+    const run = DI.netRunById(fid);
+    if (run) return DA.openRef(run.netRun);
     let f = DI.data.byId[fid];
     if (!f) return;
     const ov = DA.openOverlay('', 'full', {});

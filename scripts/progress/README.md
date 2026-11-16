@@ -22,6 +22,8 @@ node scripts/progress/push_progress.js data/progress/progress_2026-09-25.json --
 node scripts/progress/push_progress.js data/progress/pushed_2026-09-25.json --undo --push
 ```
 
+`--undo` needs a key the database lets delete rows; with the app's own key the table's row-level security removes nothing, and `--undo` now says so instead of reporting success. Then correct the rows instead: a progress file whose rows give the right status and `"replaces": { "status": …, "at": … }` the row written by mistake (its status and `updated_at`), pushed as usual. `data/progress/progress_2026-11-16_DW_fix.json` is one: 19 Dawanau drains marked complete by mistake, set back to Not Started.
+
 Rules:
 
 - **Road and yard crossings** (`82 R3`, `84 AR`, `DWA 2A`, `E1R1`) carry road chainages (0+351…) and are left out. Only main-line names (`4.1`, `5.A`, `E.1`, `CC 78`) are used.
