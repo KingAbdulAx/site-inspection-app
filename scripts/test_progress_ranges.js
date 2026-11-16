@@ -117,7 +117,7 @@ DI.voidRecord(rJoin.id);
 ok(A.absorbed === null && B.absorbedInto === null, 'undo join restores separate pieces');
 
 console.log('--- a Type 1 run: cast metres, by stage');
-const T1 = DI.data.bySub.DWKZ.find(f => f.code === 'T1' && f.ch1 - f.ch0 > 400);
+const T1 = DI.data.bySub.DWKZ.find(f => (f.code === 'T1' || f.code === 'T1L') && f.ch1 - f.ch0 > 400);
 const t1row = { code: 'T1', date: '2026-11-05', a: pk(T1.ch0 + 50), b: pk(T1.ch0 + 170), total: 120, side: T1.side === 'L' ? 'LHS' : 'RHS', executed: 120, ir1: 'IR-T1', ir2: null, remark: null };
 fs.writeFileSync(path.join(dir, 'ditch_t1.json'), JSON.stringify([t1row]));
 execFileSync('node', [path.join(root, 'scripts/progress/import_progress.js'), '--asof', '2026-11-06', '--ditches', path.join(dir, 'ditch_t1.json'), '--out', dir], { stdio: 'pipe' });

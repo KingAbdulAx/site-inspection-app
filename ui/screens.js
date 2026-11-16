@@ -1185,7 +1185,7 @@
           pieces.forEach(([a, oa, b, ob]) => {
             const line_ = 'x1="' + X(oa) + '" y1="' + Y(a) + '" x2="' + X(ob) + '" y2="' + Y(b) + '"';
             g += '<g data-act="plan-rec" data-id="' + DI.esc(f.id) + '"><line ' + line_ + ' style="stroke:transparent;stroke-width:16"/>' +
-              '<line ' + line_ + ' style="stroke:' + ink(sts.bucket) + ';stroke-width:' + (geo ? 3 : 1.5) + (geo ? '' : ';opacity:0.45') + '"' + dash + '/></g>';
+              '<line ' + line_ + ' style="stroke:' + ink(sts.bucket) + ';stroke-width:' + (geo ? 3 : 1.5) * (f.code === 'T1L' ? 2 : 1) + (geo ? '' : ';opacity:0.45') + '"' + dash + '/></g>';
           });
           const [a, oa, b, ob] = pieces.reduce((m, q) => Math.hypot(q[2] - q[0], q[3] - q[1]) > Math.hypot(m[2] - m[0], m[3] - m[1]) ? q : m, pieces[0]);
           if (Math.hypot(b - a, ob - oa) * sc > 60) g += '<text x="' + (X((oa + ob) / 2) + 4) + '" y="' + (Y((a + b) / 2)) + '" style="fill:var(--ink-2);font:700 11px var(--f-cond)">' + DI.esc((geo ? '' : '≈') + f.code) + '</text>';

@@ -123,6 +123,15 @@ In the app (`loadNetworks`):
 - **Duplicates:** where the plans draw a manhole twice at one point (its chamber and its grid cover), it is kept once.
 - **Sub-pages:** each drain and manhole belongs to the nearest station or yard within 1.5 km (one named for a yard, '-YD', to a yard within 2 km). They are off the strip and shown on that station's or yard's page, and in its plan.
 
+## Type 1, normal and larger
+
+```
+python3 scripts/dwg/extract_t1_large.py S01-DRN-LONG.dxf S02-DRN-LONG.dxf S03-DRN-LONG.dxf S04-DRN-LONG.dxf S05-DRN-LONG.dxf
+node scripts/dwg/bundle_structures.js
+```
+
+The DRN-LONG drawings tell the larger Type 1 from the normal one only by the line: a constant width (0.2 to 0.3) on DRN_DITCH_TYPE1, against 0 for the normal one. The script writes every Type 1 polyline to `data/dwg/t1_large.json`; the bundle puts the larger ones in `data/structures.js` (`KMD_T1_LARGE`). In the app, a Type 1 from that polyline (`cad_<SUB>_<handle>`) becomes T1L; one from the asset register does where 60% of it lies along one. 16 Nov 2026: 112 Type 1 polylines, 31 larger (10.4 km), all matched. The two the asset register describes (asset_012, asset_031: B=4.0-4.5m, H=0.60m, 1:2) are among them, and no normal one has that spec.
+
 ## Embankment height (Section 02 for now)
 
 ```

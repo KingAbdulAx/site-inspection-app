@@ -704,12 +704,26 @@
   // A drain along the line: how far each stage has got, the whole stretch in one tap, or a part of it at a
   // stage, between two chainages.
   S.rgStage = S.rgStage || {};
+  // A drain measured along itself (a road drain, a Type 6 leg that turns): metres from its start, where you
+  // are from the GPS projected onto its shape.
+  function measureFmt(f) { return DI.alongOf(f) ? v => Math.round(v) + ' m' : v => DI.fmtCh(Math.round(v)); }
+  function measureParse(f, t) { return DI.alongOf(f) ? parseFloat(String(t).replace(/[^0-9.\-]/g, '')) : DI.parseCh(t); }
+  function measureHere(f) {
+    if (!DI.alongOf(f)) return S.pos.ch;
+    const m = DI.measureAt(f, S.pos.ch, S.pos.offset || 0);
+    return m && m.d < 40 ? m.m : null;
+  }
   function rangeBlock(f, st) {
-    const [ch0, ch1] = DI.extentEnds(f);
+    const [ch0, ch1] = DI.measureEnds(f);
     const cov = st.cover, len = ch1 - ch0, max = f.ladder.length - 1;
-    const ch = v => DI.fmtCh(Math.round(v));
+    const along = DI.alongOf(f);
+    const ch = measureFmt(f);
     const done = cov ? cov.m : 0;
     let h = '<div style="font:700 21px/1.2 var(--f-sans);margin:18px 0 10px;color:var(--ink-2)">How far along is it?</div>';
+    if (along) {
+      const g = DI.geomOf(f), s0 = g && g[0];
+      h += '<div class="note" style="margin:-4px 0 10px">Measured along the drain, in metres from its start' + (s0 ? ' (0 m: its end at ' + DI.fmtCh(s0[0]) + ', ' + Math.round(Math.abs(s0[1])) + ' m ' + (s0[1] >= 0 ? 'left' : 'right') + ' of the line)' : '') + '. <b>Here</b> puts you on it by GPS.</div>';
+    }
     h += '<div class="rg-sum"><b>' + Math.round(done) + ' of ' + Math.round(len) + ' m</b><span>' + esc(f.ladder[max]) + ' · ' + Math.round(done / len * 100) + '%</span></div>';
     h += '<div class="rgbar">' + (cov ? cov.segs.map(g => '<i style="left:' + ((g.a - ch0) / len * 100) + '%;width:' + Math.max(0.8, (g.b - g.a) / len * 100) + '%;opacity:' + stageShade(g.s, max).toFixed(2) + '" title="' + esc(f.ladder[g.s]) + '"></i>').join('') : '') + '</div>';
     if (cov && !cov.full) {
@@ -727,21 +741,22 @@
       const at = cov && cov.byStage[pick] && cov.byStage[pick].length ? cov.byStage[pick] : [];
       const startAt = at.length && at[0][0] <= ch0 + 1 ? at[0][1] : ch0;
       const from = startAt < ch1 - 1 ? startAt : ch0;
-      const to = S.pos.ch > from + 1 && S.pos.ch <= ch1 ? S.pos.ch : ch1;
+      const here = measureHere(f);
+      const to = here != null && here > from + 1 && here <= ch1 ? here : ch1;
       h += '<div class="rg-form"><div class="lbl-caps">Or only part of it, at a stage</div>' +
         '<div class="chips-scroll rg-pick">' + f.ladder.slice(1).map((n, i) => '<button data-act="range-stage" data-id="' + esc(f.id) + '" data-stage="' + (i + 1) + '" class="' + (pick === i + 1 ? 'on' : '') + '">' + esc(n) + '</button>').join('') + '</div>' +
         '<div class="rg-row">' +
-        '<label>From<input id="rgFrom" inputmode="decimal" autocomplete="off" value="' + ch(from) + '"></label><button class="btn here" data-act="range-here" data-target="rgFrom">Here</button>' +
-        '<label>To<input id="rgTo" inputmode="decimal" autocomplete="off" value="' + ch(to) + '"></label><button class="btn here" data-act="range-here" data-target="rgTo">Here</button></div>' +
-        '<button class="opt" data-act="range-save" data-id="' + esc(f.id) + '" data-stage="' + pick + '"><span><b>Save this part at ' + esc(f.ladder[pick]) + '</b><small>Between the two chainages, on this stretch</small></span></button></div>';
+        '<label>From<input id="rgFrom" inputmode="decimal" autocomplete="off" value="' + ch(from) + '"></label><button class="btn here" data-act="range-here" data-id="' + esc(f.id) + '" data-target="rgFrom">Here</button>' +
+        '<label>To<input id="rgTo" inputmode="decimal" autocomplete="off" value="' + ch(to) + '"></label><button class="btn here" data-act="range-here" data-id="' + esc(f.id) + '" data-target="rgTo">Here</button></div>' +
+        '<button class="opt" data-act="range-save" data-id="' + esc(f.id) + '" data-stage="' + pick + '"><span><b>Save this part at ' + esc(f.ladder[pick]) + '</b><small>' + (along ? 'Between the two points, in metres along it' : 'Between the two chainages, on this stretch') + '</small></span></button></div>';
     }
     return h;
   }
   function recordRange(fid, from, to, stage) {
     const r = DI.addRange(fid, from, to, snapPos(), stage);
-    if (!r) { toast({ title: 'Nothing saved', sub: 'Give two chainages on this stretch, at least 1 m apart' }); return; }
+    if (!r) { toast({ title: 'Nothing saved', sub: DI.alongOf(DI.data.byId[fid]) ? 'Give two points along it, in metres, at least 1 m apart' : 'Give two chainages on this stretch, at least 1 m apart' }); return; }
     closeAll();
-    toast({ title: 'Saved on this phone', sub: r.stageName + ' ' + DI.fmtCh(r.from) + ' → ' + DI.fmtCh(r.to) + ' · ' + Math.round(r.to - r.from) + ' m', undo: () => { DI.voidRecord(r.id); render(); toast({ title: 'Undone', sub: 'The record is kept, marked as withdrawn' }); } });
+    toast({ title: 'Saved on this phone', sub: DA.recLabel(r), undo: () => { DI.voidRecord(r.id); render(); toast({ title: 'Undone', sub: 'The record is kept, marked as withdrawn' }); } });
     render();
   }
   DA.recordRange = recordRange;
@@ -1153,8 +1168,14 @@
       case 'ee-apply-input': if (ov && ov.ee) ov.ee.applyInput(); break;
       case 'ee-nudge': if (ov && ov.ee) ov.ee.nudge(Number(b.dataset.n)); break;
       case 'ee-save': if (ov && ov.ee) ov.ee.save(); break;
-      case 'range-here': { const el = $('#' + b.dataset.target); if (el) el.value = DI.fmtCh(Math.round(S.pos.ch)); break; }
-      case 'range-save': recordRange(id, DI.parseCh($('#rgFrom').value), DI.parseCh($('#rgTo').value), b.dataset.stage == null ? null : Number(b.dataset.stage)); break;
+      case 'range-here': {
+        const el = $('#' + b.dataset.target), f = DI.data.byId[id];
+        const v = f ? measureHere(f) : S.pos.ch;
+        if (v == null) { toast({ title: 'You are not on it', sub: 'GPS puts you more than 40 m from this drain: type the metres' }); break; }
+        if (el) el.value = f ? measureFmt(f)(v) : DI.fmtCh(Math.round(v));
+        break;
+      }
+      case 'range-save': { const f = DI.data.byId[id]; recordRange(id, measureParse(f, $('#rgFrom').value), measureParse(f, $('#rgTo').value), b.dataset.stage == null ? null : Number(b.dataset.stage)); break; }
       case 'range-stage': {
         // pick the stage for a part; the chainages typed so far stay
         const fv = $('#rgFrom') && $('#rgFrom').value, tv = $('#rgTo') && $('#rgTo').value;

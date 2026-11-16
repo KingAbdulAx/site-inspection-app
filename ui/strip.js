@@ -422,7 +422,7 @@
         }
         if (f.kind === 'point') { points.push({ f, st, x, y: Y(f.ch0) }); return; }
         // linear bar
-        const bw = 11;
+        const bw = f.code === 'T1L' ? 17 : 11;   // the larger Type 1 is wider, as its line is on the drawings
         let a = f.ch0, b = f.ch1;
         const derived = f.cert === 'derived' && b - a > TOL * 3;
         if (derived) { a += TOL; b -= TOL; }

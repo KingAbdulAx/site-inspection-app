@@ -330,7 +330,7 @@
   const P = (catKey, code, name, lane, kind, icon, ladder, typeKey) => ({ catKey, code, name, lane, kind, icon, ladder: ladder || LADDER_CONCRETE, typeKey: typeKey || null });
   const PRESETS = {
     T1: P('side', 'T1', 'Type 1 side ditch', 'plat', 'linear', 'trap', null, '1'),
-    T1L: P('side', 'T1L', 'Type 1L side ditch', 'plat', 'linear', 'trap', null, '1L'),
+    T1L: P('side', 'T1L', 'Type 1L side ditch (larger)', 'plat', 'linear', 'trap', null, '1L'),
     T3: P('side', 'T3', 'Type 3 side ditch, unlined', 'plat', 'linear', 'vee-dash', LADDER_UNLINED, '3'),
     T10: P('side', 'T10', 'Type 10 side ditch with trench filter', 'plat', 'linear', 'trap', null, '10'),
     T15: P('side', 'T15', 'Type 15 rectangular side ditch', 'plat', 'linear', 'trap', null, '15'),
@@ -416,6 +416,28 @@
     data.centre[sub] = pts;
   }
 
+  // The larger Type 1 (T1L: B = 4.0 to 4.5 m, H = 0.60 m, 1:2, against 0.75 by 0.75 m) is drawn on the DRN-LONG
+  // drawings only as a thicker line (window.KMD_T1_LARGE, data/structures.js). A Type 1 from that polyline (its
+  // id carries the handle) is the larger one; one from the asset register is, where most of it lies along one.
+  function markLargeT1() {
+    const L = window.KMD_T1_LARGE || [];
+    if (!L.length) return;
+    const byHandle = new Set(L.map(r => r.sub + '_' + r.handle));
+    Object.values(data.pristine).forEach(list => list.forEach(f => {
+      if (f.code !== 'T1') return;
+      const m = /^cad_([A-Z]+)_([0-9A-F]+)$/.exec(f.id);
+      let big = !!(m && byHandle.has(m[1] + '_' + m[2]));
+      if (!big && !m) {
+        const len = Math.max(1, f.ch1 - f.ch0);
+        const ov = L.filter(r => r.sub === f.sub && r.side === f.side).reduce((a, r) => a + Math.max(0, Math.min(f.ch1, r.ch1) - Math.max(f.ch0, r.ch0)), 0);
+        big = ov >= 0.6 * len;
+      }
+      if (!big) return;
+      const p = PRESETS.T1L;
+      Object.assign(f, { code: p.code, typeKey: p.typeKey, name: p.name, full: f.full === f.name ? p.name : f.full.replace(/^Type 1 side ditch/, p.name), large: true });
+      if (!f.specs) f.specs = 'Larger Type 1 (B=4.0-4.5m, H=0.60m, 1:2): drawn with a thick line';
+    }));
+  }
   function init() {
     const add = (sub, geo) => {
       if (!geo || !geo.features) return;
@@ -434,6 +456,7 @@
     add('MRJB', window.SECTION05_ASSETS);
     add('DWKZ', window.SECTION02_ASSETS);
     add('KZDR', window.SECTION03_ASSETS);
+    markLargeT1();
     applyBase();
     loadCentre('KNDW', window.SECTION01_CENTERLINE);
     loadCentre('DRMR', window.SECTION04_CENTERLINE);
@@ -1232,7 +1255,28 @@
   // finished.
   const isSpanF = f => f.kind === 'linear' || f.kind === 'buried';
   // A Type 6 leg that turns or crosses the line (its chainage much shorter than its length) is tracked whole.
-  const rangeable = f => !!f && isSpanF(f) && !isCulvertLadder(f.ladder) && f.ladder.length > 1 && f.ch1 - f.ch0 > 1 && !(f.len && f.ch1 - f.ch0 < 0.8 * f.len);
+  // Road drains, and Type 6 legs that turn or cross the line, are measured along themselves: metres from their
+  // start (the first point the drawing gives), not chainage, which says little about how far along one is.
+  const alongOf = f => !!f && !!f.len && !f.built && (f.kind === 'net' || (isSpanF(f) && !!f.net && f.ch1 - f.ch0 < 0.8 * f.len));
+  const rangeable = f => !!f && (isSpanF(f) || f.kind === 'net') && !isCulvertLadder(f.ladder) && f.ladder.length > 1 &&
+    (alongOf(f) ? f.len > 1 : f.ch1 - f.ch0 > 1 && !(f.len && f.ch1 - f.ch0 < 0.8 * f.len));
+  // Where a stretch of a drain starts and ends, in the measure its ranges use.
+  function measureEnds(f) { return alongOf(f) ? [0, r1(f.len)] : extentEnds(f); }
+  // Where along a drain measured along itself a point (chainage, offset left +) is: { m, d } (d: how far off it).
+  function measureAt(f, ch, off) {
+    const g = geomOf(f);
+    if (!g || !g.length) return null;
+    const tot = g.reduce((a, q) => a + Math.hypot(q[2] - q[0], q[3] - q[1]), 0) || 1;
+    let best = null, run = 0;
+    g.forEach(([c0, o0, c1, o1]) => {
+      const dc = c1 - c0, dof = o1 - o0, L = Math.hypot(dc, dof);
+      const t = L ? Math.max(0, Math.min(1, ((ch - c0) * dc + (off - o0) * dof) / (L * L))) : 0;
+      const d = Math.hypot(ch - c0 - t * dc, off - o0 - t * dof);
+      if (!best || d < best.d) best = { d, m: (run + t * L) * f.len / tot };
+      run += L;
+    });
+    return { m: r1(best.m), d: r1(best.d) };
+  }
   function mergeRanges(list) {
     const out = [];
     list.slice().sort((a, b) => a[0] - b[0]).forEach(([a, b]) => {
@@ -1305,7 +1349,7 @@
     if (!st) return [];
     const ex = parseExecutedNote(lg.notes);
     if (ex.length && st < max) return ex.map(([a, b]) => [a, b, st]);
-    const [p0, p1] = extentEnds(f);
+    const [p0, p1] = measureEnds(f);
     return [[p0, p1, st]];
   }
   function foreignRanges(f) { return foreignStaged(f).filter(x => x[2] >= f.ladder.length - 1).map(([a, b]) => [a, b]); }
@@ -1314,7 +1358,7 @@
   function adoptForeignRanges(f) {
     const lg = legacy[f.id];
     const max = f.ladder.length - 1;
-    const [ch0, ch1] = extentEnds(f);
+    const [ch0, ch1] = measureEnds(f);
     const got = foreignStaged(f).map(([a, b, k]) => [Math.max(ch0, a), Math.min(ch1, b), k]).filter(r => r[1] - r[0] >= 0.5);
     got.forEach(([a, b, k]) => {
       const mine = live(r => r.kind === 'range' && r.featureId === f.id).some(r => Math.abs(r.from - a) < 0.2 && Math.abs(r.to - b) < 0.2 && (r.stage == null ? max : r.stage) === k);
@@ -1350,7 +1394,7 @@
       const on = k => Math.min(max, k == null ? max : k === pmax ? max : k);
       live(r => r.kind === 'range' && r.featureId === p.id).forEach(r => { recs.push(r); items.push([r.from, r.to, on(r.stage)]); later(r.at); });
       const own = ownSeen(p.id);
-      if (own && own.stage > 0) { const [p0, p1] = extentEnds(p); items.push([p0, p1, on(own.stage)]); recs.push({ from: p0, to: p1, at: own.at, stage: own.stage, whole: true }); later(own.at); }
+      if (own && own.stage > 0) { const [p0, p1] = measureEnds(p); items.push([p0, p1, on(own.stage)]); recs.push({ from: p0, to: p1, at: own.at, stage: own.stage, whole: true }); later(own.at); }
       const fr = foreignStaged(p);
       if (fr.length) {
         foreignN += fr.length;
@@ -1360,7 +1404,7 @@
       }
     });
     if (!items.length) return null;
-    const [ch0, ch1] = extentEnds(f);
+    const [ch0, ch1] = measureEnds(f);
     const clipped = items.map(([a, b, k]) => [Math.max(ch0, Math.min(a, b)), Math.min(ch1, Math.max(a, b)), k]).filter(r => r[1] > r[0] && r[2] > 0);
     const segs = segmentsOf(clipped, ch0, ch1);
     const len = ch1 - ch0;
@@ -1382,10 +1426,10 @@
     if (!f || !rangeable(f)) return null;
     const max = f.ladder.length - 1;
     const k = stage == null ? max : Math.max(1, Math.min(max, Math.round(stage)));
-    const [ch0, ch1] = extentEnds(f);
+    const [ch0, ch1] = measureEnds(f);
     const a = Math.max(ch0, Math.min(from, to)), b = Math.min(ch1, Math.max(from, to));
     if (!(b - a >= 0.5)) return null;
-    return addRecord({ kind: 'range', featureId: fid, from: r1(a), to: r1(b), stage: k, stageName: f.ladder[k], line: f.line, sub: f.sub, ch: a, pos: pos || null });
+    return addRecord({ kind: 'range', featureId: fid, from: r1(a), to: r1(b), stage: k, stageName: f.ladder[k], line: f.line, sub: f.sub, ch: alongOf(f) ? f.ch0 : a, along: alongOf(f) || undefined, pos: pos || null });
   }
 
   // ------------------------------------------------ as-built extents
@@ -1827,7 +1871,7 @@
     fmtCh, fmtPlus, parseCh, fmtDate, fmtTime, monthsBetween, esc, DAYS, MONTHS,
     inspector, setInspector, addRecord, voidRecord, live, recordsFor, seenOf, ownSeen, openDefects,
     designChanges, statusOf, drafts, saveDraft, putPhoto, getPhoto, uid, loadLegacy, mirrorLegacy,
-    loadSections, sectionAt, loadT9Schedule, hasT9Schedule, rangeable, coverOf, addRange, rangeNote, parseRangeNote, stageNote, parseStageNote, noteMetres, parseExecutedNote, foreignStaged, extentNote, parseExtentNote, foreignExtent, adoptForeignExtent, applyExtents, extentOf, addExtent, extentEnds, addJoin, detectJoins, applyJoins, isSpan, typeOf, progressOf, typeProgress, T9_SCHEDULE_ON, refs, refsNear, refById, REF_KIND, areasAt, isArea, loadConnectors, hasConnectors, endsOf, joinsOf, geomOf, laneOf, loadNetworks, hasNetworks, netAreaOf, netOf, isNetMember, roadDrainage, roadJoinsOf, LADDER_BPIPE, loadHeights, hasHeights, heightAt, T9_RULES, t9Rule, setT9Rule, t9Check,
+    loadSections, sectionAt, loadT9Schedule, hasT9Schedule, rangeable, alongOf, measureEnds, measureAt, coverOf, addRange, rangeNote, parseRangeNote, stageNote, parseStageNote, noteMetres, parseExecutedNote, foreignStaged, extentNote, parseExtentNote, foreignExtent, adoptForeignExtent, applyExtents, extentOf, addExtent, extentEnds, addJoin, detectJoins, applyJoins, isSpan, typeOf, progressOf, typeProgress, T9_SCHEDULE_ON, refs, refsNear, refById, REF_KIND, areasAt, isArea, loadConnectors, hasConnectors, endsOf, joinsOf, geomOf, laneOf, loadNetworks, hasNetworks, netAreaOf, netOf, isNetMember, roadDrainage, roadJoinsOf, LADDER_BPIPE, loadHeights, hasHeights, heightAt, T9_RULES, t9Rule, setT9Rule, t9Check,
     PRESETS, presetOf, applyBase, baseRecords, correctBase, addBase, deleteBase, verifyBase, unverifyBase, exportGeo, exportCorrections, importRecords,
     project, pointAt, laneOf, savePosition, lastPosition, csvCell,
     get records() { return records; }

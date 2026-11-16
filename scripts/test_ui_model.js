@@ -586,8 +586,8 @@ section('Phases 8 and 9: Type 6 networks, road drainage', () => {
   ok(both.length > legs.length * 0.8 && both.every(f => /^(MH|MHG)$/.test(DI.endsOf(f).start.code)), 'most legs run manhole to manhole: ' + both.length);
   const mh = DI.endsOf(both[0]).end;
   ok(DI.joinsOf(mh).some(x => x.f === both[0] && x.end === 'end'), 'and the manhole names the leg that ends at it');
-  const turn = legs.find(f => !DI.rangeable(f) && f.len > 5);
-  ok(turn && turn.ch1 - turn.ch0 < 0.8 * turn.len && DI.geomOf(turn).length >= 1, 'a leg that turns or crosses the line is tracked whole, and drawn with its turns');
+  const turn = legs.find(f => f.ch1 - f.ch0 < 0.8 * f.len && f.len > 5);
+  ok(turn && DI.alongOf(turn) && DI.rangeable(turn) && DI.measureEnds(turn)[1] === Math.round(turn.len * 10) / 10 && DI.geomOf(turn).length >= 1, 'a leg that turns or crosses the line is measured along itself, and drawn with its turns');
   ok(Math.abs(DI.progressOf([turn]).lin.m - turn.len) < 0.01, 'its length in Progress is its own, not its chainage');
   ok(F.some(f => /^mh_/.test(f.id) && f.mhName), 'yard manholes come with their names');
   const named = F.filter(f => f.mhName);
@@ -608,6 +608,28 @@ section('Phases 8 and 9: Type 6 networks, road drainage', () => {
   ok(t4 && DI.ladderKind(t4.ladder) === 'unlined' && rd.filter(f => /concrete/.test(f.name)).every(f => DI.ladderKind(f.ladder) === (f.code === 'RT9' ? 'precast' : 'insitu')), 'road ditches: unlined type 4 on the unlined stages, concrete ones cast in situ (type 9 precast)');
   DI.addRecord({ kind: 'stage', featureId: t4.id, stage: t4.ladder.length - 1 });
   ok(DI.statusOf(t4).bucket === 'done' && Math.abs(DI.progressOf([t4]).lin.doneM - t4.len) < 0.01, 'a road drain takes a stage, and counts its own length');
+  // tracked by length, along itself
+  const rdl = rd.find(f => f.kind === 'net' && f.len > 100 && f.code !== 'RT4' && DI.geomOf(f).length > 1);
+  ok(DI.rangeable(rdl) && DI.alongOf(rdl) && DI.measureEnds(rdl)[0] === 0, 'a road drain is tracked by length, in metres along it: ' + rdl.name + ', ' + Math.round(rdl.len) + ' m');
+  const g = DI.geomOf(rdl), q = g[1];
+  const at = DI.measureAt(rdl, (q[0] + q[2]) / 2, (q[1] + q[3]) / 2);
+  const tot = g.reduce((a, x) => a + Math.hypot(x[2] - x[0], x[3] - x[1]), 0);
+  const want = (Math.hypot(g[0][2] - g[0][0], g[0][3] - g[0][1]) + Math.hypot(q[2] - q[0], q[3] - q[1]) / 2) * rdl.len / tot;
+  ok(at && at.d < 0.2 && Math.abs(at.m - want) < 0.2, 'a point on it is found along it (GPS for Here): ' + at.m + ' m');
+  const rr = DI.addRange(rdl.id, 10, 60, null, 1);
+  ok(rr && rr.from === 10 && rr.to === 60 && rr.along && rr.ch === rdl.ch0, 'a part of it is saved in metres along it');
+  const cv = DI.statusOf(rdl).cover;
+  ok(cv && Math.abs(cv.mAt[1] - 50) < 0.01 && Math.abs(DI.progressOf([rdl]).lin.atLeast[rdl.ladder[1]] - 50) < 0.01, 'and counts 50 m at ' + rdl.ladder[1] + ' in Progress');
+  ok(!DI.addRange(rdl.id, rdl.len + 5, rdl.len + 50, null, 1), 'a part beyond its length is not saved');
+});
+
+section('Type 1: the normal and the larger (T1L), from the thick line on the drawings', () => {
+  const F = DI.data.features, big = F.filter(f => f.code === 'T1L'), small = F.filter(f => f.code === 'T1');
+  ok(window.KMD_T1_LARGE.length === 31 && big.length === 31, 'the 31 thick Type 1 polylines are the larger Type 1 (T1L)');
+  ok(big.every(f => f.large && f.name === 'Type 1L side ditch (larger)' && f.ladder === F.find(x => x.code === 'T1').ladder), 'named as such, on the same stages');
+  ok(F.find(f => f.id === 'asset_012').code === 'T1L' && F.find(f => f.id === 'asset_013').code === 'T1', 'an asset register Type 1 is the larger one where it lies along a thick line (asset_012, B=4.0-4.5m), not otherwise');
+  ok(!small.some(f => /B=4/.test(f.specs)) && !big.some(f => /b=0\.75/.test(f.specs)), 'no Type 1 says otherwise in its own spec');
+  ok(DI.typeProgress('DWKZ').some(t => t.key === 'T1L') && DI.typeProgress('DWKZ').some(t => t.key === 'T1'), 'Progress counts them apart');
 });
 
 section('Station and yard networks: set-out drawings, junctions, their own pages', () => {
