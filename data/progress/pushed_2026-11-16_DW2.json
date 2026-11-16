@@ -1,0 +1,28 @@
+{
+ "kind": "kmd-progress-pushed",
+ "asof": "2026-11-16",
+ "pushed_at": "2026-11-16T07:24:14.839Z",
+ "table_before": 791,
+ "written": [
+  {
+   "asset_id": "t6_DWKZ_DWST_52",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "t6_DWKZ_DWST_53",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "t6_DWKZ_DWST_51",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "t6_DWKZ_DWST_54",
+   "status": "Completed & Approved",
+   "replaced": null
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+{
+ "kind": "kmd-progress",
+ "asof": "2026-11-16",
+ "source": "Site report: at Dawanau Station the cross runs (MH1.7-MH2.1, MH2.17-MH1.25) and the outlet legs (MH1.8-Exit 1, MH1.24-Exit 2) are completed; MH1.28-MH2.20 and the stub past MH2.22 are not",
+ "rows": [
+  {
+   "asset_id": "t6_DWKZ_DWST_52",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Dawanau Station · French drain MH1.7-DW → MH2.1-DW · 9 m, ø800 · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_DWST_53",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Dawanau Station · French drain MH2.17-DW → MH1.25-DW · 13 m, ø1000 · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_DWST_51",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Dawanau Station · French drain MH1.8-DW → Exit 1-DW · 32 m, ø800 · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_DWST_54",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Dawanau Station · French drain MH1.24-DW → Exit 2-DW · 19 m, ø1000 · completed"
+  }
+ ]
+}

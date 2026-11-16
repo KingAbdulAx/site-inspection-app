@@ -330,7 +330,7 @@
   const P = (catKey, code, name, lane, kind, icon, ladder, typeKey) => ({ catKey, code, name, lane, kind, icon, ladder: ladder || LADDER_CONCRETE, typeKey: typeKey || null });
   const PRESETS = {
     T1: P('side', 'T1', 'Type 1 side ditch', 'plat', 'linear', 'trap', null, '1'),
-    T1L: P('side', 'T1L', 'Type 1L side ditch', 'plat', 'linear', 'trap', null, '1L'),
+    T1L: P('side', 'T1L', 'Type 1L side ditch (larger)', 'plat', 'linear', 'trap', null, '1L'),
     T3: P('side', 'T3', 'Type 3 side ditch, unlined', 'plat', 'linear', 'vee-dash', LADDER_UNLINED, '3'),
     T10: P('side', 'T10', 'Type 10 side ditch with trench filter', 'plat', 'linear', 'trap', null, '10'),
     T15: P('side', 'T15', 'Type 15 rectangular side ditch', 'plat', 'linear', 'trap', null, '15'),
@@ -416,6 +416,28 @@
     data.centre[sub] = pts;
   }
 
+  // The larger Type 1 (T1L: B = 4.0 to 4.5 m, H = 0.60 m, 1:2, against 0.75 by 0.75 m) is drawn on the DRN-LONG
+  // drawings only as a thicker line (window.KMD_T1_LARGE, data/structures.js). A Type 1 from that polyline (its
+  // id carries the handle) is the larger one; one from the asset register is, where most of it lies along one.
+  function markLargeT1() {
+    const L = window.KMD_T1_LARGE || [];
+    if (!L.length) return;
+    const byHandle = new Set(L.map(r => r.sub + '_' + r.handle));
+    Object.values(data.pristine).forEach(list => list.forEach(f => {
+      if (f.code !== 'T1') return;
+      const m = /^cad_([A-Z]+)_([0-9A-F]+)$/.exec(f.id);
+      let big = !!(m && byHandle.has(m[1] + '_' + m[2]));
+      if (!big && !m) {
+        const len = Math.max(1, f.ch1 - f.ch0);
+        const ov = L.filter(r => r.sub === f.sub && r.side === f.side).reduce((a, r) => a + Math.max(0, Math.min(f.ch1, r.ch1) - Math.max(f.ch0, r.ch0)), 0);
+        big = ov >= 0.6 * len;
+      }
+      if (!big) return;
+      const p = PRESETS.T1L;
+      Object.assign(f, { code: p.code, typeKey: p.typeKey, name: p.name, full: f.full === f.name ? p.name : f.full.replace(/^Type 1 side ditch/, p.name), large: true });
+      if (!f.specs) f.specs = 'Larger Type 1 (B=4.0-4.5m, H=0.60m, 1:2): drawn with a thick line';
+    }));
+  }
   function init() {
     const add = (sub, geo) => {
       if (!geo || !geo.features) return;
@@ -434,6 +456,7 @@
     add('MRJB', window.SECTION05_ASSETS);
     add('DWKZ', window.SECTION02_ASSETS);
     add('KZDR', window.SECTION03_ASSETS);
+    markLargeT1();
     applyBase();
     loadCentre('KNDW', window.SECTION01_CENTERLINE);
     loadCentre('DRMR', window.SECTION04_CENTERLINE);
@@ -589,22 +612,42 @@
       if (!netSubs.has(sub)) return;
       data.pristine[sub] = data.pristine[sub].filter(f => !(f.code === 'T6' && f.kind === 'buried' && !f.net && !hasRecs(f.id)));
     });
-    // manholes: the plans' own where they are, else new
-    const node = {};
+    // manholes: the plans' own where they are, else new. The plans often draw a manhole twice at one point (its
+    // chamber and its grid cover): the second gives way. A network set out on site ('... Settings ...') stands
+    // for the plans' manholes within it: those it does not have give way.
+    const node = {}, used = new Set(), drop = new Set();
+    const plansMH = sub => (data.pristine[sub] || []).filter(f => f.conn && (f.code === 'MH' || f.code === 'MHG') && !f.net);
+    (j.manholes || []).forEach(m => {
+      const near = plansMH(m.sub).filter(f => Math.abs(f.ch0 - m.ch) < 3 && Math.abs(f.offset - m.off) < 3)
+        .sort((a, b) => (b.code === 'MHG') - (a.code === 'MHG') || Math.hypot(a.ch0 - m.ch, a.offset - m.off) - Math.hypot(b.ch0 - m.ch, b.offset - m.off));
+      near.slice(1).forEach(f => { if (Math.hypot(f.ch0 - near[0].ch0, f.offset - near[0].offset) < 1.5) drop.add(f.id); });
+    });
+    const set = {};
+    (j.manholes || []).filter(m => /Settings/i.test(m.src)).forEach(m => {
+      const b = set[m.sub] = set[m.sub] || [Infinity, -Infinity, Infinity, -Infinity];
+      b[0] = Math.min(b[0], m.ch); b[1] = Math.max(b[1], m.ch); b[2] = Math.min(b[2], m.off); b[3] = Math.max(b[3], m.off);
+    });
     (j.manholes || []).forEach(m => {
       const key = m.src + '|' + m.handle;
       const known = (data.pristine[m.sub] || []).find(f => f.conn && (f.code === 'MH' || f.code === 'MHG') && Math.abs(f.ch0 - m.ch) < 3 && Math.abs(f.offset - m.off) < 3);
       // its drawing's name goes first: 'Manhole MH3.3-YDKZ'
-      if (known) { node[key] = known.id; if (m.name && !known.mhName) { known.mhName = m.name; known.name = known.name.replace(/^(Manhole[^,]*)/, '$1 ' + m.name); known.full = known.name; } return; }
+      if (known && drop.has(known.id)) drop.delete(known.id);
+      if (known) { node[key] = known.id; used.add(known.id); if (m.name && !known.mhName) { known.mhName = m.name; known.name = known.name.replace(/^(Manhole[^,]*)/, '$1 ' + m.name); known.full = known.name; } return; }
       if (!SUBS[m.sub] || !data.pristine[m.sub]) return;
       const id = 'mh_' + m.sub + '_' + m.handle;
       const pr = PRESETS[m.grid ? 'MHG' : 'MH'];
-      const name = pr.name + (m.name ? ' ' + m.name : '');
+      // where a drain leaves the network: 'Exit 1-DW', 'DISCHARGE PIPE 2-KZ'
+      const out = /^(Exit|Discharge|ES\d|DP\d)/i.test(m.name || '');
+      const name = out ? 'Outlet ' + m.name.replace(/^DISCHARGE PIPE/i, 'discharge pipe') : pr.name + (m.name ? ' ' + m.name : '');
       data.pristine[m.sub].push({ id, sub: m.sub, line: SUBS[m.sub].line, catKey: 'connector', catLabel: CAT_LABEL.connector, kind: 'point', lane: Math.abs(m.off) < 20 ? 'cl' : laneOf(m.off),
-        side: m.off >= 0 ? 'L' : 'R', ch0: m.ch, ch1: m.ch, cert: 'derived', code: pr.code, typeKey: null, name, full: name, icon: 'mh', ladder: pr.ladder, sheet: '', drawings: [],
-        level: null, onHold: false, confidence: '', specs: '', notes: '', stated: null, raw: {}, offset: m.off, conn: { kind: m.grid ? 'grid' : 'manhole', type: null, block: null, exit: false, links: [] }, mhName: m.name, net: true });
+        side: m.off >= 0 ? 'L' : 'R', ch0: m.ch, ch1: m.ch, cert: 'derived', code: pr.code, typeKey: null, name, full: name, icon: 'mh', ladder: out ? LADDER_INSITU : pr.ladder, sheet: '', drawings: [],
+        level: null, onHold: false, confidence: '', specs: '', notes: '', stated: null, raw: {}, offset: m.off, conn: { kind: m.grid ? 'grid' : 'manhole', type: null, block: null, exit: out, links: [] }, mhName: m.name, net: true });
       node[key] = id;
     });
+    Object.entries(set).forEach(([sub, b]) => plansMH(sub).forEach(f => {
+      if (!used.has(f.id) && f.ch0 >= b[0] - 5 && f.ch0 <= b[1] + 5 && f.offset >= b[2] - 5 && f.offset <= b[3] + 5) drop.add(f.id);
+    }));
+    Object.keys(data.pristine).forEach(sub => { data.pristine[sub] = data.pristine[sub].filter(f => !drop.has(f.id) || hasRecs(f.id)); });
     legs.forEach(l => {
       if (!SUBS[l.sub] || !data.pristine[l.sub]) return;
       const chs = l.pts.map(p => p[0]), offs = l.pts.map(p => p[1]);
@@ -617,11 +660,41 @@
         ch0: Math.min(...chs), ch1: Math.max(...chs), cert: 'derived', code: pipe ? 'CP' : 'T6', typeKey: pipe ? null : '6', name, full: name + ', ' + Math.round(l.len) + ' m manhole to manhole',
         icon: 'collector', ladder: pipe ? LADDER_BPIPE : LADDER_FRENCH, sheet: '', drawings: [], level: null, onHold: false, confidence: '', specs: '', notes: '', stated: null, raw: {},
         offset: offs.reduce((a, b) => a + b, 0) / offs.length, len: l.len, net: { src: l.src } };
+      if (l.dia) { f.dia = l.dia; f.full += ', ø' + l.dia + ' mm'; }
       data.pristine[l.sub].push(f);
       data.geom[l.id] = l.pts.slice(1).map((p, i) => [l.pts[i][0], l.pts[i][1], p[0], p[1]]);
       const a = l.from && node[l.src + '|' + l.from], b = l.to && node[l.src + '|' + l.to];
       if (a || b) data.connEnds[l.id] = Object.assign({}, a ? { a } : {}, b ? { b } : {});
     });
+    // Where drains meet at a manhole (three or more), or one turns through about a right angle there (60 to
+    // 120 degrees: a longitudinal run meeting a transverse one), the manhole is cast in situ; it usually
+    // leads to an exit.
+    const dirs = {};
+    legs.forEach(l => {
+      const e = data.connEnds[l.id];
+      if (!e) return;
+      const p = l.pts.filter((q, i) => i === 0 || Math.hypot(q[0] - l.pts[i - 1][0], q[1] - l.pts[i - 1][1]) > 0.05), n = p.length;
+      if (n < 2) return;
+      if (e.a) (dirs[e.a] = dirs[e.a] || []).push([p[1][0] - p[0][0], p[1][1] - p[0][1]]);
+      if (e.b) (dirs[e.b] = dirs[e.b] || []).push([p[n - 2][0] - p[n - 1][0], p[n - 2][1] - p[n - 1][1]]);
+    });
+    const byId = {};
+    Object.values(data.pristine).forEach(L => L.forEach(f => { byId[f.id] = f; }));
+    Object.entries(dirs).forEach(([id, d]) => {
+      const f = byId[id];
+      if (!f || !f.conn) return;
+      let turn = false;
+      if (d.length === 2) {
+        const [u, v] = d, c = (u[0] * v[0] + u[1] * v[1]) / (Math.hypot(...u) * Math.hypot(...v) || 1);
+        const deg = Math.acos(Math.max(-1, Math.min(1, c))) * 180 / Math.PI;
+        turn = deg >= 60 && deg <= 120;
+      }
+      if (d.length < 3 && !turn) return;
+      f.ladder = LADDER_INSITU;
+      f.conn = Object.assign({}, f.conn, { junction: d.length >= 3 ? 'meet' : 'turn' });
+      if (!/^Junction/.test(f.name)) { f.name = f.name.replace(/^Manhole(, grid cover)?/, 'Junction manhole$1'); f.full = f.name; }
+    });
+    netCache = null;
     // roads
     const roadsNear = {};
     (j.roads || []).forEach((it, i) => {
@@ -660,6 +733,72 @@
     }));
   }
   function hasNetworks() { return !!data.roadsOf; }
+  // Type 6 networks and their manholes belong to a station or a yard: they are shown on its own page and in the
+  // plan, not on the strip, where drains running along and across the tracks would crowd everything else.
+  // A drain or manhole goes to the nearest station or yard within 1.5 km; one the drawings name for a yard
+  // ('MH1.1-YD', the yards' own drawings) to the nearest yard within 2 km.
+  let netCache = null;
+  function isNetMember(f) { return !f.road && !!(f.net || f.code === 'MH' || f.code === 'MHG' || f.code === 'CP' || (f.code === 'T6' && f.kind === 'buried')); }
+  function netIndex() {
+    if (netCache && netCache.n === data.features.length) return netCache;
+    netCache = { n: data.features.length, of: {}, by: {} };
+    const areas = refs().filter(r => r.area);
+    data.features.forEach(f => {
+      if (!isNetMember(f)) return;
+      const c = (f.ch0 + f.ch1) / 2;
+      const yd = /-YD|YDKZ|YD_DRN|DWYD|KZYD/.test(f.name + ' ' + (f.mhName || '') + ' ' + ((f.net && f.net.src) || ''));
+      // where a station and a yard overlap, a drain the drawings name for the station goes to the station
+      const near = areas.filter(r => r.line === f.line).map(r => ({ r, d: Math.max(0, r.ch0 - c, c - r.ch1) }))
+        .sort((a, b) => a.d - b.d || ((b.r.kind === 'yard') === yd) - ((a.r.kind === 'yard') === yd));
+      const pick = (yd && near.find(x => x.r.kind === 'yard' && /freight/i.test(x.r.name) && x.d <= 2000)) || (near[0] && near[0].d <= 1500 ? near[0] : null);
+      if (!pick) return;
+      netCache.of[f.id] = pick.r.id;
+      (netCache.by[pick.r.id] = netCache.by[pick.r.id] || []).push(f);
+    });
+    return netCache;
+  }
+  // On the strip a station's or a yard's Type 6 network shows as one straight run a side, as the design's
+  // straight runs did; tapping it opens the network's page. It is not a feature: nothing is recorded against it,
+  // and Progress counts the drains themselves.
+  let runCache = null;
+  function netRuns(line) {
+    const idx = netIndex();
+    if (!runCache || runCache.idx !== idx) {
+      runCache = { idx, list: [] };
+      Object.entries(idx.by).forEach(([rid, fs]) => {
+        const r = refById(rid);
+        const legs = fs.filter(f => isSpanF(f) && (f.code === 'T6' || f.code === 'CP'));
+        ['L', 'R'].forEach(side => {
+          const L = legs.filter(f => f.side === side);
+          if (!r || !L.length) return;
+          const name = 'Type 6 network, ' + r.name;
+          runCache.list.push({ id: 'netrun_' + rid + '_' + side, netRun: rid, legs: L.map(f => f.id), line: r.line, sub: L[0].sub, catKey: 'track', catLabel: CAT_LABEL.track,
+            kind: 'buried', lane: 'cl', side, ch0: Math.min(...L.map(f => f.ch0)), ch1: Math.max(...L.map(f => f.ch1)), cert: 'derived', code: 'T6', typeKey: '6', name, full: name + ': ' + L.length + ' drains, tap for its page',
+            icon: 'collector', ladder: LADDER_FRENCH, sheet: '', drawings: [], level: null, onHold: false, confidence: '', specs: '', notes: '', stated: null, raw: {}, offset: side === 'L' ? 3 : -3 });
+        });
+      });
+    }
+    return runCache.list.filter(x => !line || x.line === line);
+  }
+  function netRunById(id) { return /^netrun_/.test(id || '') ? netRuns().find(x => x.id === id) || null : null; }
+  // A network run's state: its drains', as one line. Done where a drain is done, by its chainage.
+  function netRunStatus(f) {
+    const legs = f.legs.map(id => data.byId[id]).filter(Boolean), max = f.ladder.length - 1;
+    const sts = legs.map(g => statusOf(g)), p = progressOf(legs);
+    const segs = [];
+    legs.forEach((g, i) => { const st = sts[i], k = st.cover ? st.cover.floor || st.cover.top : st.best; if (k > 0) segs.push({ a: g.ch0, b: Math.max(g.ch1, g.ch0 + 0.5), s: Math.min(max, k) }); });
+    const all = legs.length && sts.every(st => st.bucket === 'done');
+    const frac = p.lin.m ? p.lin.doneM / p.lin.m : 0;
+    const any = segs.length > 0;
+    const s = all ? max : any ? Math.max(1, Math.min(max - 1, Math.round(frac * max))) : null;
+    return { seen: null, claim: null, s, c: null, best: s || 0, max, lastAt: null, partBuilt: any && !all, stalled: false, fill: all ? 'solid' : any ? 'ranges' : 'never',
+      defects: [].concat(...sts.map(st => st.defects)), changes: [], removed: false, bucket: all ? 'done' : any ? 'moving' : 'none',
+      cover: any && !all ? { segs, max, m: p.lin.doneM, mAt: [], full: false, floor: 0, top: s, byStage: [], ranges: [] } : null, net: p };
+  }
+  // The station or yard a Type 6 drain or manhole belongs to (a reference structure), or null.
+  function netAreaOf(f) { const id = netIndex().of[f.id]; return id ? refById(id) : null; }
+  // A station's or a yard's Type 6 drains and manholes.
+  function netOf(refId) { return (netIndex().by[refId] || []).map(f => data.byId[f.id] || f); }
   // The road drainage of a road crossing (a reference structure's id).
   function roadDrainage(refId) { return ((data.roadsOf || {})[refId] || []).map(id => data.byId[id]).filter(Boolean); }
   // Road drains that run into a railway ditch: [{ f, ch }]
@@ -1154,7 +1293,28 @@
   // finished.
   const isSpanF = f => f.kind === 'linear' || f.kind === 'buried';
   // A Type 6 leg that turns or crosses the line (its chainage much shorter than its length) is tracked whole.
-  const rangeable = f => !!f && isSpanF(f) && !isCulvertLadder(f.ladder) && f.ladder.length > 1 && f.ch1 - f.ch0 > 1 && !(f.len && f.ch1 - f.ch0 < 0.8 * f.len);
+  // Road drains, and Type 6 legs that turn or cross the line, are measured along themselves: metres from their
+  // start (the first point the drawing gives), not chainage, which says little about how far along one is.
+  const alongOf = f => !!f && !!f.len && !f.built && (f.kind === 'net' || (isSpanF(f) && !!f.net && f.ch1 - f.ch0 < 0.8 * f.len));
+  const rangeable = f => !!f && (isSpanF(f) || f.kind === 'net') && !isCulvertLadder(f.ladder) && f.ladder.length > 1 &&
+    (alongOf(f) ? f.len > 1 : f.ch1 - f.ch0 > 1 && !(f.len && f.ch1 - f.ch0 < 0.8 * f.len));
+  // Where a stretch of a drain starts and ends, in the measure its ranges use.
+  function measureEnds(f) { return alongOf(f) ? [0, r1(f.len)] : extentEnds(f); }
+  // Where along a drain measured along itself a point (chainage, offset left +) is: { m, d } (d: how far off it).
+  function measureAt(f, ch, off) {
+    const g = geomOf(f);
+    if (!g || !g.length) return null;
+    const tot = g.reduce((a, q) => a + Math.hypot(q[2] - q[0], q[3] - q[1]), 0) || 1;
+    let best = null, run = 0;
+    g.forEach(([c0, o0, c1, o1]) => {
+      const dc = c1 - c0, dof = o1 - o0, L = Math.hypot(dc, dof);
+      const t = L ? Math.max(0, Math.min(1, ((ch - c0) * dc + (off - o0) * dof) / (L * L))) : 0;
+      const d = Math.hypot(ch - c0 - t * dc, off - o0 - t * dof);
+      if (!best || d < best.d) best = { d, m: (run + t * L) * f.len / tot };
+      run += L;
+    });
+    return { m: r1(best.m), d: r1(best.d) };
+  }
   function mergeRanges(list) {
     const out = [];
     list.slice().sort((a, b) => a[0] - b[0]).forEach(([a, b]) => {
@@ -1227,7 +1387,7 @@
     if (!st) return [];
     const ex = parseExecutedNote(lg.notes);
     if (ex.length && st < max) return ex.map(([a, b]) => [a, b, st]);
-    const [p0, p1] = extentEnds(f);
+    const [p0, p1] = measureEnds(f);
     return [[p0, p1, st]];
   }
   function foreignRanges(f) { return foreignStaged(f).filter(x => x[2] >= f.ladder.length - 1).map(([a, b]) => [a, b]); }
@@ -1236,7 +1396,7 @@
   function adoptForeignRanges(f) {
     const lg = legacy[f.id];
     const max = f.ladder.length - 1;
-    const [ch0, ch1] = extentEnds(f);
+    const [ch0, ch1] = measureEnds(f);
     const got = foreignStaged(f).map(([a, b, k]) => [Math.max(ch0, a), Math.min(ch1, b), k]).filter(r => r[1] - r[0] >= 0.5);
     got.forEach(([a, b, k]) => {
       const mine = live(r => r.kind === 'range' && r.featureId === f.id).some(r => Math.abs(r.from - a) < 0.2 && Math.abs(r.to - b) < 0.2 && (r.stage == null ? max : r.stage) === k);
@@ -1272,7 +1432,7 @@
       const on = k => Math.min(max, k == null ? max : k === pmax ? max : k);
       live(r => r.kind === 'range' && r.featureId === p.id).forEach(r => { recs.push(r); items.push([r.from, r.to, on(r.stage)]); later(r.at); });
       const own = ownSeen(p.id);
-      if (own && own.stage > 0) { const [p0, p1] = extentEnds(p); items.push([p0, p1, on(own.stage)]); recs.push({ from: p0, to: p1, at: own.at, stage: own.stage, whole: true }); later(own.at); }
+      if (own && own.stage > 0) { const [p0, p1] = measureEnds(p); items.push([p0, p1, on(own.stage)]); recs.push({ from: p0, to: p1, at: own.at, stage: own.stage, whole: true }); later(own.at); }
       const fr = foreignStaged(p);
       if (fr.length) {
         foreignN += fr.length;
@@ -1282,7 +1442,7 @@
       }
     });
     if (!items.length) return null;
-    const [ch0, ch1] = extentEnds(f);
+    const [ch0, ch1] = measureEnds(f);
     const clipped = items.map(([a, b, k]) => [Math.max(ch0, Math.min(a, b)), Math.min(ch1, Math.max(a, b)), k]).filter(r => r[1] > r[0] && r[2] > 0);
     const segs = segmentsOf(clipped, ch0, ch1);
     const len = ch1 - ch0;
@@ -1304,10 +1464,10 @@
     if (!f || !rangeable(f)) return null;
     const max = f.ladder.length - 1;
     const k = stage == null ? max : Math.max(1, Math.min(max, Math.round(stage)));
-    const [ch0, ch1] = extentEnds(f);
+    const [ch0, ch1] = measureEnds(f);
     const a = Math.max(ch0, Math.min(from, to)), b = Math.min(ch1, Math.max(from, to));
     if (!(b - a >= 0.5)) return null;
-    return addRecord({ kind: 'range', featureId: fid, from: r1(a), to: r1(b), stage: k, stageName: f.ladder[k], line: f.line, sub: f.sub, ch: a, pos: pos || null });
+    return addRecord({ kind: 'range', featureId: fid, from: r1(a), to: r1(b), stage: k, stageName: f.ladder[k], line: f.line, sub: f.sub, ch: alongOf(f) ? f.ch0 : a, along: alongOf(f) || undefined, pos: pos || null });
   }
 
   // ------------------------------------------------ as-built extents
@@ -1545,6 +1705,7 @@
 
 
   function statusOf(f) {
+    if (f.netRun) return netRunStatus(f);
     const seen = seenOf(f.id);
     const claim = claimOf(f.id);
     const max = f.ladder.length - 1;
@@ -1590,6 +1751,8 @@
     if (span && /^CH-/.test(f.code || '')) return { key: 'CH', label: 'Diversion channels', span };
     if (span && f.code === 'MD') return { key: 'MD', label: 'Approach and earth toe ditches', span };
     if (f.road) return span ? { key: 'RD', label: 'Road drainage', span } : { key: 'RD.' + f.code, label: TYPE_LABEL[f.code] || f.catLabel, span };
+    // a network's legs are named by their manholes: the type is the drain's
+    if (span && f.net) return f.code === 'CP' ? { key: 'CP', label: 'Collector pipes (yards)', span } : { key: 'T6', label: 'Type 6 French drains', span };
     if (span) return { key: f.code || f.catKey, label: f.name, span };
     return { key: (f.code || f.catKey) + '.pt', label: TYPE_LABEL[f.code] || f.catLabel, span };
   }
@@ -1749,7 +1912,7 @@
     fmtCh, fmtPlus, parseCh, fmtDate, fmtTime, monthsBetween, esc, DAYS, MONTHS,
     inspector, setInspector, addRecord, voidRecord, live, recordsFor, seenOf, ownSeen, openDefects,
     designChanges, statusOf, drafts, saveDraft, putPhoto, getPhoto, uid, loadLegacy, mirrorLegacy,
-    loadSections, sectionAt, loadT9Schedule, hasT9Schedule, rangeable, coverOf, addRange, rangeNote, parseRangeNote, stageNote, parseStageNote, noteMetres, parseExecutedNote, foreignStaged, extentNote, parseExtentNote, foreignExtent, adoptForeignExtent, applyExtents, extentOf, addExtent, extentEnds, addJoin, detectJoins, applyJoins, isSpan, typeOf, progressOf, typeProgress, T9_SCHEDULE_ON, refs, refsNear, refById, REF_KIND, areasAt, isArea, loadConnectors, hasConnectors, endsOf, joinsOf, geomOf, laneOf, loadNetworks, hasNetworks, roadDrainage, roadJoinsOf, LADDER_BPIPE, loadHeights, hasHeights, heightAt, T9_RULES, t9Rule, setT9Rule, t9Check,
+    loadSections, sectionAt, loadT9Schedule, hasT9Schedule, rangeable, alongOf, measureEnds, measureAt, coverOf, addRange, rangeNote, parseRangeNote, stageNote, parseStageNote, noteMetres, parseExecutedNote, foreignStaged, extentNote, parseExtentNote, foreignExtent, adoptForeignExtent, applyExtents, extentOf, addExtent, extentEnds, addJoin, detectJoins, applyJoins, isSpan, typeOf, progressOf, typeProgress, T9_SCHEDULE_ON, refs, refsNear, refById, REF_KIND, areasAt, isArea, loadConnectors, hasConnectors, endsOf, joinsOf, geomOf, laneOf, loadNetworks, hasNetworks, netAreaOf, netOf, isNetMember, netRuns, netRunById, roadDrainage, roadJoinsOf, LADDER_BPIPE, loadHeights, hasHeights, heightAt, T9_RULES, t9Rule, setT9Rule, t9Check,
     PRESETS, presetOf, applyBase, baseRecords, correctBase, addBase, deleteBase, verifyBase, unverifyBase, exportGeo, exportCorrections, importRecords,
     project, pointAt, laneOf, savePosition, lastPosition, csvCell,
     get records() { return records; }

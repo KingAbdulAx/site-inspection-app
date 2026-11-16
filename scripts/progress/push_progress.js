@@ -40,12 +40,18 @@ async function upsert(rows) {
   const r = await fetch(URL, { method: 'POST', headers: Object.assign({ Prefer: 'resolution=merge-duplicates,return=minimal' }, H), body: JSON.stringify(rows) });
   if (!r.ok) throw new Error('write failed ' + r.status + ' ' + await r.text());
 }
+// The table's row-level security may not let this key delete: the request then succeeds and removes nothing.
+// So count what went, and say so. Where nothing can be deleted, correct the rows instead: a progress file whose
+// rows give the right status and 'replaces' the row written by mistake ({ status, at }).
 async function remove(ids) {
+  let gone = 0;
   for (let i = 0; i < ids.length; i += 50) {
     const q = ids.slice(i, i + 50).map(id => '"' + id.replace(/"/g, '') + '"').join(',');
-    const r = await fetch(URL + '?asset_id=in.(' + encodeURIComponent(q) + ')&device_id=eq.' + DEVICE, { method: 'DELETE', headers: H });
+    const r = await fetch(URL + '?asset_id=in.(' + encodeURIComponent(q) + ')&device_id=eq.' + DEVICE, { method: 'DELETE', headers: Object.assign({ Prefer: 'return=representation' }, H) });
     if (!r.ok) throw new Error('delete failed ' + r.status + ' ' + await r.text());
+    gone += (await r.json()).length;
   }
+  return gone;
 }
 
 (async () => {
@@ -55,10 +61,15 @@ async function remove(ids) {
     const written = input.written.map(w => w.asset_id);
     console.log('removing ' + written.length + ' rows written on ' + input.pushed_at + (push ? '' : ' (dry run: add --push)'));
     if (!push) return;
-    await remove(written);
+    const gone = await remove(written);
+    if (gone < written.length) {
+      console.error('only ' + gone + ' of ' + written.length + ' rows were removed: the database does not let this key delete. ' +
+        'Correct them instead with a progress file whose rows replace them (see scripts/progress/README.md).');
+      if (!gone) process.exit(1);
+    }
     const back = input.written.filter(w => w.replaced).map(w => w.replaced);
     if (back.length) await upsert(back);
-    console.log('removed; restored ' + back.length + ' replaced rows');
+    console.log('removed ' + gone + '; restored ' + back.length + ' replaced rows');
     return;
   }
   if (input.kind !== 'kmd-progress') throw new Error('not a progress file');

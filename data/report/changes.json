@@ -1,0 +1,35 @@
+{
+  "note": "Changes from the design for the progress report (scripts/report/build_report.js). Site changes are what was built differently from the drawings; instructed changes are design changes made by letter or by a later drawing. 'where' is chainage on the main line, or a place.",
+  "changes": [
+    {
+      "kind": "site",
+      "sub": "DWKZ",
+      "ch0": 40650,
+      "ch1": 40700,
+      "side": "L",
+      "where": "PK 40+650, left",
+      "design": "Type 1 side ditch (normal: b 0.75 m, h 0.75 m, 1:1), 40+650 to 40+950",
+      "built": "The first ≈25–50 m built as the larger Type 1 (B 4.0–4.5 m, H 0.60 m, 1:2); the rest as designed. Whole run complete.",
+      "status": "Accepted: larger than designed, so it carries more water. Length to be measured.",
+      "feature": "cad_DWKZ_1C3B8"
+    },
+    {
+      "kind": "instructed",
+      "where": "All sections",
+      "design": "Type 9 shoulder ditch where the embankment is higher than 4 m (DRN-LONG drawings)",
+      "built": "Type 9 where the embankment is higher than 1.8 m, on the side the platform falls to; not where a Type 1 is on that side",
+      "status": "Instructed: T.E.A.M. KMD/MEN/Vol.15/3545 (12 Aug 2026), adopted by Mota-Engil in NIG/KAMA/FM/2026/4218 (3 Oct 2026). Type 9 quantities in this report follow it."
+    },
+    {
+      "kind": "instructed",
+      "sub": "DWKZ",
+      "ch0": 19925,
+      "ch1": 21239,
+      "side": "R",
+      "where": "Dawanau Station",
+      "design": "Type 6 collector drains as on the DRN-LONG drawing",
+      "built": "As set out on site: 'S02 - FD - Dawanau ST - Settings 260715' (15 Jul 2026). Two lines (MH1.1–MH1.28, MH2.1–MH2.22), two cross runs and two outlets to Exit 1 and Exit 2, with pipe diameters from its profiles.",
+      "status": "Instructed: the set-out drawing replaces the design layout. Quantities in this report follow it."
+    }
+  ]
+}

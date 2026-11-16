@@ -78,6 +78,8 @@
   }
 
   function openFeature(fid) {
+    const run = DI.netRunById(fid);
+    if (run) return DA.openRef(run.netRun);
     let f = DI.data.byId[fid];
     if (!f) return;
     const ov = DA.openOverlay('', 'full', {});
@@ -1185,7 +1187,7 @@
           pieces.forEach(([a, oa, b, ob]) => {
             const line_ = 'x1="' + X(oa) + '" y1="' + Y(a) + '" x2="' + X(ob) + '" y2="' + Y(b) + '"';
             g += '<g data-act="plan-rec" data-id="' + DI.esc(f.id) + '"><line ' + line_ + ' style="stroke:transparent;stroke-width:16"/>' +
-              '<line ' + line_ + ' style="stroke:' + ink(sts.bucket) + ';stroke-width:' + (geo ? 3 : 1.5) + (geo ? '' : ';opacity:0.45') + '"' + dash + '/></g>';
+              '<line ' + line_ + ' style="stroke:' + ink(sts.bucket) + ';stroke-width:' + (geo ? 3 : 1.5) * (f.code === 'T1L' ? 2 : 1) + (geo ? '' : ';opacity:0.45') + '"' + dash + '/></g>';
           });
           const [a, oa, b, ob] = pieces.reduce((m, q) => Math.hypot(q[2] - q[0], q[3] - q[1]) > Math.hypot(m[2] - m[0], m[3] - m[1]) ? q : m, pieces[0]);
           if (Math.hypot(b - a, ob - oa) * sc > 60) g += '<text x="' + (X((oa + ob) / 2) + 4) + '" y="' + (Y((a + b) / 2)) + '" style="fill:var(--ink-2);font:700 11px var(--f-cond)">' + DI.esc((geo ? '' : '≈') + f.code) + '</text>';
@@ -1213,7 +1215,14 @@
       h += '<div class="plan-legend">To scale · ' + (facing > 0 ? '▲ up the line' : '▼ down the line') + ' · ' + DI.fmtCh(c0) + ' → ' + DI.fmtCh(c1) + ' · out to ' + Math.round(maxOff) + ' m each side<br>' +
         '<span><i class="pl-sq"></i>Connection box</span><span><i class="pl-ci"></i>Manhole</span><span><i class="pl-tr"></i>Dissipator, outlet</span><span><i class="pl-ln"></i>Ditch, as drawn' + (nSpan > nGeo ? ' (≈ at its lane: ' + (nSpan - nGeo) + ')' : '') + '</span></div>';
       h += '<div class="scroll plan-scroll">' + svg + '</div>';
+      // The app redraws its overlays on every change (a GPS fix, a sync): the plan keeps where it was scrolled
+      // to, and is left alone when nothing in it changed.
+      if (ov.planHtml === h) return;
+      const was = ov.querySelector('.plan-scroll'), keep = was ? [was.scrollLeft, was.scrollTop] : null;
+      ov.planHtml = h;
       ov.firstChild.innerHTML = h;
+      const now = keep && ov.querySelector('.plan-scroll');
+      if (now) { now.scrollLeft = keep[0]; now.scrollTop = keep[1]; }
     };
     ov.refresh = draw;
     draw();

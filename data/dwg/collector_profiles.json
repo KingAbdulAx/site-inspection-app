@@ -1,0 +1,19 @@
+{
+  "note": "Collector drain profiles: each drain's manholes in order, and the pipe between each and the next (mm). The last gap of a drain runs to its exit (ES, DP) when the sheet draws one. Read from the sheets' MANHOLE and DIAMETER rows.",
+  "sheets": {
+    "T2019-323-DD-KM-KZDR-2200-DW-08001-04": "Collector drain - Kazaure 1, 2 and 3",
+    "T2019-323-DD-KM-KZDR-2200-DW-08002-03": "Collector drain - Daura 1, 2",
+    "T2019-323-DD-KM-KZDR-2200-DW-08003-03": "Collector drain - Yard Daura 1, 2 and 3"
+  },
+  "profiles": [
+    { "sheet": "08001", "name": "Kazaure 1", "mh": ["MH1.1-KZ", "MH1.2-KZ", "MH1.3-KZ", "MH1.4-KZ", "MH1.5-KZ", "MH1.6-KZ", "ES1"], "dia": [400, 400, 600, 600, 600, 600] },
+    { "sheet": "08001", "name": "Kazaure 2", "mh": ["MH1.1/MH2.1-KZ", "MH2.2-KZ", "MH2.3-KZ", "MH2.4-KZ", "MH2.5/MH3.6-KZ"], "dia": [400, 400, 600, 600] },
+    { "sheet": "08001", "name": "Kazaure 3", "mh": ["MH3.1-KZ", "MH3.2-KZ", "MH3.3-KZ", "MH3.4-KZ", "MH3.5-KZ", "MH2.5/MH3.6-KZ", "ES2"], "dia": [400, 600, 600, 600, 600, 800] },
+    { "sheet": "08001", "name": "Kazaure 3", "mh": ["MH3.6A-KZ", "MH2.5/MH3.6-KZ", "ES2"], "dia": [800, 800] },
+    { "sheet": "08002", "name": "Daura 1", "mh": ["MH1.1-DR", "MH1.2-DR", "MH1.3-DR", "MH1.4-DR", "MH1.5-DR", "MH1.6-DR", "MH1.7-DR", "MH1.8-DR", "MH1.9-DR", "MH1.10-DR", "DP1-DR"], "dia": [400, 400, 600, 600, 600, 800, 800, 800, 800, 800] },
+    { "sheet": "08002", "name": "Daura 2", "mh": ["MH2.1-DR", "MH2.2-DR", "MH2.3-DR", "MH2.4-DR", "MH2.5-DR", "MH2.6-DR", "MH2.7-DR", "MH2.8-DR", "MH2.9-DR", "DP2-DR"], "dia": [400, 400, 600, 600, 600, 800, 800, 800, 800] },
+    { "sheet": "08003", "name": "Yard Daura 1", "mh": ["MH1.1-YD", "MH1.2-YD", "MH1.3-YD", "MH1.4-YD", "MH1.5-YD", "MH1.6-YD", "MH1.7-YD", "MH1.8-YD", "MH1.9-YD", "MH1.10-YD", "MH1.11-YD", "MH1.12-YD", "DP1-YD"], "dia": [400, 400, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600] },
+    { "sheet": "08003", "name": "Yard Daura 2", "mh": ["MH2.1-YD", "MH2.2-YD", "MH2.3-YD", "DP2-YD"], "dia": [400, 400, 600] },
+    { "sheet": "08003", "name": "Yard Daura 3", "mh": ["MH3.1-YD", "MH3.2-YD", "MH3.3-YD", "MH3.4-YD", "MH3.5-YD", "DP2-YD"], "dia": [400, 400, 600, 600, 600] }
+  ]
+}

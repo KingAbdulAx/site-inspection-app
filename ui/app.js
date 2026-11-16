@@ -123,8 +123,10 @@
 
   // -------------------------------------------------------- position
   // Road drainage stays off the strip and its lists (it runs off across the land); the road crossing's sheet
-  // and the plan view gather it.
-  function lineFeatures() { return DI.data.features.filter(f => f.line === S.pos.line && !f.absorbedInto && !f.road); }
+  // and the plan view gather it. So do a station's or a yard's Type 6 drains and manholes: their own page (the
+  // station's sheet) and the plan show them, where drains along and across the tracks can be told apart. The
+  // strip keeps one straight Type 6 run a side for each, as the design drew it, which opens that page.
+  function lineFeatures() { return DI.data.features.filter(f => f.line === S.pos.line && !f.absorbedInto && !f.road && !DI.netAreaOf(f)).concat(DI.netRuns(S.pos.line)); }
   DA.lineFeatures = lineFeatures;
 
   function setHand(line, ch) {
@@ -292,9 +294,29 @@
     if (r.note) h += '<div class="note mt8">' + esc(r.note) + '.</div>';
     const n = DI.data.features.filter(f => f.line === r.line && f.ch1 >= r.ch0 && f.ch0 <= r.ch1).length;
     h += '<div class="note mt8">From ' + esc(r.source) + ', for finding your way. ' + n + ' drainage structure' + (n === 1 ? '' : 's') + ' on the drawings lie' + (n === 1 ? 's' : '') + ' within it.</div>';
-    h += '<button class="btn primary mt16" data-act="plan-open" data-line="' + r.line + '" data-a="' + Math.round(r.ch0 - 100) + '" data-b="' + Math.round(r.ch1 + 100) + '" data-title="' + esc(r.name) + '" style="min-height:52px">' + I.icon('layers') + 'See it in plan, to scale</button>';
+    const net = DI.netOf(r.id).filter(f => !f.absorbedInto);
+    const a = Math.min(r.ch0, ...net.map(f => f.ch0)) - 100, b = Math.max(r.ch1, ...net.map(f => f.ch1)) + 100;
+    h += '<button class="btn primary mt16" data-act="plan-open" data-line="' + r.line + '" data-a="' + Math.round(a) + '" data-b="' + Math.round(b) + '" data-title="' + esc(r.name) + '" style="min-height:52px">' + I.icon('layers') + 'See it in plan, to scale</button>';
+    if (net.length) h += netHtml(net);
     h += '<button class="btn mt8" data-act="goto-next" data-ch="' + Math.round((r.ch0 + r.ch1) / 2) + '" style="min-height:52px">Show it on the strip</button>';
     openOverlay(h, 'sheet');
+  }
+  // A station's or a yard's Type 6 network: its drains (French drains, collector pipes) and their manholes, kept
+  // off the strip. Junction manholes (drains meeting, or a run turning across the tracks) are cast in situ.
+  function netHtml(net) {
+    const legs = net.filter(f => DI.isSpan(f)).sort((x, y) => x.ch0 - y.ch0 || x.offset - y.offset);
+    const mhs = net.filter(f => !DI.isSpan(f)).sort((x, y) => x.ch0 - y.ch0 || x.offset - y.offset);
+    const p = DI.progressOf(net), done = f => DI.statusOf(f).bucket === 'done';
+    const km = m => (m / 1000).toLocaleString('en-GB', { maximumFractionDigits: 2 });
+    const jn = mhs.filter(f => f.conn && f.conn.junction), out = mhs.filter(f => f.conn && f.conn.exit);
+    let h = '<div class="lbl-caps mt16">Type 6 drains and manholes</div><div class="kv">' +
+      '<div class="k">Drains</div><div class="v">' + legs.length + ' · ' + km(p.lin.m) + ' km<small>' + km(p.lin.doneM) + ' km finished · ' + legs.filter(done).length + ' drains</small></div>' +
+      '<div class="k">Manholes</div><div class="v">' + mhs.length + '<small>' + mhs.filter(done).length + ' finished' + (jn.length ? ' · ' + jn.length + ' at junctions, cast in situ' : '') + (out.length ? ' · ' + out.length + ' outlets' : '') + '</small></div></div>';
+    h += '<div class="note mt8">The strip shows them as one straight Type 6 run a side, which opens this page: drains along and across the tracks would crowd it. Each drain and manhole is here and in the plan.</div>';
+    const row = f => { const st = DI.statusOf(f); return '<button class="frow" data-act="record" data-id="' + esc(f.id) + '">' + sideBadge(f.side) + '<div class="mid"><div class="t1">' + I.typeIcon(f.icon) + '<span>' + esc(f.name) + '</span></div><div class="t2">' + DI.fmtCh(f.ch0) + (DI.isSpan(f) ? ' · ' + Math.round(f.len || f.ch1 - f.ch0) + ' m' + (f.dia ? ' · ø' + f.dia : '') : (f.conn && f.conn.junction ? ' · in situ' : '')) + '</div></div><div class="right">' + meter(f, st) + '</div></button>'; };
+    h += '<div class="lbl-caps mt16">Drains</div><div style="margin:0 -16px">' + legs.map(row).join('') + '</div>';
+    if (mhs.length) h += '<div class="lbl-caps mt16">Manholes</div><div style="margin:0 -16px">' + mhs.map(row).join('') + '</div>';
+    return h;
   }
   // What a reference structure is: from the track plan, not something to inspect.
   function openRef(id) {
@@ -590,6 +612,9 @@
 
   // ------------------------------------------------------- record sheet
   function openRecord(fid) {
+    // a station's network run on the strip: its page
+    const run = DI.netRunById(fid);
+    if (run) return openRef(run.netRun);
     let f = DI.data.byId[fid];
     if (!f) return;
     if (f.absorbedInto) { fid = f.absorbedInto; f = DI.data.byId[fid]; }
@@ -632,6 +657,10 @@
       }));
       return h ? '<div class="conn">' + h + '</div>' : '';
     }
+    // a station's or a yard's Type 6 network: its page
+    const ar = DI.netAreaOf(f);
+    const part = ar ? '<button class="conn-row" data-act="ref" data-id="' + esc(ar.id) + '"><span class="lbl-caps">Network of</span>' + I.icon('layers') + '<b>' + esc(ar.name) + '</b><small>' +
+      (f.conn && f.conn.junction ? 'junction, cast in situ' : f.dia ? 'ø' + f.dia + ' mm' : 'its drains and manholes') + '</small></button>' : '';
     if (DI.isSpan(f)) {
       const e = DI.endsOf(f);
       const one = (lbl, g, ch) => g ? row(lbl, g, DI.fmtCh(g.ch0)) : '<div class="conn-row none"><span class="lbl-caps">' + esc(lbl) + '</span><small>' + DI.fmtCh(ch) + ' · nothing drawn here: runs on, or an open end</small></div>';
@@ -639,11 +668,11 @@
       DI.roadJoinsOf(f).forEach(x => { h += row('Road drain in', x.f, DI.fmtCh(x.ch) + (x.f.roadName ? ' · road ' + x.f.roadName : '')); });
     } else {
       const j = DI.joinsOf(f);
-      if (!j.length && !f.conn) return '';
+      if (!j.length && !f.conn) return part ? '<div class="conn">' + part + '</div>' : '';
       h = j.length ? j.map(x => row(x.end === 'start' ? 'Start of' : x.end === 'end' ? 'End of' : x.end === 'on' ? 'On' : 'Joins', x.f, DI.fmtCh(x.f.ch0) + (DI.isSpan(x.f) ? ' → ' + DI.fmtCh(x.f.ch1) : '') + ' · ' + (x.f.side === 'L' ? 'left' : x.f.side === 'R' ? 'right' : ''))).join('')
         : '<div class="conn-row none"><small>Nothing on the plans runs into it within 4 m</small></div>';
     }
-    return '<div class="conn">' + h + '</div>';
+    return '<div class="conn">' + part + h + '</div>';
   }
   DA.connHtml = connHtml;
   // The stage choices for a whole structure (or a whole stretch): one up from what was seen, the claim,
@@ -679,12 +708,26 @@
   // A drain along the line: how far each stage has got, the whole stretch in one tap, or a part of it at a
   // stage, between two chainages.
   S.rgStage = S.rgStage || {};
+  // A drain measured along itself (a road drain, a Type 6 leg that turns): metres from its start, where you
+  // are from the GPS projected onto its shape.
+  function measureFmt(f) { return DI.alongOf(f) ? v => Math.round(v) + ' m' : v => DI.fmtCh(Math.round(v)); }
+  function measureParse(f, t) { return DI.alongOf(f) ? parseFloat(String(t).replace(/[^0-9.\-]/g, '')) : DI.parseCh(t); }
+  function measureHere(f) {
+    if (!DI.alongOf(f)) return S.pos.ch;
+    const m = DI.measureAt(f, S.pos.ch, S.pos.offset || 0);
+    return m && m.d < 40 ? m.m : null;
+  }
   function rangeBlock(f, st) {
-    const [ch0, ch1] = DI.extentEnds(f);
+    const [ch0, ch1] = DI.measureEnds(f);
     const cov = st.cover, len = ch1 - ch0, max = f.ladder.length - 1;
-    const ch = v => DI.fmtCh(Math.round(v));
+    const along = DI.alongOf(f);
+    const ch = measureFmt(f);
     const done = cov ? cov.m : 0;
     let h = '<div style="font:700 21px/1.2 var(--f-sans);margin:18px 0 10px;color:var(--ink-2)">How far along is it?</div>';
+    if (along) {
+      const g = DI.geomOf(f), s0 = g && g[0];
+      h += '<div class="note" style="margin:-4px 0 10px">Measured along the drain, in metres from its start' + (s0 ? ' (0 m: its end at ' + DI.fmtCh(s0[0]) + ', ' + Math.round(Math.abs(s0[1])) + ' m ' + (s0[1] >= 0 ? 'left' : 'right') + ' of the line)' : '') + '. <b>Here</b> puts you on it by GPS.</div>';
+    }
     h += '<div class="rg-sum"><b>' + Math.round(done) + ' of ' + Math.round(len) + ' m</b><span>' + esc(f.ladder[max]) + ' · ' + Math.round(done / len * 100) + '%</span></div>';
     h += '<div class="rgbar">' + (cov ? cov.segs.map(g => '<i style="left:' + ((g.a - ch0) / len * 100) + '%;width:' + Math.max(0.8, (g.b - g.a) / len * 100) + '%;opacity:' + stageShade(g.s, max).toFixed(2) + '" title="' + esc(f.ladder[g.s]) + '"></i>').join('') : '') + '</div>';
     if (cov && !cov.full) {
@@ -702,21 +745,22 @@
       const at = cov && cov.byStage[pick] && cov.byStage[pick].length ? cov.byStage[pick] : [];
       const startAt = at.length && at[0][0] <= ch0 + 1 ? at[0][1] : ch0;
       const from = startAt < ch1 - 1 ? startAt : ch0;
-      const to = S.pos.ch > from + 1 && S.pos.ch <= ch1 ? S.pos.ch : ch1;
+      const here = measureHere(f);
+      const to = here != null && here > from + 1 && here <= ch1 ? here : ch1;
       h += '<div class="rg-form"><div class="lbl-caps">Or only part of it, at a stage</div>' +
         '<div class="chips-scroll rg-pick">' + f.ladder.slice(1).map((n, i) => '<button data-act="range-stage" data-id="' + esc(f.id) + '" data-stage="' + (i + 1) + '" class="' + (pick === i + 1 ? 'on' : '') + '">' + esc(n) + '</button>').join('') + '</div>' +
         '<div class="rg-row">' +
-        '<label>From<input id="rgFrom" inputmode="decimal" autocomplete="off" value="' + ch(from) + '"></label><button class="btn here" data-act="range-here" data-target="rgFrom">Here</button>' +
-        '<label>To<input id="rgTo" inputmode="decimal" autocomplete="off" value="' + ch(to) + '"></label><button class="btn here" data-act="range-here" data-target="rgTo">Here</button></div>' +
-        '<button class="opt" data-act="range-save" data-id="' + esc(f.id) + '" data-stage="' + pick + '"><span><b>Save this part at ' + esc(f.ladder[pick]) + '</b><small>Between the two chainages, on this stretch</small></span></button></div>';
+        '<label>From<input id="rgFrom" inputmode="decimal" autocomplete="off" value="' + ch(from) + '"></label><button class="btn here" data-act="range-here" data-id="' + esc(f.id) + '" data-target="rgFrom">Here</button>' +
+        '<label>To<input id="rgTo" inputmode="decimal" autocomplete="off" value="' + ch(to) + '"></label><button class="btn here" data-act="range-here" data-id="' + esc(f.id) + '" data-target="rgTo">Here</button></div>' +
+        '<button class="opt" data-act="range-save" data-id="' + esc(f.id) + '" data-stage="' + pick + '"><span><b>Save this part at ' + esc(f.ladder[pick]) + '</b><small>' + (along ? 'Between the two points, in metres along it' : 'Between the two chainages, on this stretch') + '</small></span></button></div>';
     }
     return h;
   }
   function recordRange(fid, from, to, stage) {
     const r = DI.addRange(fid, from, to, snapPos(), stage);
-    if (!r) { toast({ title: 'Nothing saved', sub: 'Give two chainages on this stretch, at least 1 m apart' }); return; }
+    if (!r) { toast({ title: 'Nothing saved', sub: DI.alongOf(DI.data.byId[fid]) ? 'Give two points along it, in metres, at least 1 m apart' : 'Give two chainages on this stretch, at least 1 m apart' }); return; }
     closeAll();
-    toast({ title: 'Saved on this phone', sub: r.stageName + ' ' + DI.fmtCh(r.from) + ' → ' + DI.fmtCh(r.to) + ' · ' + Math.round(r.to - r.from) + ' m', undo: () => { DI.voidRecord(r.id); render(); toast({ title: 'Undone', sub: 'The record is kept, marked as withdrawn' }); } });
+    toast({ title: 'Saved on this phone', sub: DA.recLabel(r), undo: () => { DI.voidRecord(r.id); render(); toast({ title: 'Undone', sub: 'The record is kept, marked as withdrawn' }); } });
     render();
   }
   DA.recordRange = recordRange;
@@ -1128,8 +1172,14 @@
       case 'ee-apply-input': if (ov && ov.ee) ov.ee.applyInput(); break;
       case 'ee-nudge': if (ov && ov.ee) ov.ee.nudge(Number(b.dataset.n)); break;
       case 'ee-save': if (ov && ov.ee) ov.ee.save(); break;
-      case 'range-here': { const el = $('#' + b.dataset.target); if (el) el.value = DI.fmtCh(Math.round(S.pos.ch)); break; }
-      case 'range-save': recordRange(id, DI.parseCh($('#rgFrom').value), DI.parseCh($('#rgTo').value), b.dataset.stage == null ? null : Number(b.dataset.stage)); break;
+      case 'range-here': {
+        const el = $('#' + b.dataset.target), f = DI.data.byId[id];
+        const v = f ? measureHere(f) : S.pos.ch;
+        if (v == null) { toast({ title: 'You are not on it', sub: 'GPS puts you more than 40 m from this drain: type the metres' }); break; }
+        if (el) el.value = f ? measureFmt(f)(v) : DI.fmtCh(Math.round(v));
+        break;
+      }
+      case 'range-save': { const f = DI.data.byId[id]; recordRange(id, measureParse(f, $('#rgFrom').value), measureParse(f, $('#rgTo').value), b.dataset.stage == null ? null : Number(b.dataset.stage)); break; }
       case 'range-stage': {
         // pick the stage for a part; the chainages typed so far stay
         const fv = $('#rgFrom') && $('#rgFrom').value, tv = $('#rgTo') && $('#rgTo').value;

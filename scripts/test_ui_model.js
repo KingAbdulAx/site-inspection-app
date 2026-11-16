@@ -586,8 +586,8 @@ section('Phases 8 and 9: Type 6 networks, road drainage', () => {
   ok(both.length > legs.length * 0.8 && both.every(f => /^(MH|MHG)$/.test(DI.endsOf(f).start.code)), 'most legs run manhole to manhole: ' + both.length);
   const mh = DI.endsOf(both[0]).end;
   ok(DI.joinsOf(mh).some(x => x.f === both[0] && x.end === 'end'), 'and the manhole names the leg that ends at it');
-  const turn = legs.find(f => !DI.rangeable(f) && f.len > 5);
-  ok(turn && turn.ch1 - turn.ch0 < 0.8 * turn.len && DI.geomOf(turn).length >= 1, 'a leg that turns or crosses the line is tracked whole, and drawn with its turns');
+  const turn = legs.find(f => f.ch1 - f.ch0 < 0.8 * f.len && f.len > 5);
+  ok(turn && DI.alongOf(turn) && DI.rangeable(turn) && DI.measureEnds(turn)[1] === Math.round(turn.len * 10) / 10 && DI.geomOf(turn).length >= 1, 'a leg that turns or crosses the line is measured along itself, and drawn with its turns');
   ok(Math.abs(DI.progressOf([turn]).lin.m - turn.len) < 0.01, 'its length in Progress is its own, not its chainage');
   ok(F.some(f => /^mh_/.test(f.id) && f.mhName), 'yard manholes come with their names');
   const named = F.filter(f => f.mhName);
@@ -608,6 +608,71 @@ section('Phases 8 and 9: Type 6 networks, road drainage', () => {
   ok(t4 && DI.ladderKind(t4.ladder) === 'unlined' && rd.filter(f => /concrete/.test(f.name)).every(f => DI.ladderKind(f.ladder) === (f.code === 'RT9' ? 'precast' : 'insitu')), 'road ditches: unlined type 4 on the unlined stages, concrete ones cast in situ (type 9 precast)');
   DI.addRecord({ kind: 'stage', featureId: t4.id, stage: t4.ladder.length - 1 });
   ok(DI.statusOf(t4).bucket === 'done' && Math.abs(DI.progressOf([t4]).lin.doneM - t4.len) < 0.01, 'a road drain takes a stage, and counts its own length');
+  // tracked by length, along itself
+  const rdl = rd.find(f => f.kind === 'net' && f.len > 100 && f.code !== 'RT4' && DI.geomOf(f).length > 1);
+  ok(DI.rangeable(rdl) && DI.alongOf(rdl) && DI.measureEnds(rdl)[0] === 0, 'a road drain is tracked by length, in metres along it: ' + rdl.name + ', ' + Math.round(rdl.len) + ' m');
+  const g = DI.geomOf(rdl), q = g[1];
+  const at = DI.measureAt(rdl, (q[0] + q[2]) / 2, (q[1] + q[3]) / 2);
+  const tot = g.reduce((a, x) => a + Math.hypot(x[2] - x[0], x[3] - x[1]), 0);
+  const want = (Math.hypot(g[0][2] - g[0][0], g[0][3] - g[0][1]) + Math.hypot(q[2] - q[0], q[3] - q[1]) / 2) * rdl.len / tot;
+  ok(at && at.d < 0.2 && Math.abs(at.m - want) < 0.2, 'a point on it is found along it (GPS for Here): ' + at.m + ' m');
+  const rr = DI.addRange(rdl.id, 10, 60, null, 1);
+  ok(rr && rr.from === 10 && rr.to === 60 && rr.along && rr.ch === rdl.ch0, 'a part of it is saved in metres along it');
+  const cv = DI.statusOf(rdl).cover;
+  ok(cv && Math.abs(cv.mAt[1] - 50) < 0.01 && Math.abs(DI.progressOf([rdl]).lin.atLeast[rdl.ladder[1]] - 50) < 0.01, 'and counts 50 m at ' + rdl.ladder[1] + ' in Progress');
+  ok(!DI.addRange(rdl.id, rdl.len + 5, rdl.len + 50, null, 1), 'a part beyond its length is not saved');
+});
+
+section('Type 1: the normal and the larger (T1L), from the thick line on the drawings', () => {
+  const F = DI.data.features, big = F.filter(f => f.code === 'T1L'), small = F.filter(f => f.code === 'T1');
+  ok(window.KMD_T1_LARGE.length === 31 && big.length === 31, 'the 31 thick Type 1 polylines are the larger Type 1 (T1L)');
+  ok(big.every(f => f.large && f.name === 'Type 1L side ditch (larger)' && f.ladder === F.find(x => x.code === 'T1').ladder), 'named as such, on the same stages');
+  ok(F.find(f => f.id === 'asset_012').code === 'T1L' && F.find(f => f.id === 'asset_013').code === 'T1', 'an asset register Type 1 is the larger one where it lies along a thick line (asset_012, B=4.0-4.5m), not otherwise');
+  ok(!small.some(f => /B=4/.test(f.specs)) && !big.some(f => /b=0\.75/.test(f.specs)), 'no Type 1 says otherwise in its own spec');
+  ok(DI.typeProgress('DWKZ').some(t => t.key === 'T1L') && DI.typeProgress('DWKZ').some(t => t.key === 'T1'), 'Progress counts them apart');
+});
+
+section('Station and yard networks: set-out drawings, junctions, their own pages', () => {
+  const F = DI.data.features;
+  // Dawanau station as set out (S02 - FD - Dawanau ST - Settings 260715)
+  const dw = F.filter(f => f.net && f.net.src && /Settings/.test(f.net.src));
+  ok(dw.length === 54 && dw.filter(f => f.dia).length === 52, 'Dawanau station is drawn as set out: 54 legs, 52 with their pipe diameter');
+  const name = n => F.find(f => f.mhName === n);
+  ok(name('MH1.1-DW') && name('MH1.28-DW') && name('MH2.22-DW') && name('Exit 1-DW'), 'its manholes keep the profiles\' names, 1.1 to 1.28 and 2.1 to 2.22, and its exits');
+  ok(!F.some(f => (f.code === 'MH' || f.code === 'MHG') && !f.net && f.sub === 'DWKZ' && f.ch0 > 19950 && f.ch0 < 21200 && f.offset > -60 && f.offset < 5 && !f.mhName),
+    'the plans\' manholes it does not have give way');
+  ok(F.some(f => f.id === 't6_DWKZ_4A65E_1' && f.dia === 800), 'a leg drawn the same before keeps its id, so its records stay on it');
+  // junctions
+  const j17 = name('MH1.7-DW'), j8 = name('MH1.8-DW'), j3 = name('MH1.3-DW'), j10 = name('MH1.10-DW');
+  ok(j17.conn.junction === 'meet' && j8.conn.junction === 'meet' && j3.conn.junction === 'turn' && DI.ladderKind(j17.ladder) === 'insitu',
+    'where drains meet, or a run turns across the tracks, the manhole is a junction cast in situ');
+  ok(!j10.conn.junction && DI.ladderKind(j10.ladder) === 'precast', 'a manhole on a straight run stays precast');
+  ok(DI.ladderKind(name('Exit 2-DW').ladder) === 'insitu' && name('Exit 2-DW').conn.exit && /^Outlet/.test(name('Exit 2-DW').name), 'an exit is an outlet, cast in situ');
+  // S03 sheets
+  ok(F.filter(f => f.sub === 'KZDR' && f.net && f.dia).length === 46 && F.find(f => f.id === 't6_KZDR_163B6D_14').dia === 400, 'S03\'s collector drain sheets give its legs their diameters');
+  ok(!F.some(f => f.sub === 'KZDR' && /^mh_/.test(f.id) && !f.mhName && f.ch0 > 83000 && f.ch0 < 124500), 'S03\'s outlines of an older layout are left out');
+  // sub-pages
+  const st = DI.refs().find(r => r.name === 'Kazaure Station'), net = DI.netOf(st.id);
+  ok(net.filter(f => f.code === 'T6').length === 14 && net.every(f => DI.netAreaOf(f) === st), 'Kazaure Station has its 14 drains and their manholes');
+  const yd = DI.refs().find(r => r.name === 'Daura freight yard');
+  ok(DI.netOf(yd.id).filter(f => DI.isSpan(f)).every(f => /-YD/.test(f.name)) && DI.netOf(yd.id).filter(f => DI.isSpan(f)).length === 19, 'a yard\'s drains go to the yard, by their names');
+  const leg = net.find(f => f.code === 'T6');
+  ok(DI.isNetMember(leg) && !DI.netAreaOf(F.find(f => f.code === 'T1')), 'other drainage stays on the strip');
+  ok(DI.typeProgress('DWKZ').some(t => t.key === 'T6' && t.label === 'Type 6 French drains'), 'Progress names the networks\' drains by their type, not by the first one\'s manholes');
+  // on the strip: one straight run a side, which opens the network's page
+  const run = DI.netRuns('KM').find(r => r.netRun === st.id);
+  ok(run && run.kind === 'buried' && run.code === 'T6' && run.ch0 === Math.min(...net.filter(f => f.code === 'T6').map(f => f.ch0)) && DI.netRunById(run.id) === run && !DI.data.byId[run.id],
+    'the strip has one straight Type 6 run for it, not a feature of its own');
+  ok(DI.statusOf(run).bucket === 'none', 'nothing built: the run shows nothing built');
+  const dws = DI.refs().find(r => r.name === 'Dawanau Station'), drun = DI.netRuns('KM').find(r => r.netRun === dws.id);
+  // as on site (16 Nov): all of line 2, and line 1 only at its ends (MH1.1 to MH1.8, MH1.24 to MH1.25)
+  const done = JSON.parse(require('fs').readFileSync(require('path').join(__dirname, '..', 'data/progress/progress_2026-11-16_DW.json'), 'utf8')).rows.map(r => DI.data.byId[r.asset_id]);
+  const undone = JSON.parse(require('fs').readFileSync(require('path').join(__dirname, '..', 'data/progress/progress_2026-11-16_DW_fix.json'), 'utf8')).rows.map(r => r.asset_id);
+  ok(done.length === 29 && done.every(f => f && DI.netAreaOf(f) === dws) && done.filter(f => /MH2\.|MH2\.20/.test(f.name)).length === 21 && !done.some(f => undone.includes(f.id)),
+    'the Dawanau progress file has line 2 (21 drains) and the ends of line 1 (8), none of the 19 set back');
+  done.forEach(f => DI.addRecord({ kind: 'stage', featureId: f.id, stage: f.ladder.length - 1 }));
+  const rs = DI.statusOf(drun);
+  ok(rs.bucket === 'moving' && rs.cover.segs.length === 29 && Math.abs(rs.net.lin.doneM - done.reduce((a, f) => a + f.len, 0)) < 0.5, 'those show built on the strip\'s run, the middle of line 1 not');
 });
 
 console.log('\n' + (fail ? 'FAILED: ' : 'ALL PASSED: ') + pass + ' passed, ' + fail + ' failed');

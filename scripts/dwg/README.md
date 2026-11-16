@@ -106,6 +106,32 @@ python3 scripts/dwg/extract_networks.py --out data/networks.json \
 
 The layers and rules are in the script's header. S01's DRN-LONG and the S01 and S02 ROD-DRAINAGE were purged in AutoCAD (regapps, unused blocks) to bring them under the Drive connector's 10 MB; S01 DRN-LONG then gave the same ditches, descents and blocks as before. 13 Nov 2026: 271 Type 6 legs and 16 collector pipes (12.6 km), 315 manholes (26 new, in the yards; 263 named: the MH blocks' MANHOLE-NAME, 'MH3.3-YDKZ', and the Kazaure yard's 'M 1.0' labels); 1,538 road drains (118 km), 537 riprap dissipators, 96 road culverts, 98 road-drain ends on 72 railway ditches. Takes about 4 minutes.
 
+Then what later drawings add to the networks:
+
+```
+python3 scripts/dwg/apply_settings.py [--dawanau DW-FD.dxf]    # 'S02 - FD - Dawanau ST - Settings 260715', dwg2dxf + fix_dxf.py
+```
+
+- **Dawanau station as set out (15 Jul 2026):** the drawing's `_Lines Final` polylines and profiles, kept in `data/dwg/dawanau_settings.json`. They replace the design's DRN-LONG drains and manholes of the station. 16 Nov 2026: 54 legs (2.37 km), 52 of them with their pipe diameter; 53 manholes and exits (MH1.1-DW to MH1.28-DW, MH2.1-DW to MH2.22-DW, Exit 1-DW, Exit 2-DW). A leg drawn the same as before keeps its id (39 of them). The Dawanau yard is not on the drawing, so it stays as designed.
+- **The S03 collector drain sheets** (KZDR-2200-DW-08001 Kazaure, 08002 Daura, 08003 Daura yard), kept in `data/dwg/collector_profiles.json`. Each leg between two of a profile's manholes takes its pipe diameter: 46 legs. The sheets' manhole names are the ones DRN-LONG already gives (55).
+- **S03's outline 'MH's of an older layout:** each is about 12 m before a named manhole, and no drain runs to it. These 39 are left out.
+
+In the app (`loadNetworks`):
+
+- **Junctions:** a manhole where three or more drains meet, or where a drain turns through 60 to 120 degrees (a longitudinal run meeting a transverse one), is a junction. It is cast in situ, on the in-situ stages.
+- **Outlets:** a network's exits ('Exit 1-DW', 'DISCHARGE PIPE 2-KZ') are outlets, also cast in situ.
+- **Duplicates:** where the plans draw a manhole twice at one point (its chamber and its grid cover), it is kept once.
+- **Sub-pages:** each drain and manhole belongs to the nearest station or yard within 1.5 km (one named for a yard, '-YD', to a yard within 2 km). They are off the strip and shown on that station's or yard's page, and in its plan.
+
+## Type 1, normal and larger
+
+```
+python3 scripts/dwg/extract_t1_large.py S01-DRN-LONG.dxf S02-DRN-LONG.dxf S03-DRN-LONG.dxf S04-DRN-LONG.dxf S05-DRN-LONG.dxf
+node scripts/dwg/bundle_structures.js
+```
+
+The DRN-LONG drawings tell the larger Type 1 from the normal one only by the line: a constant width (0.2 to 0.3) on DRN_DITCH_TYPE1, against 0 for the normal one. The script writes every Type 1 polyline to `data/dwg/t1_large.json`; the bundle puts the larger ones in `data/structures.js` (`KMD_T1_LARGE`). In the app, a Type 1 from that polyline (`cad_<SUB>_<handle>`) becomes T1L; one from the asset register does where 60% of it lies along one. 16 Nov 2026: 112 Type 1 polylines, 31 larger (10.4 km), all matched. The two the asset register describes (asset_012, asset_031: B=4.0-4.5m, H=0.60m, 1:2) are among them, and no normal one has that spec.
+
 ## Embankment height (Section 02 for now)
 
 ```
