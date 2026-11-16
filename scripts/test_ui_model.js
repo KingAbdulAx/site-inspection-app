@@ -658,6 +658,7 @@ section('Station and yard networks: set-out drawings, junctions, their own pages
   ok(DI.netOf(yd.id).filter(f => DI.isSpan(f)).every(f => /-YD/.test(f.name)) && DI.netOf(yd.id).filter(f => DI.isSpan(f)).length === 19, 'a yard\'s drains go to the yard, by their names');
   const leg = net.find(f => f.code === 'T6');
   ok(DI.isNetMember(leg) && !DI.netAreaOf(F.find(f => f.code === 'T1')), 'other drainage stays on the strip');
+  ok(DI.typeProgress('DWKZ').some(t => t.key === 'T6' && t.label === 'Type 6 French drains'), 'Progress names the networks\' drains by their type, not by the first one\'s manholes');
   // on the strip: one straight run a side, which opens the network's page
   const run = DI.netRuns('KM').find(r => r.netRun === st.id);
   ok(run && run.kind === 'buried' && run.code === 'T6' && run.ch0 === Math.min(...net.filter(f => f.code === 'T6').map(f => f.ch0)) && DI.netRunById(run.id) === run && !DI.data.byId[run.id],

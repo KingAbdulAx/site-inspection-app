@@ -1751,6 +1751,8 @@
     if (span && /^CH-/.test(f.code || '')) return { key: 'CH', label: 'Diversion channels', span };
     if (span && f.code === 'MD') return { key: 'MD', label: 'Approach and earth toe ditches', span };
     if (f.road) return span ? { key: 'RD', label: 'Road drainage', span } : { key: 'RD.' + f.code, label: TYPE_LABEL[f.code] || f.catLabel, span };
+    // a network's legs are named by their manholes: the type is the drain's
+    if (span && f.net) return f.code === 'CP' ? { key: 'CP', label: 'Collector pipes (yards)', span } : { key: 'T6', label: 'Type 6 French drains', span };
     if (span) return { key: f.code || f.catKey, label: f.name, span };
     return { key: (f.code || f.catKey) + '.pt', label: TYPE_LABEL[f.code] || f.catLabel, span };
   }
