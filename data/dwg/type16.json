@@ -1,0 +1,12 @@
+{
+  "note": "Type 16: the water passage that carries a longitudinal ditch through an underpass (drainage report DWKZ-2200-RP-00001-06, 3.5.1, Figure 3.12, 'water climbable passage used in underpass'; Type B where the flow is higher). Placed by the notes 'WATER PASSAGE USED IN UNDERPASS - TYPE A/B' (layer Notes_Longitudinal) of T2019-0323-S03-DD-DRN-LONG, each at a 3.0 x 3.0 m cattle-crossing underpass where a Type 12 toe ditch runs through it. The other drawings place none. The asset list's 10 underpass water passages (asset_037 ... asset_144) are superseded by these.",
+  "source": "T2019-0323-S03-DD-DRN-LONG",
+  "passages": [
+    { "sub": "KZDR", "ch": 86525, "side": "L", "type": "A", "at": "Cattle crossing 1×(3.0×3.0 m)", "ditch": "Type 12 toe ditch, left" },
+    { "sub": "KZDR", "ch": 92215, "side": "R", "type": "A", "at": "Cattle crossing 1×(3.0×3.0 m)", "ditch": "Type 12 toe ditch, right" },
+    { "sub": "KZDR", "ch": 100875, "side": "R", "type": "A", "at": "Cattle crossing 1×(3.0×3.0 m)", "ditch": "Type 12 toe ditch, right" },
+    { "sub": "KZDR", "ch": 103725, "side": "L", "type": "A", "at": "Cattle crossing 1×(3.0×3.0 m)", "ditch": "Type 12 toe ditch, left" },
+    { "sub": "KZDR", "ch": 112000, "side": "L", "type": "A", "at": "Cattle crossing 1×(3.0×3.0 m)", "ditch": "Type 12 toe ditch, left" },
+    { "sub": "KZDR", "ch": 116300, "side": "R", "type": "B", "at": "Cattle crossing 1×(3.0×3.0 m)", "ditch": "toe ditch, right" }
+  ]
+}

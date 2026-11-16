@@ -1,0 +1,331 @@
+{
+ "kind": "kmd-progress",
+ "asof": "2026-11-16",
+ "source": "Site report: all Daura Type 6 drains (Daura Station and Daura freight yard) completed",
+ "rows": [
+  {
+   "asset_id": "t6_KZDR_11D510_1",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura Station · French drain MH1.10-DR → MH1.9-DR · 50 m, ø800 · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_11D510_2",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura Station · French drain MH1.9-DR → MH1.8-DR · 50 m, ø800 · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_11D510_3",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura Station · French drain MH1.8-DR → MH1.7-DR · 50 m, ø800 · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_11D510_4",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura Station · French drain MH1.7-DR → MH1.6-DR · 50 m, ø800 · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_11D510_5",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura Station · French drain MH1.6-DR → MH1.5-DR · 50 m, ø600 · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_11D510_6",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura Station · French drain MH1.5-DR → MH1.4-DR · 50 m, ø600 · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_11D510_7",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura Station · French drain MH1.4-DR → MH1.3-DR · 50 m, ø600 · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_11D510_8",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura Station · French drain MH1.3-DR → MH1.2-DR · 50 m, ø400 · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_11D510_9",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura Station · French drain MH1.2-DR → MH2.1/MH1.1-DR · 50 m, ø400 · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_11D511_1",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura Station · French drain MH2.1/MH1.1-DR → MH2.2-DR · 50 m, ø400 · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_11D511_2",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura Station · French drain MH2.2-DR → MH2.3-DR · 50 m, ø400 · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_11D511_3",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura Station · French drain MH2.3-DR → MH2.4-DR · 50 m, ø600 · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_11D511_4",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura Station · French drain MH2.4-DR → MH2.5-DR · 50 m, ø600 · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_11D511_5",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura Station · French drain MH2.5-DR → MH2.6-DR · 50 m, ø600 · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_11D511_6",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura Station · French drain MH2.6-DR → MH2.7-DR · 50 m, ø800 · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_11D511_7",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura Station · French drain MH2.7-DR → MH2.8-DR · 50 m, ø800 · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_11D511_8",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura Station · French drain MH2.8-DR → MH2.9-DR · 50 m, ø800 · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_11D50D_1",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura freight yard · French drain MH1.1-YD → MH1.2-YD · 50 m, ø400 · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_11D50D_2",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura freight yard · French drain MH1.2-YD → MH1.3-YD · 50 m, ø400 · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_11D50D_3",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura freight yard · French drain MH1.3-YD → MH1.4-YD · 50 m, ø600 · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_11D50D_4",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura freight yard · French drain MH1.4-YD → MH1.5-YD · 50 m, ø600 · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_11D50D_5",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura freight yard · French drain MH1.5-YD → MH1.6-YD · 50 m, ø600 · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_11D50D_6",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura freight yard · French drain MH1.6-YD → MH1.7-YD · 50 m, ø600 · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_11D50D_7",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura freight yard · French drain MH1.7-YD → MH1.8-YD · 50 m, ø600 · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_11D50D_8",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura freight yard · French drain MH1.8-YD → MH1.9-YD · 50 m, ø600 · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_11D50D_9",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura freight yard · French drain MH1.9-YD → MH1.10-YD · 50 m, ø600 · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_11D50D_10",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura freight yard · French drain MH1.10-YD → MH1.11-YD · 62 m, ø600 · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_11D50D_11",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura freight yard · French drain MH1.11-YD → … · 38 m · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_11D50E_1",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura freight yard · French drain … → MH1.12-YD/MH2.1-YD · 25 m · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_11D50E_2",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura freight yard · French drain MH1.12-YD/MH2.1-YD → MH2.2-YD · 62 m, ø400 · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_11D50E_3",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura freight yard · French drain MH2.2-YD → … · 38 m · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_11D50F_1",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura freight yard · French drain … → MH3.5-YD/MH2.3-YD · 25 m · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_11D50F_2",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura freight yard · French drain MH3.5-YD/MH2.3-YD → MH3.4-YD · 50 m, ø600 · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_11D50F_3",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura freight yard · French drain MH3.4-YD → MH3.3-YD · 50 m, ø600 · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_11D50F_4",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura freight yard · French drain MH3.3-YD → MH3.2-YD · 50 m, ø400 · completed"
+  },
+  {
+   "asset_id": "t6_KZDR_11D50F_5",
+   "sub": "KZDR",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Daura freight yard · French drain MH3.2-YD → MH3.1-YD · 50 m, ø400 · completed"
+  }
+ ]
+}

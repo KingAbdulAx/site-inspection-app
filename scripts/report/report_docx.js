@@ -44,7 +44,6 @@ const h1 = text => new Paragraph({ heading: HeadingLevel.HEADING_1, children: [t
 const h2 = text => new Paragraph({ heading: HeadingLevel.HEADING_2, children: [t(text)] });
 const h3 = text => new Paragraph({ heading: HeadingLevel.HEADING_3, children: [t(text)] });
 const note = text => p([t(text, { color: MUTED, size: 17, italics: true })], { spacing: { before: 60, after: 120 } });
-const bullet = runs => p(runs, { numbering: { reference: 'bul', level: 0 }, spacing: { after: 60 } });
 
 const border = { style: BorderStyle.SINGLE, size: 4, color: RULE };
 const borders = { top: border, bottom: border, left: border, right: border };
@@ -112,7 +111,7 @@ function cover() {
     ['Project', 'Standard gauge railway Kano–Maradi (with branch line Kano–Dutse)'],
     ['Scope', 'Main line, Sections 01 to 05 (PK -2+675 to 243+225): longitudinal drainage, cross drainage and station drainage'],
     ['Status as of', ASOF],
-    ['Basis', 'Detailed design drawings (DRN-LONG, drainage reports DWKZ- and KZDR-2200-RP-00001), as amended by the instructions listed in Section 3'],
+    ['Basis', 'Detailed design drawings (DRN-LONG, drainage reports DWKZ- and KZDR-2200-RP-00001), as amended by the instructions listed in Section 2'],
   ];
   const sig = ['Prepared by', 'Checked by', 'Approved by'];
   return [
@@ -128,29 +127,16 @@ function cover() {
   ];
 }
 
-function basis() {
-  return [
-    h1('1. Purpose and basis'),
-    p('This report states what drainage has been built on the main line, against what the design has, section by section and type by type. It lists every change from the design: items built differently on site, items omitted, and design changes made by instruction.', { spacing: { after: 120 } }),
-    h2('1.1 How the figures are measured'),
-    bullet([t('Longitudinal ditches and drains: ', { bold: true }), t('length in metres along the main line chainage, as drawn on the DRN-LONG drawings. A ditch counts as completed when its last construction stage is recorded; a part-built length is shown as under way.')]),
-    bullet([t('Culverts, cattle crossings and other structures: ', { bold: true }), t('number of structures.')]),
-    bullet([t('Station and yard collector drains (Type 6): ', { bold: true }), t('manhole to manhole, by the length of each drain.')]),
-    h2('1.2 Sources'),
-    p('Site inspection records and the contractor\'s execution charts, as held in the KMD Drainage Inspector database (' + R.rows + ' records, read on ' + ASOF + '). Design quantities follow the drawings, with Type 9 placed where the embankment is higher than 1.8 m (change 2) and Dawanau Station as set out on site (change 3).', { spacing: { after: 120 } }),
-  ];
-}
-
 function summary() {
-  const out = [h1('2. Summary')];
+  const out = [h1('1. Summary')];
   out.push(table([{ title: 'Item', w: 3 }, { title: 'Design', w: 1.3, right: true }, { title: 'Completed', w: 1.3, right: true }, { title: '%', w: 0.7, right: true }], [
     ['Longitudinal ditches and drains along the line', km(desM) + ' km', km(finM) + ' km', pct(finM, desM) + '%'],
     ['Culverts and cattle crossings', String(culvN), String(culvDone), pct(culvDone, culvN) + '%'],
     ['Station and yard collector drains (Type 6)', netLegs + ' (' + km(netM) + ' km)', netDone + ' (' + km(netDoneM) + ' km)', pct(netDoneM, netM) + '%'],
-    ['Changes from the design: ' + R.changes.length + ' (Section 3)', '', '', ''],
+    ['Changes from the design: ' + R.changes.length + ' (Section 2)', '', '', ''],
   ], W_P));
-  out.push(note('Section 2.1 gives the figures by section and type. Types with no work recorded yet are listed under each section.'));
-  out.push(h2('2.1 By section and drainage type'));
+  out.push(note('Section 1.1 gives the figures by section and type. Types with no work recorded yet are listed under each section.'));
+  out.push(h2('1.1 By section and drainage type'));
   const rows = [];
   R.sections.forEach(s => {
     const work = s.types.filter(x => !x.road && !x.net && worked(x));
@@ -182,7 +168,7 @@ function tableWithNotes(cols, rows, total) {
 }
 
 function changes() {
-  const out = [h1('3. Changes from the design'), p('Items built differently on site, design items omitted on site, and design changes made by instruction. The numbers mark them on the section diagrams and tables in Section 4.', { spacing: { after: 120 } })];
+  const out = [h1('2. Changes from the design'), p('Items built differently on site, and design changes made by instruction. The numbers mark them on the section diagrams and tables in Section 3.', { spacing: { after: 120 } })];
   const cols = [{ title: 'No.', w: 0.45 }, { title: 'Location', w: 1.6 }, { title: 'Design', w: 2.2 }, { title: 'As built', w: 2.4 }, { title: 'Status', w: 2.2 }];
   out.push(table(cols, R.changes.map(c => {
     const sec = c.sub ? R.sections.find(s => s.id === c.sub) : null;
@@ -204,11 +190,10 @@ function stretchRows(s) {
 }
 
 function sections(img) {
-  const out = [h1('4. Progress by section')];
+  const out = [h1('3. Progress by section')];
   let first = true;
   R.sections.forEach(s => {
     const rows = stretchRows(s), pts = s.points, sn = nets.filter(n => n.sub === s.id && n.legs);
-    const omittedHere = R.changes.filter(c => c.kind === 'omitted' && c.sub === s.id);
     if (!rows.length && !pts.length && !sn.some(n => n.doneM > 0)) return;
     if (!first) out.push(p([new PageBreak()]));
     first = false;
@@ -236,7 +221,12 @@ function sections(img) {
           const way = L.filter(x => !x.done);
           return [lb, String(ty ? ty.n : L.length), String(L.filter(x => x.done).length), way.length ? way.map(x => x.name.replace(/^(Box|Pipe) culvert,? ?/i, '') + ' at PK ' + pk(x.ch) + ' (' + x.stage.toLowerCase() + ')').join('; ') : '—'];
         }), W_L));
-      if (omittedHere.length) out.push(note('Omitted on site and left out of the quantities: ' + omittedHere.map(c => c.design.replace(/ \(.*\)$/, '').toLowerCase() + ' at ' + c.where + ' (change ' + c.no + ')').join('; ') + '.'));
+    }
+    if (s.t16 && s.t16.length) {
+      out.push(h3('Type 16 water passages in underpasses'));
+      out.push(p([t('Where a toe ditch runs through a cattle-crossing underpass, a water passage carries it through (Type A; Type B for a higher flow). Positions from the drainage plan T2019-0323-S03-DD-DRN-LONG.', { size: 17, color: MUTED })], { spacing: { after: 80 } }));
+      out.push(table([{ title: 'PK', w: 0.9, right: true }, { title: 'Side', w: 0.7 }, { title: 'Passage', w: 0.9 }, { title: 'Underpass', w: 2.4 }, { title: 'Ditch carried through', w: 2.4 }, { title: 'Status', w: 1.4 }],
+        s.t16.map(x => [pk(x.ch), sideTxt(x.side), 'Type ' + x.type, x.at, x.ditch, x.done ? [chip('COMPLETED', FIN)] : [t('Not recorded', { size: 18, color: MUTED })]]), W_L));
     }
     if (sn.length) {
       out.push(h3('Station and yard collector drains (Type 6)'));
@@ -244,16 +234,6 @@ function sections(img) {
         sn.map(n => [n.name, String(n.legs), String(n.legsDone), km(n.m), km(n.doneM), n.legsDone === n.legs ? 'All completed' : n.legsDone === 0 ? 'Not started' : n.list.filter(l => l.state !== 'done').map(l => l.name).join('; ')]), W_L));
     }
   });
-  return out;
-}
-
-function notes() {
-  const out = [h1('5. Notes')];
-  out.push(bullet([t('The figures are those recorded up to ' + ASOF + '. Work done but not yet recorded is not included.')]));
-  out.push(bullet([t('Road drainage (the drains of roads crossing the line) has not started and is not included above.')]));
-  out.push(bullet([t('Type 13 (rectangular lined ditch at the foot of the slope) is used where a road overpass embankment comes close to the railway embankment and a triangular ditch does not fit. Type 16 is the water passage that carries a longitudinal ditch through an underpass.')]));
-  if (R.unmatched.length) out.push(bullet([t(R.unmatched.length + ' earlier inspection records (7 September 2026) refer to asset numbers of the first asset list, which the drawings have since replaced: ' + R.unmatched.map(u => u.id).join(', ') + '. They are left out of the figures until confirmed on site.')]));
-  out.push(bullet([t('A spreadsheet with every stretch built, every design item with its status, the structures and the station drains accompanies this report.')]));
   return out;
 }
 
@@ -282,9 +262,8 @@ function notes() {
     },
     numbering: { config: [{ reference: 'bul', levels: [{ level: 0, format: LevelFormat.BULLET, text: '•', alignment: AlignmentType.LEFT, style: { paragraph: { indent: { left: 360, hanging: 260 } } } }] }] },
     sections: [
-      { properties: Object.assign({ titlePage: true }, portrait), headers: { default: headerText(W_P), first: new Header({ children: [new Paragraph({ children: [] })] }) }, footers: { default: footer(W_P), first: footer(W_P) }, children: [...cover(), ...basis(), ...summary(), p([new PageBreak()]), ...changes()] },
+      { properties: Object.assign({ titlePage: true }, portrait), headers: { default: headerText(W_P), first: new Header({ children: [new Paragraph({ children: [] })] }) }, footers: { default: footer(W_P), first: footer(W_P) }, children: [...cover(), ...summary(), p([new PageBreak()]), ...changes()] },
       { properties: landscape, headers: { default: headerText(W_L) }, footers: { default: footer(W_L) }, children: sections(img) },
-      { properties: portrait, headers: { default: headerText(W_P) }, footers: { default: footer(W_P) }, children: notes() },
     ]
   });
   const file = path.join(dir, 'Drainage_Progress_Report_' + R.asof + '.docx');

@@ -53,7 +53,9 @@ async function cloudRows() {
   const sectionNo = { KNDW: 'S01', DWKZ: 'S02', KZDR: 'S03', DRMR: 'S04', MRJB: 'S05' };
   // design items left out on site (the register's 'omitted'): out of the quantities, listed as changes
   const omitted = new Set(register.filter(c => c.kind === 'omitted' && c.feature).map(c => c.feature));
-  const alive = f => !f.absorbedInto && !omitted.has(f.id) && !DI.statusOf(f).removed;
+  // Type 16 (water passages in underpasses) comes from the drawing (data/dwg/type16.json), not the first asset list
+  const t16 = JSON.parse(fs.readFileSync(path.join(root, 'data/dwg/type16.json'), 'utf8')).passages;
+  const alive = f => !f.absorbedInto && !omitted.has(f.id) && f.code !== 'T16' && !DI.statusOf(f).removed;
   const lastOf = f => { const lg = window.appState.inspections[f.id]; return lg ? { date: (lg.date || lg.updated_at || '').slice(0, 10), by: lg.inspected_by || '' } : { date: '', by: '' }; };
 
   const report = { asof, built: new Date().toISOString(), rows: rows.length, sections: [], changes: [], networks: [], unmatched: [] };
@@ -71,6 +73,8 @@ async function cloudRows() {
         designM: t.span ? r1(p.lin.m) : null, doneM: t.span ? r1(p.lin.doneM) : null, startedM: t.span ? r1(started) : null,
         n: t.span ? p.lin.n : p.pts.n, done: t.span ? p.lin.done : p.pts.done, part: p.part });
     });
+    const p16 = t16.filter(x => x.sub === s.id);
+    if (p16.length) { sec.t16 = p16; sec.types.push({ key: 'T16.pt', label: 'Type 16 water passages in underpasses', span: false, road: false, net: false, designM: null, doneM: null, startedM: null, n: p16.length, done: p16.filter(x => x.done).length, part: 0 }); }
     // along the line: each drain's design extent and what is built of it, by chainage
     feats.filter(f => DI.isSpan(f) && !f.road && !f.net && f.ch1 - f.ch0 >= 1).forEach(f => {
       const st = DI.statusOf(f), t = DI.typeOf(f), max = f.ladder.length - 1;
@@ -101,7 +105,7 @@ async function cloudRows() {
   });
 
   // changes: the register, then drains the app has as built to another length
-  register.forEach(c => report.changes.push(Object.assign({}, c)));
+  register.filter(c => c.listed !== false).forEach(c => report.changes.push(Object.assign({}, c)));
   DI.data.features.filter(f => f.built && alive(f)).forEach(f => {
     report.changes.push({ kind: 'site', sub: f.sub, ch0: r1(Math.min(f.ch0, f.built.ch0)), ch1: r1(Math.max(f.ch1, f.built.ch1)), side: f.side, where: DI.fmtCh(f.built.ch0) + ', ' + (f.side === 'L' ? 'left' : 'right'),
       design: f.name + ', ' + DI.fmtCh(f.ch0) + ' to ' + DI.fmtCh(f.ch1) + ' (' + Math.round(f.ch1 - f.ch0) + ' m)',
