@@ -1,0 +1,122 @@
+{
+ "kind": "kmd-progress-pushed",
+ "asof": "2026-11-16",
+ "pushed_at": "2026-11-16T15:33:59.487Z",
+ "table_before": 795,
+ "written": [
+  {
+   "asset_id": "s02_asset_055",
+   "status": "Completed & Approved",
+   "replaced": {
+    "asset_id": "s02_asset_055",
+    "status": "Concreted",
+    "notes": "Concreted barrel and wingwalls inspected and verified against DW-04002.",
+    "has_defect": false,
+    "inspection_date": "2026-09-28 14:51",
+    "inspected_by": "Engr. Abdulaziz A. A.",
+    "device_id": "dev_0vd59hfyb_muld1tka",
+    "updated_at": "2026-09-28T14:51:49.468+00:00"
+   }
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_1",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_2",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_3",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_4",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_5",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_6",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_7",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_8",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_9",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_10",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_11",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_12",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_13",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_14",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_15",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_16",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_17",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_18",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_19",
+   "status": "Completed & Approved",
+   "replaced": null
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_20",
+   "status": "Completed & Approved",
+   "replaced": null
+  }
+ ]
+}

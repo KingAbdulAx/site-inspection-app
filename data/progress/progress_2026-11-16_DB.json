@@ -1,0 +1,200 @@
+{
+ "kind": "kmd-progress",
+ "asof": "2026-11-16",
+ "source": "Site report: Dambatta Station Type 6 drains all completed; all culverts of sections 2 and 3 completed (those under way marked completed)",
+ "rows": [
+  {
+   "asset_id": "s02_asset_055",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "replaces": {
+    "status": "Concreted",
+    "at": "2026-09-28T14:51:49.468+00:00"
+   },
+   "notes": "Site report 16/11/26 · Single box culvert 1×(2.5×2.5 m) at 21+340 · completed (all culverts in sections 2 and 3 are completed)"
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_1",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Dambatta Station · French drain MH1.6-DB → MH1.5-DB · 50 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_2",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Dambatta Station · French drain MH1.5-DB → MH1.4-DB · 63 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_3",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Dambatta Station · French drain MH1.4-DB → MH1.3-DB · 62 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_4",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Dambatta Station · French drain MH1.3-DB → MH1.2-DB · 50 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_5",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Dambatta Station · French drain MH1.2-DB → MH1.1/MH2.6-DB · 50 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_6",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Dambatta Station · French drain MH1.1/MH2.6-DB → MH2.5-DB · 50 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_7",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Dambatta Station · French drain MH2.5-DB → MH2.4-DB · 50 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_8",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Dambatta Station · French drain MH2.4-DB → MH2.3-DB · 50 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_9",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Dambatta Station · French drain MH2.3-DB → MH2.2-DB · 50 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_10",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Dambatta Station · French drain MH2.2-DB → MH2.1/MH3.1-DB · 50 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_11",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Dambatta Station · French drain MH2.1/MH3.1-DB → MH3.2-DB · 50 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_12",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Dambatta Station · French drain MH3.2-DB → MH3.3-DB · 50 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_13",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Dambatta Station · French drain MH3.3-DB → MH3.4-DB · 50 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_14",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Dambatta Station · French drain MH3.4-DB → MH3.5-DB · 50 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_15",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Dambatta Station · French drain MH3.5-DB → MH3.6-DB · 50 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_16",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Dambatta Station · French drain MH3.6-DB → MH3.7/MH4.5-DB · 50 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_17",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Dambatta Station · French drain MH3.7/MH4.5-DB → MH4.4-DB · 63 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_18",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Dambatta Station · French drain MH4.4-DB → MH4.3-DB · 62 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_19",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Dambatta Station · French drain MH4.3-DB → MH4.2-DB · 50 m · completed"
+  },
+  {
+   "asset_id": "t6_DWKZ_4C112_20",
+   "sub": "DWKZ",
+   "status": "Completed & Approved",
+   "has_defect": false,
+   "inspection_date": "2026-11-16",
+   "inspected_by": "Site report 16/11/26",
+   "notes": "Site report 16/11/26 · Dambatta Station · French drain MH4.2-DB → MH4.1-DB · 50 m · completed"
+  }
+ ]
+}

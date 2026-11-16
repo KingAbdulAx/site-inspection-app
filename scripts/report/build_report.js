@@ -51,7 +51,9 @@ async function cloudRows() {
   const r1 = v => Math.round(v * 10) / 10;
   const SUBS = DI.LINES.find(l => l.id === 'KM').subs.filter(s => s.from != null);
   const sectionNo = { KNDW: 'S01', DWKZ: 'S02', KZDR: 'S03', DRMR: 'S04', MRJB: 'S05' };
-  const alive = f => !f.absorbedInto && !DI.statusOf(f).removed;
+  // design items left out on site (the register's 'omitted'): out of the quantities, listed as changes
+  const omitted = new Set(register.filter(c => c.kind === 'omitted' && c.feature).map(c => c.feature));
+  const alive = f => !f.absorbedInto && !omitted.has(f.id) && !DI.statusOf(f).removed;
   const lastOf = f => { const lg = window.appState.inspections[f.id]; return lg ? { date: (lg.date || lg.updated_at || '').slice(0, 10), by: lg.inspected_by || '' } : { date: '', by: '' }; };
 
   const report = { asof, built: new Date().toISOString(), rows: rows.length, sections: [], changes: [], networks: [], unmatched: [] };
@@ -61,8 +63,9 @@ async function cloudRows() {
     const sec = { id: s.id, no: sectionNo[s.id], name: s.name, from: s.from, to: s.to, types: [], stretches: [], design: [], points: [], stations: DI.refs().filter(r => r.area && r.sub === s.id).map(r => ({ name: r.name, ch0: r.ch0, ch1: r.ch1, kind: r.kind })) };
     // by type: what the design has, what is built
     DI.typeProgress(s.id).forEach(t => {
-      const p = t.p, list = t.feats.filter(alive);
+      const list = t.feats.filter(alive);
       if (!list.length || /^(OP|BRG)\.pt$/.test(t.key)) return;   // bridges and road crossings: for reference, not drainage
+      const p = DI.progressOf(list);
       const started = t.span ? (p.lin.names.length ? p.lin.atLeast[p.lin.names[0]] || 0 : 0) : 0;
       sec.types.push({ key: t.key, label: t.label, span: t.span, road: list.some(f => f.road), net: list.some(f => f.net),
         designM: t.span ? r1(p.lin.m) : null, doneM: t.span ? r1(p.lin.doneM) : null, startedM: t.span ? r1(started) : null,
@@ -117,7 +120,10 @@ async function cloudRows() {
 
   fs.mkdirSync(OUT, { recursive: true });
   fs.writeFileSync(path.join(OUT, 'report.json'), JSON.stringify(report, null, 1));
-  fs.writeFileSync(path.join(OUT, 'report.html'), require('./report_html.js')(report, DI));
+  const page = require('./report_html.js');
+  fs.writeFileSync(path.join(OUT, 'report.html'), page(report, DI));
+  // each section's diagram on its own, light, for the Word report (report_docx.js renders them to PNG)
+  report.sections.forEach(s => { const svg = page.standalone(s, report, DI); if (svg) fs.writeFileSync(path.join(OUT, 'diagram_' + s.no + '.svg'), svg); });
   const tot = report.sections.reduce((a, s) => a + s.stretches.filter(x => x.done).reduce((b, x) => b + x.len, 0), 0);
   console.log('report as of ' + asof + ': ' + rows.length + ' database rows; ' + Math.round(tot) + ' m of drains along the line finished; ' + report.changes.length + ' changes; ' + report.unmatched.length + ' rows for older ids left out');
   console.log('wrote ' + path.relative(process.cwd(), path.join(OUT, 'report.html')) + ' and report.json');

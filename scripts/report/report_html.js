@@ -41,42 +41,9 @@ module.exports = function html(R, DI) {
   });
 
   // --- changes
-  const chg = R.changes.map(c => '<tr><td class="n"><span class="flag">' + c.no + '</span></td><td><b>' + esc(c.where) + '</b>' + (c.sub ? '<small>' + esc(R.sections.find(s => s.id === c.sub).no) + (c.ch0 != null ? ' · ' + ch(c.ch0) + ' to ' + ch(c.ch1) : '') + '</small>' : '') + '<span class="kind ' + c.kind + '">' + (c.kind === 'site' ? 'Built differently' : 'Instructed change') + '</span></td><td>' + esc(c.design) + '</td><td>' + esc(c.built) + '</td><td>' + esc(c.status) + '</td></tr>').join('');
+  const chg = R.changes.map(c => '<tr><td class="n"><span class="flag">' + c.no + '</span></td><td><b>' + esc(c.where) + '</b>' + (c.sub ? '<small>' + esc(R.sections.find(s => s.id === c.sub).no) + (c.ch0 != null ? ' · ' + ch(c.ch0) + ' to ' + ch(c.ch1) : '') + '</small>' : '') + '<span class="kind ' + c.kind + '">' + ({ site: 'Built differently', omitted: 'Omitted on site', instructed: 'Instructed change' }[c.kind] || c.kind) + '</span></td><td>' + esc(c.design) + '</td><td>' + esc(c.built) + '</td><td>' + esc(c.status) + '</td></tr>').join('');
 
-  // --- the diagram of a section: chainage across, a band per drainage type that has work, left above right
-  function diagram(s) {
-    const keys = [...new Set(s.stretches.map(x => x.key))];
-    const order = s.types.map(t => t.key);
-    keys.sort((a, b) => order.indexOf(a) - order.indexOf(b));
-    if (!keys.length) return '';
-    const W = 1100, X0 = 150, X1 = W - 14, top = 52, lane = 11, gapL = 3, band = 2 * lane + gapL + 16;
-    const H = top + keys.length * band + 26;
-    const X = c => X0 + (c - s.from) / (s.to - s.from) * (X1 - X0);
-    let g = '';
-    // stations and yards, for finding your way
-    // a label too close to the one before it goes on a second line
-    let lastX = -1e9, row = 0;
-    s.stations.slice().sort((p, q) => p.ch0 - q.ch0).forEach(st => { const a = Math.max(X0, X(st.ch0)), b = Math.min(X1, X(st.ch1)); if (b <= a) return; const mx = (a + b) / 2; row = mx - lastX < 90 ? 1 - row : 0; lastX = mx; g += '<rect x="' + a.toFixed(1) + '" y="' + (top - 8) + '" width="' + Math.max(2, b - a).toFixed(1) + '" height="' + (H - top - 18) + '" class="stn"/><text x="' + mx.toFixed(1) + '" y="' + (top - 12 - row * 14) + '" class="stnl">' + esc(st.name.replace(/ Station$/, '').replace(/ freight yard$/, ' yard').replace(/ maintenance centre$/, ' depot')) + '</text>'; });
-    // chainage
-    const step = (s.to - s.from) > 30000 ? 5000 : 2000;
-    for (let c = Math.ceil(s.from / step) * step; c <= s.to; c += step) g += '<line x1="' + X(c).toFixed(1) + '" x2="' + X(c).toFixed(1) + '" y1="' + (top - 4) + '" y2="' + (H - 20) + '" class="grid"/><text x="' + X(c).toFixed(1) + '" y="' + (H - 6) + '" class="tick">' + DI.fmtCh(c) + '</text>';
-    keys.forEach((k, i) => {
-      const y = top + i * band;
-      const t = s.types.find(x => x.key === k);
-      g += '<text x="0" y="' + (y + lane + 4) + '" class="bl">' + esc(t.label.replace(/ ditch.*$/, '').replace(/^Type /, 'Type ')) + '</text>';
-      ['L', 'R'].forEach((sd, j) => {
-        const yy = y + j * (lane + gapL);
-        g += '<text x="' + (X0 - 8) + '" y="' + (yy + lane - 2) + '" class="sl">' + sd + '</text>';
-        s.design.filter(d => d.key === k && d.side === sd).forEach(d => { const a = X(d.ch0), b = X(d.ch1); g += '<rect x="' + a.toFixed(1) + '" y="' + yy + '" width="' + Math.max(1, b - a).toFixed(1) + '" height="' + lane + '" class="des"><title>' + esc(t.label + ', ' + side(sd).toLowerCase() + ', ' + ch(d.ch0) + ' to ' + ch(d.ch1) + ' (design)') + '</title></rect>'; });
-        s.stretches.filter(x => x.key === k && x.side === sd).forEach(x => { const a = X(x.ch0), b = X(x.ch1); g += '<rect x="' + a.toFixed(1) + '" y="' + yy + '" width="' + Math.max(1.5, b - a).toFixed(1) + '" height="' + lane + '" class="' + (x.done ? 'fin' : 'way') + '"><title>' + esc(t.label + ', ' + side(sd).toLowerCase() + ', ' + ch(x.ch0) + ' to ' + ch(x.ch1) + ': ' + (x.done ? 'finished' : x.stage)) + '</title></rect>'; });
-      });
-      R.changes.filter(c => c.sub === s.id && c.ch0 != null && c.feature && s.design.some(d => d.id === c.feature && d.key === k)).forEach(c => {
-        const x = X((c.ch0 + c.ch1) / 2), yy = y + (c.side === 'R' ? lane + gapL : 0);
-        g += '<g class="fl"><circle cx="' + x.toFixed(1) + '" cy="' + (yy - 7) + '" r="7"/><text x="' + x.toFixed(1) + '" y="' + (yy - 3.5) + '">' + c.no + '</text></g>';
-      });
-    });
-    return '<div class="dia"><svg viewBox="0 0 ' + W + ' ' + H + '" width="' + W + '" height="' + H + '" role="img" aria-label="' + esc(s.no + ' drainage along the chainage') + '">' + g + '</svg></div>';
-  }
+  const diagram = s => { const v = diagramSvg(s, R, DI); return v ? '<div class="dia">' + v + '</div>' : ''; };
 
   // what is built, a line per stretch (pieces that run on from each other at the same state are one)
   function stretches(s) {
@@ -170,7 +137,7 @@ tr.rest td { color: var(--muted); font-size: 13px; }
 .list td { white-space: nowrap; } .list td:nth-child(4) { white-space: normal; min-width: 160px; }
 .chg td { min-width: 150px; } .chg td:first-child { min-width: 0; }
 .kind { display: inline-block; margin-top: 6px; font: 600 11px/1 var(--f-mono); text-transform: uppercase; letter-spacing: .05em; padding: 4px 6px; border-radius: 3px; border: 1px solid currentColor; }
-.kind.site { color: var(--flag); } .kind.instructed { color: var(--stn-ink); }
+.kind.site, .kind.omitted { color: var(--flag); } .kind.instructed { color: var(--stn-ink); }
 .flag { display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--flag); color: var(--sheet); font: 700 12px/1 var(--f-mono); }
 .flag.sm { width: 18px; height: 18px; font-size: 11px; margin-left: 6px; vertical-align: 1px; }
 .st { font: 600 12px/1 var(--f-mono); text-transform: uppercase; letter-spacing: .04em; padding: 3px 6px; border-radius: 3px; }
@@ -225,4 +192,53 @@ footer { border-top: 1px solid var(--rule); padding-top: 14px; color: var(--mute
   ${unmatched}
 </footer>
 </div>`;
+};
+
+// --- the diagram of a section: chainage across, a band per drainage type that has work, left above right
+function diagramSvg(s, R, DI) {
+  const esc = s => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  const ch = v => DI.fmtCh(Math.round(v));
+  const side = s => s === 'L' ? 'Left' : s === 'R' ? 'Right' : 'Both';
+    const keys = [...new Set(s.stretches.map(x => x.key))];
+    const order = s.types.map(t => t.key);
+    keys.sort((a, b) => order.indexOf(a) - order.indexOf(b));
+    if (!keys.length) return '';
+    const W = 1100, X0 = 150, X1 = W - 14, top = 52, lane = 11, gapL = 3, band = 2 * lane + gapL + 16;
+    const H = top + keys.length * band + 26;
+    const X = c => X0 + (c - s.from) / (s.to - s.from) * (X1 - X0);
+    let g = '';
+    // stations and yards, for finding your way
+    // a label too close to the one before it goes on a second line
+    let lastX = -1e9, row = 0;
+    s.stations.slice().sort((p, q) => p.ch0 - q.ch0).forEach(st => { const a = Math.max(X0, X(st.ch0)), b = Math.min(X1, X(st.ch1)); if (b <= a) return; const mx = (a + b) / 2; row = mx - lastX < 90 ? 1 - row : 0; lastX = mx; g += '<rect x="' + a.toFixed(1) + '" y="' + (top - 8) + '" width="' + Math.max(2, b - a).toFixed(1) + '" height="' + (H - top - 18) + '" class="stn"/><text x="' + mx.toFixed(1) + '" y="' + (top - 12 - row * 14) + '" class="stnl">' + esc(st.name.replace(/ Station$/, '').replace(/ freight yard$/, ' yard').replace(/ maintenance centre$/, ' depot')) + '</text>'; });
+    // chainage
+    const step = (s.to - s.from) > 30000 ? 5000 : 2000;
+    for (let c = Math.ceil(s.from / step) * step; c <= s.to; c += step) g += '<line x1="' + X(c).toFixed(1) + '" x2="' + X(c).toFixed(1) + '" y1="' + (top - 4) + '" y2="' + (H - 20) + '" class="grid"/><text x="' + X(c).toFixed(1) + '" y="' + (H - 6) + '" class="tick">' + DI.fmtCh(c) + '</text>';
+    keys.forEach((k, i) => {
+      const y = top + i * band;
+      const t = s.types.find(x => x.key === k);
+      g += '<text x="0" y="' + (y + lane + 4) + '" class="bl">' + esc(t.label.replace(/ ditch.*$/, '').replace(/^Type /, 'Type ')) + '</text>';
+      ['L', 'R'].forEach((sd, j) => {
+        const yy = y + j * (lane + gapL);
+        g += '<text x="' + (X0 - 8) + '" y="' + (yy + lane - 2) + '" class="sl">' + sd + '</text>';
+        s.design.filter(d => d.key === k && d.side === sd).forEach(d => { const a = X(d.ch0), b = X(d.ch1); g += '<rect x="' + a.toFixed(1) + '" y="' + yy + '" width="' + Math.max(1, b - a).toFixed(1) + '" height="' + lane + '" class="des"><title>' + esc(t.label + ', ' + side(sd).toLowerCase() + ', ' + ch(d.ch0) + ' to ' + ch(d.ch1) + ' (design)') + '</title></rect>'; });
+        s.stretches.filter(x => x.key === k && x.side === sd).forEach(x => { const a = X(x.ch0), b = X(x.ch1); g += '<rect x="' + a.toFixed(1) + '" y="' + yy + '" width="' + Math.max(1.5, b - a).toFixed(1) + '" height="' + lane + '" class="' + (x.done ? 'fin' : 'way') + '"><title>' + esc(t.label + ', ' + side(sd).toLowerCase() + ', ' + ch(x.ch0) + ' to ' + ch(x.ch1) + ': ' + (x.done ? 'finished' : x.stage)) + '</title></rect>'; });
+      });
+      R.changes.filter(c => c.sub === s.id && c.ch0 != null && c.feature && s.design.some(d => d.id === c.feature && d.key === k)).forEach(c => {
+        const x = X((c.ch0 + c.ch1) / 2), yy = y + (c.side === 'R' ? lane + gapL : 0);
+        g += '<g class="fl"><circle cx="' + x.toFixed(1) + '" cy="' + (yy - 7) + '" r="7"/><text x="' + x.toFixed(1) + '" y="' + (yy - 3.5) + '">' + c.no + '</text></g>';
+      });
+    });
+    return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + W + ' ' + H + '" width="' + W + '" height="' + H + '" role="img" aria-label="' + esc(s.no + ' drainage along the chainage') + '">' + g + '</svg>';
+  }
+
+
+// A section's diagram on its own, in print colours, for the Word report.
+module.exports.standalone = (s, R, DI) => {
+  const svg = diagramSvg(s, R, DI);
+  if (!svg) return '';
+  const css = '<style>.des{fill:#EEF1EF;stroke:#8E9C96;stroke-width:.8}.fin{fill:#1F6B4F}.way{fill:#C98A1B}.stn{fill:#E4E9F0}.stnl{fill:#48607A;font:600 11px Arial,sans-serif;text-anchor:middle}' +
+    '.grid{stroke:#D6DCD8;stroke-width:1}.tick{fill:#5D6963;font:11px Arial,sans-serif;text-anchor:middle}.bl{fill:#1B2420;font:600 12px Arial,sans-serif}.sl{fill:#5D6963;font:600 10px Arial,sans-serif;text-anchor:end}' +
+    '.fl circle{fill:#C2412D}.fl text{fill:#fff;font:700 10px Arial,sans-serif;text-anchor:middle}</style>';
+  return svg.replace(/(<svg[^>]*>)/, '$1' + css + '<rect width="100%" height="100%" fill="#ffffff"/>');
 };
